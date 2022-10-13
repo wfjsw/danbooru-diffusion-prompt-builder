@@ -34,7 +34,7 @@ jobs:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: Build project
-        run: yarn build
+        run: yarn build --base=/danbooru-diffusion-prompt-builder/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
