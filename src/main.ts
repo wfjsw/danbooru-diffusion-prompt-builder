@@ -9,3 +9,10 @@ const pinia = createPinia()
 createApp(App)
     .use(pinia)
     .mount('#app')
+
+const beforeUnloadListener = (event: any) => {
+    event.preventDefault();
+    return event.returnValue = "Are you sure you want to exit?";
+};
+
+window.addEventListener("beforeunload", beforeUnloadListener);

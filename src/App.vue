@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import {Component, ref} from 'vue'
+import type {Component} from 'vue'
+import {ref} from 'vue'
 import {ElContainer, ElHeader, ElAside, ElMain, ElScrollbar} from "element-plus";
 import Sidebar from "./components/Sidebar.vue";
 import TopBar from "./components/TopBar.vue";
