@@ -1,0 +1,57 @@
+name: Deploy to GitHub
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      - name: Setup .yarnrc.yml
+        run: |
+          yarn config set npmScopes.fortawesome.npmRegistryServer $FA_REPO_URL
+          yarn config set npmScopes.fortawesome.npmAlwaysAuth true
+          yarn config set npmScopes.fortawesome.npmAuthToken $FA_TOKEN
+        env:
+          FA_REPO_URL: ${{ secrets.FA_REPO_URL }}
+          FA_TOKEN: ${{ secrets.FA_TOKEN }}
+
+      - name: Build project
+        run: yarn build
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

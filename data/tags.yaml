@@ -1,0 +1,38 @@
+tags:
+  风格:
+    artbook:
+      name: 原画
+      description: 从画本上扫描下来的画作。
+      image: a19b8b78f19af68c3cab69f843e0f444fa5a58d6c3fc7eac653114b5278de5e7
+    game_cg:
+      alias:
+        - game cg
+      name: 游戏 CG
+      description: 从视频游戏游戏中截取的插画或画面。
+      image: b09816b1edc20ee7ada5ec586520f9b9a081334722b351edc79ed81c3296b35e
+    tachi-e:
+      name: 立绘样式
+      description: 简单背景的立绘图片
+      image: fcf0027ab454ea6ef07bdefa62db7c880a4a8a118e89412ec21933faf4fb6166
+    comic:
+      name: 漫画
+    dakimakura:
+      name: 抱枕
+    cosplay:
+      name: 角色扮演
+    photo:
+      name: 照片
+    personification:
+      name: 拟人
+    realistic:
+      name: 现实
+    sketch:
+      name: 素描/手绘
+      alias:
+        - traditional_media
+  头发: []
+  表情: []
+  衣着: []
+  装饰: []
+  姿势: []
+  环境: []
