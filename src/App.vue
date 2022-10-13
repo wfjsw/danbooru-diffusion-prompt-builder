@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import {Component, ref} from 'vue'
 import {ElContainer, ElHeader, ElAside, ElMain, ElScrollbar} from "element-plus";
 import Sidebar from "./components/Sidebar.vue";
 import TopBar from "./components/TopBar.vue";
@@ -14,7 +14,11 @@ function changeSelection(indexPath: string[]) {
     activeSelection.value = indexPath;
 }
 
-const mainComponent = {
+interface ComponentList {
+    [key: string]: Component
+}
+
+const mainComponent: ComponentList = {
     'tags': TagShow,
     'presets': PresetShow,
     'aboutme': AboutMe,
