@@ -1,16 +1,21 @@
 <script lang="ts" setup>
-import { ref, h } from 'vue'
+import {h} from 'vue'
 import { ElSwitch, ElButton } from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
-import {faEye, faEyeSlash} from "@fortawesome/pro-light-svg-icons";
+import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {useSettingsStore} from "../stores/settings";
+import { useDark } from '@vueuse/core'
 
 const settingsStore = useSettingsStore();
 
+const dark = useDark();
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
 const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
+
+const lightIcon = h(FontAwesomeIcon, {icon: faLightbulbOn})
+const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
 
 </script>
 
@@ -20,6 +25,13 @@ const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
             <span class="text-large font-600 mr-3"> Danbooru 标签生成器 </span>
         </div>
         <div class="right split">
+            <ElSwitch
+                v-model="dark"
+                inline-prompt
+                size="large"
+                :active-icon="darkIcon"
+                :inactive-icon="lightIcon"
+            />
             <ElSwitch
                 v-model="settingsStore.showImage"
                 inline-prompt
