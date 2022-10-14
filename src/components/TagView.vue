@@ -62,7 +62,7 @@ function toggleNegative() {
 
         <div class="imagecard-content">
             <div class="card-header">
-                <div class="tag-header"><code class="tag-name large mr">{{ tag }}</code></div>
+                <div class="tag-header"><code class="tag-name large">{{ tag }}</code></div>
                 <div class="buttons">
                     <ElTooltip :visible="copyHintVisible">
                         <template #content>
@@ -101,13 +101,11 @@ function toggleNegative() {
         font-size: 12pt;
         font-weight: bold;
     }
-    &.mr {
-        margin-right: 1.5rem;
-    }
 }
 
 .buttons {
     display: inline-block;
+    margin-left: auto;
 }
 
 @media (max-width: 1279px) {
@@ -179,6 +177,7 @@ function toggleNegative() {
     .tag-name {
         line-height: 32px;
     }
+    margin-right: 0.5rem;
 }
 
 .card-image {
@@ -194,6 +193,7 @@ function toggleNegative() {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
+    row-gap: 0.75rem;
 }
 
 .imagecard-content {
