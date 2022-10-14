@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
 import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
+// @ts-ignore
 import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {useDark} from '@vueuse/core'
