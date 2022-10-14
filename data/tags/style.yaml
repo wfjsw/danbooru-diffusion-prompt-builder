@@ -107,30 +107,13 @@ content:
     image: 46aa5f9823a7ac2d706f13c74eaa6fe01f55dd8ed899919e737d023a04fba824
     name: 彩铅
     wikiUrl: https://danbooru.donmai.us/wiki_pages/watercolor_pencil_(medium).html
-  caustics:
-    alias:
-      - caustic lighting
-    name: 焦散
-    description: 光线通过另一个物体反射或折射而投射到表面上的光图案。
-    wikiUrl: https://danbooru.donmai.us/wiki_pages/caustics.html
-    image: 5847768a27d24d8a6c1612f457b28582405529a208527019616bf6839100c3e9
-  lens flare:
-    alias:
-      - lensflare
-    name: 镜头光晕
-    description: 光线直射镜头而产生的光晕。
-    wikiUrl: https://danbooru.donmai.us/wiki_pages/lens_flare.html
-    image: 19fa91640e970b3f3b308ae8271560886129fa28f0e43fec31c07969c80550d7
-  bokeh:
-    name: 背景虚化/景深
-    wikiUrl: https://danbooru.donmai.us/wiki_pages/bokeh.html
-    image: 43f693f30ecd36322da1d800160989a45b9009bf4f869dc637869a1eb4d54dc4
   oil painting:
     name: 油画风格
     wikiUrl: https://danbooru.donmai.us/wiki_pages/oil_painting_(medium).html
     image: c7577e85fc2f14b64ce9422d0e61a83f5bc32149a63087fd0c3628b5acb8056d
-  motion blur:
-    name: 动态模糊
-    description: 由于高速移动产生的模糊。
-    wikiUrl: https://danbooru.donmai.us/wiki_pages/motion_blur.html
-    image: cac868c0805633e6a08afbf3ad0e58e5a12ead8d8c70752bdbc0c2c1d50bf1f7
+  marker:
+    alias:
+      - copics
+    name: 马克笔风格
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/marker_%28medium%29
+    image: 80ef4246571d4eac3f366029e5c4bcd5a281820a3838777139c58fe009fe92f6

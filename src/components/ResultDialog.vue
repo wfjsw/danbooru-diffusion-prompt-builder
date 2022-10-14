@@ -1,12 +1,19 @@
 <script lang="ts" setup>
-import {ElButton, ElDialog} from 'element-plus'
+import {ElButton, ElDialog, ElTooltip} from 'element-plus'
 import {useCartStore} from "../stores/cart";
 import {computed} from "vue";
+import {useClipboard} from "@vueuse/core";
 
 const cartStore = useCartStore();
 const props = defineProps<{
     modelValue: boolean
 }>();
+
+const {copy: copyPositive, copied: positiveCopied} =
+    useClipboard({source: computed(() => cartStore.positiveToString)})
+const {copy: copyNegative, copied: negativeCopied} =
+    useClipboard({source: computed(() => cartStore.negativeToString)})
+
 const emit = defineEmits(['update:modelValue']);
 const mv = computed({
     get: () => props.modelValue,
@@ -18,15 +25,25 @@ const mv = computed({
     <ElDialog
         v-model="mv"
         title="输出结果"
-        width="30%"
+        width="50%"
     >
         <div class="tag-positive">
             <div class="title">正向标签</div>
-            <textarea class="tag-pre">{{ cartStore.positiveToString }}</textarea>
+            <ElTooltip :visible="positiveCopied">
+                <template #content>
+                    <span>已复制到剪贴板</span>
+                </template>
+                <textarea class="tag-pre" @dblclick="copyPositive()">{{ cartStore.positiveToString }}</textarea>
+            </ElTooltip>
         </div>
         <div class="tag-negative">
             <div class="title">反向标签</div>
-            <textarea class="tag-pre">{{ cartStore.negativeToString }}</textarea>
+            <ElTooltip :visible="negativeCopied">
+                <template #content>
+                    <span>已复制到剪贴板</span>
+                </template>
+                <textarea class="tag-pre" @dblclick="copyNegative()">{{ cartStore.negativeToString }}</textarea>
+            </ElTooltip>
         </div>
         <template #footer>
           <span class="dialog-footer">
@@ -49,6 +66,7 @@ const mv = computed({
 .tag-pre {
     resize: vertical;
     width: 100%;
+    height: 100px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
 }
 </style>

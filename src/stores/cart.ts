@@ -1,4 +1,4 @@
-import {Set as ImmutableSet} from 'immutable'
+import {Set as ImmutableSet, OrderedSet as ImmutableOrderedSet} from 'immutable'
 import {defineStore} from 'pinia'
 import {useTagStore} from "./tags";
 import {usePresetStore} from "./presets";
@@ -51,7 +51,7 @@ function wrapParenByWeight(content: string, weight: number, newEmphasis: boolean
 }
 
 function tagArrayToString(items: CartItem[], newEmphasis: boolean): string {
-    return items.reduce((a: string[], t: CartItem): string[] => {
+    return ImmutableOrderedSet.of(...items.reduce((a: string[], t: CartItem): string[] => {
         if (t.type === 'tag') {
             a.push(wrapParenByWeight(t.name, t.weight, newEmphasis));
             return a;
@@ -59,7 +59,7 @@ function tagArrayToString(items: CartItem[], newEmphasis: boolean): string {
             return a.concat(t.children!.map(n => wrapParenByWeight(n.name, t.weight, newEmphasis)))
         }
         return a;
-    }, [] as string[]).join(', ')
+    }, [] as string[])).join(', ')
 }
 
 export const useCartStore = defineStore('cart', {

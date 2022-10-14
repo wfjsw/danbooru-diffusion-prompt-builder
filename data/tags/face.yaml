@@ -1,0 +1,84 @@
+name: 人物面部
+content:
+  makeup":
+    name: 浓装
+  food on face:
+    食物在name: 脸上
+  eyes closed:
+    name: 闭眼
+  wink:
+    alias:
+      - blinking
+    name: 眨眼
+  wince:
+    name: 闭一只眼
+  slit pupils:
+    name: 竖瞳孔/猫眼
+  heterochromia:
+    name: 异色瞳
+  heart-shaped pupils:
+    name: 爱心形瞳孔
+  eyelid pull:
+    name: 拉眼皮
+  aqua eyes:
+    name: 吐舌鬼脸
+  tsurime:
+    name: 吊眼角
+  eyeball:
+    name: 盯着看
+  tears:
+    name: 眼泪
+  smelling:
+   name:  闻
+  nosebleed:
+    name: 鼻血
+  lips:
+    name: 嘴唇
+  clenched teeth:
+    name: 咬牙
+  open mouth:
+    name: 张口
+  pout:
+    name: 努嘴
+  sigh:
+    name: 叹气
+  smile:
+    name: 微笑
+  grin:
+    name: 露齿而笑
+  stare:
+    name: 凝视
+  angry:
+    name: 生气的
+  annoyed:
+    name: 苦恼的
+  crazy:
+    name: 疯狂的
+  shy:
+    name: 害羞的
+  embarrassed:
+    name: 尴尬的
+  blush:
+    name: 脸红的
+  sleepy:
+    name: 困乏的
+  sad:
+    name: 悲伤的
+  drunk:
+    name: 喝醉的
+  dark persona:
+    name: 黑化的
+  frown:
+    name: 皱眉/蹙额
+  expressionless:
+    name: 无表情的
+  rolleyes:
+    name: 眼球上翻
+  ahegao:
+    name: 做爱时很痴的表情
+  naughty face:
+    name: 下流的表情
+  endured face:
+    name: 忍耐的表情
+  looking at viewer:
+    name: 看着你

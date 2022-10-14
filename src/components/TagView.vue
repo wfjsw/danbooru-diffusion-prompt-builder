@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import {computed, ref} from 'vue'
+import {computed, toRef} from 'vue'
 import {ElButton, ElCard, ElTooltip} from "element-plus";
+import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
 import {faClipboard, faThumbsDown, faThumbsUp, faLink} from "@fortawesome/pro-light-svg-icons";
@@ -13,9 +14,8 @@ const props = defineProps<{
     blurImage: boolean,
 }>()
 
+const {copy, copied} = useClipboard({source: toRef(props, 'tag')})
 const cartStore = useCartStore();
-
-const copyHintVisible = ref(false)
 
 const imageUrl = computed(() => {
     if (typeof props.meta.image === 'string') {
@@ -31,12 +31,6 @@ const imageUrl = computed(() => {
 
 const inPositive = computed(() => cartStore.existsPositive('tag', props.tag))
 const inNegative = computed(() => cartStore.existsNegative('tag', props.tag))
-
-async function copyToClipboard() {
-    await window.navigator.clipboard.writeText(props.tag)
-    copyHintVisible.value = true
-    setTimeout(() => copyHintVisible.value = false, 1000)
-}
 
 function togglePositive() {
     if (!inPositive.value) {
@@ -64,11 +58,11 @@ function toggleNegative() {
             <div class="card-header">
                 <div class="tag-header"><code class="tag-name large">{{ tag }}</code></div>
                 <div class="buttons">
-                    <ElTooltip :visible="copyHintVisible">
+                    <ElTooltip :visible="copied">
                         <template #content>
                             <span>已复制到剪贴板</span>
                         </template>
-                        <ElButton circle type="primary" @click="copyToClipboard">
+                        <ElButton circle type="primary" @click="copy()">
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
