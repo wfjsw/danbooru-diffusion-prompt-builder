@@ -173,7 +173,23 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
     flex-direction: row;
 }
 
+.tag-label {
+    max-width: 160px;
+    white-space: normal;
+}
+
 .tag-button {
     margin-left: 0.25rem;
+}
+
+.el-tree {
+    :deep(.el-tree-node__label) {
+        margin-right: 1.0rem;
+    }
+    :deep(.el-tree-node__content) {
+        height: auto;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
 }
 </style>
