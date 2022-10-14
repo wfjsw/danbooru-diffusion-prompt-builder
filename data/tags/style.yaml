@@ -1,53 +1,136 @@
 name: 风格
+
 content:
   alphonse mucha:
-    name: 穆夏风格
-  anime screenshot:
-    name: 番剧截图
+    name: 阿尔丰斯·慕夏
+  anime screencap:
+    alias:
+    - screencap
+    image: 71a912f60fa5ad5401a02da03f73f5129089855e62e669204e05c848abe09953
+    name: 动画截图
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/anime_screencap.html
   artbook:
     description: 从画本上扫描下来的画作。
     image: a19b8b78f19af68c3cab69f843e0f444fa5a58d6c3fc7eac653114b5278de5e7
     name: 原画
   chibi:
+    alias:
+      - super deformed
     name: Q 版
+    description: 通常将头的比例在全图中加大，以营造可爱效果。
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/chibi.html
+    image: b4b5532bfe903ab611da3c1e97c9e2be1347322a363166f2c2bd0c93ed719d37
   comic:
     name: 漫画
   cosplay:
     name: 角色扮演
   dakimakura:
     name: 抱枕
+  faux traditional media:
+    description: 使用计算机技术模仿手绘的一种画风。
+    image: d28d5c0976a09cc1a172f54158a02b56a15076f58322536b5c72f145d5275b46
+    name: 仿手绘
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/faux_traditional_media.html
   game cg:
     description: 从视频游戏游戏中截取的插画或画面。
     image: b09816b1edc20ee7ada5ec586520f9b9a081334722b351edc79ed81c3296b35e
     name: 游戏 CG
+  graphite:
+    alias:
+    - pencil sketch
+    image: d058d25501c06e68bfc9c0b6f658718fd90fe4f7817fb5b7b24df4dc968bbd7d
+    name: 铅笔画/炭笔画
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/graphite_%28medium%29
   lineart:
-    name: 线条变粗
+    alias:
+    - line art
+    image: 1657fdf183a305b5e0184adbcc9078efd8d4f4d78eb8a789c306021d5792894c
+    name: 线条艺术
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/lineart.html
   magazine cover:
     name: 杂志封面
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/magazine_cover.html
+    description: 通常同时包含图片与文字。
+    image: 23af8029a1f177fe00479f6fb929d2183d9de838cf7cf9dc476bd74696493401
+  official art:
+    image: 6f674453557c9f1b3b584450326d88acd6c1043cc4eb5bfeecfc8be90f0b6bec
+    name: 官方画作
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/official_art.html
   pastel color:
-    name: 速涂质感
+    image: 8cdb17da043da8c20588097e24b4954819162d7d72765fdebf6903f61ddb5ff9
+    name: 粉彩
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/pastel_colors.html
   personification:
     name: 拟人
   photo:
     name: 照片
   pixel art:
     name: 像素风
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/pixel_art.html
+    image: 227bc1e177eddb75f47e3aa463bfc62f80c7a4b767464462081a99613b930adc
   realistic:
-    name: 现实
+    name: 现实的/真实的
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/realistic.html
+    image: 35d145ef23dc530f125fa83b5dc8ff32c7443f314c7844d9e77887713fad9827
   retro artstyle:
-    name: 赛璐璐风格
+    alias:
+    - oldschool
+    image: 16650bb494fa45887e9945309ef8944aed624174e280c7cea6b9fcc58e54132d
+    name: 赛璐璐/复古艺术
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/retro_artstyle.html
   sketch:
     alias:
-      - traditional_media
-    name: 素描/手绘
+    - rough
+    - rough sketch
+    image: 5c2a80b8ac6a6b6453fd605180837118bd539fd04ce5ce064535b36375f99c5d
+    name: 草图
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/sketch.html
   tachi-e:
-    description: 简单背景的立绘图片
+    description: 简单背景的立绘图片。
     image: fcf0027ab454ea6ef07bdefa62db7c880a4a8a118e89412ec21933faf4fb6166
     name: 立绘样式
     wikiUrl: https://danbooru.donmai.us/wiki_pages/tachi-e.html
+  traditional media:
+    image: 819146eda0d5e2ff4afe26980d2828919ab4df694d9af76f15bf34823a20f395
+    name: 手绘
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/traditional_media.html
   watercolor:
     alias:
-      - water pastel color
+    - water pastel color
+    - watercolour
     name: 水彩
+    image: 8e6a0136146e3c9d70214a6c2ad2a4084d7118c91ac3c81ffde6834dffc2501e
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/watercolor.html
   watercolor pencil:
+    alias:
+    - watercolour pencil
+    image: 46aa5f9823a7ac2d706f13c74eaa6fe01f55dd8ed899919e737d023a04fba824
     name: 彩铅
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/watercolor_pencil_(medium).html
+  caustics:
+    alias:
+      - caustic lighting
+    name: 焦散
+    description: 光线通过另一个物体反射或折射而投射到表面上的光图案。
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/caustics.html
+    image: 5847768a27d24d8a6c1612f457b28582405529a208527019616bf6839100c3e9
+  lens flare:
+    alias:
+      - lensflare
+    name: 镜头光晕
+    description: 光线直射镜头而产生的光晕。
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/lens_flare.html
+    image: 19fa91640e970b3f3b308ae8271560886129fa28f0e43fec31c07969c80550d7
+  bokeh:
+    name: 背景虚化/景深
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/bokeh.html
+    image: 43f693f30ecd36322da1d800160989a45b9009bf4f869dc637869a1eb4d54dc4
+  oil painting:
+    name: 油画风格
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/oil_painting_(medium).html
+    image: c7577e85fc2f14b64ce9422d0e61a83f5bc32149a63087fd0c3628b5acb8056d
+  motion blur:
+    name: 动态模糊
+    description: 由于高速移动产生的模糊。
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/motion_blur.html
+    image: cac868c0805633e6a08afbf3ad0e58e5a12ead8d8c70752bdbc0c2c1d50bf1f7

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {h, ref} from 'vue'
+import {h, ref, computed} from 'vue'
 import {ElButton, ElInput, ElSwitch} from "element-plus";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
@@ -16,7 +16,11 @@ const props = defineProps<{
 }>()
 const emit = defineEmits(['update:search'])
 
-const searchTerms = ref(props.search)
+const searchTerms = computed({
+    get: () => props.search,
+    set: (value: string) => emit('update:search', value)
+})
+// ref(props.search)
 
 const dark = useDark();
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
