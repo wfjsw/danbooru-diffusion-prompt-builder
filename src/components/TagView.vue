@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import {ref, computed} from 'vue'
-import {ElCard, ElButton, ElTooltip} from "element-plus";
+<script lang="ts" setup>
+import {computed, ref} from 'vue'
+import {ElButton, ElCard, ElTooltip} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
-import {faClipboard, faThumbsUp, faThumbsDown} from "@fortawesome/pro-light-svg-icons";
+import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
 import {TagMeta} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 
@@ -22,7 +22,7 @@ const imageUrl = computed(() => {
         if (props.meta.image.startsWith('https://')) {
             return props.meta.image
         } else {
-            return `demo-images/${props.meta.image.slice(0,2)}/${props.meta.image}.webp`
+            return `demo-images/${props.meta.image.slice(0, 2)}/${props.meta.image}.webp`
         }
 
     }
@@ -56,9 +56,9 @@ function toggleNegative() {
 </script>
 
 <template>
-    <ElCard class="box-card" :body-style="{ padding: '0px' }">
-        <div :class="['card-image-container', {'blur-image': blurImage}]" v-if="imageUrl"
-             :style="{backgroundImage: `url(${imageUrl})`}" />
+    <ElCard :body-style="{ padding: '0px' }" class="box-card">
+        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]"
+             :style="{backgroundImage: `url(${imageUrl})`}"/>
 
         <div class="imagecard-content">
             <div class="card-header">
@@ -68,7 +68,7 @@ function toggleNegative() {
                         <template #content>
                             <span>已复制到剪贴板</span>
                         </template>
-                        <ElButton type="primary" circle @click="copyToClipboard">
+                        <ElButton circle type="primary" @click="copyToClipboard">
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
@@ -85,7 +85,8 @@ function toggleNegative() {
             <div v-if="meta.alias">
                 <span class="text">别名：</span>
                 <ul>
-                    <li v-for="alias in meta.alias" :key="alias" class="text"><code class="tag-name">{{ alias }}</code></li>
+                    <li v-for="alias in meta.alias" :key="alias" class="text"><code class="tag-name">{{ alias }}</code>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -93,10 +94,11 @@ function toggleNegative() {
     </ElCard>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .tag-name {
     user-select: all;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
     &.large {
         font-size: 12pt;
         font-weight: bold;
@@ -146,13 +148,21 @@ function toggleNegative() {
 }
 
 @keyframes image_unblur {
-    0% { filter: blur(10px);}
-    100% { filter: blur(0px);}
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0px);
+    }
 }
 
 @keyframes image_blur {
-    0% { filter: blur(0px);}
-    100% { filter: blur(10px);}
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(10px);
+    }
 }
 
 .card-image-container {
@@ -160,11 +170,12 @@ function toggleNegative() {
     background-size: cover;
     background-position: 50%;
     min-height: 256px;
-    aspect-ratio : 1 / 1;
+    aspect-ratio: 1 / 1;
     transition: .5s all;
 
     &.blur-image {
         filter: blur(15px);
+
         &:hover {
             filter: blur(0px);
         }
@@ -174,9 +185,11 @@ function toggleNegative() {
 
 .tag-header {
     height: 32px;
+
     .tag-name {
         line-height: 32px;
     }
+
     margin-right: 0.5rem;
 }
 

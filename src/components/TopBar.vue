@@ -1,14 +1,22 @@
 <script lang="ts" setup>
-import {h} from 'vue'
-import { ElSwitch, ElButton } from "element-plus";
+import {h, ref} from 'vue'
+import {ElButton, ElInput, ElSwitch} from "element-plus";
+import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
 import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {useSettingsStore} from "../stores/settings";
-import { useDark } from '@vueuse/core'
+import {useDark} from '@vueuse/core'
 
 const settingsStore = useSettingsStore();
+
+const props = defineProps<{
+    search: string,
+}>()
+const emit = defineEmits(['update:search'])
+
+const searchTerms = ref(props.search)
 
 const dark = useDark();
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
@@ -25,36 +33,40 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
             <span class="text-large font-600 mr-3"> Danbooru 标签生成器 </span>
         </div>
         <div class="right split">
+            <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
+                     placeholder="搜索" @change="emit('update:search', searchTerms)"/>
             <ElSwitch
                 v-model="dark"
-                inline-prompt
-                size="large"
                 :active-icon="darkIcon"
                 :inactive-icon="lightIcon"
+                inline-prompt
+                size="large"
             />
             <ElSwitch
                 v-model="settingsStore.showImage"
-                inline-prompt
-                size="large"
                 :active-icon="activeIcon"
                 :inactive-icon="inactiveIcon"
+                inline-prompt
+                size="large"
             />
             <ElSwitch
                 v-model="settingsStore.newEmphasis"
-                inline-prompt
-                size="large"
                 active-text="()"
                 inactive-text="{}"
+                inline-prompt
+                size="large"
             />
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
-                <ElButton link size="large"><FontAwesomeIcon :icon="faGithub" :style="{'scale': '150%'}"/></ElButton>
+                <ElButton link size="large">
+                    <FontAwesomeIcon :icon="faGithub" :style="{'scale': '150%'}"/>
+                </ElButton>
             </a>
         </div>
     </div>
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .topbar {
     display: flex;
     align-items: center;
@@ -68,12 +80,18 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
         color: var(--el-text-color-primary);
     }
 }
+
 .right.split {
     padding-left: 24px;
 
     & > * {
         margin-right: 1rem;
     }
+}
+
+.search {
+    width: 15rem;
+    margin-right: 2rem !important;
 }
 </style>
 

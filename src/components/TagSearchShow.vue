@@ -1,28 +1,23 @@
 <script lang="ts" setup>
-import {computed, ref} from "vue";
-import {Search as IconSearch} from "@element-plus/icons-vue";
+import {computed} from "vue";
 import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
 import {useSettingsStore} from "../stores/settings";
 import {TagCategory} from "../datatypes";
-import {ElInput} from "element-plus";
 
 const props = defineProps<{
-    category: string
+    search: string
 }>();
 
 const settingsStore = useSettingsStore();
 const tagStore = useTagStore();
 
-const searchTerms = ref('')
-
-const filteredTags = computed<TagCategory>(() => tagStore.searchCategory(props.category, searchTerms.value));
+const filteredTags = computed<TagCategory>(() => tagStore.searchAll(props.search));
 </script>
 
 <template>
-    <h1>{{ category }}</h1>
-    <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
+    <h1>搜索结果</h1>
     <Masonry>
         <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
                  :tag="tag as string"/>
@@ -30,8 +25,5 @@ const filteredTags = computed<TagCategory>(() => tagStore.searchCategory(props.c
 </template>
 
 <style scoped>
-.search {
-    margin-bottom: 1.5rem;
-    padding-right: 1.5rem;
-}
+
 </style>

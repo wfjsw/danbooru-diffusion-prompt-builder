@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import {defineStore} from 'pinia'
 // @ts-ignore
 import presetData from '../../data/presets.yaml'
 import {Presets} from "../datatypes";

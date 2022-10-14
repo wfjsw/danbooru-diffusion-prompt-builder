@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import {ElCollapseItem, ElTooltip, ElButton, ElTag} from "element-plus";
+<script lang="ts" setup>
+import {ElButton, ElCollapseItem, ElTag, ElTooltip} from "element-plus";
 import {Preset} from "../datatypes";
 import {computed, ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
-import {faClipboard, faThumbsUp, faThumbsDown} from "@fortawesome/pro-light-svg-icons";
+import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
 import {useCartStore} from "../stores/cart";
 
 const props = defineProps<{
@@ -53,7 +53,7 @@ function toggleNegative() {
                         <template #content>
                             <span>已复制到剪贴板</span>
                         </template>
-                        <ElButton type="primary" circle @click.stop="copyToClipboard">
+                        <ElButton circle type="primary" @click.stop="copyToClipboard">
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
@@ -77,7 +77,7 @@ function toggleNegative() {
     </ElCollapseItem>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .title-container {
     width: 100%;
     margin-right: 1rem;

@@ -1,4 +1,5 @@
-import { defineStore } from 'pinia'
+import {Set as ImmutableSet} from 'immutable'
+import {defineStore} from 'pinia'
 import {useTagStore} from "./tags";
 import {usePresetStore} from "./presets";
 import {useSettingsStore} from "./settings";
@@ -23,7 +24,7 @@ interface Cart {
     negative: CartItem[],
 }
 
-function wrapParen(content: string, char: '('|'{'|'[', length: number) {
+function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
     for (let i = 0; i < length; i++) {
         switch (char) {
             case '(':
@@ -42,7 +43,7 @@ function wrapParen(content: string, char: '('|'{'|'[', length: number) {
 
 function wrapParenByWeight(content: string, weight: number, newEmphasis: boolean): string {
     if (weight > 0) {
-        return wrapParen(content, newEmphasis ? '(':'{', Math.abs(weight))
+        return wrapParen(content, newEmphasis ? '(' : '{', Math.abs(weight))
     } else if (weight < 0) {
         return wrapParen(content, '[', Math.abs(weight))
     }
@@ -74,16 +75,33 @@ export const useCartStore = defineStore('cart', {
         negativeToString: (state) => {
             const settingsStore = useSettingsStore();
             return tagArrayToString(state.negative, settingsStore.newEmphasis)
-        }
+        },
+        positiveTags: (state) => ImmutableSet.of<string>(...state.positive
+            .filter(t => t.type === 'tag').map(n => n.name)),
+        negativeTags: (state) => ImmutableSet.of<string>(...state.negative
+            .filter(t => t.type === 'tag').map(n => n.name)),
+        positivePresets: (state) => ImmutableSet.of<string>(...state.positive
+            .filter(t => t.type === 'preset').map(({category, name}) => `${category}//${name}`)),
+        negativePresets: (state) => ImmutableSet.of<string>(...state.negative
+            .filter(t => t.type === 'preset').map(({category, name}) => `${category}//${name}`)),
+
     },
     actions: {
-        existsPositive(type: 'tag'|'preset', name: string, category: string|null = null) {
-            return this.positive.some((ci: CartItem) =>
-                name === ci.name && type === ci.type && category === ci.category);
+        existsPositive(type: 'tag' | 'preset', name: string, category: string | null = null) {
+            if (type === 'tag') {
+                return this.positiveTags.includes(name);
+            } else if (type === 'preset') {
+                return this.positivePresets.includes(`${category}//${name}`);
+            }
+            return false
         },
-        existsNegative(type: 'tag'|'preset', name: string, category: string|null = null) {
-            return this.negative.some((ci: CartItem) =>
-                name === ci.name && type === ci.type && category === ci.category);
+        existsNegative(type: 'tag' | 'preset', name: string, category: string | null = null) {
+            if (type === 'tag') {
+                return this.negativeTags.includes(name);
+            } else if (type === 'preset') {
+                return this.negativePresets.includes(`${category}//${name}`);
+            }
+            return false
         },
         appendPositiveTag(tagName: string) {
             const tagStore = useTagStore();

@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import {ElDialog, ElButton} from 'element-plus'
+<script lang="ts" setup>
+import {ElButton, ElDialog} from 'element-plus'
 import {useCartStore} from "../stores/cart";
 import {computed} from "vue";
 

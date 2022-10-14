@@ -1,9 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Masonry from 'masonry-layout';
-import {ref, onMounted, onUnmounted, Ref, onUpdated} from 'vue';
+import {onMounted, onUnmounted, onUpdated, Ref, ref} from 'vue';
 
-const container: Ref<HTMLDivElement|null> = ref(null)
-const masonry: Ref<Masonry|null> = ref(null)
+const container: Ref<HTMLDivElement | null> = ref(null)
+const masonry: Ref<Masonry | null> = ref(null)
 
 onMounted(() => {
     masonry.value = new Masonry(container.value!, {
@@ -24,13 +24,13 @@ onUpdated(() => {
 </script>
 
 <template>
-    <div class="masonry" ref="container">
-        <slot />
+    <div ref="container" class="masonry">
+        <slot/>
     </div>
 </template>
 
 <style scoped>
-    .masonry:deep(> *) {
-        margin-bottom: 15px;
-    }
+.masonry:deep(> *) {
+    margin-bottom: 15px;
+}
 </style>

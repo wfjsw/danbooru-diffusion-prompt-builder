@@ -1,6 +1,7 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {computed} from "vue";
 import {useSettingsStore} from "../stores/settings";
+
 const settingsStore = useSettingsStore();
 
 const props = defineProps<{
@@ -8,7 +9,7 @@ const props = defineProps<{
 }>()
 
 const computedWeight = computed(() => Math.pow(settingsStore.newEmphasis ? 1.1 : 1.05, props.weight).toFixed(2))
-const color = computed(() => props.weight >= 0 ? 'success':'warning')
+const color = computed(() => props.weight >= 0 ? 'success' : 'warning')
 </script>
 
 <template>
@@ -19,6 +20,7 @@ const color = computed(() => props.weight >= 0 ? 'success':'warning')
 .warning {
     color: var(--el-color-warning);
 }
+
 .success {
     color: var(--el-color-success);
 }

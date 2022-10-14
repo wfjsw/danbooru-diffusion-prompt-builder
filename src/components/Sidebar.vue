@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {ElIcon, ElMenu, ElMenuItem, ElMenuItemGroup, ElScrollbar, ElSubMenu} from "element-plus";
+import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from "element-plus";
 import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide} from '@element-plus/icons-vue';
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
@@ -15,7 +15,7 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
-    <ElMenu :default-openeds="['tags', 'presets']" default-active="aboutme" @select="select" class="borderless">
+    <ElMenu :default-openeds="['tags', 'presets']" class="borderless" default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
                 <IconGuide/>
