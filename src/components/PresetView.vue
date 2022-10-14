@@ -11,7 +11,7 @@ const props = defineProps<{
     category: string,
     title: string,
     meta: Preset,
-    blurImage: boolean,
+    // blurImage: boolean,
 }>()
 const cartStore = useCartStore();
 

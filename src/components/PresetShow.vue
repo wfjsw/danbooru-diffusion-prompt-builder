@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-// @ts-nocheck
-// error TS2322: Type '{ category: string; title: string; meta: Preset; }' is not assignable to type 'IntrinsicAttributes & Partial<{}> & Omit<Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps<{ category: string; title: string; meta: Preset; blurImage: boolean; }>>> & VNodeProps & AllowedComponentProps & ComponentCustomProps, never>'.
-// Property 'blurImage' is missing in type '{ category: string; title: string; meta: Preset; }' but required in type 'Omit<Readonly<ExtractPropTypes<__VLS_TypePropsToRuntimeProps<{ category: string; title: string; meta: Preset; blurImage: boolean; }>>> & VNodeProps & AllowedComponentProps & ComponentCustomProps, never>'.
 
 import {computed, ref} from "vue";
 import {Search as IconSearch} from "@element-plus/icons-vue";
