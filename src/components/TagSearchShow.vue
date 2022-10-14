@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {computed} from "vue";
+import {computed, watch} from "vue";
 import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
@@ -18,7 +18,7 @@ const filteredTags = computed<TagCategory>(() => tagStore.searchAll(props.search
 
 <template>
     <h1>搜索结果</h1>
-    <Masonry>
+    <Masonry :bind="filteredTags">
         <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
                  :tag="tag as string"/>
     </Masonry>

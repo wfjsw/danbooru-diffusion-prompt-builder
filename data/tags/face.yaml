@@ -1,9 +1,9 @@
 name: 人物面部
 content:
-  makeup":
+  makeup:
     name: 浓装
   food on face:
-    食物在name: 脸上
+    name: 食物在脸上
   eyes closed:
     name: 闭眼
   wink:

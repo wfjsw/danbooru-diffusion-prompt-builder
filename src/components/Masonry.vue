@@ -2,6 +2,10 @@
 import Masonry from 'masonry-layout';
 import {onMounted, onUnmounted, onUpdated, Ref, ref} from 'vue';
 
+defineProps<{
+    bind: any|null
+}>();
+
 const container: Ref<HTMLDivElement | null> = ref(null)
 const masonry: Ref<Masonry | null> = ref(null)
 

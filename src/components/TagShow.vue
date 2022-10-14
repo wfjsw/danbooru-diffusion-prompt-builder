@@ -23,7 +23,7 @@ const filteredTags = computed<TagCategory>(() => tagStore.searchCategory(props.c
 <template>
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
-    <Masonry>
+    <Masonry :bind="filteredTags">
         <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
                  :tag="tag as string"/>
     </Masonry>
