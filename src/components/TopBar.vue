@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
 import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {useDark} from '@vueuse/core'
 
@@ -63,6 +64,16 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
                 <ElButton link size="large">
                     <FontAwesomeIcon :icon="faGithub" :style="{'scale': '150%'}"/>
+                </ElButton>
+            </a>
+            <a href="https://bot.novelai.dev" target="_blank">
+                <ElButton link size="large">
+                    <FontAwesomeIcon :icon="faMessageBot" :style="{'scale': '150%'}"/>
+                </ElButton>
+            </a>
+            <a href="https://spell.novelai.dev" target="_blank">
+                <ElButton link size="large">
+                    <FontAwesomeIcon :icon="faMagnifyingGlassChart" :style="{'scale': '150%'}"/>
                 </ElButton>
             </a>
         </div>
