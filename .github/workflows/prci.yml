@@ -1,0 +1,36 @@
+name: CI for Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      - name: Setup .yarnrc.yml
+        run: |
+          yarn config set npmScopes.fortawesome.npmRegistryServer $FA_REPO_URL
+          yarn config set npmScopes.fortawesome.npmAlwaysAuth true
+          yarn config set npmScopes.fortawesome.npmAuthToken $FA_TOKEN
+        env:
+          FA_REPO_URL: ${{ secrets.FA_REPO_URL }}
+          FA_TOKEN: ${{ secrets.FA_TOKEN }}
+
+      - name: Install dependencies
+        run: yarn install
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: Build project
+        run: yarn build --mode development

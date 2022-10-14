@@ -99,6 +99,7 @@ export const useCartStore = defineStore('cart', {
                     children: null,
                     weight: 0,
                 })
+                this.removeNegativeTag(tagName)
             } else {
                 throw new Error(`Tag ${tagName} does not exist.`)
             }
@@ -121,6 +122,7 @@ export const useCartStore = defineStore('cart', {
                     children: null,
                     weight: 0,
                 })
+                this.removePositiveTag(tagName)
             } else {
                 throw new Error(`Tag ${tagName} does not exist.`)
             }
@@ -159,6 +161,7 @@ export const useCartStore = defineStore('cart', {
                         }
                     }),
                 })
+                this.removeNegativePreset(presetCategory, presetName)
             } else {
                 throw new Error(`Preset ${presetCategory}/${presetName} does not exist.`)
             }
@@ -198,6 +201,7 @@ export const useCartStore = defineStore('cart', {
                         }
                     }),
                 })
+                this.removePositivePreset(presetCategory, presetName)
             } else {
                 throw new Error(`Preset ${presetCategory}/${presetName} does not exist.`)
             }
