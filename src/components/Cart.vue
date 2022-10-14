@@ -5,9 +5,10 @@ import {ElTree, ElButton, ElScrollbar, ElRow, ElCol} from "element-plus";
 import {ref} from 'vue';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
-import {faBan, faCircleCheck, faTrash} from "@fortawesome/pro-light-svg-icons"
+import {faThumbsUp, faThumbsDown, faCommentPlus, faCommentMinus, faTrash} from "@fortawesome/pro-light-svg-icons"
 import {useCartStore} from "../stores/cart";
 import ResultDialog from "./ResultDialog.vue";
+import WeightIdentifier from "./WeightIdentifier.vue";
 
 const cartStore = useCartStore();
 
@@ -73,15 +74,23 @@ function deleteFrom(direction: 'positive'|'negative', type: 'preset'|'tag', name
                 >
                     <template #default="{ node, data }">
                         <div class="flex">
-                          <div class="tag-label">{{ node.label }}</div>
+                          <div class="tag-label">{{ node.label }} <WeightIdentifier :weight="data.weight"/></div>
                           <div v-if="data.type !== 'child-tag'" class="tag-button">
                             <ElButton link type="primary"
-                                      @click.stop="sendTo('negative', data.type, data.name, data.category)">
-                                <FontAwesomeIcon :icon="faBan"/>
+                                    @click.stop="data.weight++">
+                              <FontAwesomeIcon :icon="faCommentPlus"/>
+                            </ElButton>
+                            <ElButton link type="primary"
+                                    @click.stop="data.weight--">
+                              <FontAwesomeIcon :icon="faCommentMinus"/>
+                            </ElButton>
+                            <ElButton link type="primary"
+                                  @click.stop="sendTo('negative', data.type, data.name, data.category)">
+                            <FontAwesomeIcon :icon="faThumbsDown"/>
                             </ElButton>
                             <ElButton link type="danger"
-                                      @click.stop="deleteFrom('positive', data.type, data.name, data.category)">
-                                <FontAwesomeIcon :icon="faTrash"/>
+                                  @click.stop="deleteFrom('positive', data.type, data.name, data.category)">
+                            <FontAwesomeIcon :icon="faTrash"/>
                             </ElButton>
                           </div>
                         </div>
@@ -99,11 +108,19 @@ function deleteFrom(direction: 'positive'|'negative', type: 'preset'|'tag', name
                 >
                     <template #default="{ node, data }">
                         <div class="flex">
-                            <div class="tag-label">{{ node.label }}</div>
+                            <div class="tag-label">{{ node.label }} <WeightIdentifier :weight="data.weight"/></div>
                             <div v-if="data.type !== 'child-tag'" class="tag-button">
                                 <ElButton link type="primary"
+                                          @click.stop="data.weight++">
+                                    <FontAwesomeIcon :icon="faCommentPlus"/>
+                                </ElButton>
+                                <ElButton link type="primary"
+                                          @click.stop="data.weight--">
+                                    <FontAwesomeIcon :icon="faCommentMinus"/>
+                                </ElButton>
+                                <ElButton link type="primary"
                                           @click.stop="sendTo('positive', data.type, data.name, data.category)">
-                                    <FontAwesomeIcon :icon="faCircleCheck"/>
+                                    <FontAwesomeIcon :icon="faThumbsUp"/>
                                 </ElButton>
                                 <ElButton link type="danger"
                                           @click.stop="deleteFrom('negative', data.type, data.name, data.category)">
@@ -146,6 +163,6 @@ function deleteFrom(direction: 'positive'|'negative', type: 'preset'|'tag', name
     flex-direction: row;
 }
 .tag-button {
-    margin-left: 1rem;
+    margin-left: 0.25rem;
 }
 </style>

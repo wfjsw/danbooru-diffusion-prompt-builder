@@ -42,7 +42,7 @@ const mainComponent: ComponentList = {
                     <component :is="mainComponent[activeSelection[0]]" :category="activeSelection[1]"/>
                 </ElScrollbar>
             </ElMain>
-            <ElAside class="left-bordered" width="320px">
+            <ElAside class="left-bordered" width="380px">
                 <Cart/>
             </ElAside>
         </ElContainer>

@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import {useTagStore} from "./tags";
 import {usePresetStore} from "./presets";
+import {useSettingsStore} from "./settings";
 
 interface CartChild {
     label: string,
@@ -14,11 +15,50 @@ interface CartItem {
     name: string,
     category: string | null,
     children: CartChild[] | null,
+    weight: number,
 }
 
 interface Cart {
     positive: CartItem[],
     negative: CartItem[],
+}
+
+function wrapParen(content: string, char: '('|'{'|'[', length: number) {
+    for (let i = 0; i < length; i++) {
+        switch (char) {
+            case '(':
+                content = `(${content})`
+                break;
+            case '{':
+                content = `{${content}}`
+                break;
+            case '[':
+                content = `[${content}]`
+                break;
+        }
+    }
+    return content;
+}
+
+function wrapParenByWeight(content: string, weight: number, newEmphasis: boolean): string {
+    if (weight > 0) {
+        return wrapParen(content, newEmphasis ? '(':'{', Math.abs(weight))
+    } else if (weight < 0) {
+        return wrapParen(content, '[', Math.abs(weight))
+    }
+    return content;
+}
+
+function tagArrayToString(items: CartItem[], newEmphasis: boolean): string {
+    return items.reduce((a: string[], t: CartItem): string[] => {
+        if (t.type === 'tag') {
+            a.push(wrapParenByWeight(t.name, t.weight, newEmphasis));
+            return a;
+        } else if (t.type === 'preset') {
+            return a.concat(t.children!.map(n => wrapParenByWeight(n.name, t.weight, newEmphasis)))
+        }
+        return a;
+    }, [] as string[]).join(', ')
 }
 
 export const useCartStore = defineStore('cart', {
@@ -28,28 +68,12 @@ export const useCartStore = defineStore('cart', {
     }),
     getters: {
         positiveToString: (state) => {
-            // @ts-ignore
-            const tags: string[] = state.positive.reduce((a: string[], t: CartItem) => {
-                if (t.type === 'tag') {
-                    a.push(t.name);
-                    return a;
-                } else if (t.type === 'preset') {
-                    return a.concat(t.children!.map(n => n.name))
-                }
-            }, [] as string[])
-            return tags.join(', ');
+            const settingsStore = useSettingsStore();
+            return tagArrayToString(state.positive, settingsStore.newEmphasis)
         },
         negativeToString: (state) => {
-            // @ts-ignore
-            const tags: string[] = state.negative.reduce((a: string[], t: CartItem) => {
-                if (t.type === 'tag') {
-                    a.push(t.name);
-                    return a;
-                } else if (t.type === 'preset') {
-                    return a.concat(t.children!.map(n => n.name))
-                }
-            }, [] as string[])
-            return tags.join(', ');
+            const settingsStore = useSettingsStore();
+            return tagArrayToString(state.negative, settingsStore.newEmphasis)
         }
     },
     actions: {
@@ -73,6 +97,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
+                    weight: 0,
                 })
             } else {
                 throw new Error(`Tag ${tagName} does not exist.`)
@@ -94,6 +119,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
+                    weight: 0,
                 })
             } else {
                 throw new Error(`Tag ${tagName} does not exist.`)
@@ -115,6 +141,7 @@ export const useCartStore = defineStore('cart', {
                     type: 'preset',
                     name: presetName,
                     category: presetCategory,
+                    weight: 0,
                     children: preset.content.map((n: string) => {
                         const tag = tagStore.resolve(n)
                         if (tag) {
@@ -153,6 +180,7 @@ export const useCartStore = defineStore('cart', {
                     type: 'preset',
                     name: presetName,
                     category: presetCategory,
+                    weight: 0,
                     children: preset.content.map((n: string) => {
                         const tag = tagStore.resolve(n)
                         if (tag) {

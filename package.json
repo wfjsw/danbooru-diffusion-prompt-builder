@@ -11,6 +11,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/pro-light-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "latest-3",
     "element-plus": "^2.2.17",
