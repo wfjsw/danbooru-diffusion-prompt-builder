@@ -74,7 +74,7 @@ function deleteFrom(direction: 'positive'|'negative', type: 'preset'|'tag', name
                 >
                     <template #default="{ node, data }">
                         <div class="flex">
-                          <div class="tag-label">{{ node.label }} <WeightIdentifier :weight="data.weight"/></div>
+                          <div class="tag-label">{{ node.label }} <WeightIdentifier v-if="data.type !== 'child-tag'" :weight="data.weight"/></div>
                           <div v-if="data.type !== 'child-tag'" class="tag-button">
                             <ElButton link type="primary"
                                     @click.stop="data.weight++">
