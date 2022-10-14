@@ -8,7 +8,7 @@
 
 ### 修改标签或预设
 
-请编辑 `data/tags.yaml` 与 `data/presets.yaml` 文件。
+请编辑 `data/tags/*.yaml` 与 `data/presets/*.yaml` 文件。
 
 对于标签名，请将下划线替换为空格。请注意不要与其他标签重复。
 

@@ -1,8 +1,15 @@
 import {Map as ImmutableMap} from 'immutable';
 import {defineStore} from 'pinia'
-// @ts-ignore
-import tagData from '../../data/tags.yaml'
-import type {TagCategory, Tags} from "../datatypes";
+import type {TagCategories, TagCategory, Tags} from "../datatypes";
+
+const tags = import.meta.glob('../../data/tags/*.yaml', {import: 'default', eager: true})
+
+const tagData: Tags = {
+    tags: Object.values(tags).reduce((a: TagCategories, p: any) => {
+        a[p.name] = p.content
+        return a;
+    }, {}),
+}
 
 export const useTagStore = defineStore('tags', {
     state: (): Tags => tagData,

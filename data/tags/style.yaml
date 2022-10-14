@@ -1,0 +1,53 @@
+name: 风格
+content:
+  alphonse mucha:
+    name: 穆夏风格
+  anime screenshot:
+    name: 番剧截图
+  artbook:
+    description: 从画本上扫描下来的画作。
+    image: a19b8b78f19af68c3cab69f843e0f444fa5a58d6c3fc7eac653114b5278de5e7
+    name: 原画
+  chibi:
+    name: Q 版
+  comic:
+    name: 漫画
+  cosplay:
+    name: 角色扮演
+  dakimakura:
+    name: 抱枕
+  game cg:
+    description: 从视频游戏游戏中截取的插画或画面。
+    image: b09816b1edc20ee7ada5ec586520f9b9a081334722b351edc79ed81c3296b35e
+    name: 游戏 CG
+  lineart:
+    name: 线条变粗
+  magazine cover:
+    name: 杂志封面
+  pastel color:
+    name: 速涂质感
+  personification:
+    name: 拟人
+  photo:
+    name: 照片
+  pixel art:
+    name: 像素风
+  realistic:
+    name: 现实
+  retro artstyle:
+    name: 赛璐璐风格
+  sketch:
+    alias:
+      - traditional_media
+    name: 素描/手绘
+  tachi-e:
+    description: 简单背景的立绘图片
+    image: fcf0027ab454ea6ef07bdefa62db7c880a4a8a118e89412ec21933faf4fb6166
+    name: 立绘样式
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/tachi-e.html
+  watercolor:
+    alias:
+      - water pastel color
+    name: 水彩
+  watercolor pencil:
+    name: 彩铅

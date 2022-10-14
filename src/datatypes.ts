@@ -3,6 +3,7 @@ export interface TagMeta {
     name: string,
     description: string | null,
     image: string | null,
+    wikiUrl: string | null,
 }
 
 export interface TagCategory {

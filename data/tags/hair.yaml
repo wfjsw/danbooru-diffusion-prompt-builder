@@ -1,0 +1,42 @@
+name: 人体 / 头发
+content:
+  ahoge:
+    name: 呆毛
+  asymmetrical hair:
+    name: 半边刘海
+  blunt bangs:
+    name: 齐刘海
+  braid:
+    name: 辫子
+  braided ponytail:
+    name: 编织马尾辫
+  colored inner hair:
+    name: 内侧染色
+  curtained hair:
+    name: 窗帘式发型
+  double bun:
+    name: 双团子头
+  french braid:
+    name: 法式辫
+  hair behind ear:
+    name: 耳后发型
+  hair between eyes:
+    alias:
+      - crossed bangs
+    name: 交错刘海
+  hair bun:
+    name: 团子头
+  hair intakes:
+    name: 进气口发型
+  hair over shoulder:
+    name: 披肩发
+  hime cut:
+    name: 姬发式
+  multicolored hair:
+    name: 多彩头发
+  parted bangs:
+    name: 分开的刘海
+  side swept bangs:
+    name: 朝一个方向的刘海
+  streaked hair:
+    name: 条染

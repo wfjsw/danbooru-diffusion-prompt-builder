@@ -3,7 +3,7 @@ import {computed, ref} from 'vue'
 import {ElButton, ElCard, ElTooltip} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 // @ts-ignore
-import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
+import {faClipboard, faThumbsDown, faThumbsUp, faLink} from "@fortawesome/pro-light-svg-icons";
 import {TagMeta} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 
@@ -72,6 +72,11 @@ function toggleNegative() {
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
+                    <a v-if="meta.wikiUrl" :href="meta.wikiUrl" target="_blank">
+                        <ElButton type="info" circle>
+                            <FontAwesomeIcon :icon="faLink"/>
+                        </ElButton>
+                    </a>
                     <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive">
                         <FontAwesomeIcon :icon="faThumbsUp"/>
                     </ElButton>
@@ -108,6 +113,10 @@ function toggleNegative() {
 .buttons {
     display: inline-block;
     margin-left: auto;
+
+    & > * {
+        margin-left: 0.6rem;
+    }
 }
 
 @media (max-width: 1279px) {
