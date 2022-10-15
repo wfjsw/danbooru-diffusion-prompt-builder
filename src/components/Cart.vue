@@ -4,7 +4,6 @@ import type {AllowDropType} from 'element-plus/es/components/tree/src/tree.type'
 import {ElButton, ElScrollbar, ElTree} from "element-plus";
 import {ref} from 'vue';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-// @ts-ignore
 import {faCommentMinus, faCommentPlus, faThumbsDown, faThumbsUp, faTrash} from "@fortawesome/pro-light-svg-icons"
 import {useCartStore} from "../stores/cart";
 import ResultDialog from "./ResultDialog.vue";

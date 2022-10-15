@@ -1,0 +1,47 @@
+content:
+  ankle lace-up:
+    name: 腿部系带
+  armband:
+    name: 臂章
+  armlet:
+    name: 臂环
+  bandaid:
+    name: 创可贴
+  bracelet:
+    name: 手镯
+  butt plug:
+    name: 插入式尾巴
+  cane:
+    name: 手杖
+  chains:
+    name: 锁链
+  condom:
+    name: 套套
+  cuffs:
+    name: 手枷
+  diaper:
+    name: 尿布
+  elbow gloves:
+    name: 长袖手套
+  fingerless gloves:
+    name: 露指手套
+  gloves:
+    name: 手套
+  handcuffs:
+    name: 警用手铐
+  leg garter:
+    name: 腿部花边环
+  necktie:
+    alias:
+    - tie
+    name: 领带
+  shackles:
+    name: 宽手铐
+  wrist cuffs:
+    name: 腕饰
+  wristband:
+    name: 腕带
+  tattoo:
+    name: 纹身
+
+name: 人物身体装饰

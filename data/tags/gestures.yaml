@@ -53,4 +53,6 @@ content:
     name: 胜利手势
   waving:
     name: 招手
-name: 人物手势/肢体语言
+  undressing:
+    name: 脱衣服中
+name: 人物手势动作

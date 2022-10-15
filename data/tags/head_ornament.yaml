@@ -1,0 +1,76 @@
+name: 人物头部饰品
+content:
+  halo:
+    name: 头顶光环
+  tokin hat:
+    name: 东金帽子
+  mini top hat:
+    name: 迷你礼帽
+  beret:
+    name: 贝雷帽
+  hood:
+    name: 兜帽
+  nurse cap:
+    name: 护士帽
+  tiara:
+    name: 三重冕
+  crown:
+    name: 皇冠
+  hairpin:
+    name: 发卡
+  hairband:
+    name: 头箍
+  hairclip:
+    name: 发夹
+  hair ribbon:
+    name: 发带
+  hair flower:
+    name: 发花
+  hair ornament:
+    name: 头饰
+  bowtie:
+    name: 蝴蝶结
+  hair bow:
+    name: 蝴蝶结发饰
+  maid headdress:
+    name: 女仆头饰
+  bow:
+    name: 服装饰品/头部饰品
+  lace:
+    name: 花边
+  ribbon:
+    name: 丝带
+  bandage:
+    name: 绷带
+  glasses:
+    name: 眼镜
+  sunglasses:
+    name: 太阳镜
+  goggles:
+    name: 风镜
+  blindfold:
+    name: 眼罩
+  eyepatch:
+    name: 单眼罩
+  mask:
+    name: 面具/眼罩/口罩
+  earrings:
+    name: 耳环
+  jewelry:
+    name: 首饰
+  collar:
+    name: 项圈
+  bell:
+    name: 铃铛
+  choker:
+    name: 颈部饰品
+  sailor collar:
+    name: 水手领
+  ribbon choker:
+    name: 颈带
+  necklace:
+    name: 项链
+  scarf:
+    name: 围巾
+  facepaint:
+    name: 面纹

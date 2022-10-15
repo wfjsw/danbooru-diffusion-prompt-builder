@@ -1,0 +1,78 @@
+content:
+  babydoll:
+    name: 透明睡衣
+  bikini:
+    name: 比基尼
+  bodystocking:
+    name: 连紧衣
+  japanese clothes:
+    name: 和服
+  bodysuit:
+    name: 紧身衣
+  business suit:
+    name: 职场制服
+  cat cutout:
+    name: 猫咪内衣
+  chinadress:
+    name: 旗袍
+  chinese clothes:
+    name: 唐装
+  corset:
+    name: 紧身褡
+  dress:
+    name: 连衣裙
+  formal:
+    name: 晚礼服
+  gym uniform:
+    name: 运动服
+  leotard:
+    name: 體操服
+  lingerie:
+    name: 女用贴身内衣裤
+  obi:
+    name: 衣带(和服用)
+  pajamas:
+    name: 睡衣
+  santa:
+    name: 圣诞装
+  school swimsuit:
+    name: 学校泳衣
+  school uniform:
+    name: 学校制服
+  see-through:
+    name: 透明装
+  side-tie bikini:
+    name: 系带式比基尼
+  suit:
+    name: 西装
+  swimsuit:
+    name: 泳装
+  torn clothes:
+    name: 破烂衣服
+  underwear:
+    name: 内衣
+  uniform:
+    name: 制服
+  yukata:
+    name: 浴衣
+  serafuku:
+    name: 水手服
+  wedding dress:
+    name: 婚纱
+  gothic:
+    name: 哥特风格
+  lolita fashion:
+    name: 洛丽塔风格
+  gothic lolita:
+    name: 哥特洛丽塔风格
+  western:
+    name: 西部风格
+  nude:
+    alias:
+      - naked
+    name: 裸体的
+  naked apron:
+    name: 裸体围裙
+  naked overalls:
+    name: 裸体工作服
+name: 人物全身服饰

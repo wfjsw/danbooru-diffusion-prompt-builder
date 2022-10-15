@@ -1,0 +1,137 @@
+name: 人物下半身
+content:
+  midriff:
+    name: 腹部
+  navel:
+    name: 肚脐
+  hips:
+    name: 臀部
+  thigh gap:
+    name: 股沟
+  tail:
+    name: 尾巴
+  thighs:
+    name: 大腿
+  thick thighs:
+    name: 粗腿
+  kneepits:
+    name: 膝盖内侧
+  foot:
+    name: 脚
+  toes:
+    name: 脚趾
+  apron:
+    name: 围裙
+  belt:
+    name: 腰带
+  bike shorts:
+    name: 自行车短裤
+  black thighhighs:
+    name: 黑色过膝袜
+  bloomers:
+    name: 灯笼裤
+  boots:
+    name: 靴子
+  cross-laced footwear:
+    name: 系带靴
+  fishnets:
+    alias:
+      - fishnet pantyhose
+      - fishnet stockings
+    name: 网袜
+  frilled legwear:
+    name: 带褶边的过膝袜
+  fundoshi:
+    name: 日式丁字裤
+  garter belt:
+    name: 连腰吊带袜
+  garter straps:
+    name: 袜带
+  garters:
+    name: 吊带袜
+  girdling:
+    name: 束腰
+  high heels:
+    name: 高跟鞋
+  knee boots:
+    name: 马靴
+  kneehighs:
+    name: 长袜
+  leggings:
+    name: 裤袜
+  legwear:
+    name: 裹腿
+  loose socks:
+    name: 泡泡袜
+  lowleg panties:
+    alias:
+      - low leg panties
+    name: 低腰式内裤
+  mary janes:
+    name: 玛丽珍鞋
+  miniskirt:
+    name: 迷你裙
+  no panties:
+    name: 无内裤
+  panties:
+    name: 内裤
+  pantyhose:
+    name: 连裤袜
+  pink panties:
+    name: 粉红内裤
+  pink thighhighs:
+    name: 粉色过膝袜
+  pleated skirt:
+    name: 百褶裙
+  side-tie panties:
+    alias:
+      - himopan
+    name: 系带式内裤
+  skirt:
+    name: 裙子
+  slippers:
+    name: 拖鞋
+  socks:
+    name: 短袜
+  striped panties:
+    name: 条纹内裤
+  striped socks:
+    name: 横条袜
+  striped thighhighs:
+    name: 条纹过膝袜
+  tabi:
+    name: 日式厚底短袜
+  thighhighs:
+    name: 过膝袜
+  thong:
+    name: 丁字裤
+  torn thighhighs:
+    name: 损坏了的过膝袜
+  trefoil:
+    name: 露出三角裤
+  uwabaki:
+    name: 女式学生鞋
+  white panties:
+    name: 白色内裤
+  white thighhighs:
+    name: 白色过膝袜
+  zettai ryouiki:
+    name: 绝对领域
+  shorts:
+    name: 短裤
+  summer dress:
+    name: 夏日长裙
+  bottomless:
+    name: 下着较少
+  skirt_lift:
+    name: 掀起裙子
+  panty pull:
+    name: 内裤拉下来
+  pantyshot:
+    name: 内裤走光
+  maebari:
+    name: 阴贴
+  barefoot:
+    name: 赤脚
+  bare legs:
+    name: 光腿

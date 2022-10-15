@@ -16,4 +16,19 @@ content:
     name: 巨乳 (E)
   gigantic breasts:
     name: 魔乳 (F)
-
+  bra:
+    name: 胸罩
+  bustier:
+    name: 胸衣
+  chemise:
+    name: 吊带胸衣
+  sarashi:
+    name: 缠胸布
+  latex:
+    alias:
+      - pasti
+    name: 乳贴
+  cleavage:
+    name: 乳沟
+  no bra:
+    name: 无胸罩

@@ -3,7 +3,6 @@ import {ElButton, ElCollapseItem, ElTag, ElTooltip} from "element-plus";
 import {Preset} from "../datatypes";
 import {computed, ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-// @ts-ignore
 import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
 import {useCartStore} from "../stores/cart";
 

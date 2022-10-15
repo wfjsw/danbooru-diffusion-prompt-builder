@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import {ElButton, ElSwitch} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-// @ts-ignore
-import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLink, faLightbulbOn, faLightbulbSlash, faCommentMinus, faCommentPlus, faTrash} from "@fortawesome/pro-light-svg-icons";
+import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLightbulbOn, faLightbulbSlash, faCommentMinus, faCommentPlus, faTrash} from "@fortawesome/pro-light-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {useTagStore} from "../stores/tags";
-import {h} from "vue";
+import {computed, h} from "vue";
 import {useDark} from "@vueuse/core";
 
 defineProps<{
@@ -16,10 +15,10 @@ const settingsStore = useSettingsStore();
 const tagStore = useTagStore();
 const dark = useDark();
 
-const activeIcon = h(FontAwesomeIcon, {icon: faEye})
-const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
-const lightIcon = h(FontAwesomeIcon, {icon: faLightbulbOn})
-const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
+const activeIcon = h(FontAwesomeIcon, { icon: faEye })
+const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
+const lightIcon = h(FontAwesomeIcon, { icon: faLightbulbOn })
+const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
 
 </script>
 

@@ -1,0 +1,45 @@
+name: 人物上半身
+content:
+  armpit:
+    name: 腋
+  collarbone:
+    name: 锁骨
+  wings:
+    name: 翅膀/翼
+  bat wings:
+    name: 蝙蝠翅膀
+  butterfly wings:
+    name: 蝴蝶翅膀
+  black wings:
+    name: 黑色之翼
+  demon wings:
+    name: 恶魔之翼
+  muscle:
+    name: 肌肉
+  cape:
+    name: 披肩/斗篷/披风
+  camisole:
+    name: 吊带背心
+  detached sleeves:
+    name: 袖肩分离装
+  hoodie:
+    name: 卫衣
+  long sleeves:
+    name: 长袖
+  midriff:
+    name: 露腰上衣
+  robe:
+    name: 长袍
+  tank top:
+    name: 女用背心
+  off shoulder:
+    name: 露单肩
+  bare shoulders:
+    name: 露双肩
+  topless:
+    name: 上着较少
+  open clothes:
+    name: 敞开衣服
+  open robe:
+    name: 敞开长袍
+
