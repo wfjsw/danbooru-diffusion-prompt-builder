@@ -40,7 +40,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
             <span class="text-large font-600 mr-3"> Danbooru 标签生成器 </span>
         </div>
         <div class="right split">
-            <ElInput v-model.lazy="searchTerms" :prefix-icon="IconSearch" class="search"
+            <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
                      placeholder="搜索"/>
             <ElSwitch
                 v-model="dark"

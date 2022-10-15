@@ -89,7 +89,7 @@ export const useTagStore = defineStore('tags', {
                     return false;
                 }).reduce((res: TagCategory, [key, meta]) => (res[key] = meta, res), {});
         },
-        searchAll(query: string) {
+        searchAll(query: string, limit: number = 25) {
             if (query === '') return {}
 
             return this.allTags
@@ -98,7 +98,9 @@ export const useTagStore = defineStore('tags', {
                     if (meta.name.includes(query)) return true;
                     if (meta.alias?.some(a => a.includes(query))) return true;
                     return false;
-                }).reduce((res: TagCategory, meta, key) => (res[key] = meta, res), {});
+                })
+                .slice(0, limit)
+                .reduce((res: TagCategory, meta, key) => (res[key] = meta, res), {});
         }
     }
 })
