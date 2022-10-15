@@ -14,7 +14,7 @@ const tagData: Tags = {
 export const useTagStore = defineStore('tags', {
     state: (): Tags => tagData,
     getters: {
-        categories: (state) => Object.keys(state.tags),
+        categories: (state) => Object.keys(state.tags).sort(),
         allTags: (state) =>
             ImmutableMap(Object.values(state.tags).reduce((a, b) => {
                 for (const [tag, meta] of Object.entries(b)) {
@@ -26,7 +26,11 @@ export const useTagStore = defineStore('tags', {
                     }
                 }
                 return a;
-            }, {}))
+            }, {})),
+        allTagCount: (state) =>
+            Object.values(state.tags).reduce((a, b) => a + Object.keys(b).length, 0),
+        tagWithPhotosCount: (state) =>
+            Object.values(state.tags).reduce((a, b) => a + Object.values(b).filter((v) => v.image).length, 0),
     },
     actions: {
         resolve(name: string) {

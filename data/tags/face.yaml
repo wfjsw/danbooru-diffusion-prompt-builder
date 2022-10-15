@@ -12,12 +12,6 @@ content:
     name: 眨眼
   wince:
     name: 闭一只眼
-  slit pupils:
-    name: 竖瞳孔/猫眼
-  heterochromia:
-    name: 异色瞳
-  heart-shaped pupils:
-    name: 爱心形瞳孔
   eyelid pull:
     name: 拉眼皮
   aqua eyes:
@@ -72,13 +66,24 @@ content:
     name: 皱眉/蹙额
   expressionless:
     name: 无表情的
-  rolleyes:
-    name: 眼球上翻
   ahegao:
-    name: 做爱时很痴的表情
+    name: 阿嘿颜
   naughty face:
     name: 下流的表情
   endured face:
     name: 忍耐的表情
   looking at viewer:
     name: 看着你
+  fangs:
+    name: 尖牙
+  tongue:
+    name: 舌头
+  no nose:
+    name: 没有鼻子
+  saliva:
+    name: 唾液
+  facial hair:
+    name: 胡子
+  hair over one eye:
+    name: 头发遮住一边眼
+

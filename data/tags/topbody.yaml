@@ -1,0 +1,19 @@
+name: 人物上半身
+content:
+  armpit:
+    name: 腋
+  collarbone:
+    name: 锁骨
+  wings:
+    name: 翅膀/翼
+  bat wings:
+    name: 蝙蝠翅膀
+  butterfly wings:
+    name: 蝴蝶翅膀
+  black wings:
+    name: 黑色之翼
+  demon wings:
+    name: 恶魔之翼
+  muscle:
+    name: 肌肉
+

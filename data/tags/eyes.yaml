@@ -1,0 +1,30 @@
+content:
+  black eyes:
+    name: 黑眼
+  blue eyes:
+    name: 蓝眼
+  brown eyes:
+    name: 棕眼
+  green eyes:
+    name: 绿眼
+  grey eyes:
+    name: 灰眼
+  heart-shaped pupils:
+    name: 爱心形瞳孔
+  heterochromia:
+    name: 异色瞳
+  purple eyes:
+    name: 紫眼
+  red eyes:
+    name: 红眼
+  rolleyes:
+    name: 眼球上翻
+  silver eyes:
+    name: 银眼
+  slit pupils:
+    name: 竖瞳孔/猫眼
+  white eyes:
+    name: 白眼
+  yellow eyes:
+    name: 金眼
+name: 人物眼睛

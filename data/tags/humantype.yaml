@@ -1,0 +1,88 @@
+content:
+  1boy:
+    name: 1 个男人
+  1girl:
+    name: 1 个女人
+  2boys:
+    name: 2 个男人
+  2girls:
+    name: 2 个女人
+  angel:
+    name: 天使
+  cheerleader:
+    name: 拉拉队
+  chibi:
+    alias:
+    - super deformed
+    description: 通常将头的比例在全图中加大，以营造可爱效果。
+    image: b4b5532bfe903ab611da3c1e97c9e2be1347322a363166f2c2bd0c93ed719d37
+    name: Q 版
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/chibi.html
+  crossdressing:
+    name: 伪娘
+  devil:
+    name: 魔鬼（撒旦）
+  doll:
+    name: 人偶
+  elf:
+    name: 妖精
+  fairy:
+    name: 小精灵
+  female:
+    name: 女人
+  furry:
+    name: 兽人
+  giantess:
+    name: 女巨人
+  harem:
+    name: 后宫
+  kemonomimi mode:
+    name: 兽耳萝莉模式
+  loli:
+    name: 萝莉
+  magical girl:
+    name: 魔法少女
+  maid:
+    name: 女仆
+  male:
+    name: 男人
+  mermaid:
+    name: 美人鱼
+  miko:
+    name: 巫女
+  milf:
+    name: 熟女
+  minigirl:
+    name: 迷你女孩
+  monster:
+    name: 怪物
+  ninja:
+    name: 忍者/日本武士
+  no_humans:
+    name: 非人
+  nun:
+    name: 修女
+  orc:
+    name: 半兽人
+  shota:
+    name: 正太
+  siblings:
+    name: 兄弟姐妹
+  sisters:
+    name: 姐妹
+  solo:
+    name: 单人
+  vampire:
+    name: 吸血鬼
+  waitress:
+    name: 女服务员
+  witch:
+    name: 女巫
+  yaoi:
+    name: 搞基
+  yukkuri shiteitte ne:
+    description: 馒头样人物，东方系列
+    name: 油库里
+  yuri:
+    name: 百合
+name: 人物种类

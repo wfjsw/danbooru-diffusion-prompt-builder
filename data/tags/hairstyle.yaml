@@ -1,30 +1,35 @@
-name: 人物发型
 content:
   ahoge:
     name: 呆毛
   asymmetrical hair:
     name: 半边刘海
+  bangs:
+    name: 刘海
   blunt bangs:
     name: 齐刘海
   braid:
     name: 辫子
   braided ponytail:
     name: 编织马尾辫
-  colored inner hair:
-    name: 内侧染色
+  curly hair:
+    name: 卷发
   curtained hair:
     name: 窗帘式发型
   double bun:
     name: 双团子头
+  drill hair:
+    name: 钻头卷/公主卷
   french braid:
     name: 法式辫
   hair behind ear:
     name: 耳后发型
   hair between eyes:
     alias:
-      - crossed bangs
+    - crossed bangs
     name: 交错刘海
   hair bun:
+    alias:
+    - hairbun
     name: 团子头
   hair intakes:
     name: 进气口发型
@@ -32,11 +37,30 @@ content:
     name: 披肩发
   hime cut:
     name: 姬发式
-  multicolored hair:
-    name: 多彩头发
+  long hair:
+    name: 长发
+  messy hair:
+    name: 凌乱发型
   parted bangs:
     name: 分开的刘海
+  payot:
+    name: 长鬓角
+  ponytail:
+    name: 马尾
+  short hair:
+    name: 短发
+  short ponytail:
+    name: 短马尾
   side swept bangs:
     name: 朝一个方向的刘海
-  streaked hair:
-    name: 条染
+  side ponytail:
+    name: 侧马尾
+  twin braids:
+    name: 双辫子
+  twintails:
+    name: 双马尾
+  very long hair:
+    name: 很长的头发
+  wavy hair:
+    name: 波浪发型
+name: 人物发型

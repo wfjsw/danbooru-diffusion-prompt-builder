@@ -1,0 +1,28 @@
+name: 人物发色
+content:
+  streaked hair:
+    name: 条染
+  multicolored hair:
+    name: 多彩头发
+  colored inner hair:
+    name: 内侧染色
+  blonde hair:
+    name: 金发
+  silver hair:
+    name: 银发
+  grey hair:
+    name: 灰发
+  white hair:
+    name: 白发
+  brown hair:
+    name: 棕发
+  black hair:
+    name: 黑发
+  purple hair:
+    name: 紫发
+  red hair:
+    name: 红发
+  blue hair:
+    name: 蓝发
+  green hair:
+    name: 绿发
