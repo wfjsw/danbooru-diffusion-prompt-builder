@@ -88,7 +88,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
         </li>
         <li>
             <p>
-                在购物车中，您可以点击
+                在购物车中，您可以自由拖动标签，调整前后顺序。位置靠前的标签拥有更高权重。点击
                 <span>
                     <ElButton link type="primary">
                         <FontAwesomeIcon :icon="faCommentPlus"/>
@@ -111,7 +111,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
                         <FontAwesomeIcon :icon="faThumbsDown"/>
                     </ElButton>
                 </span>
-                可将标签在正负两个方向之间切换。
+                可将标签在正负两个方向之间移动。
                 点击
                 <span>
                     <ElButton link type="danger">

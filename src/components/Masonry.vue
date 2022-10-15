@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Masonry from 'masonry-layout';
-import {onMounted, onUnmounted, onUpdated, Ref, ref} from 'vue';
+import type {Ref} from 'vue';
+import {onMounted, onUnmounted, onUpdated, nextTick, ref} from 'vue';
 
 defineProps<{
     bind: any|null
@@ -22,8 +23,11 @@ onUnmounted(() => {
 })
 
 onUpdated(() => {
-    masonry.value?.reloadItems?.();
-    masonry.value?.layout?.();
+    nextTick(() => {
+        masonry.value?.reloadItems?.();
+        masonry.value?.layout?.();
+    })
+
 })
 </script>
 

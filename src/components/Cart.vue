@@ -65,7 +65,7 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
         <h1 class="text-center">购物车</h1>
         <ElScrollbar class="scrollable">
             <div class="subcart-container cart-positive-container">
-                <h1>正向标签</h1>
+                <h1>我想要</h1>
                 <ElTree
                     :allow-drag="allowDrag"
                     :allow-drop="allowDrop"
@@ -101,7 +101,7 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
                 </ElTree>
             </div>
             <div class="subcart-container cart-negative-container">
-                <h1>反向标签</h1>
+                <h1>我不想要</h1>
                 <ElTree
                     :allow-drag="allowDrag"
                     :allow-drop="allowDrop"
