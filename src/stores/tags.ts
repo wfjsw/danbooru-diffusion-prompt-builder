@@ -82,7 +82,7 @@ export const useTagStore = defineStore('tags', {
 
             return Object.entries(this.tags[category])
                 .filter(([key, meta]) => {
-                    if (settings.showRestricted || !meta.restricted) return false;
+                    if (!settings.showRestricted && meta.restricted) return false;
                     if (key.includes(query)) return true;
                     if (meta.name.includes(query)) return true;
                     if (meta.alias?.some(a => a.includes(query))) return true;
