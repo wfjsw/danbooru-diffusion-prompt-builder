@@ -93,14 +93,14 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
                         <FontAwesomeIcon :icon="faCommentPlus"/>
                     </ElButton>
                 </span>
-                按钮将标签权重提升 {{ settingsStore.newEmphasis ? '1.10' : '1.05' }} 倍。
+                按钮将标签权重提升 {{ settingsStore.newEmphasis ? '1.10' : '1.05' }} 倍，
                 点击
                 <span>
                     <ElButton link type="primary">
                         <FontAwesomeIcon :icon="faCommentMinus"/>
                     </ElButton>
                 </span>
-                按钮可将标签权重降低 {{ settingsStore.newEmphasis ? '1.10' : '1.05' }} 倍。
+                按钮可将标签权重降低为原先的 {{ settingsStore.newEmphasis ? '90.91' : '95.24' }}%。
                 点击
                 <span>
                     <ElButton link type="primary">
