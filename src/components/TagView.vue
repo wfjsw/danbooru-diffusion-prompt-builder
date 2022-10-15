@@ -112,11 +112,11 @@ function toggleNegative(tag: string = props.tag) {
                         <div class="alias-tag flex-button-container">
                             <div><code class="tag-name">{{ alias }}</code></div>
                             <div class="buttons">
-                                <ElButton :type="aliasInPositive[alias] ? 'success' : 'default'" circle size="small"
+                                <ElButton :type="aliasInPositive![alias] ? 'success' : 'default'" circle size="small"
                                           @click="togglePositive(alias)">
                                     <FontAwesomeIcon :icon="faThumbsUp"/>
                                 </ElButton>
-                                <ElButton :type="aliasInNegative[alias] ? 'danger' : 'default'" circle size="small"
+                                <ElButton :type="aliasInNegative![alias] ? 'danger' : 'default'" circle size="small"
                                           @click="toggleNegative(alias)">
                                     <FontAwesomeIcon :icon="faThumbsDown"/>
                                 </ElButton>
