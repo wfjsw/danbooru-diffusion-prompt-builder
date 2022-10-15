@@ -1,0 +1,54 @@
+content:
+  all fours:
+    name: 四肢趴地
+  arched back:
+    name: 弓身体
+  bent over:
+    name: 翘臀姿势
+  crossed legs:
+    name: 二郎腿
+  fetal position:
+    name: 曲腿至胸
+  fighting stance:
+    name: 战斗姿态
+  hugging own legs:
+    name: 抱腿
+  indian style:
+    name: 盘腿
+  kneeling:
+    name: 下跪
+  leaning forward:
+    name: 身体前驱
+  leg lift:
+    name: 抬一只脚
+  legs up:
+    name: 抬两只脚
+  looking back:
+    name: 向后看
+  lying:
+    name: 躺着
+  on stomach:
+    name: 趴着
+  princess carry:
+    name: 公主抱
+  seiza:
+    name: 正坐
+  sitting:
+    name: 坐着
+  spread legs:
+    name: 张腿
+  squatting:
+    name: 蹲下
+  straddle:
+    name: 跨坐
+  top-down bottom-up:
+    name: 趴着翘臀
+  upside-down:
+    name: 颠倒的
+  wariza:
+    alias:
+    - w-sitting
+    name: 割坐
+  yokozuwari:
+    name: 侧身坐
+name: 人体姿势

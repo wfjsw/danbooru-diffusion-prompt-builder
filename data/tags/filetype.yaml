@@ -1,0 +1,40 @@
+content:
+  absurdres:
+    name: 超高分辨率
+  back:
+    name: 背影像
+  bust:
+    name: 半身像
+  checkered:
+    name: 格子的
+  column_lineup:
+    name: 小图拼接
+  everyone:
+    name: 所有人
+  expressions:
+    name: 表情绘
+  gradient_background:
+    name: 渐变的背景
+  highres:
+    name: 高分辨率
+  huge filesize:
+    name: 大文件体积
+  incredibly absurdres:
+    name: 极高分辨率
+  lowres:
+    name: 低分辨率
+  original:
+    name: 原创
+  parody:
+    name: 拙劣模仿
+  profile:
+    name: 侧面绘
+  sample:
+    name: 样图标记
+  simple_background:
+    name: 简单背景/无背景
+  transparent_background:
+    name: 透明背景
+  wallpaper:
+    name: 壁纸
+name: 图片类型
