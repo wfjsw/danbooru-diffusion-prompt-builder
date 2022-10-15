@@ -51,4 +51,6 @@ content:
     name: 割坐
   yokozuwari:
     name: 侧身坐
+  zombie pose:
+    name: 僵尸姿势
 name: 人体姿势

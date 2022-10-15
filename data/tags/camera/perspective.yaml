@@ -1,0 +1,37 @@
+name: 视角
+content:
+  from behind:
+    name: 从背面
+  from below:
+    name: 从下方
+  from above:
+    name: 从上方
+  from side:
+    name: 从侧面
+  solo focus:
+    name: 单人焦点
+  back focus:
+    name: 背景焦点
+  ass focus:
+    alias:
+      - hip focus
+    name: 臀部焦点
+  foot focus:
+    name: 足部焦点
+  first-person view:
+    name: 第一人称视角
+  pov:
+    name: 主观视角
+  three sided view:
+    name: 三视图
+  multiple views:
+    name: 多视图
+  cowboy shot:
+    name: 骑马镜头
+  portrait:
+    name: 肖像
+  close-up:
+    name: 近景
+  cut-in:
+    name: 插入画面
+

@@ -10,3 +10,9 @@ content:
     name: 城市风景
   fences:
     name: 栏杆
+  ruins:
+    name: 废墟
+  church:
+    name: 教堂
+  shop:
+    name: 商店

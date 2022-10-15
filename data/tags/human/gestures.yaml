@@ -10,12 +10,12 @@ content:
   arms crossed:
     name: 手交叉于胸前
   arms up:
-    name: 抬手
+    name: 双抬臂
   breast grab:
     name: 抓胸
   caramelldansen:
-    name: 焦糖舞
     description: 某著名伸手扭腰动作
+    name: 焦糖舞
   cat pose:
     name: 猫爪手势
   chin rest:
@@ -45,15 +45,33 @@ content:
   shushing:
     name: 嘘手势
   spread arms:
-    name: 张手
+    name: 张开双臂
   stretch:
     name: 伸懒腰
   thumbs up:
     name: 翘大拇指
+  undressing:
+    name: 脱衣服中
   v:
     name: 胜利手势
   waving:
     name: 招手
-  undressing:
-    name: 脱衣服中
+  outstretched arms:
+    name: 伸出双臂
+  outstretched arm:
+    name: 伸出单臂
+  outstretched hand:
+    name: 伸出手
+  reaching:
+    name: 伸手触及
+  arm up:
+    name: 单抬臂
+  presenting armpit:
+    name: 展示腋窝
+  presenting panties:
+    name: 展示内裤
+  arms behind head:
+    name: 手臂放头后
+  hugging own legs:
+    name: 抱自己的腿
 name: 人物手势动作

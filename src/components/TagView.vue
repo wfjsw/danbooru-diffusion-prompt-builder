@@ -31,19 +31,44 @@ const imageUrl = computed(() => {
 const inPositive = computed(() => cartStore.existsPositive('tag', props.tag))
 const inNegative = computed(() => cartStore.existsNegative('tag', props.tag))
 
-function togglePositive() {
-    if (!inPositive.value) {
-        cartStore.appendPositiveTag(props.tag)
+interface BooleanFlags {
+    [key: string]: boolean
+}
+
+const aliasInPositive = computed<BooleanFlags|null>(() => props.meta?.alias
+    && props.meta.alias.reduce((a: BooleanFlags, t: string) => (a[t] = cartStore.existsPositive('tag', t), a), {}))
+const aliasInNegative = computed<BooleanFlags|null>(() => props.meta?.alias
+    && props.meta.alias.reduce((a: BooleanFlags, t: string) => (a[t] = cartStore.existsNegative('tag', t), a), {}))
+
+function togglePositive(tag: string = props.tag) {
+    if (tag === props.tag) {
+        if (!inPositive.value) {
+            cartStore.appendPositiveTag(tag)
+        } else {
+            cartStore.removePositiveTag(tag)
+        }
     } else {
-        cartStore.removePositiveTag(props.tag)
+        if (!aliasInPositive.value![tag]) {
+            cartStore.appendPositiveTag(tag)
+        } else {
+            cartStore.removePositiveTag(tag)
+        }
     }
 }
 
-function toggleNegative() {
-    if (!inNegative.value) {
-        cartStore.appendNegativeTag(props.tag)
+function toggleNegative(tag: string = props.tag) {
+    if (tag === props.tag) {
+        if (!inNegative.value) {
+            cartStore.appendNegativeTag(tag)
+        } else {
+            cartStore.removeNegativeTag(tag)
+        }
     } else {
-        cartStore.removeNegativeTag(props.tag)
+        if (!aliasInNegative.value![tag]) {
+            cartStore.appendNegativeTag(tag)
+        } else {
+            cartStore.removeNegativeTag(tag)
+        }
     }
 }
 </script>
@@ -54,7 +79,7 @@ function toggleNegative() {
              :style="{backgroundImage: `url(${imageUrl})`}"/>
 
         <div class="imagecard-content">
-            <div class="card-header">
+            <div class="card-header flex-button-container">
                 <div class="tag-header"><code class="tag-name large">{{ tag }}</code></div>
                 <div class="buttons">
                     <ElTooltip :visible="copied">
@@ -70,10 +95,10 @@ function toggleNegative() {
                             <FontAwesomeIcon :icon="faLink"/>
                         </ElButton>
                     </a>
-                    <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive">
+                    <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(tag)">
                         <FontAwesomeIcon :icon="faThumbsUp"/>
                     </ElButton>
-                    <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative">
+                    <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(tag)">
                         <FontAwesomeIcon :icon="faThumbsDown"/>
                     </ElButton>
                 </div>
@@ -83,7 +108,20 @@ function toggleNegative() {
             <div v-if="meta.alias">
                 <span class="text">别名：</span>
                 <ul>
-                    <li v-for="alias in meta.alias" :key="alias" class="text"><code class="tag-name">{{ alias }}</code>
+                    <li v-for="alias in meta.alias" :key="alias" class="text">
+                        <div class="alias-tag flex-button-container">
+                            <div><code class="tag-name">{{ alias }}</code></div>
+                            <div class="buttons">
+                                <ElButton :type="aliasInPositive[alias] ? 'success' : 'default'" circle size="small"
+                                          @click="togglePositive(alias)">
+                                    <FontAwesomeIcon :icon="faThumbsUp"/>
+                                </ElButton>
+                                <ElButton :type="aliasInNegative[alias] ? 'danger' : 'default'" circle size="small"
+                                          @click="toggleNegative(alias)">
+                                    <FontAwesomeIcon :icon="faThumbsDown"/>
+                                </ElButton>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -202,13 +240,20 @@ function toggleNegative() {
 }
 
 .card-header {
+    margin-bottom: 1.5rem;
+    row-gap: 0.75rem;
+}
+
+.flex-button-container {
     display: flex;
     flex-direction: row;
     vertical-align: middle;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-    row-gap: 0.75rem;
+}
+
+.alias-tag {
+    row-gap: 0.5rem;
 }
 
 .imagecard-content {

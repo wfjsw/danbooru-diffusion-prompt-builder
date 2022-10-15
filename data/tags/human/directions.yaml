@@ -1,0 +1,56 @@
+name: 人物摆位
+content:
+  facing away:
+    name: 背对
+  profile:
+    name: 侧脸
+  straight-on:
+    name: 正脸
+  full body:
+    name: 全身
+  out of frame:
+    name: 脱框
+  head out of frame:
+    name: 头部脱框
+  feet out of frame:
+    name: 脚部脱框
+  upper body:
+    name: 上半身
+  lower body:
+    name: 下半身
+  cropped torso upper body:
+    name: 裁剪上半身
+  cropped shoulders:
+    name: 裁剪肩膀
+  cropped arms:
+    name: 裁剪手臂
+  cropped legs:
+    name: 裁剪腿部
+  selfiemirror:
+    name: 自拍镜
+  symmetrical:
+    name: 对称
+  looking at viewer:
+    name: 盯着观众
+  facing viewer:
+    name: 面对观众
+  looking at another:
+    name: 盯着另一人
+  looking to the side:
+    name: 侧视
+  looking away:
+    name: 不看镜头
+  looking back:
+    name: 回头看
+  looking down:
+    name: 向下看
+  looking up:
+    name: 向上看
+  looking afar:
+    name: 远眺
+  staring:
+    name: 盯着看
+  eye contact:
+    name: 对视
+  sideways glance:
+    name: 斜视

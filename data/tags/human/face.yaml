@@ -38,8 +38,14 @@ content:
     name: 叹气
   smile:
     name: 微笑
+  light smile:
+    name: 浅笑
   grin:
     name: 露齿而笑
+  evil smile:
+    alias:
+      - evil grin
+    name: 坏笑
   stare:
     name: 凝视
   angry:
@@ -88,7 +94,14 @@ content:
     name: 头发遮住一边眼
   fingersmile:
     name: 用手指做出笑脸
-  mouth_hold:
+  mouth hold:
     name: 嘴咬住
-
+  parted lips:
+    name: 嘴唇微张
+  closed mouth:
+    name: 闭嘴
+  tongue out:
+    name: 吐舌头
+  licking lips:
+    name: 舔嘴唇
 
