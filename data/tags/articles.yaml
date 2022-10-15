@@ -1,0 +1,10 @@
+name: 图片杂件
+content:
+  text:
+    name: 含文字
+  signature:
+    name: 含签名
+  watermark:
+    name: 含水印
+  username:
+    name: 含用户名

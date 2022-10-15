@@ -4,6 +4,7 @@ export interface TagMeta {
     description: string | null,
     image: string | null,
     wikiUrl: string | null,
+    restricted: boolean|null,
 }
 
 export interface TagCategory {

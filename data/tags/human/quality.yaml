@@ -1,0 +1,12 @@
+name: 人物品控
+content:
+  bad anatomy:
+    name: 身体结构错误
+  bad hands:
+    name: 手型错误
+  fewer digits:
+    alias:
+      - missing fingers
+    name: 缺少手指
+  extra digit:
+    name: 多余手指

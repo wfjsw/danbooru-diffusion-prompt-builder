@@ -7,14 +7,12 @@ content:
     name: 半身像
   checkered:
     name: 格子的
-  column_lineup:
+  column lineup:
     name: 小图拼接
   everyone:
     name: 所有人
   expressions:
     name: 表情绘
-  gradient_background:
-    name: 渐变的背景
   highres:
     name: 高分辨率
   huge filesize:
@@ -22,6 +20,8 @@ content:
   incredibly absurdres:
     name: 极高分辨率
   lowres:
+    alias:
+      - low res
     name: 低分辨率
   original:
     name: 原创
@@ -31,10 +31,20 @@ content:
     name: 侧面绘
   sample:
     name: 样图标记
-  simple_background:
-    name: 简单背景/无背景
-  transparent_background:
-    name: 透明背景
   wallpaper:
     name: 壁纸
+  masterpiece:
+    name: 杰作
+  best quality:
+    name: 顶级质量
+  worst quality:
+    name: 糟糕质量
+  low quality:
+    name: 低质量
+  normal quality:
+    name: 一般质量
+  cropped:
+    name: 遭到裁剪
+  error:
+    name: 有错误
 name: 图片类型

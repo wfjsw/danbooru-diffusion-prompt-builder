@@ -3,7 +3,7 @@ import {h, ref, computed} from 'vue'
 import {ElButton, ElInput, ElSwitch} from "element-plus";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
+import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from "@fortawesome/pro-light-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
 import {useSettingsStore} from "../stores/settings";
@@ -25,6 +25,9 @@ const searchTerms = computed({
 const dark = useDark();
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
 const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
+
+const safeIcon = h(FontAwesomeIcon, {icon: faShieldCheck})
+const unsafeIcon = h(FontAwesomeIcon, {icon: faShieldExclamation})
 
 const lightIcon = h(FontAwesomeIcon, {icon: faLightbulbOn})
 const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
@@ -58,6 +61,14 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
                 active-text="()"
                 inactive-text="{}"
                 inline-prompt
+                size="large"
+            />
+            <ElSwitch
+                v-model="settingsStore.showRestricted"
+                :active-icon="unsafeIcon"
+                :inactive-icon="safeIcon"
+                inline-prompt
+                class="restricted-switch"
                 size="large"
             />
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
@@ -106,6 +117,11 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
 .search {
     width: 15rem;
     margin-right: 2rem !important;
+}
+
+.restricted-switch {
+    --el-switch-on-color: var(--el-color-danger);
+    --el-switch-off-color: var(--el-color-success);
 }
 </style>
 

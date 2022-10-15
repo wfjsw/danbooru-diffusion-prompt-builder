@@ -13,20 +13,9 @@ const props = defineProps<{
 
 const presetStore = usePresetStore();
 
-const searchTerms = ref('')
+const searchTerms = ref('');
 
-const presets = computed<PresetCategory>(() => presetStore.presets[props.category]);
-
-const filteredPresets = computed<PresetCategory>(() => {
-    const presetsRepo = presets.value
-    return Object.entries(presetsRepo)
-        .filter(([key, meta]) => {
-            if (key.includes(searchTerms.value)) return true;
-            if (meta.description?.includes(searchTerms.value)) return true;
-            if (meta.content?.some(a => a.includes(searchTerms.value))) return true;
-            return false;
-        }).reduce((res: PresetCategory, [key, meta]) => (res[key] = meta, res), {});
-})
+const filteredPresets = computed<PresetCategory>(() => presetStore.searchPreset(props.category, searchTerms.value));
 </script>
 
 <template>

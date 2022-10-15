@@ -19,4 +19,8 @@ content:
     image: e90b24b2020f41af85f44d60aaa0ac1c41d63f78cff277170c80f40dec190ecb
     name: 闪耀效果
     wikiUrl: https://danbooru.donmai.us/wiki_pages/sparkle.html
+  jpeg artifacts:
+    name: JPEG 压缩失真
+  blurry:
+    name: 模糊的
 name: 特效

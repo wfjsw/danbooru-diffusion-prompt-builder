@@ -1,0 +1,12 @@
+name: 城市
+content:
+  skyscrapers:
+    name: 摩天大楼
+  neon lights:
+    name: 霓虹灯
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/neon_lights.html
+    image: 47bfa8edabe2af1bf7ed9663b1727af314c49a21b1b87e1a2f3985c273aaa4ea
+  cityscape:
+    name: 城市风景
+  fences:
+    name: 栏杆

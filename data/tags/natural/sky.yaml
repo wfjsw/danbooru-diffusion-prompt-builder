@@ -1,0 +1,26 @@
+name: 天空
+content:
+  cloud:
+    name: 云
+  full moon:
+    name: 满月
+  moon:
+    name: 月亮
+  moonlight:
+    name: 月光
+  night:
+    name: 夜晚
+  night sky:
+    name: 夜空
+  blue moon:
+    name: 蓝月
+  sky:
+    name: 天空
+  starry sky:
+    alias:
+      - star sky
+    name: 星空
+  sun:
+    name: 太阳
+  skyline:
+    name: 天际线

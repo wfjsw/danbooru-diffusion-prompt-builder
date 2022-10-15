@@ -1,0 +1,10 @@
+name: 位置
+content:
+  outdoors:
+    name: 户外
+  indoors:
+    name: 室内
+  rooftop:
+    name: 屋顶
+  stage:
+    name: 舞台

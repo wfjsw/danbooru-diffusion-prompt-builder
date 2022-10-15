@@ -1,0 +1,11 @@
+name: 花卉
+content:
+  petals:
+    name: 花瓣
+  flower:
+    name: 花
+  rose petals:
+    name: 玫瑰花瓣
+  cherry blossoms:
+    name: 樱花
+

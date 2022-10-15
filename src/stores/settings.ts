@@ -4,5 +4,6 @@ export const useSettingsStore = defineStore('settings', {
     state: () => ({
         showImage: false,
         newEmphasis: true,
+        showRestricted: false,
     }),
 })

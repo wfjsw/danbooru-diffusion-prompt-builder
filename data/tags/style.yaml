@@ -110,3 +110,5 @@ content:
     name: 马克笔风格
     wikiUrl: https://danbooru.donmai.us/wiki_pages/marker_%28medium%29
     image: 80ef4246571d4eac3f366029e5c4bcd5a281820a3838777139c58fe009fe92f6
+  flat colors:
+    name: 单色
