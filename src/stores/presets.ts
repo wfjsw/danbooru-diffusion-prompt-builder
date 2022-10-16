@@ -1,27 +1,26 @@
 import {defineStore} from 'pinia'
 import type {PresetCategories, Presets} from "../datatypes";
-import {PresetCategory} from "../datatypes";
+import {PresetCategory, TagCategories, Tags} from "../datatypes";
 import {useSettingsStore} from "./settings";
 
-const presets = import.meta.glob('../../data/presets/**/*.yaml', {import: 'default', eager: true})
+interface PresetFile {
+    name: string,
+    restricted: boolean|null,
+    content: PresetFileItem[],
+}
 
-const presetData: Presets = {
-    presets: Object.values(presets).reduce((a: PresetCategories, p: any) => {
-        a[p.name] = p.content
-        if (p.restricted) {
-            Object.defineProperty(a[p.name], '_restricted', {
-                configurable: false,
-                enumerable: false,
-                value: true,
-                writable: false
-            })
-        }
-        return a;
-    }, {}),
+interface PresetFileItem {
+    [key: string]: PresetFileSingleItem,
+}
+
+interface PresetFileSingleItem {
+    name: string,
+    description: string | null,
+    content: string[],
 }
 
 export const usePresetStore = defineStore('presets', {
-    state: (): Presets => presetData,
+    state: (): Presets => ({presets: {}}),
     getters: {
         categories: (state) => {
             const settings = useSettingsStore()
@@ -31,9 +30,29 @@ export const usePresetStore = defineStore('presets', {
         },
     },
     actions: {
+        async load() {
+            const presets = import.meta.glob<PresetFile>('../../data/presets/**/*.yaml', {import: 'default'})
+
+            const result = await Promise.all(Object.values(presets).map(f => f()))
+            const presetData: Presets = {
+                presets: result.reduce((a: PresetCategories, p: any) => {
+                    a[p.name] = p.content
+                    if (p.restricted) {
+                        Object.defineProperty(a[p.name], '_restricted', {
+                            configurable: false,
+                            enumerable: false,
+                            value: true,
+                            writable: false
+                        })
+                    }
+                    return a;
+                }, {}),
+            }
+            this.$patch(presetData)
+        },
         searchPreset(presetName: string, query: string) {
             const settings = useSettingsStore()
-            if (!settings.showRestricted && presetData.presets[presetName]._restricted) {
+            if (!settings.showRestricted && this.presets[presetName]._restricted) {
                 return {};
             }
 

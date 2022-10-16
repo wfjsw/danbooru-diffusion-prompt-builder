@@ -3,25 +3,23 @@ import {defineStore} from 'pinia'
 import type {TagCategories, TagCategory, Tags} from "../datatypes";
 import {useSettingsStore} from "./settings";
 
-const tags = import.meta.glob('../../data/tags/**/*.yaml', {import: 'default', eager: true})
+interface TagFile {
+    name: string,
+    restricted: boolean|null,
+    content: TagFileItem[],
+}
 
-const tagData: Tags = {
-    tags: Object.values(tags).reduce((a: TagCategories, p: any) => {
-        a[p.name] = p.content
-        if (p.restricted) {
-            Object.defineProperty(a[p.name], '_restricted', {
-                configurable: false,
-                enumerable: false,
-                value: true,
-                writable: false
-            })
-        }
-        return a;
-    }, {}),
+interface TagFileItem {
+    name: string,
+    description: string | null,
+    image: string | null,
+    wikiUrl: string | null,
+    alias: string[] | null,
+    restricted: boolean|null,
 }
 
 export const useTagStore = defineStore('tags', {
-    state: (): Tags => tagData,
+    state: (): Tags => ({tags: {}}),
     getters: {
         categories: (state) => {
             const settings = useSettingsStore()
@@ -83,6 +81,28 @@ export const useTagStore = defineStore('tags', {
         },
     },
     actions: {
+        async load() {
+            const tags = import.meta.glob<TagFile>('../../data/tags/**/*.yaml', {import: 'default'})
+
+            const result = await Promise.all(Object.values(tags).map(f => f()))
+            const tagData: Tags = {
+                tags: result.reduce((a: TagCategories, p: any) => {
+                    const name = p.name.replaceAll('_', ' ').toLowerCase()
+                    a[name] = p.content
+                    if (p.restricted) {
+                        Object.defineProperty(a[name], '_restricted', {
+                            configurable: false,
+                            enumerable: false,
+                            value: true,
+                            writable: false
+                        })
+                    }
+                    return a;
+                }, {}),
+            }
+
+            this.$patch(tagData)
+        },
         resolve(name: string) {
             name = name.replaceAll('_', ' ').toLowerCase()
             const meta = this.allTagsWithAlias.get(name);
