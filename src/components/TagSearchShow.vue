@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import {computed, watch} from "vue";
+import {computed} from "vue";
+import {ElScrollbar} from "element-plus";
 import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
@@ -18,12 +19,17 @@ const filteredTags = computed<TagCategory>(() => tagStore.searchAll(props.search
 
 <template>
     <h1>搜索结果</h1>
-    <Masonry :bind="filteredTags">
-        <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
-                 :tag="tag as string"/>
-    </Masonry>
+    <ElScrollbar class="scrollable">
+        <Masonry :bind="filteredTags">
+            <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
+                     :tag="tag as string"/>
+        </Masonry>
+    </ElScrollbar>
 </template>
 
 <style scoped>
-
+.scrollable {
+    height: calc(100vh - 64px - 20px - 10px - 1.17rem - 4rem);
+    overflow-y: auto;
+}
 </style>
