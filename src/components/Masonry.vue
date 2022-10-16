@@ -12,7 +12,6 @@ const container: Ref<HTMLDivElement | null> = ref(null)
 const masonry: Ref<Masonry | null> = ref(null)
 
 const reloadLayout = debounce(() => {
-    console.log('layout reload')
     masonry.value?.reloadItems?.();
     masonry.value?.layout?.();
 }, 25)
