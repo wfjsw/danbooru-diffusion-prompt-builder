@@ -42,12 +42,11 @@ const mainComponent: ComponentList = {
                     <Sidebar @select="changeSelection"/>
                 </ElScrollbar>
             </ElAside>
-            <ElMain>
-                <ElScrollbar class="body-scrollable">
-                    <component :is="mainComponent[activeSelection[0]]" v-if="searchTerms === null || searchTerms === ''"
-                               :category="activeSelection[1]"/>
-                    <TagSearchShow v-else :search="searchTerms"/>
-                </ElScrollbar>
+            <ElMain class="body-full-height">
+                <KeepAlive v-if="searchTerms === null || searchTerms === ''">
+                    <component :is="mainComponent[activeSelection[0]]" :category="activeSelection[1]"/>
+                </KeepAlive>
+                <TagSearchShow v-else :search="searchTerms"/>
             </ElMain>
             <ElAside class="left-bordered" width="380px">
                 <Cart/>
@@ -70,13 +69,8 @@ const mainComponent: ComponentList = {
     border-right: solid 1px var(--el-menu-border-color);
 }
 
-.body-scrollable {
+.body-full-height {
     height: calc(100vh - 64px);
-    overflow-y: auto;
-
-    :deep(.el-scrollbar__view) {
-        margin-bottom: 2.5rem;
-    }
-
+    overflow-y: hidden
 }
 </style>

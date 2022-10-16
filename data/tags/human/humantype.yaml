@@ -87,4 +87,8 @@ content:
     name: 百合
   no humans:
     name: 无人
+  teenage:
+    name: 青少年
+  adolescent:
+    name: 青春期的
 name: 人物类型

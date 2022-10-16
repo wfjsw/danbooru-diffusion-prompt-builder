@@ -78,4 +78,15 @@ content:
   naked overalls:
     name: 裸体工作服
     restricted: true
+  naked ribbon:
+    name: 裸体丝带
+    restricted: true
+  tartan:
+    name: 格子花纹
+  striped:
+    name: 横条花纹
+  polka dot:
+    name: 点状花纹
+  frills:
+    name: 皱边
 name: 人物全身服饰

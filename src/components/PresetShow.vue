@@ -2,7 +2,7 @@
 
 import {computed, ref} from "vue";
 import {Search as IconSearch} from "@element-plus/icons-vue";
-import {ElCollapse, ElInput} from "element-plus";
+import {ElCollapse, ElInput, ElScrollbar} from "element-plus";
 import {usePresetStore} from "../stores/presets";
 import PresetView from "./PresetView.vue";
 import {PresetCategory} from "../datatypes";
@@ -21,15 +21,22 @@ const filteredPresets = computed<PresetCategory>(() => presetStore.searchPreset(
 <template>
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
-    <ElCollapse accordion>
-        <PresetView v-for="(preset, title) in filteredPresets" :category="category" :meta="preset"
-                    :title="title as string"/>
-    </ElCollapse>
+    <ElScrollbar class="scrollable">
+        <ElCollapse accordion>
+            <PresetView v-for="(preset, title) in filteredPresets" :category="category" :meta="preset"
+                        :title="title as string"/>
+        </ElCollapse>
+    </ElScrollbar>
 </template>
 
 <style scoped>
 .search {
     margin-bottom: 1.5rem;
     padding-right: 1.5rem;
+}
+
+.scrollable {
+    height: calc(100vh - 64px - 20px - 10px - 1.17rem - 4rem - 32px - 1.15rem);
+    overflow-y: auto;
 }
 </style>

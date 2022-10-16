@@ -27,4 +27,63 @@ content:
     name: 白眼
   yellow eyes:
     name: 金眼
+  tsurime:
+    name: 悬垂的眼睛
+  tareme:
+    name: 下垂的眼睛
+  sanpaku:
+    name: 三白眼
+  upturned eyes:
+    name: 上翘的眼睛
+  wide-eyed:
+    name: 睁开眼睛
+  ringed eyes:
+    name: 眼圈
+  rolling eyes:
+    name: 眼睛抬头
+  crazy eyes:
+    name: 疯狂的眼睛
+  raised eyebrows:
+    name: 挑眉
+  furrowed brow:
+    name: 下眉毛
+  dashed eyes:
+    name: 黑眼圈中的水平线
+  multicolored eyes:
+    name: 多色的黑眼睛
+  mismatched pupils:
+    name: 左右眼颜色不同
+  mismatched sclera:
+    name: 左右眼不同颜色的眼白
+  no pupils:
+    name: 没有眼睛
+  empty eyes:
+    name: 眼睛没有亮点
+  blank eyes:
+    name: 白眼球
+  dilated pupils:
+    name: 瞳孔扩张
+  hollow eyes:
+    name: 漆黑的眼睛
+  constricted pupils:
+    name: 瞳孔收缩
+  symbol-shaped pupils:
+    name: 符号眼
+  star-shaped pupils:
+    name: 星形眼睛
+  x-shaped pupils:
+    name: X 形眼睛
+  button eyes:
+    name: 纽扣眼
+  eye reflection:
+    name: 眼睛反射
+  closed eyes:
+    name: 闭上眼睛
+  wince:
+    name: 皱眉
+  one eye closed:
+    name: 一只眼睛闭着
+  half-closed eyes:
+    name: 眼睛半闭
+
 name: 人物眼睛

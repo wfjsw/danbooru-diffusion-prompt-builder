@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import Masonry from 'masonry-layout';
 import type {Ref} from 'vue';
-import {onMounted, onUnmounted, onUpdated, nextTick, ref} from 'vue';
+import {onMounted, onUnmounted, onUpdated, nextTick, ref, watch, toRef} from 'vue';
 import {debounce} from 'lodash';
 
-defineProps<{
+const props = defineProps<{
     bind: any|null
 }>();
 
@@ -15,7 +15,7 @@ const reloadLayout = debounce(() => {
     console.log('layout reload')
     masonry.value?.reloadItems?.();
     masonry.value?.layout?.();
-}, 10)
+}, 25)
 
 
 onMounted(() => {
@@ -23,15 +23,19 @@ onMounted(() => {
         gutter: 20,
         transitionDuration: 0,
         percentPosition: true,
+        initLayout: false,
     })
+    reloadLayout()
 })
 
 onUnmounted(() => {
     masonry.value?.destroy?.();
 })
 
-onUpdated(() => {
-    reloadLayout()
+watch(toRef(props, 'bind'), () => {
+    nextTick(() => {
+        reloadLayout()
+    })
 })
 </script>
 

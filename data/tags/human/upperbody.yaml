@@ -40,4 +40,9 @@ content:
     name: 敞开衣服
   open robe:
     name: 敞开长袍
-
+  naked cape:
+    restricted: true
+    name: 裸体披风
+  naked shirt:
+    restricted: true
+    name: 裸体衬衫
