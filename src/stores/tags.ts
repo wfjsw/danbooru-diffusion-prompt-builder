@@ -68,6 +68,7 @@ export const useTagStore = defineStore('tags', {
     },
     actions: {
         resolve(name: string) {
+            name = name.replaceAll('_', ' ').toLowerCase()
             const meta = this.allTags.get(name);
             if (meta) {
                 return {name: meta.name, meta}
@@ -87,7 +88,9 @@ export const useTagStore = defineStore('tags', {
                     if (meta.name.includes(query)) return true;
                     if (meta.alias?.some(a => a.includes(query))) return true;
                     return false;
-                }).reduce((res: TagCategory, [key, meta]) => (res[key] = meta, res), {});
+                })
+                .sort(([a], [b]) => a.localeCompare(b))
+                .reduce((res: TagCategory, [key, meta]) => (res[key] = meta, res), {});
         },
         searchAll(query: string, limit: number = 25) {
             if (query === '') return {}

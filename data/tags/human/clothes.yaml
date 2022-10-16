@@ -71,8 +71,11 @@ content:
     alias:
       - naked
     name: 裸体的
+    restricted: true
   naked apron:
     name: 裸体围裙
+    restricted: true
   naked overalls:
     name: 裸体工作服
+    restricted: true
 name: 人物全身服饰

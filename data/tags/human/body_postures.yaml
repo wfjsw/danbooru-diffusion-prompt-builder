@@ -1,20 +1,57 @@
 content:
   all fours:
     name: 四肢趴地
+    image: ef8da8db5b9f7c1e65ca3b4469584b291f6f3531c117a39a1c1ab5d5ff131188
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/all_fours.html
+    alias:
+      - all-fours
+      - hands and knees
+      - on all fours
   arched back:
     name: 弓身体
+    image: 49b51f4a39d4e62a1d15a361ed265e7483299f3a1badd5d91b237e9b0ae4577e
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/arched_back.html
   bent over:
+    alias:
+      - bend over
+      - bending over
+      - bent-over
     name: 翘臀姿势
+    image: ba6a0ca7b0b068da072a22d954e12256e543dec0ebfdcf570edc543e2e516be3
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/bent_over.html
   crossed legs:
+    alias:
+      - cross legs (lying)
+      - crossed legs (sitting)
+      - crossed legs (standing)
     name: 二郎腿
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/crossed_legs.html
+    image: 835dcac5d2582b97cccc880485631f773d0b675a6b6bae1d777d285cdd957cc0
   fetal position:
     name: 曲腿至胸
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/fetal_position.html
+    image: 542ef4fd7d4788ce5158c5b307d53fb9f8cb9f7fc7131b5b3f7160017aa729b5
   fighting stance:
+    alias:
+      - battle stance
     name: 战斗姿态
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/fighting_stance.html
+    image: bbfebb87b96fd79801fdde2d6c2300edf4abb96d1d5488758b0199ac7a2bfb4f
   hugging own legs:
+    alias:
+      - hugging knees
+      - hugging legs
+      - knee hug
+      - leg hug
     name: 抱腿
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/hugging_own_legs.html
+    image: 71e0b9822ec1fed3f116cc5b8a6807557403ee39fd464a0d556c66040499cec0
   indian style:
+    alias:
+      - agura
     name: 盘腿
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/indian_style.html
+    image: b07128ca6ec64ca17529099f506c57c2744f09e90ba43f7ff53a123f52870d0c
   kneeling:
     name: 下跪
   leaning forward:

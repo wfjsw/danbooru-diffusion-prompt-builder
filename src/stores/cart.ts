@@ -42,6 +42,15 @@ function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
 }
 
 function wrapParenByWeight(content: string, weight: number, newEmphasis: boolean): string {
+    if (newEmphasis) {
+        content = content
+            .replaceAll('(', '\\(').replaceAll(')', '\\)')
+            .replaceAll('[', '\\[').replaceAll(']', '\\]')
+    } else {
+        content = content
+            .replaceAll('{', '\\{').replaceAll('}', '\\}')
+            .replaceAll('[', '\\[').replaceAll(']', '\\]')
+    }
     if (weight > 0) {
         return wrapParen(content, newEmphasis ? '(' : '{', Math.abs(weight))
     } else if (weight < 0) {

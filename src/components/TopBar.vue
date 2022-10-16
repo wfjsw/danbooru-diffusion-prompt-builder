@@ -37,7 +37,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
 <template>
     <div class="topbar">
         <div class="left">
-            <span class="text-large font-600 mr-3"> Danbooru 标签生成器 </span>
+            <span class="text-large font-600 mr-3"> Danbooru 标签超市 </span>
         </div>
         <div class="right split">
             <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"

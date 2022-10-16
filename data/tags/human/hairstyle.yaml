@@ -61,6 +61,58 @@ content:
     name: 双马尾
   very long hair:
     name: 很长的头发
+  front ponytail:
+    name: 前马尾
+  low twintails:
+    name: 低双马尾
+  short twintails:
+    name: 短双马尾
+  folded ponytail:
+    name: 折叠马尾
+  quad tails:
+    name: 四马尾
+  single braid:
+    name: 单辫
+  low twin braids:
+    name: 低双辫
+  side braid:
+    name: 侧辫
+  crown braid:
+    name: 冠型织辫
+  dreadlocks:
+    name: 脏辫
+  cone hair bun:
+    name: 锥形发髻
+  braided bun:
+    name: 辫子髻
+  doughnut hair bun:
+    name: 圆环发髻
+  heart hair bun:
+    name: 心形发髻
   wavy hair:
-    name: 波浪发型
+    name: 自然卷
+  ringlets:
+    name: 小环管卷发
+  asymmetrical bangs:
+    name: 不对称刘海
+  swept bangs:
+    name: 扫浏海
+  sidelocks:
+    name: 耳前发
+  single sidelock:
+    name: 单耳前发
+  hair pulled back:
+    name: 头发后梳
+  half updo:
+    name: 侧发后梳
+  hair one side up:
+    name: 一侧绑发
+  hair two side up:
+    name: 双侧绑发
+  hair spread out:
+    name: 散发
+  floating hair:
+    name: 漂浮的头发
+  straight hair:
+    name: 直发
 name: 人物发型

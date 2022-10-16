@@ -112,3 +112,7 @@ content:
     image: 80ef4246571d4eac3f366029e5c4bcd5a281820a3838777139c58fe009fe92f6
   flat colors:
     name: 单色
+  limited palette:
+    name: 色块风格
+  silhouette:
+    name: 剪影

@@ -1,4 +1,4 @@
-# Danbooru 标签排列组合生成器
+# Danbooru 标签超市
 
 正式版: https://tags.novelai.dev
 

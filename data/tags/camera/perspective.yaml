@@ -34,4 +34,5 @@ content:
     name: 近景
   cut-in:
     name: 插入画面
-
+  dutch angle:
+    name: 倾斜镜头
