@@ -37,6 +37,22 @@ export const useTagStore = defineStore('tags', {
                 if (!settings.showRestricted && b._restricted) {
                     return a;
                 }
+                for (const [tag, meta] of Object.entries(b)) {
+                    if (!settings.showRestricted && meta.restricted) {
+                        continue
+                    }
+                    a[tag] = meta
+                }
+                return a;
+            }, {}))
+        },
+        allTagsWithAlias: (state) => {
+            const settings = useSettingsStore()
+
+            return ImmutableMap(Object.values(state.tags).reduce((a, b) => {
+                if (!settings.showRestricted && b._restricted) {
+                    return a;
+                }
 
                 for (const [tag, meta] of Object.entries(b)) {
                     if (!settings.showRestricted && meta.restricted) {
@@ -69,7 +85,7 @@ export const useTagStore = defineStore('tags', {
     actions: {
         resolve(name: string) {
             name = name.replaceAll('_', ' ').toLowerCase()
-            const meta = this.allTags.get(name);
+            const meta = this.allTagsWithAlias.get(name);
             if (meta) {
                 return {name: meta.name, meta}
             }
