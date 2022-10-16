@@ -1,32 +1,86 @@
 content:
   ahoge:
     name: 呆毛
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/ahoge.html
+    image: b707cf6f137b4c416a9ac70cfdcb78636f4c23e5a571fec5060bcb2adb85e33b
   asymmetrical hair:
-    name: 半边刘海
+    name: 非对称发型
+    description: 发型有显著的非对称部件。
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/asymmetrical_hair.html
+    image: 5e4d4d099e5bff5b4cb8986e53c4ef2f39b209fc2791054019f33743fa4ca993
   bangs:
     name: 刘海
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/bangs.html
+    image: c774f6283bf13a6095e001170cf6c15730f9e26a5a9472b2fedcb95f45dec9c7
   blunt bangs:
     name: 齐刘海
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/blunt_bangs.html
+    image: 32f2f5cd18323d871dedeeea12c0a8e1c9408b9da00b02fe7c4c90b01022d98a
   braid:
+    alias:
+      - braided hair
+      - braids
+      - hair braid
     name: 辫子
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/braid.html
+    image: 78d75f9b894d7874029a9f62c9d77c3c6e8ce56a4064d8c1c4a96997a9388062
   braided ponytail:
     name: 编织马尾辫
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/braided_ponytail.html
+    image: c5d60562aa9ca5c5536cea3956f62672cac50530b5a363e2a1ed40d8b98dfd27
   curly hair:
+    alias:
+      - curls
     name: 卷发
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/curly_hair.html
+    image: 8eb330ebe89d0d64bd621ce738b20684a5aefb9890818146b1c3eab0d045d7a1
   curtained hair:
-    name: 窗帘式发型
+    name: 窗帘/瀑布发型
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/curtained_hair.html
+    image: c1f267d12a537df40c3183cc9ad7802f958ab27476a68a9d70b4edee3391d0fb
   double bun:
+    alias:
+      - buns
+      - double buns
+      - hair buns
+      - twin bun
+      - twin buns
+      - odango
     name: 双团子头
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/double_bun.html
+    image: b86f6dfc8b68b70bd2a383fa4a53063dadbe0f9b9926d8729beba072c7b979d6
   drill hair:
     name: 钻头卷/公主卷
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/drill_hair.html
+    image: 29eb2007e15d3845c80bda0ca3c1a31aa7cd25c5b99a13dbcd7f94290c0ae359
+  twin drills:
+    name: 双钻头卷
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/twin_drills.html
+    image: 56f16d7c4cc515c2316c0aef17175d756cb0cc3b88437bba86b536f2f611db66
+  quad drills:
+    name: 多钻头卷
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/quad_drills.html
+  side drill:
+    name: 单侧钻头卷
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/side_drill.html
   french braid:
     name: 法式辫
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/french_braid.html
+    image: f6262ccd63241ffe62177965beb15ed181bd19a9d298be08ab3855f5de0ae7f2
   hair behind ear:
-    name: 耳后发型
+    name: 耳后发
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/hair_behind_ear.html
+    image: 68a16f2c6ed0ca2daafd90008ad1ef163337e1d9cfa3eac1b38de0ef604c9fe1
   hair between eyes:
     alias:
-    - crossed bangs
+    - bangs between eyes
+    name: 眼间刘海
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/hair_between_eyes.html
+    image: 5fa140efb6c218833336601affa99b98533dba96bb77df487bbeb2b420a8d2c6
+  crossed bangs:
     name: 交错刘海
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/crossed_bangs.html
+    image: c08e9e11aff5bc1118924f9f5a2a7092e21904fbf392bb0526438bdfb8b4c2d7
   hair bun:
     alias:
     - hairbun
