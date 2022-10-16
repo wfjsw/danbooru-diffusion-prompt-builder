@@ -34,10 +34,6 @@ content:
     name: 背光
   ocean:
     name: 大海
-  sunset:
-    name: 落日
-  full moon:
-    name: 满月
   pentagram:
     name: 五角星
   magic circle:
@@ -50,10 +46,6 @@ content:
     name: 圣诞节
   forest:
     name: 森林/树
-  building:
-    name: 建筑
-  ruins:
-    name: 废墟/遗迹
   outdoors:
     name: 户外
   indoors:

@@ -27,8 +27,6 @@ content:
     name: 白眼
   yellow eyes:
     name: 金眼
-  tsurime:
-    name: 悬垂的眼睛
   tareme:
     name: 下垂的眼睛
   sanpaku:
@@ -79,11 +77,24 @@ content:
     name: 眼睛反射
   closed eyes:
     name: 闭上眼睛
-  wince:
-    name: 皱眉
   one eye closed:
     name: 一只眼睛闭着
   half-closed eyes:
     name: 眼睛半闭
-
+  eyes closed:
+    name: 闭眼
+  wink:
+    alias:
+      - blinking
+    name: 眨眼
+  wince:
+    name: 闭一只眼
+  eyelid pull:
+    name: 拉眼皮
+  tsurime:
+    name: 吊眼角
+  eyeball:
+    name: 盯着看
+  tears:
+    name: 眼泪
 name: 人物眼睛

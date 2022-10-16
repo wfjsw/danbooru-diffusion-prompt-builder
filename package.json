@@ -17,6 +17,7 @@
     "@fortawesome/pro-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "element-plus": "^2.2.18",
+    "glob": "^8.0.3",
     "immutable": "^4.1.0",
     "pinia": "^2.0.23",
     "vite-plugin-radar": "^0.5.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.0.0",
+    "@types/glob": "^8.0.0",
     "@types/js-yaml": "^4.0.5",
     "@types/lodash": "^4.14.186",
     "@types/masonry-layout": "^4.2.5",

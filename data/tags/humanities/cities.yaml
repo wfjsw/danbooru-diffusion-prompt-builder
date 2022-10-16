@@ -16,3 +16,5 @@ content:
     name: 教堂
   shop:
     name: 商店
+  building:
+    name: 建筑

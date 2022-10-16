@@ -1,5 +1,6 @@
 import yaml from 'js-yaml'
 import fs from 'fs'
+import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import type {TagCategories} from "../datatypes";
@@ -7,9 +8,9 @@ import type {TagCategories} from "../datatypes";
 const resolution = new Set()
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const tagFiles = fs.readdirSync(path.resolve(dirname, '../../data/tags'))
+const tagFiles = glob.sync('**/*.yaml', {cwd: path.resolve(dirname, '../../data/tags')})
 let hasError = false
-for (const file of tagFiles.filter((f: string) => f.endsWith('.yaml'))) {
+for (const file of tagFiles) {
     const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')) as TagCategories
     for (const [tag, meta] of Object.entries(tagData.content)) {
         if (resolution.has(tag)) {

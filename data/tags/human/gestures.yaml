@@ -11,8 +11,6 @@ content:
     name: 手交叉于胸前
   arms up:
     name: 双抬臂
-  breast grab:
-    name: 抓胸
   caramelldansen:
     description: 某著名伸手扭腰动作
     name: 焦糖舞
@@ -72,6 +70,4 @@ content:
     name: 展示内裤
   arms behind head:
     name: 手臂放头后
-  hugging own legs:
-    name: 抱自己的腿
 name: 人物手势动作

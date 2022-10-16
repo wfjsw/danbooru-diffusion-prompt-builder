@@ -60,8 +60,6 @@ content:
     name: 抬一只脚
   legs up:
     name: 抬两只脚
-  looking back:
-    name: 向后看
   lying:
     name: 躺着
   on stomach:
