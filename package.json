@@ -25,10 +25,12 @@
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.0.0",
     "@types/js-yaml": "^4.0.5",
+    "@types/lodash": "^4.14.186",
     "@types/masonry-layout": "^4.2.5",
     "@types/node": "^16.11.65",
     "@vitejs/plugin-vue": "^3.1.2",
     "@vueuse/components": "^9.3.0",
+    "lodash": "^4.17.21",
     "masonry-layout": "^4.2.2",
     "sass": "^1.55.0",
     "tsx": "^3.10.1",
