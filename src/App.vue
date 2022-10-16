@@ -38,7 +38,7 @@ const mainComponent: ComponentList = {
         </ElHeader>
         <ElContainer>
             <ElAside class="right-bordered" width="256px">
-                <ElScrollbar class="body-scrollable">
+                <ElScrollbar class="body-full-height">
                     <Sidebar @select="changeSelection"/>
                 </ElScrollbar>
             </ElAside>
