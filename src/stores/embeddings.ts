@@ -1,4 +1,4 @@
-import {Map as ImmutableMap} from 'immutable';
+import {Set as ImmutableSet} from 'immutable';
 import {defineStore} from 'pinia'
 import type {EmbeddingCategories, Embeddings, Embedding} from "../datatypes";
 import {useSettingsStore} from "./settings";
@@ -28,22 +28,13 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 .map(([k, _]) => k)
             return filtered.sort()
         },
-        // allTags: (state) => {
-        //     const settings = useSettingsStore()
-        //
-        //     return ImmutableMap(Object.values(state.tags).reduce((a, b) => {
-        //         if (!settings.showRestricted && b._restricted) {
-        //             return a;
-        //         }
-        //         for (const [tag, meta] of Object.entries(b)) {
-        //             if (!settings.showRestricted && meta.restricted) {
-        //                 continue
-        //             }
-        //             a[tag] = meta
-        //         }
-        //         return a;
-        //     }, {}))
-        // },
+        allEmbeddings: (state) => {
+            const settings = useSettingsStore()
+
+            return ImmutableSet<Embedding>(Object.values(state.embeddings).reduce((a: Embedding[], b) => {
+                return a.concat(b.content.filter(n => settings.showRestricted || !n.restricted))
+            }, []))
+        },
         // allTagsWithAlias: (state) => {
         //     const settings = useSettingsStore()
         //
@@ -125,6 +116,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
             return this.embeddings[category].content
                 .filter((n) => {
                     if (!settings.showRestricted && n.restricted) return false;
+                    if (n.payloadHash === query) return true;
                     if (n.prompt.includes(query)) return true;
                     if (n.name.includes(query)) return true;
                     if (n.modelName.includes(query)) return true;
@@ -133,18 +125,22 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 })
                 .sort(({prompt: a}, {prompt: b}) => a.localeCompare(b))
         },
-        // searchAll(query: string, limit: number = 25) {
-        //     if (query === '') return {}
-        //
-        //     return this.allTags
-        //         .filter((meta, key) => {
-        //             if (key.includes(query)) return true;
-        //             if (meta.name.includes(query)) return true;
-        //             if (meta.alias?.some(a => a.includes(query))) return true;
-        //             return false;
-        //         })
-        //         .slice(0, limit)
-        //         .reduce((res: TagCategory, meta, key) => (res[key] = meta, res), {});
-        // }
+        searchAll(query: string, limit: number = 25): Embedding[] {
+            const settings = useSettingsStore()
+            if (query === '') return []
+
+            return this.allEmbeddings
+                .filter((n) => {
+                    if (!settings.showRestricted && n.restricted) return false;
+                    if (n.payloadHash === query) return true;
+                    if (n.prompt.includes(query)) return true;
+                    if (n.name.includes(query)) return true;
+                    if (n.modelName.includes(query)) return true;
+                    if (n.modelHash.includes(query)) return true;
+                    return false;
+                })
+                .slice(0, limit)
+                .toArray()
+        }
     }
 })
