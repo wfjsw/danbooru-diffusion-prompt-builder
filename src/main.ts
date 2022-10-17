@@ -1,6 +1,7 @@
 import {createApp} from 'vue'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import './style.scss'
+// import '@fortawesome/fontawesome-svg-core/styles.css'
 import App from './App.vue'
 import {createPinia} from "pinia";
 import {useTagStore} from "./stores/tags";

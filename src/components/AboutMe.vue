@@ -33,8 +33,8 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
         <p>目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。共收录 {{ presetStore.count }} 组预设标签、{{ embeddingStore.count }} 个精修模型。</p>
         <p>本站的源码与所有原始数据均可在
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
-            查看。如果您觉得本站对您有帮助，请在 GitHub 上点亮一个
-            <GithubButton href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" data-icon="octicon-star" data-size="large" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-show-count="true" aria-label="Star wfjsw/danbooru-diffusion-prompt-builder on GitHub">星星</GithubButton>。
+            查看。如果您觉得本站对您有帮助，请在 GitHub 上点一个
+            <GithubButton href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" data-icon="octicon-star" data-size="large" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-show-count="true" aria-label="Star wfjsw/danbooru-diffusion-prompt-builder on GitHub">Star</GithubButton>。
             同时，也欢迎您通过 Pull Request 向本站添加更多内容。
         </p>
         <p>如何使用：</p>

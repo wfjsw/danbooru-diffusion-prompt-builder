@@ -2,7 +2,7 @@
 import Masonry from 'masonry-layout';
 import type {Ref} from 'vue';
 import {onMounted, onUnmounted, onUpdated, nextTick, ref, watch, toRef} from 'vue';
-import {debounce} from 'lodash';
+import {debounce} from 'lodash-es';
 
 const props = defineProps<{
     bind: any|null

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import yaml from "@rollup/plugin-yaml"
 import ElementPlus from 'unplugin-element-plus/vite'
+import {resolve} from 'path'
 import {VitePluginRadar} from 'vite-plugin-radar'
 import { visualizer } from "rollup-plugin-visualizer";
 
@@ -24,13 +25,26 @@ export default defineConfig({
         visualizer(),
     ],
     resolve: {
-        alias: {
-            '@': '/src',
-        }
+        alias: [
+            {
+                find: '@',
+                replacement: '/src',
+            },
+            {
+                find: /^@fortawesome\/fontawesome-svg-core$/,
+                replacement: resolve(__dirname, './src/fontawesome-svg-core.js'),
+            }
+        ]
+    },
+    esbuild: {
+        legalComments: 'eof',
     },
     build: {
         rollupOptions: {
-            treeshake: 'recommended',
+            treeshake: {
+                preset: 'smallest',
+                moduleSideEffects: true,
+            },
             output: {
                 compact: true,
                 manualChunks(id) {
