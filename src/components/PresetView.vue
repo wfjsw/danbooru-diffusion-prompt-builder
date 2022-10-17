@@ -56,12 +56,16 @@ function toggleNegative() {
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
-                    <ElButton :type="inPositive ? 'success' : 'default'" circle @click.stop="togglePositive">
-                        <FontAwesomeIcon :icon="faThumbsUp"/>
-                    </ElButton>
-                    <ElButton :type="inNegative ? 'danger' : 'default'" circle @click.stop="toggleNegative">
-                        <FontAwesomeIcon :icon="faThumbsDown"/>
-                    </ElButton>
+                    <ElTooltip content="我想要" :show-after="750">
+                        <ElButton :type="inPositive ? 'success' : 'default'" circle @click.stop="togglePositive">
+                            <FontAwesomeIcon :icon="faThumbsUp"/>
+                        </ElButton>
+                    </ElTooltip>
+                    <ElTooltip content="我不想要" :show-after="750">
+                        <ElButton :type="inNegative ? 'danger' : 'default'" circle @click.stop="toggleNegative">
+                            <FontAwesomeIcon :icon="faThumbsDown"/>
+                        </ElButton>
+                    </ElTooltip>
                 </div>
             </div>
         </template>

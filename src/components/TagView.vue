@@ -91,16 +91,22 @@ function toggleNegative(tag: string = props.tag) {
                         </ElButton>
                     </ElTooltip>
                     <a v-if="meta.wikiUrl" :href="meta.wikiUrl" target="_blank">
-                        <ElButton type="info" circle>
-                            <FontAwesomeIcon :icon="faLink"/>
-                        </ElButton>
+                        <ElTooltip content="Danbooru Wiki" :show-after="750">
+                            <ElButton type="info" circle>
+                                <FontAwesomeIcon :icon="faLink"/>
+                            </ElButton>
+                        </ElTooltip>
                     </a>
-                    <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(tag)">
-                        <FontAwesomeIcon :icon="faThumbsUp"/>
-                    </ElButton>
-                    <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(tag)">
-                        <FontAwesomeIcon :icon="faThumbsDown"/>
-                    </ElButton>
+                    <ElTooltip content="我想要" :show-after="750">
+                        <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(tag)">
+                            <FontAwesomeIcon :icon="faThumbsUp"/>
+                        </ElButton>
+                    </ElTooltip>
+                    <ElTooltip content="我不想要" :show-after="750">
+                        <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(tag)">
+                            <FontAwesomeIcon :icon="faThumbsDown"/>
+                        </ElButton>
+                    </ElTooltip>
                 </div>
             </div>
             <div v-if="meta.name" class="text name">{{ meta.name }}</div>
@@ -112,14 +118,18 @@ function toggleNegative(tag: string = props.tag) {
                         <div class="alias-tag flex-button-container">
                             <div><code class="tag-name">{{ alias }}</code></div>
                             <div class="buttons">
-                                <ElButton :type="aliasInPositive![alias] ? 'success' : 'default'" circle size="small"
-                                          @click="togglePositive(alias)">
-                                    <FontAwesomeIcon :icon="faThumbsUp"/>
-                                </ElButton>
-                                <ElButton :type="aliasInNegative![alias] ? 'danger' : 'default'" circle size="small"
-                                          @click="toggleNegative(alias)">
-                                    <FontAwesomeIcon :icon="faThumbsDown"/>
-                                </ElButton>
+                                <ElTooltip content="我想要" :show-after="750">
+                                    <ElButton :type="aliasInPositive![alias] ? 'success' : 'default'" circle size="small"
+                                              @click="togglePositive(alias)">
+                                        <FontAwesomeIcon :icon="faThumbsUp"/>
+                                    </ElButton>
+                                </ElTooltip>
+                                <ElTooltip content="我不想要" :show-after="750">
+                                    <ElButton :type="aliasInNegative![alias] ? 'danger' : 'default'" circle size="small"
+                                              @click="toggleNegative(alias)">
+                                        <FontAwesomeIcon :icon="faThumbsDown"/>
+                                    </ElButton>
+                                </ElTooltip>
                             </div>
                         </div>
                     </li>

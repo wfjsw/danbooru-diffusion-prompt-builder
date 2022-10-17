@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {h, computed} from 'vue'
-import {ElButton, ElInput, ElSwitch} from "element-plus";
+import {ElButton, ElInput, ElSwitch, ElTooltip} from "element-plus";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from "@fortawesome/pro-light-svg-icons";
@@ -41,50 +41,64 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
         <div class="right split">
             <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
                      placeholder="搜索"/>
-            <ElSwitch
-                v-model="isDark"
-                :active-icon="darkIcon"
-                :inactive-icon="lightIcon"
-                inline-prompt
-                size="large"
-            />
-            <ElSwitch
-                v-model="settingsStore.showImage"
-                :active-icon="activeIcon"
-                :inactive-icon="inactiveIcon"
-                inline-prompt
-                size="large"
-            />
-            <ElSwitch
-                v-model="settingsStore.newEmphasis"
-                active-text="()"
-                inactive-text="{}"
-                inline-prompt
-                size="large"
-            />
-            <ElSwitch
-                v-model="settingsStore.showRestricted"
-                :active-icon="unsafeIcon"
-                :inactive-icon="safeIcon"
-                inline-prompt
-                class="restricted-switch"
-                size="large"
-            />
-            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
-                <ElButton link size="large">
-                    <FontAwesomeIcon :icon="faGithub" :style="{'scale': '150%'}"/>
-                </ElButton>
-            </a>
-            <a href="https://bot.novelai.dev" target="_blank">
-                <ElButton link size="large">
-                    <FontAwesomeIcon :icon="faMessageBot" :style="{'scale': '150%'}"/>
-                </ElButton>
-            </a>
-            <a href="https://spell.novelai.dev" target="_blank">
-                <ElButton link size="large">
-                    <FontAwesomeIcon :icon="faMagnifyingGlassChart" :style="{'scale': '150%'}"/>
-                </ElButton>
-            </a>
+            <ElTooltip content="暗黑模式" :show-after="750">
+                <ElSwitch
+                    v-model="isDark"
+                    :active-icon="darkIcon"
+                    :inactive-icon="lightIcon"
+                    inline-prompt
+                    size="large"
+                />
+            </ElTooltip>
+            <ElTooltip content="显示图片" :show-after="750">
+                <ElSwitch
+                    v-model="settingsStore.showImage"
+                    :active-icon="activeIcon"
+                    :inactive-icon="inactiveIcon"
+                    inline-prompt
+                    size="large"
+                />
+            </ElTooltip>
+            <ElTooltip content="强调类型" :show-after="750">
+                <ElSwitch
+                    v-model="settingsStore.newEmphasis"
+                    active-text="()"
+                    inactive-text="{}"
+                    inline-prompt
+                    size="large"
+                />
+            </ElTooltip>
+            <ElTooltip content="分级限制" :show-after="750">
+                <ElSwitch
+                    v-model="settingsStore.showRestricted"
+                    :active-icon="unsafeIcon"
+                    :inactive-icon="safeIcon"
+                    inline-prompt
+                    class="restricted-switch"
+                    size="large"
+                />
+            </ElTooltip>
+            <ElTooltip content="GitHub" :show-after="750">
+                <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
+                    <ElButton link size="large">
+                        <FontAwesomeIcon :icon="faGithub" :style="{'scale': '150%'}"/>
+                    </ElButton>
+                </a>
+            </ElTooltip>
+            <ElTooltip content="Koishi.js NovelAI 插件" :show-after="750">
+                <a href="https://bot.novelai.dev" target="_blank">
+                    <ElButton link size="large">
+                        <FontAwesomeIcon :icon="faMessageBot" :style="{'scale': '150%'}"/>
+                    </ElButton>
+                </a>
+            </ElTooltip>
+            <ElTooltip content="法术解析" :show-after="750">
+                <a href="https://spell.novelai.dev" target="_blank">
+                    <ElButton link size="large">
+                        <FontAwesomeIcon :icon="faMagnifyingGlassChart" :style="{'scale': '150%'}"/>
+                    </ElButton>
+                </a>
+            </ElTooltip>
         </div>
     </div>
 

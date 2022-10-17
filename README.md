@@ -55,8 +55,6 @@ modelHash: 2037c511
 vectorSize: 10
 # 模型图片右下角 s 字符旁的数字
 steps: 675
-# 模型文件名，不包含后缀
-filename: victorian-lace
 # 模型文件的 SHA256 Hash
 payloadHash: df0641662fb2fc8190a4508c34926243843484495e6d9b0e500f8a8e409aa84e
 ```

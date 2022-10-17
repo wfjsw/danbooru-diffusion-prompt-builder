@@ -3,6 +3,7 @@ import {defineStore} from 'pinia'
 import {useTagStore} from "./tags";
 import {usePresetStore} from "./presets";
 import {useSettingsStore} from "./settings";
+import {useEmbeddingStore} from "./embeddings";
 
 interface CartChild {
     label: string,
@@ -61,7 +62,7 @@ function wrapParenByWeight(content: string, weight: number, newEmphasis: boolean
 
 function tagArrayToString(items: CartItem[], newEmphasis: boolean): string {
     return ImmutableOrderedSet.of(...items.reduce((a: string[], t: CartItem): string[] => {
-        if (t.type === 'tag') {
+        if (t.type === 'tag' || t.type === 'embedding') {
             a.push(wrapParenByWeight(t.name, t.weight, newEmphasis));
             return a;
         } else if (t.type === 'preset') {
@@ -86,9 +87,9 @@ export const useCartStore = defineStore('cart', {
             return tagArrayToString(state.negative, settingsStore.newEmphasis)
         },
         positiveTags: (state) => ImmutableSet.of<string>(...state.positive
-            .filter(t => t.type === 'tag').map(n => n.name)),
+            .filter(t => t.type === 'tag' || t.type === 'embedding').map(n => n.name)),
         negativeTags: (state) => ImmutableSet.of<string>(...state.negative
-            .filter(t => t.type === 'tag').map(n => n.name)),
+            .filter(t => t.type === 'tag' || t.type === 'embedding').map(n => n.name)),
         positivePresets: (state) => ImmutableSet.of<string>(...state.positive
             .filter(t => t.type === 'preset').map(({category, name}) => `${category}//${name}`)),
         negativePresets: (state) => ImmutableSet.of<string>(...state.negative
@@ -97,27 +98,24 @@ export const useCartStore = defineStore('cart', {
     },
     actions: {
         existsPositive(type: 'tag' | 'preset'| 'embedding', name: string, category: string | null = null) {
-            if (type === 'tag') {
+            if (type === 'tag' || type === 'embedding') {
                 return this.positiveTags.includes(name);
             } else if (type === 'preset') {
                 return this.positivePresets.includes(`${category}//${name}`);
-            } else {
-                return this.positive.some(t => t.type === 'embedding' && t.name === name);
             }
             return false
         },
         existsNegative(type: 'tag' | 'preset' | 'embedding', name: string, category: string | null = null) {
-            if (type === 'tag') {
+            if (type === 'tag' || type === 'embedding') {
                 return this.negativeTags.includes(name);
             } else if (type === 'preset') {
                 return this.negativePresets.includes(`${category}//${name}`);
-            } else if (type === 'embedding') {
-                return false
             }
             return false
         },
         appendPositiveTag(tagName: string) {
             const tagStore = useTagStore();
+            const embeddingStore = useEmbeddingStore();
 
             if (this.existsPositive('tag', tagName)) return
             const tag = tagStore.resolve(tagName)
@@ -130,17 +128,34 @@ export const useCartStore = defineStore('cart', {
                     children: null,
                     weight: 0,
                 })
-                this.removeNegativeTag(tagName)
-            } else {
-                throw new Error(`Tag ${tagName} does not exist.`)
+                this.removeNegativeTag(tagName, 'tag')
+                return
             }
+
+            const embedding = embeddingStore.resolve(tagName)
+            if (embedding !== null) {
+                this.positive.push({
+                    label: `[E] ${tagName} - ${embedding.name}`,
+                    type: 'embedding',
+                    name: tagName,
+                    category: null,
+                    children: null,
+                    weight: 0,
+                })
+                this.removeNegativeTag(tagName, 'embedding')
+                return
+            }
+
+            throw new Error(`Tag ${tagName} does not exist.`)
+
         },
-        removePositiveTag(tagName: string) {
-            const index = this.positive.findIndex((ci: CartItem) => tagName === ci.name && ci.type === 'tag')
+        removePositiveTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
+            const index = this.positive.findIndex((ci: CartItem) => tagName === ci.name && ci.type === type)
             if (index > -1) this.positive.splice(index, 1);
         },
         appendNegativeTag(tagName: string) {
             const tagStore = useTagStore();
+            const embeddingStore = useEmbeddingStore();
 
             if (this.existsNegative('tag', tagName)) return
             const tag = tagStore.resolve(tagName)
@@ -153,13 +168,28 @@ export const useCartStore = defineStore('cart', {
                     children: null,
                     weight: 0,
                 })
-                this.removePositiveTag(tagName)
-            } else {
-                throw new Error(`Tag ${tagName} does not exist.`)
+                this.removePositiveTag(tagName, 'tag')
             }
+
+            const embedding = embeddingStore.resolve(tagName)
+            if (embedding !== null) {
+                this.negative.push({
+                    label: `[E] ${tagName} - ${embedding.name}`,
+                    type: 'embedding',
+                    name: tagName,
+                    category: null,
+                    children: null,
+                    weight: 0,
+                })
+                this.removePositiveTag(tagName, 'embedding')
+                return
+            }
+
+            throw new Error(`Tag ${tagName} does not exist.`)
+
         },
-        removeNegativeTag(tagName: string) {
-            const index = this.negative.findIndex((ci: CartItem) => tagName === ci.name && ci.type === 'tag')
+        removeNegativeTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
+            const index = this.negative.findIndex((ci: CartItem) => tagName === ci.name && ci.type === type)
             if (index > -1) this.negative.splice(index, 1);
         },
         appendPositivePreset(presetCategory: string, presetName: string) {

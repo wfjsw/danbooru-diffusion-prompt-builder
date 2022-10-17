@@ -14,7 +14,6 @@ interface EmbeddingFile {
     modelHash: string,
     vectorSize: number,
     steps: number,
-    filename: string,
     payloadHash: string
 }
 
@@ -76,7 +75,6 @@ export const useEmbeddingStore = defineStore('embeddings', {
                         modelHash: p.modelHash,
                         vectorSize: p.vectorSize,
                         steps: p.steps,
-                        filename: p.filename,
                         payloadHash: p.payloadHash,
                     })
                     return a;
@@ -85,14 +83,12 @@ export const useEmbeddingStore = defineStore('embeddings', {
 
             this.$patch(embeddingData)
         },
-        // resolve(name: string) {
-        //     name = name.replaceAll('_', ' ').toLowerCase()
-        //     const meta = this.allTagsWithAlias.get(name);
-        //     if (meta) {
-        //         return {name: meta.name, meta}
-        //     }
-        //     return null
-        // },
+        resolve(name: string) {
+            const prompt = name.slice(0, -7)
+            const hash = name.slice(-6)
+            const meta = this.allEmbeddings.find(n => n.prompt === prompt && n.payloadHash.slice(0, 6) === hash)
+            return meta ?? null
+        },
         searchCategory(category: string, query: string): Embedding[] {
             const settings = useSettingsStore()
             if (query === '') return this.embeddings[category].content
