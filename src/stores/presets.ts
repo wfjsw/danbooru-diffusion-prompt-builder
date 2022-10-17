@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia'
 import type {PresetCategories, Presets} from "../datatypes";
-import {PresetCategory, TagCategories, Tags} from "../datatypes";
+import {PresetCategory} from "../datatypes";
 import {useSettingsStore} from "./settings";
 
 interface PresetFile {
@@ -28,6 +28,13 @@ export const usePresetStore = defineStore('presets', {
                 .filter(([_, v]) => settings.showRestricted || !v._restricted)
                 .map(([k, _]) => k)
         },
+        count: (state) => {
+            const settings = useSettingsStore()
+            return Object.values(state.presets)
+                .filter(v => settings.showRestricted || !v._restricted)
+                .map(v => Object.keys(v).length)
+                .reduce((a, b) => a + b, 0)
+        }
     },
     actions: {
         async load() {

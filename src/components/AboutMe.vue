@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 import {ElButton, ElSwitch, ElScrollbar} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import GithubButton from "vue-github-button";
 import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLightbulbOn, faLightbulbSlash, faCommentMinus, faCommentPlus, faTrash} from "@fortawesome/pro-light-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {useTagStore} from "../stores/tags";
+import {usePresetStore} from "../stores/presets";
+import {useEmbeddingStore} from "../stores/embeddings";
 import {computed, h} from "vue";
-import {useDark} from "@vueuse/core";
+import {isDark} from "../composables/dark";
 
 defineProps<{
     category: undefined
@@ -13,7 +16,8 @@ defineProps<{
 
 const settingsStore = useSettingsStore();
 const tagStore = useTagStore();
-const dark = useDark();
+const presetStore = usePresetStore();
+const embeddingStore = useEmbeddingStore();
 
 const activeIcon = h(FontAwesomeIcon, { icon: faEye })
 const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
@@ -26,7 +30,13 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
     <h1>关于</h1>
     <ElScrollbar class="scrollable">
         <p>这是一个用于构建 Danbooru 标签组合的网站。</p>
-        <p>目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。</p>
+        <p>目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。共收录 {{ presetStore.count }} 组预设标签、{{ embeddingStore.count }} 个精修模型。</p>
+        <p>本站的源码与所有原始数据均可在
+            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
+            查看。如果您觉得本站对您有帮助，请在 GitHub 上点亮一个
+            <GithubButton href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" data-icon="octicon-star" data-size="large" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-show-count="true" aria-label="Star wfjsw/danbooru-diffusion-prompt-builder on GitHub">星星</GithubButton>。
+            同时，也欢迎您通过 Pull Request 向本站添加更多内容。
+        </p>
         <p>如何使用：</p>
         <ul>
             <li>
@@ -126,7 +136,7 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
                     使用右上角第一个开关
                     <span>
                         <ElSwitch
-                            v-model="dark"
+                            v-model="isDark"
                             :active-icon="darkIcon"
                             :inactive-icon="lightIcon"
                             inline-prompt
@@ -143,6 +153,11 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
 <style scoped>
 h1 {
     font-size: 2rem;
+}
+
+p {
+    line-height: 2rem;
+    margin-bottom: 1rem;
 }
 
 .scrollable {

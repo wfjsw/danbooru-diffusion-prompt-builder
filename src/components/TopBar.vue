@@ -7,7 +7,7 @@ import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShi
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
 import {useSettingsStore} from "../stores/settings";
-import {useDark} from '@vueuse/core'
+import {isDark} from '../composables/dark'
 
 const settingsStore = useSettingsStore();
 
@@ -22,7 +22,6 @@ const searchTerms = computed({
 })
 // ref(props.search)
 
-const dark = useDark();
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
 const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
 
@@ -43,7 +42,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
             <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
                      placeholder="搜索"/>
             <ElSwitch
-                v-model="dark"
+                v-model="isDark"
                 :active-icon="darkIcon"
                 :inactive-icon="lightIcon"
                 inline-prompt

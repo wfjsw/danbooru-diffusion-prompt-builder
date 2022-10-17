@@ -35,29 +35,13 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 return a.concat(b.content.filter(n => settings.showRestricted || !n.restricted))
             }, []))
         },
-        // allTagsWithAlias: (state) => {
-        //     const settings = useSettingsStore()
-        //
-        //     return ImmutableMap(Object.values(state.tags).reduce((a, b) => {
-        //         if (!settings.showRestricted && b._restricted) {
-        //             return a;
-        //         }
-        //
-        //         for (const [tag, meta] of Object.entries(b)) {
-        //             if (!settings.showRestricted && meta.restricted) {
-        //                 continue
-        //             }
-        //
-        //             a[tag] = meta
-        //             if (meta.alias) {
-        //                 for (const alias of meta.alias) {
-        //                     a[alias] = meta
-        //                 }
-        //             }
-        //         }
-        //         return a;
-        //     }, {}))
-        // },
+        count: (state) => {
+            const settings = useSettingsStore()
+            return Object.values(state.embeddings)
+                .filter(v => settings.showRestricted || v.content.some((e) => !e.restricted))
+                .map(v => v.content.length)
+                .reduce((a, b) => a + b, 0)
+        }
         // allTagCount: (state) => {
         //     const settings = useSettingsStore()
         //     return Object.values(state.tags)
