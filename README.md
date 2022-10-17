@@ -29,7 +29,9 @@
 ### 上传精修模型 (TI Embeddings)
 
 精修模型只支持最新版图片格式（`Save images with embedding in PNG chunks`）。
-为安全起见，暂不接受 `.pt` 模型文件。（可以转换？）
+为安全起见，暂不接受 `.pt` 模型文件。
+
+`.pt` 格式的模型文件请通过 [这个 Colab 笔记本](https://colab.research.google.com/gist/wfjsw/2b2a26349bef1ce891f6ab4d4fb3030a/convert-pt-embedding-to-png.ipynb) 进行格式转换。
 
 请通过 `npm run importembedding <path>` 或 `yarn importembedding <path>`
 将模型图片添加到公共目录。然后，在 `data/embeddings/**/*.yaml` 创建描述文件。
