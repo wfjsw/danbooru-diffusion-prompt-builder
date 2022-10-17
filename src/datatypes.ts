@@ -58,6 +58,5 @@ export interface Embedding {
     modelHash: string,
     vectorSize: number,
     steps: number,
-    filename: string,
     payloadHash: string
 }

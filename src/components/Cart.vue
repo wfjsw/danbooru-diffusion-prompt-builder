@@ -21,12 +21,12 @@ const allowDrop = (draggingNode: Node, dropNode: Node, type: AllowDropType) => {
     return type !== 'inner'
 }
 
-function sendTo(direction: 'positive' | 'negative', type: 'preset' | 'tag', name: string, category: string | null = null) {
+function sendTo(direction: 'positive' | 'negative', type: 'preset' | 'tag' | 'embedding', name: string, category: string | null = null) {
     if (direction === 'positive') {
         if (type === 'preset') {
             cartStore.appendPositivePreset(category!, name)
             cartStore.removeNegativePreset(category!, name)
-        } else if (type === 'tag') {
+        } else if (type === 'tag' || type === 'embedding') {
             cartStore.appendPositiveTag(name)
             cartStore.removeNegativeTag(name)
         }
@@ -34,7 +34,7 @@ function sendTo(direction: 'positive' | 'negative', type: 'preset' | 'tag', name
         if (type === 'preset') {
             cartStore.appendNegativePreset(category!, name)
             cartStore.removePositivePreset(category!, name)
-        } else if (type === 'tag') {
+        } else if (type === 'tag' || type === 'embedding') {
             cartStore.appendNegativeTag(name)
             cartStore.removePositiveTag(name)
         }
@@ -45,14 +45,14 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
     if (direction === 'positive') {
         if (type === 'preset') {
             cartStore.removePositivePreset(category!, name)
-        } else if (type === 'tag') {
-            cartStore.removePositiveTag(name)
+        } else if (type === 'tag' || type === 'embedding') {
+            cartStore.removePositiveTag(name, type)
         }
     } else if (direction === 'negative') {
         if (type === 'preset') {
             cartStore.removeNegativePreset(category!, name)
-        } else if (type === 'tag') {
-            cartStore.removeNegativeTag(name)
+        } else if (type === 'tag' || type === 'embedding') {
+            cartStore.removeNegativeTag(name, type)
         }
     }
 }

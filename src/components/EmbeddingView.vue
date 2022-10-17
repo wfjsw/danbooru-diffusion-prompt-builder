@@ -5,7 +5,7 @@ import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp, faLink, faCloudArrowDown} from "@fortawesome/pro-light-svg-icons";
 import type {Embedding} from "../datatypes";
-// import {useCartStore} from "../stores/cart";
+import {useCartStore} from "../stores/cart";
 
 const props = defineProps<{
     data: Embedding,
@@ -15,7 +15,7 @@ const props = defineProps<{
 const refProps = toRefs(props)
 
 const {copy, copied} = useClipboard({source: refProps.data.value.prompt})
-// const cartStore = useCartStore();
+const cartStore = useCartStore();
 
 const imageUrl = computed(() => {
     const hash = props.data.payloadHash
@@ -24,57 +24,30 @@ const imageUrl = computed(() => {
 
 const downloadUrl = computed(() => {
     const hash = props.data.payloadHash
-    return `embeddings/${hash.slice(0, 2)}/${hash}.original.webp`
+    return `embeddings/${hash.slice(0, 2)}/${hash}.webp`
 })
 
-const fileName = computed(() => {
-    const filename = props.data.filename
-    return `${filename}.webp`
-})
+const prompt = computed(() => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`)
+const fileName = computed(() => `${prompt.value}.webp`)
 
-// const inPositive = computed(() => cartStore.existsPositive('embedding', props.tag))
-// const inNegative = computed(() => cartStore.existsNegative('embedding', props.tag))
+const inPositive = computed(() => cartStore.existsPositive('embedding', prompt.value))
+const inNegative = computed(() => cartStore.existsNegative('embedding', prompt.value))
 
-// interface BooleanFlags {
-//     [key: string]: boolean
-// }
-//
-// const aliasInPositive = computed<BooleanFlags|null>(() => props.meta?.alias
-//     && props.meta.alias.reduce((a: BooleanFlags, t: string) => (a[t] = cartStore.existsPositive('tag', t), a), {}))
-// const aliasInNegative = computed<BooleanFlags|null>(() => props.meta?.alias
-//     && props.meta.alias.reduce((a: BooleanFlags, t: string) => (a[t] = cartStore.existsNegative('tag', t), a), {}))
+function togglePositive(tag: string = prompt.value) {
+    if (!inPositive.value) {
+        cartStore.appendPositiveTag(tag)
+    } else {
+        cartStore.removePositiveTag(tag, 'embedding')
+    }
+}
 
-// function togglePositive(tag: string = props.tag) {
-//     if (tag === props.tag) {
-//         if (!inPositive.value) {
-//             cartStore.appendPositiveTag(tag)
-//         } else {
-//             cartStore.removePositiveTag(tag)
-//         }
-//     } else {
-//         if (!aliasInPositive.value![tag]) {
-//             cartStore.appendPositiveTag(tag)
-//         } else {
-//             cartStore.removePositiveTag(tag)
-//         }
-//     }
-// }
-//
-// function toggleNegative(tag: string = props.tag) {
-//     if (tag === props.tag) {
-//         if (!inNegative.value) {
-//             cartStore.appendNegativeTag(tag)
-//         } else {
-//             cartStore.removeNegativeTag(tag)
-//         }
-//     } else {
-//         if (!aliasInNegative.value![tag]) {
-//             cartStore.appendNegativeTag(tag)
-//         } else {
-//             cartStore.removeNegativeTag(tag)
-//         }
-//     }
-// }
+function toggleNegative(tag: string = prompt.value) {
+    if (!inNegative.value) {
+        cartStore.appendNegativeTag(tag)
+    } else {
+        cartStore.removeNegativeTag(tag, 'embedding')
+    }
+}
 </script>
 
 <template>
@@ -84,7 +57,7 @@ const fileName = computed(() => {
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
-                <div class="tag-header"><code class="tag-name large">{{ data.prompt }}</code></div>
+                <div class="tag-header"><code class="tag-name large">{{ prompt }}</code></div>
                 <div class="buttons">
                     <ElTooltip :visible="copied">
                         <template #content>
@@ -94,21 +67,27 @@ const fileName = computed(() => {
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
-                    <a :href="downloadUrl" :download="fileName" target="_blank">
-                        <ElButton type="success" circle>
-                            <FontAwesomeIcon :icon="faCloudArrowDown"/>
+                    <ElTooltip content="下载模型" :show-after="750">
+                        <a :href="downloadUrl" :download="fileName" target="_blank">
+                            <ElButton color="#2d481f" circle>
+                                <FontAwesomeIcon :icon="faCloudArrowDown"/>
+                            </ElButton>
+                        </a>
+                    </ElTooltip>
+                    <ElTooltip content="我想要" :show-after="750">
+                        <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(prompt)">
+                            <FontAwesomeIcon :icon="faThumbsUp"/>
                         </ElButton>
-                    </a>
-<!--                    <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(tag)">-->
-<!--                        <FontAwesomeIcon :icon="faThumbsUp"/>-->
-<!--                    </ElButton>-->
-<!--                    <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(tag)">-->
-<!--                        <FontAwesomeIcon :icon="faThumbsDown"/>-->
-<!--                    </ElButton>-->
+                    </ElTooltip>
+                    <ElTooltip content="我不想要" :show-after="750">
+                        <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(prompt)">
+                            <FontAwesomeIcon :icon="faThumbsDown"/>
+                        </ElButton>
+                    </ElTooltip>
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
-            <div v-if="data.author" class="text author">作者：{{ data.author }}</div>
+            <div v-if="data.author" class="text author">来源：{{ data.author }}</div>
             <p v-if="data.description" class="text description">{{ data.description }}</p>
             <div v-if="data.modelName" class="text meta">模型名：<code>{{ data.modelName }}</code> (<code>{{ data.modelHash }}</code>)</div>
             <div v-if="data.vectorSize" class="text meta">向量数量：{{ data.vectorSize }}</div>
@@ -248,6 +227,10 @@ const fileName = computed(() => {
     padding: var(--el-card-padding);
 }
 
+.text {
+    margin-bottom: 0.5rem;
+}
+
 .name {
     margin-bottom: 1rem;
     font-size: 14pt;
@@ -257,9 +240,5 @@ const fileName = computed(() => {
 .description {
     margin-bottom: 1rem;
     word-wrap: break-word;
-}
-
-.meta {
-    margin-bottom: 0.5rem;
 }
 </style>
