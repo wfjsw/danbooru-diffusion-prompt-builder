@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar.vue";
 import TopBar from "./components/TopBar.vue";
 import TagShow from "./components/TagShow.vue";
 import PresetShow from "./components/PresetShow.vue";
+import EmbeddingShow from "./components/EmbeddingShow.vue";
 import AboutMe from "./components/AboutMe.vue";
 import Cart from "./components/Cart.vue";
 import BadMobileDialog from "./components/BadMobileDialog.vue";
@@ -27,6 +28,7 @@ interface ComponentList {
 const mainComponent: ComponentList = {
     'tags': TagShow,
     'presets': PresetShow,
+    'embeddings': EmbeddingShow,
     'aboutme': AboutMe,
 }
 </script>

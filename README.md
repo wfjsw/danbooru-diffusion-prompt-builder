@@ -20,10 +20,44 @@
 
 一个优质标签应当拥有配图、说明、别名与 Danbooru Wiki 链接。
 
-图片大小应当尽量符合 512px * 512px 以获得最佳显示效果。为节省存储空间，请使用 WebP 格式有损压缩 60~70% 后
-对应放置于 `/public/demo-images` 文件夹中，文件名设置为图片文件的 SHA-256 散列值。
+图片大小应当尽量符合 512px * 512px 以获得最佳显示效果。
+请通过 `npm run importimage <path>` 或 `yarn importimage <path>` 将图片添加到公共目录。
+这将会自动裁剪图片并进行适当的压缩。
 
 请不要添加儿童色情相关、或违反 GitHub 使用协议的图片到项目中。
+
+### 上传精修模型 (TI Embeddings)
+
+精修模型只支持最新版图片格式（`Save images with embedding in PNG chunks`）。
+为安全起见，暂不接受 `.pt` 模型文件。（可以转换？）
+
+请通过 `npm run importembedding <path>` 或 `yarn importembedding <path>`
+将模型图片添加到公共目录。然后，在 `data/embeddings/**/*.yaml` 创建描述文件。
+
+```yaml
+# 调用该模型使用的命令 (模型图片左上角尖括号内容)
+prompt: victorian-lace
+# 模型名称
+name: Victorian Lace
+# 模型作者
+author: Reddit user u/depfakacc
+# 模型描述
+description: "A lace pattern that looks like it was made in the Victorian era."
+# 模型分类
+category: 未分类
+# 该模型对应的主模型名称
+modelName: model-aa-waifu
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 2037c511
+# 模型图片右下角 v 字符旁的数字
+vectorSize: 10
+# 模型图片右下角 s 字符旁的数字
+steps: 675
+# 模型文件名，不包含后缀
+filename: victorian-lace
+# 模型文件的 SHA256 Hash
+payloadHash: df0641662fb2fc8190a4508c34926243843484495e6d9b0e500f8a8e409aa84e
+```
 
 ### 开发环境
 

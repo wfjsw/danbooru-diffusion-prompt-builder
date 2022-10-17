@@ -4,7 +4,7 @@ import {ElButton, ElCard, ElTooltip} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp, faLink} from "@fortawesome/pro-light-svg-icons";
-import {TagMeta} from "../datatypes";
+import type {TagMeta} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 
 const props = defineProps<{
@@ -21,7 +21,7 @@ const imageUrl = computed(() => {
         if (props.meta.image.startsWith('https://')) {
             return props.meta.image
         } else {
-            return `demo-images/${props.meta.image.slice(0, 2)}/${props.meta.image}.webp`
+            return `images/${props.meta.image.slice(0, 2)}/${props.meta.image}.webp`
         }
 
     }

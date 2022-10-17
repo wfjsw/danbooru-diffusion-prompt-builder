@@ -5,7 +5,7 @@ import {Search as IconSearch} from "@element-plus/icons-vue";
 import {ElCollapse, ElInput, ElScrollbar} from "element-plus";
 import {usePresetStore} from "../stores/presets";
 import PresetView from "./PresetView.vue";
-import {PresetCategory} from "../datatypes";
+import type {PresetCategory} from "../datatypes";
 
 const props = defineProps<{
     category: string

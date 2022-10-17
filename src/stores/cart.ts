@@ -12,7 +12,7 @@ interface CartChild {
 
 interface CartItem {
     label: string,
-    type: 'tag' | 'preset',
+    type: 'tag' | 'preset' | 'embedding',
     name: string,
     category: string | null,
     children: CartChild[] | null,
@@ -96,19 +96,23 @@ export const useCartStore = defineStore('cart', {
 
     },
     actions: {
-        existsPositive(type: 'tag' | 'preset', name: string, category: string | null = null) {
+        existsPositive(type: 'tag' | 'preset'| 'embedding', name: string, category: string | null = null) {
             if (type === 'tag') {
                 return this.positiveTags.includes(name);
             } else if (type === 'preset') {
                 return this.positivePresets.includes(`${category}//${name}`);
+            } else {
+                return this.positive.some(t => t.type === 'embedding' && t.name === name);
             }
             return false
         },
-        existsNegative(type: 'tag' | 'preset', name: string, category: string | null = null) {
+        existsNegative(type: 'tag' | 'preset' | 'embedding', name: string, category: string | null = null) {
             if (type === 'tag') {
                 return this.negativeTags.includes(name);
             } else if (type === 'preset') {
                 return this.negativePresets.includes(`${category}//${name}`);
+            } else if (type === 'embedding') {
+                return false
             }
             return false
         },

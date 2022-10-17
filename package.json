@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "dupcheck": "tsx ./src/cli/dupcheck.ts"
+    "dupcheck": "tsx ./src/cli/dupcheck.ts",
+    "importimage": "tsx ./src/cli/importimage.ts",
+    "importembedding": "tsx ./src/cli/importembedding.ts"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
@@ -16,10 +18,12 @@
     "@fortawesome/pro-light-svg-icons": "^6.2.0",
     "@fortawesome/pro-solid-svg-icons": "^6.2.0",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@types/sharp": "^0.31.0",
     "element-plus": "^2.2.18",
     "glob": "^8.0.3",
     "immutable": "^4.1.0",
     "pinia": "^2.0.23",
+    "sharp": "^0.31.1",
     "vite-plugin-radar": "^0.5.0",
     "vue": "^3.2.41"
   },

@@ -1,13 +1,15 @@
 <script lang="ts" setup>
 import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from "element-plus";
-import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide} from '@element-plus/icons-vue';
+import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture} from '@element-plus/icons-vue';
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
+import {useEmbeddingStore} from "../stores/embeddings";
 
 const emit = defineEmits(['select'])
 
 const tagStore = useTagStore();
 const presetStore = usePresetStore();
+const embeddingStore = useEmbeddingStore();
 
 function select(index: string, indexPath: string[]) {
     emit('select', indexPath)
@@ -15,7 +17,7 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
-    <ElMenu :default-openeds="['tags', 'presets']" class="borderless" default-active="aboutme" @select="select">
+    <ElMenu :default-openeds="['tags']" class="borderless" default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
                 <IconGuide/>
@@ -36,6 +38,7 @@ function select(index: string, indexPath: string[]) {
                 {{ category }}
             </ElMenuItem>
         </ElSubMenu>
+
         <ElSubMenu index="presets">
             <template #title>
                 <ElIcon>
@@ -45,6 +48,20 @@ function select(index: string, indexPath: string[]) {
             </template>
             <ElMenuItem
                 v-for="category in presetStore.categories"
+                :index="category">
+                {{ category }}
+            </ElMenuItem>
+        </ElSubMenu>
+
+        <ElSubMenu index="embeddings">
+            <template #title>
+                <ElIcon>
+                    <IconPicture/>
+                </ElIcon>
+                精修模型
+            </template>
+            <ElMenuItem
+                v-for="category in embeddingStore.categories"
                 :index="category">
                 {{ category }}
             </ElMenuItem>

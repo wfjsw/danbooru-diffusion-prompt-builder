@@ -5,7 +5,7 @@ import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
 import {useSettingsStore} from "../stores/settings";
-import {TagCategory} from "../datatypes";
+import type {TagCategory} from "../datatypes";
 
 const props = defineProps<{
     search: string

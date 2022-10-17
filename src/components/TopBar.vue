@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {h, ref, computed} from 'vue'
+import {h, computed} from 'vue'
 import {ElButton, ElInput, ElSwitch} from "element-plus";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
