@@ -34,8 +34,17 @@ export default defineConfig({
             output: {
                 compact: true,
                 manualChunks(id) {
+                    if (id.includes('node_modules/vue')
+                        || id.includes('node_modules/@vue')
+                        || id.includes('node_modules/lodash')) {
+                        return 'vendor-1'
+                    }
+                    if (id.includes('node_modules/element-plus')
+                        || id.includes('node_modules/@fortawesome')) {
+                        return 'vendor-2'
+                    }
                     if (id.includes('node_modules/')) {
-                        return 'vendor'
+                        return 'vendor-3'
                     }
                     if (id.includes('data/')) {
                         return 'data'
