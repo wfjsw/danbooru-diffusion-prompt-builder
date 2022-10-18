@@ -1,23 +1,5 @@
 name: 视角
 content:
-  from behind:
-    name: 从背面
-  from below:
-    name: 从下方
-  from above:
-    name: 从上方
-  from side:
-    name: 从侧面
-  solo focus:
-    name: 单人焦点
-  back focus:
-    name: 背景焦点
-  ass focus:
-    alias:
-      - hip focus
-    name: 臀部焦点
-  foot focus:
-    name: 足部焦点
   first-person view:
     name: 第一人称视角
   pov:
@@ -52,8 +34,6 @@ content:
     name: 正前缩距透视法
   hatching (texture):
     name: 线影法(纹理)
-  portrait:
-    name: 半身像
   vanishing point:
     name: 远景透视画法
   wide shot:
