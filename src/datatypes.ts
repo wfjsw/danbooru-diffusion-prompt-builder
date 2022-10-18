@@ -58,5 +58,7 @@ export interface Embedding {
     modelHash: string,
     vectorSize: number,
     steps: number,
-    payloadHash: string
+    payloadHash: string,
+    suggestPositive: string[]|null,
+    suggestNegative: string[]|null,
 }

@@ -110,7 +110,9 @@ function toggleNegative(tag: string = props.tag) {
                 </div>
             </div>
             <div v-if="meta.name" class="text name">{{ meta.name }}</div>
-            <p v-if="meta.description" class="text description">{{ meta.description }}</p>
+            <div v-if="meta.description">
+                <p v-for="t in meta.description.split('\n')" class="text description">{{ t }}</p>
+            </div>
             <div v-if="meta.alias">
                 <span class="text">别名：</span>
                 <ul>

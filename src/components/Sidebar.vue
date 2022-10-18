@@ -17,7 +17,8 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
-    <ElMenu :default-openeds="['tags']" class="borderless" default-active="aboutme" @select="select">
+    <ElMenu :default-openeds="['tags']" class="borderless pb-2"
+            default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
                 <IconGuide/>
@@ -25,7 +26,7 @@ function select(index: string, indexPath: string[]) {
             关于
         </ElMenuItem>
 
-        <ElSubMenu index="tags">
+        <ElSubMenu index="tags" v-loading="!tagStore.loaded">
             <template #title>
                 <ElIcon>
                     <IconDocument/>
@@ -39,7 +40,7 @@ function select(index: string, indexPath: string[]) {
             </ElMenuItem>
         </ElSubMenu>
 
-        <ElSubMenu index="presets">
+        <ElSubMenu index="presets" v-loading="!presetStore.loaded">
             <template #title>
                 <ElIcon>
                     <IconFolder/>
@@ -53,7 +54,7 @@ function select(index: string, indexPath: string[]) {
             </ElMenuItem>
         </ElSubMenu>
 
-        <ElSubMenu index="embeddings">
+        <ElSubMenu index="embeddings" v-loading="!embeddingStore.loaded">
             <template #title>
                 <ElIcon>
                     <IconPicture/>
@@ -77,5 +78,9 @@ function select(index: string, indexPath: string[]) {
 .scrollable {
     height: calc(100vh - 64px);
     overflow-y: auto;
+}
+
+.pb-2 {
+    padding-bottom: 1.5rem;
 }
 </style>

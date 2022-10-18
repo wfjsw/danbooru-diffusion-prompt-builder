@@ -21,6 +21,9 @@ interface TagFileItem {
 export const useTagStore = defineStore('tags', {
     state: (): Tags => ({tags: {}}),
     getters: {
+        loaded: (state) => {
+            return Object.keys(state.tags).length > 0;
+        },
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.tags)

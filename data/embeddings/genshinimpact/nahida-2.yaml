@@ -16,3 +16,41 @@ vectorSize: 18
 steps: 13000
 # 模型文件的 SHA256 Hash
 payloadHash: 57aa246dce32bc73487e54bef5ed83d2a7a533b948f96bc22a8254ba3bd6a6cd
+# 推荐正向标签
+suggestPositive:
+  - portrait
+  - young
+  - loli
+  - genshin impact
+  - white hair
+  - green eyes
+  - flower-shaped pupils
+  - side ponytail
+  - pointy ears
+  - kawaii face
+  - round chin
+  - detached sleeves
+  - toeless footwear
+  - white dress
+  - green cloak
+  - landscape
+# 推荐反向标签
+suggestNegative:
+  - bad anatomy
+  - error
+  - jpeg artifacts
+  - low quality
+  - lowres
+  - normal quality
+  - worst quality
+  - extra digits
+  - fewer digits
+  - bad hands
+  - bad feet
+  - cropped
+  - missing fingers
+  - signature
+  - text
+  - username
+  - watermark
+  - futa

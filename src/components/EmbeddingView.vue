@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp, faLink, faCloudArrowDown} from "@fortawesome/pro-light-svg-icons";
 import type {Embedding} from "../datatypes";
 import {useCartStore} from "../stores/cart";
+import ToggleableTag from "./ToggleableTag.vue";
 
 const props = defineProps<{
     data: Embedding,
@@ -69,7 +70,7 @@ function toggleNegative(tag: string = prompt.value) {
                     </ElTooltip>
                     <ElTooltip content="下载模型" :show-after="750">
                         <a :href="downloadUrl" :download="fileName" target="_blank">
-                            <ElButton color="#2d481f" circle>
+                            <ElButton type="warning" circle>
                                 <FontAwesomeIcon :icon="faCloudArrowDown"/>
                             </ElButton>
                         </a>
@@ -92,6 +93,21 @@ function toggleNegative(tag: string = prompt.value) {
             <div v-if="data.modelName" class="text meta">模型名：<code>{{ data.modelName }}</code> (<code>{{ data.modelHash }}</code>)</div>
             <div v-if="data.vectorSize" class="text meta">向量数量：{{ data.vectorSize }}</div>
             <div v-if="data.steps" class="text meta">训练步数：{{ data.steps }}</div>
+
+            <div v-if="data.suggestPositive" class="tag-suggestion">
+                <div>推荐正向标签：</div>
+                <div class="tags">
+                    <ToggleableTag v-for="tag in data.suggestPositive" :tag="tag" size="default" direction="positive" />
+                </div>
+            </div>
+
+            <div v-if="data.suggestNegative" class="tag-suggestion">
+                <div>推荐反向标签</div>
+                <div class="tags">
+                    <ToggleableTag v-for="tag in data.suggestNegative" :tag="tag" size="default" direction="negative" />
+                </div>
+            </div>
+
         </div>
 
     </ElCard>
@@ -240,5 +256,20 @@ function toggleNegative(tag: string = prompt.value) {
 .description {
     margin-bottom: 1rem;
     word-wrap: break-word;
+}
+
+.tags {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 2rem;
+
+    > * {
+        margin-right: 0.5rem;
+    }
+}
+
+.tag-suggestion {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 </style>

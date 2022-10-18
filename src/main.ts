@@ -7,11 +7,14 @@ import {createPinia} from "pinia";
 import {useTagStore} from "./stores/tags";
 import {usePresetStore} from "./stores/presets";
 import {useEmbeddingStore} from "./stores/embeddings";
+import { vLoading } from 'element-plus'
+import 'element-plus/theme-chalk/el-loading.css'
 
 const pinia = createPinia()
 
 createApp(App)
     .use(pinia)
+    .directive('loading', vLoading)
     .mount('#app')
 
 const tagStore = useTagStore()

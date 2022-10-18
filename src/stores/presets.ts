@@ -22,6 +22,9 @@ interface PresetFileSingleItem {
 export const usePresetStore = defineStore('presets', {
     state: (): Presets => ({presets: {}}),
     getters: {
+        loaded: (state) => {
+            return Object.keys(state.presets).length > 0;
+        },
         categories: (state) => {
             const settings = useSettingsStore()
             return Object.entries(state.presets)

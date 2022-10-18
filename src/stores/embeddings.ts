@@ -14,12 +14,17 @@ interface EmbeddingFile {
     modelHash: string,
     vectorSize: number,
     steps: number,
-    payloadHash: string
+    payloadHash: string,
+    suggestPositive: string[]|null,
+    suggestNegative: string[]|null,
 }
 
 export const useEmbeddingStore = defineStore('embeddings', {
     state: (): Embeddings => ({embeddings: {}}),
     getters: {
+        loaded: (state) => {
+            return Object.keys(state.embeddings).length > 0;
+        },
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.embeddings)
@@ -76,6 +81,8 @@ export const useEmbeddingStore = defineStore('embeddings', {
                         vectorSize: p.vectorSize,
                         steps: p.steps,
                         payloadHash: p.payloadHash,
+                        suggestPositive: p.suggestPositive,
+                        suggestNegative: p.suggestNegative,
                     })
                     return a;
                 }, {}),

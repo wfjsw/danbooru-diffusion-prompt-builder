@@ -5,6 +5,7 @@ import {computed, ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
 import {useCartStore} from "../stores/cart";
+import ToggleableTag from "./ToggleableTag.vue";
 
 const props = defineProps<{
     category: string,
@@ -69,11 +70,13 @@ function toggleNegative() {
                 </div>
             </div>
         </template>
-        <p v-if="meta.description">{{ meta.description }}</p>
+        <div v-if="meta.description">
+            <p v-for="t in meta.description.split('\n')" class="text description">{{ t }}</p>
+        </div>
         <div>
             <div class="tags-title">包含以下标签：</div>
             <div class="tags">
-                <ElTag v-for="tag in meta.content" class="tag" size="large">{{ tag }}</ElTag>
+                <ToggleableTag v-for="tag in meta.content" :tag="tag" size="large" direction="both" />
             </div>
         </div>
 
@@ -92,9 +95,10 @@ function toggleNegative() {
 .tags {
     margin: 1rem 1rem;
     line-height: 3rem;
+
+    > * {
+        margin-right: 1rem;
+    }
 }
 
-.tag {
-    margin-right: 1rem;
-}
 </style>

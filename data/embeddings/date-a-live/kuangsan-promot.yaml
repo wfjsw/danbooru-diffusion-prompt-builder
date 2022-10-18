@@ -16,3 +16,13 @@ vectorSize: 6
 steps: 3001
 # 模型文件的 SHA256 Hash
 payloadHash: 7c1d014c73baa0ff8111700ba0343ae1d686d01451d9ce4dc8d1334a52342c63
+# 推荐正向标签
+suggestPositive:
+  - 1girl
+  - red black striped dress
+  - black hair
+  - inner colored
+  - floating hair
+  - medium breast
+  - white background
+  - heterochromia

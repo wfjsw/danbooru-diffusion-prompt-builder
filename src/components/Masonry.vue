@@ -12,8 +12,10 @@ const container: Ref<HTMLDivElement | null> = ref(null)
 const masonry: Ref<Masonry | null> = ref(null)
 
 const reloadLayout = debounce(() => {
-    masonry.value?.reloadItems?.();
-    masonry.value?.layout?.();
+    nextTick(() => {
+        masonry.value?.reloadItems?.();
+        masonry.value?.layout?.();
+    })
 }, 25)
 
 

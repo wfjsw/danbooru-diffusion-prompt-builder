@@ -146,7 +146,17 @@ export const useCartStore = defineStore('cart', {
                 return
             }
 
-            throw new Error(`Tag ${tagName} does not exist.`)
+            this.positive.push({
+                label: `${tagName} - (未知)`,
+                type: 'tag',
+                name: tagName,
+                category: null,
+                children: null,
+                weight: 0,
+            })
+            this.removeNegativeTag(tagName, 'tag')
+            return
+            // throw new Error(`Tag ${tagName} does not exist.`)
 
         },
         removePositiveTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
@@ -169,6 +179,7 @@ export const useCartStore = defineStore('cart', {
                     weight: 0,
                 })
                 this.removePositiveTag(tagName, 'tag')
+                return
             }
 
             const embedding = embeddingStore.resolve(tagName)
@@ -185,7 +196,17 @@ export const useCartStore = defineStore('cart', {
                 return
             }
 
-            throw new Error(`Tag ${tagName} does not exist.`)
+            this.negative.push({
+                label: `${tagName} - (未知)`,
+                type: 'tag',
+                name: tagName,
+                category: null,
+                children: null,
+                weight: 0,
+            })
+            this.removePositiveTag(tagName, 'tag')
+            return
+            // throw new Error(`Tag ${tagName} does not exist.`)
 
         },
         removeNegativeTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
