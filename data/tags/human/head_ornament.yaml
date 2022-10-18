@@ -29,7 +29,7 @@ content:
   hair ornament:
     name: 头饰
   bowtie:
-    name: 蝴蝶结
+    name: 蝴蝶领结
   hair bow:
     name: 蝴蝶结发饰
   maid headdress:
@@ -42,12 +42,8 @@ content:
     name: 丝带
   bandage:
     name: 绷带
-  glasses:
-    name: 眼镜
   sunglasses:
     name: 太阳镜
-  goggles:
-    name: 风镜
   blindfold:
     name: 眼罩
   eyepatch:
@@ -76,3 +72,111 @@ content:
     name: 面纹
   horns:
     name: 兽角
+  antlers:
+    name: 鹿角
+  cat ear headphones:
+    name: 猫耳式耳机
+  clover hair ornament:
+    name: 三叶草发饰
+  crescent hair ornament:
+    name: 月牙发饰
+  heart earrings:
+    name: 心形耳环
+  hoop earrings:
+    name: 环状耳环
+  crystal earrings:
+    name: 水晶耳环
+  demon horns:
+    name: 恶魔的角
+  jeweled branch of hourai:
+    name: 蓬莱玉枝
+  fish hair ornament:
+    name: 鱼形发饰
+  forehead jewel:
+    name: 额前有宝石
+  forehead mark:
+    name: 额前有图案
+  forehead protector:
+    name: 护额
+  kanzashi:
+    alias:
+      - hair stick
+    name: 簪子
+  hair bobbles:
+    name: 头绳
+  hairpods:
+    name: 头发上成对的像无线蓝牙的发饰
+  hair bell:
+    name: 头发上系着铃铛
+  heart-shaped eyewear:
+    name: 心形眼镜
+  goggles:
+    name: 护目镜
+  rimless eyewear:
+    name: 无框眼镜
+  over-rim eyewear:
+    name: 下半无框眼镜
+  kamina shades:
+    name: 卡米纳墨镜
+  goggles on head:
+    name: 头上别着护目镜
+  goggles on headwear:
+    name: 帽子上别着护目镜
+  head mounted display:
+    name: 戴着头戴显示设备
+  bandage on:
+    name: 贴有绷带的脸
+  bandage over one eye:
+    name: 缠着绷带的单眼
+  scar across eye:
+    name: 眼睛上的疤痕
+  scar on cheek:
+    name: 脸颊上的疤痕
+  identity censor:
+    name: 眼部打码
+  covered eyes:
+    name: 蒙住的眼
+  surgical mask:
+    name: 医用口罩
+  mouth mask:
+    name: 口罩
+  mouth veil:
+    name: 面纱
+  coke-bottle glasses:
+    name: 厚如玻璃瓶底的圆眼镜
+  crescent earrings:
+    name: 月牙耳环
+  tengu mask:
+    name: 天狗面具
+  fox mask:
+    name: 狐狸面具
+  mask on head:
+    name: 掀到头上的面具
+  mask pull:
+    name: 拉着口罩
+  mask removed:
+    name: 摘下的面具
+  gas mask:
+    name: 防毒面具
+  lipstick:
+    name: 口红/唇膏
+  anchor choker:
+    name: 锚形项圈
+  bead necklace:
+    name: 珠子项链
+  behind-the-head headphones:
+    name: 从后脑戴上的耳机
+  bell choker:
+    name: 铃铛项圈
+  spiked collar:
+    name: 带钉项圈
+  chain necklace:
+    name: 项链
+  dog collar:
+    name: 狗项圈
+  heart choker:
+    name: 心形项圈
+  metal collar:
+    name: 金属项圈
+  whistle around neck:
+    name: 脖子上挂着口哨

@@ -9,8 +9,6 @@ content:
     name: 2 个女人
   angel:
     name: 天使
-  cheerleader:
-    name: 拉拉队
   chibi:
     alias:
     - super deformed
@@ -77,7 +75,7 @@ content:
   waitress:
     name: 女服务员
   witch:
-    name: 女巫
+    name: 女巫/魔女
   yaoi:
     name: 搞基
   yukkuri shiteitte ne:
@@ -91,4 +89,140 @@ content:
     name: 青少年
   adolescent:
     name: 青春期的
+  angel and devil:
+    name: 天使与恶魔
+  bunny girl:
+    name: 兔娘/兔女郎
+  cat girl:
+    name: 猫娘
+  centaur:
+    name: 人马
+  horse girl:
+    name: 马娘
+  cow girl:
+    name: 牛娘
+  dark elf:
+    name: 暗精灵
+  demon girl:
+    name: 魅魔
+  dog girl:
+    name: 犬娘
+  dragon girl:
+    name: 龙娘
+  fox girl:
+    name: 狐娘
+  ghost:
+    name: 幽灵
+  goblin:
+    name: 哥布林
+  goddess:
+    name: 女神
+  imp:
+    name: 小恶魔
+  k/da (league of legends):
+    name: KDA组合(英雄联盟)
+  kirisame marisa (cosplay):
+    name: cos成雾雨魔理沙
+  kitsune:
+    name: 妖狐
+  kyuubi:
+    name: 九尾|九尾狐
+  mecha musume:
+    name: 机娘
+  raccoon girl:
+    name: 浣熊娘
+  sailor senshi:
+    name: 美少女战士
+  spider girl:
+    name: 蜘蛛娘
+  succubus:
+    name: 魅魔
+  valkyrie:
+    name: 女武神
+  voyakiloid:
+    name: 弱音(歌手)
+  wolf girl:
+    name: 狼女孩
+  ballerina:
+    name: 芭蕾舞女演员
+  butler:
+    name: 管家
+  bara:
+    name: 大叔
+  cheerleader:
+    name: 啦啦队
+  chef:
+    name: 厨师
+  child:
+    name: 儿童
+  dancer:
+    name: 舞者
+  doctor:
+    name: 医生
+  dominatrix:
+    restricted: true
+    name: 女王(SM中)
+  female pervert:
+    name: 痴女
+  gothic lolita:
+    name: 哥特萝莉
+  gyaru:
+    name: 辣妹
+  kogal:
+    name: 小辣妹
+  gym leader:
+    name: 体操队队长
+  idol:
+    name: 偶像
+  kyuudou:
+    name: 弓道
+  nurse:
+    name: 护士
+  office lady:
+    name: 办公室女职员
+  oppai loli:
+    name: 巨乳萝莉
+  police:
+    name: 警察
+  policewoman:
+    name: 女警
+  priest:
+    name: 牧师
+  princess:
+    name: 公主
+  public use:
+    restricted: true
+    name: 公用/肉便器/公交车
+  race queen:
+    name: 赛车女郎
+  wa lolita:
+    name: 和风萝莉
+  wa maid:
+    name: 和风女仆
+  glasses:
+    name: 眼镜/眼镜娘
+  brother and sister:
+    name: 姐弟/兄妹
+  cousins:
+    name: 表亲
+  husband and wife:
+    name: 夫妻
+  interracial:
+    restricted: true
+    name: 跨人种的
+  interspecies:
+    restricted: true
+    name: 异种奸/异种爱
+  lineup:
+    name: 一排人
+  mmf threesome:
+    restricted: true
+    name: 二男加一女
+  mother and daughter:
+    name: 母女
+  mother and son:
+    name: 母子
+  twins:
+    name: 双胞胎
+
 name: 人物类型

@@ -46,3 +46,19 @@ content:
   naked shirt:
     restricted: true
     name: 裸体衬衫
+  angel wings:
+    name: 天使的翅膀
+  detached wings:
+    name: 脱离本体的翅膀
+  dragon wings:
+    name: 龙翼
+  fairy wings:
+    name: 妖精的翅膀
+  harness:
+    name: 背带
+  whip marks:
+    name: 鞭痕
+  amulet:
+    name: 护身符
+  badge:
+    name: 徽章

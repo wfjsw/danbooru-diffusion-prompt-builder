@@ -30,8 +30,6 @@ content:
     name: 简单背景/无背景
   transparent background:
     name: 透明背景
-  backlighting:
-    name: 背光
   ocean:
     name: 大海
   pentagram:

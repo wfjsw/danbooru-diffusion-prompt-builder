@@ -26,13 +26,35 @@ content:
     name: 三视图
   multiple views:
     name: 多视图
-  cowboy shot:
-    name: 骑马镜头
-  portrait:
-    name: 肖像
-  close-up:
-    name: 近景
   cut-in:
     name: 插入画面
+  between fingers:
+    name: (突出)指间
+  between legs:
+    name: (强调)两腿之间
+  between thighs:
+    name: (强调)大腿之间
+  blurry foreground:
+    name: 前景模糊
+  breast conscious:
+    name: 对胸部在意
+  backlighting:
+    name: 逆光
+  close-up:
+    name: 特写镜头
+  cowboy shot:
+    name: 七分身镜头
   dutch angle:
-    name: 倾斜镜头
+    name: 德式倾斜镜头
+  fisheye:
+    name: 鱼眼镜头
+  foreshortening:
+    name: 正前缩距透视法
+  hatching (texture):
+    name: 线影法(纹理)
+  portrait:
+    name: 半身像
+  vanishing point:
+    name: 远景透视画法
+  wide shot:
+    name: 广角镜头
