@@ -1,0 +1,18 @@
+# 调用该模型使用的命令 (模型图片左上角尖括号内容)
+prompt: alice tendou
+# 模型名称
+name: 天童爱丽丝
+# 模型作者
+author: Tim Tele @ t.me/Embeddings_Record
+# 模型分类
+category: 碧蓝档案
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 925997e9
+# 模型图片右下角 v 字符旁的数字
+vectorSize: 1
+# 模型图片右下角 s 字符旁的数字
+steps: 100001
+# 模型文件的 SHA256 Hash
+payloadHash: 21cfc90df08bf68356e6df7bc0e503aae7244eb549853af8713114b7c0dfb394

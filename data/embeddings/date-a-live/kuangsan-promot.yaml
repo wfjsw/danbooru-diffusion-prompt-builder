@@ -1,0 +1,18 @@
+# 调用该模型使用的命令 (模型图片左上角尖括号内容)
+prompt: kuangsan-promot
+# 模型名称
+name: 时崎狂三
+# 模型作者
+author: reburn A @ t.me/Embeddings_Record
+# 模型分类
+category: 约会大作战
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 925997e9
+# 模型图片右下角 v 字符旁的数字
+vectorSize: 6
+# 模型图片右下角 s 字符旁的数字
+steps: 3001
+# 模型文件的 SHA256 Hash
+payloadHash: 7c1d014c73baa0ff8111700ba0343ae1d686d01451d9ce4dc8d1334a52342c63

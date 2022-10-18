@@ -25,7 +25,7 @@ await sharp(modelPath)
 
 await sharp(modelPath)
     .webp({lossless: true})
-    .toFile(path.resolve(savePath, `${modelHash.slice(0,2)}/${modelHash}.original.webp`))
+    .toFile(path.resolve(savePath, `${modelHash.slice(0,2)}/${modelHash}.webp`))
 
 console.log('Model imported')
 console.log('Hash:', modelHash)
