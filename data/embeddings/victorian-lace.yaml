@@ -11,7 +11,7 @@ category: 未分类
 # 该模型对应的主模型名称
 modelName: model-aa-waifu
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
-modelHash: 2037c511
+modelHash: '2037c511'
 # 模型图片右下角 v 字符旁的数字
 vectorSize: 10
 # 模型图片右下角 s 字符旁的数字

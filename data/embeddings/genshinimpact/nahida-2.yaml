@@ -9,7 +9,7 @@ category: 原神
 # 该模型对应的主模型名称
 modelName: NovelAI-SFW-Pruned
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
-modelHash: 1d4a34af
+modelHash: '1d4a34af'
 # 模型图片右下角 v 字符旁的数字
 vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
