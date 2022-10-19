@@ -76,7 +76,7 @@ function toggleNegative(tag: string = props.tag) {
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
         <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]">
-            <ElImage :src="imageUrl" fit="cover" lazy>
+            <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">
                         <FontAwesomeIcon :icon="faImageSlash" size="lg"/>

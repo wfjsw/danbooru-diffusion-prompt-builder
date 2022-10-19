@@ -52,3 +52,21 @@ content:
     name: 屋顶
   stage:
     name: 舞台
+  feather:
+    name: 场景飘羽毛
+  cafe:
+    name: 咖啡厅
+  starbucks:
+    name: 星巴克
+  city:
+    name: 城市
+  park:
+    name: 公园
+  restaurant:
+    name: 餐厅
+  izakaya:
+    name: 居酒屋
+  classroom:
+    name: 教室
+  street:
+    name: 街道

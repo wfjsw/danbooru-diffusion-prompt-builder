@@ -19,13 +19,15 @@ content:
   lower body:
     name: 下半身
   cropped torso upper body:
-    name: 裁剪上半身
+    name: 上半身出框
   cropped shoulders:
-    name: 裁剪肩膀
+    name: 肩膀出框
   cropped arms:
-    name: 裁剪手臂
+    name: 手臂出框
   cropped legs:
-    name: 裁剪腿部
+    name: 腿部出框
+  cropped torso:
+    name: 躯干出框
   selfiemirror:
     name: 自拍镜
   symmetrical:

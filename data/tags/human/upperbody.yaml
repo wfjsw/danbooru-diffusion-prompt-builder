@@ -1,4 +1,4 @@
-name: 人物上半身
+name: 人物上身装饰
 content:
   armpit:
     name: 腋
@@ -62,3 +62,62 @@ content:
     name: 护身符
   badge:
     name: 徽章
+  arm belt:
+    name: 臂环
+  bandaged arm:
+    name: 缠着绷带的手臂
+  bandaged hands:
+    name: 缠着绷带的手
+  bangle:
+    name: 手镯
+  bead bracelet:
+    name: 珠子手链
+  bracelet:
+    name: 手镯
+  bracer:
+    name: 护腕
+  armband:
+    name: 臂章
+  armlet:
+    name: 臂环
+  elbow gloves:
+    name: 长袖手套
+  fingerless gloves:
+    name: 露指手套
+  gloves:
+    name: 手套
+  necktie:
+    alias:
+      - tie
+    name: 领带
+  wrist cuffs:
+    name: 腕饰
+  wristband:
+    name: 腕带
+  belly chain:
+    name: 脐链
+  bandages:
+    name: 绷带
+  barcode:
+    name: 条形码
+  bow:
+    name: 蝴蝶结
+  command spell:
+    name: 令咒
+  convenient censoring:
+    name: 简单巧妙的打码
+  diamond (gemstone):
+    name: 钻石(宝石)
+  heart lock (kantai collection):
+    name: 舰娘锁(舰C)
+  heart tattoo:
+    name: 心形纹身
+  heartbeat:
+    name: 心跳/表现出心动的文字
+  mole:
+    name: 痣
+  number tattoo:
+    name: 编号纹身
+  steam censor:
+    name: 蒸汽/雾气打码
+

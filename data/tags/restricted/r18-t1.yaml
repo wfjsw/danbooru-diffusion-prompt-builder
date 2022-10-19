@@ -1,4 +1,4 @@
-name: 成年限定 (R-18 Tier-1)
+name: 成年限定
 restricted: true
 content:
   ass:
@@ -189,3 +189,5 @@ content:
     name: 轮奸
   femdom:
     name: 逆推
+  condom:
+    name: 套套

@@ -116,3 +116,37 @@ content:
     name: 色块风格
   silhouette:
     name: 剪影
+  color trace:
+    name: 原画
+  cute & girly (idolmaster):
+    name: cute&girly (偶像大师)
+  partially colored:
+    name: 部分上色
+  cyberpunk:
+    name: 赛博朋克
+  expression chart:
+    name: 角色的多表情展示
+  faux figurine:
+    name: 仿手办风格
+  flat color:
+    name: 平涂风格
+  fourth wall:
+    name: 虚实穿插/现实感/次元壁
+  greyscale:
+    name: 纯黑白色/黑白照片化/灰度
+  high contrast:
+    name: 高对比度
+  letterboxed:
+    name: 宽银幕格式
+  motion lines:
+    name: 体现运动的线
+  perspective:
+    name: 用了透视画法
+  photorealistic:
+    name: 很像照片的画
+  spot color:
+    name: 黑白画中的少量颜色
+  variations:
+    name: (变装、变化、变色、成长)对比图
+  viewfinder:
+    name: 相机取景框
