@@ -14,3 +14,15 @@ content:
     name: 老鼠耳朵
   pointy ears:
     name: 尖耳
+  heart earrings:
+    name: 心形耳环
+  hoop earrings:
+    name: 环状耳环
+  crystal earrings:
+    name: 水晶耳环
+  earrings:
+    name: 耳环
+  crescent earrings:
+    name: 月牙耳环
+  cat ear headphones:
+    name: 猫耳式耳机

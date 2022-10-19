@@ -46,8 +46,6 @@ content:
     name: 单眼罩
   mask:
     name: 面具/眼罩/口罩
-  earrings:
-    name: 耳环
   jewelry:
     name: 首饰
   collar:
@@ -70,18 +68,11 @@ content:
     name: 兽角
   antlers:
     name: 鹿角
-  cat ear headphones:
-    name: 猫耳式耳机
+
   clover hair ornament:
     name: 三叶草发饰
   crescent hair ornament:
     name: 月牙发饰
-  heart earrings:
-    name: 心形耳环
-  hoop earrings:
-    name: 环状耳环
-  crystal earrings:
-    name: 水晶耳环
   demon horns:
     name: 恶魔的角
   jeweled branch of hourai:
@@ -140,8 +131,6 @@ content:
     name: 面纱
   coke-bottle glasses:
     name: 厚如玻璃瓶底的圆眼镜
-  crescent earrings:
-    name: 月牙耳环
   tengu mask:
     name: 天狗面具
   fox mask:
@@ -160,8 +149,14 @@ content:
     name: 锚形项圈
   bead necklace:
     name: 珠子项链
+  headphones:
+    name: 耳机
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones.html
   behind-the-head headphones:
     name: 从后脑戴上的耳机
+  headphones around neck:
+    name: 脖子上挂耳机
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones_around_neck.html
   bell choker:
     name: 铃铛项圈
   spiked collar:
