@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {ElButton, ElDialog, ElTooltip} from 'element-plus'
+import {ElButton, ElDialog, ElTooltip, ElInput} from 'element-plus'
 import {useCartStore} from "../stores/cart";
 import {computed} from "vue";
 import {useClipboard} from "@vueuse/core";
@@ -33,7 +33,8 @@ const mv = computed({
                 <template #content>
                     <span>已复制到剪贴板</span>
                 </template>
-                <textarea class="tag-pre" @dblclick="copyPositive()" readonly v-model="cartStore.positiveToString"></textarea>
+                <ElInput type="textarea" :rows="5" class="tag-pre" @dblclick="copyPositive()"
+                         readonly v-model="cartStore.positiveToString"/>
             </ElTooltip>
         </div>
         <div class="tag-negative">
@@ -42,7 +43,8 @@ const mv = computed({
                 <template #content>
                     <span>已复制到剪贴板</span>
                 </template>
-                <textarea class="tag-pre" @dblclick="copyNegative()" readonly v-model="cartStore.negativeToString"></textarea>
+                <ElInput type="textarea" :rows="5" class="tag-pre" @dblclick="copyNegative()"
+                         readonly v-model="cartStore.negativeToString"/>
             </ElTooltip>
         </div>
         <template #footer>

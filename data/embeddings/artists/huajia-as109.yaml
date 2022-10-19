@@ -1,9 +1,9 @@
 # 调用该模型使用的命令 (模型图片左上角尖括号内容)
 prompt: huajia-as109
 # 模型名称
-name: AS109
+name: 水叔/AS109
 # 模型作者
-author: t.me/Embeddings_Record
+author: acg_love @ t.me/Embeddings_Record
 # 模型分类
 category: 画师
 # 该模型对应的主模型名称
@@ -16,3 +16,4 @@ vectorSize: 7
 steps: 3001
 # 模型文件的 SHA256 Hash
 payloadHash: cf24dbb245dd808b086a007ffe5f2e5b0ae20316a8ae576cae9bb45e0999461e
+restricted: true

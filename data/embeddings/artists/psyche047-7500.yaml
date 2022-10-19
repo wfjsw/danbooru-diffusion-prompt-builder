@@ -1,19 +1,19 @@
 # 调用该模型使用的命令 (模型图片左上角尖括号内容)
-prompt: na-ga
+prompt: psyche047-7500
 # 模型名称
-name: Na-Ga
+name: プシュケー
 # 模型作者
-author: snowflake rain @ t.me/Embeddings_Record
+author: Fire Ghoscat @ t.me/StableDiffusion_CN
 # 模型分类
 category: 画师
 # 该模型对应的主模型名称
-modelName: 未知
+modelName: NovelAI-Full-Pruned
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
-modelHash: 'unknown'
+modelHash: 'e6e8e1fc'
 # 模型图片右下角 v 字符旁的数字
-vectorSize: 75
+vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
-steps: 2000
+steps: 10001
 # 模型文件的 SHA256 Hash
-payloadHash: d2520673297b7e87e5c2a95d833553ee189aa1c792db7fda1684e8e658d4d310
+payloadHash: 28d9991d831f3bd8c4ea43e8480a4631980c69b1247b7edd4ab3c4950430b042
 restricted: true

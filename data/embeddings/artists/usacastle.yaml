@@ -16,3 +16,4 @@ vectorSize: 18
 steps: 10001
 # 模型文件的 SHA256 Hash
 payloadHash: 65209990c98500b834abac9f8e4e5a49dedcac75c5bd9e73ac17c3356bef752b
+restricted: true
