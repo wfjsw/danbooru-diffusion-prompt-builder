@@ -156,7 +156,7 @@ async function clearDialog() {
             </ElButtonGroup>
 
         </div>
-        <div class="btn-block">
+        <div class="btn-block mb-bottom">
             <ElButton type="primary" class="btn" @click="resultVisible = true" size="large">结算</ElButton>
         </div>
         <ImportDialog v-model="importVisible"/>
@@ -228,5 +228,9 @@ async function clearDialog() {
         padding-top: 0.25rem;
         padding-bottom: 0.25rem;
     }
+}
+
+.mb-bottom {
+    margin-bottom: 30px;
 }
 </style>
