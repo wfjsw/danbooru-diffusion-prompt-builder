@@ -25,6 +25,10 @@ const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
 const lightIcon = h(FontAwesomeIcon, { icon: faLightbulbOn })
 const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
 
+const githubButtonsColorScheme = computed(() => isDark.value
+    ? "no-preference: dark; light: dark; dark: dark;"
+    : "no-preference: light; light: light; dark: light;")
+
 </script>
 
 <template>
@@ -38,7 +42,7 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
             <GithubButton href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder"
                           class="github-button"
                           data-icon="octicon-star" data-size="large"
-                          data-color-scheme="no-preference: dark; light: light; dark: dark;"
+                          :data-color-scheme="githubButtonsColorScheme"
                           data-show-count="true"
                           aria-label="Star wfjsw/danbooru-diffusion-prompt-builder on GitHub">
                 Star
