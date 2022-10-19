@@ -106,33 +106,37 @@ export const useEmbeddingStore = defineStore('embeddings', {
             if (query === '') return this.embeddings[category].content
 
             return this.embeddings[category].content
-                .filter((n) => {
-                    if (!settings.showRestricted && n.restricted) return false;
-                    if (n.payloadHash === query) return true;
-                    if (n.prompt.includes(query)) return true;
-                    if (n.name.includes(query)) return true;
-                    if (n.modelName.includes(query)) return true;
-                    if (n.modelHash === query) return true;
-                    if (n.description?.includes(query)) return true;
-                    return false;
+                .filter(n => settings.showRestricted || !n.restricted)
+                .map(n => {
+                    let score = 0;
+                    if (n.payloadHash === query) score += 1000;
+                    if (n.prompt.includes(query)) score += 100;
+                    if (n.name.includes(query)) score += 50;
+                    if (n.modelName.includes(query)) score += 15;
+                    if (n.modelHash === query) score += 20;
+                    if (n.description?.includes(query)) score += 25;
+                    return {...n, score};
                 })
-                .sort(({prompt: a}, {prompt: b}) => a.localeCompare(b))
+                .filter(n => n.score > 0)
+                .sort(({score: a}, {score: b}) => b - a)
         },
-        searchAll(query: string, limit: number = 25): Embedding[] {
+        searchAll(query: string): (Embedding & {score: number})[] {
             const settings = useSettingsStore()
             if (query === '') return []
 
             return this.allEmbeddings
-                .filter((n) => {
-                    if (!settings.showRestricted && n.restricted) return false;
-                    if (n.payloadHash === query) return true;
-                    if (n.prompt.includes(query)) return true;
-                    if (n.name.includes(query)) return true;
-                    if (n.modelName.includes(query)) return true;
-                    if (n.modelHash.includes(query)) return true;
-                    return false;
+                .filter(n => settings.showRestricted || !n.restricted)
+                .map((n) => {
+                    let score = 0;
+                    if (n.payloadHash === query) score += 1000;
+                    if (n.prompt.includes(query)) score += 100;
+                    if (n.name.includes(query)) score += 50;
+                    if (n.modelName.includes(query)) score += 15;
+                    if (n.modelHash === query) score += 20;
+                    if (n.description?.includes(query)) score += 25;
+                    return {...n, score};
                 })
-                .slice(0, limit)
+                .filter(n => n.score > 0)
                 .toArray()
         }
     }

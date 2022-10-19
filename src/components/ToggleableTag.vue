@@ -9,9 +9,10 @@ const cartStore = useCartStore();
 
 const props = withDefaults(defineProps<{
     tag: string,
-    direction: 'positive'|'negative'|'both'|null,
-    type: ''|'success'|'warning'|'info'|'danger',
+    direction?: 'positive'|'negative'|'both'|null,
+    type?: ''|'success'|'warning'|'info'|'danger',
 }>(), {
+    direction: null,
     type: '',
 })
 

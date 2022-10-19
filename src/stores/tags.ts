@@ -1,6 +1,6 @@
 import {Map as ImmutableMap} from 'immutable';
 import {defineStore} from 'pinia'
-import type {TagCategories, TagCategory, Tags} from "../datatypes";
+import type {TagCategories, TagMeta, Tags} from "../datatypes";
 import {useSettingsStore} from "./settings";
 
 interface TagFile {
@@ -126,29 +126,34 @@ export const useTagStore = defineStore('tags', {
             return Object.fromEntries(
                 Object
                     .entries(this.tags[category])
-                    .filter(([key, meta]) => {
-                        if (!settings.showRestricted && meta.restricted) return false;
-                        if (key.includes(query)) return true;
-                        if (meta.name.includes(query)) return true;
-                        if (meta.alias?.some(a => a.includes(query))) return true;
-                        if (meta.description?.includes(query)) return true;
-                        return false;
+                    .filter(([, v]) => settings.showRestricted || !v.restricted)
+                    .map(([key, meta]): [string, TagMeta & {score: number}] => {
+                        let score = 0;
+                        if (key.includes(query)) score += 100;
+                        if (meta.name.includes(query)) score += 50;
+                        if (meta.alias?.some(a => a.includes(query))) score += 70;
+                        if (meta.description?.includes(query)) score += 25;
+                        return [key, {...meta, score}]
                     })
-                    .sort(([a], [b]) => a.localeCompare(b))
+                    .filter(([_, v]) => v.score > 0)
+                    .sort(([, va], [, vb]) => vb.score - va.score)
             );
         },
-        searchAll(query: string, limit: number = 25) {
+        searchAll(query: string) {
             if (query === '') return {}
 
             return Object.fromEntries(
                 this.allTags
-                    .filter((meta, key) => {
-                        if (key.includes(query)) return true;
-                        if (meta.name.includes(query)) return true;
-                        if (meta.alias?.some(a => a.includes(query))) return true;
-                        return false;
+                    .map((meta, key) => {
+                        let score = 0;
+                        if (key.includes(query)) score += 100;
+                        if (meta.name.includes(query)) score += 50;
+                        if (meta.alias?.some(a => a.includes(query))) score += 70;
+                        if (meta.description?.includes(query)) score += 25;
+                        return {...meta, score}
                     })
-                    .slice(0, limit)
+                    .filter(a => a.score > 0)
+                    .sort(({score: a}, {score: b}) => b - a)
             );
         }
     }
