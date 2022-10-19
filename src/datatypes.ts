@@ -52,6 +52,7 @@ export interface EmbeddingCategory {
 export interface Embedding {
     prompt: string,
     name: string,
+    category: string,
     author: string|null,
     description: string|null,
     restricted: boolean|null,

@@ -77,6 +77,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
                     a[categoryName].content.push({
                         prompt: p.prompt,
                         name: p.name,
+                        category: categoryName,
                         author: p.author,
                         description: p.description,
                         restricted: p.restricted ?? false,
