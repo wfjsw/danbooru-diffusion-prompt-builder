@@ -61,3 +61,14 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
         display: inline-flex;
     }
 }
+
+html.dark .el-button--primary.is-link {
+    --el-button-text-color: #6ea8fe;
+}
+
+html .el-switch {
+    --el-switch-off-color: #5f6b86;
+}
+html.dark .el-switch {
+    --el-switch-off-color: var(--el-border-color);
+}

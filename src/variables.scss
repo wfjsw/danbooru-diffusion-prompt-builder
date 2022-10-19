@@ -1,14 +1,6 @@
-//html.dark {
-//    --el-color-success: var(--el-color-success-light-3);
-//    --el-color-danger: var(--el-color-danger-light-3);
-//    --el-color-warning: var(--el-color-warning-light-3);
-//    --el-color-info: var(--el-color-info-light-3);
-//    --el-color-primary: var(--el-color-primary-light-3);
-//}
-
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: (
-    'white': #ffffff,
+    'white': #f8f9fa,
     'black': #000000,
     'primary': (
       'base': #0d6efd,
@@ -30,3 +22,5 @@
     ),
   ),
 );
+
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;

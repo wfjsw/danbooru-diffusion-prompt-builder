@@ -2,7 +2,8 @@
 import {ElButton, ElSwitch, ElScrollbar} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import GithubButton from "vue-github-button";
-import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLightbulbOn, faLightbulbSlash, faCommentMinus, faCommentPlus, faTrash} from "@fortawesome/pro-light-svg-icons";
+import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLightbulbOn, faLightbulbSlash} from "@fortawesome/pro-light-svg-icons";
+import {faCommentMinus, faCommentPlus, faTrash, faThumbsDown as faThumbsDownRegular, faThumbsUp as faThumbsUpRegular} from "@fortawesome/pro-regular-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
@@ -122,10 +123,10 @@ const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
                     点击
                     <span>
                         <ElButton link type="primary">
-                            <FontAwesomeIcon :icon="faThumbsUp"/>
+                            <FontAwesomeIcon :icon="faThumbsUpRegular"/>
                         </ElButton>
                         <ElButton link type="primary">
-                            <FontAwesomeIcon :icon="faThumbsDown"/>
+                            <FontAwesomeIcon :icon="faThumbsDownRegular"/>
                         </ElButton>
                     </span>
                     可将标签在正负两个方向之间移动。

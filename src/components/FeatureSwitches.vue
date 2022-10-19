@@ -65,4 +65,8 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
     flex-direction: row;
     gap: 1rem;
 }
+.feature-switches > .restricted-switch {
+    --el-switch-on-color: var(--el-color-danger);
+    --el-switch-off-color: var(--el-color-success);
+}
 </style>

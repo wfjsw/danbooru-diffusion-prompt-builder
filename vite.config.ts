@@ -33,8 +33,19 @@ export default defineConfig({
             {
                 find: /^@fortawesome\/fontawesome-svg-core$/,
                 replacement: resolve(__dirname, './src/fontawesome-svg-core.js'),
-            }
+            },
+            {
+                find: '~/',
+                replacement:`${resolve(__dirname, 'src')}/`
+            },
         ]
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@use "~/variables.scss" as *;`,
+            },
+        },
     },
     esbuild: {
         legalComments: 'eof',

@@ -59,11 +59,6 @@ const searchTerms = computed({
     min-width: 8rem;
 }
 
-.restricted-switch {
-    --el-switch-on-color: var(--el-color-danger);
-    --el-switch-off-color: var(--el-color-success);
-}
-
 .extlinks {
     margin-right: 0;
 }

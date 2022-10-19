@@ -1,8 +1,6 @@
 import {createApp} from 'vue'
-import 'element-plus/theme-chalk/dark/css-vars.css'
-import './variables.scss';
-import 'element-plus/theme-chalk/el-loading.css'
 import './style.scss'
+import 'element-plus/theme-chalk/el-loading.css'
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 import App from './App.vue'
 import {createPinia} from "pinia";
