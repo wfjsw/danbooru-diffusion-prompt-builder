@@ -39,7 +39,7 @@ watch(toRef(props, 'category'), () => {
     <ElScrollbar class="scrollable" ref="scrollRef">
         <Masonry :bind="paginatedTags" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
                  :infinite-scroll-distance="512" :infinite-scroll-delay="10">
-            <TagView v-for="(meta, tag) in paginatedTags" v-memo="[tag]" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
+            <TagView v-for="(meta, tag) in paginatedTags" v-memo="[tag, settingsStore.showImage]" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
                      :tag="tag as string"/>
         </Masonry>
     </ElScrollbar>

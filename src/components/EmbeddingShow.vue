@@ -34,7 +34,7 @@ function loadMore() {
     <ElScrollbar class="scrollable">
         <Masonry :bind="paginatedEmbs" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
                  :infinite-scroll-distance="512" :infinite-scroll-delay="10">
-            <EmbeddingView v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb]"
+            <EmbeddingView v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb, settingsStore.showImage]"
                            :blur-image="!settingsStore.showImage" :data="emb"/>
         </Masonry>
     </ElScrollbar>

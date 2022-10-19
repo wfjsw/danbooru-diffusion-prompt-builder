@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {computed, toRef} from 'vue'
-import {ElButton, ElCard, ElTooltip} from "element-plus";
+import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faClipboard, faThumbsDown, faThumbsUp, faLink} from "@fortawesome/pro-light-svg-icons";
+import {faClipboard, faThumbsDown, faThumbsUp, faLink, faImageSlash} from "@fortawesome/pro-light-svg-icons";
 import type {TagMeta} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 
@@ -76,7 +76,15 @@ function toggleNegative(tag: string = props.tag) {
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
         <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]"
-             :style="{backgroundImage: `url(${imageUrl})`}"/>
+             :style="{backgroundImage: `url(${imageUrl})`}">
+            <ElImage :src="imageUrl" fit="cover">
+                <template #error>
+                    <div class="image-slot">
+                        <FontAwesomeIcon :icon="faImageSlash" />
+                    </div>
+                </template>
+            </ElImage>
+        </div>
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
@@ -218,12 +226,18 @@ function toggleNegative(tag: string = props.tag) {
 }
 
 .card-image-container {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    //background-position: 50%;
     min-height: 256px;
     aspect-ratio: 1 / 1;
     transition: .5s all;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     &.blur-image {
         filter: blur(15px);

@@ -3,7 +3,8 @@ import {computed, toRefs} from 'vue'
 import {ElButton, ElCard, ElTooltip} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faClipboard, faThumbsDown, faThumbsUp, faLink, faCloudArrowDown} from "@fortawesome/pro-light-svg-icons";
+import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
+import {faCloudArrowDown} from "@fortawesome/pro-regular-svg-icons";
 import type {Embedding} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 import ToggleableTag from "./ToggleableTag.vue";
@@ -62,32 +63,38 @@ function toggleNegative(tag: string = prompt.value) {
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
                 <div class="tag-header"><code class="tag-name large">{{ prompt }}</code></div>
-                <div class="buttons">
-                    <ElTooltip :visible="copied">
-                        <template #content>
-                            <span>已复制到剪贴板</span>
-                        </template>
-                        <ElButton circle type="primary" @click="copy()">
-                            <FontAwesomeIcon :icon="faClipboard"/>
-                        </ElButton>
-                    </ElTooltip>
-                    <ElTooltip content="下载模型" :show-after="750">
-                        <a :href="downloadUrl" :download="fileName" target="_blank">
-                            <ElButton type="warning" circle>
-                                <FontAwesomeIcon :icon="faCloudArrowDown"/>
+                <div class="buttons-group">
+                    <div >
+                        <ElTooltip content="下载模型" :show-after="750">
+                            <a :href="downloadUrl" :download="fileName" target="_blank" class="text-decoration-none">
+                                <ElButton type="warning" color="#533F20" round class="download-btn">
+                                    <FontAwesomeIcon :icon="faCloudArrowDown" class="icon"/>
+                                    下载模型
+                                </ElButton>
+                            </a>
+                        </ElTooltip>
+                    </div>
+                    <div class="buttons">
+                        <ElTooltip :visible="copied">
+                            <template #content>
+                                <span>已复制到剪贴板</span>
+                            </template>
+                            <ElButton circle type="primary" @click="copy()">
+                                <FontAwesomeIcon :icon="faClipboard"/>
                             </ElButton>
-                        </a>
-                    </ElTooltip>
-                    <ElTooltip content="我想要" :show-after="750">
-                        <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(prompt)">
-                            <FontAwesomeIcon :icon="faThumbsUp"/>
-                        </ElButton>
-                    </ElTooltip>
-                    <ElTooltip content="我不想要" :show-after="750">
-                        <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(prompt)">
-                            <FontAwesomeIcon :icon="faThumbsDown"/>
-                        </ElButton>
-                    </ElTooltip>
+                        </ElTooltip>
+
+                        <ElTooltip content="我想要" :show-after="750">
+                            <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(prompt)">
+                                <FontAwesomeIcon :icon="faThumbsUp"/>
+                            </ElButton>
+                        </ElTooltip>
+                        <ElTooltip content="我不想要" :show-after="750">
+                            <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(prompt)">
+                                <FontAwesomeIcon :icon="faThumbsDown"/>
+                            </ElButton>
+                        </ElTooltip>
+                    </div>
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
@@ -129,10 +136,18 @@ function toggleNegative(tag: string = prompt.value) {
 
 .buttons {
     display: inline-block;
-    margin-left: auto;
 
     & > * {
         margin-left: 0.6rem;
+    }
+}
+
+.buttons-group {
+    margin-left: auto;
+    text-align: right;
+
+    > div:first-child {
+        margin-bottom: 0.75rem;
     }
 }
 
@@ -274,5 +289,15 @@ function toggleNegative(tag: string = prompt.value) {
 .tag-suggestion {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.download-btn {
+    .icon {
+        margin-right: 0.5rem;
+    }
+}
+
+.text-decoration-none {
+    text-decoration: none;
 }
 </style>

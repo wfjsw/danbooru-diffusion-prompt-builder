@@ -4,7 +4,7 @@ import {ElButton, ElInput, ElSwitch, ElTooltip} from "element-plus";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from "@fortawesome/pro-light-svg-icons";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faGithub} from "@fortawesome/pro-brands-svg-icons";
 import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
 import {useSettingsStore} from "../stores/settings";
 import {isDark} from '../composables/dark'
