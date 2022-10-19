@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import {computed, ref} from "vue";
+import {computed, ref, watch, toRef} from "vue";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
 import {useSettingsStore} from "../stores/settings";
-import {TagCategory} from "../datatypes";
+import type {TagCategory, TagMeta} from "../datatypes";
 import {ElInput, ElScrollbar} from "element-plus";
 
 const props = defineProps<{
@@ -15,17 +15,31 @@ const props = defineProps<{
 const settingsStore = useSettingsStore();
 const tagStore = useTagStore();
 
+const scrollRef = ref<typeof ElScrollbar|null>(null)
 const searchTerms = ref('')
+const paginationSize = ref(20)
+const filteredTags = computed<[string, TagMeta][]>(() => Object.entries(tagStore.searchCategory(props.category, searchTerms.value)));
+const filteredLength = computed(() => filteredTags.value.length);
+const paginatedTags = computed<TagCategory>(() =>
+    Object.fromEntries(filteredTags.value.slice(0, paginationSize.value)));
 
-const filteredTags = computed<TagCategory>(() => tagStore.searchCategory(props.category, searchTerms.value));
+function loadMore() {
+    paginationSize.value += 20;
+}
+
+watch(toRef(props, 'category'), () => {
+    paginationSize.value = 20;
+    scrollRef.value?.scrollTo({top: 0})
+})
 </script>
 
 <template>
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
-    <ElScrollbar class="scrollable">
-        <Masonry :bind="filteredTags">
-            <TagView v-for="(meta, tag) in filteredTags" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
+    <ElScrollbar class="scrollable" ref="scrollRef">
+        <Masonry :bind="paginatedTags" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                 :infinite-scroll-distance="512" :infinite-scroll-delay="10">
+            <TagView v-for="(meta, tag) in paginatedTags" v-memo="[tag]" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
                      :tag="tag as string"/>
         </Masonry>
     </ElScrollbar>

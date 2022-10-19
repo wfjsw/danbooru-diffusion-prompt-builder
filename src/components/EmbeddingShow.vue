@@ -16,17 +16,26 @@ const settingsStore = useSettingsStore();
 const embeddingStore = useEmbeddingStore();
 
 const searchTerms = ref('')
-
+const paginationSize = ref(30)
 const filteredEmbs = computed<Embedding[]>(() => embeddingStore.searchCategory(props.category, searchTerms.value));
+const filteredLength = computed(() => filteredEmbs.value.length);
+const paginatedEmbs = computed<Embedding[]>(() => filteredEmbs.value.slice(0, paginationSize.value));
+
+function loadMore() {
+    if (paginationSize.value < filteredLength.value) {
+        paginationSize.value += 30;
+    }
+}
 </script>
 
 <template>
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
     <ElScrollbar class="scrollable">
-        <Masonry :bind="filteredEmbs">
-            <EmbeddingView v-for="emb in filteredEmbs" :key="emb.prompt" :blur-image="!settingsStore.showImage"
-                     :data="emb"/>
+        <Masonry :bind="paginatedEmbs" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                 :infinite-scroll-distance="512" :infinite-scroll-delay="10">
+            <EmbeddingView v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb]"
+                           :blur-image="!settingsStore.showImage" :data="emb"/>
         </Masonry>
     </ElScrollbar>
 </template>

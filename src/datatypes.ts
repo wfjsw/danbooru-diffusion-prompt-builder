@@ -3,7 +3,7 @@ export interface TagMeta {
     name: string,
     description: string | null,
     image: string | null,
-    wikiUrl: string | null,
+    wikiURL: string | null,
     restricted: boolean|null,
 }
 
@@ -59,6 +59,7 @@ export interface Embedding {
     vectorSize: number,
     steps: number,
     payloadHash: string,
+    payloadURL: string|null,
     suggestPositive: string[]|null,
     suggestNegative: string[]|null,
 }

@@ -34,9 +34,7 @@ onUnmounted(() => {
 })
 
 watch(toRef(props, 'bind'), () => {
-    nextTick(() => {
-        reloadLayout()
-    })
+    reloadLayout()
 })
 </script>
 

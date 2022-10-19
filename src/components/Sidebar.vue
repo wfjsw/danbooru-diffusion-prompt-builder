@@ -17,7 +17,7 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
-    <ElMenu :default-openeds="['tags']" class="borderless pb-2"
+    <ElMenu :default-openeds="['tags']" class="borderless pb-2 fw"
             default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
@@ -36,7 +36,10 @@ function select(index: string, indexPath: string[]) {
             <ElMenuItem
                 v-for="category in tagStore.categories"
                 :index="category">
-                {{ category }}
+                <div class="flex">
+                    <div class="tag-category-name">{{ category }}</div>
+                    <div class="tag-category-size">{{ tagStore.categorySize[category] }}</div>
+                </div>
             </ElMenuItem>
         </ElSubMenu>
 
@@ -50,7 +53,10 @@ function select(index: string, indexPath: string[]) {
             <ElMenuItem
                 v-for="category in presetStore.categories"
                 :index="category">
-                {{ category }}
+                <div class="flex">
+                    <div class="preset-category-name">{{ category }}</div>
+                    <div class="preset-category-size">{{ presetStore.categorySize[category] }}</div>
+                </div>
             </ElMenuItem>
         </ElSubMenu>
 
@@ -59,12 +65,15 @@ function select(index: string, indexPath: string[]) {
                 <ElIcon>
                     <IconPicture/>
                 </ElIcon>
-                精修模型
+                嵌入模型
             </template>
             <ElMenuItem
                 v-for="category in embeddingStore.categories"
                 :index="category">
-                {{ category }}
+                <div class="flex">
+                    <div class="embedding-category-name">{{ category }}</div>
+                    <div class="embedding-category-size">{{ embeddingStore.categorySize[category] }}</div>
+                </div>
             </ElMenuItem>
         </ElSubMenu>
     </ElMenu>
@@ -82,5 +91,15 @@ function select(index: string, indexPath: string[]) {
 
 .pb-2 {
     padding-bottom: 1.5rem;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag-category-size, .preset-category-size, .embedding-category-size {
+    font-size: small;
 }
 </style>

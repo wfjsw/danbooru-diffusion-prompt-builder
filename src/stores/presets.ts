@@ -31,6 +31,9 @@ export const usePresetStore = defineStore('presets', {
                 .filter(([_, v]) => settings.showRestricted || !v._restricted)
                 .map(([k, _]) => k)
         },
+        categorySize: (state) => {
+            return Object.fromEntries(Object.entries(state.presets).map(([k, v]) => [k, Object.keys(v).length]))
+        },
         count: (state) => {
             const settings = useSettingsStore()
             return Object.values(state.presets)
@@ -66,13 +69,17 @@ export const usePresetStore = defineStore('presets', {
                 return {};
             }
 
-            return Object.entries(this.presets[presetName])
-                .filter(([key, meta]) => {
-                    if (key.includes(query)) return true;
-                    if (meta.description?.includes(query)) return true;
-                    if (meta.content?.some(a => a.includes(query))) return true;
-                    return false;
-                }).reduce((res: PresetCategory, [key, meta]) => (res[key] = meta, res), {});
+            return Object.fromEntries(
+                Object
+                    .entries(this.presets[presetName])
+                    .filter(([key, meta]) => {
+                        if (key.includes(query)) return true;
+                        if (meta.description?.includes(query)) return true;
+                        if (meta.content?.some(a => a.includes(query))) return true;
+                        if (meta.description?.includes(query)) return true;
+                        return false;
+                    })
+            );
         }
     }
 })

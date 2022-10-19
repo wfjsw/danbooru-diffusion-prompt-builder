@@ -90,7 +90,7 @@ function toggleNegative(tag: string = props.tag) {
                             <FontAwesomeIcon :icon="faClipboard"/>
                         </ElButton>
                     </ElTooltip>
-                    <a v-if="meta.wikiUrl" :href="meta.wikiUrl" target="_blank">
+                    <a v-if="meta.wikiURL" :href="meta.wikiURL" target="_blank">
                         <ElTooltip content="Danbooru Wiki" :show-after="750">
                             <ElButton type="info" circle>
                                 <FontAwesomeIcon :icon="faLink"/>

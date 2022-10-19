@@ -13,7 +13,7 @@ interface TagFileItem {
     name: string,
     description: string | null,
     image: string | null,
-    wikiUrl: string | null,
+    wikiURL: string | null,
     alias: string[] | null,
     restricted: boolean|null,
 }
@@ -30,6 +30,9 @@ export const useTagStore = defineStore('tags', {
                 .filter(([_, v]) => settings.showRestricted || !v._restricted)
                 .map(([k, _]) => k)
             return filtered.sort()
+        },
+        categorySize: (state) => {
+            return Object.fromEntries(Object.entries(state.tags).map(([k, v]) => [k, Object.keys(v).length]))
         },
         allTags: (state) => {
             const settings = useSettingsStore()
@@ -120,29 +123,33 @@ export const useTagStore = defineStore('tags', {
 
             if (query === '') return this.tags[category]
 
-            return Object.entries(this.tags[category])
-                .filter(([key, meta]) => {
-                    if (!settings.showRestricted && meta.restricted) return false;
-                    if (key.includes(query)) return true;
-                    if (meta.name.includes(query)) return true;
-                    if (meta.alias?.some(a => a.includes(query))) return true;
-                    return false;
-                })
-                .sort(([a], [b]) => a.localeCompare(b))
-                .reduce((res: TagCategory, [key, meta]) => (res[key] = meta, res), {});
+            return Object.fromEntries(
+                Object
+                    .entries(this.tags[category])
+                    .filter(([key, meta]) => {
+                        if (!settings.showRestricted && meta.restricted) return false;
+                        if (key.includes(query)) return true;
+                        if (meta.name.includes(query)) return true;
+                        if (meta.alias?.some(a => a.includes(query))) return true;
+                        if (meta.description?.includes(query)) return true;
+                        return false;
+                    })
+                    .sort(([a], [b]) => a.localeCompare(b))
+            );
         },
         searchAll(query: string, limit: number = 25) {
             if (query === '') return {}
 
-            return this.allTags
-                .filter((meta, key) => {
-                    if (key.includes(query)) return true;
-                    if (meta.name.includes(query)) return true;
-                    if (meta.alias?.some(a => a.includes(query))) return true;
-                    return false;
-                })
-                .slice(0, limit)
-                .reduce((res: TagCategory, meta, key) => (res[key] = meta, res), {});
+            return Object.fromEntries(
+                this.allTags
+                    .filter((meta, key) => {
+                        if (key.includes(query)) return true;
+                        if (meta.name.includes(query)) return true;
+                        if (meta.alias?.some(a => a.includes(query))) return true;
+                        return false;
+                    })
+                    .slice(0, limit)
+            );
         }
     }
 })

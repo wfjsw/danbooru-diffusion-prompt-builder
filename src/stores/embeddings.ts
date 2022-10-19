@@ -15,6 +15,7 @@ interface EmbeddingFile {
     vectorSize: number,
     steps: number,
     payloadHash: string,
+    payloadURL: string|null,
     suggestPositive: string[]|null,
     suggestNegative: string[]|null,
 }
@@ -31,6 +32,9 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 .filter(([_, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
                 .map(([k, _]) => k)
             return filtered.sort()
+        },
+        categorySize: (state) => {
+            return Object.fromEntries(Object.entries(state.embeddings).map(([k, v]) => [k, v.content.length]))
         },
         allEmbeddings: (state) => {
             const settings = useSettingsStore()
@@ -81,6 +85,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
                         vectorSize: p.vectorSize,
                         steps: p.steps,
                         payloadHash: p.payloadHash,
+                        payloadURL: p.payloadURL,
                         suggestPositive: p.suggestPositive,
                         suggestNegative: p.suggestNegative,
                     })
@@ -107,7 +112,8 @@ export const useEmbeddingStore = defineStore('embeddings', {
                     if (n.prompt.includes(query)) return true;
                     if (n.name.includes(query)) return true;
                     if (n.modelName.includes(query)) return true;
-                    if (n.modelHash.includes(query)) return true;
+                    if (n.modelHash === query) return true;
+                    if (n.description?.includes(query)) return true;
                     return false;
                 })
                 .sort(({prompt: a}, {prompt: b}) => a.localeCompare(b))

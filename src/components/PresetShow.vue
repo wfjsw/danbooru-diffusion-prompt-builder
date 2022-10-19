@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 
-import {computed, inject, nextTick, onBeforeUpdate, onUpdated, ref} from "vue";
+import {computed, ref} from "vue";
 import {Search as IconSearch} from "@element-plus/icons-vue";
 import {ElCollapse, ElInput, ElScrollbar} from "element-plus";
 import {usePresetStore} from "../stores/presets";
 import PresetView from "./PresetView.vue";
-import type {PresetCategory} from "../datatypes";
+import type {PresetCategory, Preset} from "../datatypes";
 
 const props = defineProps<{
     category: string
@@ -14,17 +14,28 @@ const props = defineProps<{
 const presetStore = usePresetStore();
 
 const searchTerms = ref('');
-
-const filteredPresets = computed<PresetCategory>(() => presetStore.searchPreset(props.category, searchTerms.value));
+const paginationSize = ref(30)
+const filteredPresets = computed<[string, Preset][]>(() => Object.entries(
+    presetStore.searchPreset(props.category, searchTerms.value)));
+const filteredLength = computed(() => filteredPresets.value.length);
+const paginatedPresets = computed<PresetCategory>(() =>
+    Object.fromEntries(filteredPresets.value.slice(0, paginationSize.value))
+);
+function loadMore() {
+    if (paginationSize.value < filteredLength.value) {
+        paginationSize.value += 30;
+    }
+}
 </script>
 
 <template>
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
     <ElScrollbar class="scrollable">
-        <ElCollapse accordion>
-            <PresetView v-for="(preset, title) in filteredPresets" :category="category" :meta="preset"
-                        :title="title as string"/>
+        <ElCollapse v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                    :infinite-scroll-distance="128" :infinite-scroll-delay="10">
+            <PresetView v-for="(preset, title) in paginatedPresets" :key="title" v-memo="[title]" :category="category"
+                        :meta="preset" :title="title as string"/>
         </ElCollapse>
     </ElScrollbar>
 </template>

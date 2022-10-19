@@ -24,6 +24,9 @@ const imageUrl = computed(() => {
 })
 
 const downloadUrl = computed(() => {
+    if (props.data.payloadURL) {
+        return props.data.payloadURL
+    }
     const hash = props.data.payloadHash
     return `embeddings/${hash.slice(0, 2)}/${hash}.webp`
 })
