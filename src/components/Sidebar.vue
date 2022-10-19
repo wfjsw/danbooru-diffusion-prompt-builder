@@ -4,6 +4,7 @@ import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Pict
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
 import {useEmbeddingStore} from "../stores/embeddings";
+import ExtLinks from './ExtLinks.vue'
 
 const emit = defineEmits(['select'])
 
@@ -17,6 +18,9 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
+    <div class="mobile-extlinks d-block d-none-sm">
+        <ExtLinks class="d-inline-flex"/>
+    </div>
     <ElMenu :default-openeds="['tags']" class="borderless pb-2 fw"
             default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
@@ -102,4 +106,11 @@ function select(index: string, indexPath: string[]) {
 .tag-category-size, .preset-category-size, .embedding-category-size {
     font-size: small;
 }
+
+.mobile-extlinks {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
 </style>

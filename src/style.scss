@@ -4,6 +4,10 @@ html, body, #app {
     overflow: hidden;
 }
 
+body {
+    margin: 0;
+}
+
 button.is-circle svg.svg-inline--fa {
     width: 1em;
 }
@@ -23,4 +27,37 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     height: 1em;
     overflow: visible;
     vertical-align: -.125em;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+@media screen and (max-width: 1024px) {
+    .d-sm {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .d-none-sm {
+        display: none;
+    }
+    .d-block-sm {
+        display: block;
+    }
+    .d-inline-block-sm {
+        display: inline-block;
+    }
+    .d-inline-flex-sm {
+        display: inline-flex;
+    }
 }

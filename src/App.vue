@@ -35,7 +35,7 @@ const mainComponent: ComponentList = {
 
 <template>
     <ElContainer>
-        <ElHeader class="bottom-bordered">
+        <ElHeader class="bottom-bordered flex">
             <TopBar v-model:search="searchTerms"/>
         </ElHeader>
         <ElContainer>
@@ -74,5 +74,9 @@ const mainComponent: ComponentList = {
 .body-full-height {
     height: calc(100vh - 64px);
     overflow-y: hidden
+}
+
+.flex {
+    display: flex;
 }
 </style>
