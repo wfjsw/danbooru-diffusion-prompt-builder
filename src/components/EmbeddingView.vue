@@ -4,7 +4,7 @@ import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
-import {faCloudArrowDown} from "@fortawesome/pro-regular-svg-icons";
+import {faCloudArrowDown, faImageSlash} from "@fortawesome/pro-regular-svg-icons";
 import type {Embedding} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 import ToggleableTag from "./ToggleableTag.vue";

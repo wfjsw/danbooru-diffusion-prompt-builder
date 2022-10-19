@@ -3,6 +3,7 @@ import {ElButton, ElCollapseItem, ElCarousel, ElCarouselItem, ElTooltip, ElImage
 import type {Preset} from "../datatypes";
 import {computed, ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {faImageSlash} from '@fortawesome/pro-regular-svg-icons'
 import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
 import {useCartStore} from "../stores/cart";
 import ToggleableTag from "./ToggleableTag.vue";
