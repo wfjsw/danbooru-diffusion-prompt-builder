@@ -37,41 +37,48 @@ export const useTagStore = defineStore('tags', {
         allTags: (state) => {
             const settings = useSettingsStore()
 
-            return ImmutableMap(Object.values(state.tags).reduce((a, b) => {
-                if (!settings.showRestricted && b._restricted) {
-                    return a;
-                }
-                for (const [tag, meta] of Object.entries(b)) {
-                    if (!settings.showRestricted && meta.restricted) {
-                        continue
-                    }
-                    a[tag] = meta
-                }
-                return a;
-            }, {}))
+            return ImmutableMap(
+                Object.entries(state.tags)
+                    .reduce((a: {[key: string]: TagMeta & {category: string}}, [k, b]) => {
+                        if (!settings.showRestricted && b._restricted) {
+                            return a;
+                        }
+                        for (const [tag, meta] of Object.entries(b)) {
+                            if (!settings.showRestricted && meta.restricted) {
+                                continue
+                            }
+                            a[tag] = {...meta, category: k}
+                        }
+                        return a;
+                    }, {}
+                )
+            )
         },
         allTagsWithAlias: (state) => {
             const settings = useSettingsStore()
 
-            return ImmutableMap(Object.values(state.tags).reduce((a, b) => {
-                if (!settings.showRestricted && b._restricted) {
-                    return a;
-                }
-
-                for (const [tag, meta] of Object.entries(b)) {
-                    if (!settings.showRestricted && meta.restricted) {
-                        continue
-                    }
-
-                    a[tag] = meta
-                    if (meta.alias) {
-                        for (const alias of meta.alias) {
-                            a[alias] = meta
+            return ImmutableMap(
+                Object.entries(state.tags)
+                    .reduce((a: {[key: string]: TagMeta & {category: string}}, [k, b]) => {
+                        if (!settings.showRestricted && b._restricted) {
+                            return a;
                         }
-                    }
-                }
-                return a;
-            }, {}))
+
+                        for (const [tag, meta] of Object.entries(b)) {
+                            if (!settings.showRestricted && meta.restricted) {
+                                continue
+                            }
+
+                            a[tag] = {...meta, category: k}
+                            if (meta.alias) {
+                                for (const alias of meta.alias) {
+                                    a[alias] = {...meta, category: k}
+                                }
+                            }
+                        }
+                        return a;
+                }, {})
+            )
         },
         allTagCount: (state) => {
             const settings = useSettingsStore()

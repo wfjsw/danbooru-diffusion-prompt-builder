@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {ElButton, ElCollapseItem, ElTag, ElTooltip} from "element-plus";
+import {ElButton, ElCollapseItem, ElCarousel, ElCarouselItem, ElTooltip, ElImage} from "element-plus";
 import type {Preset} from "../datatypes";
 import {computed, ref} from "vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
@@ -79,7 +79,19 @@ function toggleNegative() {
                 <ToggleableTag v-for="tag in meta.content" :tag="tag" size="large" direction="both" />
             </div>
         </div>
-
+        <div v-if="meta.preview">
+            <ElCarousel :interval="5000" height="512px">
+                <ElCarouselItem v-for="hash in meta.preview" :key="hash">
+                    <ElImage :src="`images/${hash.slice(0, 2)}/${hash}.webp`" fit="contain" class="carousel-image">
+                        <template #error>
+                            <div class="image-slot">
+                                <FontAwesomeIcon :icon="faImageSlash" size="lg"/>
+                            </div>
+                        </template>
+                    </ElImage>
+                </ElCarouselItem>
+            </ElCarousel>
+        </div>
     </ElCollapseItem>
 </template>
 
@@ -101,4 +113,19 @@ function toggleNegative() {
     }
 }
 
+.image-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--el-fill-color-light);
+    color: var(--el-text-color-secondary);
+    font-size: 30px;
+}
+
+.carousel-image {
+    height: 100%;
+    width: 100%;
+}
 </style>

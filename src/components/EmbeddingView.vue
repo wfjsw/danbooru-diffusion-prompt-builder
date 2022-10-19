@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import {computed, toRefs} from 'vue'
-import {ElButton, ElCard, ElTooltip} from "element-plus";
+import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
@@ -9,10 +9,14 @@ import type {Embedding} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 import ToggleableTag from "./ToggleableTag.vue";
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     data: Embedding,
     blurImage: boolean,
-}>()
+    showCategory?: boolean,
+}>(), {
+    showCategory: false,
+})
+
 
 const refProps = toRefs(props)
 
@@ -57,22 +61,27 @@ function toggleNegative(tag: string = prompt.value) {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]"
-             :style="{backgroundImage: `url(${imageUrl})`}"/>
+        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]">
+            <ElImage :src="imageUrl" fit="cover" lazy>
+                <template #error>
+                    <div class="image-slot">
+                        <FontAwesomeIcon :icon="faImageSlash" size="lg"/>
+                    </div>
+                </template>
+            </ElImage>
+        </div>
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
                 <div class="tag-header"><code class="tag-name large">{{ prompt }}</code></div>
                 <div class="buttons-group">
-                    <div >
-                        <ElTooltip content="下载模型" :show-after="750">
-                            <a :href="downloadUrl" :download="fileName" target="_blank" class="text-decoration-none">
-                                <ElButton type="warning" color="#533F20" round class="download-btn">
-                                    <FontAwesomeIcon :icon="faCloudArrowDown" class="icon"/>
-                                    下载模型
-                                </ElButton>
-                            </a>
-                        </ElTooltip>
+                    <div class="big-download-button">
+                        <a :href="downloadUrl" :download="fileName" target="_blank" class="text-decoration-none">
+                            <ElButton type="warning" color="#533F20" round class="download-btn">
+                                <FontAwesomeIcon :icon="faCloudArrowDown" class="icon"/>
+                                下载模型
+                            </ElButton>
+                        </a>
                     </div>
                     <div class="buttons">
                         <ElTooltip :visible="copied">
@@ -98,6 +107,7 @@ function toggleNegative(tag: string = prompt.value) {
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
+            <div v-if="data.category" class="text category">类别：{{ data.category }}</div>
             <div v-if="data.author" class="text author">来源：{{ data.author }}</div>
             <p v-if="data.description" class="text description">{{ data.description }}</p>
             <div v-if="data.modelName" class="text meta">模型名：<code>{{ data.modelName }}</code> (<code>{{ data.modelHash }}</code>)</div>
@@ -207,12 +217,15 @@ function toggleNegative(tag: string = prompt.value) {
 }
 
 .card-image-container {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
     min-height: 256px;
     aspect-ratio: 1 / 1;
     transition: .5s all;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     &.blur-image {
         filter: blur(15px);
@@ -299,5 +312,20 @@ function toggleNegative(tag: string = prompt.value) {
 
 .text-decoration-none {
     text-decoration: none;
+}
+
+.big-download-button {
+    display: inline-block;
+}
+
+.image-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--el-fill-color-light);
+    color: var(--el-text-color-secondary);
+    font-size: 30px;
 }
 </style>

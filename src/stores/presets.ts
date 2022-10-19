@@ -1,6 +1,5 @@
 import {defineStore} from 'pinia'
 import type {PresetCategories, Presets} from "../datatypes";
-import {PresetCategory} from "../datatypes";
 import {useSettingsStore} from "./settings";
 
 interface PresetFile {
@@ -17,6 +16,7 @@ interface PresetFileSingleItem {
     name: string,
     description: string | null,
     content: string[],
+    preview: string[] | null,
 }
 
 export const usePresetStore = defineStore('presets', {

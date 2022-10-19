@@ -9,7 +9,7 @@ import {useCartStore} from "../stores/cart";
 
 const props = defineProps<{
     tag: string,
-    meta: TagMeta,
+    meta: TagMeta & {category?: string},
     blurImage: boolean,
 }>()
 
@@ -75,12 +75,11 @@ function toggleNegative(tag: string = props.tag) {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]"
-             :style="{backgroundImage: `url(${imageUrl})`}">
-            <ElImage :src="imageUrl" fit="cover">
+        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]">
+            <ElImage :src="imageUrl" fit="cover" lazy>
                 <template #error>
                     <div class="image-slot">
-                        <FontAwesomeIcon :icon="faImageSlash" />
+                        <FontAwesomeIcon :icon="faImageSlash" size="lg"/>
                     </div>
                 </template>
             </ElImage>
@@ -118,6 +117,7 @@ function toggleNegative(tag: string = props.tag) {
                 </div>
             </div>
             <div v-if="meta.name" class="text name">{{ meta.name }}</div>
+            <div v-if="meta.category" class="text category">类别：{{ meta.category }}</div>
             <div v-if="meta.description">
                 <p v-for="t in meta.description.split('\n')" class="text description">{{ t }}</p>
             </div>
@@ -226,9 +226,6 @@ function toggleNegative(tag: string = props.tag) {
 }
 
 .card-image-container {
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //background-position: 50%;
     min-height: 256px;
     aspect-ratio: 1 / 1;
     transition: .5s all;
@@ -286,14 +283,27 @@ function toggleNegative(tag: string = props.tag) {
     padding: var(--el-card-padding);
 }
 
-.name {
+.text {
     margin-bottom: 1rem;
+}
+
+.name {
     font-size: 14pt;
     font-weight: 400;
 }
 
 .description {
-    margin-bottom: 1rem;
     word-wrap: break-word;
+}
+
+.image-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--el-fill-color-light);
+    color: var(--el-text-color-secondary);
+    font-size: 30px;
 }
 </style>

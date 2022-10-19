@@ -22,6 +22,7 @@ export interface Tags {
 export interface Preset {
     description: string | null,
     content: string[],
+    preview: string[] | null,
 }
 
 export interface PresetCategory {

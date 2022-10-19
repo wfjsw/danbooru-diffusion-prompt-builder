@@ -66,7 +66,7 @@ watch(toRef(props, 'search'), () => {
                 <TagView v-if="item.type === 'tag'" :blur-image="!settingsStore.showImage"
                          :meta="(item as SearchResultTag).data[1]" :tag="(item as SearchResultTag).data[0]"/>
                 <EmbeddingView v-if="item.type === 'embedding'" :blur-image="!settingsStore.showImage"
-                               :data="(item as SearchResultEmbedding).data"/>
+                               :data="(item as SearchResultEmbedding).data" show-category/>
             </template>
         </Masonry>
     </ElScrollbar>
