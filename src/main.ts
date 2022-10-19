@@ -1,5 +1,7 @@
 import {createApp} from 'vue'
 import 'element-plus/theme-chalk/dark/css-vars.css'
+import './variables.scss';
+import 'element-plus/theme-chalk/el-loading.css'
 import './style.scss'
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 import App from './App.vue'
@@ -8,7 +10,7 @@ import {useTagStore} from "./stores/tags";
 import {usePresetStore} from "./stores/presets";
 import {useEmbeddingStore} from "./stores/embeddings";
 import { vLoading, ElInfiniteScroll } from 'element-plus'
-import 'element-plus/theme-chalk/el-loading.css'
+
 
 const pinia = createPinia()
 

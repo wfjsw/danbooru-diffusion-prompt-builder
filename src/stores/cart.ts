@@ -113,7 +113,7 @@ export const useCartStore = defineStore('cart', {
             }
             return false
         },
-        appendPositiveTag(tagName: string) {
+        appendPositiveTag(tagName: string, weight: number = 0) {
             const tagStore = useTagStore();
             const embeddingStore = useEmbeddingStore();
 
@@ -126,7 +126,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
-                    weight: 0,
+                    weight,
                 })
                 this.removeNegativeTag(tagName, 'tag')
                 return
@@ -163,7 +163,7 @@ export const useCartStore = defineStore('cart', {
             const index = this.positive.findIndex((ci: CartItem) => tagName === ci.name && ci.type === type)
             if (index > -1) this.positive.splice(index, 1);
         },
-        appendNegativeTag(tagName: string) {
+        appendNegativeTag(tagName: string, weight: number = 0) {
             const tagStore = useTagStore();
             const embeddingStore = useEmbeddingStore();
 
@@ -176,7 +176,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
-                    weight: 0,
+                    weight,
                 })
                 this.removePositiveTag(tagName, 'tag')
                 return
@@ -293,5 +293,81 @@ export const useCartStore = defineStore('cart', {
                 presetCategory === ci.category && presetName === ci.name && ci.type === 'preset')
             if (index > -1) this.negative.splice(index, 1);
         },
+        clear() {
+            this.$patch({
+                positive: [],
+                negative: [],
+            })
+        },
+        import: function (positive: string, negative: string) {
+            const settingsStore = useSettingsStore();
+            this.clear()
+            const run = (text: string, appendFn: (tagName: string, weight: number) => void) => {
+                let weight = 0
+                const trimmedText = text.trim()
+                if (trimmedText === '') return
+                const textList = trimmedText
+                    .replaceAll('_', ' ').split(/\s*,\s*|\s*，\s*/)
+                // console.log('tokens', textList)
+                for (const token of textList) {
+                    for (const char of token) {
+                        if (char === '(') {
+                            settingsStore.newEmphasis = true
+                            weight += 1;
+                        } else if (char === '{') {
+                            settingsStore.newEmphasis = false
+                            weight += 1;
+                        } else if (char === '[') {
+                            weight -= 1;
+                        } else {
+                            break;
+                        }
+                    }
+                    // console.log('weight', weight)
+                    const name = token.match(/^[\(\[\{]*(.*?)[\)\]\}]*$/)
+                    // console.log('match name', name)
+                    if (name) {
+                        let matched = name[1]
+                        if (matched.endsWith('\\')) {
+                            matched += name[name.lastIndexOf(matched) + name.length]
+                        }
+                        matched = matched.replaceAll('\\(', '(')
+                            .replaceAll('\\)', ')')
+                            .replaceAll('\\[', '[')
+                            .replaceAll('\\]', ']')
+                            .replaceAll('\\{', '{')
+                            .replaceAll('\\}', '}')
+                            .toLowerCase()
+                        // console.log('append', matched)
+                        appendFn(matched, weight)
+                    }
+                    const reversed = Array.from(token).reverse()
+                    for (let i = 0; i < reversed.length; i++) {
+                        const char = reversed[i]
+                        const nextChar = reversed[i + 1]
+                        if (nextChar !== '\\') {
+                            if (char === ')' && nextChar !== '\\') {
+                                settingsStore.newEmphasis = true
+                                weight -= 1;
+                            } else if (char === '}') {
+                                settingsStore.newEmphasis = false
+                                weight -= 1;
+                            } else if (char === ']') {
+                                weight += 1;
+                            } else {
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                    // console.log('weight', weight)
+                }
+            }
+            // console.log('import', positive, negative)
+            run(positive, this.appendPositiveTag)
+            run(negative, this.appendNegativeTag)
+        }
     }
+
 })

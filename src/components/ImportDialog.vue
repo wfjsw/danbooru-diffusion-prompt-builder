@@ -1,0 +1,72 @@
+<script setup lang="ts">
+import {ElButton, ElDialog} from 'element-plus'
+import {useCartStore} from "../stores/cart";
+import {computed, ref} from "vue";
+
+const cartStore = useCartStore();
+const props = defineProps<{
+    modelValue: boolean
+}>();
+
+const positiveTags = ref('')
+const negativeTags = ref('')
+
+const emit = defineEmits(['update:modelValue']);
+const mv = computed({
+    get: () => props.modelValue,
+    set: (v) => emit('update:modelValue', v)
+})
+
+function cancel() {
+    positiveTags.value = ''
+    negativeTags.value = ''
+    mv.value = false
+}
+
+function save() {
+    cartStore.import(positiveTags.value, negativeTags.value)
+    mv.value = false
+}
+</script>
+
+<template>
+    <ElDialog
+        v-model="mv"
+        title="导入标签"
+        width="50%"
+    >
+        <p>注：由于标签格式千变万化，不能保证完全成功导入。</p>
+        <div class="tag-positive">
+            <div class="title">正向标签</div>
+            <textarea class="tag-pre" v-model="positiveTags"/>
+        </div>
+        <div class="tag-negative">
+            <div class="title">反向标签</div>
+            <textarea class="tag-pre" v-model="negativeTags"/>
+        </div>
+        <template #footer>
+          <span class="dialog-footer">
+            <ElButton @click="cancel()">取消</ElButton>
+            <ElButton @click="save()" type="primary">保存</ElButton>
+          </span>
+        </template>
+    </ElDialog>
+</template>
+
+<style scoped>
+.tag-positive, .tag-negative {
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 14pt;
+    margin-bottom: 1rem;
+}
+
+.tag-pre {
+    resize: vertical;
+    width: 100%;
+    height: 100px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
+}
+</style>

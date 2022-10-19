@@ -1,17 +1,19 @@
 <script lang="ts" setup>
 import type Node from 'element-plus/es/components/tree/src/model/node'
 import type {AllowDropType} from 'element-plus/es/components/tree/src/tree.type'
-import {ElButton, ElScrollbar, ElTree} from "element-plus";
+import {ElButton, ElButtonGroup, ElScrollbar, ElTree, ElMessageBox} from "element-plus";
 import {ref} from 'vue';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faCommentMinus, faCommentPlus, faThumbsDown, faThumbsUp, faTrash} from "@fortawesome/pro-light-svg-icons"
 import {useCartStore} from "../stores/cart";
+import ImportDialog from "./ImportDialog.vue";
 import ResultDialog from "./ResultDialog.vue";
 import WeightIdentifier from "./WeightIdentifier.vue";
 
 const cartStore = useCartStore();
 
 const resultVisible = ref(false)
+const importVisible = ref(false)
 
 const allowDrag = (node: Node) => {
     return node.data.type !== 'child-tag'
@@ -55,6 +57,17 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
             cartStore.removeNegativeTag(name, type)
         }
     }
+}
+
+async function clearDialog() {
+    try {
+        await ElMessageBox.confirm('确定要清空购物车吗？', '清空购物车', {
+            confirmButtonText: "确定",
+            cancelButtonText: "取消",
+            type: "warning",
+        })
+        cartStore.clear()
+    } catch (e) {}
 }
 
 </script>
@@ -136,8 +149,17 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
                 </ElTree>
             </div>
         </ElScrollbar>
-        <ElButton class="btn-block" type="primary" @click="resultVisible = true">结算</ElButton>
+        <div class="btn-block">
+            <ElButtonGroup class="btn-group">
+                <ElButton type="success" class="btn" @click="importVisible = true">导入标签</ElButton>
+                <ElButton type="danger" class="btn" @click="clearDialog">清空购物车</ElButton>
+            </ElButtonGroup>
 
+        </div>
+        <div class="btn-block">
+            <ElButton type="primary" class="btn" @click="resultVisible = true" size="large">结算</ElButton>
+        </div>
+        <ImportDialog v-model="importVisible"/>
         <ResultDialog v-model="resultVisible"/>
     </div>
 </template>
@@ -145,11 +167,15 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
 <style lang="scss" scoped>
 .cart-container {
     padding: 0 20px;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
 }
 
 .scrollable {
-    height: calc(100vh - 225px);
     overflow: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
     margin-bottom: 1.5rem;
 }
 
@@ -158,7 +184,19 @@ function deleteFrom(direction: 'positive' | 'negative', type: 'preset' | 'tag', 
 }
 
 .btn-block {
+    display: block;
     width: 100%;
+    margin-bottom: 1rem;
+    .btn-group {
+        width: 100%;
+        display: flex;
+        > .btn {
+            width: 100%;
+        }
+    }
+    > .btn {
+        width: 100%;
+    }
 }
 
 .subcart-container {
