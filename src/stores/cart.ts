@@ -218,8 +218,10 @@ export const useCartStore = defineStore('cart', {
             const presetStore = usePresetStore();
 
             if (this.existsPositive('tag', presetName, presetCategory)) return
-            const preset = presetStore.presets[presetCategory][presetName]
-            if (preset !== null) {
+            const preset = presetStore.presets
+                .find(n => n.name === presetCategory)?.content
+                .find(n => n.name === presetName)
+            if (preset) {
                 this.positive.push({
                     label: `${presetCategory}/${presetName}`,
                     type: 'preset',
@@ -258,8 +260,10 @@ export const useCartStore = defineStore('cart', {
             const presetStore = usePresetStore();
 
             if (this.existsPositive('tag', presetName, presetCategory)) return
-            const preset = presetStore.presets[presetCategory][presetName]
-            if (preset !== null) {
+            const preset = presetStore.presets
+                .find(n => n.name === presetCategory)?.content
+                .find(n => n.name === presetName)
+            if (preset) {
                 this.negative.push({
                     label: `${presetCategory}/${presetName}`,
                     type: 'preset',

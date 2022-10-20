@@ -1,11 +1,12 @@
 import {defineStore} from 'pinia'
-import type {PresetCategories, Presets} from "../datatypes";
+import type {PresetCategoryInfo, Presets, Preset} from '../datatypes'
 import {useSettingsStore} from "./settings";
 
 interface PresetFile {
     name: string,
-    restricted: boolean|null,
-    content: PresetFileItem[],
+    description: string | null,
+    restricted: boolean | null,
+    content: PresetFileItem,
 }
 
 interface PresetFileItem {
@@ -13,31 +14,30 @@ interface PresetFileItem {
 }
 
 interface PresetFileSingleItem {
-    name: string,
     description: string | null,
     content: string[],
     preview: string[] | null,
 }
 
 export const usePresetStore = defineStore('presets', {
-    state: (): Presets => ({presets: {}}),
+    state: (): Presets => ({presets: []}),
     getters: {
         loaded: (state) => {
-            return Object.keys(state.presets).length > 0;
+            return state.presets.length > 0;
         },
         categories: (state) => {
             const settings = useSettingsStore()
-            return Object.entries(state.presets)
-                .filter(([_, v]) => settings.showRestricted || !v._restricted)
-                .map(([k, _]) => k)
+            return state.presets
+                .filter(({restricted}) => settings.showRestricted || !restricted)
+                .map(({name}) => name)
         },
         categorySize: (state) => {
-            return Object.fromEntries(Object.entries(state.presets).map(([k, v]) => [k, Object.keys(v).length]))
+            return Object.fromEntries(state.presets.map(({name, content}) => [name, content.length]))
         },
         count: (state) => {
             const settings = useSettingsStore()
-            return Object.values(state.presets)
-                .filter(v => settings.showRestricted || !v._restricted)
+            return state.presets
+                .filter(v => settings.showRestricted || !v.restricted)
                 .map(v => Object.keys(v).length)
                 .reduce((a, b) => a + b, 0)
         }
@@ -48,38 +48,41 @@ export const usePresetStore = defineStore('presets', {
 
             const result = await Promise.all(Object.values(presets).map(f => f()))
             const presetData: Presets = {
-                presets: result.reduce((a: PresetCategories, p: any) => {
-                    a[p.name] = p.content
-                    if (p.restricted) {
-                        Object.defineProperty(a[p.name], '_restricted', {
-                            configurable: false,
-                            enumerable: false,
-                            value: true,
-                            writable: false
-                        })
+                presets: result.map(v => {
+                    return {
+                        name: v.name,
+                        description: v.description,
+                        restricted: v.restricted ?? false,
+                        content: Object.entries(v.content).map(([k, v]): Preset =>
+                            ({
+                                name: k,
+                                description: v.description,
+                                content: v.content,
+                                preview: v.preview,
+                            })
+                        )
                     }
-                    return a;
-                }, {}),
+                })
             }
             this.$patch(presetData)
         },
         searchPreset(presetName: string, query: string) {
             const settings = useSettingsStore()
-            if (!settings.showRestricted && this.presets[presetName]._restricted) {
-                return {};
+            const presetCategory = this.presets.find(n => n.name === presetName)
+            if (!presetCategory) {
+                return [];
+            }
+            if (!settings.showRestricted && presetCategory.restricted) {
+                return [];
             }
 
-            return Object.fromEntries(
-                Object
-                    .entries(this.presets[presetName])
-                    .filter(([key, meta]) => {
-                        if (key.includes(query)) return true;
-                        if (meta.description?.includes(query)) return true;
-                        if (meta.content?.some(a => a.includes(query))) return true;
-                        if (meta.description?.includes(query)) return true;
-                        return false;
-                    })
-            );
+            return presetCategory.content
+                .filter((meta) => {
+                    if (meta.name.includes(query)) return true;
+                    if (meta.description?.includes(query)) return true;
+                    if (meta.content?.some(a => a.includes(query))) return true;
+                    return false;
+                })
         }
     }
 })

@@ -17,25 +17,13 @@ const props = withDefaults(defineProps<{
 })
 
 const theme = computed(() => {
-    if (props.direction === 'positive') {
-        if (cartStore.existsPositive('tag', props.tag)) {
-            return 'success'
-        } else {
-            return ''
-        }
-    } else if (props.direction === 'negative') {
-        if (cartStore.existsNegative('tag', props.tag)) {
-            return 'danger'
-        } else {
-            return ''
-        }
-    } else if (props.direction === 'both') {
+    if (props.direction) {
         if (cartStore.existsPositive('tag', props.tag)) {
             return 'success'
         } else if (cartStore.existsNegative('tag', props.tag)) {
             return 'danger'
         } else {
-            return ''
+            return 'info'
         }
     } else {
         return props.type
@@ -73,20 +61,20 @@ function toggle() {
 </script>
 
 <template>
-    <ElTag :class="{'pointer': direction !== null}" @click="toggle()"
+    <ElTag :class="[$style.size_fix, {[$style.pointer]: direction !== null}]" @click="toggle()"
            :type="theme">
         <template v-if="tagItem">
-            <span class="usa">{{ tag }}</span>
-            <span class="usn"> | </span>
-            <span class="usa">{{tagItem.meta.name}}</span>
+            <span>{{ tag }}</span>
+            <span :class="$style.usn"> | </span>
+            <span>{{tagItem.meta.name}}</span>
         </template>
         <template v-else>
-            <span class="usa">{{ tag }}</span>
+            <span>{{ tag }}</span>
         </template>
     </ElTag>
 </template>
 
-<style scoped>
+<style module>
 .pointer {
     cursor: pointer;
 }
@@ -95,5 +83,9 @@ function toggle() {
 }
 .usn {
     user-select: none;
+}
+
+.size_fix {
+    --el-tag-font-size: 14px;
 }
 </style>

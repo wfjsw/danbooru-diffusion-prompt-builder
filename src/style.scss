@@ -93,3 +93,9 @@ html.dark .el-switch {
         display: none;
     }
 }
+
+.el-button--info {
+    --el-button-text-color: var(--el-color-black);
+    --el-button-hover-text-color: var(--el-color-black);
+
+}

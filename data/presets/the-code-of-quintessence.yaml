@@ -1,0 +1,158 @@
+name: 元素法典(一)
+description: >-
+  作者：SteelPlate
+  
+  原本链接：https://docs.qq.com/doc/DWHl3am5Zb05QbGVs
+  
+  编者注：由于系统限制，所有标签的权重值均未保留，当按照整组应用时也无法单独对某一标签修改权重。
+  部分标签按照数据库中标签名进行了修正。所有配图均为 925997e9 模型连续运行 5 次的实际情况。
+content:
+  水魔法(+):
+    description: |-
+      作者：steelplate（QQ 457215551）
+      其实是在改良隔壁有人遇到问题的tag时发现了一些AI的秘密于是就搞出来了这个。是万恶之源。
+      参考参数：CFG 5.5, euler_a, step 30
+      本部分包含此条的正向标签。
+    content:
+      - masterpiece
+      - best quality
+      - ultra-detailed
+      - illustration
+      - disheveled hair
+      - frills
+      - 1girl
+      - solo
+      - dynamic angle
+      - big top sleeves
+      - floating
+      - beautiful detailed sky
+      - on beautiful detailed water
+      - beautiful detailed eyes
+      - overexposure
+      - fist
+      - expressionless
+      - side blunt bangs
+      - hair between eyes
+      - ribbon
+      - bowtie
+      - buttons
+      - bare shoulders
+      - small breasts
+      - detailed wet clothes
+      - blank stare
+      - pleated skirt
+      - flower
+    preview:
+      - 652b30df8fc9f9dec0b90a4712a09aa4e8a9e0f323c45777e657905b408fd672
+      - 277b5348d65c5e75209799acb22a692961322901b66a58277305e437e9c18251
+      - 45c0291068a585f7eb906c9bfdd395846b52667067743385eae0e904d7a66221
+      - 75e5eaabcad65553bff13aa55001c3137ecba96679db96b0c4637536fd53c136
+      - b0304b0a7cf54ba9aa38daf5f4f4b063168551ea14eaac94ba2afc4769201902
+  水魔法(-):
+    description: |-
+      作者：steelplate（QQ 457215551）
+      其实是在改良隔壁有人遇到问题的tag时发现了一些AI的秘密于是就搞出来了这个。是万恶之源。
+      参考参数：CFG 5.5, euler_a, step 30
+      本部分包含此条的反向标签。
+    content:
+      - nsfw
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - normal quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry
+      - missing arms
+      - long neck
+      - humpbacked
+  空间法(+):
+    description: |-
+      作者：steelplate（QQ 457215551）
+      这是一个实验性的项目，旨在以最少的 tag 呈现最强的视觉冲击力。编者认为这是非常具有参考意义的一个 tag，无论是架构还是画面效果。*
+      今天试了试宽画幅，发现效果意外很好。可以去掉 glass strips 以增加钟表出场率。
+      *仅代表个人观点
+      参考参数：cfg 4.5, euler_a, steps 28
+      本部分包含此条的正向标签。
+    content:
+      - illustration
+      - floating hair
+      - chromatic aberration
+      - caustics
+      - lens flare
+      - dynamic angle
+      - portrait
+      - 1girl
+      - solo
+      - cute face
+      - hidden hands
+      - asymmetrical bangs
+      - beautiful detailed eyes
+      - eye shadow
+      - huge clocks
+      - glass strips
+      - floating glass fragments
+      - colorful refraction
+      - beautiful detailed sky
+      - dark intense shadows
+      - cinematic lighting
+      - overexposure
+      - expressionless
+      - blank stare
+      - big top sleeves
+      - frills
+      - hair ornament
+      - ribbon
+      - bowtie
+      - buttons
+      - small breasts
+      - pleated skirt
+      - sharp focus
+      - masterpiece
+      - best quality
+      - extremely detailed
+      - colorful
+      - hdr
+    preview:
+      - f878ce34f8d61f358e0694c057ba234837c074f79ab8bff9146ca66a8ebeba43
+      - 2cdc4223d381c1cd66c2c33200e4d350231f380965c4ff9e05ed0cb4403a2812
+      - 71aa7890baf8a078033497ffce6443f972c74c9362bf0ceeb91ce947e6356e71
+      - d21f3267180074cb96c8d9a5df9c390a888f5b121210b501ba7cc18a1c5c3fdd
+      - b009536ea085f35058a7a6dbcc13ec918011f3ea1d7cd3d7c247a85d3561dac7
+  空间法(-):
+    description: |-
+      作者：steelplate（QQ 457215551）
+      这是一个实验性的项目，旨在以最少的 tag 呈现最强的视觉冲击力。编者认为这是非常具有参考意义的一个 tag，无论是架构还是画面效果。*
+      今天试了试宽画幅，发现效果意外很好。可以去掉 glass strips 以增加钟表出场率。
+      *仅代表个人观点
+      参考参数：cfg 4.5, euler_a, steps 28
+      本部分包含此条的反向标签。
+    content:
+      - nsfw
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - standard quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry

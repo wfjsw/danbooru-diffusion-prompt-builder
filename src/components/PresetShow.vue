@@ -5,7 +5,7 @@ import {Search as IconSearch} from "@element-plus/icons-vue";
 import {ElCollapse, ElInput, ElScrollbar} from "element-plus";
 import {usePresetStore} from "../stores/presets";
 import PresetView from "./PresetView.vue";
-import type {PresetCategory, Preset} from "../datatypes";
+import type {Preset} from "../datatypes";
 
 const props = defineProps<{
     category: string
@@ -15,11 +15,12 @@ const presetStore = usePresetStore();
 
 const searchTerms = ref('');
 const paginationSize = ref(30)
-const filteredPresets = computed<[string, Preset][]>(() => Object.entries(
-    presetStore.searchPreset(props.category, searchTerms.value)));
+const description = computed(() => presetStore.presets.find(({name}) => name === props.category)?.description)
+const filteredPresets = computed<Preset[]>(() =>
+    presetStore.searchPreset(props.category, searchTerms.value));
 const filteredLength = computed(() => filteredPresets.value.length);
-const paginatedPresets = computed<PresetCategory>(() =>
-    Object.fromEntries(filteredPresets.value.slice(0, paginationSize.value))
+const paginatedPresets = computed<Preset[]>(() =>
+    filteredPresets.value.slice(0, paginationSize.value)
 );
 function loadMore() {
     if (paginationSize.value < filteredLength.value) {
@@ -32,10 +33,13 @@ function loadMore() {
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
     <ElScrollbar class="scrollable">
+        <div class="description" v-if="description && searchTerms === ''">
+            <p v-for="paragraph in description.split('\n')">{{ paragraph }}</p>
+        </div>
         <ElCollapse v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
                     :infinite-scroll-distance="128" :infinite-scroll-delay="10">
-            <PresetView v-for="(preset, title) in paginatedPresets" :key="title" v-memo="[title]" :category="category"
-                        :meta="preset" :title="title as string"/>
+            <PresetView v-for="preset in paginatedPresets" :key="preset.name" v-memo="[preset]" :category="category"
+                        :meta="preset"/>
         </ElCollapse>
     </ElScrollbar>
 </template>
@@ -49,5 +53,9 @@ function loadMore() {
 .scrollable {
     height: calc(100vh - 64px - 20px - 10px - 1.17rem - 4rem - 32px - 1.15rem);
     overflow-y: auto;
+}
+
+.description {
+    line-height: 1.75;
 }
 </style>

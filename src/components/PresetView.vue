@@ -10,7 +10,6 @@ import ToggleableTag from "./ToggleableTag.vue";
 
 const props = defineProps<{
     category: string,
-    title: string,
     meta: Preset,
     // blurImage: boolean,
 }>()
@@ -18,8 +17,8 @@ const cartStore = useCartStore();
 
 const copyHintVisible = ref(false)
 
-const inPositive = computed(() => cartStore.existsPositive('preset', props.title, props.category))
-const inNegative = computed(() => cartStore.existsNegative('preset', props.title, props.category))
+const inPositive = computed(() => cartStore.existsPositive('preset', props.meta.name, props.category))
+const inNegative = computed(() => cartStore.existsNegative('preset', props.meta.name, props.category))
 
 async function copyToClipboard() {
     await window.navigator.clipboard.writeText(props.meta.content.join(', '))
@@ -29,17 +28,17 @@ async function copyToClipboard() {
 
 function togglePositive() {
     if (!inPositive.value) {
-        cartStore.appendPositivePreset(props.category, props.title)
+        cartStore.appendPositivePreset(props.category, props.meta.name)
     } else {
-        cartStore.removePositivePreset(props.category, props.title)
+        cartStore.removePositivePreset(props.category, props.meta.name)
     }
 }
 
 function toggleNegative() {
     if (!inNegative.value) {
-        cartStore.appendNegativePreset(props.category, props.title)
+        cartStore.appendNegativePreset(props.category, props.meta.name)
     } else {
-        cartStore.removeNegativePreset(props.category, props.title)
+        cartStore.removeNegativePreset(props.category, props.meta.name)
     }
 }
 </script>
@@ -48,7 +47,7 @@ function toggleNegative() {
     <ElCollapseItem>
         <template #title>
             <div class="title-container">
-                <div class="title">{{ title }}</div>
+                <div class="title">{{ meta.name }}</div>
                 <div class="buttons">
                     <ElTooltip :visible="copyHintVisible">
                         <template #content>

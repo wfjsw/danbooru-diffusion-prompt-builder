@@ -20,21 +20,21 @@ export interface Tags {
 }
 
 export interface Preset {
+    name: string,
     description: string | null,
     content: string[],
     preview: string[] | null,
 }
 
-export interface PresetCategory {
-    [key: string]: Preset
-}
-
-export interface PresetCategories {
-    [key: string]: PresetCategory
+export interface PresetCategoryInfo {
+    name: string,
+    restricted: boolean,
+    description: string | null,
+    content: Preset[],
 }
 
 export interface Presets {
-    presets: PresetCategories
+    presets: PresetCategoryInfo[]
 }
 
 export interface Embeddings {
