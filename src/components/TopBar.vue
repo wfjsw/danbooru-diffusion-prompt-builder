@@ -25,7 +25,7 @@ const searchTerms = computed({
 </script>
 
 <template>
-    <div :class="['topbar', {'is-search-expanded': expandSearch}]">
+    <div :class="['topbar', {'is-search-expanded': mobileExpandSearch}]">
         <div class="left">
             <ElButton size="large" text class="category-cascader" @click="emit('expandCategory')">
                 <FontAwesomeIcon :icon="faBars"/>
@@ -41,7 +41,8 @@ const searchTerms = computed({
                 <FeatureSwitches class="switches"/>
                 <ExtLinks class="extlinks"/>
             </div>
-            <ElButton size="large" text class="search-cascader" @click="expandSearch = !expandSearch">
+            <ElButton size="large" text class="search-cascader"
+                      @click="mobileExpandSearch = !mobileExpandSearch">
                 <FontAwesomeIcon :icon="faSearch"/>
             </ElButton>
             <ElButton size="large" text class="cart-cascader" @click="emit('expandCart')">
@@ -102,6 +103,7 @@ const searchTerms = computed({
             }
             .right {
                 width: 100%;
+                flex-grow: 1;
             }
             .app-title {
                 display: none;
