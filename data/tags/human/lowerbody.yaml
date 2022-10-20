@@ -165,3 +165,21 @@ content:
     name: 无肩带连衣裙
   sundress:
     name: 太阳裙/背心裙
+  pencil skirt:
+    name: 铅笔裙
+  plaid skirt:
+    name: 格子裙
+  sheath dress:
+    name: 包臀裙
+  layered skirt:
+    name: 分层式半身裙
+  waist apron:
+    name: 腰围裙
+  pettiskirt:
+    name: 蓬蓬裙
+  tutu:
+    name: 芭蕾舞裙
+  Organza lace:
+    name: 透明硬纱/蕾丝花边
+  suspender skirt:
+    name: 吊带裙

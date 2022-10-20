@@ -23,4 +23,16 @@ content:
     name: JPEG 压缩失真
   blurry:
     name: 模糊的
+  cinematic lighting:
+    name: 电影光效
+  glowing light:
+    name: 荧光
+  god rays:
+    name: 自上而下的光
+  ray tracing:
+    name: 光线追踪
+  reflection light:
+    name: 反射光
+
+
 name: 特效

@@ -20,6 +20,8 @@ content:
   corset:
     name: 紧身褡
   dress:
+    alias:
+      - one-piece dress
     name: 连衣裙
   gym uniform:
     name: 运动服
