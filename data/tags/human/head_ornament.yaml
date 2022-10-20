@@ -171,3 +171,45 @@ content:
     name: 金属项圈
   whistle around neck:
     name: 脖子上挂着口哨
+  animal hood:
+    name: 兽耳头罩
+  bespectacled:
+    name: 戴眼镜的
+  fedora:
+    name: 软呢帽
+  witch hat:
+    name: 女巫帽
+  wizard hat:
+    name: 法师帽
+  winged helmet:
+    name: 带翅膀的头盔
+  hood down:
+    name: 放下的兜帽
+  hood up:
+    name: 戴起来的兜帽
+  sailor hat:
+    name: 水手帽
+  santa hat:
+    name: 圣诞帽
+  peaked cap:
+    name: 类似警帽的帽子
+  checkered neckwear:
+    name: 格子领口
+  detached collar:
+    name: 假领
+  halterneck:
+    name: 绕颈系带
+  high collar:
+    name: 高领
+  neck ribbon:
+    name: 颈部系着缎带
+  neck ring:
+    name: 颈环
+  neck ruff:
+    name: 波浪褶边的领子
+  necktie between breasts:
+    name: 领带贴(夹)在乳沟里
+  plunging neckline:
+    name: 深领
+  elbow pads:
+    name: 护肘

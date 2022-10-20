@@ -24,9 +24,7 @@ content:
     name: 吊带胸衣
   sarashi:
     name: 缠胸布
-  latex:
-    alias:
-      - pasti
+  pasti:
     name: 乳贴
   cleavage:
     name: 乳沟
@@ -45,3 +43,51 @@ content:
     wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones_on_breasts.html
   underboob:
     name: 南半球
+  bandaids on nipples:
+    name: 乳头贴着创可贴
+  beltbra:
+    name: 皮带束胸
+  lace-trimmed bra:
+    name: 蕾丝边胸罩
+  open bra:
+    name: (前面)解开的胸罩
+  sports bra:
+    name: 运动内衣
+  bow bra:
+    name: 带蝴蝶结的胸罩
+  star pasties:
+    name: 星形乳贴
+  training bra:
+    name: 运动内衣
+  bra lift:
+    name: 掀上去的胸罩
+  bra peek:
+    name: 微微露出胸罩
+  bra pull:
+    name: 拉下的胸罩
+  bra removed:
+    name: 摘下的胸罩
+  bra strap:
+    name: 内衣肩带
+  breast padding:
+    name: 胸垫
+  breastplate:
+    name: 胸甲
+  budget sarashi:
+    name: 绷带裹胸
+  cupless bra:
+    name: 高露出度胸罩
+  heart pasties:
+    name: 心形乳贴
+  lace bra:
+    name: 蕾丝胸罩
+  pasties:
+    name: 乳贴
+  strap gap:
+    name: 泛指覆盖面少的吊带胸罩
+  strapless bra:
+    name: 无肩带胸罩
+  tubetop:
+    name: 直筒式抹胸
+
+

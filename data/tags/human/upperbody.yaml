@@ -28,8 +28,6 @@ content:
     name: 长袖
   robe:
     name: 长袍
-  tank top:
-    name: 女用背心
   off shoulder:
     name: 露单肩
   bare shoulders:
@@ -154,4 +152,99 @@ content:
     name: 女性穿着西服
   tailcoat:
     name: 燕尾服
-
+  blouse:
+    name: 罩衫
+  cardigan:
+    name: 开襟衫
+  casual:
+    name: 私服
+  heart cutout:
+    name: 衣服上有心形的开口
+  skirt basket:
+    name: 指掀起裙子时形成的篮子形状
+  center frills:
+    name: 胸口带花边的服装
+  center opening:
+    name: 正中间开口的服装
+  checkered shirt:
+    name: 格子衬衫
+  clothes between breasts:
+    name: 衣服勒在乳沟里
+  cat cutout:
+    name: 猫咪内衣
+  t-shirt:
+    name: T 恤
+  collared blouse:
+    name: 翻领短衫
+  collared shirt:
+    name: 翻领衬衫
+  criss-cross halter:
+    name: 交叉吊带
+  crop top:
+    name: 露腹短上衣
+  cropped shirt:
+    name: 短衬衫
+  cropped vest:
+    name: 小款背心
+  dress shirt:
+    name: 西服衬衫
+  faulds:
+    name: 腹甲
+  front-tie top:
+    name: 从正面打结的衣物
+  gathers:
+    name: 褶裥(衣物)
+  gym shirt:
+    name: 体操服(上身)
+  high-waist skirt:
+    name: 高腰裙
+  virgin killer sweater:
+    name: 处男杀手毛衣
+  open-chest sweater:
+    name: 胸部开口的毛衣
+  hooded sweater:
+    name: 连帽毛衣
+  hooded track jacket:
+    name: 连帽运动夹克
+  jersey:
+    name: 运动衫
+  load bearing vest:
+    name: 承重背心
+  lowleg:
+    name: 低胸装
+  oversized shirt:
+    name: 过大号衬衫
+  sailor shirt:
+    name: 水手服款衬衫
+  tank top:
+    name: 无袖紧身背心
+  unbuttoned shirt:
+    name: 解开纽扣的衬衫
+  vest:
+    name: 背心
+  wet shirt:
+    name: 湿衬衫
+  cat lingerie:
+    name: 猫系内衣
+  dudou:
+    name: 肚兜
+  bikini top:
+    name: 比基尼上衣
+  bikini top removed:
+    name: 脱下比基尼上衣
+  gloves removed:
+    name: 脱下手套
+  half gloves:
+    name: 很短的手套/半截手套
+  latex gloves:
+    name: 乳胶手套
+  layered sleeves:
+    name: 分层的衣袖
+  sleeves folded up:
+    name: 叠起来的袖子
+  sleeves past fingers:
+    name: 袖子长过手指
+  sleeves past wrists:
+    name: 袖子长过手腕
+  sleeves pushed up:
+    name: 袖子往上拉起

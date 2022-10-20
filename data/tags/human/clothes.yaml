@@ -3,16 +3,12 @@ content:
     name: 透明睡衣
   bikini:
     name: 比基尼
-  bodystocking:
-    name: 连紧衣
   japanese clothes:
     name: 和服
   bodysuit:
     name: 紧身衣
   business suit:
     name: 职场制服
-  cat cutout:
-    name: 猫咪内衣
   chinadress:
     name: 旗袍
   chinese clothes:
@@ -91,4 +87,174 @@ content:
     name: 正装
   lace:
     name: 蕾丝
+  clothes down:
+    name: 褪下衣物
+  short kimono:
+    name: 短下摆和服
+  kimono:
+    name: 和服
+  open kimono:
+    name: 敞开的和服
+  suspender skirt:
+    name: 吊带裙
+  kimono skirt:
+    name: 和服裙
+  summer dress:
+    name: 夏日长裙
+  pleated dress:
+    name: 百褶连衣裙
+  sailor dress:
+    name: 水手服款裙子
+  strapless dress:
+    name: 无肩带连衣裙
+  sundress:
+    name: 太阳裙/背心裙
+  sheath dress:
+    name: 包臀裙
+  layered skirt:
+    name: 分层式半身裙
+  waist apron:
+    name: 腰围裙
+  pettiskirt:
+    name: 蓬蓬裙
+  tutu:
+    name: 芭蕾舞裙
+  layered dress:
+    name: 分层连衣裙
+  off-shoulder dress:
+    name: 露肩连衣裙
+  organza lace:
+    name: 透明硬纱/蕾丝花边
+  bikini armor:
+    name: 比基尼盔甲
+  bikini aside:
+    name: 从三点剥开的比基尼
+  bikini lift:
+    name: 往上剥开的比基尼
+  bow bikini:
+    name: 带蝴蝶结的比基尼
+  eyepatch bikini:
+    name: 眼罩比基尼
+  front-tie bikini:
+    name: 从正面打结的比基尼
+  highleg bikini:
+    name: 高开衩的比基尼
+  layered bikini:
+    name: 分层比基尼
+  lowleg bikini:
+    name: 低腰比基尼
+  maid bikini:
+    name: 女仆比基尼
+  micro bikini:
+    name: 迷你比基尼
+  multi-strapped bikini:
+    name: 细带款比基尼
+  sailor bikini:
+    name: 水手服款比基尼
+  shell bikini:
+    name: 贝壳比基尼
+  slingshot swimsuit:
+    name: 弹弓泳衣/吊带泳衣/V字泳衣
+  sports bikini:
+    name: 运动比基尼
+  strapless bikini:
+    name: 无肩带比基尼
+  thong bikini:
+    name: 丁字式比基尼
+  untied bikini:
+    name: 解开的比基尼
+  bandeau:
+    name: 抹胸比基尼
+  bikini under clothes:
+    name: 比基尼当内衣
+  armored dress:
+    name: 战甲裙
+  athletic leotard:
+    name: 体操服
+  backless dress:
+    name: 露背连衣裙
+  backless outfit:
+    name: 露背装
+  baseball uniform:
+    name: 棒球服
+  biker clothes:
+    name: 自行车运动服
+  bikesuit:
+    name: 骑行套装
+  bikini skirt:
+    name: 比基尼裙
+  bodysuit under clothes:
+    name: 紧身衣裤
+  bondage outfit:
+    name: 束缚服
+  casual one-piece swimsuit:
+    name: 连体泳衣
+  collared dress:
+    name: 有领连衣裙
+  competition school swimsuit:
+    name: 竞泳死库水
+  competition swimsuit:
+    name: 赛用泳衣
+  enmaided:
+    name: 女仆装
+  evening gown:
+    name: 晚会礼服
+  dougi:
+    name: 武道服
+  front zipper swimsuit:
+    name: 拉链在正面的泳衣
+  gown:
+    name: 女裙/女长服/女礼服
+  halter dress:
+    name: 绕颈裙/衬衣式连衣裙/露背吊带裙
+  hanfu:
+    name: 汉服
+  harem outfit:
+    name: 舞娘服
+  highleg leotard:
+    name: 高开衩的连身衣
+  impossible bodysuit:
+    name: 人体彩绘般的紧身衣
+  kindergarten uniform:
+    name: 幼儿园制服
+  latex:
+    name: 胶衣
+  letterman jacket:
+    name: 棒球服
+  living clothes:
+    name: 活体衣服
+  loungewear:
+    name: 休闲服
+  meiji schoolgirl uniform:
+    name: 明治年间女学生制服
+  military uniform:
+    name: 军服
+  one-piece swimsuit:
+    name: 一体式泳衣
+  playboy bunny leotard:
+    name: 兔女郎连身衣
+  police uniform:
+    name: 警服
+  reverse bunnysuit:
+    name: 逆兔女郎
+  sailor:
+    name: 水手服
+  sailor senshi uniform:
+    name: 美少女战士制服
+  santa costume:
+    name: 圣诞老人服装
+  stile uniform:
+    name: 女侍从的制服
+  straitjacket:
+    name: 拘束服
+  uchikake:
+    name: 白无垢/日式嫁衣
+  varia suit:
+    name: 强化服
+  virgin killer outfit:
+    name: 处男杀手服
+  volleyball uniform:
+    name: 排球服
+
+
 name: 人物全身服饰

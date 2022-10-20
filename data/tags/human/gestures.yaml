@@ -70,4 +70,10 @@ content:
     name: 展示内裤
   arms behind head:
     name: 手臂放头后
+  kimono lift:
+    name: 掀起和服
+  kimono pull:
+    name: 剥开和服
+  skirt lift:
+    name: 掀起裙子
 name: 人物手势动作

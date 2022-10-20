@@ -26,61 +26,27 @@ content:
     name: 腰带
   bike shorts:
     name: 自行车短裤
-  black thighhighs:
-    name: 黑色过膝袜
   bloomers:
     name: 灯笼裤
-  boots:
-    name: 靴子
-  cross-laced footwear:
-    name: 系带靴
-  fishnets:
-    alias:
-      - fishnet pantyhose
-      - fishnet stockings
-    name: 网袜
-  frilled legwear:
-    name: 带褶边的过膝袜
   fundoshi:
     name: 日式丁字裤
-  garter belt:
-    name: 连腰吊带袜
-  garter straps:
-    name: 袜带
-  garters:
-    name: 吊带袜
   girdling:
     name: 束腰
-  high heels:
-    name: 高跟鞋
-  knee boots:
-    name: 马靴
-  kneehighs:
-    name: 长袜
-  leggings:
-    name: 裤袜
   legwear:
     name: 裹腿
-  loose socks:
-    name: 泡泡袜
   lowleg panties:
     alias:
       - low leg panties
     name: 低腰式内裤
-  mary janes:
-    name: 玛丽珍鞋
   miniskirt:
     name: 迷你裙
   no panties:
     name: 无内裤
   panties:
     name: 内裤
-  pantyhose:
-    name: 连裤袜
+
   pink panties:
     name: 粉红内裤
-  pink thighhighs:
-    name: 粉色过膝袜
   pleated skirt:
     name: 百褶裙
   side-tie panties:
@@ -89,42 +55,20 @@ content:
     name: 系带式内裤
   skirt:
     name: 裙子
-  slippers:
-    name: 拖鞋
-  socks:
-    name: 短袜
   striped panties:
     name: 条纹内裤
-  striped socks:
-    name: 横条袜
-  striped thighhighs:
-    name: 条纹过膝袜
-  tabi:
-    name: 日式厚底短袜
-  thighhighs:
-    name: 过膝袜
   thong:
     name: 丁字裤
-  torn thighhighs:
-    name: 损坏了的过膝袜
   trefoil:
     name: 露出三角裤
-  uwabaki:
-    name: 女式学生鞋
   white panties:
     name: 白色内裤
-  white thighhighs:
-    name: 白色过膝袜
   zettai ryouiki:
     name: 绝对领域
   shorts:
     name: 短裤
-  summer dress:
-    name: 夏日长裙
   bottomless:
     name: 下着较少
-  skirt_lift:
-    name: 掀起裙子
   panty pull:
     name: 内裤拉下来
   pantyshot:
@@ -157,29 +101,97 @@ content:
     name: 狐狸尾巴
   horse tail:
     name: 马尾
-  pleated dress:
-    name: 百褶连衣裙
-  sailor dress:
-    name: 水手服款裙子
-  strapless dress:
-    name: 无肩带连衣裙
-  sundress:
-    name: 太阳裙/背心裙
-  pencil skirt:
-    name: 铅笔裙
-  plaid skirt:
+  bikini bottom:
+    name: 比基尼泳裤
+  buruma:
+    name: 女式灯笼裤
+  capri pants:
+    name: 七分裤
+  chaps:
+    name: 皮套裤
+  checkered skirt:
     name: 格子裙
-  sheath dress:
-    name: 包臀裙
-  layered skirt:
-    name: 分层式半身裙
-  waist apron:
-    name: 腰围裙
-  pettiskirt:
-    name: 蓬蓬裙
-  tutu:
-    name: 芭蕾舞裙
-  Organza lace:
-    name: 透明硬纱/蕾丝花边
-  suspender skirt:
-    name: 吊带裙
+  clothes between thighs:
+    name: 衣物挂到大腿之间
+  skirt around one leg:
+    name: 一条腿上挂着短裙
+  skirt suit:
+    name: 正装短裙
+  cocktail dress:
+    name: (社交场合穿的)短裙
+  short shorts:
+    name: 热裤
+  cutoffs:
+    name: 热裤
+  denim shorts:
+    name: 牛仔短裤
+  denim skirt:
+    name: 牛仔裙
+  greaves:
+    name: 胫甲
+  gym shorts:
+    name: 体操短裤
+  hakama:
+    name: 袴/腿衣
+  hakama skirt:
+    name: 袴裙
+  jeans:
+    name: 牛仔裤
+  jumpsuit:
+    name: (尤指女式)连衫裤
+  legwear under shorts:
+    name: 短裤穿在裤袜外面
+  leotard aside:
+    name: 把连衣裤裆部剥到一边
+  leotard pull:
+    name: 剥开连衣裤
+  leotard under clothes:
+    name: 内层穿着连衣裤
+  lowleg pants:
+    name: 低腰裤子
+  microskirt:
+    name: 超短裙
+  pencil dress:
+    name: 铅笔裙
+  pencil skirt:
+    name: 短铅笔裙
+  plaid skirt:
+    name: 格子呢短裙
+  back-print panties:
+    name: 背面印花的内裤
+  bear panties:
+    name: 熊印花内裤
+  bow panties:
+    name: 带蝴蝶结的内裤
+  buruma pull:
+    name: 褪下一部分的内裤
+  cat ear panties:
+    name: 猫耳造型内裤
+  strawberry panties:
+    name: 草莓内裤
+  panties around one leg:
+    name: 一只脚上挂着内裤
+  swimsuit aside:
+    name: 把泳衣的裆部挪到一边
+  crotch plate:
+    name: 裆部有特别覆盖物
+  wet panties:
+    name: 湿内裤
+  crotchless panties:
+    name: 开档内裤
+  front-print panties:
+    name: 正面有图案的内裤
+  g-string:
+    name: 超细款丁字裤
+  highleg panties:
+    name: 高开衩的内裤
+  lace-trimmed panties:
+    name: 蕾丝边内裤
+  micro panties:
+    name: 布料很少的内裤
+  panties aside:
+    name: 内裤挪到一边
+  panties under pantyhose:
+    name: 穿在裤袜里的内裤
+
+

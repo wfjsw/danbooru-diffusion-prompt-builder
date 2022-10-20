@@ -11,8 +11,6 @@ content:
     name: 小图拼接
   everyone:
     name: 所有人
-  expressions:
-    name: 表情绘
   highres:
     name: 高分辨率
   huge filesize:

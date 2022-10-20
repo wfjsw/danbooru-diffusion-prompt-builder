@@ -1,0 +1,105 @@
+name: 人物鞋袜
+content:
+  slippers:
+    name: 拖鞋
+  socks:
+    name: 短袜
+  striped socks:
+    name: 横条袜
+  striped thighhighs:
+    name: 条纹过膝袜
+  tabi:
+    name: 日式厚底短袜
+  torn thighhighs:
+    name: 损坏了的过膝袜
+  uwabaki:
+    name: 女式学生鞋
+  thighhighs:
+    name: 过膝袜
+  white thighhighs:
+    name: 白色过膝袜
+  high heels:
+    name: 高跟鞋
+  mary janes:
+    name: 玛丽珍鞋
+  ankle socks:
+    name: 踝袜
+  back-seamed legwear:
+    name: 袜缝
+  bobby socks:
+    name: 美式短袜
+  bodystocking:
+    name: 连体裤袜
+  bow legwear:
+    name: 带蝴蝶结的裤袜
+  fine fabric emphasis:
+    name: 精细的面料感/超还原的丝袜
+  fishnet legwear:
+    name: 渔网袜
+  pantylines:
+    name: 紧致的裤袜/略透明的裤袜
+  seamed legwear:
+    name: 有接缝的裤袜
+  sheer legwear:
+    name: 透明的裤袜
+  stirrup legwear:
+    name: 马镫袜
+  toeless legwear:
+    name: 露趾裤袜
+  lace-trimmed legwear:
+    name: 蕾丝边裤袜
+  leg cutout:
+    name: 裤袜有开口
+  leg warmers:
+    name: 腿套/暖腿袜
+  kneehighs:
+    name: 长袜
+  leggings:
+    name: 裤袜
+  loose socks:
+    name: 泡泡袜
+  garter straps:
+    name: 袜带
+  garters:
+    name: 吊带袜
+  garter belt:
+    name: 连腰吊带袜
+  pink thighhighs:
+    name: 粉色过膝袜
+  pantyhose:
+    name: 连裤袜
+  fishnets:
+    alias:
+      - fishnet pantyhose
+      - fishnet stockings
+    name: 网袜
+  frilled legwear:
+    name: 带褶边的过膝袜
+  black thighhighs:
+    name: 黑色过膝袜
+  ballet slippers:
+    name: 芭蕾舞鞋
+  barefoot sandals:
+    name: 裸足凉鞋
+  boots:
+    name: 长靴
+  boots removed:
+    name: 脱下的靴子
+  cross-laced footwear:
+    name: 交叉系带鞋
+  high heel boots:
+    name: 高跟靴
+  knee boots:
+    name: 及膝靴
+  loafers:
+    name: 乐福鞋
+  rudder footwear:
+    name: 舰C舰娘专用鞋
+  stiletto heels:
+    name: 细跟高跟鞋
+  strappy heels:
+    name: 带束带的高跟鞋
+  thigh boots:
+    name: 高帮靴
+  toeless boots:
+    name: 露趾靴

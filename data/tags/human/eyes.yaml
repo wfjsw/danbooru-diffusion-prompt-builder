@@ -100,4 +100,20 @@ content:
   gradient eyes:
     name: 渐变瞳色
     wikiUrl: https://danbooru.donmai.us/wiki_pages/gradient_eyes.html
+  aqua eyes:
+    name: 吐舌鬼脸
+  crying with eyes open:
+    name: 睁着眼落泪
+  glowing eyes:
+    name: 发光的双眼
+  half-closed eye:
+    name: 半闭的眼睛(单眼)
+  happy tears:
+    name: 开心的眼泪
+  sparkling eyes:
+    name: 星星眼
+  glaring:
+    name: 轻蔑/怒视
+  streaming tears:
+    name: 流泪
 name: 人物眼睛

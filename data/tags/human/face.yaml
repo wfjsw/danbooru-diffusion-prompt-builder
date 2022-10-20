@@ -4,8 +4,6 @@ content:
     name: 浓装
   food on face:
     name: 食物在脸上
-  aqua eyes:
-    name: 吐舌鬼脸
   smelling:
    name:  闻
   nosebleed:
@@ -54,8 +52,6 @@ content:
     name: 黑化的
   frown:
     name: 皱眉/蹙额
-  expressionless:
-    name: 无表情的
   ahegao:
     name: 阿嘿颜
   naughty face:
@@ -84,4 +80,97 @@ content:
     name: 吐舌头
   licking lips:
     name: 舔嘴唇
-
+  pain:
+    name: 疼痛
+  crying:
+    name: 哭
+  fume:
+    name: 气得冒烟(漫画)
+  grimace:
+    name: (因痛苦、厌恶等)做怪相
+  screaming:
+    name: 尖叫/大声喊
+  v-shaped eyebrows:
+    name: 眉毛皱成V形(表高傲或愤怒)
+  scared:
+    name: 害怕的
+  scowl:
+    name: 怒视/嫌弃/不满
+  serious:
+    name: 严肃的
+  tearing up:
+    name: 要哭的表情
+  bored:
+    name: 无聊的
+  gloom (expression):
+    name: 消沉(表情)
+  jealous:
+    name: 嫉妒的
+  jitome:
+    name: 轻蔑的眼神
+  nervous:
+    name: 不安的
+  nervous smile:
+    name: 不安地微笑
+  shaded:
+    name: 阴沉脸
+  turn pale:
+    name: 脸色苍白
+  expressionless:
+    name: 无口
+  expressions:
+    name: 表情
+  unconscious:
+    name: 失神
+  bright pupils:
+    name: 明亮的瞳孔
+  ear blush:
+    name: 耳红
+  holding breath:
+    name: 憋气
+  puckered lips:
+    name: 撅起的嘴唇
+  seductive smile:
+    name: 诱人的微笑
+  smiley:
+    name: 笑脸
+  smirk:
+    name: 傻笑/得意的笑
+  doyagao:
+    name: 得意脸
+  flustered:
+    name: 慌乱的
+  full blush:
+    name: 整张脸泛红
+  heart in eye:
+    name: 眼里冒爱心
+  heavy breathing:
+    name: 喘粗气
+  moaning:
+    name: 呻吟
+  smug:
+    name: 得意脸
+  spit take:
+    name: 惊讶或无语到喷了
+  surprised:
+    name: 惊讶
+  tsundere:
+    name: 傲娇
+  double v:
+    name: 啊嘿颜比V
+  drooling:
+    name: 流口水
+  torogao:
+    name: 淫荡的表情
+  glint:
+    name: 眼中闪现强烈的情感
+  happy:
+    name: 快乐/幸福
+  laughing:
+    name: 在笑的
+  naughty:
+    name: 下流的表情
+  troll:
+    name: 嚣张脸
+  yandere:
+    name: 病娇
