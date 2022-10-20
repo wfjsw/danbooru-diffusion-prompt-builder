@@ -157,3 +157,11 @@ content:
     name: 狐狸尾巴
   horse tail:
     name: 马尾
+  pleated dress:
+    name: 百褶连衣裙
+  sailor dress:
+    name: 水手服款裙子
+  strapless dress:
+    name: 无肩带连衣裙
+  sundress:
+    name: 太阳裙/背心裙

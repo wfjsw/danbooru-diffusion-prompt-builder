@@ -120,4 +120,42 @@ content:
     name: 编号纹身
   steam censor:
     name: 蒸汽/雾气打码
+  blazer:
+    name: 西装夹克
+  suit:
+    name: 西装
+  suit jacket:
+    name: 西装外套
+  business suit:
+    name: 西装
+  capelet:
+    name: 披肩
+  cloak:
+    name: 斗篷
+  coat:
+    name: 外套
+  coattails:
+    name: 燕尾
+  collared jacket:
+    name: 翻领夹克
+  duffel coat:
+    name: 粗呢大衣
+  hooded cape:
+    name: 连帽斗篷
+  hooded cloak:
+    name: 连帽披巾
+  hooded coat:
+    name: 连帽外套
+  hooded jacket:
+    name: 连帽夹克
+  kesa:
+    name: 袈裟
+  labcoat:
+    name: 白大褂
+  military jacket:
+    name: 军装夹克
+  pant suit:
+    name: 女性穿着西服
+  tailcoat:
+    name: 燕尾服
 

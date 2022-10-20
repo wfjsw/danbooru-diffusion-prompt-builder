@@ -21,8 +21,6 @@ content:
     name: 紧身褡
   dress:
     name: 连衣裙
-  formal:
-    name: 晚礼服
   gym uniform:
     name: 运动服
   leotard:
@@ -87,4 +85,8 @@ content:
     name: 点状花纹
   frills:
     name: 皱边
+  formal:
+    name: 正装
+  lace:
+    name: 蕾丝
 name: 人物全身服饰

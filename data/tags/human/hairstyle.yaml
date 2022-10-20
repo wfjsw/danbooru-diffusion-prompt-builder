@@ -117,8 +117,6 @@ content:
     name: 很长的头发
   front ponytail:
     name: 前马尾
-  low twintails:
-    name: 低双马尾
   short twintails:
     name: 短双马尾
   folded ponytail:
@@ -145,8 +143,6 @@ content:
     name: 心形发髻
   wavy hair:
     name: 自然卷
-  ringlets:
-    name: 小环管卷发
   asymmetrical bangs:
     name: 不对称刘海
   swept bangs:
@@ -169,4 +165,70 @@ content:
     name: 漂浮的头发
   straight hair:
     name: 直发
+  big hair:
+    name: 头发很多的
+  crystal hair:
+    name: 水晶状的头发
+  expressive hair:
+    name: 富有表现力的头发
+  hair censor:
+    name: 头发遮住了乳头(三点)
+  hair over breasts:
+    name: 头发披在胸上
+  hair over eyes:
+    name: 头发遮着双眼
+  hair strand:
+    name: 强调一缕一缕感的发型/发丝
+  hair over one eye:
+    name: 头发遮住了一只眼睛
+  shiny hair:
+    name: 有光泽的头发
+  wet hair:
+    name: 湿头发
+  hair down:
+    name: 低扎长发
+  hair rings:
+    name: 中等长发
+  hair slicked back:
+    name: 垂下的长鬈发
+  hair up:
+    name: 短双尾发型
+  high ponytail:
+    name: 披在两侧的两条辫子
+  long braid:
+    name: 侧马尾
+  long ponytail:
+    name: 单股辫
+  low-tied long hair:
+    name: 直发
+  low ponytail:
+    name: 低扎马尾
+  low twintails:
+    name: 低扎双尾
+  medium hair:
+    name: 中等长发
+  ringlets:
+    name: 垂下的长鬈发
+  side braids:
+    name: 披在两侧的两条辫子
+  side bun:
+    name: 披在两侧的发髻
+  split ponytail:
+    name: 尾部散开的单马尾发型
+  two side up:
+    name: 小型双股辫
+  absurdly long hair:
+    name: 超长的头发
+  cloud hair:
+    name: 云絮状发型
+  flipped hair:
+    name: 外卷发型
+  hairlocs:
+    name: 脏辫
+  tentacle hair:
+    name: 触手头发
+  very short hair:
+    name: 很短的头发
+
+
 name: 人物发型
