@@ -9,6 +9,7 @@ import {useCartStore} from "../stores/cart";
 import ImportDialog from "./ImportDialog.vue";
 import ResultDialog from "./ResultDialog.vue";
 import WeightIdentifier from "./WeightIdentifier.vue";
+import FeatureSwitches from './FeatureSwitches.vue'
 
 const cartStore = useCartStore();
 
@@ -73,8 +74,11 @@ async function clearDialog() {
 </script>
 
 <template>
+    <div class="mobile-topbar-el">
+        <FeatureSwitches/>
+    </div>
     <div class="cart-container">
-        <h1 class="text-center">购物车</h1>
+        <h1 class="text-center cart-title">购物车</h1>
         <ElScrollbar class="scrollable">
             <div class="subcart-container cart-positive-container">
                 <h1>我想要</h1>
@@ -167,7 +171,8 @@ async function clearDialog() {
 <style lang="scss" scoped>
 .cart-container {
     padding: 0 20px;
-    height: calc(100vh - 64px);
+    flex-grow: 1;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
 }
@@ -232,5 +237,9 @@ async function clearDialog() {
 
 .mb-bottom {
     margin-bottom: 30px;
+}
+
+.cart-title {
+    margin: 0.75rem 0;
 }
 </style>

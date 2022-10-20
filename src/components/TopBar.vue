@@ -1,14 +1,21 @@
 <script lang="ts" setup>
-import {h, computed} from 'vue'
-import {ElButton, ElInput, ElSwitch, ElTooltip} from "element-plus";
-import {Search as IconSearch} from "@element-plus/icons-vue";
+import {ref, computed} from 'vue'
+import {ElButton, ElInput, ElSwitch, ElTooltip} from 'element-plus';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import {faBars, faCartShopping, faSearch} from '@fortawesome/pro-regular-svg-icons'
+import {Search as IconSearch} from '@element-plus/icons-vue';
 import ExtLinks from './ExtLinks.vue'
 import FeatureSwitches from './FeatureSwitches.vue'
 
 const props = defineProps<{
     search: string,
 }>()
-const emit = defineEmits(['update:search'])
+const emit = defineEmits([
+    'update:search',
+    'expandCategory',
+    'expandCart'
+])
+const mobileExpandSearch = ref(false)
 
 const searchTerms = computed({
     get: () => props.search,
@@ -18,16 +25,30 @@ const searchTerms = computed({
 </script>
 
 <template>
-    <div class="topbar">
+    <div :class="['topbar', {'is-search-expanded': expandSearch}]">
         <div class="left">
-            <span class="text-large font-600 mr-3"> Danbooru 标签超市 </span>
+            <ElButton size="large" text class="category-cascader" @click="emit('expandCategory')">
+                <FontAwesomeIcon :icon="faBars"/>
+            </ElButton>
+            <span class="app-title text-large font-600 mr-3">
+                Danbooru 标签超市
+            </span>
         </div>
         <div class="right split">
             <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
                      placeholder="搜索"/>
-            <FeatureSwitches class="switches d-none d-inline-flex-sm"/>
-            <ExtLinks class="extlinks d-none d-inline-flex-sm"/>
+            <div class="mobile-topbar-orig-el">
+                <FeatureSwitches class="switches"/>
+                <ExtLinks class="extlinks"/>
+            </div>
+            <ElButton size="large" text class="search-cascader" @click="expandSearch = !expandSearch">
+                <FontAwesomeIcon :icon="faSearch"/>
+            </ElButton>
+            <ElButton size="large" text class="cart-cascader" @click="emit('expandCart')">
+                <FontAwesomeIcon :icon="faCartShopping"/>
+            </ElButton>
         </div>
+
     </div>
 
 </template>
@@ -43,6 +64,7 @@ const searchTerms = computed({
     .left {
         display: flex;
         align-items: center;
+        gap: 2rem;
         font-size: 18px;
         color: var(--el-text-color-primary);
     }
@@ -59,6 +81,39 @@ const searchTerms = computed({
     min-width: 8rem;
 }
 
+@media (max-width: 768px) {
+    .topbar {
+        .left {
+            gap: 0.5rem;
+            width: 100%;
+            transition: 1s all;
+        }
+        .right {
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+        .search {
+            display: none;
+        }
+
+        &.is-search-expanded {
+            .left {
+                width: unset;
+            }
+            .right {
+                width: 100%;
+            }
+            .app-title {
+                display: none;
+            }
+            .search {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
 .extlinks {
     margin-right: 0;
 }
@@ -66,6 +121,23 @@ const searchTerms = computed({
 .switches {
     > * {
         margin-right: 1rem;
+    }
+}
+
+.category-cascader, .cart-cascader, .search-cascader {
+    padding: 12px 15px;
+    margin-left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .category-cascader, .cart-cascader {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .search-cascader {
+        display: none;
     }
 }
 </style>

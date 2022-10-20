@@ -34,7 +34,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 <style scoped lang="scss">
 .links {
-    //display: inline-flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;

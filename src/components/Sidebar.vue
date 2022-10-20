@@ -18,8 +18,8 @@ function select(index: string, indexPath: string[]) {
 </script>
 
 <template>
-    <div class="mobile-extlinks d-block d-none-sm">
-        <ExtLinks class="d-inline-flex"/>
+    <div class="mobile-topbar-el">
+        <ExtLinks/>
     </div>
     <ElMenu :default-openeds="['tags']" class="borderless pb-2 fw"
             default-active="aboutme" @select="select">
@@ -106,11 +106,5 @@ function select(index: string, indexPath: string[]) {
 .tag-category-size, .preset-category-size, .embedding-category-size {
     font-size: small;
 }
-
-.mobile-extlinks {
-    text-align: center;
-    margin: 1rem 0;
-}
-
 
 </style>

@@ -72,3 +72,24 @@ html .el-switch {
 html.dark .el-switch {
     --el-switch-off-color: var(--el-border-color);
 }
+
+.mobile-topbar-el {
+    display: none;
+    text-align: center;
+    margin: 0.75rem 0;
+}
+
+.mobile-topbar-orig-el {
+    display: inherit;
+    gap: inherit;
+    align-items: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-topbar-el {
+        display: block;
+    }
+    .mobile-topbar-orig-el {
+        display: none;
+    }
+}

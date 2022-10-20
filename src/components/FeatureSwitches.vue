@@ -61,7 +61,7 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
 
 <style scoped lang="scss">
 .feature-switches {
-    //display: inline-flex;
+    display: inline-flex;
     flex-direction: row;
     gap: 1rem;
 }
