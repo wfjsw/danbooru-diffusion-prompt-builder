@@ -33,6 +33,7 @@ content:
     name: 光线追踪
   reflection light:
     name: 反射光
+  overexposure:
+    name: 过曝
 
-
-name: 特效
+name: 镜头特效

@@ -10,3 +10,6 @@ content:
     name: 缺少手指
   extra digit:
     name: 多余手指
+  missing arms:
+    name: 缺少手臂
+

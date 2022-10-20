@@ -35,7 +35,8 @@ function save() {
         title="导入标签"
         width="50%"
     >
-        <p>注：由于标签格式千变万化，不能保证完全成功导入。</p>
+        <p>注：由于标签格式千变万化，不能保证完全成功导入。
+            为确保成功导入，请检查标签之间是否使用逗号隔开、括号双向闭合完全，且括号中间不含逗号。</p>
         <div class="tag-positive">
             <div class="title">正向标签</div>
             <ElInput type="textarea" :rows="5" class="tag-pre" v-model="positiveTags" placeholder="Prompt"/>

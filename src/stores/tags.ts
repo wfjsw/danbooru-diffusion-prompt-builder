@@ -59,7 +59,7 @@ export const useTagStore = defineStore('tags', {
 
             return ImmutableMap(
                 Object.entries(state.tags)
-                    .reduce((a: {[key: string]: TagMeta & {category: string}}, [k, b]) => {
+                    .reduce((a: {[key: string]: TagMeta & {category: string, originalName: string}}, [k, b]) => {
                         if (!settings.showRestricted && b._restricted) {
                             return a;
                         }
@@ -69,10 +69,10 @@ export const useTagStore = defineStore('tags', {
                                 continue
                             }
 
-                            a[tag] = {...meta, category: k}
+                            a[tag] = {...meta, category: k, originalName: tag}
                             if (meta.alias) {
                                 for (const alias of meta.alias) {
-                                    a[alias] = {...meta, category: k}
+                                    a[alias] = {...meta, category: k, originalName: tag}
                                 }
                             }
                         }
@@ -120,7 +120,7 @@ export const useTagStore = defineStore('tags', {
             name = name.replaceAll('_', ' ').toLowerCase()
             const meta = this.allTagsWithAlias.get(name);
             if (meta) {
-                return {name: meta.name, meta}
+                return {name: meta.originalName, meta}
             }
             return null
         },

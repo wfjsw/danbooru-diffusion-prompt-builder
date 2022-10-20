@@ -15,6 +15,7 @@ content:
     name: 纹身
   sarong:
     name: 莎笼/沙滩浴巾
-
+  buttons:
+    name: 纽扣
 
 name: 人物全身装饰

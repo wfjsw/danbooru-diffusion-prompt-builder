@@ -77,5 +77,17 @@ export default defineConfig({
                 }
             }
         }
-    }
+    },
+    ssr: {
+        noExternal: true,
+        external: [
+            'masonry-layout',
+            'vue-github-button',
+        ]
+        // noExternal: [
+        //     'element-plus',
+        //     /^@fortawesome\/(?:free|pro)-/,
+        //     'masonry-layout',
+        // ],
+    },
 })

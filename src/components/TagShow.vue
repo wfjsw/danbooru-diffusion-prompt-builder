@@ -4,6 +4,7 @@ import {Search as IconSearch} from "@element-plus/icons-vue";
 import {useTagStore} from "../stores/tags";
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
+import {ClientOnly} from "../ClientOnly";
 import {useSettingsStore} from "../stores/settings";
 import type {TagCategory, TagMeta} from "../datatypes";
 import {ElInput, ElScrollbar} from "element-plus";
@@ -37,11 +38,13 @@ watch(toRef(props, 'category'), () => {
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
     <ElScrollbar class="scrollable" ref="scrollRef">
-        <Masonry :bind="paginatedTags" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
-                 :infinite-scroll-distance="512" :infinite-scroll-delay="10">
-            <TagView v-for="(meta, tag) in paginatedTags" v-memo="[tag, settingsStore.showImage]" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
-                     :tag="tag as string"/>
-        </Masonry>
+        <ClientOnly>
+            <Masonry :bind="paginatedTags" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                     :infinite-scroll-distance="512" :infinite-scroll-delay="10">
+                <TagView v-for="(meta, tag) in paginatedTags" v-memo="[tag, settingsStore.showImage]" :key="tag" :blur-image="!settingsStore.showImage" :meta="meta"
+                         :tag="tag as string"/>
+            </Masonry>
+        </ClientOnly>
     </ElScrollbar>
 </template>
 

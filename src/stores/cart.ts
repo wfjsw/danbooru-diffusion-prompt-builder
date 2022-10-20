@@ -300,6 +300,7 @@ export const useCartStore = defineStore('cart', {
             })
         },
         import: function (positive: string, negative: string) {
+            const tagStore = useTagStore();
             const settingsStore = useSettingsStore();
             this.clear()
             const run = (text: string, appendFn: (tagName: string, weight: number) => void) => {
@@ -327,7 +328,7 @@ export const useCartStore = defineStore('cart', {
                     const name = token.match(/^[\(\[\{]*(.*?)[\)\]\}]*$/)
                     // console.log('match name', name)
                     if (name) {
-                        let matched = name[1]
+                        let matched: string = name[1]
                         if (matched.endsWith('\\')) {
                             matched += name[name.lastIndexOf(matched) + name.length]
                         }
@@ -339,7 +340,26 @@ export const useCartStore = defineStore('cart', {
                             .replaceAll('\\}', '}')
                             .toLowerCase()
                         // console.log('append', matched)
-                        appendFn(matched, weight)
+                        let matchText = matched
+                        let resolvedTag = tagStore.resolve(matched)
+                        if (!resolvedTag) {
+                            matchText = matched + 's'
+                            resolvedTag = tagStore.resolve(matchText)
+                        }
+                        if (!resolvedTag) {
+                            matchText = matched + 'es'
+                            resolvedTag = tagStore.resolve(matchText)
+                        }
+                        if (!resolvedTag) {
+                            matchText = matched.slice(0, -1)
+                            resolvedTag = tagStore.resolve(matchText)
+                        }
+                        if (!resolvedTag) {
+                            matchText = matched.slice(0, -2)
+                            resolvedTag = tagStore.resolve(matchText)
+                        }
+                        matchText = resolvedTag ? matchText : matched
+                        appendFn(matchText, weight)
                     }
                     const reversed = Array.from(token).reverse()
                     for (let i = 0; i < reversed.length; i++) {

@@ -88,4 +88,6 @@ content:
     name: 侧身坐
   zombie pose:
     name: 僵尸姿势
+  humpbacked:
+    name: 驼背
 name: 人体姿势

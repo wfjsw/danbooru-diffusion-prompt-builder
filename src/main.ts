@@ -1,33 +1,19 @@
-import {createApp} from 'vue'
-import './style.scss'
-import 'element-plus/theme-chalk/el-loading.css'
-// import '@fortawesome/fontawesome-svg-core/styles.css'
+import {createApp as createVueApp} from 'vue'
+import { ID_INJECTION_KEY } from 'element-plus'
 import App from './App.vue'
 import {createPinia} from "pinia";
-import {useTagStore} from "./stores/tags";
-import {usePresetStore} from "./stores/presets";
-import {useEmbeddingStore} from "./stores/embeddings";
 import { vLoading, ElInfiniteScroll } from 'element-plus'
 
+export function createApp() {
+    const pinia = createPinia()
+    return createVueApp(App)
+        .use(pinia)
+        .provide(ID_INJECTION_KEY, {
+            prefix: Date.now(),
+            current: 0
+        })
+        .directive('loading', vLoading)
+        .directive('infinite-scroll', ElInfiniteScroll)
+}
 
-const pinia = createPinia()
 
-createApp(App)
-    .use(pinia)
-    .directive('loading', vLoading)
-    .directive('infinite-scroll', ElInfiniteScroll)
-    .mount('#app')
-
-const tagStore = useTagStore()
-const presetStore = usePresetStore()
-const embeddingStore = useEmbeddingStore()
-tagStore.load();
-presetStore.load();
-embeddingStore.load();
-
-const beforeUnloadListener = (event: any) => {
-    event.preventDefault();
-    return event.returnValue = "Are you sure you want to exit?";
-};
-
-window.addEventListener("beforeunload", beforeUnloadListener);

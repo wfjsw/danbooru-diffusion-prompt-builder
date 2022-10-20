@@ -45,4 +45,8 @@ content:
     name: 有错误
   extremely detailed cg unity 8k wallpaper:
     name: 极高分辨率 CG 壁纸
+  illustration:
+    name: 插画
+  nsfw:
+    name: 不宜工作时观看
 name: 图片类型

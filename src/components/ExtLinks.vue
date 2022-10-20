@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {faGithub} from "@fortawesome/pro-brands-svg-icons";
-import {faMessageBot, faMagnifyingGlassChart} from "@fortawesome/pro-solid-svg-icons";
+import {faMessageBot, faMagnifyingGlassChart, faHouse} from "@fortawesome/pro-solid-svg-icons";
 import {ElTooltip, ElButton} from "element-plus";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
@@ -8,6 +8,13 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 <template>
     <div class="links">
+        <ElTooltip content="NovelAI.dev" :show-after="750">
+            <a href="https://novelai.dev/" target="_blank">
+                <ElButton link size="large">
+                    <FontAwesomeIcon :icon="faHouse" class="square-icon"/>
+                </ElButton>
+            </a>
+        </ElTooltip>
         <ElTooltip content="GitHub" :show-after="750">
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
                 <ElButton link size="large">

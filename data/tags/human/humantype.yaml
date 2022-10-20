@@ -224,5 +224,6 @@ content:
     name: 母子
   twins:
     name: 双胞胎
-
+  long neck:
+    name: 长脖子
 name: 人物类型

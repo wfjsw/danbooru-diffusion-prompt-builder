@@ -5,8 +5,9 @@ import {useTagStore} from "../stores/tags";
 import {useEmbeddingStore} from '../stores/embeddings';
 import TagView from "./TagView.vue";
 import Masonry from "./Masonry.vue";
+import {ClientOnly} from "../ClientOnly";
 import {useSettingsStore} from "../stores/settings";
-import type {TagCategory, TagMeta, Embedding} from "../datatypes";
+import type {TagMeta, Embedding} from "../datatypes";
 import EmbeddingView from "./EmbeddingView.vue";
 
 const props = defineProps<{
@@ -60,15 +61,17 @@ watch(toRef(props, 'search'), () => {
 <template>
     <h1>搜索结果</h1>
     <ElScrollbar class="scrollable" ref="scrollRef">
-        <Masonry :bind="[filteredTags, filteredEmbeddings]" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
-                 :infinite-scroll-distance="128" :infinite-scroll-delay="10">
-            <template v-for="item in paginatedResult" :key="item.key">
-                <TagView v-if="item.type === 'tag'" :blur-image="!settingsStore.showImage"
-                         :meta="(item as SearchResultTag).data[1]" :tag="(item as SearchResultTag).data[0]"/>
-                <EmbeddingView v-if="item.type === 'embedding'" :blur-image="!settingsStore.showImage"
-                               :data="(item as SearchResultEmbedding).data" show-category/>
-            </template>
-        </Masonry>
+        <ClientOnly>
+            <Masonry :bind="[filteredTags, filteredEmbeddings]" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                     :infinite-scroll-distance="128" :infinite-scroll-delay="10">
+                <template v-for="item in paginatedResult" :key="item.key">
+                    <TagView v-if="item.type === 'tag'" :blur-image="!settingsStore.showImage"
+                             :meta="(item as SearchResultTag).data[1]" :tag="(item as SearchResultTag).data[0]"/>
+                    <EmbeddingView v-if="item.type === 'embedding'" :blur-image="!settingsStore.showImage"
+                                   :data="(item as SearchResultEmbedding).data" show-category/>
+                </template>
+            </Masonry>
+        </ClientOnly>
     </ElScrollbar>
 </template>
 

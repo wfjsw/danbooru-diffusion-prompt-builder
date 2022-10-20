@@ -4,6 +4,7 @@ import {Search as IconSearch} from "@element-plus/icons-vue";
 import {useEmbeddingStore} from "../stores/embeddings";
 import EmbeddingView from "./EmbeddingView.vue";
 import Masonry from "./Masonry.vue";
+import {ClientOnly} from "../ClientOnly";
 import {useSettingsStore} from "../stores/settings";
 import type {Embedding} from "../datatypes";
 import {ElInput, ElScrollbar} from "element-plus";
@@ -32,11 +33,13 @@ function loadMore() {
     <h1>{{ category }}</h1>
     <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索"/>
     <ElScrollbar class="scrollable">
-        <Masonry :bind="paginatedEmbs" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
-                 :infinite-scroll-distance="512" :infinite-scroll-delay="10">
-            <EmbeddingView v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb, settingsStore.showImage]"
-                           :blur-image="!settingsStore.showImage" :data="emb"/>
-        </Masonry>
+        <ClientOnly>
+            <Masonry :bind="paginatedEmbs" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+                     :infinite-scroll-distance="512" :infinite-scroll-delay="10">
+                <EmbeddingView v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb, settingsStore.showImage]"
+                               :blur-image="!settingsStore.showImage" :data="emb"/>
+            </Masonry>
+        </ClientOnly>
     </ElScrollbar>
 </template>
 
