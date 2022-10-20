@@ -2,7 +2,7 @@
 import {ref, computed} from 'vue'
 import {ElButton, ElInput, ElSwitch, ElTooltip} from 'element-plus';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-import {faBars, faCartShopping, faSearch} from '@fortawesome/pro-regular-svg-icons'
+import {faBars, faCartShopping, faMagnifyingGlass} from '@fortawesome/pro-regular-svg-icons'
 import {Search as IconSearch} from '@element-plus/icons-vue';
 import ExtLinks from './ExtLinks.vue'
 import FeatureSwitches from './FeatureSwitches.vue'
@@ -43,7 +43,7 @@ const searchTerms = computed({
             </div>
             <ElButton size="large" text class="search-cascader"
                       @click="mobileExpandSearch = !mobileExpandSearch">
-                <FontAwesomeIcon :icon="faSearch"/>
+                <FontAwesomeIcon :icon="faMagnifyingGlass"/>
             </ElButton>
             <ElButton size="large" text class="cart-cascader" @click="emit('expandCart')">
                 <FontAwesomeIcon :icon="faCartShopping"/>
