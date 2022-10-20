@@ -122,12 +122,8 @@ content:
     name: 蒸汽/雾气打码
   blazer:
     name: 西装夹克
-  suit:
-    name: 西装
   suit jacket:
     name: 西装外套
-  business suit:
-    name: 西装
   capelet:
     name: 披肩
   cloak:
