@@ -38,7 +38,7 @@ export const usePresetStore = defineStore('presets', {
             const settings = useSettingsStore()
             return state.presets
                 .filter(v => settings.showRestricted || !v.restricted)
-                .map(v => Object.keys(v).length)
+                .map(v => Object.keys(v.content).length)
                 .reduce((a, b) => a + b, 0)
         }
     },

@@ -1,0 +1,19 @@
+# 模型内置英文名
+prompt: kedama
+# 模型名称
+name: 玉之けだま / kedama / 毛玉
+# 模型作者
+author: Nyanko Lepsoni @ t.me/StableDiffusion_CN
+# 模型分类
+category: 画师
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: '925997e9'
+# 模型内记录的训练步数
+steps: 20000
+# 模型预览图的 SHA256 Hash
+previewHash: ae80f137626715877b6afb2f22ece313c9e6d7f664ba3761aac8439e5c2e0845
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/kedama-20000.pt
+restricted: true

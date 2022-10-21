@@ -1,0 +1,18 @@
+# 调用该模型使用的命令 (模型图片左上角尖括号内容)
+prompt: eileen
+# 模型名称
+name:  乃琳/Eileen
+# 模型作者
+author: Rosmontis @ t.me/StableDiffusion_CN
+# 模型分类
+category: VTuber
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: '925997e9'
+# 模型图片右下角 v 字符旁的数字
+vectorSize: 4
+# 模型图片右下角 s 字符旁的数字
+steps: 5000
+# 模型文件的 SHA256 Hash
+payloadHash: cf784fc40ee57e7fa70243df2c1cd9d8ecb461a595a553aa120ff107ae57c462

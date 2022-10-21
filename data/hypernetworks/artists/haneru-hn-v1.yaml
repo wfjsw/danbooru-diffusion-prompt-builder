@@ -1,0 +1,19 @@
+# 模型内置英文名
+prompt: haneru-hn-v1
+# 模型名称
+name: HaneRu
+# 模型作者
+author: Fixing_And_Repairing @ t.me/StableDiffusion_CN
+# 模型分类
+category: 画师
+# 该模型对应的主模型名称
+modelName: 未知
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 'unknown'
+# 模型内记录的训练步数
+steps: 20000
+# 模型预览图的 SHA256 Hash
+previewHash: 4fdbae9639d7032bc4bdc58eb55d289bcefc6a05cd2e9a2054842a1bcd005084
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/haneru-hn-v1.pt
+restricted: true
