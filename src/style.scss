@@ -99,3 +99,60 @@ html.dark .el-switch {
     --el-button-hover-text-color: var(--el-color-black);
 
 }
+
+.masonry {
+    .box-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 512px;
+    }
+
+    @media screen and (max-width: 512px) {
+        .box-card {
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 513px) {
+        .box-card {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .box-card {
+            width: calc(100% - 10px);
+        }
+    }
+
+    @media screen and (min-width: 1441px) {
+        .box-card {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (min-width: 1601px) {
+        .box-card {
+            width: calc(33% - 20px);
+        }
+    }
+
+    @media screen and (min-width: 1921px) {
+        .box-card {
+            width: calc(25% - 20px);
+        }
+    }
+
+    @media screen and (min-width: 2161px) {
+        .box-card {
+            width: calc(20% - 20px);
+        }
+    }
+
+    @media screen and (min-width: 2561px) {
+        .box-card {
+            width: calc(16.67% - 20px);
+        }
+    }
+}

@@ -111,43 +111,6 @@ const downloadUrl = computed(() => {
     }
 }
 
-@media (max-width: 1279px) {
-    .box-card {
-        width: 100%;
-    }
-}
-
-@media (min-width: 1280px) {
-    .box-card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (min-width: 1600px) {
-    .box-card {
-        width: calc(33% - 20px);
-        --card-width: calc(33% - 20px);
-    }
-}
-
-@media (min-width: 1920px) {
-    .box-card {
-        width: calc(25% - 20px);
-    }
-}
-
-@media (min-width: 1920px) {
-    .box-card {
-        width: calc(20% - 20px);
-    }
-}
-
-.box-card {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
 @keyframes image_unblur {
     0% {
         filter: blur(10px);

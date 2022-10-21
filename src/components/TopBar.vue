@@ -131,7 +131,7 @@ const searchTerms = computed({
     margin-left: 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .category-cascader, .cart-cascader {
         display: none;
     }
