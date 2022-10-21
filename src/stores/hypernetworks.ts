@@ -33,7 +33,10 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             return filtered.sort()
         },
         categorySize: (state) => {
-            return Object.fromEntries(Object.entries(state.hypernetworks).map(([k, v]) => [k, v.content.length]))
+            const settings = useSettingsStore()
+            return Object.fromEntries(Object.entries(state.hypernetworks)
+                .filter(([_, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
+                .map(([k, v]) => [k, v.content.filter(e => settings.showRestricted || !e.restricted).length]))
         },
         allHypernetworks: (state) => {
             const settings = useSettingsStore()
@@ -45,8 +48,7 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
         count: (state) => {
             const settings = useSettingsStore()
             return Object.values(state.hypernetworks)
-                .filter(v => settings.showRestricted || v.content.some((e) => !e.restricted))
-                .map(v => v.content.length)
+                .map(v => v.content.filter(e => settings.showRestricted || !e.restricted).length)
                 .reduce((a, b) => a + b, 0)
         }
         // allTagCount: (state) => {
@@ -100,7 +102,8 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
         },
         searchCategory(category: string, query: string): Hypernetwork[] {
             const settings = useSettingsStore()
-            if (query === '') return this.hypernetworks[category].content
+            if (query === '')
+                return this.hypernetworks[category].content.filter(n => settings.showRestricted || !n.restricted)
 
             return this.hypernetworks[category].content
                 .filter(n => settings.showRestricted || !n.restricted)

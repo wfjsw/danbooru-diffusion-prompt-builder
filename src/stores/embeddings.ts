@@ -34,7 +34,9 @@ export const useEmbeddingStore = defineStore('embeddings', {
             return filtered.sort()
         },
         categorySize: (state) => {
-            return Object.fromEntries(Object.entries(state.embeddings).map(([k, v]) => [k, v.content.length]))
+            const settings = useSettingsStore()
+            return Object.fromEntries(Object.entries(state.embeddings)
+                .map(([k, v]) => [k, v.content.filter(e => settings.showRestricted || !e.restricted).length]))
         },
         allEmbeddings: (state) => {
             const settings = useSettingsStore()
@@ -104,7 +106,9 @@ export const useEmbeddingStore = defineStore('embeddings', {
         },
         searchCategory(category: string, query: string): Embedding[] {
             const settings = useSettingsStore()
-            if (query === '') return this.embeddings[category].content
+            if (query === '')
+                return this.embeddings[category].content
+                    .filter(n => settings.showRestricted || !n.restricted)
 
             return this.embeddings[category].content
                 .filter(n => settings.showRestricted || !n.restricted)
