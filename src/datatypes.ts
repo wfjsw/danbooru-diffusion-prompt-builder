@@ -65,3 +65,35 @@ export interface Embedding {
     suggestPositive: string[]|null,
     suggestNegative: string[]|null,
 }
+
+export interface Embeddings {
+    embeddings: EmbeddingCategories
+}
+
+export interface HypernetworkCategories {
+    [key: string]: HypernetworkCategory,
+}
+
+export interface HypernetworkCategory {
+    content: Hypernetwork[],
+}
+
+export interface Hypernetwork {
+    prompt: string,
+    name: string,
+    category: string,
+    author: string|null,
+    description: string|null,
+    restricted: boolean|null,
+    modelName: string,
+    modelHash: string,
+    steps: number,
+    previewHash: string|null,
+    payloadURL: string,
+    suggestPositive: string[]|null,
+    suggestNegative: string[]|null,
+}
+
+export interface Hypernetworks {
+    hypernetworks: HypernetworkCategories
+}

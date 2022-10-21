@@ -10,6 +10,7 @@ import AboutMe from './components/AboutMe.vue'
 import Cart from './components/Cart.vue'
 import BadMobileDialog from './components/BadMobileDialog.vue'
 import TagSearchShow from './components/TagSearchShow.vue'
+import HypernetworkShow from './components/HypernetworkShow.vue'
 
 const activeSelection = ref<string[]>(['aboutme'])
 
@@ -30,6 +31,7 @@ const mainComponent: ComponentList = {
     'tags': TagShow,
     'presets': PresetShow,
     'embeddings': EmbeddingShow,
+    'hypernetworks': HypernetworkShow,
     'aboutme': AboutMe,
 }
 

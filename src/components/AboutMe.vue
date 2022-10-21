@@ -9,6 +9,7 @@ import {useSettingsStore} from "../stores/settings";
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
 import {useEmbeddingStore} from "../stores/embeddings";
+import {useHypernetworkStore} from '../stores/hypernetworks'
 import {computed, h} from "vue";
 import {isDark} from "../composables/dark";
 
@@ -20,6 +21,7 @@ const settingsStore = useSettingsStore();
 const tagStore = useTagStore();
 const presetStore = usePresetStore();
 const embeddingStore = useEmbeddingStore();
+const hypernetworkStore = useHypernetworkStore();
 
 const activeIcon = h(FontAwesomeIcon, { icon: faEye })
 const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
@@ -36,7 +38,8 @@ const githubButtonsColorScheme = computed(() => isDark.value
     <h1>关于</h1>
     <ElScrollbar class="scrollable">
         <p>这是一个用于构建 Danbooru 标签组合的网站。</p>
-        <p>目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。共收录 {{ presetStore.count }} 组预设标签、{{ embeddingStore.count }} 个嵌入模型。</p>
+        <p>目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。
+            共收录 {{ presetStore.count }} 组预设标签、{{ embeddingStore.count }} 个嵌入模型、{{ hypernetworkStore.count }} 个超网络模型。</p>
         <p>本站的源码与所有原始数据均可在
             <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
             查看。如果您觉得本站对您有帮助，请在 GitHub 上点一个

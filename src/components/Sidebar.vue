@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from "element-plus";
-import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture} from '@element-plus/icons-vue';
+import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture, Box as IconBox} from '@element-plus/icons-vue';
 import {useTagStore} from "../stores/tags";
 import {usePresetStore} from "../stores/presets";
 import {useEmbeddingStore} from "../stores/embeddings";
+import {useHypernetworkStore} from '../stores/hypernetworks'
 import ExtLinks from './ExtLinks.vue'
 
 const emit = defineEmits(['select'])
@@ -11,6 +12,7 @@ const emit = defineEmits(['select'])
 const tagStore = useTagStore();
 const presetStore = usePresetStore();
 const embeddingStore = useEmbeddingStore();
+const hypernetworkStore = useHypernetworkStore();
 
 function select(index: string, indexPath: string[]) {
     emit('select', indexPath)
@@ -77,6 +79,23 @@ function select(index: string, indexPath: string[]) {
                 <div class="flex">
                     <div class="embedding-category-name">{{ category }}</div>
                     <div class="embedding-category-size">{{ embeddingStore.categorySize[category] }}</div>
+                </div>
+            </ElMenuItem>
+        </ElSubMenu>
+
+        <ElSubMenu index="hypernetworks" v-loading="!hypernetworkStore.loaded">
+            <template #title>
+                <ElIcon>
+                    <IconBox/>
+                </ElIcon>
+                超网络模型
+            </template>
+            <ElMenuItem
+                v-for="category in hypernetworkStore.categories"
+                :index="category">
+                <div class="flex">
+                    <div class="embedding-category-name">{{ category }}</div>
+                    <div class="embedding-category-size">{{ hypernetworkStore.categorySize[category] }}</div>
                 </div>
             </ElMenuItem>
         </ElSubMenu>
