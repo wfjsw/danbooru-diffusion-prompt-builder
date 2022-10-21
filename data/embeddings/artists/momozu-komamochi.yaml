@@ -1,7 +1,7 @@
 # 调用该模型使用的命令 (模型图片左上角尖括号内容)
-prompt: psyche047-7500
+prompt: momozu-komamochi
 # 模型名称
-name: プシュケー
+name: 桃豆こまもち
 # 模型作者
 author: Fire Ghoscat @ t.me/StableDiffusion_CN
 # 模型分类
@@ -15,5 +15,5 @@ vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
 steps: 10001
 # 模型文件的 SHA256 Hash
-payloadHash: 28d9991d831f3bd8c4ea43e8480a4631980c69b1247b7edd4ab3c4950430b042
+payloadHash: 2cbffe393a61d1a8b145844d313d685bdabffca51a8baa1573994950019fda21
 restricted: true
