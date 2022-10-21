@@ -23,7 +23,7 @@ const theme = computed(() => {
         } else if (cartStore.existsNegative('tag', props.tag)) {
             return 'danger'
         } else {
-            return 'info'
+            return ''
         }
     } else {
         return props.type
@@ -61,7 +61,7 @@ function toggle() {
 </script>
 
 <template>
-    <ElTag :class="[$style.size_fix, {[$style.pointer]: direction !== null}]" @click="toggle()"
+    <ElTag :class="[$style.color_fix, $style.size_fix, {[$style.pointer]: direction !== null}]" @click="toggle()"
            :type="theme">
         <template v-if="tagItem">
             <span>{{ tag }}</span>
@@ -74,7 +74,7 @@ function toggle() {
     </ElTag>
 </template>
 
-<style module>
+<style module lang="scss">
 .pointer {
     cursor: pointer;
 }
@@ -87,5 +87,17 @@ function toggle() {
 
 .size_fix {
     --el-tag-font-size: 14px;
+}
+
+:global(html.dark) .color_fix {
+    --el-tag-text-color: #6ea8fe;
+
+    &:global(.el-tag--success) {
+        --el-tag-text-color: #75b798;
+    }
+
+    &:global(.el-tag--danger) {
+        --el-tag-text-color: #ea868f;
+    }
 }
 </style>

@@ -80,6 +80,8 @@ content:
   one eye closed:
     name: 一只眼睛闭着
   half-closed eyes:
+    alias:
+      - half closed eyes
     name: 眼睛半闭
   eyes closed:
     name: 闭眼
@@ -107,6 +109,8 @@ content:
   glowing eyes:
     name: 发光的双眼
   half-closed eye:
+    alias:
+      - half closed eye
     name: 半闭的眼睛(单眼)
   happy tears:
     name: 开心的眼泪

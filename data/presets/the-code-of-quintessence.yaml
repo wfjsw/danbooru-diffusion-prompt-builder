@@ -1,9 +1,7 @@
 name: 元素法典(一)
-description: >-
+description: |-
   作者：SteelPlate
-  
   原本链接：https://docs.qq.com/doc/DWHl3am5Zb05QbGVs
-  
   编者注：由于系统限制，所有标签的权重值均未保留，当按照整组应用时也无法单独对某一标签修改权重。
   部分标签按照数据库中标签名进行了修正。所有配图均为 925997e9 模型连续运行 5 次的实际情况。
 content:
@@ -156,3 +154,268 @@ content:
       - watermark
       - username
       - blurry
+  冰魔法(+):
+    description: |-
+      作者：mahiru（QQ 1273348952）
+      另一个万恶之源。大魔法时代开始的象征之一。
+      参考参数：Steps: 27, Sampler: Euler a, CFG scale: 7
+      本部分包含此条的正向标签。
+    content:
+      - masterpiece
+      - best quality
+      - illustration
+      - beautiful detailed girl
+      - beautiful detailed glow
+      - detailed ice
+      - beautiful detailed water
+      - beautiful detailed eyes
+      - expressionless
+      - floating palaces
+      - azure hair
+      - disheveled hair
+      - long bangs
+      - hairs between eyes
+      - skyblue dress
+      - black ribbon
+      - white bowties
+      - midriff
+      - half closed eyes
+      - big forhead
+      - blank stare
+      - flower
+      - large top sleeves
+    preview:
+      - af31cef58337d194d93595dca1771f718b9c904fb55425e9b91ba54c38b36eec
+      - 096285226aaf72f6afaa24706d31ca4d5677f049eba0149cb559729debb1f2cb
+      - 20a6ee30150141d5b6c534e3f0a7646d2bee1b26dc92e401f0c710aafdda0256
+      - 8cd6fed83145bff5cb165cbae7d31bb4923365bfade99973cece1e41e56ca8b8
+      - ee7573a20c8c034e66fc13d73cc8522bfe21f948bf3d4b7fb9a8fb217573b8aa
+  冰魔法(-):
+    description: |-
+      作者：mahiru（QQ 1273348952）
+      另一个万恶之源。大魔法时代开始的象征之一。
+      参考参数：Steps: 27, Sampler: Euler a, CFG scale: 7
+      本部分包含此条的反向标签。
+    content:
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - normal quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry
+      - missing arms
+      - large breasts
+  核爆法(+):
+    description: |-
+      作者：mahiru（QQ 1273348952）
+      参考参数：Steps: 28, Sampler: Euler a, CFG scale: 7
+      本部分包含此条的正向标签。
+    content:
+      - masterpiece
+      - best quality
+      - illustration
+      - nuclear explosion behide
+      - flames of war
+      - beautiful detailed girl
+      - beautiful detailed glow
+      - rain
+      - detailed lighting
+      - detailed water
+      - beautiful detailed eyes
+      - expressionless
+      - palace
+      - azure hair
+      - disheveled hair
+      - long bangs
+      - hair between eyes
+      - whitegrey dress
+      - black ribbon
+      - white bowties
+      - midriff
+      - big forhead
+      - blank stare
+      - flower
+      - long sleeves
+    preview:
+      - 867bfb873510fe960b9bf4414bc1d04fd352aa6e3b8b389d8539c34b16bc3e2c
+      - fb8d7c832499c8f02f572ddb3490217fbe891b74b6b599557200cbde7b79fbe0
+      - 4f2f3db4595fea6d97b92d546f9b0feba4d0e21a580f72da9cf7848795315312
+      - da6983bd8c23e78d6d0d3eec2338c90328b2b42e45fa1d44f90a2d6bd9cb6322
+      - d5255f699053fbf68d2a1b2456ba4ddbfd3a7912138b166f97feaf9116af32a5
+  核爆法(-):
+    description: |-
+      作者：mahiru（QQ 1273348952）
+      参考参数：Steps: 28, Sampler: Euler a, CFG scale: 7
+      本部分包含此条的反向标签。
+    content:
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - normal quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry
+      - missing arms
+      - large breasts
+  风魔法(+):
+    description: |-
+      作者：老年痴呆的疾风法师（QQ 1431322374）
+      “ 别  在  这  立  法  典  ！  ”
+      悲报，老年痴呆的疾风法师声明：“ 暂时停止发掘新 tag ”，哭
+      参考参数：CFG: 5.5, euler, step 50
+      本部分包含此条的正向标签。
+    content:
+      - masterpiece
+      - best quality
+      - beautiful detailed sky
+      - illustration
+      - 1girl
+      - solo
+      - small breasts
+      - ultra-detailed
+      - an extremely delicate and beautiful little girl
+      - beautiful detailed eyes
+      - side blunt bangs
+      - hair between eyes
+      - ribbon
+      - bowtie
+      - buttons
+      - bare shoulders
+      - blank stare
+      - pleated skirt
+      - close to viewer
+      - breeze
+      - flying splashes
+      - flying petals
+      - wind
+    preview:
+      - cad32b5b5a91e3bdfb1a9bb3da79a8ac1ea1dd2597bd0d7a08e9924f0de241c9
+      - a7dc73cc37fde0fa04e2723bef38e0770015377bbb20a2d3dc5c57a9758ab7c7
+      - 8e34bcc29fb22c1a9f3be48385fb55e74d1a7af67d171ed373c220cc2a509e4f
+      - 67b1b98593e2ac72d6eaa6d02a9ee6ccad84567dab3c1d9d83f9728e1e639676
+      - 9542e586d3c8078c7465472967a644b874c98fdd9df823802c333201e4148f43
+      - cb7ecee873aecf2f5e4d73f95d176ec8ab6ccdee1fbdbbc207cdbef8ffda4f73
+  风魔法(-):
+    description: |-
+      作者：老年痴呆的疾风法师（QQ 1431322374）
+      “ 别  在  这  立  法  典  ！  ”
+      悲报，老年痴呆的疾风法师声明：“ 暂时停止发掘新 tag ”，哭
+      参考参数：CFG: 5.5, euler, step 50
+      本部分包含此条的反向标签。
+    content:
+      - nsfw
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - normal quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry
+      - missing arms
+      - long neck
+      - humpbacked
+      - shadow
+      - nude
+  流沙法(+):
+    description: |-
+      作者：咸咸咸鱼（QQ 87153289）
+      参考参数：CFG 4.5 - 5.5
+      本部分包含此条的正向标签。
+    content:
+      - 1girl
+      - masterpiece
+      - best quality
+      - illustration
+      - watercolor
+      - sleepy
+      - sunset
+      - looking at viewer
+      - upper body
+      - bare shoulders
+      - cinematic lighting
+      - surrounded by heavy floating sand flow and floating sharp stones
+      - detailed beautiful desert with cactus
+      - extremely detailed eyes and face
+      - ink
+      - depth of field
+      - extremely detailed
+      - anime face
+      - dramatic angle
+      - medium breasts
+      - 8k wallpaper
+      - bright eyes
+      - an detailed organdie dress
+      - very close to viewers
+      - messy long hair
+      - veil
+      - focus on face
+      - golden bracelet
+      - long yarn
+      - lens flare
+      - light leaks
+      - medium wind
+      - detailed beautiful sky
+    preview:
+      - 4c64ce43ed8a9c6d1f168d400beafd3ec10af7935585820e5d809a2e711cb32d
+      - b6da84094c48ba26602486f334634a8361f3976d9a8b9d0b91abd85d2bff4f06
+      - b0c53e1ff7d7ea6db67cebbc245e1b39e5fc4fe11b72527d31ecbc8ceb3d9fb3
+      - c62522c5a89ca73c29105d13a49a38974af98e686eb23464efb23f5c02e4cd05
+      - 7bc6abc33597eef8fdd15237374c66d49db348da9544e968a4ea86798b0479f0
+  流沙法(-):
+    description: |-
+      作者：咸咸咸鱼（QQ 87153289）
+      参考参数：CFG 4.5 - 5.5
+      本部分包含此条的反向标签。
+    content:
+      - lowres
+      - bad anatomy
+      - bad hands
+      - text
+      - error
+      - missing fingers
+      - extra digit
+      - fewer digits
+      - cropped
+      - worst quality
+      - low quality
+      - normal quality
+      - jpeg artifacts
+      - signature
+      - watermark
+      - username
+      - blurry
+      - artist name
+      - bad feet
+      - nude
+      - skeleton girl

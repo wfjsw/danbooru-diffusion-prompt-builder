@@ -5,7 +5,6 @@ import {useEmbeddingStore} from './stores/embeddings'
 import {useHypernetworkStore} from './stores/hypernetworks'
 import './style.scss'
 import 'element-plus/theme-chalk/el-loading.css'
-// import '@fortawesome/fontawesome-svg-core/styles.css'
 
 createApp().mount('#app')
 
@@ -18,8 +17,11 @@ presetStore.load();
 embeddingStore.load();
 hypernetworkStore.load();
 
-const beforeUnloadListener = (event: any) => {
-    event.preventDefault();
-    return event.returnValue = "Are you sure you want to exit?";
-};
-window.addEventListener("beforeunload", beforeUnloadListener);
+if (import.meta.env.PROD) {
+    const beforeUnloadListener = (event: any) => {
+        event.preventDefault();
+        return event.returnValue = "Are you sure you want to exit?";
+    };
+    window.addEventListener("beforeunload", beforeUnloadListener);
+}
+
