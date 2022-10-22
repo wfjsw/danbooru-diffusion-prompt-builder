@@ -19,7 +19,7 @@ interface TagFileItem {
 }
 
 export const useTagStore = defineStore('tags', {
-    state: (): Tags => ({tags: {}}),
+    state: (): Tags => ({tags: {}, tagsPostCount: {}}),
     getters: {
         loaded: (state) => {
             return Object.keys(state.tags).length > 0;
@@ -96,8 +96,8 @@ export const useTagStore = defineStore('tags', {
     actions: {
         async load() {
             const tags = import.meta.glob<TagFile>('../../data/tags/**/*.yaml', {import: 'default'})
-
             const result = await Promise.all(Object.values(tags).map(f => f()))
+            const tagsPostCount: Record<string, number> = (await import('../../data/danbooru_tag_post_count.json')).default
             const tagData: Tags = {
                 tags: result.reduce((a: TagCategories, p: any) => {
                     const name = p.name.replaceAll('_', ' ').toLowerCase()
@@ -112,6 +112,7 @@ export const useTagStore = defineStore('tags', {
                     }
                     return a;
                 }, {}),
+                tagsPostCount,
             }
 
             this.$patch(tagData)

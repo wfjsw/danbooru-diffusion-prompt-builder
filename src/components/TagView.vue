@@ -4,6 +4,7 @@ import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
 import {useClipboard} from '@vueuse/core';
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faClipboard, faThumbsDown, faThumbsUp, faLink, faImageSlash} from "@fortawesome/pro-light-svg-icons";
+import TagPostCount from "./TagPostCount.vue";
 import type {TagMeta} from "../datatypes";
 import {useCartStore} from "../stores/cart";
 
@@ -87,8 +88,12 @@ function toggleNegative(tag: string = props.tag) {
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
-                <div class="tag-header"><code class="tag-name large">{{ tag }}</code></div>
+                <div class="tag-header">
+                    <code class="tag-name large">{{ tag }}</code>
+                    <TagPostCount :tag="tag"/>
+                </div>
                 <div class="buttons">
+
                     <ElTooltip :visible="copied">
                         <template #content>
                             <span>已复制到剪贴板</span>
@@ -126,7 +131,10 @@ function toggleNegative(tag: string = props.tag) {
                 <ul>
                     <li v-for="alias in meta.alias" :key="alias" class="text">
                         <div class="alias-tag flex-button-container">
-                            <div><code class="tag-name">{{ alias }}</code></div>
+                            <div>
+                                <code class="tag-name">{{ alias }}</code>
+                                <TagPostCount :tag="alias"/>
+                            </div>
                             <div class="buttons">
                                 <ElTooltip content="我想要" :show-after="750">
                                     <ElButton :type="aliasInPositive![alias] ? 'success' : 'default'" circle size="small"
@@ -154,6 +162,7 @@ function toggleNegative(tag: string = props.tag) {
 .tag-name {
     user-select: all;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    margin-right: 0.75rem;
 
     &.large {
         font-size: 12pt;

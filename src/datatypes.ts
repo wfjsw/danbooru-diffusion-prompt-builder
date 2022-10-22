@@ -16,7 +16,8 @@ export interface TagCategories {
 }
 
 export interface Tags {
-    tags: TagCategories
+    tags: TagCategories,
+    tagsPostCount: Record<string, number>,
 }
 
 export interface Preset {
