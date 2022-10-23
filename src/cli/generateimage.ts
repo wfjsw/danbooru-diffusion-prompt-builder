@@ -29,7 +29,7 @@ const generatedPath = path.resolve(root, 'workspace/generated_images')
 fs.mkdirSync(generatedPath, {recursive: true})
 
 for (const tag of tagSet) {
-    if (fs.existsSync(path.resolve(generatedPath, `${tag}.png`))) {
+    if (fs.existsSync(path.resolve(generatedPath, `${encodeURIComponent(tag)}.png`))) {
         continue
     }
     console.log(tag)
@@ -55,5 +55,5 @@ for (const tag of tagSet) {
         },
     })
     const json = await res.json()
-    await fs.promises.writeFile(path.resolve(generatedPath, `${tag}.png`), Buffer.from(json.images[0], 'base64'))
+    await fs.promises.writeFile(path.resolve(generatedPath, `${encodeURIComponent(tag)}.png`), Buffer.from(json.images[0], 'base64'))
 }

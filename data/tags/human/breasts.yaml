@@ -50,6 +50,7 @@ content:
     image: 9faad7b629b7e11bfdaeb6690eaa0e7fef8b6534f59d4fb47756117b94b3f9c8
   strap between breasts:
     name: 乳房之间的带子
+    image: 427842792d3a8a81f799c66c405b5132ec4855b4078d0711e7c38637f3572d87
   headphones on breasts:
     name: 耳机压胸
     wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones_on_breasts.html
@@ -58,6 +59,7 @@ content:
     image: dbede4d214dd650ecfd2bcbfea481b28cde987100a101231821f185e5385613c
   bandaids on nipples:
     name: 乳头贴着创可贴
+    image: 32e113aef63ed9e6b4f19d1aaa1dba19b2b5cdcee8fcbdc979f9fdb859dd89d5
   beltbra:
     name: 皮带束胸
   lace-trimmed bra:
@@ -100,11 +102,13 @@ content:
     image: 5ac72166e4a8c66027ff2938972682d33cdb759a41f7dd8465007420658415d2
   heart pasties:
     name: 心形乳贴
+    image: 42e390c7a1dd075cc39856d6d5224432676531898dd9b6c0db5f6f3efd109308
   lace bra:
     name: 蕾丝胸罩
     image: eae1b3bbd802ee4b4af39cb580532d9c2ee8213e1fee03685b24ff8321adc01c
   pasties:
     name: 乳贴
+    image: 9804a7637857697874ba3970f528e4df719f987f04c373d2ef54b5c4f24c92f3
   strap gap:
     name: 泛指覆盖面少的吊带胸罩
     image: 3e6e342fae2f5c06b07001981e9043e9e173fd71d17d836245e37b0ed4e4365f
@@ -113,3 +117,4 @@ content:
     image: d19adc1035e0d2d63269b96865e7eab32cce7f9793fbba1adf13329114321660
   tube top:
     name: 直筒式抹胸
+    image: 9af4e9c35c8d93c484b7c8630503df3158f78292110875199c2596b81c74fb1a

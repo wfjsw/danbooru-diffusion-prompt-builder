@@ -30,12 +30,15 @@ content:
     name: 低分辨率
   original:
     name: 原创
+    image: f801ef237e263189af40c8e725a7ffbae6ded7ef261392ef4249814c15189e88
   parody:
     name: 拙劣模仿
+    image: 204fc2942c782e2f6062aacb136b819ae2f429a5ecce892aab4c72c565bf07b6
   sample:
     name: 样图标记
   wallpaper:
     name: 壁纸
+    image: f7e31d8879289eef7ee815ba863aa7d2cf3764403162015d8644ab58c8286452
   masterpiece:
     name: 杰作
     image: a607e2da30c9320dd9341b6a6f9023a23ff2b0a4a54b9091cdba0325f43a2e6c

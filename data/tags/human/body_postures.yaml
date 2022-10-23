@@ -63,8 +63,10 @@ content:
     image: 183d7d5d3806d922510d03f42f99920abed4f659db2537075407d66d1d5a5193
   legs up:
     name: 抬两只脚
+    image: 481d874b80b7199ad6036bdb0b9384b9854a33e32f44c18acc67a917d5fef7e1
   lying:
     name: 躺着
+    image: 5a70b8cd7eeb629085cab6e0a74c76d4aeb336373d3ef16646c8760ad75c0107
   on stomach:
     name: 趴着
     image: 84833a3cdf7b89062b295de17489b040583e397eecf99a70557872c0fc9d8833
@@ -85,6 +87,7 @@ content:
     image: d7bb856364a7a293edf9410711f6ed96650a703218a924c1b7c397b73e16edca
   straddle:
     name: 跨坐
+    image: 05cf5770c57f844341df6ccdb0d85718172d4e984ff8767c603b081500ec8868
   top-down bottom-up:
     name: 趴着翘臀
   upside-down:
@@ -102,4 +105,5 @@ content:
     image: 07180bdab0d17df619dc03e3aaee385aea3fc77283e7bd177493a37bb662e362
   humpbacked:
     name: 驼背
+    image: e32e5030887c232f5d207a272f271c16e94b3555e0632fdbe7133e699b362937
 name: 人体姿势

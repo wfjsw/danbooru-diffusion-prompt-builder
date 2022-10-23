@@ -25,7 +25,7 @@ const saveImagePath = path.resolve(root, 'public/images')
 const photoFiles = glob.sync('*.png', {cwd: path.resolve(root, 'workspace/generated_images')})
 for (const file of photoFiles) {
     console.log(file)
-    const tag = file.slice(0, -4)
+    const tag = decodeURIComponent(file.slice(0, -4))
     const photoPath = path.resolve(root, 'workspace/generated_images', file)
     const image = await sharp(photoPath)
         .resize(512, 512, {fit: 'cover', withoutEnlargement: true})

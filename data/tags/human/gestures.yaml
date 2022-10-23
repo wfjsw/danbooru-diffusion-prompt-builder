@@ -3,14 +3,18 @@ content:
     name: 调整过膝袜
   arm support:
     name: 用手支撑住
+    image: d9f686967a674eb57e5997faec8a15566c3e7491286bf40670adbcb11d88b84b
   armpits:
     name: 举手露腋
+    image: ad9aed1088b7bb38dd5cd833659f90e934ebfe0d2d5aa7103507246dec497836
   arms behind back:
     name: 手放在身后
   arms crossed:
     name: 手交叉于胸前
+    image: 6a04b9de71b0500a1031a8916ee5e62936e156c555f5998fb18fd99c98545cd5
   arms up:
     name: 双抬臂
+    image: fbdb6a7256f9607b170ea438d5eb6b4edff58c7db4cc7251cd83708e2958ece2
   caramelldansen:
     description: 某著名伸手扭腰动作
     name: 焦糖舞
@@ -18,6 +22,7 @@ content:
     name: 猫爪手势
   chin rest:
     name: 手撑着头
+    image: fe7b16ff3b025f7f6c5dc7f0700c3c0849eec7a9ef2b4c2d5f15bca7436ecaae
   curtsy:
     name: 屈膝礼
   finger gun:
@@ -26,54 +31,72 @@ content:
     name: 拉头发
   hand on hip:
     name: 单手插腰
+    image: aeb1a2bdcdb05d29baf78142144fed57945df4f4926a11275e5347681a4aa7f7
   hand to mouth:
     name: 手放在嘴边
+    image: 113241c89b825a116bd577b2be52ce08629932ac3baadb6f2304c0eda4f6cbd1
   hands on another's breast:
     name: 手放在另一人的胸前
+    image: b14385a9d27850c16be06fc023294ae62a4d309126026e4586446edf34f11b09
   hands on hips:
     name: 双手叉腰
+    image: f6a872dd1d1afc27f9e1a232c14688fedddf6bd2202f592bfcbe1bfd9847559d
   holding:
     name: 拿着
   holding hands:
     name: 牵手
+    image: dfa718b14fafbbf4bf4934f4293c0ca8f5fb21d97c3237170bf70752f7c161df
   middle finger:
     name: 比出中指
   salute:
     name: 敬礼
+    image: 66257ffeb1aa5cf8db671149743dc3b16bbd19927ecf05287092a9839d1fd68c
   shushing:
     name: 嘘手势
   spread arms:
     name: 张开双臂
+    image: db73483e67a2ec6f7055b1bd77454258eb0ba648754573cc50937472afa2fe31
   stretch:
     name: 伸懒腰
+    image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
   thumbs up:
     name: 翘大拇指
+    image: eb331afc88474d7119b5a9458e85e4076efbd4d99a967c0feb2b49b0bdc39061
   undressing:
     name: 脱衣服中
+    image: 86ba1878785b5315ca6da18ee025ce5423e5fb15114e3153dae52c3868e901d2
   v:
     name: 胜利手势
   waving:
     name: 招手
+    image: 89da0b0153edb5a223752b529b015aaf29d3e4e01bf746f0ac8306c7b4991f43
   outstretched arms:
     name: 伸出双臂
   outstretched arm:
     name: 伸出单臂
+    image: bae90550638606741f21e5856330bdad6aae3cbd136d8cfa7a8303bb76ae144e
   outstretched hand:
     name: 伸出手
   reaching:
     name: 伸手触及
   arm up:
     name: 单抬臂
+    image: 41eb125b8ac42744f29c20ba473f41535b9d4eb5a1dee4abd87a55b6569c17c0
   presenting armpit:
     name: 展示腋窝
+    image: 9dd4f141ce52e06dec22a19a65cc5f0dfaf9e794773843b11376a4b83f6ec20d
   presenting panties:
     name: 展示内裤
+    image: b598e0f24e3275e2cf9080ca78e468b3633d4683981138df81d2bc5b4113f209
   arms behind head:
     name: 手臂放头后
+    image: c55af5cc720f3dfcf1f4fbfc08e95665284e8a6f23d24082f5601994de1abe7d
   kimono lift:
     name: 掀起和服
+    image: 33aaed1190c9f4700d85291e23e4acbaaf08eba173cecce877d624934275eef1
   kimono pull:
     name: 剥开和服
   skirt lift:
     name: 掀起裙子
+    image: 9fd16ad7ffc8e6c669d8ba77f9d5d1f4dac927f4c754d5861439f58320ec4e84
 name: 人物手势动作

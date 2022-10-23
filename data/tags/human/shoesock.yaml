@@ -2,83 +2,116 @@ name: 人物鞋袜
 content:
   slippers:
     name: 拖鞋
+    image: a566c946eb5c775823f1e43daaec87ab8f6122ce60333fa67c5a189931c1f27e
   socks:
     name: 短袜
+    image: 945f638f43ddd20f0e92cfd0f670db1fb2bbcf0c5a72d640ca8aeecf36b0a134
   striped socks:
     name: 横条袜
+    image: d53f18ea33aacc5fc9ff1c35c884147f5929be006d37bf3bc0fbd6b464b1f4f2
   striped thighhighs:
     name: 条纹过膝袜
   tabi:
     name: 日式厚底短袜
   torn thighhighs:
     name: 损坏了的过膝袜
+    image: 2236db0c4dc712aaf116434c82df33174719d14814e2bae1e3d7378d1c14ef36
   uwabaki:
     name: 女式学生鞋
   thighhighs:
     name: 过膝袜
+    image: d7172853bfb6614fcac7e00a70ca016816cdb0af77a7e2f6a8aad45c1554d940
   white thighhighs:
     name: 白色过膝袜
+    image: 2b366eafcc4a004c3fe239a6579cc1aaac348fc54b63e29226cf5b93b93b62eb
   high heels:
     name: 高跟鞋
+    image: 23efb34b4310cf00dc3b7b5bb85009aa82174fb4e2d6534d6876e8c8528e1407
   mary janes:
     name: 玛丽珍鞋
+    image: c767c943c8f17f3102a903a8588c4a8791b7d592f756e4631fe1e8942aec6464
   ankle socks:
     name: 踝袜
+    image: ba559061e4d39aad9d57b884978a93b7ddd5586fadb99b6dea18725c17b8130d
   back-seamed legwear:
     name: 袜缝
+    image: c5f8ea1c8b59399ea66d491b49df3c076f5ff97e3667f9d5e52de82e2ca526a7
   bobby socks:
     name: 美式短袜
+    image: f72e344d0e86f9c5fc25e9ed458a01c79e56205339aa3d360803dd1ebe399803
   bodystocking:
     name: 连体裤袜
+    image: 78d98619481488346d31dfcf281e3ba26cb2083242fca1d8c6720f4625c466ad
   bow legwear:
     name: 带蝴蝶结的裤袜
+    image: 33585940e8bbc2a0e47b3de5677ae7138b94bfede81cd1fb513519fbdd501466
   fine fabric emphasis:
     name: 精细的面料感/超还原的丝袜
+    image: 524ed9bd61e9f14f93bca3589c7a23cd284c6927d4bdd97e0ffe6e40a3d6f77c
   fishnet legwear:
     name: 渔网袜
+    image: b9d0c5ce80c2f7a619a000c45f73d3729e3e9573e3c307053c5c8b5095b16cd5
   pantylines:
     name: 紧致的裤袜/略透明的裤袜
   seamed legwear:
     name: 有接缝的裤袜
+    image: 78dac734fba02cab58814449506aab05ce5a31e0b36e0056e89cc56f18745ee2
   sheer legwear:
     name: 透明的裤袜
+    image: 96bc0b25a2ff3674c2a3db4677e93a239f09396d196eed8f4e799a007782eb99
   stirrup legwear:
     name: 马镫袜
+    image: b1d24e1e5e310c5f37d717a7a2b2c76bd68e23ece30cf36f41cb35d56ef5de26
   toeless legwear:
     name: 露趾裤袜
+    image: 328d6522783e7d74c2814feb827826acb0f25cd13a26bcbb02dc130e87bec1f3
   lace-trimmed legwear:
     name: 蕾丝边裤袜
+    image: 7c8f277609609aec10a1c6573604e8747d5473d1405c8ff11b4ae94ce3ef6138
   leg cutout:
     name: 裤袜有开口
   leg warmers:
     name: 腿套/暖腿袜
+    image: 82569b0b651ada99837327ecc6c8dbcca3c235e808fa993dadf2088ccc9fecf4
   kneehighs:
     name: 长袜
+    image: 6c4f9489b5a7c310e22a019b2d6239fe27d0f97570db1513837a61ac4a155b53
   leggings:
     name: 裤袜
+    image: 94c3ae88e183f9c4b83cb0cbd4d18e5f053d5fa305bab75a77f5103fa5fcadd4
   loose socks:
     name: 泡泡袜
+    image: 08b03d11fe55b5b99782765ee25a34c823670fd91e30c4223a5c7f99ee782dd3
   garter straps:
     name: 袜带
+    image: 5eec9ec41af74dcda1cb1bf7b0df81dc9bfb45ffd834f5981821b99d633b9d1f
   garters:
     name: 吊带袜
+    image: a59d9fe99bd5bbc03e4ed4ac4974c25248ff2c7c16fdbd9c70fe74bfd2fd5c74
   garter belt:
     name: 连腰吊带袜
+    image: 0f96f769fcf76b87c430b39fe8e0b922d3dfe021b919cbb96a30e4f714daacc2
   pink thighhighs:
     name: 粉色过膝袜
+    image: 2d1823507bbce36db21cf29bc2ac3baf39c425649f2500c78f025f0ac5d5647f
   pantyhose:
     name: 连裤袜
+    image: 4469744c889cee06d0b56ddcb289d5750d961ed75b2ea261e5efbf609585750c
   fishnets:
     alias:
       - fishnet pantyhose
       - fishnet stockings
     name: 网袜
+    image: 9636d3c3b746d57af24e72105f7b9037932944f4b1f3bf20dac30aa9c0d68f9b
   frilled legwear:
     name: 带褶边的过膝袜
+    image: 20a3ee46d9198fa6dfcef126a904f8ae79afc02a1f175ac9e6877cf5a68d6bbc
   black thighhighs:
     name: 黑色过膝袜
+    image: caab68020be87a86fbe3bc68608fde8f2a5dfca082aef3bfc5ff2f74ffa4a563
   ballet slippers:
     name: 芭蕾舞鞋
+    image: ac705187f0f2dfe81ff702c5078126a4d524c04e59d2f5a11fd6f7141277af84
   barefoot sandals:
     name: 裸足凉鞋
   boots:
@@ -87,19 +120,27 @@ content:
     name: 脱下的靴子
   cross-laced footwear:
     name: 交叉系带鞋
+    image: 2f07a1437e0044866a10670689c86f61fb3725878d41f28c9fba368b884da714
   high heel boots:
     name: 高跟靴
+    image: d1e71838e012817dc9080418c1c49483061c448b29384d81f9e1725c6ec41f88
   knee boots:
     name: 及膝靴
+    image: 009b9bf70e3e62671c6d0a67ad31e904716bc113d9422f6f3664fa0931bef7c1
   loafers:
     name: 乐福鞋
+    image: 0af1473bc80cc7caedb2e91dfa161c737a00d6c538caff043626f5d1ce6c1d34
   rudder footwear:
     name: 舰C舰娘专用鞋
+    image: 6854fca9a7237ba6275282e08887e047c938bf158a5b5cbf299171b84779f567
   stiletto heels:
     name: 细跟高跟鞋
+    image: 93522f7f6796363919ad912e4d9783293aea5574daaeb94c31313b36f97ba065
   strappy heels:
     name: 带束带的高跟鞋
+    image: b20818b5a484c1efb6f10f39401048a3acacc317f751d47e9dd7ed0da2c71090
   thigh boots:
     name: 高帮靴
+    image: b1750b3e67649fafc1e6ec20adf14bacca06af5e30e016b4c015428b6a84d984
   toeless boots:
     name: 露趾靴

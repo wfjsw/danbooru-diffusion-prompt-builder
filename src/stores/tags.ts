@@ -137,6 +137,7 @@ export const useTagStore = defineStore('tags', {
                     .filter(([, v]) => settings.showRestricted || !v.restricted)
                     .map(([key, meta]): [string, TagMeta & {score: number}] => {
                         let score = 0;
+                        if (key === query) score += 300;
                         if (key.includes(query)) score += 100;
                         if (meta.name.includes(query)) score += 50;
                         if (meta.alias?.some(a => a.includes(query))) score += 70;
@@ -154,6 +155,7 @@ export const useTagStore = defineStore('tags', {
                 this.allTags
                     .map((meta, key) => {
                         let score = 0;
+                        if (key === query) score += 300;
                         if (key.includes(query)) score += 100;
                         if (meta.name.includes(query)) score += 50;
                         if (meta.alias?.some(a => a.includes(query))) score += 70;

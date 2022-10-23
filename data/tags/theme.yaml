@@ -1,11 +1,11 @@
 name: 风格
-
 content:
   alphonse mucha:
     name: 阿尔丰斯·慕夏
+    image: 4ea7b30baf04ed9300949845f991b1382fddb5227863c3d039ffd9e4e44bbc1f
   anime screencap:
     alias:
-    - screencap
+      - screencap
     image: 71a912f60fa5ad5401a02da03f73f5129089855e62e669204e05c848abe09953
     name: 动画截图
     wikiURL: https://danbooru.donmai.us/wiki_pages/anime_screencap.html
@@ -15,10 +15,13 @@ content:
     name: 原画
   comic:
     name: 漫画
+    image: 64a58c3daf119526909ffd13f8ed56b921ab203fa54b2ac3152769367ba2e918
   cosplay:
     name: 角色扮演
+    image: 0b0db2c52bd954418ddf13d59a0e60f4f6ff52f45ac8ec628352bb84bb927253
   dakimakura:
     name: 抱枕
+    image: 04f314399c2b70b722008ad63b139b9de9946ed96536461e8f300b0c3f126646
   faux traditional media:
     description: 使用计算机技术模仿手绘的一种画风。
     image: d28d5c0976a09cc1a172f54158a02b56a15076f58322536b5c72f145d5275b46
@@ -30,13 +33,13 @@ content:
     name: 游戏 CG
   graphite:
     alias:
-    - pencil sketch
+      - pencil sketch
     image: d058d25501c06e68bfc9c0b6f658718fd90fe4f7817fb5b7b24df4dc968bbd7d
     name: 铅笔画/炭笔画
     wikiURL: https://danbooru.donmai.us/wiki_pages/graphite_%28medium%29
   lineart:
     alias:
-    - line art
+      - line art
     image: 1657fdf183a305b5e0184adbcc9078efd8d4f4d78eb8a789c306021d5792894c
     name: 线条艺术
     wikiURL: https://danbooru.donmai.us/wiki_pages/lineart.html
@@ -57,6 +60,7 @@ content:
     name: 拟人
   photo:
     name: 照片
+    image: 8e04e5bb300d995f90cce909a5da4e6c1243427ed07b43efc3e9f3ed8b08c061
   pixel art:
     name: 像素风
     wikiURL: https://danbooru.donmai.us/wiki_pages/pixel_art.html
@@ -67,14 +71,14 @@ content:
     image: 35d145ef23dc530f125fa83b5dc8ff32c7443f314c7844d9e77887713fad9827
   retro artstyle:
     alias:
-    - oldschool
+      - oldschool
     image: 16650bb494fa45887e9945309ef8944aed624174e280c7cea6b9fcc58e54132d
     name: 赛璐璐/复古艺术
     wikiURL: https://danbooru.donmai.us/wiki_pages/retro_artstyle.html
   sketch:
     alias:
-    - rough
-    - rough sketch
+      - rough
+      - rough sketch
     image: 5c2a80b8ac6a6b6453fd605180837118bd539fd04ce5ce064535b36375f99c5d
     name: 草图
     wikiURL: https://danbooru.donmai.us/wiki_pages/sketch.html
@@ -89,14 +93,14 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/traditional_media.html
   watercolor:
     alias:
-    - water pastel color
-    - watercolour
+      - water pastel color
+      - watercolour
     name: 水彩
     image: 8e6a0136146e3c9d70214a6c2ad2a4084d7118c91ac3c81ffde6834dffc2501e
     wikiURL: https://danbooru.donmai.us/wiki_pages/watercolor.html
   watercolor pencil:
     alias:
-    - watercolour pencil
+      - watercolour pencil
     image: 46aa5f9823a7ac2d706f13c74eaa6fe01f55dd8ed899919e737d023a04fba824
     name: 彩铅
     wikiURL: https://danbooru.donmai.us/wiki_pages/watercolor_pencil_(medium).html
@@ -112,38 +116,49 @@ content:
     image: 80ef4246571d4eac3f366029e5c4bcd5a281820a3838777139c58fe009fe92f6
   flat colors:
     name: 单色
+    image: 3b10424cfed7c6a6f80bda65c9257a36f851c1d146370b9c50a4fe0927aa4bf3
   limited palette:
     name: 色块风格
   silhouette:
     name: 剪影
+    image: a0f1f26d90b3d6009e8343d8d087b1598e1421614d88b9b9584c03fa2d3e9886
   color trace:
     name: 原画
   cute & girly (idolmaster):
     name: cute&girly (偶像大师)
+    image: 1e605fa74bd902a2665be5640da2049129a5629d37ddfec9704e1b4a4495b227
   partially colored:
     name: 部分上色
   cyberpunk:
     name: 赛博朋克
+    image: 988770b5c93ea6d73ce45e643fdaf92f9a467b1e73ef851cada37710becbd92a
   expression chart:
     name: 角色的多表情展示
+    image: adcd22531cfeed5401a2d165b24fdb113604d908d791aea95f2ae8e9e18c5c07
   faux figurine:
     name: 仿手办风格
+    image: 3c15aade33c8d72f67b9d8cd3a6f0d539bf08110f4e149c12f842ccf76524fb7
   flat color:
     name: 平涂风格
+    image: d6e18fb89537efd6168500a62ea5562f3996f04f153d0d96f6b6da6988281958
   fourth wall:
     name: 虚实穿插/现实感/次元壁
   greyscale:
     name: 纯黑白色/黑白照片化/灰度
+    image: 974f2cfc50469b7141b547736492688b7619b22be9623999946fe9695bc97fc3
   high contrast:
     name: 高对比度
+    image: f7dc18785d250941875aa23b5d3b791a1c7f31e9f09b28e30919cd2d654f8dc8
   letterboxed:
     name: 宽银幕格式
   motion lines:
     name: 体现运动的线
   perspective:
     name: 用了透视画法
+    image: 7c5315689aa951d25065179cfdb7c4f3cdbc6da748f14d9e1eaca89d8452b3c1
   photorealistic:
     name: 很像照片的画
+    image: 9d95baeecd150eee1555ca907a2a61c61c9c09afbe1be998690dd2cba67757aa
   spot color:
     name: 黑白画中的少量颜色
   variations:

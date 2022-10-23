@@ -2,6 +2,7 @@ name: 视角
 content:
   first-person view:
     name: 第一人称视角
+    image: 7a6cb77ac1c1f1e1c8659b3731e41bc78a96b99386cbac1ef28979f7cd790d0d
   pov:
     name: 主观视角
     image: cf5b684dd97f12ffe871c77770eb994aae8d1b42688b143d5d800b937f668bbb
@@ -25,6 +26,7 @@ content:
     image: 9dc019079b58b5f618b7254a9625439613a7eaa2fd45470f205035a50e9c56a9
   breast conscious:
     name: 对胸部在意
+    image: aaee885f8c879e87ed063bbeea21b0f883d4598842ceea80d9f09394c7c235fd
   backlighting:
     name: 逆光
     image: 840f02ef30da0f1d4a32980e9f6205974ede74b1a05d45fec4265ee6a1c67a7d

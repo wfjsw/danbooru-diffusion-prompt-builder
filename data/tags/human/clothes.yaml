@@ -1,6 +1,7 @@
 content:
   babydoll:
     name: 透明睡衣
+    image: e9f8691c22094347e3dfcdc497f3f4f337424bc519eb9cb3fe23b22e8b8fec31
   bikini:
     name: 比基尼
     image: da38751ab5b8fddaed2c9b0553faeb604cc0e6b01a49cd319f168bd64d3ca4e3
@@ -127,8 +128,10 @@ content:
     image: 479f5da4b61a4d0b3e6c3d533f532fdeb660e85392fbffefd6689a1ba4ddc5fa
   clothes down:
     name: 褪下衣物
+    image: 6b4a2116ba1be74fcab45827da80c37b873cc5cb106b79058463cd085a7e9614
   short kimono:
     name: 短下摆和服
+    image: 95f76350fa7768696ab104948f0153f91dd65a44fe4dcadfd2898c71bb958da7
   kimono:
     name: 和服
     image: edb918f0cd37e9b803df560b8623a04124f99d658aaedd1bafb4e920b54cccc2
@@ -207,6 +210,7 @@ content:
     image: 2981554823cca70c65afa877ef345dc3ef8ea8283d19987ad320aa5fd6159224
   maid bikini:
     name: 女仆比基尼
+    image: d4906c53758e819c36da6b8c90de61ee8a6581309ec80bfbf52fa0ccb3b4b311
   micro bikini:
     name: 迷你比基尼
     image: ff3f1b97bcd6f579ca5e361b5eb2283afbd2bf38924b12b529fd53dab9beefc5
@@ -224,6 +228,7 @@ content:
     image: 8bf2b8b4a363a3333a5a5355801ffdb7e04073bc2fe4ae5346b89e736420e575
   sports bikini:
     name: 运动比基尼
+    image: 5b75543db6ef0c245b8d1f75fe33c0b512094d003f7373eed0ddc47818cf5370
   strapless bikini:
     name: 无肩带比基尼
     image: 789bebadeead68a6c12ca7acb41c7eb279f936193725238ca9f1516249a24bab
@@ -234,6 +239,7 @@ content:
     name: 解开的比基尼
   bandeau:
     name: 抹胸比基尼
+    image: 57f41eac80d88c2c972325f4cdd9633e547e3c2b3ee4c1cbd1bbffda4f8efeba
   bikini under clothes:
     name: 比基尼当内衣
     image: a9b22297e767630138d1295d22dcad2f0aaa1233ddacc522fab18729f08d6834
@@ -251,6 +257,7 @@ content:
     image: 000a5d59e4506d3c4e02adefa1f9b0f69b8eaf2fa1530bf1eda3d527cbfd8062
   baseball uniform:
     name: 棒球服
+    image: b43c2f5ca106e5dc40bae35c25ff26dc0788c0adb1fade405ffbc72e981fbc78
   biker clothes:
     name: 自行车运动服
     image: f3d68194cb3cd562a5119715810dd589b8ab289f3397a7faed8dfa9095933770
@@ -330,6 +337,7 @@ content:
     image: 408430fd9a840bd735fce98b20e147f9e3c07a119a2c7d80c234afda45e6c5f4
   playboy bunny leotard:
     name: 兔女郎连身衣
+    image: adec10eb935126fc9857b55c157a163e328d12b29a417062efe4cf91979696eb
   police uniform:
     name: 警服
     image: d689f85116be6603a79dec8386b43acb960f31617176df61322dcbc49d46445b

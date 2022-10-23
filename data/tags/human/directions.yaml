@@ -5,8 +5,10 @@ content:
     image: aea431d16c5f21a075706ab174d7f5d33008df678e44dabb70b857b8421afe4e
   profile:
     name: 侧脸
+    image: c4de62e25672cb24adf001c443df4bb3335413e0870c3d936f60f3263628cb62
   straight-on:
     name: 正脸
+    image: 2565c0f7b19c600a73a5f57543946d003bdee8538569715b70fb731c692eceac
   full body:
     name: 全身
     image: a8671d8d903d27826c41b6247ab7c3e35ff8bb7e586a492bfd806a6ea2427402
@@ -56,6 +58,7 @@ content:
     name: 远眺
   staring:
     name: 盯着看
+    image: 094181949013e918cdd6483877a1d959f342ea4cb6d7f4ef5a467a041025e39d
   eye contact:
     name: 对视
     image: 269d4031e218d5f256dafd96e40ffc6c2841d5200c9be9009051199691f740bd
@@ -72,6 +75,7 @@ content:
     image: 31b3742a7350125602abea322819fb3d33adef8a71caadf3b8a4db201032119a
   from outside:
     name: 室外看向室内(的镜头)
+    image: 1c6f2b75277200a841b3466a28fa2bb208e561d09eca0a684f54f71009df229c
   from side:
     name: 角色的侧面
     image: ab0247ce9a1529abd16da55697110562478c0442cbbdd67c5e7a5db62ed7c97c
@@ -105,6 +109,7 @@ content:
     image: 44bd8096bb3519b85d5ba0a5ffabf77ec385ac7d05c5ea85b9956c93e6fbaf68
   peeping:
     name: 偷窥(强调视角)
+    image: 431d051b8a21007271ff36acbf0edf2c7b868953f8c3ade74b91c24d0b1f9e81
   pov crotch:
     name: 看向裤裆的视角
   pov hands:
