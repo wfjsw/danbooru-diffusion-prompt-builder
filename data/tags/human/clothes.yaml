@@ -14,11 +14,11 @@ content:
   business suit:
     name: 职场制服
     image: f79856a3dd037dd7dee0bada3e85de73e7c741ca6e49f4c9e62558960fd7a1ab
-  chinadress:
+  china dress:
     name: 旗袍
     image: d0cc86b1103ba5a2a282a1be22b13941104d4e5538cfe94ab791c11941da9cef
   chinese clothes:
-    name: 唐装
+    name: 中国服饰(极大概率是旗袍)
     image: d99c4878084bb9e1759fcb664e51d4930db0118a971d54a596763601ccd71681
   corset:
     name: 紧身褡
