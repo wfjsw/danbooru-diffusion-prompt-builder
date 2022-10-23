@@ -28,8 +28,10 @@ content:
     image: e8b2f57696da3aeb3a2ffd1e43f55b84719a4aa74e23c7e8497d0fbcc1483c04
   gradient background:
     name: 渐变的背景
+    image: 6040a74c186fbbf5f5e70ea87d8e34eaeae418f0493764fdc63bae333d93758b
   simple background:
     name: 简单背景/无背景
+    image: 3f7cff22c34c2283a50e2c0af16fd3038d8ae81f53d66f4a8a66f3fce64e9331
   transparent background:
     name: 透明背景
   ocean:
@@ -43,8 +45,10 @@ content:
     image: e34c1a7f5dcb7614466b8f6ce0d037ffd6ad89135eee932dacd16843746effc5
   valentine:
     name: 情人节
+    image: 47671b4ce86a87dc4da2cb4835dc1712316fb73677a598e05c2583b1ea445d8c
   halloween:
     name: 万圣节
+    image: 1d7b5cf03e9d9123f44b97d29d17f6a79c6fb54f9dacfa1521845bc6f6442aba
   christmas:
     name: 圣诞节
     image: 29ea7411d022b6fea1c127fb45e3bf53b02eefc3c5aaec5040d4375acf2d568c
@@ -65,6 +69,7 @@ content:
     image: 5b14e11246d410fd4781af690d20bcd576e8641b7e40d01e65697c1f67aeef95
   feather:
     name: 场景飘羽毛
+    image: 7620cbc9ac7eb864f709bde1d8ed9d1cfa3d8c9123343cc21e7b8dcc1e74eab6
   cafe:
     name: 咖啡厅
     image: 7e2c8afd7754ee04c931b51a36965672c75133cdf033d46df023fe933c6f7ef0

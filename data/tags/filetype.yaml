@@ -4,6 +4,7 @@ content:
     image: 314504567748db1a17dd1f2f70a94f5c1bf39a43ef746fd62d2d0583c264ddc6
   back:
     name: 背影像
+    image: e0ba3ef9e1751984824649bbaea25c0963656d6899a06567769001df2a11bfb1
   bust:
     name: 半身像
     image: 27df4bb3c2784a21d5c10cbf5e99552d966660c4338d3663b1758da1c6e69f3f
@@ -16,10 +17,13 @@ content:
     name: 所有人
   highres:
     name: 高分辨率
+    image: a3ec716c5dd8e71a1495e102c0fb12ad29f6ba4ee74465f7b6f18d64b749be9a
   huge filesize:
     name: 大文件体积
+    image: 355327175ebf24fc7d993a9d8b04c09d78b459d91cacedaa5e9d32a0198a623c
   incredibly absurdres:
     name: 极高分辨率
+    image: 972bdc86ce8eb5fe028f80ad086b5ca5c6685331f9c9a0aaf1621504b29e4265
   lowres:
     alias:
       - low res
@@ -34,8 +38,10 @@ content:
     name: 壁纸
   masterpiece:
     name: 杰作
+    image: a607e2da30c9320dd9341b6a6f9023a23ff2b0a4a54b9091cdba0325f43a2e6c
   best quality:
     name: 顶级质量
+    image: 3c25a58c3e639a5c2253efffee379e114172c5de65587c9814ae7d1b71258ad4
   worst quality:
     name: 糟糕质量
   low quality:
@@ -48,8 +54,11 @@ content:
     name: 有错误
   extremely detailed cg unity 8k wallpaper:
     name: 极高分辨率 CG 壁纸
+    image: fb29d1f0b771cd6b55036e70421c11f4499658ae1ab39e21cf1895a33c180b5c
   illustration:
     name: 插画
+    image: 5323aa55cc4e10559c580525d04ea1ec5eaf39088ffe8c2b81e77be4c1b12053
   nsfw:
     name: 不宜工作时观看
+    image: 4df94bec081e4f9f2065e7af41e4233b0e7f2ff19e37e9bd97a75fa675b44ec5
 name: 图片类型

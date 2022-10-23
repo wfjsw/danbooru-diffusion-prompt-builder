@@ -26,6 +26,7 @@ content:
     image: 6daa85881f293c2188f7315cc61d41d032dea8af525e51d6293a20cef5e2aec9
   cinematic lighting:
     name: 电影光效
+    image: 8029429ec07e77a763ffce45c4f5fa11605a1968c017e8eb94122daefd909135
   glowing light:
     name: 荧光
     image: 3bc6cf378c04b9a02d32110a224e555ca6f83ec75b7016b880aaa9aa8ef0c86f

@@ -4,8 +4,10 @@ content:
     name: 第一人称视角
   pov:
     name: 主观视角
+    image: cf5b684dd97f12ffe871c77770eb994aae8d1b42688b143d5d800b937f668bbb
   three sided view:
     name: 三视图
+    image: 11aee19715ab07681517a785046e998472d78a77e5bb93b7dfc6a8453d998494
   multiple views:
     name: 多视图
   cut-in:
@@ -37,10 +39,12 @@ content:
     image: be6827faf731f69ca90a457034a3a929ff717a34fcf7e0f9e1f6d988553b407a
   fisheye:
     name: 鱼眼镜头
+    image: 338ed2f476590ab6f51f210ad7ac7dacdd1e2da0d2067cdc8870bae8be908737
   foreshortening:
     name: 正前缩距透视法
   hatching (texture):
     name: 线影法(纹理)
+    image: ff9fba971e553f578e0b2df1382ad4db98b5a3ebfa746da5383852c606cc33a1
   vanishing point:
     name: 远景透视画法
     image: 9710d5a759ab450f40bd2418b842d688911a8d54d8d74225780ac2d06cbe54cb

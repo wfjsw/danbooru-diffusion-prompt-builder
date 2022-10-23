@@ -4,38 +4,50 @@ content:
     name: 胸肌
   breasts:
     name: 胸部
+    image: 6fb1c6543d8a4823ab2d0e7bcfc478e69fdc22ce0e7792372b5b5e103bbbdde3
   flat chest:
     name: 贫乳 (A)
+    image: 2cafaac24feca04b9816b2bf9f2a018de879fe936140cc2f91957a2abe351880
   small breasts:
     name: 小胸部 (B)
+    image: 6c8a97e3893036b67ea36c692fd6ebaf5e22977fdd7fb98ec8234b95155ae07d
   medium breasts:
     name: 中等胸部 (C)
+    image: 1b0365d4e1b6954a6f165c94f8e977d678e61c12d4cd7d4ee9e63e0980e61be4
   large breasts:
     name: 大胸 (D)
+    image: 05e2a7db392354ef3a51443f1bfecc893e472e4d623fece05d4d7169e439ba7f
   huge breasts:
     name: 巨乳 (E)
+    image: a84b137fbd87562ad08c71a17d5775ce15d77ba9829cef51f1090f9c1c3011f0
   gigantic breasts:
     name: 魔乳 (F)
+    image: ba9089187e412c400be122e455a9d0d0854fa6046c8a81a95b17096b15f74699
   bra:
     name: 胸罩
+    image: 64e380e34f9ba0442dd9029990cb3fc6b51bb6afc34c4d63ca093ff9ba5972a8
   bustier:
     name: 胸衣
+    image: 22e83bcf2e3e3eef87d89a2ae3a866a77efb72a9e9421aeb2d8d3a28f77d8e0d
   chemise:
     name: 吊带胸衣
+    image: 9da96527f2960af27902688de4b7e6c4345220863cf3cdf9f0be6f8121b29492
   sarashi:
     name: 缠胸布
-  pasti:
-    name: 乳贴
   cleavage:
     name: 乳沟
+    image: 9653004b13f7a890e04f184ef0851d7a1c88f69d9e8302685b708aeb7df1cdcd
   no bra:
     name: 无胸罩
+    image: e5c2bf852986c4f311a28af9756d91cffa8e0572aa9dec842d97bcb22fedffad
   brooch:
     name: 胸针
   chest jewel:
     name: 胸前有宝石
+    image: ba8a302df549384dcdf042119bc3da0a299681d63afe0a0807e2b938e569c81a
   chocolate on breasts:
     name: 胸上的巧克力
+    image: 9faad7b629b7e11bfdaeb6690eaa0e7fef8b6534f59d4fb47756117b94b3f9c8
   strap between breasts:
     name: 乳房之间的带子
   headphones on breasts:
@@ -43,22 +55,27 @@ content:
     wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones_on_breasts.html
   underboob:
     name: 南半球
+    image: dbede4d214dd650ecfd2bcbfea481b28cde987100a101231821f185e5385613c
   bandaids on nipples:
     name: 乳头贴着创可贴
   beltbra:
     name: 皮带束胸
   lace-trimmed bra:
     name: 蕾丝边胸罩
+    image: 22d28332312d9d93d0d147992b1717f7044c9a4eb71cb661cbdebb2c039d366d
   open bra:
     name: (前面)解开的胸罩
   sports bra:
     name: 运动内衣
+    image: ba705071cb549db6081a819dec807a78fb1f8db7f1ba2863cf9bd6a47e883d93
   bow bra:
     name: 带蝴蝶结的胸罩
+    image: 4020cdbb4c4c6520208821290ebe0ae8c835c5ea989e7603090ffe295e2a896f
   star pasties:
     name: 星形乳贴
   training bra:
     name: 运动内衣
+    image: c870981ecd42ffa8895cb5dd555c371a14f907ebcbe7c51316e7d21024f56be3
   bra lift:
     name: 掀上去的胸罩
   bra peek:
@@ -69,25 +86,30 @@ content:
     name: 摘下的胸罩
   bra strap:
     name: 内衣肩带
+    image: 07d5a707db0271535075b29fa8680a7bfa57864e80fbfe5fd360b664fcd4f44f
   breast padding:
     name: 胸垫
   breastplate:
     name: 胸甲
+    image: 1ef97ecad47d45ec8049fefa0b13d9c35e31f9350c86c574bb2ac25bad6540f2
   budget sarashi:
     name: 绷带裹胸
+    image: 9adb3f9709cca07c278a0999997db48a511e3ad70ba9a62528f856c2175fce41
   cupless bra:
     name: 高露出度胸罩
+    image: 5ac72166e4a8c66027ff2938972682d33cdb759a41f7dd8465007420658415d2
   heart pasties:
     name: 心形乳贴
   lace bra:
     name: 蕾丝胸罩
+    image: eae1b3bbd802ee4b4af39cb580532d9c2ee8213e1fee03685b24ff8321adc01c
   pasties:
     name: 乳贴
   strap gap:
     name: 泛指覆盖面少的吊带胸罩
+    image: 3e6e342fae2f5c06b07001981e9043e9e173fd71d17d836245e37b0ed4e4365f
   strapless bra:
     name: 无肩带胸罩
-  tubetop:
+    image: d19adc1035e0d2d63269b96865e7eab32cce7f9793fbba1adf13329114321660
+  tube top:
     name: 直筒式抹胸
-
-

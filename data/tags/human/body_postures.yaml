@@ -54,40 +54,52 @@ content:
     image: b07128ca6ec64ca17529099f506c57c2744f09e90ba43f7ff53a123f52870d0c
   kneeling:
     name: 下跪
+    image: 26d7c24612ba5a7d1ac925b33ee260fbeb5b547aec9298c302f5c9c892ad05e8
   leaning forward:
     name: 身体前驱
+    image: 2d73a60e26122cf58e4c7adbcafe6b6b7ee5beb107ada47e0c5c8089e91221b0
   leg lift:
     name: 抬一只脚
+    image: 183d7d5d3806d922510d03f42f99920abed4f659db2537075407d66d1d5a5193
   legs up:
     name: 抬两只脚
   lying:
     name: 躺着
   on stomach:
     name: 趴着
+    image: 84833a3cdf7b89062b295de17489b040583e397eecf99a70557872c0fc9d8833
   princess carry:
     name: 公主抱
+    image: 416caad53f65976184106325a8fd5fa5592a0951e353870f2e804463c85e3ab5
   seiza:
     name: 正坐
+    image: f847a879ff02c62487e06cd26e1d5a04beaa2e71ca7c27bbee8eefc5476b141a
   sitting:
     name: 坐着
+    image: aefd6e614307366ed7c133ac3af7d7d247fcd4204aac6e5de9735056047cb793
   spread legs:
     name: 张腿
+    image: a6f1cf6c7a2c9dd5bfa1f6e7cdf2fcd0b2aa754ed7fb835e92ba893c0bd4d07f
   squatting:
     name: 蹲下
+    image: d7bb856364a7a293edf9410711f6ed96650a703218a924c1b7c397b73e16edca
   straddle:
     name: 跨坐
   top-down bottom-up:
     name: 趴着翘臀
   upside-down:
     name: 颠倒的
+    image: 262fd2f130ac21ab66c693687922a74a456c7fa23887fbef70edff526e897c19
   wariza:
     alias:
-    - w-sitting
+      - w-sitting
     name: 割坐
+    image: 250dd9e7036f7bab060b98565a5ccba0837bc8548f678684b563b543b783b67d
   yokozuwari:
     name: 侧身坐
   zombie pose:
     name: 僵尸姿势
+    image: 07180bdab0d17df619dc03e3aaee385aea3fc77283e7bd177493a37bb662e362
   humpbacked:
     name: 驼背
 name: 人体姿势

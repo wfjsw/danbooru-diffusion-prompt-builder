@@ -2,78 +2,107 @@ name: 人物摆位
 content:
   facing away:
     name: 背对
+    image: aea431d16c5f21a075706ab174d7f5d33008df678e44dabb70b857b8421afe4e
   profile:
     name: 侧脸
   straight-on:
     name: 正脸
   full body:
     name: 全身
+    image: a8671d8d903d27826c41b6247ab7c3e35ff8bb7e586a492bfd806a6ea2427402
   out of frame:
     name: 脱框
+    image: a3708031c5668ece1c717680c052cdd28be8d90af65a8c7997ce87b346496b80
   head out of frame:
     name: 头部脱框
+    image: d5f8634fce1e2d9ed8d5275196e9a1a6c273e8bc15bce52e31711ebf526443d0
   feet out of frame:
     name: 脚部脱框
+    image: b6ecb81b32519e3295e94366b80987bdb9cbc9b603911deb497ddaa4fd87169f
   upper body:
     name: 上半身
+    image: 718a39279a041597edd6cf45027282eb39d75f9d3baa87c1032f6c130c0cb6ee
   lower body:
     name: 下半身
+    image: aee72f9f18bc46b12cfe7c9bfeeefb0f93af17df0fdbc29a332d62d6c2cfdaaf
   cropped torso upper body:
     name: 上半身出框
+    image: dacb91dd9e48ce74cd9ea82f79948662c33ebc0924fcc6a1212284ff127f3d26
   cropped shoulders:
     name: 肩膀出框
+    image: 1f1f26a306f6e4788d0f67305a0572d642881f9af30cb57e7af84b7a23ad8de0
   cropped arms:
     name: 手臂出框
+    image: b41eeab98f38c779be5ab6ffe5af1ab193e9da3b0ceb7558a823a9be49fdff9b
   cropped legs:
     name: 腿部出框
+    image: b7c90d4610ab1e65cc65b5e80a3d1330835e22ec0cc5cd0bbac0e84d5603d932
   cropped torso:
     name: 躯干出框
+    image: da5dfd63733b58ea99174091c025ee6f23b5fff8188a083af8ba9fc4f5117e7e
   selfiemirror:
     name: 自拍镜
+    image: 7963a267ebbb67003d7988cc750dcecabd30498cf72297cf130caca0c2c3a981
   symmetrical:
     name: 对称
+    image: eb18d86a27bc8a3c56b46809cfde9235febaa7b22d80f40685ab6b79cd35ea84
   facing viewer:
     name: 面对观众
+    image: 88b7db23b20a6521be45541470e0dba33ddcd7e7c2b85db435d24c57f3fbf183
   looking at another:
     name: 盯着另一人
+    image: d9cb151428a0ac7df295ae1ce4438b15d16f139c7be480df3244222ae582ddec
   looking afar:
     name: 远眺
   staring:
     name: 盯着看
   eye contact:
     name: 对视
+    image: 269d4031e218d5f256dafd96e40ffc6c2841d5200c9be9009051199691f740bd
   female pov:
     name: 女性视角
   from above:
     name: 俯视镜头
+    image: 6fd4775a5c01b2ce88383b48f759b9fe025f965eff659a418b546eb4e2731fac
   from behind:
     name: 背影
+    image: 92a63633102700973e97e872f986bc7bc6b77f391554c163a05db46542f6eede
   from below:
     name: 仰视镜头
+    image: 31b3742a7350125602abea322819fb3d33adef8a71caadf3b8a4db201032119a
   from outside:
     name: 室外看向室内(的镜头)
   from side:
     name: 角色的侧面
+    image: ab0247ce9a1529abd16da55697110562478c0442cbbdd67c5e7a5db62ed7c97c
   looking at breasts:
     restricted: true
     name: 瞄着乳房
+    image: f2b966c6370102eed9e6f21a050b832ba64be993e22e6192b35483d93f5bf453
   looking at penis:
     restricted: true
     name: 看着阴茎
+    image: 12f414e3fe8d3c38624557da3d97c7caceb57d3704d11509c0aca4a3b6674e82
   looking at phone:
     name: 看手机
+    image: c9b2dc148d6bb45ca7a7b70b182c79a45db529bddf8da8b42c93cb0b3c914f25
   looking at viewer:
     name: 看向阅图者
+    image: 936b1689a184411377a94303c2b012daaad44588833ae4408d940fa6f63ff678
   looking away:
     name: 移开视线
+    image: 6a1fc30408cea2a1739dc4d1efba4f727338d31246bc209a95b370851d5feb94
   looking back:
     name: 回眸
+    image: e608e37abafe80bad0406866974c97da2a37ce5316ece9492af220e514663df6
   looking down:
     name: 俯视
   looking to the side:
     name: 看向侧面
+    image: 11360990468a4ad5fcd10d5b587d35ed10326183b06e210ce901fa9af3971fe4
   looking up:
     name: 仰视
+    image: 44bd8096bb3519b85d5ba0a5ffabf77ec385ac7d05c5ea85b9956c93e6fbaf68
   peeping:
     name: 偷窥(强调视角)
   pov crotch:
@@ -82,6 +111,7 @@ content:
     name: 手伸来方向的视角
   sideways glance:
     name: 轻轻向侧面瞥
+    image: e441397d7563950c8e2f5d2c5e1595b95af63fc98aaac705a7af26623b232f64
   taking picture:
     name: 拍照/自拍
   upshirt:
@@ -90,15 +120,21 @@ content:
     name: 从裙底瞥
   upskirt:
     name: 从人的下方往上瞥
+    image: 77efccfec9e8ba5483833d3aeeedd0b89256aadd718131c40e119df66b6da1c1
   solo focus:
     name: 单人焦点
+    image: f7370a51081d049e85a2e22611912f1d7e26dd454964da207d10f4c534fb8d8a
   back focus:
     name: 背景焦点
+    image: 100f9d92ed17f23239a25ef8164e948ca8e5fc15ade0d2cee64d2be7e9974bfa
   ass focus:
     alias:
       - hip focus
     name: 臀部焦点
+    image: c50626f25f83507b7f5fced1ae95dd2842969443f7ad16fc095013857c560707
   foot focus:
     name: 足部焦点
+    image: 04b81c802647a54c8e768cc41ef1f3b2e6fa937cf4d11db57f55cbecdcfb0154
   portrait:
     name: 半身像
+    image: 0417df7c88fdf1dddcbde49361551732bebc07bfcd2e62cd3177400ff3e33a4a
