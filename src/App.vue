@@ -60,7 +60,7 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
                     <Sidebar @select="changeSelection"/>
                 </ElScrollbar>
             </ElAside>
-            <ElMain :class="['body-full-height',
+            <ElMain :class="['main', 'body-full-height',
                 {'left-expanded': asideExpanded === 'category', 'right-expanded': asideExpanded === 'cart'}]"
                 @click="switchAsideExpanded('reset')"
             >

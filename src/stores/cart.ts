@@ -140,7 +140,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
-                    weight: 0,
+                    weight,
                 })
                 this.removeNegativeTag(tagName, 'embedding')
                 return
@@ -152,7 +152,7 @@ export const useCartStore = defineStore('cart', {
                 name: tagName,
                 category: null,
                 children: null,
-                weight: 0,
+                weight,
             })
             this.removeNegativeTag(tagName, 'tag')
             return
@@ -190,7 +190,7 @@ export const useCartStore = defineStore('cart', {
                     name: tagName,
                     category: null,
                     children: null,
-                    weight: 0,
+                    weight,
                 })
                 this.removePositiveTag(tagName, 'embedding')
                 return
@@ -202,7 +202,7 @@ export const useCartStore = defineStore('cart', {
                 name: tagName,
                 category: null,
                 children: null,
-                weight: 0,
+                weight,
             })
             this.removePositiveTag(tagName, 'tag')
             return

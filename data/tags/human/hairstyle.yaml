@@ -292,4 +292,14 @@ content:
   very short hair:
     name: 很短的头发
     image: 56f47ae8a76c4a6f27b2961ff50a80ca66fdd36eb958a65993abb378fce9cdf6
+  bangs pinned back:
+    name: 掀起的刘海
+  braided bangs:
+    name: 辫子刘海
+  diagonal bangs:
+    name: 斜刘海
+  single hair intake:
+    name: 单侧进气口发型
+
+
 name: 人物发型

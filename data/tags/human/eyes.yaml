@@ -164,4 +164,15 @@ content:
   streaming tears:
     name: 流泪
     image: c9fb4b24f1ef7d231008b32f6b1cd2866e391c26db3cf589bc53d294d104d5ce
+  eyebrows behind hair:
+    name: 挡在头发下的眉毛
+  eyebrows visible through hair:
+    name: 透过头发可以看到的眉毛
+  eyelashes:
+    name: 睫毛
+  eyeliner:
+    name: 眼线
+  eyes visible through hair:
+    name: 透过头发可以看到的眼睛
+
 name: 人物眼睛

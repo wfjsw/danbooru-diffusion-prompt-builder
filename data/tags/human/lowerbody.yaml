@@ -58,6 +58,7 @@ content:
     image: 1385a9ee56cbbc29264ad91e857295f1ff9832dee1964fb759f77ce21df2c866
   no panties:
     name: 无内裤
+    restricted: true
     image: f64d663b79aa7bacce853943d4b0a642957bb9c9cea51996dad1558ef58ce4cb
   panties:
     name: 内裤
@@ -262,3 +263,17 @@ content:
   panties under pantyhose:
     name: 穿在裤袜里的内裤
     image: 231c23c75bfaeb034340e924f2809d535d9a02096584b36162c175922f46e0c5
+  ass:
+    name: 屁股
+    restricted: true
+  ass visible through thighs:
+    name: 正面可见的屁股
+    restricted: true
+  bare hips:
+    name: 裸臀
+    restricted: true
+  no legwear:
+    name: 裆胯以下裸着
+    restricted: true
+
+

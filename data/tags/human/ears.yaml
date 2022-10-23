@@ -39,3 +39,9 @@ content:
   cat ear headphones:
     name: 猫耳式耳机
     image: c1f6f75600097ff9008b724339d237628e02001c261338ba0192c541ff56f384
+  bat ears:
+    name: 蝙蝠耳朵
+  raccoon ears:
+    name: 浣熊耳朵
+  long pointy ears:
+    name: 尖尖的长耳朵

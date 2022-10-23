@@ -99,4 +99,16 @@ content:
   skirt lift:
     name: 掀起裙子
     image: 9fd16ad7ffc8e6c669d8ba77f9d5d1f4dac927f4c754d5861439f58320ec4e84
+  shared food:
+    name: 共享食物/用嘴递食物
+  nipple pull:
+    name: 拉乳头
+    restricted: true
+  nipple tweak:
+    name: 捏乳头
+    restricted: true
+  breast grab:
+    name: 摸乳
+    restricted: true
+
 name: 人物手势动作

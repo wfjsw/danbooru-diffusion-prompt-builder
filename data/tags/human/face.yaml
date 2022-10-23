@@ -241,3 +241,21 @@ content:
   yandere:
     name: 病娇
     image: 77dad4f02e8d7e4f35daa8fea5ca4e847eba635fad2ad2367687abe0b776e776
+  saliva trail:
+    name: 唾液拉丝
+  red lips:
+    name: 朱唇
+  skin fang:
+    name: 把嘴的一部分画成虎牙状
+  upper teeth:
+    name: 露出上排牙齿
+  fang:
+    name: 虎牙
+  fang out:
+    name: 露出虎牙/露出尖牙
+  long tongue:
+    name: 长舌头
+  forehead:
+    name: 额头
+  light blush:
+    name: 淡淡的腮红

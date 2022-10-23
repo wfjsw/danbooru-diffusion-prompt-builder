@@ -101,6 +101,7 @@ html.dark .el-switch {
 }
 
 .masonry {
+    overflow-x: visible;
     .box-card {
         display: flex;
         flex-direction: column;
@@ -110,49 +111,56 @@ html.dark .el-switch {
 
     @media screen and (max-width: 512px) {
         .box-card {
-            width: 100%;
+            width: calc(100% - 2px);
         }
     }
 
     @media screen and (min-width: 513px) {
         .box-card {
-            width: calc(50% - 20px);
+            width: calc(50% - 12px);
         }
     }
 
     @media screen and (min-width: 1024px) {
         .box-card {
-            width: calc(100% - 10px);
+            width: calc(100% - 2px);
         }
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1280px) {
         .box-card {
-            width: calc(50% - 20px);
+            width: calc(50% - 12px);
         }
     }
 
-    @media screen and (min-width: 1601px) {
+    @media screen and (min-width: 1600px) {
         .box-card {
-            width: calc(33% - 20px);
+            width: calc(33% - 12.5px);
         }
     }
 
     @media screen and (min-width: 1920px) {
         .box-card {
-            width: calc(25% - 20px);
+            width: calc(25% - 17.5px);
         }
     }
 
     @media screen and (min-width: 2160px) {
         .box-card {
-            width: calc(20% - 20px);
+            width: calc(20% - 18px);
         }
     }
 
     @media screen and (min-width: 2560px) {
         .box-card {
-            width: calc(16.67% - 20px);
+            width: calc(16.67% - 19px);
         }
     }
 }
+
+.main .search {
+    margin-bottom: 1.5rem;
+    //padding-right: 1.5rem;
+}
+
+

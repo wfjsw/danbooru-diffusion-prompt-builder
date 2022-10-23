@@ -133,7 +133,6 @@ function toggleNegative(tag: string = props.tag) {
                         <div class="alias-tag flex-button-container">
                             <div>
                                 <code class="tag-name">{{ alias }}</code>
-                                <TagPostCount :tag="alias"/>
                             </div>
                             <div class="buttons">
                                 <ElTooltip content="我想要" :show-after="750">

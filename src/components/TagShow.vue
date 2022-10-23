@@ -49,11 +49,6 @@ watch(toRef(props, 'category'), () => {
 </template>
 
 <style scoped lang="scss">
-.search {
-    margin-bottom: 1.5rem;
-    padding-right: 1.5rem;
-}
-
 .scrollable {
     height: calc(100vh - 64px - 20px - 10px - 1.17rem - 4rem - 32px - 1.15rem);
     overflow-y: auto;

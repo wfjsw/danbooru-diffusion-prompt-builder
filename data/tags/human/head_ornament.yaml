@@ -303,3 +303,12 @@ content:
   elbow pads:
     name: 护肘
     image: 7d5d46a2f6b33eca4089e03bf3e9382990268df2682b41df453fa1ea98ee23c4
+  dragon horns:
+    name: 龙角
+  eyewear on head:
+    name: 眼镜别在头上
+  mole under eye:
+    name: 眼角有痣
+  mole under mouth:
+    name: 嘴角有痣/美人痣
+

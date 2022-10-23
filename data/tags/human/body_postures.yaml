@@ -106,4 +106,7 @@ content:
   humpbacked:
     name: 驼背
     image: e32e5030887c232f5d207a272f271c16e94b3555e0632fdbe7133e699b362937
+  breast smother:
+    name: 把头塞入胸
+    restricted: true
 name: 人体姿势

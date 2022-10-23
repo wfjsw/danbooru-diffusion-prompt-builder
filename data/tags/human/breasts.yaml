@@ -39,6 +39,7 @@ content:
     image: 9653004b13f7a890e04f184ef0851d7a1c88f69d9e8302685b708aeb7df1cdcd
   no bra:
     name: 无胸罩
+    restricted: true
     image: e5c2bf852986c4f311a28af9756d91cffa8e0572aa9dec842d97bcb22fedffad
   brooch:
     name: 胸针
@@ -118,3 +119,12 @@ content:
   tube top:
     name: 直筒式抹胸
     image: 9af4e9c35c8d93c484b7c8630503df3158f78292110875199c2596b81c74fb1a
+  nipples:
+    name: 乳头
+    restricted: true
+  puffy nipples:
+    name: 大乳头
+    restricted: true
+  small nipples:
+    name: 小乳头
+    restricted: true
