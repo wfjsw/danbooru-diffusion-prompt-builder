@@ -259,3 +259,32 @@ content:
     name: 额头
   light blush:
     name: 淡淡的腮红
+  cheek-to-cheek:
+    name: 脸贴脸
+  cheek bulge:
+    name: 鼓着腮帮
+  cheek pinching:
+    name: 捏脸颊
+  cheek poking:
+    name: 戳脸颊
+  cheek pull:
+    name: 扯脸颊
+  chin grab:
+    name: 抬下巴
+  chin rest:
+    name: 手撑着头
+    image: fe7b16ff3b025f7f6c5dc7f0700c3c0849eec7a9ef2b4c2d5f15bca7436ecaae
+  chin stroking:
+    name: 摸下巴
+  covering eyes:
+    name: 遮住眼睛
+  covering:
+    name: 挡住脸
+  covering mouth:
+    name: 挡住嘴巴
+  face-to-face:
+    name: 脸贴脸
+  facing another:
+    name: 二人面对面(脸贴得很近)
+  forehead-to-forehead:
+    name: 额头贴额头

@@ -87,8 +87,6 @@ content:
   chair:
     name: 椅子
     image: e94b12b66052f7b3b48f87c9eafda9664d056364ee5461fbbe7dc97b96f2affc
-  mimikaki:
-    name: 掏耳勺
   crease:
     name: 起皱
   backpack:

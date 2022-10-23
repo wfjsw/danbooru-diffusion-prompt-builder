@@ -106,7 +106,39 @@ content:
   humpbacked:
     name: 驼背
     image: e32e5030887c232f5d207a272f271c16e94b3555e0632fdbe7133e699b362937
-  breast smother:
-    name: 把头塞入胸
-    restricted: true
+  back-to-back:
+    name: 背靠背
+  gradient:
+    name: (身体或肢体)倾斜
+  head back:
+    name: 弓背高潮
+  bowing:
+    name: 鞠躬
+  leaning:
+    name: 倚靠/身体倾斜
+  leaning back:
+    name: 身体往后靠
+  leaning to the side:
+    name: 向一侧倾斜身体
+  on back:
+    name: 仰躺
+  on side:
+    name: 侧卧
+  reclining:
+    name: 斜倒斜躺姿势
+  sitting on lap:
+    name: 坐在大腿上
+  straddling:
+    name: 跨坐
+  stretch:
+    name: 伸懒腰
+    image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
+  the pose:
+    name: 趴在地上并翘起脚
+  head rest:
+    name: 枕着头/托着头
+  head tilt:
+    name: 歪着头
+  head down:
+    name: 低着头
 name: 人体姿势

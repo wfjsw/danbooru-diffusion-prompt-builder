@@ -20,9 +20,6 @@ content:
     name: 焦糖舞
   cat pose:
     name: 猫爪手势
-  chin rest:
-    name: 手撑着头
-    image: fe7b16ff3b025f7f6c5dc7f0700c3c0849eec7a9ef2b4c2d5f15bca7436ecaae
   curtsy:
     name: 屈膝礼
   finger gun:
@@ -56,9 +53,6 @@ content:
   spread arms:
     name: 张开双臂
     image: db73483e67a2ec6f7055b1bd77454258eb0ba648754573cc50937472afa2fe31
-  stretch:
-    name: 伸懒腰
-    image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
   thumbs up:
     name: 翘大拇指
     image: eb331afc88474d7119b5a9458e85e4076efbd4d99a967c0feb2b49b0bdc39061
@@ -101,14 +95,168 @@ content:
     image: 9fd16ad7ffc8e6c669d8ba77f9d5d1f4dac927f4c754d5861439f58320ec4e84
   shared food:
     name: 共享食物/用嘴递食物
-  nipple pull:
-    name: 拉乳头
-    restricted: true
-  nipple tweak:
-    name: 捏乳头
-    restricted: true
-  breast grab:
-    name: 摸乳
-    restricted: true
 
+  adjusting hair:
+    name: 理头发
+  adjusting legwear:
+    name: 整理裤袜
+  adjusting panties:
+    name: 拨内裤
+  arm grab:
+    name: 抓住手臂
+  arm held back:
+    name: 手臂往后拉
+  arm hug:
+    name: 挽手
+  armpit peek:
+    name: 微微露出腋窝
+  arms around neck:
+    name: 双手搂着脖子
+  arms at sides:
+    name: 双手垂放
+  beckoning:
+    name: 招手
+  belly grab:
+    name: 捏着肚子
+  bikini pull:
+    name: 扯着比基尼
+  skirt pull:
+    name: 拉开裙子
+  caressing testicles:
+    name: 爱抚睾丸
+    restricted: true
+  carrying over shoulder:
+    name: 肩扛
+  carrying under arm:
+    name: 夹在腋下
+  paw pose:
+    name: 爪子姿势
+  claw pose:
+    name: 举爪姿势
+  clothes lift:
+    name: 掀起衣物
+  clothes pull:
+    name: 拉开衣物
+  bunching hair:
+    name: 手持辫子
+  convenient arm:
+    name: 遮住关键部位的手臂
+  crossed arms:
+    name: 交叉双臂
+  cuddling:
+    name: 拥抱
+  dress lift:
+    name: 掀起裙子
+  dress removed:
+    name: 脱下裙子
+  dual wielding:
+    name: 双持
+  palm:
+    name: 以手掩面
+  feeding:
+    name: 喂食
+  fingering through clothes:
+    name: 手指隔着衣物摸来摸去
+  flapping:
+    name: 拍打动作
+  glomp:
+    name: 热情的拥抱/扑上来抱住
+  grabbing:
+    name: 抓住/抓着
+  guided breast grab:
+    name: 把对方的手抓过来摸自己的胸
+    restricted: true
+  hair flip:
+    name: 拨头发
+  hair tucking:
+    name: 撩头发
+  hair twirling:
+    name: 手指卷着头发
+  hand between breasts:
+    name: 手放在胸前
+  hand between legs:
+    name: 手放在两腿之间
+  hand in hair:
+    name: 手埋在头发里
+  hand in panties:
+    name: 手伸进内裤里
+  hand on another's cheek:
+    name: 手摸着对方的脸颊
+  hand on another's chest:
+    name: 手放在对方的胸前
+  hand on another's chin:
+    name: 手托着对方的下巴
+  hand on another's:
+    name: 手接触到对方的脸
+  hand on another's stomach:
+    name: 手放在对方的肚子上
+  hand on ass:
+    name: 手放在屁股上
+  hand on own knee:
+    name: 手放在自己的膝盖上
+  hand on own stomach:
+    name: 把手放在自己的肚子上
+  hand to own mouth:
+    name: 手朝向自己嘴
+  heart hands:
+    name: 双手比心
+  heart hands duo:
+    name: 两个人一起用手比心
+  holding arrow:
+    name: 拉着弓
+  holding condom:
+    name: 拿着避孕套
+    restricted: true
+  holding panties:
+    name: 拿着内裤
+    restricted: true
+  holding strap:
+    name: 手拉着吊带
+  holding syringe:
+    name: 手持注射器
+  holding underwear:
+    name: 手持内衣
+    restricted: true
+  holding whip:
+    name: 握着鞭子
+  index finger raised:
+    name: 食指抬起
+  lifted by another:
+    name: 被对方掀起衣物
+  lifted by self:
+    name: 掀起自己的衣物
+  necktie grab:
+    name: 抓着领带
+  ok sign:
+    name: OK手势
+  own hands together:
+    name: 双手合十
+  rubbing eyes:
+    name: 揉眼睛
+  shading eyes:
+    name: 遮阳手势
+  sheet grab:
+    name: 抓着床单
+  shoujo kitou-chuu:
+    name: 少女祈祷中
+  talking on phone:
+    name: 打电话
+  through clothes:
+    name: 隔着衣物爱抚
+  tying:
+    name: 打结(动作)
+  yawning:
+    name: 打哈欠
+  drying hair:
+    name: 弄干头发
+  v over eye:
+    name: 在眼边比剪刀手
+  grabbing another's hair:
+    name: 抓着对方的头发
+  tying hair:
+    name: 扎头发
+  mimikaki:
+    name: 采耳
+  holding eyewear:
+    name: 拿着眼镜/正在摘眼镜
 name: 人物手势动作
