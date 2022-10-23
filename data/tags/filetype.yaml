@@ -1,12 +1,15 @@
 content:
   absurdres:
     name: 超高分辨率
+    image: 314504567748db1a17dd1f2f70a94f5c1bf39a43ef746fd62d2d0583c264ddc6
   back:
     name: 背影像
   bust:
     name: 半身像
+    image: 27df4bb3c2784a21d5c10cbf5e99552d966660c4338d3663b1758da1c6e69f3f
   checkered:
     name: 格子的
+    image: 7d9372423af01962a499744ca2a56e038ca5ba621d742eb1a8a15600effb315a
   column lineup:
     name: 小图拼接
   everyone:

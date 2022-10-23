@@ -46,6 +46,7 @@ const className = computed(() => {
         display: inline-block;
         font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
         font-weight: 200;
+        user-select: none;
     }
 
     .tag_post_count {

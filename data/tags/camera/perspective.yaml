@@ -14,20 +14,27 @@ content:
     name: (突出)指间
   between legs:
     name: (强调)两腿之间
+    image: 5e1dc7676b4afac189c393f6fc5515f2753f8d932d2613affcad49f46304a465
   between thighs:
     name: (强调)大腿之间
+    image: 8506993393f0b1b5758fe841eda19597d65d38afc0f701c8b99d3cb79b73f013
   blurry foreground:
     name: 前景模糊
+    image: 9dc019079b58b5f618b7254a9625439613a7eaa2fd45470f205035a50e9c56a9
   breast conscious:
     name: 对胸部在意
   backlighting:
     name: 逆光
+    image: 840f02ef30da0f1d4a32980e9f6205974ede74b1a05d45fec4265ee6a1c67a7d
   close-up:
     name: 特写镜头
+    image: 387630ada23031c407cce5bc44c077c96eac13dac096fa251013dd240a89d621
   cowboy shot:
     name: 七分身镜头
+    image: c56cb09cd078b3a99d0c600c5fe26e26500d264b66e61d74b168e4b3c1c7a834
   dutch angle:
     name: 德式倾斜镜头
+    image: be6827faf731f69ca90a457034a3a929ff717a34fcf7e0f9e1f6d988553b407a
   fisheye:
     name: 鱼眼镜头
   foreshortening:
@@ -36,5 +43,7 @@ content:
     name: 线影法(纹理)
   vanishing point:
     name: 远景透视画法
+    image: 9710d5a759ab450f40bd2418b842d688911a8d54d8d74225780ac2d06cbe54cb
   wide shot:
     name: 广角镜头
+    image: 58f6a76356725fd8528c851315c270ddf3b7da4063849cb9405483d862932864

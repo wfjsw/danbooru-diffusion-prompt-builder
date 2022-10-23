@@ -12,7 +12,9 @@
     "importimage": "tsx ./src/cli/importimage.ts",
     "importembedding": "tsx ./src/cli/importembedding.ts",
     "importuncroppedimage": "tsx ./src/cli/importuncroppedimage.ts",
-    "updatepostcount": "tsx ./src/cli/updatepostcount.ts"
+    "updatepostcount": "tsx ./src/cli/updatepostcount.ts",
+    "generateimage": "tsx ./src/cli/generateimage.ts",
+    "importgeneratedimage": "tsx ./src/cli/importgeneratedimage.ts"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",

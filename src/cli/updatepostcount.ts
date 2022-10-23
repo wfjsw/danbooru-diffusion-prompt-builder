@@ -5,7 +5,6 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 import {type TagCategories} from '../datatypes'
 
-const resolution = new Set()
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const tagFiles = glob.sync('**/*.yaml', {cwd: path.resolve(dirname, '../../data/tags')})

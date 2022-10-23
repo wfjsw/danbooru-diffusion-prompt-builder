@@ -28,3 +28,4 @@ dist-ssr
 .yarn/install-state.gz
 
 stats.html
+workspace/
