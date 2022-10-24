@@ -202,9 +202,6 @@ content:
   gas mask:
     name: 防毒面具
     image: af3315a2e5364dbc3e15614a2d4ca6c7e62ec9539d0921f2b76a8f1862b60456
-  lipstick:
-    name: 口红/唇膏
-    image: 5015bf55b1ebfea70121e8ec0e788ff0aace9c726da369f00006544a7cbf03f5
   anchor choker:
     name: 锚形项圈
     image: ae48762bfd0bcc6b2ef18d19426562de43da43c02cf64dececb80bf21acebc3a
@@ -311,4 +308,75 @@ content:
     name: 眼角有痣
   mole under mouth:
     name: 嘴角有痣/美人痣
+  x hair ornament:
+    name: x发饰
+  black hairband:
+    name: 黑色发带
+  hair scrunchie:
+    name: 发箍
+  hair rings:
+    name: 发圈
+    image: 285eca8226af2fdfced185ef648fb88388464b8994e21f5df39f2a06c4b2069e
+  tied hair:
+    name: 扎头发
+  white hairband:
+    name: 白色发带
+  hair tie:
+    name: 发带
+  frog hair ornament:
+    name: 青蛙发饰
+  food-themed hair ornament:
+    name: 食物发饰
+  star hair ornament:
+    name: 星星发饰
+  heart hair ornament:
+    name: 心形发饰
+  red hairband:
+    name: 红色发带
+  butterfly hair ornament:
+    name: 蝴蝶发饰
+  snake hair ornament:
+    name: 蛇发饰
+  lolita hairband:
+    name: 洛丽塔发带
+  feather hair ornament:
+    name: 羽毛头饰
+  blue hairband:
+    name: 蓝色发带
+  anchor hair ornament:
+    name: 锚发饰
+  leaf hair ornament:
+    name: 叶发饰
+  bunny hair ornament:
+    name: 兔子头饰
+  skull hair ornament:
+    name: 骷髅头饰
+  yellow hairband:
+    name: 黄色发带
+  pink hairband:
+    name: 粉色发带
+  bow hairband:
+    name: 蝴蝶结发带
+  cat hair ornament:
+    name: 猫头饰
+  musical note hair ornament:
+    name: 音符发饰
+  carrot hair ornament:
+    name: 胡萝卜发饰
+  purple hairband:
+    name: 紫色发带
+  hair beads:
+    name: 发珠
+  multiple hair bows:
+    name: 多个蝴蝶结
+  bat hair ornament:
+    name: 蝙蝠发饰
+  bone hair ornament:
+    name: 骨发饰
+  orange hairband:
+    name: 橙色发带
+  multi-tied hair:
+    name: 多扎头发
+  snowflake hair ornament:
+    name: 雪花发饰
 

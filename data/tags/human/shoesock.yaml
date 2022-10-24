@@ -144,3 +144,65 @@ content:
     image: b1750b3e67649fafc1e6ec20adf14bacca06af5e30e016b4c015428b6a84d984
   toeless boots:
     name: 露趾靴
+  no legwear:
+    name: 裸腿
+    restricted: true
+  black legwear:
+    name: 黑色裤袜
+  white legwear:
+    name: 白色裤袜
+  torn legwear:
+    name: 撕裂的裤袜
+  striped legwear:
+    name: 条纹裤袜
+  asymmetrical legwear:
+    name: 不对称裤腿
+  brown legwear:
+    name: 棕色裤袜
+  uneven legwear:
+    name: 不均匀的裤腿
+  print legwear:
+    name: 印花裤袜
+  red legwear:
+    name: 红色裤袜
+  mismatched legwear:
+    name: 不匹配的腿饰
+  legwear under shorts:
+    name: 短裤穿在裤袜外面
+    image: ad519f6fb31bd012513d01d4a66c4c51591c691542c369547b3a9b1149db887b
+  purple legwear:
+    name: 紫色裤袜
+  grey legwear:
+    name: 灰色裤袜
+  blue legwear:
+    name: 蓝色裤袜
+  pink legwear:
+    name: 粉色裤袜
+  argyle legwear:
+    name: 菱形裤腿
+  ribbon-trimmed legwear:
+    name: 丝带边饰裤袜
+  american flag legwear:
+    name: 星条旗裤袜
+  green legwear:
+    name: 绿色裤袜
+  vertical-striped legwear:
+    name: 竖条纹裤袜
+  alternate legwear:
+    name: 备用裤袜
+  yellow legwear:
+    name: 黄色裤袜
+  multicolored legwear:
+    name: 五彩裤袜
+  ribbed legwear:
+    name: 罗纹裤袜
+  fur-trimmed legwear:
+    name: 毛皮裤袜
+  see-through legwear:
+    name: 透视裤袜
+  legwear garter:
+    name: 裤袜吊袜带
+  two-tone legwear:
+    name: 分段裤袜
+  latex legwear:
+    name: 乳胶裤袜

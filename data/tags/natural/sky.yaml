@@ -1,4 +1,4 @@
-name: 天空
+name: 天空/气象
 content:
   cloud:
     name: 云
@@ -44,3 +44,27 @@ content:
   beautiful detailed sky:
     name: 漂亮的天空
     image: 68f4edd5b67724c51a256fd00500ae03a860eeea4a97ae1c7b0cd0c61bc15ead
+  day:
+    name: 白天
+  dusk:
+    name: 黄昏
+  in spring:
+    name: 春
+  in summer:
+    name: 夏
+  in autumn:
+    name: 秋
+  in winter:
+    name: 冬
+  full_moon:
+    name: 满月
+  stars:
+    name: 星星
+  cloudy:
+    name: 多云
+  rain:
+    name: 下雨
+  in the rain:
+    name: 雨中
+  rainy days:
+    name: 雨天

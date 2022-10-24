@@ -14,7 +14,8 @@
     "importuncroppedimage": "tsx ./src/cli/importuncroppedimage.ts",
     "updatepostcount": "tsx ./src/cli/updatepostcount.ts",
     "generateimage": "tsx ./src/cli/generateimage.ts",
-    "importgeneratedimage": "tsx ./src/cli/importgeneratedimage.ts"
+    "importgeneratedimage": "tsx ./src/cli/importgeneratedimage.ts",
+    "findwiki": "tsx ./src/cli/findwiki.ts"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",

@@ -288,3 +288,41 @@ content:
     name: 二人面对面(脸贴得很近)
   forehead-to-forehead:
     name: 额头贴额头
+  teeth:
+    name: 牙
+  excited:
+    name: 兴奋
+  nose blush:
+    name: 害羞
+  expressionless eyes:
+    name: 失神
+  wide eyed:
+    name: 睁大眼睛
+  dark_persona:
+    name: 黑化的
+  naughty_face:
+    name: 调皮脸
+  '>:(':
+    name: 愤怒
+  '>:)':
+    name: 嘲笑
+  ':o':
+    name: 惊讶
+  ':q':
+    name: 右上吐舌头
+  ':p':
+    name: 右下吐舌头
+    image: 4c8b6c53b6f9590804470f8914d5360828dd9b7f5610ac04ac42dd728b1fdd3d
+  ':d':
+    name: 咧嘴笑
+    image: 8270916d017c504fe92e799deef1d54a0e8e2c0046e5da45d564e632077a11a8
+  ;d:
+    name: 单眼咧嘴笑
+    image: baa3b3ccc046cb095a7f6d0ede9ae451b1df5a62979ecf4026eafbf24fe31841
+  ':3':
+    name: 猫嘴
+  drool:
+    name: 流口水
+  lipstick:
+    name: 口红/唇膏
+    image: 5015bf55b1ebfea70121e8ec0e788ff0aace9c726da369f00006544a7cbf03f5

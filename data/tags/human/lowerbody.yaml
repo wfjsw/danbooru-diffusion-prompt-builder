@@ -194,9 +194,6 @@ content:
   jumpsuit:
     name: (尤指女式)连衫裤
     image: f141fdd5f9baac8933f95aedf1ab8ed14b2bf3802c2f4712149bd0fd47e9a257
-  legwear under shorts:
-    name: 短裤穿在裤袜外面
-    image: ad519f6fb31bd012513d01d4a66c4c51591c691542c369547b3a9b1149db887b
   leotard aside:
     name: 把连衣裤裆部剥到一边
   leotard pull:
@@ -272,8 +269,35 @@ content:
   bare hips:
     name: 裸臀
     restricted: true
-  no legwear:
-    name: 裆胯以下裸着
-    restricted: true
+  bandaid on leg:
+    name: 腿上的绷带
+  mechanical legs:
+    name: 机械腿
+  leg belt:
+    name: 腿带
+  leg tattoo:
+    name: 腿部纹身
+  bound legs:
+    name: 绑腿
+  panty & stocking with garterbelt:
+    name: 吊袜带内裤和长袜
+  thighhighs over pantyhose:
+    name: 连裤袜加长筒袜
+  socks over thighhighs:
+    name: 长筒袜加短袜
+  panties over pantyhose:
+    name: 连裤袜上的内裤
+  pantyhose under swimsuit:
+    name: 泳衣下连裤袜
+  black garter belt:
+    name: 黑色吊袜带
+  neck garter:
+    name: 吊袜带
+  white garter straps:
+    name: 白色吊袜带
+  black garter straps:
+    name: 黑色吊袜带
+  ankle garter:
+    name: 脚踝吊袜带
 
 
