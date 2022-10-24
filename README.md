@@ -1,8 +1,23 @@
+<p align="center">
+    <img src="public/icon.jpg" width="200" height="200" alt="Logo">
+</p>
+<div align="center">
+
 # Danbooru 标签超市
 
-正式版: https://tags.novelai.dev
+https://tags.novelai.dev
 
-测试版: https://tags-dev.novelai.dev
+</div>
+
+## 主要功能
+
+ - 标签分类、释义与配图
+ - 即时搜索
+ - 构建标签组合并调配权重
+ - 导入已有标签组合并自动匹配
+ - 预设（固定标签组合）整理、说明与配图
+ - 嵌入模型索引与下载
+ - 超网络模型索引与下载
 
 ## 开发与改进
 
