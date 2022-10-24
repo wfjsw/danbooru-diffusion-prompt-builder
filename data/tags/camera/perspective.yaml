@@ -6,50 +6,67 @@ content:
   pov:
     name: 主观视角
     image: cf5b684dd97f12ffe871c77770eb994aae8d1b42688b143d5d800b937f668bbb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pov.html
   three sided view:
     name: 三视图
     image: 11aee19715ab07681517a785046e998472d78a77e5bb93b7dfc6a8453d998494
   multiple views:
     name: 多视图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multiple_views.html
   cut-in:
     name: 插入画面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cut-in.html
   between fingers:
     name: (突出)指间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/between_fingers.html
   between legs:
     name: (强调)两腿之间
     image: 5e1dc7676b4afac189c393f6fc5515f2753f8d932d2613affcad49f46304a465
+    wikiURL: https://danbooru.donmai.us/wiki_pages/between_legs.html
   between thighs:
     name: (强调)大腿之间
     image: 8506993393f0b1b5758fe841eda19597d65d38afc0f701c8b99d3cb79b73f013
+    wikiURL: https://danbooru.donmai.us/wiki_pages/between_thighs.html
   blurry foreground:
     name: 前景模糊
     image: 9dc019079b58b5f618b7254a9625439613a7eaa2fd45470f205035a50e9c56a9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blurry_foreground.html
   breast conscious:
     name: 对胸部在意
     image: aaee885f8c879e87ed063bbeea21b0f883d4598842ceea80d9f09394c7c235fd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/breast_conscious.html
   backlighting:
     name: 逆光
     image: 840f02ef30da0f1d4a32980e9f6205974ede74b1a05d45fec4265ee6a1c67a7d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/backlighting.html
   close-up:
     name: 特写镜头
     image: 387630ada23031c407cce5bc44c077c96eac13dac096fa251013dd240a89d621
+    wikiURL: https://danbooru.donmai.us/wiki_pages/close-up.html
   cowboy shot:
     name: 七分身镜头
     image: c56cb09cd078b3a99d0c600c5fe26e26500d264b66e61d74b168e4b3c1c7a834
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cowboy_shot.html
   dutch angle:
     name: 德式倾斜镜头
     image: be6827faf731f69ca90a457034a3a929ff717a34fcf7e0f9e1f6d988553b407a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dutch_angle.html
   fisheye:
     name: 鱼眼镜头
     image: 338ed2f476590ab6f51f210ad7ac7dacdd1e2da0d2067cdc8870bae8be908737
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fisheye.html
   foreshortening:
     name: 正前缩距透视法
+    wikiURL: https://danbooru.donmai.us/wiki_pages/foreshortening.html
   hatching (texture):
     name: 线影法(纹理)
     image: ff9fba971e553f578e0b2df1382ad4db98b5a3ebfa746da5383852c606cc33a1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hatching_(texture).html
   vanishing point:
     name: 远景透视画法
     image: 9710d5a759ab450f40bd2418b842d688911a8d54d8d74225780ac2d06cbe54cb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vanishing_point.html
   wide shot:
     name: 广角镜头
     image: 58f6a76356725fd8528c851315c270ddf3b7da4063849cb9405483d862932864
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wide_shot.html

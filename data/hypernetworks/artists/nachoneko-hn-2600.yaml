@@ -18,7 +18,6 @@ previewHash: 9b55d1f1a03861c01cd72b4952191660f87c7bc0e9a0dfc4447022852a2be147
 payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/Nachoneko-hn-2600.pt
 # 推荐正向标签
 suggestPositive:
-  - by nachoneko
   - cat ears
   - shizuku
   - cyan hair

@@ -55,90 +55,122 @@ content:
   kneeling:
     name: 下跪
     image: 26d7c24612ba5a7d1ac925b33ee260fbeb5b547aec9298c302f5c9c892ad05e8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kneeling.html
   leaning forward:
     name: 身体前驱
     image: 2d73a60e26122cf58e4c7adbcafe6b6b7ee5beb107ada47e0c5c8089e91221b0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leaning_forward.html
   leg lift:
     name: 抬一只脚
     image: 183d7d5d3806d922510d03f42f99920abed4f659db2537075407d66d1d5a5193
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leg_lift.html
   legs up:
     name: 抬两只脚
     image: 481d874b80b7199ad6036bdb0b9384b9854a33e32f44c18acc67a917d5fef7e1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/legs_up.html
   lying:
     name: 躺着
     image: 5a70b8cd7eeb629085cab6e0a74c76d4aeb336373d3ef16646c8760ad75c0107
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lying.html
   on stomach:
     name: 趴着
     image: 84833a3cdf7b89062b295de17489b040583e397eecf99a70557872c0fc9d8833
+    wikiURL: https://danbooru.donmai.us/wiki_pages/on_stomach.html
   princess carry:
     name: 公主抱
     image: 416caad53f65976184106325a8fd5fa5592a0951e353870f2e804463c85e3ab5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/princess_carry.html
   seiza:
     name: 正坐
     image: f847a879ff02c62487e06cd26e1d5a04beaa2e71ca7c27bbee8eefc5476b141a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/seiza.html
   sitting:
     name: 坐着
     image: aefd6e614307366ed7c133ac3af7d7d247fcd4204aac6e5de9735056047cb793
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sitting.html
   spread legs:
     name: 张腿
     image: a6f1cf6c7a2c9dd5bfa1f6e7cdf2fcd0b2aa754ed7fb835e92ba893c0bd4d07f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spread_legs.html
   squatting:
     name: 蹲下
     image: d7bb856364a7a293edf9410711f6ed96650a703218a924c1b7c397b73e16edca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/squatting.html
   straddle:
     name: 跨坐
     image: 05cf5770c57f844341df6ccdb0d85718172d4e984ff8767c603b081500ec8868
   top-down bottom-up:
     name: 趴着翘臀
+    wikiURL: https://danbooru.donmai.us/wiki_pages/top-down_bottom-up.html
   upside-down:
     name: 颠倒的
     image: 262fd2f130ac21ab66c693687922a74a456c7fa23887fbef70edff526e897c19
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upside-down.html
   wariza:
     alias:
       - w-sitting
     name: 割坐
     image: 250dd9e7036f7bab060b98565a5ccba0837bc8548f678684b563b543b783b67d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wariza.html
   yokozuwari:
     name: 侧身坐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yokozuwari.html
   zombie pose:
     name: 僵尸姿势
     image: 07180bdab0d17df619dc03e3aaee385aea3fc77283e7bd177493a37bb662e362
+    wikiURL: https://danbooru.donmai.us/wiki_pages/zombie_pose.html
   humpbacked:
     name: 驼背
     image: e32e5030887c232f5d207a272f271c16e94b3555e0632fdbe7133e699b362937
   back-to-back:
     name: 背靠背
+    wikiURL: https://danbooru.donmai.us/wiki_pages/back-to-back.html
   gradient:
     name: (身体或肢体)倾斜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient.html
   head back:
     name: 弓背高潮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/head_back.html
   bowing:
     name: 鞠躬
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bowing.html
   leaning:
     name: 倚靠/身体倾斜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leaning.html
   leaning back:
     name: 身体往后靠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leaning_back.html
   leaning to the side:
     name: 向一侧倾斜身体
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leaning_to_the_side.html
   on back:
     name: 仰躺
+    wikiURL: https://danbooru.donmai.us/wiki_pages/on_back.html
   on side:
     name: 侧卧
+    wikiURL: https://danbooru.donmai.us/wiki_pages/on_side.html
   reclining:
     name: 斜倒斜躺姿势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/reclining.html
   sitting on lap:
     name: 坐在大腿上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sitting_on_lap.html
   straddling:
     name: 跨坐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/straddling.html
   stretch:
     name: 伸懒腰
     image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
   the pose:
     name: 趴在地上并翘起脚
+    wikiURL: https://danbooru.donmai.us/wiki_pages/the_pose.html
   head rest:
     name: 枕着头/托着头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/head_rest.html
   head tilt:
     name: 歪着头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/head_tilt.html
   head down:
     name: 低着头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/head_down.html
 name: 人体姿势

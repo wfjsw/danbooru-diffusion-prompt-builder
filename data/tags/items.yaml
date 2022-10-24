@@ -3,92 +3,121 @@ content:
   camera:
     name: 相机
     image: 4164859146626a908f6e620e113c56471df0fe7543c56f254822bdeb7cb5b5f6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/camera.html
   chopsticks:
     name: 筷子
     image: 8e87a5a6fa3c22a54258f53a6d0ed497f23b866b514a817d35d5c11f0a9f324a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chopsticks.html
   microphone:
     name: 麦克风
     image: 254c8beb6734149747b75387d8373a8be29158056ad3d6c0ceb1915bc0ebea06
+    wikiURL: https://danbooru.donmai.us/wiki_pages/microphone.html
   weapons:
     name: 武器
     image: fe312fdb5a66da515e80159f6dded9ce2fa17a7cd33877e960386c934734f9f3
   dagger:
     name: 匕首/短剑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dagger.html
   sword:
     name: 刀
     image: 57bb3c663269855c2b8bbc88154e2e519f3f238109e83c6b89882202f4712e20
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sword.html
   scythe:
     name: 镰刀
     image: 2cc7f12325b47bcb5074ec60a079d2fc0fc457b0931085796c5c6f89c59494af
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scythe.html
   whip:
     name: 鞭
     image: c3b74e694c531a8ba557cbf110beb7ceca211504b470dfadd4a0c660fc0c718b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/whip.html
   riding crop:
     name: 马鞭
     image: d75137cde66974a32e4dac00fe13a0638986817309f7d167ef859d9333ec3eed
+    wikiURL: https://danbooru.donmai.us/wiki_pages/riding_crop.html
   gun:
     name: 枪
     image: 4a94a49d5b1fb79f43f808eed993234a4b717daaa9d8a48d21dea802cfdc846f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gun.html
   handgun:
     name: 手枪
     image: b158ee600b0e6a82ac2cccfca927d4dfb446d810030b7512a752198358982325
+    wikiURL: https://danbooru.donmai.us/wiki_pages/handgun.html
   wand:
     name: 魔杖
     image: 168383a2f0686fb7b71d00695ed509e09e8d9dcc880454d318a43cca01d087c6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wand.html
   arrow:
     name: 箭
     image: 49f188f4625b425512b5588dd0f940f604384f657a3ff4980676a2fb3777203a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/arrow.html
   umbrella:
     name: 伞
     image: 94b0927406514c6d2d7b2cbe3e2f932e19a987515f7bce415643ee4187097ab6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/umbrella.html
   gohei:
     name: 御币
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gohei.html
   ofuda:
     name: 札符
     image: 939e5c15c88cf4affef9cd4ad90c0196b354dea433e39e1877d9d8f9f7988031
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ofuda.html
   yin yang:
     name: 阴阳
     image: 93ad73e33948118f0295320fef73ad83a3f48f2a91dd55b673d034b20d1ca869
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yin_yang.html
   lantern/lamp:
     name: 灯笼
     image: 31f7028fe2d5f825d92a0335c3adb5b4316866bbe584817afbbe26bec0a72e37
   teacup:
     name: 茶杯
     image: fa029bcaf2c41a40e2460214aa60a2ce3193e8f74f9133985986e4bdc878bede
+    wikiURL: https://danbooru.donmai.us/wiki_pages/teacup.html
   cigarette:
     name: 香烟
     image: 77708472aa2e0640c0b204b068f2340b7c30af9cc300d4f1c1948cee7b9aecfb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cigarette.html
   cake:
     name: 蛋糕
     image: 3593d44d8b3b5b57cf8fb4de93284e88deb1cc92471cfadeeb73bcbd1df3cb4d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cake.html
   taiyaki:
     name: 鲷鱼烧
     image: 08ee85183e62834686b734db6d9ded58539ec2aa3d8fe9fb629873445664ee4d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/taiyaki.html
   wine:
     name: 葡萄酒
     image: 517ea6e379d459dcb46dd5fe467db2f27b23d1c08f34b17cf709e3f71a380f6d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wine.html
   cream:
     name: 奶油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cream.html
   ice cream:
     name: 冰激凌
     image: dff6b5c7b94104fea4ef6dd17986e87d39b271ad4ecb346b7c51673c04bb7ff9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ice_cream.html
   sake:
     name: 日本酒
     image: 8d065ab516fc9cf7880dcf60b0239319a74f3d70b5c1c89f7a66bd3083c02fc8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sake.html
   guitar:
     name: 吉他
     image: a88a2e05788166bf79c419b1cae559d643b65556ac0e827dc8ec5efe072b0a13
+    wikiURL: https://danbooru.donmai.us/wiki_pages/guitar.html
   piano:
     name: 钢琴
     image: a10a3ab4e5639efb49052f85f1157ce975f1617bfa940b16c0ee17995dd93d4f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/piano.html
   obento:
     name: 便当
     image: b8f5ca877762149bba69342184a5352706db55e34d9de5c472dfb583aa49a032
   chair:
     name: 椅子
     image: e94b12b66052f7b3b48f87c9eafda9664d056364ee5461fbbe7dc97b96f2affc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chair.html
   crease:
     name: 起皱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crease.html
   backpack:
     name: 背包
     image: 7b86623a38f68e6069031b361341e22feb72138af6365dabd978c5720d8149eb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/backpack.html

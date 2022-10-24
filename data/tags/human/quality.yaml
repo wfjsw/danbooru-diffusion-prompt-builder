@@ -2,14 +2,16 @@ name: 人物品控
 content:
   bad anatomy:
     name: 身体结构错误
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bad_anatomy.html
   bad hands:
     name: 手型错误
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bad_hands.html
   fewer digits:
     alias:
       - missing fingers
     name: 缺少手指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fewer_digits.html
   extra digit:
     name: 多余手指
   missing arms:
     name: 缺少手臂
-

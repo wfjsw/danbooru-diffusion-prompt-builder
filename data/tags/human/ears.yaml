@@ -3,45 +3,60 @@ content:
   animal ears:
     name: 动物耳朵
     image: 47566c3554f604840484bcd9bc6db8f89c10e12c88f13e951d8b5327f070bc83
+    wikiURL: https://danbooru.donmai.us/wiki_pages/animal_ears.html
   fox ears:
     name: 狐狸耳朵
     image: ac1d62974fd5a4e9ee05f06556c1790c98737f0f0c1aab8d20832c5b987b75e1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fox_ears.html
   bunny ears:
     name: 兔耳
     image: d42ed72ea050a39020b655f3b7844074d2f5cfed839aa4f69059368a007cb3c1
   cat ears:
     name: 猫耳
     image: 42c557b4d3c662d96c0bcfeb3020f2cfcfc90db7119eb392c929b6d1f3c1651d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cat_ears.html
   dog ears:
     name: 狗耳
     image: 5eea09e78a2883094f95454a8a6a5f4fadd287747180caf792e7d714a8ed96d7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dog_ears.html
   mouse ears:
     name: 老鼠耳朵
     image: ccf186b7d0af093132ceaf3a49fc64b60275d348a7711f9ce090e8f2dbaa5048
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mouse_ears.html
   pointy ears:
     name: 尖耳
     image: 3cc27556e2201e4a21c580b07270c8cee10aba5da11de1961af5aebb2fa22e10
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointy_ears.html
   heart earrings:
     name: 心形耳环
     image: 91ac7d699047040ff661a3b053ad94e23c6a4818cdd214f6db8b4cccda5f7c75
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_earrings.html
   hoop earrings:
     name: 环状耳环
     image: ef6deeb3641d347ad96500ad0cbc4c3f51b50147575e9eae05f2a4014366be40
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hoop_earrings.html
   crystal earrings:
     name: 水晶耳环
     image: 3cc6a0db18a6da56e17447bb8047b02cf064d401a66d9bbbf13061c12d124310
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crystal_earrings.html
   earrings:
     name: 耳环
     image: 2378ba70b08a154485398ba7129087cb29e894af6ca1c859ced75d7901fc6677
+    wikiURL: https://danbooru.donmai.us/wiki_pages/earrings.html
   crescent earrings:
     name: 月牙耳环
     image: 392aa5380a5058fd7d816659c00a418fbfb3165c67739a6d2a41a1956eb273e2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crescent_earrings.html
   cat ear headphones:
     name: 猫耳式耳机
     image: c1f6f75600097ff9008b724339d237628e02001c261338ba0192c541ff56f384
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cat_ear_headphones.html
   bat ears:
     name: 蝙蝠耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bat_ears.html
   raccoon ears:
     name: 浣熊耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/raccoon_ears.html
   long pointy ears:
     name: 尖尖的长耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_pointy_ears.html

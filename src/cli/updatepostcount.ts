@@ -32,7 +32,7 @@ for (let i = 0; i < batchCount; i++) {
     const res = await fetch(`https://danbooru.donmai.us/tags.json?${qs.toString()}`, {
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-            'Cookie': 'cf_clearance=',
+            'Cookie': 'cf_clearance=frYrp0Q5zQuJBP06gszx2yQ0.FOKHgcrCXSuIREX4B4-1666621136-0-250',
         }
     })
 

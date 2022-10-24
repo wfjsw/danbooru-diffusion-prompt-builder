@@ -3,161 +3,214 @@ content:
   halo:
     name: 头顶光环
     image: d047d0250b1bc84b51450e331aeab608a7bc5218cfa7a43149dae4655ad0cea8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/halo.html
   tokin hat:
     name: 东金帽子
     image: 7ea1b340c4d9af07b13b832b8fd6e22aeb0256618e860b7765068adaae189f71
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tokin_hat.html
   mini top hat:
     name: 迷你礼帽
     image: 591d1cf8cb4ef2a756cf6db2847b8899c9a46212e28b2dce3f8d68e3ae31abbc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mini_top_hat.html
   beret:
     name: 贝雷帽
     image: 4c13f3c349884ec1cd198f9a62dd93d890684b6e36afaea14d96e35a7ae494ff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/beret.html
   hood:
     name: 兜帽
     image: fa11e9127c8086d57ca8d7014b266dfd77136b11e29be3d16c064ec0fc5e3470
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hood.html
   nurse cap:
     name: 护士帽
     image: e48552ff78cc547a155b2e1c310e4d26834b73ac648397eaab56ef57ed92ade9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nurse_cap.html
   tiara:
     name: 三重冕
     image: 17b7a9bb8ccd0c23083657f387973d06585d3121d7addcc926d7c846d33e2d7f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tiara.html
   crown:
     name: 皇冠
     image: f886102c9bd38eb308d722a64419ac29f993d7c9afdd8c8c023820fddb15b532
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crown.html
   hairpin:
     name: 发卡
     image: 237d48fee62e2a074eaa3e9e8287fda3a47006d354626fd144999aad5f610fdd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hairpin.html
   hairband:
     name: 头箍
     image: d3ddf400154821b3bc2ccf341ff146e3dad0f14623e9d4057c403b91029ef221
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hairband.html
   hairclip:
     name: 发夹
     image: 9248ef69f9330a8656482ff978d5a6eb5fbfa704473f124feccc082d893a75ec
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hairclip.html
   hair ribbon:
     name: 发带
     image: 808c880c7c9f7bb1415427b63f20422d95d9dd3c99351a79724c2acc407f55b0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_ribbon.html
   hair flower:
     name: 发花
     image: 228a1cdd5a6c8aaca0d0a356edb4d73ab32fe71346ac9efc66ea98ba043ada90
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_flower.html
   hair ornament:
     name: 头饰
     image: 3659ffa18917dcfbc1b641114cccec1d859721d25f893ce07d40d3888e3f2ad3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_ornament.html
   bowtie:
     name: 蝴蝶领结
     image: 44d9d866947b5f2c1a770a34e9b59589ff0d05db1a56f018561a734c9a60549a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bowtie.html
   hair bow:
     name: 蝴蝶结发饰
     image: 67d720c3bee3ae4eff77c57376778ac0c2172c64616804a987bc5199b6a05dba
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_bow.html
   maid headdress:
     name: 女仆头饰
     image: 6df7c3730f7f7f97e49c8ec5df5f189bef9413f73af4cd1ec962534b8188a8f6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/maid_headdress.html
   ribbon:
     name: 丝带
     image: 6cf2364ded3a14bb98a42f89f064d108f7d0825710c13b90822f90ccf668f24e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ribbon.html
   bandage:
     name: 绷带
     image: e16395b7f8227b09f2ace6effe47bb0ee5ed2b7c944a2c0372a1454cfbfa6864
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bandage.html
   sunglasses:
     name: 太阳镜
     image: 4da73b714a9b7b308a793e7cdb4a0b44e7513b7c249cef2dc4cf10cb1ebb51d2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sunglasses.html
   blindfold:
     name: 眼罩
     image: c3f8b058a5a5a6268cf840ed10fb7bd6c71105103d6cae587b0aa9dfae936c28
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blindfold.html
   eyepatch:
     name: 单眼罩
     image: 97d05c2db83471b616eba0def46801f11357a21858129994ec62efd573dc9478
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyepatch.html
   mask:
     name: 面具/眼罩/口罩
     image: 523a43321bdf4b6e03c2329690d6234074b3e0fcaa49606b6ab83ea824431625
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mask.html
   jewelry:
     name: 首饰
     image: 2e72bf4353427d27c44973d4f227389ce343a8e2183184abf50db0705eab5747
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jewelry.html
   collar:
     name: 项圈
     image: 5ce09a1d27417a92dc02441ce52df05c46a9e9bf751018656bee015aedaeecde
+    wikiURL: https://danbooru.donmai.us/wiki_pages/collar.html
   bell:
     name: 铃铛
     image: f1a80e87579b6a17657f0db9320c8a441e9ddca14fe51820ca1a9a568f3e7986
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bell.html
   choker:
     name: 颈部饰品
     image: 79decd92c57edf3ad0aeb9ce801d0d99b12678c410a9596a17d9cee565c25f3f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/choker.html
   sailor collar:
     name: 水手领
     image: a8da37709e4ab5776d06798fa6a3e37d973a1704de71b50863c590fe7485b364
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sailor_collar.html
   ribbon choker:
     name: 颈带
     image: 105ebec41f3d376e3cc1517cac51334a3f02836b375da971e76d214a1a220b3b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ribbon_choker.html
   necklace:
     name: 项链
     image: 61bfe65f28637588f73ad50697cd615c1de2e962aa9f13d517c8f52a27816283
+    wikiURL: https://danbooru.donmai.us/wiki_pages/necklace.html
   scarf:
     name: 围巾
     image: 836116b21b48fd2885630ecd7dd9b50da5573692e00f4fd2c0d03741d96217bc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scarf.html
   facepaint:
     name: 面纹
     image: abdb22946af4f62561f9d35410ba219c993ed50c02376494c9a73f292b2ef16f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/facepaint.html
   horns:
     name: 兽角
     image: f81f2b7b09b6416790cebb3c79bf99bf0e722e52ba44abe2264d1171af643f0c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/horns.html
   antlers:
     name: 鹿角
     image: c803f5a122db9b09d50c4632cd32a7ed308df4894dce15f04cd5709490b7ef91
+    wikiURL: https://danbooru.donmai.us/wiki_pages/antlers.html
   clover hair ornament:
     name: 三叶草发饰
     image: 4cad4496049d750d8c14a1c2c23293374fc5b57b8b732e1f18d53d3f3d176c24
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clover_hair_ornament.html
   crescent hair ornament:
     name: 月牙发饰
     image: 105649289391fe986c9480d37c6de4c6f7d949e04406ef7963f3d1509a164939
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crescent_hair_ornament.html
   demon horns:
     name: 恶魔的角
     image: 1929a99fb6f76d2515620a18988211cd66c21dd3ce1ba8a8774ea6c3e1f5269d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/demon_horns.html
   jeweled branch of hourai:
     name: 蓬莱玉枝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jeweled_branch_of_hourai.html
   fish hair ornament:
     name: 鱼形发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fish_hair_ornament.html
   forehead jewel:
     name: 额前有宝石
     image: f0ee83955ba0b60f6aca11dbbde02f11f98f46a2d5136c452b30abbb1231f2d1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forehead_jewel.html
   forehead mark:
     name: 额前有图案
     image: 5852b85376f3c51121cd74935be84db722373bac8f60d53e0be22152885ac3f5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forehead_mark.html
   forehead protector:
     name: 护额
     image: 71c096f92cab424de391c259376982548b3e3bfca0c9047b71dfb36ba44adb2a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forehead_protector.html
   kanzashi:
     alias:
       - hair stick
     name: 簪子
     image: 26f80123adb29a72b3786905aa409cbc84f7f9e12687198a16a8c01d5ca56ac0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kanzashi.html
   hair bobbles:
     name: 头绳
     image: 2cfd545151c8f13d4c6e6d875dea482cb1e42f82431c765ce7db28d5a09963f8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_bobbles.html
   hairpods:
     name: 头发上成对的像无线蓝牙的发饰
     image: 16affa3b02448b2011c4e5f88e35f21f772860e94f41c9f6803a751d8bbba4c3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hairpods.html
   hair bell:
     name: 头发上系着铃铛
     image: 6cb1361e9d81ea6102ea57cebad6199171173879725955a2e7a44ff39bd42738
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_bell.html
   heart-shaped eyewear:
     name: 心形眼镜
     image: fa2cc4840cafdaabcf2713f4ef042f5f2555c5c96aac6287d3e4aa9e457ef4ac
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart-shaped_eyewear.html
   goggles:
     name: 护目镜
     image: a2306ad69e0b858b9211f09028f6aa78539c56f6978e7fe3462f3fce823ff9be
+    wikiURL: https://danbooru.donmai.us/wiki_pages/goggles.html
   rimless eyewear:
     name: 无框眼镜
     image: d6e163b2e117bd2783f2b9b779211581db42919e38a76ec820a8b1276f748fdc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rimless_eyewear.html
   over-rim eyewear:
     name: 下半无框眼镜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/over-rim_eyewear.html
   kamina shades:
     name: 卡米纳墨镜
     image: 8aec0936805db97dc7dde519dd449a599f3bb07e57f988919030bb2cec0a6320
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kamina_shades.html
   goggles on head:
     name: 头上别着护目镜
     image: 0a6954b97722bcbe15a37c08f96a9d8ebc722c1d09011ef51e94e1652f6e3f66
+    wikiURL: https://danbooru.donmai.us/wiki_pages/goggles_on_head.html
   goggles on headwear:
     name: 帽子上别着护目镜
     image: 58d5edcedc6afcd7d40ca1514e96c46dbf2dbd2307af9162705114282e7a0646
+    wikiURL: https://danbooru.donmai.us/wiki_pages/goggles_on_headwear.html
   head mounted display:
     name: 戴着头戴显示设备
     image: 58734e620b07d96945e4c9f23722e909557d45fcf9ba0db51329a248d0253743
@@ -165,218 +218,303 @@ content:
     name: 贴有绷带的脸
   bandage over one eye:
     name: 缠着绷带的单眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bandage_over_one_eye.html
   scar across eye:
     name: 眼睛上的疤痕
     image: a3db1ab4080e59aceb5dd0595ff4e123e52031bc065132f0a17d35bd9012d321
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scar_across_eye.html
   scar on cheek:
     name: 脸颊上的疤痕
     image: 67474f730370f6f0ff81d69459f896c68bd3f9ba2dbb51adde8ea7dff80c2e72
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scar_on_cheek.html
   identity censor:
     name: 眼部打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/identity_censor.html
   covered eyes:
     name: 蒙住的眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/covered_eyes.html
   surgical mask:
     name: 医用口罩
     image: e36ca6a039d612c693383c960571ea91cde4adb6f5cf86462a39e37abdb32a74
+    wikiURL: https://danbooru.donmai.us/wiki_pages/surgical_mask.html
   mouth mask:
     name: 口罩
     image: 3030fb5efbf55cdecf807be1e9a62f37f47f9087bfb0e5ca7e4b366338938b20
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mouth_mask.html
   mouth veil:
     name: 面纱
     image: e1f600d4838d9a4f7d03d364477d0524e634aac2dc1f6919fcee61bd8bdca35b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mouth_veil.html
   coke-bottle glasses:
     name: 厚如玻璃瓶底的圆眼镜
     image: 79ed0e2aa6789afe44acbc0663a891ed501ee48d7c3d7f303e76b22d5db25c8b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coke-bottle_glasses.html
   tengu mask:
     name: 天狗面具
     image: 04d3967a63f1217365f5972b3d150c777ce4deea6ec3d474024dac01a55fed3f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tengu_mask.html
   fox mask:
     name: 狐狸面具
     image: c77c37e72c833cb14435007295cbe48b6ee44fe96838866cd5deef3192a23c89
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fox_mask.html
   mask on head:
     name: 掀到头上的面具
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mask_on_head.html
   mask pull:
     name: 拉着口罩
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mask_pull.html
   mask removed:
     name: 摘下的面具
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mask_removed.html
   gas mask:
     name: 防毒面具
     image: af3315a2e5364dbc3e15614a2d4ca6c7e62ec9539d0921f2b76a8f1862b60456
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gas_mask.html
   anchor choker:
     name: 锚形项圈
     image: ae48762bfd0bcc6b2ef18d19426562de43da43c02cf64dececb80bf21acebc3a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/anchor_choker.html
   bead necklace:
     name: 珠子项链
     image: e110dcf4737764c23702ff86840403bf804cf1f5d5c8e762ced26e871e93104c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bead_necklace.html
   headphones:
     name: 耳机
     wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones.html
     image: 84dbcf96e1efa9ebdf2bab003fc1b2a45a7c9323a952d0edbe8a31ad066d02e8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/headphones.html
   behind-the-head headphones:
     name: 从后脑戴上的耳机
+    wikiURL: https://danbooru.donmai.us/wiki_pages/behind-the-head_headphones.html
   headphones around neck:
     name: 脖子上挂耳机
     wikiUrl: https://danbooru.donmai.us/wiki_pages/headphones_around_neck.html
+    wikiURL: https://danbooru.donmai.us/wiki_pages/headphones_around_neck.html
   bell choker:
     name: 铃铛项圈
     image: 68258d937a6db66d746578e01047976558c23b29f27e6ad183e3700f2d9a2207
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bell_choker.html
   spiked collar:
     name: 带钉项圈
     image: 66d21911bf99c9617946953f68f5b9d5d8805f8c5f9ce0e3034fbe82de714367
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spiked_collar.html
   chain necklace:
     name: 项链
     image: ce3cf6ab7bc5b325fe53cf9f353883aa23ad110b03539df9dc5cd78c843e78bb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chain_necklace.html
   dog collar:
     name: 狗项圈
     image: 9e5c92c1b940e3a469336e0bf1e80b759a3bdac13c3845fca898562a7f3853ef
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dog_collar.html
   heart choker:
     name: 心形项圈
     image: aff5442de81e03baba147c460d6ae94d60c38d5988d9d3c8a6bd0ded72772391
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_choker.html
   metal collar:
     name: 金属项圈
     image: 361746059270702f3a859cc03a355d46f62669b9c249ebbb8c3ce3bbbdc6af38
+    wikiURL: https://danbooru.donmai.us/wiki_pages/metal_collar.html
   whistle around neck:
     name: 脖子上挂着口哨
     image: 320b7d265d45ba6ef2603f39ec6d1ad28876e5f8c0014261742dab27e8d15ffd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/whistle_around_neck.html
   animal hood:
     name: 兽耳头罩
     image: c481a73f35f274cf094bc219b89085d792bcc05b5a1089aae69c79f41d803bca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/animal_hood.html
   bespectacled:
     name: 戴眼镜的
     image: 22c1227c84f3b47af14f89d743a43c40a229e12e177caadb9c16f4c600662396
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bespectacled.html
   fedora:
     name: 软呢帽
     image: ba75945f51b588ff2c7a8e8830c83a31d2329d961b17fb5e3a3ebb8d50694658
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fedora.html
   witch hat:
     name: 女巫帽
     image: 41320f4ea4190837aa525a34113d91d444ca27b8ab1b1030f721e704e1136660
+    wikiURL: https://danbooru.donmai.us/wiki_pages/witch_hat.html
   wizard hat:
     name: 法师帽
     image: adecb912e47912c0b3d6f827f45e87cdb07a933ed436abcdb46ed486aac43503
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wizard_hat.html
   winged helmet:
     name: 带翅膀的头盔
     image: e9e2795ec8d0191a3d4f12f1d0a475a0f2865f3ba89368b7adcb6ff963cfc731
+    wikiURL: https://danbooru.donmai.us/wiki_pages/winged_helmet.html
   hood down:
     name: 放下的兜帽
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hood_down.html
   hood up:
     name: 戴起来的兜帽
     image: 684d9fb8fed1e81c18c8332c72223b31a31bfb9894d47e3f9614fd4bdbcbdea3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hood_up.html
   sailor hat:
     name: 水手帽
     image: 8cc7de785122158f88ae788696f465fd7356bc912f51d8be611d1bba5640ff60
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sailor_hat.html
   santa hat:
     name: 圣诞帽
     image: b85ee88e8cd2192659978dd8110775c48cedb5b7927d01eedd6f6301223fd906
+    wikiURL: https://danbooru.donmai.us/wiki_pages/santa_hat.html
   peaked cap:
     name: 类似警帽的帽子
     image: 20fbed6f6b2f78d4151e7388dfed4e8c5d9bf58fdbbc1a4c600d9ae6f17f924d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/peaked_cap.html
   checkered neckwear:
     name: 格子领口
     image: b73edb3bcbbde97e0337fcb0c4024b1e0be6776f7017b3af4683132de6cf8ab0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/checkered_neckwear.html
   detached collar:
     name: 假领
     image: a7bfa236073837a113884d7b542ec12a186314eab2ea269c9a2a84edd1f0f65d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/detached_collar.html
   halterneck:
     name: 绕颈系带
     image: 8ddfb0bb86f1dbc112c1bdea2f37a18f30191d0260390fadfbd9d600955aa538
+    wikiURL: https://danbooru.donmai.us/wiki_pages/halterneck.html
   high collar:
     name: 高领
     image: 14027ea24d5872a6fcf04f31f3974900e1b5eae0cc6226a89d51cd48c9d20f44
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high_collar.html
   neck ribbon:
     name: 颈部系着缎带
     image: a00c1b079bfbec14d9b97a3ea9fa54738afbb9b51bb8d6d6f79d635773f34c03
+    wikiURL: https://danbooru.donmai.us/wiki_pages/neck_ribbon.html
   neck ring:
     name: 颈环
     image: 53d5341a4f58bbabe404132dc620f5e0ee85952316b65c19d6f98efbd53c7cb9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/neck_ring.html
   neck ruff:
     name: 波浪褶边的领子
     image: 1089996708882ac9d009b07ea5f6453eacef8dc2dac12a80bf5b39c4e6872a0c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/neck_ruff.html
   necktie between breasts:
     name: 领带贴(夹)在乳沟里
     image: 016dd82d49290dcec493635bbc9782be762c65dd6a58801e2204232d1fad601d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/necktie_between_breasts.html
   plunging neckline:
     name: 深领
     image: 657d34272e83e69c19302d64a78dbc4b20c27ffdb5e2054b676418de18d8d9dd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/plunging_neckline.html
   elbow pads:
     name: 护肘
     image: 7d5d46a2f6b33eca4089e03bf3e9382990268df2682b41df453fa1ea98ee23c4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/elbow_pads.html
   dragon horns:
     name: 龙角
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dragon_horns.html
   eyewear on head:
     name: 眼镜别在头上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyewear_on_head.html
   mole under eye:
     name: 眼角有痣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mole_under_eye.html
   mole under mouth:
     name: 嘴角有痣/美人痣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mole_under_mouth.html
   x hair ornament:
     name: x发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/x_hair_ornament.html
   black hairband:
     name: 黑色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_hairband.html
   hair scrunchie:
     name: 发箍
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_scrunchie.html
   hair rings:
     name: 发圈
     image: 285eca8226af2fdfced185ef648fb88388464b8994e21f5df39f2a06c4b2069e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_rings.html
   tied hair:
     name: 扎头发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tied_hair.html
   white hairband:
     name: 白色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_hairband.html
   hair tie:
     name: 发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_tie.html
   frog hair ornament:
     name: 青蛙发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/frog_hair_ornament.html
   food-themed hair ornament:
     name: 食物发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/food-themed_hair_ornament.html
   star hair ornament:
     name: 星星发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/star_hair_ornament.html
   heart hair ornament:
     name: 心形发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_hair_ornament.html
   red hairband:
     name: 红色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_hairband.html
   butterfly hair ornament:
     name: 蝴蝶发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/butterfly_hair_ornament.html
   snake hair ornament:
     name: 蛇发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/snake_hair_ornament.html
   lolita hairband:
     name: 洛丽塔发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lolita_hairband.html
   feather hair ornament:
     name: 羽毛头饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/feather_hair_ornament.html
   blue hairband:
     name: 蓝色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hairband.html
   anchor hair ornament:
     name: 锚发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/anchor_hair_ornament.html
   leaf hair ornament:
     name: 叶发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leaf_hair_ornament.html
   bunny hair ornament:
     name: 兔子头饰
   skull hair ornament:
     name: 骷髅头饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/skull_hair_ornament.html
   yellow hairband:
     name: 黄色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_hairband.html
   pink hairband:
     name: 粉色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pink_hairband.html
   bow hairband:
     name: 蝴蝶结发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bow_hairband.html
   cat hair ornament:
     name: 猫头饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cat_hair_ornament.html
   musical note hair ornament:
     name: 音符发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/musical_note_hair_ornament.html
   carrot hair ornament:
     name: 胡萝卜发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/carrot_hair_ornament.html
   purple hairband:
     name: 紫色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/purple_hairband.html
   hair beads:
     name: 发珠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_beads.html
   multiple hair bows:
     name: 多个蝴蝶结
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multiple_hair_bows.html
   bat hair ornament:
     name: 蝙蝠发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bat_hair_ornament.html
   bone hair ornament:
     name: 骨发饰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bone_hair_ornament.html
   orange hairband:
     name: 橙色发带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_hairband.html
   multi-tied hair:
     name: 多扎头发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multi-tied_hair.html
   snowflake hair ornament:
     name: 雪花发饰
-
+    wikiURL: https://danbooru.donmai.us/wiki_pages/snowflake_hair_ornament.html

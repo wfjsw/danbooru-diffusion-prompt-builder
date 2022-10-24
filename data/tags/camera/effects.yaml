@@ -21,9 +21,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/sparkle.html
   jpeg artifacts:
     name: JPEG 压缩失真
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jpeg_artifacts.html
   blurry:
     name: 模糊的
     image: 6daa85881f293c2188f7315cc61d41d032dea8af525e51d6293a20cef5e2aec9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blurry.html
   cinematic lighting:
     name: 电影光效
     image: 8029429ec07e77a763ffce45c4f5fa11605a1968c017e8eb94122daefd909135
@@ -42,4 +44,5 @@ content:
   overexposure:
     name: 过曝
     image: 7294f5926ad976a4c7f65ee5b6554ba59a33661dd45408287cca7a49715965fe
+    wikiURL: https://danbooru.donmai.us/wiki_pages/overexposure.html
 name: 镜头特效

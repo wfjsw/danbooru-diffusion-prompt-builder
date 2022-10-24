@@ -86,105 +86,139 @@ content:
       - hairbun
     name: 团子头
     image: 60cf5ef32e02b9f36c7465ff884885fcbc59466387ba17a09b9c889f258c1dab
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_bun.html
   hair intakes:
     name: 进气口发型
     image: 712e9ed155cc111426e54be890705a558236aa1e506d7fd8b7fbd6a392b62718
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_intakes.html
   hair over shoulder:
     name: 披肩发
     image: f25ee9dc2fc0bb6fa1c527236b94395d92bf354c92f815f79198feb5508346d1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_shoulder.html
   hime cut:
     name: 姬发式
     image: 4aaca7a41901ca031b5b9cdb1717421b6f470f085fd350c4f25afac89580eb05
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hime_cut.html
   long hair:
     name: 长发
     image: 4e3e3d9e8b7abf13451168abad75dc2d57574dd18b1fc4943ba245b2b6ff7d93
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_hair.html
   messy hair:
     name: 凌乱发型
     image: 4c411824733c46f3d440af947469ae50d599a897219379487dbaa6a6ff071dd7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/messy_hair.html
   parted bangs:
     name: 分开的刘海
     image: 5962f8f04130acf61cc8f2f9dd07bb5c1a9b31e54ce8c4ed43c1fb05ac954c73
+    wikiURL: https://danbooru.donmai.us/wiki_pages/parted_bangs.html
   payot:
     name: 长鬓角
   ponytail:
     name: 马尾
     image: 020f818866c160e9d8830fee83c8e5471ec403b5f4e51e395a83560bc6ed7d73
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ponytail.html
   short hair:
     name: 短发
     image: 385e5c3d02530500444ba0719655089db6561542573236bf36d6248a2ef90432
+    wikiURL: https://danbooru.donmai.us/wiki_pages/short_hair.html
   short ponytail:
     name: 短马尾
     image: 52c4bc9dc9a85ccaf6f553e3b2b4de4baebf10b980fd556d9688f13e881e8266
+    wikiURL: https://danbooru.donmai.us/wiki_pages/short_ponytail.html
   side swept bangs:
     name: 朝一个方向的刘海
     image: 1b64a5116b1c3fe68b1baf48535b1f46bd14289685ac7c3a18f3072857e4eaaf
   side ponytail:
     name: 侧马尾
     image: 12dec0c320b81af2dfdface89ea265931b2219cb9ee391908f76574cb83181a6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/side_ponytail.html
   twin braids:
     name: 双辫子
     image: 0934b708e5f10c41a44b2da54e461e7a65f0e20f15344a8a459d9bb4eae1fb7f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/twin_braids.html
   twintails:
     name: 双马尾
     image: 5d047d6174e0568361fb193e7302de0a0175f954430b20b43b81331bd4ad1222
+    wikiURL: https://danbooru.donmai.us/wiki_pages/twintails.html
   very long hair:
     name: 很长的头发
     image: 5386d99be4b91801780aa26d9dc0b069b572ef8af519c6b523b005337e97648e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/very_long_hair.html
   front ponytail:
     name: 前马尾
     image: 92248120f4b95cb73bf9edbdb41c2a4bcb6bebe0f6cebcb740d1a3f48b45209f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/front_ponytail.html
   short twintails:
     name: 短双马尾
     image: 4d32cd232890e7720d05e5c4745976aac3d84f1e5960421af2731c48e27f9662
+    wikiURL: https://danbooru.donmai.us/wiki_pages/short_twintails.html
   folded ponytail:
     name: 折叠马尾
     image: bc9bccf584acc54ac79ac5338585f5072269c667429c63e2d896f01d7d616e32
+    wikiURL: https://danbooru.donmai.us/wiki_pages/folded_ponytail.html
   quad tails:
     name: 四马尾
+    wikiURL: https://danbooru.donmai.us/wiki_pages/quad_tails.html
   single braid:
     name: 单辫
     image: 9b8b87613e1e0e533dc132ea9891b4de80c668f75feb1709b97289f90c00ee48
+    wikiURL: https://danbooru.donmai.us/wiki_pages/single_braid.html
   low twin braids:
     name: 低双辫
     image: 6678ff8418442182ec4252bc23d2692e4fabb92fb8cfc82b1e7c08c62359d35b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/low_twin_braids.html
   side braid:
     name: 侧辫
     image: 2d75949f74380333f0fc8268b11677ea102ae248b4b700dadd2cd5f6b7d4d78d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/side_braid.html
   crown braid:
     name: 冠型织辫
     image: 44ee75fa99f9426b17d023424461467b7897e47ade6a18b42cd276e89cd9ecaf
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crown_braid.html
   dreadlocks:
     name: 脏辫
     image: 740432ba867d42b0e276a18f331e068900280d33f01b685b5b69e931a1d13a29
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dreadlocks.html
   cone hair bun:
     name: 锥形发髻
     image: d12f42fe4266f04e2e4d1edcfa75fa6baf2287e6c0a17860483499371d387394
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cone_hair_bun.html
   braided bun:
     name: 辫子髻
     image: 6d32fcc887a33cdcb3ff548b2045c450edccb4d9e053e5c6242af1d2da03f6ff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/braided_bun.html
   doughnut hair bun:
     name: 圆环发髻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/doughnut_hair_bun.html
   heart hair bun:
     name: 心形发髻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_hair_bun.html
   wavy hair:
     name: 自然卷
     image: 49f19bb79f20af7298fbe66edf502a412d78ee63fc58c6dc18ccbdd3006b89a0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wavy_hair.html
   asymmetrical bangs:
     name: 不对称刘海
     image: cf006c41b8d8632ac96b62a4c4b59972407b4f0ebf197e54336cd5238d959359
+    wikiURL: https://danbooru.donmai.us/wiki_pages/asymmetrical_bangs.html
   swept bangs:
     name: 扫浏海
     image: f6d8ce7823b3e9f67d4303d46bfd09b04f51fbccd05fd54f662f851de925b2d4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/swept_bangs.html
   sidelocks:
     name: 耳前发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sidelocks.html
   single sidelock:
     name: 单耳前发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/single_sidelock.html
   hair pulled back:
     name: 头发后梳
     image: ed48c353bad1f860bc928587cb8368c89ef9f38651193c4d3d8f36f956aeb442
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_pulled_back.html
   half updo:
     name: 侧发后梳
     image: d9c5818cad82ef1cf20e33ee3071ef786dceed89cbcb4c6d49d2a238c2831844
+    wikiURL: https://danbooru.donmai.us/wiki_pages/half_updo.html
   hair one side up:
     name: 一侧绑发
   hair two side up:
@@ -193,110 +227,145 @@ content:
   hair spread out:
     name: 散发
     image: 81918368a3054e54838acef53de688caa2859261fcced30cbd54557a8128e6f1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_spread_out.html
   floating hair:
     name: 漂浮的头发
     image: 4074d22f50a60009a05a0c4ff31e9ac2e11818897659763a3a4218af546c8762
+    wikiURL: https://danbooru.donmai.us/wiki_pages/floating_hair.html
   straight hair:
     name: 直发
     image: 8da1c5b7b4e135abf90c594d321319952c486690b12a56ece8c5afd955cfcbff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/straight_hair.html
   big hair:
     name: 头发很多的
     image: 2235c441f9a7405940a8b00ee66dbb13049dc8ae6835fcfe6bc4bcaf61ad6ff0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/big_hair.html
   crystal hair:
     name: 水晶状的头发
     image: 47145377f2b48514349bf7d94bfb22e78b56ba6c33d84441943417baf3ed050d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crystal_hair.html
   expressive hair:
     name: 富有表现力的头发
     image: 90dfeb1bd92fac541f5405a4600aa9932f9d40044ace349ffbb4b13c8e5d4193
+    wikiURL: https://danbooru.donmai.us/wiki_pages/expressive_hair.html
   hair censor:
     name: 头发遮住了乳头(三点)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_censor.html
   hair over breasts:
     name: 头发披在胸上
     image: 0f510f3988d945d93df7d0cd928a62a432fcd8b922b17979bf77318ad34beb39
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_breasts.html
   hair over eyes:
     name: 头发遮着双眼
     image: c3a70a5b19fadc0a007f5e5e8a0a7475131d43ed4bca500f73bfa25f91c21163
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_eyes.html
   hair strand:
     name: 强调一缕一缕感的发型/发丝
     image: ab48f608c8b0ef460dc445d8561b211aed03a62e33d19ec978e39e36ca0e6a43
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_strand.html
   hair over one eye:
     name: 头发遮住了一只眼睛
     image: a4b453b33d1f5974243a97d9c8e6f4c075d0b51f1420d3f291e578c665dc6efd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_one_eye.html
   shiny hair:
     name: 有光泽的头发
     image: aaa3b0ae8dff269dcc30c4558af6b3db1ed62d39e4dfe59a4a576e1746bd521e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shiny_hair.html
   wet hair:
     name: 湿头发
     image: 41a2dfe2f2bacec13452b1f2bda781ab33b5e61e1641a026525319a992da62b8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wet_hair.html
   hair down:
     name: 低扎长发
     image: c9dddfa79465f76c6d488f59f7247712f5b28c044165a96e2efe948d33401c2d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_down.html
   hair slicked back:
     name: 垂下的长鬈发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_slicked_back.html
   hair up:
     name: 短双尾发型
     image: 4a865befbea040c4a3952add31c4d4413c49d7bbdfe7b96363ef235d19023dfc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_up.html
   high ponytail:
     name: 披在两侧的两条辫子
     image: e03a4bb82f27dd0a101bbf6be108cd50cbd63a309460a5eae37fd3049d1ef2c9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high_ponytail.html
   long braid:
     name: 侧马尾
     image: 35d93e2105fc0112de450c4957b59299ba3628b1d90666a04fe89378de870f14
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_braid.html
   long ponytail:
     name: 单股辫
     image: d7904525664249748afc73246e48c3a08138c07db05db3e4d656b39dc97c7fa8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_ponytail.html
   low-tied long hair:
     name: 直发
     image: c987020ad17cb99093b281af5bfa7b7c266b608ed4b08a5d9fc56a70ab1f5844
+    wikiURL: https://danbooru.donmai.us/wiki_pages/low-tied_long_hair.html
   low ponytail:
     name: 低扎马尾
     image: c189fc557a5b6ee2ab9f0db8ad576d676454e5239093f10d4b00c32ecfc8ba83
+    wikiURL: https://danbooru.donmai.us/wiki_pages/low_ponytail.html
   low twintails:
     name: 低扎双尾
     image: 09c14eff8a64d86d0c3fabedbce73ce7946ed11024ae281c0e588fcc089a3cce
+    wikiURL: https://danbooru.donmai.us/wiki_pages/low_twintails.html
   medium hair:
     name: 中等长发
     image: d38d235cd21b19fdbd2050e3226291bd8af0081ebe7f65d40009f305f8a4ead2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/medium_hair.html
   ringlets:
     name: 垂下的长鬈发
     image: f65c154ec3946ab0b00e4f4850311a80c802d974f9af75a2f3db51a483068741
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ringlets.html
   side braids:
     name: 披在两侧的两条辫子
     image: cc3508381d4cf66b6e58b2c3d582ce6a6e7dfa67a5f4742a46c4962ee1cce593
+    wikiURL: https://danbooru.donmai.us/wiki_pages/side_braids.html
   side bun:
     name: 披在两侧的发髻
     image: 1c6877440bdc7cc39661a97e058eb701151740b6fba3b7ff058a2450797c7d9f
   split ponytail:
     name: 尾部散开的单马尾发型
     image: e2ae1a8fc5f848fa973c38a80ff23fda56442b010f4bbc0d64556d8feed17df2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/split_ponytail.html
   two side up:
     name: 小型双股辫
+    wikiURL: https://danbooru.donmai.us/wiki_pages/two_side_up.html
   absurdly long hair:
     name: 超长的头发
     image: 45c29ff9ab7f943236ee9521da15ef86003f5e5065838e9eb925fff87e2a2221
+    wikiURL: https://danbooru.donmai.us/wiki_pages/absurdly_long_hair.html
   cloud hair:
     name: 云絮状发型
     image: 4ec78a4447de379b836327d43f40675b9b48fdc57428268d00bbcd002b760e98
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cloud_hair.html
   flipped hair:
     name: 外卷发型
     image: 7ace9bc09731dc745c252d60badb1d19ffa499f595d21dc9f8f07e3bf4e2ace0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flipped_hair.html
   hairlocs:
     name: 脏辫
     image: 237c9c864eb74babf99f4b24297853fac740166dc9c5395e3e2f8f28b2b26ef5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hairlocs.html
   tentacle hair:
     name: 触手头发
     image: fe6bdb93f158109dfc9581d354c67381f1f883052cac345d94057c516d8c0917
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tentacle_hair.html
   very short hair:
     name: 很短的头发
     image: 56f47ae8a76c4a6f27b2961ff50a80ca66fdd36eb958a65993abb378fce9cdf6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/very_short_hair.html
   bangs pinned back:
     name: 掀起的刘海
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bangs_pinned_back.html
   braided bangs:
     name: 辫子刘海
+    wikiURL: https://danbooru.donmai.us/wiki_pages/braided_bangs.html
   diagonal bangs:
     name: 斜刘海
+    wikiURL: https://danbooru.donmai.us/wiki_pages/diagonal_bangs.html
   single hair intake:
     name: 单侧进气口发型
-
-
+    wikiURL: https://danbooru.donmai.us/wiki_pages/single_hair_intake.html
 name: 人物发型

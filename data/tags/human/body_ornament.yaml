@@ -2,27 +2,35 @@ content:
   bandaid:
     name: 创可贴
     image: 2f7d0e1ef1d4cccedf8c79b06e8a0bb76c813e199c044601f797cd23c62c5e1b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bandaid.html
   cane:
     name: 手杖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cane.html
   chains:
     name: 锁链
     image: 1f03d84feb9387ef43d9ab5aa42bb93990fc2e09945d9dedb9cd6b9551044155
   cuffs:
     name: 手枷
     image: da64101f549b89630b26ac4e678f7a3147df45d517b72a4098d0e838a4ee7c30
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cuffs.html
   handcuffs:
     name: 警用手铐
     image: 2f5b1e7232f40bf07a1c1d14ef92f2c1b7cd48df72115f0cfd9b63f55c05eb4b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/handcuffs.html
   shackles:
     name: 宽手铐
     image: b0adf766623508b71708876f3305fb91b86d1683e85cf9d90767bcadc52908ba
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shackles.html
   tattoo:
     name: 纹身
     image: 66e6b6796e69398dc6ed9d6b3bcd53a33f2b879d3fdbc0a05dee44cabc436c62
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tattoo.html
   sarong:
     name: 莎笼/沙滩浴巾
     image: ba711dfffd7376ade21c070b456be36d22c88a2171a9f41010f1220437c1fd62
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sarong.html
   buttons:
     name: 纽扣
     image: f6a35749c29d25ae6e457d8be3b1d8ae2ee99c47835ef35435587f7490e151c6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/buttons.html
 name: 人物全身装饰

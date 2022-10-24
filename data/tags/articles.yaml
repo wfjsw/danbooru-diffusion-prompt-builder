@@ -2,9 +2,12 @@ name: 图片杂件
 content:
   text:
     name: 含文字
+    wikiURL: https://danbooru.donmai.us/wiki_pages/text.html
   signature:
     name: 含签名
+    wikiURL: https://danbooru.donmai.us/wiki_pages/signature.html
   watermark:
     name: 含水印
+    wikiURL: https://danbooru.donmai.us/wiki_pages/watermark.html
   username:
     name: 含用户名

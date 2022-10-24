@@ -3,326 +3,440 @@ content:
   makeup:
     name: 浓装
     image: 20de0e21cd9cdf35094a3c7865f5a85c37e3047aecce2557a3141c29db1f66d3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/makeup.html
   food on face:
     name: 食物在脸上
     image: a2f312ef77ed1d19718d3e5da3cc4b3fc9da2dc71aaab378cd63dd2c28933591
+    wikiURL: https://danbooru.donmai.us/wiki_pages/food_on_face.html
   smelling:
     name: 闻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smelling.html
   nosebleed:
     name: 鼻血
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nosebleed.html
   lips:
     name: 嘴唇
     image: 2302dfb8c4c71d2864ef0b12308595dd69e8b53e8dd22bbffe00e234ebe2e5ff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lips.html
   clenched teeth:
     name: 咬牙
     image: 91b1d3d0cfd4539f570e4a50ea7b5ffbcb2d6c3dd65056eeb2c87f9a54bbee6c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clenched_teeth.html
   open mouth:
     name: 张口
     image: aaaba0db25035f82dd9ac27c99caf7392aeaf1731dd4eade08f55e619e9033a2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/open_mouth.html
   pout:
     name: 努嘴
     image: 332f45b8feca18f18ae97f054d3dacb6a9ecf84116812d0d7ccd1eec0ceed225
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pout.html
   sigh:
     name: 叹气
     image: 9f40c3feb31f1943e5b95d180e01a6054a997bb85274c502f4f54b93deac6521
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sigh.html
   smile:
     name: 微笑
     image: 7b43f6ce99e29f82e4b90d9f18b4bedc01c0cbce4f9119f86da3d24810dd3bf1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smile.html
   light smile:
     name: 浅笑
     image: 4fb76ce489007510a3170b88160ec33c4de7462cae3bc93b8f2a59bfaacf6032
+    wikiURL: https://danbooru.donmai.us/wiki_pages/light_smile.html
   grin:
     name: 露齿而笑
     image: f9d51eeca984f3159a52b3702df89d45fd2a06ef457ff0c55fb4e6bece4270ef
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grin.html
   evil smile:
     alias:
       - evil grin
     name: 坏笑
     image: 5a6c1cfb4631de1e866c84c29f4bb6ad1be4c61f22756111ba2878691526a54d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/evil_smile.html
   stare:
     name: 凝视
     image: 37a51f64750b4a1008b35a911e8a4f3abb82f044cbf7494e84e850c4cb1e9476
   angry:
     name: 生气的
     image: a35395e19a8f5e3042b4794edaa53737a50c4272d92f7b40261de989f85f7c47
+    wikiURL: https://danbooru.donmai.us/wiki_pages/angry.html
   annoyed:
     name: 苦恼的
     image: 122d851aa0dc0d1355f3d4bc57759003f470022a9431b380a3698c12411077a8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/annoyed.html
   crazy:
     name: 疯狂的
     image: b23240dd97bfa83fcf7df345d23ff073efcd0430a3c301bab033ec85a2d64e85
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crazy.html
   shy:
     name: 害羞的
     image: 72245317af786806412478960aa62184d0da7064b2ce6fd70d81aafd1e80d025
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shy.html
   embarrassed:
     name: 尴尬的
     image: cb576328c4f00e6eb06fba2dd254eec01b6b3d16c2ce5494affd7cc4c18e9252
+    wikiURL: https://danbooru.donmai.us/wiki_pages/embarrassed.html
   blush:
     name: 脸红的
     image: bfca667e2da47a98de52c0098ce39cbb72c8f510d7764bcfcd18211383d40525
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blush.html
   sleepy:
     name: 困乏的
     image: 05b8ab094ba58f3ace6efc82014d0d6fc6a081b041cc095d9e9f0ce8dd030be9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleepy.html
   sad:
     name: 悲伤的
     image: e90ac41d81e94ecd2898bded62dd5e8726d293e003593e5e9d14f49b205901e2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sad.html
   drunk:
     name: 喝醉的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/drunk.html
   dark persona:
     name: 黑化的
     image: ae16214e48dff2e5dc20f3699cc9bc7dd1397d22b29afa5ac155be1b8b31c5c1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dark_persona.html
   frown:
     name: 皱眉/蹙额
     image: fc3d2002ffd5ed419066506cf80f87fdca728750bb6eec048a48f0590607d007
+    wikiURL: https://danbooru.donmai.us/wiki_pages/frown.html
   ahegao:
     name: 阿嘿颜
     image: 169cc616283d2fce22ef210b17b75bd069d00a085d386cea5dbe38d392673280
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ahegao.html
   naughty face:
     name: 下流的表情
     image: 28ae66e242481ef69a109da133a2e7cec36196ff35585f2ddbcb325e589ee2c8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/naughty_face.html
   endured face:
     name: 忍耐的表情
     image: 981bf905c46e950c6cdc7ea390aaa10b4d8d5cfea26a213c6dbb834b1fc6be11
   fangs:
     name: 尖牙
     image: 46032f4b3f92e8fa87a7ff85f65b536f6c3daa71d648cc86445177c318923cc5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fangs.html
   tongue:
     name: 舌头
     image: 16e512faacf1b65c1007d786f25e89c0005264e879b4e4b43184fb2a1cfdb7fc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tongue.html
   no nose:
     name: 没有鼻子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/no_nose.html
   saliva:
     name: 唾液
     image: 9c859da3c562dc01efa645fa4795c6c81d9d4eed006e36041a49d8a3ca944b4a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/saliva.html
   facial hair:
     name: 胡子
     image: 67ca899ea8f3db9d51e92154d074a5e8a9dae30f39c099567201d54e8d82dced
+    wikiURL: https://danbooru.donmai.us/wiki_pages/facial_hair.html
   fingersmile:
     name: 用手指做出笑脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fingersmile.html
   mouth hold:
     name: 嘴咬住
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mouth_hold.html
   parted lips:
     name: 嘴唇微张
+    wikiURL: https://danbooru.donmai.us/wiki_pages/parted_lips.html
   closed mouth:
     name: 闭嘴
     image: 4f6b4ed203305c6f6396f0cb4467760e72a854d67b8c9da6dfc6512aa72fbfa9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/closed_mouth.html
   tongue out:
     name: 吐舌头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tongue_out.html
   licking lips:
     name: 舔嘴唇
+    wikiURL: https://danbooru.donmai.us/wiki_pages/licking_lips.html
   pain:
     name: 疼痛
     image: 537fe95e5c7734100c39b8dfcc84790f66ea882e2c0dc28b9af610cc2df62081
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pain.html
   crying:
     name: 哭
     image: a91a43bd53f318f440eceb002764c9b5e29f185cf137b12d04a0032b9f067774
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crying.html
   fume:
     name: 气得冒烟(漫画)
     image: acc99ccff79da644f9c917ad2660069bbaa455ff9fa6b189a466df88d2fc50bf
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fume.html
   grimace:
     name: (因痛苦、厌恶等)做怪相
     image: cccf82b28138508c861061a9f3d70224f66a00e909f02e9b3046fb96b46e1c17
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grimace.html
   screaming:
     name: 尖叫/大声喊
     image: 118d82676542e619b03e175e52cc4fb6d9704fa91675900f265928e3e70b19ca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/screaming.html
   v-shaped eyebrows:
     name: 眉毛皱成V形(表高傲或愤怒)
     image: 87a79bbcf06fff3267ea24e70c9bc37fe22e81ce1709d12234301eef622421bb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/v-shaped_eyebrows.html
   scared:
     name: 害怕的
     image: 43ae8a355c43b245830414b8f5992eb188f3033f4e78d2b67e47353c9a0b83d6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scared.html
   scowl:
     name: 怒视/嫌弃/不满
     image: 4ea2f2f3db59da88efe29bcaf06468ea59294e608ae64021e8ea6e5eb3e81e7e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scowl.html
   serious:
     name: 严肃的
     image: 85c17d15f6a3ece367bfa408ce2743a41d9493c25c0c7f634b699ab8741bb067
+    wikiURL: https://danbooru.donmai.us/wiki_pages/serious.html
   tearing up:
     name: 要哭的表情
     image: bd70e043328d95deaec2620fdc0ea921fbca9f801b322cfa598ffb866b0ecf67
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tearing_up.html
   bored:
     name: 无聊的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bored.html
   gloom (expression):
     name: 消沉(表情)
     image: d2299bd88eddc69d07d5804154832b8c7748ebd08f8020352c8261a16b8d1f48
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gloom_(expression).html
   jealous:
     name: 嫉妒的
     image: b86fa25ad07b6cbb16cbf8fbb452de7f863df19dc64530069cb404432053dcab
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jealous.html
   jitome:
     name: 轻蔑的眼神
     image: d08cb57bb81da42fd3819e1bb9ff415dca61e5d8841eb450c0337d5c7a560f6d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jitome.html
   nervous:
     name: 不安的
     image: 243dea5efc1cefb8cd923160babbb307eef19fcbd59df930d7bcdb8bdd8c6d31
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nervous.html
   nervous smile:
     name: 不安地微笑
     image: d935f443c86ef74f446d1b411096f0f4bb1b990bcf006661747610979fb52877
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nervous_smile.html
   shaded:
     name: 阴沉脸
     image: a408f9219ee10cd65620d4a5bfffe5e6b78e8b2539301f21f137d356b0b6d15a
   turn pale:
     name: 脸色苍白
+    wikiURL: https://danbooru.donmai.us/wiki_pages/turn_pale.html
   expressionless:
     name: 无口
     image: 7cf3928e7759584bedaca37ee2342dde3001aae79a5b871d88096964d781f659
+    wikiURL: https://danbooru.donmai.us/wiki_pages/expressionless.html
   expressions:
     name: 表情
     image: 29d1a20bb3cf1707cba21df1efee132bc221eff9d8eb71e77b13aa757ccb344c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/expressions.html
   unconscious:
     name: 失神
     image: 06f9441dde6ac384ad3b7d455e97628058b2cdd17b54e1855c50eb07cb6dc5be
+    wikiURL: https://danbooru.donmai.us/wiki_pages/unconscious.html
   bright pupils:
     name: 明亮的瞳孔
     image: 38e8e05fba3a37e37de67327ae77f785c41973cbc313a05946f5ae69253827ce
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bright_pupils.html
   ear blush:
     name: 耳红
     image: 8496f07a28ec50d3abf430b21114d277f5087376ce3881b1ffeb4a58a889460d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ear_blush.html
   holding breath:
     name: 憋气
+    wikiURL: https://danbooru.donmai.us/wiki_pages/holding_breath.html
   puckered lips:
     name: 撅起的嘴唇
     image: 1a415916803dff0c57c906801b465ca70e75e7014f5293f51c1cfd82274c2b4e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/puckered_lips.html
   seductive smile:
     name: 诱人的微笑
     image: 45a4a1fa9230f51196ddf9c93869773a1231f0369adca741382bf3b14dd25f66
+    wikiURL: https://danbooru.donmai.us/wiki_pages/seductive_smile.html
   smiley:
     name: 笑脸
   smirk:
     name: 傻笑/得意的笑
     image: c3870002b3238a11b1722e991a47e123cbe4be5043a05fbce8faa4d81af1de69
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smirk.html
   doyagao:
     name: 得意脸
     image: 87292463b026d31542fea7f8939a34c75ffe23a5e285a89d7c3d903e40102b43
+    wikiURL: https://danbooru.donmai.us/wiki_pages/doyagao.html
   flustered:
     name: 慌乱的
     image: 9b31bea89f960480e7f2160e23f4179a3c7a059cc65d291f2fa9deedf7d2bac7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flustered.html
   full blush:
     name: 整张脸泛红
     image: 0fb1cb8af6f54d84bfbe52af4eeb27dde795317b23dd91852050eb3c71e0c249
   heart in eye:
     name: 眼里冒爱心
     image: 49b41cf9983bbe73ff02d4946683ecfbb8762a89c21a01168433e374434f79ce
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_in_eye.html
   heavy breathing:
     name: 喘粗气
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heavy_breathing.html
   moaning:
     name: 呻吟
+    wikiURL: https://danbooru.donmai.us/wiki_pages/moaning.html
   smug:
     name: 得意脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smug.html
   spit take:
     name: 惊讶或无语到喷了
     image: f5c333b7d9b218a0373979bddf26cfc87a615ff24bf7faf75d331357b78a66ee
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spit_take.html
   surprised:
     name: 惊讶
     image: 0afa6f275993e6cf5305f5249605633787806e2ac4b73cac2da23ffff3a36990
+    wikiURL: https://danbooru.donmai.us/wiki_pages/surprised.html
   tsundere:
     name: 傲娇
     image: 8e187dfa52b119b4f0f42007b9e0bf96b793e9c9985fd0fcfdd94954d1736102
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tsundere.html
   double v:
     name: 啊嘿颜比V
+    wikiURL: https://danbooru.donmai.us/wiki_pages/double_v.html
   drooling:
     name: 流口水
     image: 6df26cf3843885586315e36d7dcad1831324c4e32bf90722cd34a4ead73f24b5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/drooling.html
   torogao:
     name: 淫荡的表情
     image: d4bf955a56828ed7d154b3b773295e9eea62179e5552af47bf2876cf40c0ab5a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/torogao.html
   glint:
     name: 眼中闪现强烈的情感
     image: 97883a7510f25694a253a3299ba6a1917d79967209bc5733d9f92ffefc39fd29
+    wikiURL: https://danbooru.donmai.us/wiki_pages/glint.html
   happy:
     name: 快乐/幸福
     image: 88a28c18796c4e39fa31c946ea5573fae32220c8baf61e0fc42216442530b37e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/happy.html
   laughing:
     name: 在笑的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/laughing.html
   naughty:
     name: 下流的表情
     image: 7ebb594f0b0b14426714cb28b6e10c1f1ff12a9770af288c3a4dedc1767c60f2
   troll:
     name: 嚣张脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/troll.html
   yandere:
     name: 病娇
     image: 77dad4f02e8d7e4f35daa8fea5ca4e847eba635fad2ad2367687abe0b776e776
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yandere.html
   saliva trail:
     name: 唾液拉丝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/saliva_trail.html
   red lips:
     name: 朱唇
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_lips.html
   skin fang:
     name: 把嘴的一部分画成虎牙状
+    wikiURL: https://danbooru.donmai.us/wiki_pages/skin_fang.html
   upper teeth:
     name: 露出上排牙齿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upper_teeth.html
   fang:
     name: 虎牙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fang.html
   fang out:
     name: 露出虎牙/露出尖牙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fang_out.html
   long tongue:
     name: 长舌头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_tongue.html
   forehead:
     name: 额头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forehead.html
   light blush:
     name: 淡淡的腮红
+    wikiURL: https://danbooru.donmai.us/wiki_pages/light_blush.html
   cheek-to-cheek:
     name: 脸贴脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheek-to-cheek.html
   cheek bulge:
     name: 鼓着腮帮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheek_bulge.html
   cheek pinching:
     name: 捏脸颊
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheek_pinching.html
   cheek poking:
     name: 戳脸颊
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheek_poking.html
   cheek pull:
     name: 扯脸颊
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheek_pull.html
   chin grab:
     name: 抬下巴
   chin rest:
     name: 手撑着头
     image: fe7b16ff3b025f7f6c5dc7f0700c3c0849eec7a9ef2b4c2d5f15bca7436ecaae
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chin_rest.html
   chin stroking:
     name: 摸下巴
   covering eyes:
     name: 遮住眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/covering_eyes.html
   covering:
     name: 挡住脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/covering.html
   covering mouth:
     name: 挡住嘴巴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/covering_mouth.html
   face-to-face:
     name: 脸贴脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/face-to-face.html
   facing another:
     name: 二人面对面(脸贴得很近)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/facing_another.html
   forehead-to-forehead:
     name: 额头贴额头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forehead-to-forehead.html
   teeth:
     name: 牙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/teeth.html
   excited:
     name: 兴奋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/excited.html
   nose blush:
     name: 害羞
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nose_blush.html
   expressionless eyes:
     name: 失神
   wide eyed:
     name: 睁大眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wide_eyed.html
   dark_persona:
     name: 黑化的
   naughty_face:
     name: 调皮脸
   '>:(':
     name: 愤怒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/>:(.html
   '>:)':
     name: 嘲笑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/>:).html
   ':o':
     name: 惊讶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:o.html
   ':q':
     name: 右上吐舌头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:q.html
   ':p':
     name: 右下吐舌头
     image: 4c8b6c53b6f9590804470f8914d5360828dd9b7f5610ac04ac42dd728b1fdd3d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:p.html
   ':d':
     name: 咧嘴笑
     image: 8270916d017c504fe92e799deef1d54a0e8e2c0046e5da45d564e632077a11a8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:d.html
   ;d:
     name: 单眼咧嘴笑
     image: baa3b3ccc046cb095a7f6d0ede9ae451b1df5a62979ecf4026eafbf24fe31841
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;d.html
   ':3':
     name: 猫嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:3.html
   drool:
     name: 流口水
   lipstick:
     name: 口红/唇膏
     image: 5015bf55b1ebfea70121e8ec0e788ff0aace9c726da369f00006544a7cbf03f5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lipstick.html

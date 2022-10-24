@@ -3,15 +3,19 @@ content:
   petals:
     name: 花瓣
     image: a24afc328616fcd16cb2f60eb23c15646a0e039fb4d1c65f13f196d126e45aca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/petals.html
   flower:
     name: 花
     image: cb577ef3b2f5d4920e4e9174a3e883ea34cacfadcca92704690f0ca497fe97cd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower.html
   rose petals:
     name: 玫瑰花瓣
     image: 94d16bafd7a539a60af95b68106f16ee4b66c55da3ca5a14a7fc750aaf5ae886
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rose_petals.html
   cherry blossoms:
     name: 樱花
     image: 96b7bee970789bd29f6a15e7c2aaa05f4109aefd9c2dc1f34107cc8b6d0b45c4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cherry_blossoms.html
   flowers meadows:
     name: 花田
     image: eb7130a6a25bf3cac7e8461827c5e6027bbdb6554a8181d8612312e8e681ee3e

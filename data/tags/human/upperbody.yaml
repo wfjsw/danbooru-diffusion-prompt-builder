@@ -6,338 +6,455 @@ content:
   collarbone:
     name: 锁骨
     image: bf6217292ebaacd01dcd6054190fb2e47830f379d909515b20ff6063c36fef9c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/collarbone.html
   wings:
     name: 翅膀/翼
     image: 36d15745fb708b84f200afbca8669b0f49a4cb406cba0b6f332ccc4c905f8fb7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wings.html
   bat wings:
     name: 蝙蝠翅膀
     image: 4e9823d04f7f8fea85edfcacd033af3c0d89688b7d44d12ecd57ffdd5e425f1d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bat_wings.html
   butterfly wings:
     name: 蝴蝶翅膀
     image: 6dc32088651ee34619f5de627782caa07f8ccacca8ed2d5bad1341c13e3b9947
+    wikiURL: https://danbooru.donmai.us/wiki_pages/butterfly_wings.html
   black wings:
     name: 黑色之翼
     image: b85e89ba5fbc75c7a5d62a3ad2781d86ef47a87e6e1e314d428ed7cf225ac24d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_wings.html
   demon wings:
     name: 恶魔之翼
     image: 0027df4e9d416d3ce820dc9487a1fb41996768fc01500ee0474ddb8be8770c11
+    wikiURL: https://danbooru.donmai.us/wiki_pages/demon_wings.html
   muscle:
     name: 肌肉
     image: c6ce1831d041919cb774a1930d7a9235c16833b0e310d9ef3f1eab82d6e5a5ca
   cape:
     name: 披肩/斗篷/披风
     image: 674e8c5f14ea142ab895c4fd888953f0d2d022f7814e28c14ed3684f8d6dbafb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cape.html
   camisole:
     name: 吊带背心
     image: 02f2f8a860dc5708ff5cd3bcb8c5ce4e8f861e6e5b4941d8a74228c23a55743a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/camisole.html
   detached sleeves:
     name: 袖肩分离装
     image: 220738cf05ef4fe3fe5c4b7e9c07e06d227f9ae724af4a69a3493a316d7f49d7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/detached_sleeves.html
   hoodie:
     name: 卫衣
     image: e04b5351ce2d3e925400528db93d0453cbd76066517bed86fb5a08663e46af88
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hoodie.html
   long sleeves:
     name: 长袖
     image: 434fd6016b028e00807f1498727e0b013c9f19d8f2e9eaad6ddf721db2062c10
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_sleeves.html
   robe:
     name: 长袍
     image: e00d5d6d405d63861f189ba172ad67f2c211b59e7f81a994788d0eb9e05d01b4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/robe.html
   off shoulder:
     name: 露单肩
     image: cf425425b47998c6285b27973c9d04b831b23dc2747cd90a40eb5a1da6261d50
+    wikiURL: https://danbooru.donmai.us/wiki_pages/off_shoulder.html
   bare shoulders:
     name: 露双肩
     image: 4ce9d3e616e369de35ade7f75ea249a5cd72a9fe5994c9dab84c8cb11db01794
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bare_shoulders.html
   topless:
     name: 上着较少
     image: b8ecaeb34062aad7f7ca0f0554fdd1d2db5f32cbf80b7815944bc9a57fe2e8fb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/topless.html
   open clothes:
     name: 敞开衣服
     image: 2e3c57e1f3c87cd1ac1094bcf1f2da9637fb29962336a9c8c5bcbdc28fc551ff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/open_clothes.html
   open robe:
     name: 敞开长袍
     image: af85b7e247e917dcbb5cbf6b753ad660559bc80f4441eccdb2e6b4878ec193f9
   naked cape:
     restricted: true
     name: 裸体披风
+    wikiURL: https://danbooru.donmai.us/wiki_pages/naked_cape.html
   naked shirt:
     restricted: true
     name: 裸体衬衫
     image: edc52d91b4d8a04ff4c4c94f0c92a9aab3f823c55d4a70b1e5515a2e919e16a0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/naked_shirt.html
   angel wings:
     name: 天使的翅膀
     image: 7e5599b1481393ad23614102c41881328c7dc3062bd0aaa8e16319a73a1fb583
+    wikiURL: https://danbooru.donmai.us/wiki_pages/angel_wings.html
   detached wings:
     name: 脱离本体的翅膀
     image: 121f186346d7c452dcc75b1606d3196979a5bfe7a3f4e2674c3286b78f382c5d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/detached_wings.html
   dragon wings:
     name: 龙翼
     image: df82583cc8fd31caf4f42667a31a7e561a39863a9f4c02444f20b410756d49fe
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dragon_wings.html
   fairy wings:
     name: 妖精的翅膀
     image: 76de0a9bd4c55381d6d04ba94fdd0bd6b2579e6fd1f9e95b205e5976df13d711
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fairy_wings.html
   harness:
     name: 背带
     image: 2e42c41287c3144a73fd571dfc0489c09ea240bb59b4e5db3671ecb0b79b8f6a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/harness.html
   whip marks:
     name: 鞭痕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/whip_marks.html
   amulet:
     name: 护身符
     image: 56278dbcf0786a22f6890ce1c1c6db4d8905a47ad1f078ee7bde9c94d489d5dd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/amulet.html
   badge:
     name: 徽章
     image: 210812e1b829c3f3dc878f3a6026294afc65e82b888ef84a7b68dbd2a9b33668
+    wikiURL: https://danbooru.donmai.us/wiki_pages/badge.html
   arm belt:
     name: 臂环
     image: 49f695482076007717b52988471c80db8bbdc441b382df62164a0f8ed32558dc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/arm_belt.html
   bandaged arm:
     name: 缠着绷带的手臂
     image: 4a56c21402aafd99d95b7a9dc2c3ddc02947a751ea4a73f0dbb99930cfa78a0c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bandaged_arm.html
   bandaged hands:
     name: 缠着绷带的手
   bangle:
     name: 手镯
     image: 0cd37c36513db95939af7c672486d4c47c886dccd8a7cbeb2d0cf30aff3cb292
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bangle.html
   bead bracelet:
     name: 珠子手链
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bead_bracelet.html
   bracelet:
     name: 手镯
     image: 4f83cea224f812bba66d8e20b00590818deae10b4b7484903bf4ed91056d3691
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bracelet.html
   bracer:
     name: 护腕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bracer.html
   armband:
     name: 臂章
     image: 3eb0c937131e07f03be89e4fac9f4f85351033d21113aac06aeced052537216f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/armband.html
   armlet:
     name: 臂环
     image: e887ec387eb99f6d6872b2b22c1980eb750b40782e20d74b0fa4e85c455893c7
+    wikiURL: https://danbooru.donmai.us/wiki_pages/armlet.html
   elbow gloves:
     name: 长袖手套
     image: 5c8956462b127e7e8873f6972b7809f182feb9f507846a5ecc68e08a2c121e0f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/elbow_gloves.html
   fingerless gloves:
     name: 露指手套
     image: cbd2dd93d84452a6213bcaf12042c0d8a6f46d32d3a34dc52bbf40d65728ff6d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fingerless_gloves.html
   gloves:
     name: 手套
     image: 14db3282890783a2819cb7817616eb406add939256991209ff55068e13873f9e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gloves.html
   necktie:
     alias:
       - tie
     name: 领带
     image: f15fccdc89ef346d81816cb5a7651f04d1dfa753e3564306c74dfcb257466b29
+    wikiURL: https://danbooru.donmai.us/wiki_pages/necktie.html
   wrist cuffs:
     name: 腕饰
     image: 3aaa8940c5da773c8b1bf7d04b61e1e9b4ce2b21b8c1ca177ba5477e0f6cb878
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wrist_cuffs.html
   wristband:
     name: 腕带
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wristband.html
   belly chain:
     name: 脐链
+    wikiURL: https://danbooru.donmai.us/wiki_pages/belly_chain.html
   bandages:
     name: 绷带
     image: d2c17e27b207ff472dc0b92c8cfbdef28c42eb12a3d9857882e6d08cfc799a8c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bandages.html
   barcode:
     name: 条形码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/barcode.html
   bow:
     name: 蝴蝶结
     image: 6c0efefc94f1d39bfc5beea5ffddcd4f3a08ef108e82028d7745013c8e37d55e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bow.html
   command spell:
     name: 令咒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/command_spell.html
   convenient censoring:
     name: 简单巧妙的打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_censoring.html
   diamond (gemstone):
     name: 钻石(宝石)
     image: aef1138d68cab6ca34eb065235d57aea2f19bc67512b4270f9d9637d999b1e01
+    wikiURL: https://danbooru.donmai.us/wiki_pages/diamond_(gemstone).html
   heart lock (kantai collection):
     name: 舰娘锁(舰C)
     image: 11fb440aaa6b07884c549effdfca18f55e25fb021adf6f86158c98a1de689638
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_lock_(kantai_collection).html
   heart tattoo:
     name: 心形纹身
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_tattoo.html
   heartbeat:
     name: 心跳/表现出心动的文字
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heartbeat.html
   mole:
     name: 痣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mole.html
   number tattoo:
     name: 编号纹身
+    wikiURL: https://danbooru.donmai.us/wiki_pages/number_tattoo.html
   steam censor:
     name: 蒸汽/雾气打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/steam_censor.html
   blazer:
     name: 西装夹克
     image: 35e31761c4f7b853d6145884518a23e5cfdb821ffdc73b9cb66404ed25c26fce
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blazer.html
   suit jacket:
     name: 西装外套
     image: deb9d0fbf539e1cfb320a1d5cbcdf019b91e3c85f3b6f04fdbc4a666a433d4d6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/suit_jacket.html
   capelet:
     name: 披肩
     image: 3147a26ee15101f639966e539f9e61f9cbeb0259fb358d4dd2d4b9597230e5da
+    wikiURL: https://danbooru.donmai.us/wiki_pages/capelet.html
   cloak:
     name: 斗篷
     image: c9db96b2cfb407e0c7587e4ba747997a7719d98a46c66e01da726002a50cc1df
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cloak.html
   coat:
     name: 外套
     image: cb3127f01a7e43f223bf433076b2b2f71999afff19ab34ba71bc0ed1e148a9d8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coat.html
   coattails:
     name: 燕尾
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coattails.html
   collared jacket:
     name: 翻领夹克
     image: 5e8d18b2b601c869867ce3eb8aa5e16c7e132fca3cca378492fe56b1f9bb8dcd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/collared_jacket.html
   duffel coat:
     name: 粗呢大衣
     image: b8f9df42ece103b06a5def2bfdd6279a58fbfb6d6abce8410ebd69363a5007a5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/duffel_coat.html
   hooded cape:
     name: 连帽斗篷
     image: 9e60f48f5623b574724174eb9eb12760366bcf33ae21542b3febaa729e9cde0d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_cape.html
   hooded cloak:
     name: 连帽披巾
     image: ff2e866af2ad86cc5dc386b3e39010769ca00d033918db52833ec752252d5ce2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_cloak.html
   hooded coat:
     name: 连帽外套
     image: c7b5af55210cabcaa6cdb2fcba144473f9dac0c162971c0b55fe2976980da5b0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_coat.html
   hooded jacket:
     name: 连帽夹克
     image: cfd9c4d736fc4bd25247fc24ed21c166ed44a96dae54b5ae2bf31b358903cb2e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_jacket.html
   kesa:
     name: 袈裟
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kesa.html
   labcoat:
     name: 白大褂
     image: bace96cc70ee743e1edc70eadba0157561fab9c8839efbcad75ef3c3458559dc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/labcoat.html
   military jacket:
     name: 军装夹克
     image: be4c1046cf4477979c9c4c17ff1c5995c85d0ce295477f95482940695861b7d3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/military_jacket.html
   pant suit:
     name: 女性穿着西服
     image: 6349f53454e529f72628703c45f260cd8a6040c1a74436293dee4a0976cd1672
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pant_suit.html
   tailcoat:
     name: 燕尾服
     image: 498d3f023b1cd7c9713ea7be5f8fe2b97cce6812cc91141f9384f79bcd5be14e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tailcoat.html
   blouse:
     name: 罩衫
     image: dcd57a4a805c261b0e9e987b2ce91bdf51f05106bbdba26c73f4eefc75b816d2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blouse.html
   cardigan:
     name: 开襟衫
     image: 96a20b7a35c28e3c82b5ae2d371123b250ce471251009687e6d790349a7cbecd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cardigan.html
   casual:
     name: 私服
+    wikiURL: https://danbooru.donmai.us/wiki_pages/casual.html
   heart cutout:
     name: 衣服上有心形的开口
     image: 9818bd7fd16bae86f51cb389f5b4ddbcc7b8fe6c948516552403bcc2a1162dae
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_cutout.html
   skirt basket:
     name: 指掀起裙子时形成的篮子形状
+    wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_basket.html
   center frills:
     name: 胸口带花边的服装
     image: 844f18a03469eab4a7411cfe14da264fdefded5ebc4bd71a2d377a1ab4112277
+    wikiURL: https://danbooru.donmai.us/wiki_pages/center_frills.html
   center opening:
     name: 正中间开口的服装
+    wikiURL: https://danbooru.donmai.us/wiki_pages/center_opening.html
   checkered shirt:
     name: 格子衬衫
     image: 70607ac69fec2a755959740b101361102a1f547832b12442a0c8a7ca7ab620e9
+    wikiURL: https://danbooru.donmai.us/wiki_pages/checkered_shirt.html
   clothes between breasts:
     name: 衣服勒在乳沟里
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clothes_between_breasts.html
   cat cutout:
     name: 猫咪内衣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cat_cutout.html
   t-shirt:
     name: T 恤
     image: b9fad1cd739bf3b58dee79ed5f5177ddaa29a69aba6ee409330c8c0f9c216a54
+    wikiURL: https://danbooru.donmai.us/wiki_pages/t-shirt.html
   collared blouse:
     name: 翻领短衫
     image: 020461d986f7c303822b0e753646fe0828a8de403ddeb8968de3a35f10e52729
+    wikiURL: https://danbooru.donmai.us/wiki_pages/collared_blouse.html
   collared shirt:
     name: 翻领衬衫
     image: 8875ca79195420ad063525bd3aee90ba9d39bcaa3c4c052a81e6516ef4ff7605
+    wikiURL: https://danbooru.donmai.us/wiki_pages/collared_shirt.html
   criss-cross halter:
     name: 交叉吊带
     image: 34e47be8c37968595db3e306b881c80765b57f449515785ea6a29d839561430a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/criss-cross_halter.html
   crop top:
     name: 露腹短上衣
     image: 06db683601e81cb049b5d3d0acaf0433e3f8940b82db58b11276def03f7b7de2
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crop_top.html
   cropped shirt:
     name: 短衬衫
     image: bf36d099fc7f37d89695385c9e195e3023a590ae0fbad316cbd6c1c14bac8c6d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cropped_shirt.html
   cropped vest:
     name: 小款背心
     image: 6d40dbedae44a3d187bcfa5720d5b9024291ac76aa5b8b73ac60dd0fd8a933cc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cropped_vest.html
   dress shirt:
     name: 西服衬衫
     image: 1a12ac383bc255e8d0830367aea6a0d43a2ffbe567ddeb106e63533e45a5b627
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dress_shirt.html
   faulds:
     name: 腹甲
     image: 012264e8eb4d97703bda3ee07b9c30c198d4ca643fb18b5a2d36ee38b74c53ad
+    wikiURL: https://danbooru.donmai.us/wiki_pages/faulds.html
   front-tie top:
     name: 从正面打结的衣物
     image: 4bd30853f6a5f6291b7591f70663a18b2567cfbf2bc1a4b8a8161c5af457a675
+    wikiURL: https://danbooru.donmai.us/wiki_pages/front-tie_top.html
   gathers:
     name: 褶裥(衣物)
     image: 7f8b7a7222d3a12035441e786961c802994adc62b3f0a545977bb5952bcacd70
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gathers.html
   gym shirt:
     name: 体操服(上身)
     image: 0670373174fbb585893cfe44d577fd9a4d91252adb615bde0af5b0d11147dd7f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gym_shirt.html
   high-waist skirt:
     name: 高腰裙
     image: 5e039840c08d1eaabc7d8661ed62eb1a4bd96ed5da3c6167826f5d24c507f512
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high-waist_skirt.html
   virgin killer sweater:
     name: 处男杀手毛衣
     image: ece52bba140ace7665957b9fed1cc9b44d19ebf93f042f37970a51a2526b17eb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/virgin_killer_sweater.html
   open-chest sweater:
     name: 胸部开口的毛衣
     image: 48a753d31bc7ea8cbf3099ba168952dccf561bdf00dff0fe01afb91e4e44e842
+    wikiURL: https://danbooru.donmai.us/wiki_pages/open-chest_sweater.html
   hooded sweater:
     name: 连帽毛衣
     image: 11bb1808272b1a6a657e2489a90a0512dab52b0f94ba990918bccf7ad1dca65b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_sweater.html
   hooded track jacket:
     name: 连帽运动夹克
     image: a1bfc3fc2dcbda0020e2adba052ccb3220c1044a6a1f093f359ac2592adda860
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hooded_track_jacket.html
   jersey:
     name: 运动衫
     image: 72a2fee6cdf0806e4b87f60712318a742076a4d95030d595908c60c442569c14
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jersey.html
   load bearing vest:
     name: 承重背心
     image: 101125748fb11fb421a374c173cb397442317c9b0edd8ea0ebe943e636e73d1f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/load_bearing_vest.html
   lowleg:
     name: 低胸装
     image: ae2593e0cbab832914f591379c76574a4d9baf736f3f678b3278a23137100a92
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lowleg.html
   oversized shirt:
     name: 过大号衬衫
     image: 3fb0aa47b88a9ba9d3baafe5b59e666fb157bd499fd04a5e5724d2180bbd5573
+    wikiURL: https://danbooru.donmai.us/wiki_pages/oversized_shirt.html
   sailor shirt:
     name: 水手服款衬衫
     image: 1c2fdd024256b78769f588e124fdefa892643f311b4e116caba0de2ff571ceac
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sailor_shirt.html
   tank top:
     name: 无袖紧身背心
     image: cbe87edde078e3060bb56184b93b8d4f57bbeb7913b1d4dd2189da45ab268ab5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tank_top.html
   unbuttoned shirt:
     name: 解开纽扣的衬衫
     image: 267d9090ad058162252204e58d17e83b4534746dc70d9a8163961f66331e9e3f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/unbuttoned_shirt.html
   vest:
     name: 背心
     image: 9101aaccf8ba452bc9ceaa9a1b684b8212d803250485af11dffb6b43bed226e5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vest.html
   wet shirt:
     name: 湿衬衫
     image: 1d6a9f7d631eb860bfc1796bd86d5c2f227247184e15642d95938e69f263f756
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wet_shirt.html
   cat lingerie:
     name: 猫系内衣
     image: d5f9d7bc63ac00c23fca48571e32a7064c106dfee4cda55d93dd5e9f4fe515ec
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cat_lingerie.html
   dudou:
     name: 肚兜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dudou.html
   bikini top:
     name: 比基尼上衣
     image: a80c22fe6f038ee3237d3d153bb2df9a200bfa8f2d475ac9d4c7e51381306860
   bikini top removed:
     name: 脱下比基尼上衣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bikini_top_removed.html
   gloves removed:
     name: 脱下手套
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gloves_removed.html
   half gloves:
     name: 很短的手套/半截手套
+    wikiURL: https://danbooru.donmai.us/wiki_pages/half_gloves.html
   latex gloves:
     name: 乳胶手套
+    wikiURL: https://danbooru.donmai.us/wiki_pages/latex_gloves.html
   layered sleeves:
     name: 分层的衣袖
     image: 4c503d3de6deb739cf38402709acb4ddee1dd383ad7066653ecc399c32cd5b8c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/layered_sleeves.html
   sleeves folded up:
     name: 叠起来的袖子
     image: 63869ecd41f9c15d12453b6e55de56c3b9fccc9a2919b89c6e110cc2bc8599ff
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleeves_folded_up.html
   sleeves past fingers:
     name: 袖子长过手指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleeves_past_fingers.html
   sleeves past wrists:
     name: 袖子长过手腕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleeves_past_wrists.html
   sleeves pushed up:
     name: 袖子往上拉起
     image: 6ddd645b4d82ef4311504bed23a21cf9c62d83ff939822b82cb1b404e29cc33f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleeves_pushed_up.html

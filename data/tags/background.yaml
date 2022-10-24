@@ -23,79 +23,104 @@ content:
       - scenary
     name: 风景
     image: f210bf4765e30d592da00b7624fcaf9b705c5cd3885721e9e90b93aa7b108674
+    wikiURL: https://danbooru.donmai.us/wiki_pages/landscape.html
   science fiction:
     name: 科幻
     image: e8b2f57696da3aeb3a2ffd1e43f55b84719a4aa74e23c7e8497d0fbcc1483c04
+    wikiURL: https://danbooru.donmai.us/wiki_pages/science_fiction.html
   gradient background:
     name: 渐变的背景
     image: 6040a74c186fbbf5f5e70ea87d8e34eaeae418f0493764fdc63bae333d93758b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient_background.html
   simple background:
     name: 简单背景/无背景
     image: 3f7cff22c34c2283a50e2c0af16fd3038d8ae81f53d66f4a8a66f3fce64e9331
+    wikiURL: https://danbooru.donmai.us/wiki_pages/simple_background.html
   transparent background:
     name: 透明背景
+    wikiURL: https://danbooru.donmai.us/wiki_pages/transparent_background.html
   ocean:
     name: 大海
     image: e7e528cb9cf6fe96737560a340c38dd7fb1607d2231d55ece277700363e9ee6f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ocean.html
   pentagram:
     name: 五角星
     image: 62ce1b48f4a87551d23f333d8e1a04536b271617200e74d5c0ecf303e9e2d508
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pentagram.html
   magic circle:
     name: 魔法阵
     image: e34c1a7f5dcb7614466b8f6ce0d037ffd6ad89135eee932dacd16843746effc5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/magic_circle.html
   valentine:
     name: 情人节
     image: 47671b4ce86a87dc4da2cb4835dc1712316fb73677a598e05c2583b1ea445d8c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/valentine.html
   halloween:
     name: 万圣节
     image: 1d7b5cf03e9d9123f44b97d29d17f6a79c6fb54f9dacfa1521845bc6f6442aba
+    wikiURL: https://danbooru.donmai.us/wiki_pages/halloween.html
   christmas:
     name: 圣诞节
     image: 29ea7411d022b6fea1c127fb45e3bf53b02eefc3c5aaec5040d4375acf2d568c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/christmas.html
   forest:
     name: 森林/树
     image: 4fd9949b27f320803b117777ffbeef778c98b0b7d259bf57cce9c4a88ab1180f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forest.html
   outdoors:
     name: 户外
     image: 38f205d587f54437d416a3e8c6bf0e08f074ef9049bd84050eba72c25bbda2fa
+    wikiURL: https://danbooru.donmai.us/wiki_pages/outdoors.html
   indoors:
     name: 室内
     image: 86a4420e35958074169b34bde0b6e37f782b58ecff2a448a0ae795b573520968
+    wikiURL: https://danbooru.donmai.us/wiki_pages/indoors.html
   rooftop:
     name: 屋顶
     image: 47653c7522cc115811051ed34d5e3528d74583842a9f4af9c239c5ec1fd43a37
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rooftop.html
   stage:
     name: 舞台
     image: 5b14e11246d410fd4781af690d20bcd576e8641b7e40d01e65697c1f67aeef95
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stage.html
   feather:
     name: 场景飘羽毛
     image: 7620cbc9ac7eb864f709bde1d8ed9d1cfa3d8c9123343cc21e7b8dcc1e74eab6
   cafe:
     name: 咖啡厅
     image: 7e2c8afd7754ee04c931b51a36965672c75133cdf033d46df023fe933c6f7ef0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cafe.html
   starbucks:
     name: 星巴克
     image: d63477c62f794c0af2a95718a12d20d604bacc26f19000e514058348af5d3df0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/starbucks.html
   city:
     name: 城市
     image: 1c36b2caa411350095436af96a1f275baed42c6d2269c9e1ed62a362267bd26a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/city.html
   park:
     name: 公园
     image: 45833d8a6529a29f54d8ad9f429fe97835b14b01b89ed6febb7211dd8164af12
+    wikiURL: https://danbooru.donmai.us/wiki_pages/park.html
   restaurant:
     name: 餐厅
     image: 4a077cb8b2335733cb23a9e5643c37c41cf291797b6f45f28dc793fae4f14f74
+    wikiURL: https://danbooru.donmai.us/wiki_pages/restaurant.html
   izakaya:
     name: 居酒屋
     image: c8820a9422f5841bb5ae8253fc438ec23c28f048a0063f82dfee851dc155447f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/izakaya.html
   classroom:
     name: 教室
     image: 8e5be028bba13c3411819225b7bdc4bdcfe70f59d69108885bffa0749291a794
+    wikiURL: https://danbooru.donmai.us/wiki_pages/classroom.html
   street:
     name: 街道
+    wikiURL: https://danbooru.donmai.us/wiki_pages/street.html
   beautiful detailed water:
     name: 漂亮的水
     image: bc2f87f701ae6a9ec79998db012098f7d0447f1efccd22c47e16809e86bf6895
   white background:
     name: 白色背景
     image: ceb888f570bcba9c0b70514d9828d782e31f2cd325fbf0823597e85e1655877e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_background.html
