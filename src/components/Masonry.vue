@@ -27,7 +27,7 @@ if (!import.meta.env.SSR) {
         })
     }, 250)
 
-    const delayedReloadLayoutWrapper = () => delayedReloadLayout()
+    const delayedReloadLayoutWrapper = () => setTimeout(() => nextTick(() => delayedReloadLayout()), 250)
 
     onMounted(async () => {
         const Masonry = (await import('masonry-layout')).default;
@@ -40,11 +40,19 @@ if (!import.meta.env.SSR) {
         })
 
         window.addEventListener('resize', delayedReloadLayoutWrapper)
+        window.addEventListener('orientationchange', delayedReloadLayoutWrapper)
+        window.addEventListener('visibilitychange', delayedReloadLayoutWrapper)
+        window.addEventListener('focusin', delayedReloadLayoutWrapper)
         reloadLayout()
     })
 
     onUnmounted(() => {
+
         window.removeEventListener('resize', delayedReloadLayoutWrapper)
+        window.removeEventListener('orientationchange', delayedReloadLayoutWrapper)
+        window.removeEventListener('visibilitychange', delayedReloadLayoutWrapper)
+        window.removeEventListener('focusin', delayedReloadLayoutWrapper)
+
         masonry.value?.destroy?.();
     })
 
