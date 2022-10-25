@@ -18,7 +18,16 @@ if (!import.meta.env.SSR) {
             masonry.value?.reloadItems?.();
             masonry.value?.layout?.();
         })
-    }, 25)
+    }, 50)
+
+    const delayedReloadLayout = debounce(() => {
+        nextTick(() => {
+            masonry.value?.reloadItems?.();
+            masonry.value?.layout?.();
+        })
+    }, 250)
+
+    const delayedReloadLayoutWrapper = () => delayedReloadLayout()
 
     onMounted(async () => {
         const Masonry = (await import('masonry-layout')).default;
@@ -27,11 +36,15 @@ if (!import.meta.env.SSR) {
             transitionDuration: 0,
             percentPosition: true,
             initLayout: false,
+            resize: false,
         })
+
+        window.addEventListener('resize', delayedReloadLayoutWrapper)
         reloadLayout()
     })
 
     onUnmounted(() => {
+        window.removeEventListener('resize', delayedReloadLayoutWrapper)
         masonry.value?.destroy?.();
     })
 
