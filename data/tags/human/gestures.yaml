@@ -1,7 +1,4 @@
 content:
-  adjusting thighhigh:
-    name: 调整过膝袜
-    wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_thighhigh.html
   arm support:
     name: 用手支撑住
     image: d9f686967a674eb57e5997faec8a15566c3e7491286bf40670adbcb11d88b84b
@@ -10,9 +7,14 @@ content:
     name: 举手露腋
     image: ad9aed1088b7bb38dd5cd833659f90e934ebfe0d2d5aa7103507246dec497836
     wikiURL: https://danbooru.donmai.us/wiki_pages/armpits.html
+    alias:
+      - armpit
   arms behind back:
     name: 手放在身后
     wikiURL: https://danbooru.donmai.us/wiki_pages/arms_behind_back.html
+    alias:
+      - hands behind back
+      - arms behind
   arms crossed:
     name: 手交叉于胸前
     image: 6a04b9de71b0500a1031a8916ee5e62936e156c555f5998fb18fd99c98545cd5
@@ -20,12 +22,18 @@ content:
     name: 双抬臂
     image: fbdb6a7256f9607b170ea438d5eb6b4edff58c7db4cc7251cd83708e2958ece2
     wikiURL: https://danbooru.donmai.us/wiki_pages/arms_up.html
+    alias:
+      - raised arms
+      - arms above
+      - arms raised
+      - arms above head
+      - hands above head
   caramelldansen:
     description: 某著名伸手扭腰动作
     name: 焦糖舞
     wikiURL: https://danbooru.donmai.us/wiki_pages/caramelldansen.html
-  cat pose:
-    name: 猫爪手势
+    alias:
+      - caramel dansen
   curtsy:
     name: 屈膝礼
   finger gun:
@@ -37,9 +45,8 @@ content:
     name: 单手插腰
     image: aeb1a2bdcdb05d29baf78142144fed57945df4f4926a11275e5347681a4aa7f7
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_hip.html
-  hand to mouth:
-    name: 手放在嘴边
-    image: 113241c89b825a116bd577b2be52ce08629932ac3baadb6f2304c0eda4f6cbd1
+    alias:
+      - hand on waist
   hands on another's breast:
     name: 手放在另一人的胸前
     image: b14385a9d27850c16be06fc023294ae62a4d309126026e4586446edf34f11b09
@@ -47,16 +54,29 @@ content:
     name: 双手叉腰
     image: f6a872dd1d1afc27f9e1a232c14688fedddf6bd2202f592bfcbe1bfd9847559d
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_hips.html
+    alias:
+      - hands on waist
+      - akimbo
   holding:
     name: 拿着
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding.html
+    alias:
+      - hold
+      - holding object
   holding hands:
     name: 牵手
     image: dfa718b14fafbbf4bf4934f4293c0ca8f5fb21d97c3237170bf70752f7c161df
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_hands.html
+    alias:
+      - handholding
+      - hand holding
+      - holding another's hand
   middle finger:
     name: 比出中指
     wikiURL: https://danbooru.donmai.us/wiki_pages/middle_finger.html
+    alias:
+      - the finger
+      - flipping off
   salute:
     name: 敬礼
     image: 66257ffeb1aa5cf8db671149743dc3b16bbd19927ecf05287092a9839d1fd68c
@@ -64,6 +84,9 @@ content:
   shushing:
     name: 嘘手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/shushing.html
+    alias:
+      - shh
+      - shush
   spread arms:
     name: 张开双臂
     image: db73483e67a2ec6f7055b1bd77454258eb0ba648754573cc50937472afa2fe31
@@ -76,13 +99,22 @@ content:
     name: 脱衣服中
     image: 86ba1878785b5315ca6da18ee025ce5423e5fb15114e3153dae52c3868e901d2
     wikiURL: https://danbooru.donmai.us/wiki_pages/undressing.html
+    alias:
+      - undress
+      - stripping
+      - strip
   v:
     name: 胜利手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/v.html
+    alias:
+      - v sign
+      - peace sign
   waving:
     name: 招手
     image: 89da0b0153edb5a223752b529b015aaf29d3e4e01bf746f0ac8306c7b4991f43
     wikiURL: https://danbooru.donmai.us/wiki_pages/waving.html
+    alias:
+      - wave
   outstretched arms:
     name: 伸出双臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/outstretched_arms.html
@@ -93,13 +125,22 @@ content:
   outstretched hand:
     name: 伸出手
     wikiURL: https://danbooru.donmai.us/wiki_pages/outstretched_hand.html
+    alias:
+      - outstretched hands
+      - hands outstretched
   reaching:
     name: 伸手触及
     wikiURL: https://danbooru.donmai.us/wiki_pages/reaching.html
+    alias:
+      - reach
   arm up:
     name: 单抬臂
     image: 41eb125b8ac42744f29c20ba473f41535b9d4eb5a1dee4abd87a55b6569c17c0
     wikiURL: https://danbooru.donmai.us/wiki_pages/arm_up.html
+    alias:
+      - arm raised
+      - raised arm
+      - one arm up
   presenting armpit:
     name: 展示腋窝
     image: 9dd4f141ce52e06dec22a19a65cc5f0dfaf9e794773843b11376a4b83f6ec20d
@@ -112,6 +153,8 @@ content:
     name: 手臂放头后
     image: c55af5cc720f3dfcf1f4fbfc08e95665284e8a6f23d24082f5601994de1abe7d
     wikiURL: https://danbooru.donmai.us/wiki_pages/arms_behind_head.html
+    alias:
+      - hands behind head
   kimono lift:
     name: 掀起和服
     image: 33aaed1190c9f4700d85291e23e4acbaaf08eba173cecce877d624934275eef1
@@ -123,45 +166,69 @@ content:
     name: 掀起裙子
     image: 9fd16ad7ffc8e6c669d8ba77f9d5d1f4dac927f4c754d5861439f58320ec4e84
     wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_lift.html
+    alias:
+      - skirtlift
+      - skirt up
+      - lifting skirt
   shared food:
     name: 共享食物/用嘴递食物
     wikiURL: https://danbooru.donmai.us/wiki_pages/shared_food.html
+    alias:
+      - mouth to mouth feeding
+      - mouth-to-mouth feeding
   adjusting hair:
     name: 理头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_hair.html
   adjusting legwear:
     name: 整理裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_legwear.html
+    alias:
+      - adjusting thighhigh
+      - adjusting pantyhose
+      - adjusting thighhighs
   adjusting panties:
     name: 拨内裤
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_panties.html
   arm grab:
     name: 抓住手臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/arm_grab.html
+    alias:
+      - arm hold
+      - grabbing arm
   arm held back:
     name: 手臂往后拉
     wikiURL: https://danbooru.donmai.us/wiki_pages/arm_held_back.html
   arm hug:
     name: 挽手
     wikiURL: https://danbooru.donmai.us/wiki_pages/arm_hug.html
+    alias:
+      - hugging arm
   armpit peek:
     name: 微微露出腋窝
     wikiURL: https://danbooru.donmai.us/wiki_pages/armpit_peek.html
   arms around neck:
     name: 双手搂着脖子
     wikiURL: https://danbooru.donmai.us/wiki_pages/arms_around_neck.html
+    alias:
+      - neck hug
   arms at sides:
     name: 双手垂放
     wikiURL: https://danbooru.donmai.us/wiki_pages/arms_at_sides.html
   beckoning:
     name: 招手
     wikiURL: https://danbooru.donmai.us/wiki_pages/beckoning.html
+    alias:
+      - beckon
   belly grab:
     name: 捏着肚子
     wikiURL: https://danbooru.donmai.us/wiki_pages/belly_grab.html
+    alias:
+      - tummy grab
   bikini pull:
     name: 扯着比基尼
     wikiURL: https://danbooru.donmai.us/wiki_pages/bikini_pull.html
+    alias:
+      - bikini down
   skirt pull:
     name: 拉开裙子
     wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_pull.html
@@ -169,6 +236,9 @@ content:
     name: 爱抚睾丸
     restricted: true
     wikiURL: https://danbooru.donmai.us/wiki_pages/caressing_testicles.html
+    alias:
+      - fondling testicles
+      - ball caress
   carrying over shoulder:
     name: 肩扛
     wikiURL: https://danbooru.donmai.us/wiki_pages/carrying_over_shoulder.html
@@ -178,6 +248,9 @@ content:
   paw pose:
     name: 爪子姿势
     wikiURL: https://danbooru.donmai.us/wiki_pages/paw_pose.html
+    alias:
+      - cat pose
+      - dog pose
   claw pose:
     name: 举爪姿势
     wikiURL: https://danbooru.donmai.us/wiki_pages/claw_pose.html
@@ -196,9 +269,15 @@ content:
   crossed arms:
     name: 交叉双臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_arms.html
+    alias:
+      - folded arms
+      - arms folded
   cuddling:
     name: 拥抱
     wikiURL: https://danbooru.donmai.us/wiki_pages/cuddling.html
+    alias:
+      - cuddle
+      - snuggle
   dress lift:
     name: 掀起裙子
     wikiURL: https://danbooru.donmai.us/wiki_pages/dress_lift.html
@@ -208,6 +287,9 @@ content:
   dual wielding:
     name: 双持
     wikiURL: https://danbooru.donmai.us/wiki_pages/dual_wielding.html
+    alias:
+      - dual wield
+      - double wield
   palm:
     name: 以手掩面
   feeding:
@@ -225,6 +307,8 @@ content:
   grabbing:
     name: 抓住/抓着
     wikiURL: https://danbooru.donmai.us/wiki_pages/grabbing.html
+    alias:
+      - grab
   guided breast grab:
     name: 把对方的手抓过来摸自己的胸
     restricted: true
@@ -238,17 +322,23 @@ content:
   hair twirling:
     name: 手指卷着头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_twirling.html
+    alias:
+      - hair twirl
   hand between breasts:
     name: 手放在胸前
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_breasts.html
   hand between legs:
     name: 手放在两腿之间
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_legs.html
+    alias:
+      - hands between legs
   hand in hair:
     name: 手埋在头发里
   hand in panties:
     name: 手伸进内裤里
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_in_panties.html
+    alias:
+      - finger in panties
   hand on another's cheek:
     name: 手摸着对方的脸颊
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_cheek.html
@@ -258,6 +348,8 @@ content:
   hand on another's chin:
     name: 手托着对方的下巴
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_chin.html
+    alias:
+      - finger to another's chin
   hand on another's:
     name: 手接触到对方的脸
   hand on another's stomach:
@@ -268,12 +360,25 @@ content:
   hand on own knee:
     name: 手放在自己的膝盖上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_knee.html
+    alias:
+      - hand on knee
   hand on own stomach:
     name: 把手放在自己的肚子上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_stomach.html
+    alias:
+      - hand on belly
+      - hand on own belly
+      - hand on stomach
   hand to own mouth:
     name: 手朝向自己嘴
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_to_own_mouth.html
+    image: 113241c89b825a116bd577b2be52ce08629932ac3baadb6f2304c0eda4f6cbd1
+    alias:
+      - hand to mouth
+      - hands to mouth
+      - hands to own mouth
+      - hand to lip
+      - hand on lips
   heart hands:
     name: 双手比心
     wikiURL: https://danbooru.donmai.us/wiki_pages/heart_hands.html
@@ -307,6 +412,9 @@ content:
   index finger raised:
     name: 食指抬起
     wikiURL: https://danbooru.donmai.us/wiki_pages/index_finger_raised.html
+    alias:
+      - raised finger
+      - finger raised
   lifted by another:
     name: 被对方掀起衣物
     wikiURL: https://danbooru.donmai.us/wiki_pages/lifted_by_another.html
@@ -316,27 +424,45 @@ content:
   necktie grab:
     name: 抓着领带
     wikiURL: https://danbooru.donmai.us/wiki_pages/necktie_grab.html
+    alias:
+      - necktie pull
+      - tiegrab
+      - tie grab
   ok sign:
     name: OK手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/ok_sign.html
+    alias:
+      - ok
   own hands together:
     name: 双手合十
     wikiURL: https://danbooru.donmai.us/wiki_pages/own_hands_together.html
+    alias:
+      - hands together
   rubbing eyes:
     name: 揉眼睛
     wikiURL: https://danbooru.donmai.us/wiki_pages/rubbing_eyes.html
+    alias:
+      - eye rub
+      - wiping eyes
+      - rubbing eye
   shading eyes:
     name: 遮阳手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/shading_eyes.html
   sheet grab:
     name: 抓着床单
     wikiURL: https://danbooru.donmai.us/wiki_pages/sheet_grab.html
+    alias:
+      - grabbing sheet
   shoujo kitou-chuu:
     name: 少女祈祷中
     wikiURL: https://danbooru.donmai.us/wiki_pages/shoujo_kitou-chuu.html
+    alias:
+      - girls are praying
   talking on phone:
     name: 打电话
     wikiURL: https://danbooru.donmai.us/wiki_pages/talking_on_phone.html
+    alias:
+      - on phone
   through clothes:
     name: 隔着衣物爱抚
     wikiURL: https://danbooru.donmai.us/wiki_pages/through_clothes.html
@@ -346,6 +472,8 @@ content:
   yawning:
     name: 打哈欠
     wikiURL: https://danbooru.donmai.us/wiki_pages/yawning.html
+    alias:
+      - yawn
   drying hair:
     name: 弄干头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/drying_hair.html
@@ -355,13 +483,21 @@ content:
   grabbing another's hair:
     name: 抓着对方的头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/grabbing_another's_hair.html
+    alias:
+      - pulling another's hair
+      - hair pull
   tying hair:
     name: 扎头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/tying_hair.html
   mimikaki:
     name: 采耳
     wikiURL: https://danbooru.donmai.us/wiki_pages/mimikaki.html
+    alias:
+      - ear cleaner
   holding eyewear:
     name: 拿着眼镜/正在摘眼镜
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_eyewear.html
+    alias:
+      - holding glasses
+      - holding sunglasses
 name: 人物手势动作

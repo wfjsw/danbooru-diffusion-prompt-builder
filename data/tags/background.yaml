@@ -28,6 +28,11 @@ content:
     name: 科幻
     image: e8b2f57696da3aeb3a2ffd1e43f55b84719a4aa74e23c7e8497d0fbcc1483c04
     wikiURL: https://danbooru.donmai.us/wiki_pages/science_fiction.html
+    alias:
+      - scifi
+      - sci-fi
+      - futuristic
+      - sci fi
   gradient background:
     name: 渐变的背景
     image: 6040a74c186fbbf5f5e70ea87d8e34eaeae418f0493764fdc63bae333d93758b
@@ -39,10 +44,15 @@ content:
   transparent background:
     name: 透明背景
     wikiURL: https://danbooru.donmai.us/wiki_pages/transparent_background.html
+    alias:
+      - transparent gif
+      - transparent png
   ocean:
     name: 大海
     image: e7e528cb9cf6fe96737560a340c38dd7fb1607d2231d55ece277700363e9ee6f
     wikiURL: https://danbooru.donmai.us/wiki_pages/ocean.html
+    alias:
+      - sea
   pentagram:
     name: 五角星
     image: 62ce1b48f4a87551d23f333d8e1a04536b271617200e74d5c0ecf303e9e2d508
@@ -51,10 +61,18 @@ content:
     name: 魔法阵
     image: e34c1a7f5dcb7614466b8f6ce0d037ffd6ad89135eee932dacd16843746effc5
     wikiURL: https://danbooru.donmai.us/wiki_pages/magic_circle.html
+    alias:
+      - magical circle
+      - magic circles
+      - magical circles
   valentine:
     name: 情人节
     image: 47671b4ce86a87dc4da2cb4835dc1712316fb73677a598e05c2583b1ea445d8c
     wikiURL: https://danbooru.donmai.us/wiki_pages/valentine.html
+    alias:
+      - valentines
+      - valentine's day
+      - valentines day
   halloween:
     name: 万圣节
     image: 1d7b5cf03e9d9123f44b97d29d17f6a79c6fb54f9dacfa1521845bc6f6442aba
@@ -63,14 +81,21 @@ content:
     name: 圣诞节
     image: 29ea7411d022b6fea1c127fb45e3bf53b02eefc3c5aaec5040d4375acf2d568c
     wikiURL: https://danbooru.donmai.us/wiki_pages/christmas.html
+    alias:
+      - xmas
   forest:
     name: 森林/树
     image: 4fd9949b27f320803b117777ffbeef778c98b0b7d259bf57cce9c4a88ab1180f
     wikiURL: https://danbooru.donmai.us/wiki_pages/forest.html
+    alias:
+      - woods
   outdoors:
     name: 户外
     image: 38f205d587f54437d416a3e8c6bf0e08f074ef9049bd84050eba72c25bbda2fa
     wikiURL: https://danbooru.donmai.us/wiki_pages/outdoors.html
+    alias:
+      - outside
+      - outdoor
   indoors:
     name: 室内
     image: 86a4420e35958074169b34bde0b6e37f782b58ecff2a448a0ae795b573520968
@@ -79,6 +104,8 @@ content:
     name: 屋顶
     image: 47653c7522cc115811051ed34d5e3528d74583842a9f4af9c239c5ec1fd43a37
     wikiURL: https://danbooru.donmai.us/wiki_pages/rooftop.html
+    alias:
+      - roof
   stage:
     name: 舞台
     image: 5b14e11246d410fd4781af690d20bcd576e8641b7e40d01e65697c1f67aeef95
@@ -90,6 +117,8 @@ content:
     name: 咖啡厅
     image: 7e2c8afd7754ee04c931b51a36965672c75133cdf033d46df023fe933c6f7ef0
     wikiURL: https://danbooru.donmai.us/wiki_pages/cafe.html
+    alias:
+      - coffee shop
   starbucks:
     name: 星巴克
     image: d63477c62f794c0af2a95718a12d20d604bacc26f19000e514058348af5d3df0
@@ -114,6 +143,8 @@ content:
     name: 教室
     image: 8e5be028bba13c3411819225b7bdc4bdcfe70f59d69108885bffa0749291a794
     wikiURL: https://danbooru.donmai.us/wiki_pages/classroom.html
+    alias:
+      - class room
   street:
     name: 街道
     wikiURL: https://danbooru.donmai.us/wiki_pages/street.html

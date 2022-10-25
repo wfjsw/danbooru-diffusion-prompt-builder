@@ -37,7 +37,7 @@ function loadMore() {
             <Masonry :bind="paginatedHns" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
                      :infinite-scroll-distance="512" :infinite-scroll-delay="10">
                 <HypernetworkView v-for="hns in paginatedHns" :key="`${hns.prompt}-${hns.name}-${hns.author}-${hns.previewHash}`"
-                                  v-memo="[hns, settingsStore.showImage]" :blur-image="!settingsStore.showImage" :data="hns"/>
+                                  v-memo="[hns, settingsStore.showImage]" :data="hns"/>
             </Masonry>
         </ClientOnly>
     </ElScrollbar>

@@ -77,14 +77,15 @@ watch(toRef(props, 'search'), () => {
     <h1>搜索结果</h1>
     <ElScrollbar class="scrollable" ref="scrollRef">
         <ClientOnly>
-            <Masonry :bind="[paginatedResult]" v-infinite-scroll="loadMore" :infinite-scroll-disabled="paginationSize >= filteredLength"
+            <Masonry :bind="[paginatedResult, settingsStore.showImage]" v-infinite-scroll="loadMore"
+                     :infinite-scroll-disabled="paginationSize >= filteredLength"
                      :infinite-scroll-distance="128" :infinite-scroll-delay="10">
                 <template v-for="item in paginatedResult" :key="item.key">
-                    <TagView v-if="item.type === 'tag'" :blur-image="!settingsStore.showImage"
+                    <TagView v-if="item.type === 'tag'" :show-image="settingsStore.showImage"
                              :meta="(item as SearchResultTag).data[1]" :tag="(item as SearchResultTag).data[0]"/>
-                    <EmbeddingView v-if="item.type === 'embedding'" :blur-image="!settingsStore.showImage"
+                    <EmbeddingView v-if="item.type === 'embedding'"
                                    :data="(item as SearchResultEmbedding).data" show-category/>
-                    <HypernetworkView v-if="item.type === 'hypernetwork'" :blur-image="!settingsStore.showImage"
+                    <HypernetworkView v-if="item.type === 'hypernetwork'"
                                    :data="(item as SearchResultHypernetwork).data" show-category/>
                 </template>
             </Masonry>

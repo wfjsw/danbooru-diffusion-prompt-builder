@@ -29,7 +29,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.embeddings)
-                .filter(([_, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
+                .filter(([, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
                 .map(([k, _]) => k)
             return filtered.sort()
         },

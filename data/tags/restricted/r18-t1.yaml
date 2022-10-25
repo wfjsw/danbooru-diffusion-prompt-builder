@@ -4,36 +4,66 @@ content:
   huge ass:
     name: 大屁股
     wikiURL: https://danbooru.donmai.us/wiki_pages/huge_ass.html
+    alias:
+      - big butt
+      - big ass
   spread ass:
     name: 用手张开屁股
     wikiURL: https://danbooru.donmai.us/wiki_pages/spread_ass.html
   buttjob:
     name: 臀交
     wikiURL: https://danbooru.donmai.us/wiki_pages/buttjob.html
+    alias:
+      - shirikoki
+      - hotdogging
   wakamezake:
     name: 酒倒在阴部
     wikiURL: https://danbooru.donmai.us/wiki_pages/wakamezake.html
+    alias:
+      - lapcup
+      - lap cup
+      - thigh cup
+      - liquid between thighs
   anus:
     name: 菊花
     wikiURL: https://danbooru.donmai.us/wiki_pages/anus.html
+    alias:
+      - ass hole
+      - asshole
+      - butthole
+      - butt hole
   anal:
     name: 爆菊
     wikiURL: https://danbooru.donmai.us/wiki_pages/anal.html
+    alias:
+      - anal penetration
+      - anal sex
   peeing:
     name: 尿尿
     wikiURL: https://danbooru.donmai.us/wiki_pages/peeing.html
+    alias:
+      - watersports
   have to pee:
     name: 憋尿
     wikiURL: https://danbooru.donmai.us/wiki_pages/have_to_pee.html
+    alias:
+      - need to pee
   double anal:
     name: 双重爆菊
     wikiURL: https://danbooru.donmai.us/wiki_pages/double_anal.html
   anal fingering:
     name: 手爆菊
     wikiURL: https://danbooru.donmai.us/wiki_pages/anal_fingering.html
+    alias:
+      - fingering ass
+      - fingering asshole
   anilingus:
     name: 肛吻
     wikiURL: https://danbooru.donmai.us/wiki_pages/anilingus.html
+    alias:
+      - annilingus
+      - analingus
+      - rimjob
   hairjob:
     name: 发交
     wikiURL: https://danbooru.donmai.us/wiki_pages/hairjob.html
@@ -45,24 +75,42 @@ content:
   gokkun:
     name: 吃精
     wikiURL: https://danbooru.donmai.us/wiki_pages/gokkun.html
+    alias:
+      - cum drinking
   facial:
     name: 颜射
     wikiURL: https://danbooru.donmai.us/wiki_pages/facial.html
+    alias:
+      - cum on face
   handjob:
     name: 手淫
     wikiURL: https://danbooru.donmai.us/wiki_pages/handjob.html
+    alias:
+      - hand job
+      - tekoki
   leash:
     name: 宠物链
     wikiURL: https://danbooru.donmai.us/wiki_pages/leash.html
   areolae:
     name: 乳晕
     wikiURL: https://danbooru.donmai.us/wiki_pages/areolae.html
+    alias:
+      - areolas
+      - areola
   lactation:
     name: 哺乳（大范围）
     wikiURL: https://danbooru.donmai.us/wiki_pages/lactation.html
+    alias:
+      - milk breasts
+      - lactating
+      - milking
   breast sucking:
     alias:
+      - sucking breasts
+      - nipple sucking
       - nipple suck
+      - breast suck
+      - sucking nipples
     name: 吸乳（中）
     wikiURL: https://danbooru.donmai.us/wiki_pages/breast_sucking.html
   breast feeding:
@@ -70,33 +118,53 @@ content:
   paizuri:
     name: 乳交
     wikiURL: https://danbooru.donmai.us/wiki_pages/paizuri.html
+    alias:
+      - titjob
+      - titfuck
+      - tit fuck
   multiple paizuri:
     name: 多P乳交
   pussy:
     alias:
-      - vaginal
+      - vagina
+      - vulva
     name: 阴户
     wikiURL: https://danbooru.donmai.us/wiki_pages/pussy.html
   pubic hair:
     name: 阴毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/pubic_hair.html
+    alias:
+      - pubes
+      - hairy pussy
   shaved pussy:
     name: 剃过阴毛的
   no pussy:
     name: 没逼的
     wikiURL: https://danbooru.donmai.us/wiki_pages/no_pussy.html
+    alias:
+      - no vagina
+      - missing pussy
+      - missing vagina
+      - novagina
   clitoris:
     name: 阴蒂
     wikiURL: https://danbooru.donmai.us/wiki_pages/clitoris.html
+    alias:
+      - clit
   fat mons:
     name: 肥逼
     wikiURL: https://danbooru.donmai.us/wiki_pages/fat_mons.html
   pussy juice:
     name: 爱液
     wikiURL: https://danbooru.donmai.us/wiki_pages/pussy_juice.html
+    alias:
+      - pussy juice drip
+      - vaginal juices
   female ejaculation:
     name: 潮吹
     wikiURL: https://danbooru.donmai.us/wiki_pages/female_ejaculation.html
+    alias:
+      - squirting (sex)
   grinding:
     name: 性器摩擦
     wikiURL: https://danbooru.donmai.us/wiki_pages/grinding.html
@@ -112,30 +180,56 @@ content:
   cunnilingus:
     name: 舔阴
     wikiURL: https://danbooru.donmai.us/wiki_pages/cunnilingus.html
+    alias:
+      - pussy lick
   thigh sex:
     name: 腿交
     wikiURL: https://danbooru.donmai.us/wiki_pages/thigh_sex.html
+    alias:
+      - intercrural
+      - intercrural sex
+      - sumata
+      - thigh job
+      - straddle penis
   footjob:
     name: 足交
     wikiURL: https://danbooru.donmai.us/wiki_pages/footjob.html
+    alias:
+      - ashikoki
   masturbation:
     name: 自慰
     wikiURL: https://danbooru.donmai.us/wiki_pages/masturbation.html
+    alias:
+      - masturbate
+      - masturbating
   clothed masturbation:
     name: 隔着衣服自慰
     wikiURL: https://danbooru.donmai.us/wiki_pages/clothed_masturbation.html
   penis:
     name: 阳具/屌
     wikiURL: https://danbooru.donmai.us/wiki_pages/penis.html
+    alias:
+      - dicks
+      - cock
+      - cocks
+      - dick
   testicles:
     name: 睾丸/蛋蛋
     wikiURL: https://danbooru.donmai.us/wiki_pages/testicles.html
+    alias:
+      - balls
   ejaculation:
     name: 射出
     wikiURL: https://danbooru.donmai.us/wiki_pages/ejaculation.html
+    alias:
+      - ejaculation between breasts
   cum:
     name: 射精
     wikiURL: https://danbooru.donmai.us/wiki_pages/cum.html
+    alias:
+      - sperm
+      - semen
+      - cumshot
   cum inside:
     name: 内射
   cum on breast:
@@ -143,6 +237,9 @@ content:
   cum on hair:
     name: 射在头发上
     wikiURL: https://danbooru.donmai.us/wiki_pages/cum_on_hair.html
+    alias:
+      - cum in hair
+      - semen on hair
   cum on food:
     name: 射在食物上
     wikiURL: https://danbooru.donmai.us/wiki_pages/cum_on_food.html
@@ -160,12 +257,19 @@ content:
   body writing:
     name: 身上有字
     wikiURL: https://danbooru.donmai.us/wiki_pages/body_writing.html
+    alias:
+      - writing on body
   censored:
     name: 有码
     wikiURL: https://danbooru.donmai.us/wiki_pages/censored.html
+    alias:
+      - censoring
+      - censor
   uncensored:
     name: 无码
     wikiURL: https://danbooru.donmai.us/wiki_pages/uncensored.html
+    alias:
+      - uncensoring
   asian:
     name: 亚洲
     wikiURL: https://danbooru.donmai.us/wiki_pages/asian.html
@@ -175,18 +279,29 @@ content:
   artificial vagina:
     name: 人工阴道
     wikiURL: https://danbooru.donmai.us/wiki_pages/artificial_vagina.html
+    alias:
+      - pocket pussy
+      - onahole
+      - fleshlight
   hitachi magic wand:
     name: 按摩棒
     wikiURL: https://danbooru.donmai.us/wiki_pages/hitachi_magic_wand.html
+    alias:
+      - wand vibrator
   dildo:
     name: 人造阴茎
     wikiURL: https://danbooru.donmai.us/wiki_pages/dildo.html
   egg vibrator:
     name: 跳蛋
     wikiURL: https://danbooru.donmai.us/wiki_pages/egg_vibrator.html
+    alias:
+      - egg vibrators
   sex:
     name: 性爱
     wikiURL: https://danbooru.donmai.us/wiki_pages/sex.html
+    alias:
+      - fucking
+      - fuck
   clothed sex:
     name: 穿着衣服做爱
     wikiURL: https://danbooru.donmai.us/wiki_pages/clothed_sex.html
@@ -201,14 +316,18 @@ content:
   doggystyle:
     name: 狗爬式
     wikiURL: https://danbooru.donmai.us/wiki_pages/doggystyle.html
+    alias:
+      - doggy style
   leg lock:
     alias:
-      - upright straddle
+      - legs lock
     name: 跨坐式
     wikiURL: https://danbooru.donmai.us/wiki_pages/leg_lock.html
   missionary:
     name: 传教士体位
     wikiURL: https://danbooru.donmai.us/wiki_pages/missionary.html
+    alias:
+      - missionary position
   girl on top:
     name: 女上体位
     wikiURL: https://danbooru.donmai.us/wiki_pages/girl_on_top.html
@@ -224,23 +343,34 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/threesome.html
   group sex:
     alias:
-      - orgy
-      - teamwork
+      - foursome
+      - fivesome
+      - groupsex
     name: 群P
     description: 多男x一女/性交派队/多女x1男
     wikiURL: https://danbooru.donmai.us/wiki_pages/group_sex.html
   tribadism:
     name: 磨豆腐
     wikiURL: https://danbooru.donmai.us/wiki_pages/tribadism.html
+    alias:
+      - scissoring
   gangbang:
     name: 轮奸
     wikiURL: https://danbooru.donmai.us/wiki_pages/gangbang.html
+    alias:
+      - gang rape
+      - gang sex
+      - gangrape
+      - gangsex
+      - gang bang
   femdom:
     name: 逆推
     wikiURL: https://danbooru.donmai.us/wiki_pages/femdom.html
   condom:
     name: 套套
     wikiURL: https://danbooru.donmai.us/wiki_pages/condom.html
+    alias:
+      - condoms
   bandaid on pussy:
     name: 阴部贴着创可贴
     wikiURL: https://danbooru.donmai.us/wiki_pages/bandaid_on_pussy.html
@@ -259,9 +389,13 @@ content:
   clitoris piercing:
     name: 阴核环
     wikiURL: https://danbooru.donmai.us/wiki_pages/clitoris_piercing.html
+    alias:
+      - clit piercing
   perineum:
     name: 会阴
     wikiURL: https://danbooru.donmai.us/wiki_pages/perineum.html
+    alias:
+      - taint
   urethra:
     name: 尿道
     wikiURL: https://danbooru.donmai.us/wiki_pages/urethra.html
@@ -271,6 +405,8 @@ content:
   erect clitoris:
     name: 膨胀的阴核
     wikiURL: https://danbooru.donmai.us/wiki_pages/erect_clitoris.html
+    alias:
+      - erect clit
   moderate pubic hair:
     name: 中分的阴毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/moderate_pubic_hair.html
@@ -286,9 +422,13 @@ content:
   flat ass:
     name: 贫瘠的屁股
     wikiURL: https://danbooru.donmai.us/wiki_pages/flat_ass.html
+    alias:
+      - no ass
   gaping:
     name: 敞开的/撑开的(阴部和屁眼)
     wikiURL: https://danbooru.donmai.us/wiki_pages/gaping.html
+    alias:
+      - gape
   labia:
     name: 阴唇
     wikiURL: https://danbooru.donmai.us/wiki_pages/labia.html
@@ -304,6 +444,8 @@ content:
   pussy juice trail:
     name: 拉丝的爱液
     wikiURL: https://danbooru.donmai.us/wiki_pages/pussy_juice_trail.html
+    alias:
+      - pussy juice string
   pussy peek:
     name: 微微渗出的爱液
     wikiURL: https://danbooru.donmai.us/wiki_pages/pussy_peek.html

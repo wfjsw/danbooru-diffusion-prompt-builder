@@ -28,14 +28,14 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.hypernetworks)
-                .filter(([_, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
+                .filter(([, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
                 .map(([k, _]) => k)
             return filtered.sort()
         },
         categorySize: (state) => {
             const settings = useSettingsStore()
             return Object.fromEntries(Object.entries(state.hypernetworks)
-                .filter(([_, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
+                .filter(([, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
                 .map(([k, v]) => [k, v.content.filter(e => settings.showRestricted || !e.restricted).length]))
         },
         allHypernetworks: (state) => {

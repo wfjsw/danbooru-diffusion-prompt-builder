@@ -4,6 +4,8 @@ content:
     name: 云
     image: ca0db455278ecfcadb93105e4d5d1b92976f88bb3b10a39659841f6129e29911
     wikiURL: https://danbooru.donmai.us/wiki_pages/cloud.html
+    alias:
+      - clouds
   full moon:
     name: 满月
     image: 2d1912b34dc9348d0fe001063512e1f62af2958651023ea65b8bb08558c10c62
@@ -44,10 +46,14 @@ content:
   skyline:
     name: 天际线
     wikiURL: https://danbooru.donmai.us/wiki_pages/skyline.html
+    alias:
+      - city skyline
   shooting star:
     name: 流星
     image: 49934241bb59f594259cb54692089f3d63bd00a282cb5856d4a8a5f503de9d5a
     wikiURL: https://danbooru.donmai.us/wiki_pages/shooting_star.html
+    alias:
+      - shooting stars
   sunburst background:
     name: 旭日纹背景
     wikiURL: https://danbooru.donmai.us/wiki_pages/sunburst_background.html
@@ -72,8 +78,6 @@ content:
     name: 秋
   in winter:
     name: 冬
-  full_moon:
-    name: 满月
   stars:
     name: 星星
     wikiURL: https://danbooru.donmai.us/wiki_pages/stars.html
@@ -82,6 +86,8 @@ content:
   rain:
     name: 下雨
     wikiURL: https://danbooru.donmai.us/wiki_pages/rain.html
+    alias:
+      - raining
   in the rain:
     name: 雨中
   rainy days:

@@ -11,10 +11,16 @@ content:
     name: 和服
     image: 1379265822556182ba4c4193a120c2a4f5b549aa6e7d673eec86247af507796b
     wikiURL: https://danbooru.donmai.us/wiki_pages/japanese_clothes.html
+    alias:
+      - wafuku
+      - traditional japanese clothes
+      - japanese clothing
   bodysuit:
     name: 紧身衣
     image: 34a6574a6da3f2d5517ee856cd34b04f759f990e88e7ffbb2ab602d1a8b2a9e2
     wikiURL: https://danbooru.donmai.us/wiki_pages/bodysuit.html
+    alias:
+      - body suit
   business suit:
     name: 职场制服
     image: f79856a3dd037dd7dee0bada3e85de73e7c741ca6e49f4c9e62558960fd7a1ab
@@ -23,6 +29,11 @@ content:
     name: 旗袍
     image: d0cc86b1103ba5a2a282a1be22b13941104d4e5538cfe94ab791c11941da9cef
     wikiURL: https://danbooru.donmai.us/wiki_pages/china_dress.html
+    alias:
+      - cheongsam
+      - qipao
+      - chinadress
+      - chinese dress
   chinese clothes:
     name: 中国服饰(极大概率是旗袍)
     image: d99c4878084bb9e1759fcb664e51d4930db0118a971d54a596763601ccd71681
@@ -41,6 +52,8 @@ content:
     name: 运动服
     image: c81ef12b4c03fd6706301e29db40ced0367f1ff2b27c39aeeb6b20640cfde35b
     wikiURL: https://danbooru.donmai.us/wiki_pages/gym_uniform.html
+    alias:
+      - gym clothes
   leotard:
     name: 體操服
     image: 490c18cee69a5e985f826b700b4caffb7f2bbfa0081dc0779663f794ee9f6ccb
@@ -57,6 +70,10 @@ content:
     name: 睡衣
     image: 98b5a88bc9362ec5dfd760424be0c0f5ff381cd4cbf01831ac7d54c052702906
     wikiURL: https://danbooru.donmai.us/wiki_pages/pajamas.html
+    alias:
+      - pyjamas
+      - pajama
+      - pyjama
   santa:
     name: 圣诞装
     image: 968d3b78518723d3289e0e8f06e2af6c763b02ee8e0e45d403da1b575065617f
@@ -64,14 +81,27 @@ content:
     name: 学校泳衣
     image: 95747ca2bf895174c6a64798a6894f01e4a4fda02e326890f478e5c608493636
     wikiURL: https://danbooru.donmai.us/wiki_pages/school_swimsuit.html
+    alias:
+      - sukumizu
+      - school swimsuits
   school uniform:
     name: 学校制服
     image: 7bce93563b5ed107cd401b724701441b32b5ffb7002928612f4b171174c435c3
     wikiURL: https://danbooru.donmai.us/wiki_pages/school_uniform.html
+    alias:
+      - seifuku
+      - school uniforms
+      - schoolgirl
+      - school girl
   see-through:
     name: 透明装
     image: eaee943e08fdc949ede843066ce9a99ea5deaf2fe23ba2af502f14fc0ed9fa07
     wikiURL: https://danbooru.donmai.us/wiki_pages/see-through.html
+    alias:
+      - seethrough
+      - transparent clothing
+      - sheer clothes
+      - sheer clothing
   side-tie bikini:
     name: 系带式比基尼
     image: 99d3555fd8b1b990c23a7a66ab0fe82bdb9807acb375de688869b361625baf75
@@ -84,18 +114,31 @@ content:
     name: 泳装
     image: 6e9202c6c53bcc80be11cc1642be0bda9158d23871be1432a0beaf7a09f16628
     wikiURL: https://danbooru.donmai.us/wiki_pages/swimsuit.html
+    alias:
+      - swimsuits
+      - swim suit
+      - bathing suit
+      - mizugi
   torn clothes:
     name: 破烂衣服
     image: 52ad26d012cdaee4698df71fe7b63ab25d66fd44d5431ae4b18ae29b378befd7
     wikiURL: https://danbooru.donmai.us/wiki_pages/torn_clothes.html
+    alias:
+      - ripped clothing
+      - torn clothing
+      - ripped clothes
   underwear:
     name: 内衣
     image: 4ece057cb9239ea71794f305437ef4ce9fb218bd27e0fff0ebd70b45014ae6c5
     wikiURL: https://danbooru.donmai.us/wiki_pages/underwear.html
+    alias:
+      - undergarments
   uniform:
     name: 制服
     image: a8977f12107f09892e68a45cfd50400dd12d0081660a7d0845391787b6865155
     wikiURL: https://danbooru.donmai.us/wiki_pages/uniform.html
+    alias:
+      - uniforms
   yukata:
     name: 浴衣
     image: a77d888b542cc4dc0a6c68d50bd09b8ab6d5c8dec33d4486bb67f68ad7eb9c96
@@ -112,10 +155,14 @@ content:
     name: 哥特风格
     image: dfb8bb7fe3152292e454a2ab8067a2814ebbec9967345998be5a711d175ffca8
     wikiURL: https://danbooru.donmai.us/wiki_pages/gothic.html
+    alias:
+      - goth
   lolita fashion:
     name: 洛丽塔风格
     image: 2cba63bb5f6020ca2fd8efc3727191831553dbd56346771045811c9fb550571a
     wikiURL: https://danbooru.donmai.us/wiki_pages/lolita_fashion.html
+    alias:
+      - lolita
   western:
     name: 西部风格
     image: fbcc6a239268e33c4c77889035e0bc21f97d795344850489b0dead331518272c
@@ -131,15 +178,22 @@ content:
     restricted: true
     image: b1e96f2d6674c9e3efc7d911ecb5d85e8ac582b4bcb993601b4411adfa9be8f8
     wikiURL: https://danbooru.donmai.us/wiki_pages/naked_apron.html
+    alias:
+      - nude apron
+      - hadaka apron
   naked overalls:
     name: 裸体工作服
     restricted: true
     image: eefd00101d64316aa8967bbbe9a9d5f656b4738ecdec185878782b57cb024990
     wikiURL: https://danbooru.donmai.us/wiki_pages/naked_overalls.html
+    alias:
+      - nude overalls
   naked ribbon:
     name: 裸体丝带
     restricted: true
     wikiURL: https://danbooru.donmai.us/wiki_pages/naked_ribbon.html
+    alias:
+      - nude ribbon
   tartan:
     name: 格子花纹
     image: bf877648ee007776c1555371f6926b1e4692a147df28c97433a5c763b78140b5
@@ -147,14 +201,24 @@ content:
     name: 横条花纹
     image: 4945f85684a681303c65b45acc95205203124a463cc750d5f4777a3b415916af
     wikiURL: https://danbooru.donmai.us/wiki_pages/striped.html
+    alias:
+      - stripes
   polka dot:
     name: 点状花纹
     image: 50544ebdfa23745badf2e69ac6fbb696b0f76dc73c5de847bfa2d0b9b3403cbe
     wikiURL: https://danbooru.donmai.us/wiki_pages/polka_dot.html
+    alias:
+      - polka dots
+      - polka-dot
   frills:
     name: 皱边
     image: b099df2fcd5c60ef0db6e3eff521fc89900c6a3ea024e11540f2f1cf18742768
     wikiURL: https://danbooru.donmai.us/wiki_pages/frills.html
+    alias:
+      - frill
+      - ruffles
+      - frilly
+      - frilled
   formal:
     name: 正装
     image: c1c26af537bfd9bb4c279d93e9c457192821a9b6fdfa9a57cf5c91ab9f9a0b0a
@@ -167,6 +231,8 @@ content:
     name: 褪下衣物
     image: 6b4a2116ba1be74fcab45827da80c37b873cc5cb106b79058463cd085a7e9614
     wikiURL: https://danbooru.donmai.us/wiki_pages/clothes_down.html
+    alias:
+      - clothing down
   short kimono:
     name: 短下摆和服
     image: 95f76350fa7768696ab104948f0153f91dd65a44fe4dcadfd2898c71bb958da7
@@ -179,6 +245,8 @@ content:
     name: 敞开的和服
     image: 593030e5793ea81625f7e8c2fade6fcfcb7c1a8559ba7371ab89fd4875db22da
     wikiURL: https://danbooru.donmai.us/wiki_pages/open_kimono.html
+    alias:
+      - open yukata
   suspender skirt:
     name: 吊带裙
     image: e399d0405090d20a63be5dee3559d8194b5ba8cdce521f2b37ce1c5c249bb999
@@ -187,9 +255,6 @@ content:
     name: 和服裙
     image: a6c2992aa453578c5bd7a0a38fb86521aff2ca4c872ec9b71e7fdb956bc3cf26
     wikiURL: https://danbooru.donmai.us/wiki_pages/kimono_skirt.html
-  summer dress:
-    name: 夏日长裙
-    image: 2830074314ae631ba8897a3129cf129b92c7774e7dba18782dd6bec4fff5b7ca
   pleated dress:
     name: 百褶连衣裙
     image: a2000693a4f2a313db4b32bc34195f838bd6e38e4bdec998f27d0ab4bd0f9b48
@@ -202,10 +267,16 @@ content:
     name: 无肩带连衣裙
     image: a8c77b7ca6fa17fed448e5dc01259e1266a58b1555e5371618bdf2b539e8a745
     wikiURL: https://danbooru.donmai.us/wiki_pages/strapless_dress.html
+    alias:
+      - shoulderless dress
   sundress:
     name: 太阳裙/背心裙
     image: f735e2e4bc0e1708048848f9a2a1e3bb317d21170d0bbddc50a7b574c2899356
     wikiURL: https://danbooru.donmai.us/wiki_pages/sundress.html
+    alias:
+      - summerdress
+      - summer dress
+      - sun dress
   sheath dress:
     name: 包臀裙
     image: 916a5b3bd5c396fc950ee217b467f13fa5b41468a3ce849c33b402ed1473e10e
@@ -217,6 +288,8 @@ content:
     name: 腰围裙
     image: 96670a4cc1159fbed11d54f1d9601ddd95da9309e2d7291cb79fe2e9428079da
     wikiURL: https://danbooru.donmai.us/wiki_pages/waist_apron.html
+    alias:
+      - half apron
   pettiskirt:
     name: 蓬蓬裙
     image: 6d6412dc3827a068a7519f4720b496898cb2890f1d3d001777827b28e91354fe
@@ -277,6 +350,8 @@ content:
     name: 迷你比基尼
     image: ff3f1b97bcd6f579ca5e361b5eb2283afbd2bf38924b12b529fd53dab9beefc5
     wikiURL: https://danbooru.donmai.us/wiki_pages/micro_bikini.html
+    alias:
+      - microbikini
   multi-strapped bikini:
     name: 细带款比基尼
     image: 6833cbcd0b95b176033c1cd2ae0634b9eb8e14ee1cb9f6924a92cdfea1e5b6d7
@@ -289,10 +364,18 @@ content:
     name: 贝壳比基尼
     image: 9b07a21ed6664036a85e19f3369fa62d8b09a162c618add24f2e4b5955f2585b
     wikiURL: https://danbooru.donmai.us/wiki_pages/shell_bikini.html
+    alias:
+      - seashell bra
+      - seashell bikini
+      - shell bra
   slingshot swimsuit:
     name: 弹弓泳衣/吊带泳衣/V字泳衣
     image: 8bf2b8b4a363a3333a5a5355801ffdb7e04073bc2fe4ae5346b89e736420e575
     wikiURL: https://danbooru.donmai.us/wiki_pages/slingshot_swimsuit.html
+    alias:
+      - sling bikini
+      - slingbikini
+      - sling swimsuit
   sports bikini:
     name: 运动比基尼
     image: 5b75543db6ef0c245b8d1f75fe33c0b512094d003f7373eed0ddc47818cf5370
@@ -320,18 +403,29 @@ content:
     name: 战甲裙
     image: 6c8459764dce8451925b533478a38c75f42ac2e7931bab56714274de15792090
     wikiURL: https://danbooru.donmai.us/wiki_pages/armored_dress.html
+    alias:
+      - armoured dress
   athletic leotard:
     name: 体操服
     image: 5055467f286769499746f33d1102b33135d84aa8be57bdc5a57fd84313f84bc9
     wikiURL: https://danbooru.donmai.us/wiki_pages/athletic_leotard.html
+    alias:
+      - ballet leotard
+      - gymnast leotard
   backless dress:
     name: 露背连衣裙
     image: d803e37827f5c1cf39fa4c1b3be47798ea2082033359869905c835ad57b2b7d8
     wikiURL: https://danbooru.donmai.us/wiki_pages/backless_dress.html
+    alias:
+      - open back dress
+      - open-back dress
   backless outfit:
     name: 露背装
     image: 000a5d59e4506d3c4e02adefa1f9b0f69b8eaf2fa1530bf1eda3d527cbfd8062
     wikiURL: https://danbooru.donmai.us/wiki_pages/backless_outfit.html
+    alias:
+      - open back
+      - backless
   baseball uniform:
     name: 棒球服
     image: b43c2f5ca106e5dc40bae35c25ff26dc0788c0adb1fade405ffbc72e981fbc78
@@ -344,6 +438,9 @@ content:
     name: 骑行套装
     image: dc7a9e6b24620164dbb4e0a7dc0f1c8a2609a88993ee7c277945992a7d2356a9
     wikiURL: https://danbooru.donmai.us/wiki_pages/bikesuit.html
+    alias:
+      - biker suit
+      - bike suit
   bikini skirt:
     name: 比基尼裙
     image: ce591408c298f8737b1025aeee61bbf6700f83872085560235ab8fe2bdc45c64
@@ -379,9 +476,13 @@ content:
     name: 晚会礼服
     image: e244fb65ded25cbacc58f7c690fdaa1e87209c30fbda4cc2d502242966c1d079
     wikiURL: https://danbooru.donmai.us/wiki_pages/evening_gown.html
+    alias:
+      - evening dress
   dougi:
     name: 武道服
     wikiURL: https://danbooru.donmai.us/wiki_pages/dougi.html
+    alias:
+      - gi
   front zipper swimsuit:
     name: 拉链在正面的泳衣
     image: a142ce0e2d530cc6ccd2fbd5319e4e2af30a0d08542113a4e899f51e78769cc3
@@ -402,6 +503,8 @@ content:
     name: 舞娘服
     image: 2e375a60b5b8e012ecdbf68c77bc1089058ccb86246f92f13b941da360c005bf
     wikiURL: https://danbooru.donmai.us/wiki_pages/harem_outfit.html
+    alias:
+      - harem clothes
   highleg leotard:
     name: 高开衩的连身衣
     image: 37b159fb761783a27721e21481748b58a6d88c2f60a270f68e91821c10dfe6f3
@@ -422,6 +525,8 @@ content:
     name: 棒球服
     image: cab32b8c1f16a34025f48d33cfe46c59326d92ee3f01790ea6e37be579ac912b
     wikiURL: https://danbooru.donmai.us/wiki_pages/letterman_jacket.html
+    alias:
+      - varsity jacket
   living clothes:
     name: 活体衣服
     wikiURL: https://danbooru.donmai.us/wiki_pages/living_clothes.html
@@ -440,6 +545,8 @@ content:
     name: 一体式泳衣
     image: 408430fd9a840bd735fce98b20e147f9e3c07a119a2c7d80c234afda45e6c5f4
     wikiURL: https://danbooru.donmai.us/wiki_pages/one-piece_swimsuit.html
+    alias:
+      - one-piece
   playboy bunny leotard:
     name: 兔女郎连身衣
     image: adec10eb935126fc9857b55c157a163e328d12b29a417062efe4cf91979696eb
@@ -455,6 +562,9 @@ content:
     name: 水手服
     image: cb5d5b8799c263e98b70bf81a81e706bfda76daca0eacee020d4a06f3d2368e8
     wikiURL: https://danbooru.donmai.us/wiki_pages/sailor.html
+    alias:
+      - sailor uniform
+      - sailor suit
   sailor senshi uniform:
     name: 美少女战士制服
     image: c0bdc65149b0a78d91cab4b5a71fabc0e19859b0d135fd91b6a2c800858a6fab
@@ -463,6 +573,9 @@ content:
     name: 圣诞老人服装
     image: 8df9ec367c3b090626227dd58d2cca7abe097c2f81e97a75789894be77ddd37e
     wikiURL: https://danbooru.donmai.us/wiki_pages/santa_costume.html
+    alias:
+      - santa suit
+      - santa outfit
   stile uniform:
     name: 女侍从的制服
     image: 5f64b491c82b159f1cdf9d10697032c2d692306051e2be186e6b3745058b1cfd
@@ -470,10 +583,15 @@ content:
   straitjacket:
     name: 拘束服
     wikiURL: https://danbooru.donmai.us/wiki_pages/straitjacket.html
+    alias:
+      - straightjacket
+      - straight jacket
   uchikake:
     name: 白无垢/日式嫁衣
     image: 7474111d72fd95196b23a463f1336f599a53c155b0cef7bb982b529627cdadb2
     wikiURL: https://danbooru.donmai.us/wiki_pages/uchikake.html
+    alias:
+      - wedding kimono
   varia suit:
     name: 强化服
     image: 0fa4d7ca4a4bce7a439248531f6c410886bd01ec50e337ff2d8edb1aec98f227

@@ -27,7 +27,7 @@ export const useTagStore = defineStore('tags', {
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.tags)
-                .filter(([_, v]) => settings.showRestricted || !v._restricted)
+                .filter(([, v]) => settings.showRestricted || !v._restricted)
                 .map(([k, _]) => k)
             return filtered.sort()
         },
@@ -144,7 +144,7 @@ export const useTagStore = defineStore('tags', {
                         if (meta.description?.includes(query)) score += 25;
                         return [key, {...meta, score}]
                     })
-                    .filter(([_, v]) => v.score > 0)
+                    .filter(([, v]) => v.score > 0)
                     .sort(([, va], [, vb]) => vb.score - va.score)
             );
         },

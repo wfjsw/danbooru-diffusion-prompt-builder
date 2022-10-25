@@ -4,6 +4,8 @@ content:
   spanked:
     name: 打屁股
     wikiURL: https://danbooru.donmai.us/wiki_pages/spanked.html
+    alias:
+      - red butt
   anal fisting:
     name: 拳爆菊
     wikiURL: https://danbooru.donmai.us/wiki_pages/anal_fisting.html
@@ -15,8 +17,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/stomach_bulge.html
   x-ray:
     alias:
-      - cross-section
-      - internal cumshot
+      - xray
     name: 透视人体内部
     wikiURL: https://danbooru.donmai.us/wiki_pages/x-ray.html
   tentacle:
@@ -34,24 +35,41 @@ content:
   cleave gag:
     name: 用布勒住嘴
     wikiURL: https://danbooru.donmai.us/wiki_pages/cleave_gag.html
+    alias:
+      - cleave gagged
+      - cleavegag
   panty gag:
     name: 用内裤塞口
     wikiURL: https://danbooru.donmai.us/wiki_pages/panty_gag.html
+    alias:
+      - panty gagged
+      - pantygag
   tapegag:
     name: 胶带封口
     wikiURL: https://danbooru.donmai.us/wiki_pages/tapegag.html
   groping:
     name: 摸索
     wikiURL: https://danbooru.donmai.us/wiki_pages/groping.html
+    alias:
+      - fondling
+      - grope
+      - fondle
   nipple torture:
     name: 虐乳头
     wikiURL: https://danbooru.donmai.us/wiki_pages/nipple_torture.html
+    alias:
+      - nipple pain
   nipple piercing:
     name: 乳头穿孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/nipple_piercing.html
+    alias:
+      - pierced nipples
+      - nipple piercings
   cameltoe:
     name: 骆驼趾（俗称馒头逼）
     wikiURL: https://danbooru.donmai.us/wiki_pages/cameltoe.html
+    alias:
+      - camel toe
   insertion:
     name: 插入物
   anal insertion:
@@ -61,6 +79,9 @@ content:
   large insertion:
     name: 巨大插入
     wikiURL: https://danbooru.donmai.us/wiki_pages/large_insertion.html
+    alias:
+      - extreme insertion
+      - huge insertion
   penetration:
     name: 异物插入
     wikiURL: https://danbooru.donmai.us/wiki_pages/penetration.html
@@ -81,15 +102,23 @@ content:
   piercing:
     name: 穿孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/piercing.html
+    alias:
+      - piercings
+      - pierced
   navel piercing:
     name: 肚脐穿孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/navel_piercing.html
+    alias:
+      - navel ring
+      - bellybutton piercing
   mound of venus:
     name: 腹部三角带
     wikiURL: https://danbooru.donmai.us/wiki_pages/mound_of_venus.html
   wide hips:
     name: 宽盆骨
     wikiURL: https://danbooru.donmai.us/wiki_pages/wide_hips.html
+    alias:
+      - large hips
   tamakericzx:
     name: 蛋疼
   vore:
@@ -101,27 +130,37 @@ content:
   mind control:
     name: 思想操控
     wikiURL: https://danbooru.donmai.us/wiki_pages/mind_control.html
+    alias:
+      - brainwashing
   blood:
     name: 血
     wikiURL: https://danbooru.donmai.us/wiki_pages/blood.html
   nyotaimori:
     name: 女体盛
     wikiURL: https://danbooru.donmai.us/wiki_pages/nyotaimori.html
+    alias:
+      - serving food on female
   wooden horse:
     name: 木马
     wikiURL: https://danbooru.donmai.us/wiki_pages/wooden_horse.html
   anal beads:
     name: 肛珠
     wikiURL: https://danbooru.donmai.us/wiki_pages/anal_beads.html
+    alias:
+      - analbeads
   cock ring:
     name: 屌环
     wikiURL: https://danbooru.donmai.us/wiki_pages/cock_ring.html
+    alias:
+      - penis ring
   double dildo:
     name: 双头龙
     wikiURL: https://danbooru.donmai.us/wiki_pages/double_dildo.html
   vibrator:
     name: 带振动的自慰器
     wikiURL: https://danbooru.donmai.us/wiki_pages/vibrator.html
+    alias:
+      - vibrators
   vibrator in thighhighs:
     name: 大腿贴着跳蛋控制器
     wikiURL: https://danbooru.donmai.us/wiki_pages/vibrator_in_thighhighs.html
@@ -134,9 +173,14 @@ content:
   shibari:
     name: 捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/shibari.html
+    alias:
+      - ropebondage
+      - rope bondage
   bondage:
     name: 捆绑/奴役
     wikiURL: https://danbooru.donmai.us/wiki_pages/bondage.html
+    alias:
+      - tied up (sexual)
   bdsm:
     name: 绑缚与调教/支配与臣服/施虐与受虐
     wikiURL: https://danbooru.donmai.us/wiki_pages/bdsm.html
@@ -148,15 +192,28 @@ content:
   rope:
     name: 绳子
     wikiURL: https://danbooru.donmai.us/wiki_pages/rope.html
+    alias:
+      - ropes
   bound arms:
     name: 手臂捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/bound_arms.html
+    alias:
+      - tied arms
+      - arms tied
   bound wrists:
     name: 手腕捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/bound_wrists.html
+    alias:
+      - hands bound
+      - tied wrists
+      - bound hands
+      - tied hands
+      - hands tied
   crotch rope:
     name: 胯下捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/crotch_rope.html
+    alias:
+      - crotchrope
   hogtie:
     name: 曲膝捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/hogtie.html
@@ -166,12 +223,19 @@ content:
   suspension:
     name: 悬空捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/suspension.html
+    alias:
+      - suspended
   spreader bar:
     name: 分腿捆绑
     wikiURL: https://danbooru.donmai.us/wiki_pages/spreader_bar.html
+    alias:
+      - spread bar
   futanari:
     name: 双性
     wikiURL: https://danbooru.donmai.us/wiki_pages/futanari.html
+    alias:
+      - futa
+      - dickgirl
   incest:
     name: 乱伦
     wikiURL: https://danbooru.donmai.us/wiki_pages/incest.html
@@ -187,12 +251,19 @@ content:
   bestiality:
     name: 人兽
     wikiURL: https://danbooru.donmai.us/wiki_pages/bestiality.html
+    alias:
+      - beastiality
   molestation:
     name: 性骚扰
     wikiURL: https://danbooru.donmai.us/wiki_pages/molestation.html
+    alias:
+      - molesting
+      - molester
   voyeurism:
     name: 窥阴癖
     wikiURL: https://danbooru.donmai.us/wiki_pages/voyeurism.html
+    alias:
+      - voyeur
   exhibitionism:
     name: 裸露癖
     wikiURL: https://danbooru.donmai.us/wiki_pages/exhibitionism.html
@@ -204,3 +275,5 @@ content:
   anal tail:
     name: 肛尾
     wikiURL: https://danbooru.donmai.us/wiki_pages/anal_tail.html
+    alias:
+      - butt plug tail

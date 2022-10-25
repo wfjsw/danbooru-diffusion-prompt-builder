@@ -80,7 +80,7 @@ const githubButtonsColorScheme = computed(() => isDark.value
                 </p>
             </li>
             <li>
-                <p>鼠标放置到图片上可解除模糊效果。此外，您可以通过调整右上角第二个开关
+                <p>由于配图中可能包含不适宜工作场合下浏览的内容，请通过调整右上角第二个开关
                     <span>
                         <ElSwitch
                             v-model="settingsStore.showImage"
@@ -90,7 +90,7 @@ const githubButtonsColorScheme = computed(() => isDark.value
                             size="large"
                         />
                     </span>
-                    解除所有图片的模糊效果。
+                    选择是否显示标签配图。
                 </p>
             </li>
             <li>

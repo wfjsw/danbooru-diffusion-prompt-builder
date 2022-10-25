@@ -2,6 +2,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
+import axios from 'axios'
 import { fileURLToPath } from 'url';
 import {type TagCategories} from '../datatypes'
 
@@ -28,16 +29,15 @@ for (let i = 0; i < batchCount; i++) {
     console.log(`${i+1} / ${batchCount}`)
     const batch = tagArr.slice(i * 50, (i + 1) * 50)
     const batchStr = batch.map((n) => n.replaceAll(' ', '_')).join(',')
-    const qs = new URLSearchParams({limit: '50', 'search[name_normalize]': batchStr})
-    const res = await fetch(`https://danbooru.donmai.us/tags.json?${qs.toString()}`, {
+    const qs = new URLSearchParams({limit: '50', only: 'name,post_count', 'search[name_normalize]': batchStr})
+    const res = await axios.get(`https://danbooru.donmai.us/tags.json?${qs.toString()}`, {
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-            'Cookie': 'cf_clearance=frYrp0Q5zQuJBP06gszx2yQ0.FOKHgcrCXSuIREX4B4-1666621136-0-250',
+            'Cookie': 'cf_clearance=',
         }
     })
 
-    const json = await res.json()
-    for (const record of json) {
+    for (const record of res.data) {
         result[record.name] = record.post_count as number
     }
 }

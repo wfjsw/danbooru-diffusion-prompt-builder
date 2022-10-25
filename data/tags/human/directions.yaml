@@ -8,6 +8,8 @@ content:
     name: 侧脸
     image: c4de62e25672cb24adf001c443df4bb3335413e0870c3d936f60f3263628cb62
     wikiURL: https://danbooru.donmai.us/wiki_pages/profile.html
+    alias:
+      - in profile
   straight-on:
     name: 正脸
     image: 2565c0f7b19c600a73a5f57543946d003bdee8538569715b70fb731c692eceac
@@ -24,6 +26,8 @@ content:
     name: 头部脱框
     image: d5f8634fce1e2d9ed8d5275196e9a1a6c273e8bc15bce52e31711ebf526443d0
     wikiURL: https://danbooru.donmai.us/wiki_pages/head_out_of_frame.html
+    alias:
+      - eyes out of frame
   feet out of frame:
     name: 脚部脱框
     image: b6ecb81b32519e3295e94366b80987bdb9cbc9b603911deb497ddaa4fd87169f
@@ -32,6 +36,8 @@ content:
     name: 上半身
     image: 718a39279a041597edd6cf45027282eb39d75f9d3baa87c1032f6c130c0cb6ee
     wikiURL: https://danbooru.donmai.us/wiki_pages/upper_body.html
+    alias:
+      - bust
   lower body:
     name: 下半身
     image: aee72f9f18bc46b12cfe7c9bfeeefb0f93af17df0fdbc29a332d62d6c2cfdaaf
@@ -75,6 +81,8 @@ content:
     name: 盯着看
     image: 094181949013e918cdd6483877a1d959f342ea4cb6d7f4ef5a467a041025e39d
     wikiURL: https://danbooru.donmai.us/wiki_pages/staring.html
+    alias:
+      - stare
   eye contact:
     name: 对视
     image: 269d4031e218d5f256dafd96e40ffc6c2841d5200c9be9009051199691f740bd
@@ -86,14 +94,24 @@ content:
     name: 俯视镜头
     image: 6fd4775a5c01b2ce88383b48f759b9fe025f965eff659a418b546eb4e2731fac
     wikiURL: https://danbooru.donmai.us/wiki_pages/from_above.html
+    alias:
+      - view from above
+      - viewed from above
+      - aerial view
   from behind:
     name: 背影
     image: 92a63633102700973e97e872f986bc7bc6b77f391554c163a05db46542f6eede
     wikiURL: https://danbooru.donmai.us/wiki_pages/from_behind.html
+    alias:
+      - viewed from behind
   from below:
     name: 仰视镜头
     image: 31b3742a7350125602abea322819fb3d33adef8a71caadf3b8a4db201032119a
     wikiURL: https://danbooru.donmai.us/wiki_pages/from_below.html
+    alias:
+      - low angle
+      - view from below
+      - viewed from below
   from outside:
     name: 室外看向室内(的镜头)
     image: 1c6f2b75277200a841b3466a28fa2bb208e561d09eca0a684f54f71009df229c
@@ -102,11 +120,17 @@ content:
     name: 角色的侧面
     image: ab0247ce9a1529abd16da55697110562478c0442cbbdd67c5e7a5db62ed7c97c
     wikiURL: https://danbooru.donmai.us/wiki_pages/from_side.html
+    alias:
+      - side view
+      - side
+      - viewed from side
   looking at breasts:
     restricted: true
     name: 瞄着乳房
     image: f2b966c6370102eed9e6f21a050b832ba64be993e22e6192b35483d93f5bf453
     wikiURL: https://danbooru.donmai.us/wiki_pages/looking_at_breasts.html
+    alias:
+      - staring at breasts
   looking at penis:
     restricted: true
     name: 看着阴茎
@@ -124,10 +148,16 @@ content:
     name: 移开视线
     image: 6a1fc30408cea2a1739dc4d1efba4f727338d31246bc209a95b370851d5feb94
     wikiURL: https://danbooru.donmai.us/wiki_pages/looking_away.html
+    alias:
+      - averting eyes
+      - averted eyes
   looking back:
     name: 回眸
     image: e608e37abafe80bad0406866974c97da2a37ce5316ece9492af220e514663df6
     wikiURL: https://danbooru.donmai.us/wiki_pages/looking_back.html
+    alias:
+      - looking over shoulder
+      - turning
   looking down:
     name: 俯视
     wikiURL: https://danbooru.donmai.us/wiki_pages/looking_down.html
@@ -135,6 +165,9 @@ content:
     name: 看向侧面
     image: 11360990468a4ad5fcd10d5b587d35ed10326183b06e210ce901fa9af3971fe4
     wikiURL: https://danbooru.donmai.us/wiki_pages/looking_to_the_side.html
+    alias:
+      - looking aside
+      - looking to side
   looking up:
     name: 仰视
     image: 44bd8096bb3519b85d5ba0a5ffabf77ec385ac7d05c5ea85b9956c93e6fbaf68
@@ -143,16 +176,22 @@ content:
     name: 偷窥(强调视角)
     image: 431d051b8a21007271ff36acbf0edf2c7b868953f8c3ade74b91c24d0b1f9e81
     wikiURL: https://danbooru.donmai.us/wiki_pages/peeping.html
+    alias:
+      - spying
   pov crotch:
     name: 看向裤裆的视角
     wikiURL: https://danbooru.donmai.us/wiki_pages/pov_crotch.html
   pov hands:
     name: 手伸来方向的视角
     wikiURL: https://danbooru.donmai.us/wiki_pages/pov_hands.html
+    alias:
+      - hand pov
   sideways glance:
     name: 轻轻向侧面瞥
     image: e441397d7563950c8e2f5d2c5e1595b95af63fc98aaac705a7af26623b232f64
     wikiURL: https://danbooru.donmai.us/wiki_pages/sideways_glance.html
+    alias:
+      - side glance
   taking picture:
     name: 拍照/自拍
     wikiURL: https://danbooru.donmai.us/wiki_pages/taking_picture.html
@@ -176,7 +215,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/back_focus.html
   ass focus:
     alias:
-      - hip focus
+      - pov ass
     name: 臀部焦点
     image: c50626f25f83507b7f5fced1ae95dd2842969443f7ad16fc095013857c560707
     wikiURL: https://danbooru.donmai.us/wiki_pages/ass_focus.html
@@ -184,6 +223,9 @@ content:
     name: 足部焦点
     image: 04b81c802647a54c8e768cc41ef1f3b2e6fa937cf4d11db57f55cbecdcfb0154
     wikiURL: https://danbooru.donmai.us/wiki_pages/foot_focus.html
+    alias:
+      - pov feet
+      - feet focus
   portrait:
     name: 半身像
     image: 0417df7c88fdf1dddcbde49361551732bebc07bfcd2e62cd3177400ff3e33a4a

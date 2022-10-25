@@ -19,13 +19,21 @@ content:
     image: e90b24b2020f41af85f44d60aaa0ac1c41d63f78cff277170c80f40dec190ecb
     name: 闪耀效果
     wikiURL: https://danbooru.donmai.us/wiki_pages/sparkle.html
+    alias:
+      - sparkles
+      - sparkling
   jpeg artifacts:
     name: JPEG 压缩失真
     wikiURL: https://danbooru.donmai.us/wiki_pages/jpeg_artifacts.html
+    alias:
+      - jpeg artefacts
+      - jpg artifacts
   blurry:
     name: 模糊的
     image: 6daa85881f293c2188f7315cc61d41d032dea8af525e51d6293a20cef5e2aec9
     wikiURL: https://danbooru.donmai.us/wiki_pages/blurry.html
+    alias:
+      - blurred
   cinematic lighting:
     name: 电影光效
     image: 8029429ec07e77a763ffce45c4f5fa11605a1968c017e8eb94122daefd909135

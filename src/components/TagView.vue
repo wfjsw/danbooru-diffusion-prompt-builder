@@ -11,7 +11,7 @@ import {useCartStore} from "../stores/cart";
 const props = defineProps<{
     tag: string,
     meta: TagMeta & {category?: string},
-    blurImage: boolean,
+    showImage: boolean,
 }>()
 
 const {copy, copied} = useClipboard({source: toRef(props, 'tag')})
@@ -76,7 +76,7 @@ function toggleNegative(tag: string = props.tag) {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]">
+        <div v-if="imageUrl" v-show="showImage" :class="['card-image-container']">
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">

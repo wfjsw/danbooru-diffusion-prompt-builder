@@ -11,7 +11,6 @@ import ToggleableTag from "./ToggleableTag.vue";
 
 const props = withDefaults(defineProps<{
     data: Embedding,
-    blurImage: boolean,
     showCategory?: boolean,
 }>(), {
     showCategory: false,
@@ -61,7 +60,7 @@ function toggleNegative(tag: string = prompt.value) {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container', {'blur-image': blurImage}]">
+        <div v-if="imageUrl" :class="['card-image-container']">
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">
@@ -161,24 +160,6 @@ function toggleNegative(tag: string = prompt.value) {
     }
 }
 
-@keyframes image_unblur {
-    0% {
-        filter: blur(10px);
-    }
-    100% {
-        filter: blur(0px);
-    }
-}
-
-@keyframes image_blur {
-    0% {
-        filter: blur(0px);
-    }
-    100% {
-        filter: blur(10px);
-    }
-}
-
 .card-image-container {
     min-height: 256px;
     aspect-ratio: 1 / 1;
@@ -188,14 +169,6 @@ function toggleNegative(tag: string = prompt.value) {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    &.blur-image {
-        filter: blur(15px);
-
-        &:hover {
-            filter: blur(0px);
-        }
     }
 
 }

@@ -7,23 +7,29 @@ content:
     name: 背影像
     image: e0ba3ef9e1751984824649bbaea25c0963656d6899a06567769001df2a11bfb1
     wikiURL: https://danbooru.donmai.us/wiki_pages/back.html
-  bust:
-    name: 半身像
-    image: 27df4bb3c2784a21d5c10cbf5e99552d966660c4338d3663b1758da1c6e69f3f
   checkered:
     name: 格子的
     image: 7d9372423af01962a499744ca2a56e038ca5ba621d742eb1a8a15600effb315a
     wikiURL: https://danbooru.donmai.us/wiki_pages/checkered.html
+    alias:
+      - checkerboard
   column lineup:
     name: 小图拼接
     wikiURL: https://danbooru.donmai.us/wiki_pages/column_lineup.html
   everyone:
     name: 所有人
     wikiURL: https://danbooru.donmai.us/wiki_pages/everyone.html
+    alias:
+      - everybody
+      - group
   highres:
     name: 高分辨率
     image: a3ec716c5dd8e71a1495e102c0fb12ad29f6ba4ee74465f7b6f18d64b749be9a
     wikiURL: https://danbooru.donmai.us/wiki_pages/highres.html
+    alias:
+      - high res
+      - hires
+      - high resolution
   huge filesize:
     name: 大文件体积
     image: 355327175ebf24fc7d993a9d8b04c09d78b459d91cacedaa5e9d32a0198a623c
@@ -41,6 +47,8 @@ content:
     name: 原创
     image: f801ef237e263189af40c8e725a7ffbae6ded7ef261392ef4249814c15189e88
     wikiURL: https://danbooru.donmai.us/wiki_pages/original.html
+    alias:
+      - original character
   parody:
     name: 拙劣模仿
     image: 204fc2942c782e2f6062aacb136b819ae2f429a5ecce892aab4c72c565bf07b6

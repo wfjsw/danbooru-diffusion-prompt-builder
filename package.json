@@ -15,7 +15,8 @@
     "updatepostcount": "tsx ./src/cli/updatepostcount.ts",
     "generateimage": "tsx ./src/cli/generateimage.ts",
     "importgeneratedimage": "tsx ./src/cli/importgeneratedimage.ts",
-    "findwiki": "tsx ./src/cli/findwiki.ts"
+    "findwiki": "tsx ./src/cli/findwiki.ts",
+    "importaliases": "tsx ./src/cli/importaliases.ts"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
@@ -29,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "axios": "^1.1.3",
     "element-plus": "^2.2.18",
     "eslint": "^8.25.0",
     "eslint-plugin-vue": "^9.6.0",

@@ -19,6 +19,9 @@ content:
     name: 灰眼
     image: 897185217d72271d95380f406724ee6ccd36910a14b7ac83e610b68e988b5949
     wikiURL: https://danbooru.donmai.us/wiki_pages/grey_eyes.html
+    alias:
+      - silver eyes
+      - gray eyes
   heart-shaped pupils:
     name: 爱心形瞳孔
     image: dbd1bc5b89481633efbd4c148c083ee37fecbc3862884271033240168983a43a
@@ -27,6 +30,8 @@ content:
     name: 异色瞳
     image: 750b940bfad52ecc1c8f5311c09c58fdf9ee8a30bd2eccfbcc659ecf40603666
     wikiURL: https://danbooru.donmai.us/wiki_pages/heterochromia.html
+    alias:
+      - odd eye
   purple eyes:
     name: 紫眼
     image: e5c9ab77719dad02a01a13969fd48e7044ef431ced92fae169fcea190ce535bb
@@ -35,16 +40,15 @@ content:
     name: 红眼
     image: dd4ffd5dd7f8ff1bd63c71510e736a75038e3b550cdc3690b037fb155f2e3cca
     wikiURL: https://danbooru.donmai.us/wiki_pages/red_eyes.html
-  rolleyes:
-    name: 眼球上翻
-  silver eyes:
-    name: 银眼
-    image: 17163af6bf0f77821b1a6bea9def25511392ef6d5a3f10c0ee4a703de494cbc0
-    wikiURL: https://danbooru.donmai.us/wiki_pages/silver_eyes.html
+    alias:
+      - red eye
   slit pupils:
     name: 竖瞳孔/猫眼
     image: d6d191469f5fa0cbcc7a2ea317cc4114d2612bdf676b2fa4ab096c6800b30d6e
     wikiURL: https://danbooru.donmai.us/wiki_pages/slit_pupils.html
+    alias:
+      - cat eyes
+      - snake eyes
   white eyes:
     name: 白眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_eyes.html
@@ -67,6 +71,10 @@ content:
     name: 睁开眼睛
     image: 19ad79ac0f8119090000721373813b2a93f2c21d50dad60e5eda9478a1dbb06b
     wikiURL: https://danbooru.donmai.us/wiki_pages/wide-eyed.html
+    alias:
+      - eyes wide
+      - wide eyes
+      - shocked eyes
   ringed eyes:
     name: 眼圈
     image: f1bf3099c4c01d66ce975a552ea7407301713bba183751cdc8740eee92d7d346
@@ -74,6 +82,10 @@ content:
   rolling eyes:
     name: 眼睛抬头
     wikiURL: https://danbooru.donmai.us/wiki_pages/rolling_eyes.html
+    alias:
+      - rolleyes
+      - rolled eyes
+      - eye roll
   crazy eyes:
     name: 疯狂的眼睛
     image: 6eb802ad6ac22168d68ffc921a18cd4c8f9e241fb555f3f8c46cdc73876ce2a5
@@ -84,9 +96,14 @@ content:
   furrowed brow:
     name: 下眉毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/furrowed_brow.html
+    alias:
+      - furrowed eyebrows
   dashed eyes:
     name: 黑眼圈中的水平线
     wikiURL: https://danbooru.donmai.us/wiki_pages/dashed_eyes.html
+    alias:
+      - dash eyes
+      - line in eye
   multicolored eyes:
     name: 多色的黑眼睛
     image: a7660dd76ad6982e767fc8935c7deef06721f4ac735ab72f654d4c4a0d21b63e
@@ -94,6 +111,8 @@ content:
   mismatched pupils:
     name: 左右眼颜色不同
     wikiURL: https://danbooru.donmai.us/wiki_pages/mismatched_pupils.html
+    alias:
+      - asymmetrical pupils
   mismatched sclera:
     name: 左右眼不同颜色的眼白
     wikiURL: https://danbooru.donmai.us/wiki_pages/mismatched_sclera.html
@@ -105,6 +124,8 @@ content:
     name: 眼睛没有亮点
     image: 8933a045bcd55b51e673479bc910e2552806627e7f659427907d071cb18fc838
     wikiURL: https://danbooru.donmai.us/wiki_pages/empty_eyes.html
+    alias:
+      - dead eyes
   blank eyes:
     name: 白眼球
     wikiURL: https://danbooru.donmai.us/wiki_pages/blank_eyes.html
@@ -120,6 +141,10 @@ content:
     name: 瞳孔收缩
     image: 5bd94bcbd8449991c8495ab54738aa48ead3c03e75314a903b36554d1d94e563
     wikiURL: https://danbooru.donmai.us/wiki_pages/constricted_pupils.html
+    alias:
+      - contracted pupils
+      - shrunk pupils
+      - shrunk eyes
   symbol-shaped pupils:
     name: 符号眼
     image: ab4f255d31e997373ce365bda1f688612c2e9057fbadb87e678e2a65b262e8ac
@@ -148,6 +173,8 @@ content:
     name: 一只眼睛闭着
     image: 4af68f047ec053fdff5fd584364c22241f2ff52a77e432e22f9882c44bc5ce1a
     wikiURL: https://danbooru.donmai.us/wiki_pages/one_eye_closed.html
+    alias:
+      - wink
   half-closed eyes:
     alias:
       - half closed eyes
@@ -156,14 +183,11 @@ content:
   eyes closed:
     name: 闭眼
     image: 9b640e54565ce69975c7162d05de0808f1b065694b25a1fa7c3a7ef2d1354d51
-  wink:
-    alias:
-      - blinking
-    name: 眨眼
-    image: 0b4b52458d1f370e2e1cd4d8d99c899e12197e625b167ac124d566f690b2d8b0
   wince:
     name: 闭一只眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/wince.html
+    alias:
+      - cringe
   eyelid pull:
     name: 拉眼皮
     image: 4baad99b43b7cb66ee0328810694e194f11309808ebf51483cb174e6256f81a8
@@ -174,10 +198,14 @@ content:
   eyeball:
     name: 盯着看
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyeball.html
+    alias:
+      - eyeballs
   tears:
     name: 眼泪
     image: 1d58fa13dc6304fb087b8b63b78ef1405a9539c0ddeea5d9ead6360d00654dca
     wikiURL: https://danbooru.donmai.us/wiki_pages/tears.html
+    alias:
+      - tear
   gradient eyes:
     name: 渐变瞳色
     wikiUrl: https://danbooru.donmai.us/wiki_pages/gradient_eyes.html
@@ -209,10 +237,14 @@ content:
     name: 星星眼
     image: fbe51ad8d114862609b9c526d0fcaa9e30e090ff52ea9a038a94eb2d563b3658
     wikiURL: https://danbooru.donmai.us/wiki_pages/sparkling_eyes.html
+    alias:
+      - sparkle eyes
   glaring:
     name: 轻蔑/怒视
     image: 4999c11a716611c14dd7073779e07fa0d08b30cbaf2309721c9f9a1e4b6dd0e4
     wikiURL: https://danbooru.donmai.us/wiki_pages/glaring.html
+    alias:
+      - glare
   streaming tears:
     name: 流泪
     image: c9fb4b24f1ef7d231008b32f6b1cd2866e391c26db3cf589bc53d294d104d5ce
@@ -225,10 +257,14 @@ content:
   eyelashes:
     name: 睫毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyelashes.html
+    alias:
+      - eye lashes
   eyeliner:
     name: 眼线
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyeliner.html
   eyes visible through hair:
     name: 透过头发可以看到的眼睛
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyes_visible_through_hair.html
+    alias:
+      - eye through hair
 name: 人物眼睛

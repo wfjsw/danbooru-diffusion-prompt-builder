@@ -4,14 +4,21 @@ content:
     name: 拖鞋
     image: a566c946eb5c775823f1e43daaec87ab8f6122ce60333fa67c5a189931c1f27e
     wikiURL: https://danbooru.donmai.us/wiki_pages/slippers.html
+    alias:
+      - slipper
   socks:
     name: 短袜
     image: 945f638f43ddd20f0e92cfd0f670db1fb2bbcf0c5a72d640ca8aeecf36b0a134
     wikiURL: https://danbooru.donmai.us/wiki_pages/socks.html
+    alias:
+      - naked socks
+      - sock
   striped socks:
     name: 横条袜
     image: d53f18ea33aacc5fc9ff1c35c884147f5929be006d37bf3bc0fbd6b464b1f4f2
     wikiURL: https://danbooru.donmai.us/wiki_pages/striped_socks.html
+    alias:
+      - striped kneehighs
   striped thighhighs:
     name: 条纹过膝袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/striped_thighhighs.html
@@ -25,10 +32,17 @@ content:
   uwabaki:
     name: 女式学生鞋
     wikiURL: https://danbooru.donmai.us/wiki_pages/uwabaki.html
+    alias:
+      - indoor shoes (japanese)
   thighhighs:
     name: 过膝袜
     image: d7172853bfb6614fcac7e00a70ca016816cdb0af77a7e2f6a8aad45c1554d940
     wikiURL: https://danbooru.donmai.us/wiki_pages/thighhighs.html
+    alias:
+      - thighhighs only
+      - stockings
+      - naked thighhighs
+      - stocking
   white thighhighs:
     name: 白色过膝袜
     image: 2b366eafcc4a004c3fe239a6579cc1aaac348fc54b63e29226cf5b93b93b62eb
@@ -37,6 +51,8 @@ content:
     name: 高跟鞋
     image: 23efb34b4310cf00dc3b7b5bb85009aa82174fb4e2d6534d6876e8c8528e1407
     wikiURL: https://danbooru.donmai.us/wiki_pages/high_heels.html
+    alias:
+      - heels
   mary janes:
     name: 玛丽珍鞋
     image: c767c943c8f17f3102a903a8588c4a8791b7d592f756e4631fe1e8942aec6464
@@ -61,6 +77,8 @@ content:
     name: 带蝴蝶结的裤袜
     image: 33585940e8bbc2a0e47b3de5677ae7138b94bfede81cd1fb513519fbdd501466
     wikiURL: https://danbooru.donmai.us/wiki_pages/bow_legwear.html
+    alias:
+      - bow thighhighs
   fine fabric emphasis:
     name: 精细的面料感/超还原的丝袜
     image: 524ed9bd61e9f14f93bca3589c7a23cd284c6927d4bdd97e0ffe6e40a3d6f77c
@@ -76,9 +94,6 @@ content:
     name: 有接缝的裤袜
     image: 78dac734fba02cab58814449506aab05ce5a31e0b36e0056e89cc56f18745ee2
     wikiURL: https://danbooru.donmai.us/wiki_pages/seamed_legwear.html
-  sheer legwear:
-    name: 透明的裤袜
-    image: 96bc0b25a2ff3674c2a3db4677e93a239f09396d196eed8f4e799a007782eb99
   stirrup legwear:
     name: 马镫袜
     image: b1d24e1e5e310c5f37d717a7a2b2c76bd68e23ece30cf36f41cb35d56ef5de26
@@ -98,10 +113,16 @@ content:
     name: 腿套/暖腿袜
     image: 82569b0b651ada99837327ecc6c8dbcca3c235e808fa993dadf2088ccc9fecf4
     wikiURL: https://danbooru.donmai.us/wiki_pages/leg_warmers.html
+    alias:
+      - legwarmers
   kneehighs:
     name: 长袜
     image: 6c4f9489b5a7c310e22a019b2d6239fe27d0f97570db1513837a61ac4a155b53
     wikiURL: https://danbooru.donmai.us/wiki_pages/kneehighs.html
+    alias:
+      - kneehigh socks
+      - kneesocks
+      - knee socks
   leggings:
     name: 裤袜
     image: 94c3ae88e183f9c4b83cb0cbd4d18e5f053d5fa305bab75a77f5103fa5fcadd4
@@ -114,6 +135,8 @@ content:
     name: 袜带
     image: 5eec9ec41af74dcda1cb1bf7b0df81dc9bfb45ffd834f5981821b99d633b9d1f
     wikiURL: https://danbooru.donmai.us/wiki_pages/garter_straps.html
+    alias:
+      - garter strap
   garters:
     name: 吊带袜
     image: a59d9fe99bd5bbc03e4ed4ac4974c25248ff2c7c16fdbd9c70fe74bfd2fd5c74
@@ -122,6 +145,8 @@ content:
     name: 连腰吊带袜
     image: 0f96f769fcf76b87c430b39fe8e0b922d3dfe021b919cbb96a30e4f714daacc2
     wikiURL: https://danbooru.donmai.us/wiki_pages/garter_belt.html
+    alias:
+      - garterbelt
   pink thighhighs:
     name: 粉色过膝袜
     image: 2d1823507bbce36db21cf29bc2ac3baf39c425649f2500c78f025f0ac5d5647f
@@ -130,10 +155,11 @@ content:
     name: 连裤袜
     image: 4469744c889cee06d0b56ddcb289d5750d961ed75b2ea261e5efbf609585750c
     wikiURL: https://danbooru.donmai.us/wiki_pages/pantyhose.html
+    alias:
+      - tights
   fishnets:
     alias:
-      - fishnet pantyhose
-      - fishnet stockings
+      - fishnet
     name: 网袜
     image: 9636d3c3b746d57af24e72105f7b9037932944f4b1f3bf20dac30aa9c0d68f9b
     wikiURL: https://danbooru.donmai.us/wiki_pages/fishnets.html
@@ -149,12 +175,18 @@ content:
     name: 芭蕾舞鞋
     image: ac705187f0f2dfe81ff702c5078126a4d524c04e59d2f5a11fd6f7141277af84
     wikiURL: https://danbooru.donmai.us/wiki_pages/ballet_slippers.html
+    alias:
+      - ballet shoes
+      - pointe shoes
   barefoot sandals:
     name: 裸足凉鞋
     wikiURL: https://danbooru.donmai.us/wiki_pages/barefoot_sandals.html
   boots:
     name: 长靴
     wikiURL: https://danbooru.donmai.us/wiki_pages/boots.html
+    alias:
+      - boot
+      - naked boots
   boots removed:
     name: 脱下的靴子
     wikiURL: https://danbooru.donmai.us/wiki_pages/boots_removed.html
@@ -166,10 +198,15 @@ content:
     name: 高跟靴
     image: d1e71838e012817dc9080418c1c49483061c448b29384d81f9e1725c6ec41f88
     wikiURL: https://danbooru.donmai.us/wiki_pages/high_heel_boots.html
+    alias:
+      - heel boots
   knee boots:
     name: 及膝靴
     image: 009b9bf70e3e62671c6d0a67ad31e904716bc113d9422f6f3664fa0931bef7c1
     wikiURL: https://danbooru.donmai.us/wiki_pages/knee_boots.html
+    alias:
+      - kneehigh boots
+      - kneeboots
   loafers:
     name: 乐福鞋
     image: 0af1473bc80cc7caedb2e91dfa161c737a00d6c538caff043626f5d1ce6c1d34
@@ -190,6 +227,9 @@ content:
     name: 高帮靴
     image: b1750b3e67649fafc1e6ec20adf14bacca06af5e30e016b4c015428b6a84d984
     wikiURL: https://danbooru.donmai.us/wiki_pages/thigh_boots.html
+    alias:
+      - thighboots
+      - thighhigh boots
   toeless boots:
     name: 露趾靴
     wikiURL: https://danbooru.donmai.us/wiki_pages/toeless_boots.html
@@ -276,9 +316,15 @@ content:
   see-through legwear:
     name: 透视裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/see-through_legwear.html
+    image: 96bc0b25a2ff3674c2a3db4677e93a239f09396d196eed8f4e799a007782eb99
+    alias:
+      - sheer legwear
   legwear garter:
     name: 裤袜吊袜带
     wikiURL: https://danbooru.donmai.us/wiki_pages/legwear_garter.html
+    alias:
+      - sock garters
+      - thighhigh garter
   two-tone legwear:
     name: 分段裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/two-tone_legwear.html
