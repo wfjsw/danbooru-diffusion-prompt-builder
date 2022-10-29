@@ -163,4 +163,11 @@ html.dark .el-switch {
     //padding-right: 1.5rem;
 }
 
-
+.switch-text-icon {
+    font-style: normal;
+    font-size: 12px;
+    &.math-style, .math-style {
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+}

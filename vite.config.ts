@@ -82,12 +82,6 @@ export default defineConfig({
         noExternal: true,
         external: [
             'masonry-layout',
-            'vue-github-button',
         ]
-        // noExternal: [
-        //     'element-plus',
-        //     /^@fortawesome\/(?:free|pro)-/,
-        //     'masonry-layout',
-        // ],
     },
 })

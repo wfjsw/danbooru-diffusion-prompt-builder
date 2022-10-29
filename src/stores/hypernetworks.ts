@@ -1,7 +1,7 @@
-import {Set as ImmutableSet} from 'immutable';
+import {Set as ImmutableSet} from 'immutable'
 import {defineStore} from 'pinia'
-import type {HypernetworkCategories, Hypernetworks, Hypernetwork} from "../datatypes";
-import {useSettingsStore} from "./settings";
+import type {HypernetworkCategories, Hypernetworks, Hypernetwork} from '../datatypes'
+import {useSettingsStore} from './settings'
 
 interface HypernetworkFile {
     prompt: string
@@ -23,13 +23,13 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
     state: (): Hypernetworks => ({hypernetworks: {}}),
     getters: {
         loaded: (state) => {
-            return Object.keys(state.hypernetworks).length > 0;
+            return Object.keys(state.hypernetworks).length > 0
         },
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.hypernetworks)
                 .filter(([, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
-                .map(([k, _]) => k)
+                .map(([k]) => k)
             return filtered.sort()
         },
         categorySize: (state) => {
@@ -72,7 +72,7 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             const hnData: Hypernetworks = {
                 hypernetworks: result.reduce((a: HypernetworkCategories, p: HypernetworkFile) => {
                     const categoryName = p.category
-                    if (!a.hasOwnProperty(categoryName)) {
+                    if (!(categoryName in a)) {
                         a[categoryName] = {content: []}
                     }
                     a[categoryName].content.push({
@@ -90,7 +90,7 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
                         suggestPositive: p.suggestPositive,
                         suggestNegative: p.suggestNegative,
                     })
-                    return a;
+                    return a
                 }, {}),
             }
 
@@ -108,13 +108,20 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             return this.hypernetworks[category].content
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map(n => {
-                    let score = 0;
-                    if (n.prompt.includes(query)) score += 100;
-                    if (n.name.includes(query)) score += 50;
-                    if (n.modelName.includes(query)) score += 15;
-                    if (n.modelHash === query) score += 20;
-                    if (n.description?.includes(query)) score += 25;
-                    return {...n, score};
+                    let score = 0
+                    if (n.prompt === query) score += 100
+                    if (n.prompt.includes(query)) score += 100
+                    if (n.name === query) score += 50
+                    if (n.name.includes(query)) score += 50
+                    if (n.modelName === query) score += 15
+                    if (n.modelName.includes(query)) score += 15
+                    if (n.modelHash === query) score += 20
+                    if (n.modelHash === query) score += 20
+                    if (n.description === query) score += 40
+                    if (n.description?.includes(query)) score += 25
+                    if (n.author === query) score += 40
+                    if (n.author?.includes(query)) score += 20
+                    return {...n, score}
                 })
                 .filter(n => n.score > 0)
                 .sort(({score: a}, {score: b}) => b - a)
@@ -126,13 +133,20 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             return this.allHypernetworks
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map((n) => {
-                    let score = 0;
-                    if (n.prompt.includes(query)) score += 100;
-                    if (n.name.includes(query)) score += 50;
-                    if (n.modelName.includes(query)) score += 15;
-                    if (n.modelHash === query) score += 20;
-                    if (n.description?.includes(query)) score += 25;
-                    return {...n, score};
+                    let score = 0
+                    if (n.prompt === query) score += 100
+                    if (n.prompt.includes(query)) score += 100
+                    if (n.name === query) score += 50
+                    if (n.name.includes(query)) score += 50
+                    if (n.modelName === query) score += 15
+                    if (n.modelName.includes(query)) score += 15
+                    if (n.modelHash === query) score += 20
+                    if (n.modelHash === query) score += 20
+                    if (n.description === query) score += 40
+                    if (n.description?.includes(query)) score += 25
+                    if (n.author === query) score += 40
+                    if (n.author?.includes(query)) score += 20
+                    return {...n, score}
                 })
                 .filter(n => n.score > 0)
                 .toArray()

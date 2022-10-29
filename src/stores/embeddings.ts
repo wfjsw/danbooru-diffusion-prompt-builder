@@ -1,7 +1,7 @@
-import {Set as ImmutableSet} from 'immutable';
+import {Set as ImmutableSet} from 'immutable'
 import {defineStore} from 'pinia'
-import type {EmbeddingCategories, Embeddings, Embedding} from "../datatypes";
-import {useSettingsStore} from "./settings";
+import type {EmbeddingCategories, Embeddings, Embedding} from '../datatypes'
+import {useSettingsStore} from './settings'
 
 interface EmbeddingFile {
     prompt: string,
@@ -24,13 +24,13 @@ export const useEmbeddingStore = defineStore('embeddings', {
     state: (): Embeddings => ({embeddings: {}}),
     getters: {
         loaded: (state) => {
-            return Object.keys(state.embeddings).length > 0;
+            return Object.keys(state.embeddings).length > 0
         },
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.embeddings)
                 .filter(([, v]) => settings.showRestricted || v.content.some((e) => !e.restricted))
-                .map(([k, _]) => k)
+                .map(([k]) => k)
             return filtered.sort()
         },
         categorySize: (state) => {
@@ -73,7 +73,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
             const embeddingData: Embeddings = {
                 embeddings: result.reduce((a: EmbeddingCategories, p: EmbeddingFile) => {
                     const categoryName = p.category
-                    if (!a.hasOwnProperty(categoryName)) {
+                    if (!(categoryName in a)) {
                         a[categoryName] = {content: []}
                     }
                     a[categoryName].content.push({
@@ -92,7 +92,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
                         suggestPositive: p.suggestPositive,
                         suggestNegative: p.suggestNegative,
                     })
-                    return a;
+                    return a
                 }, {}),
             }
 
@@ -113,14 +113,21 @@ export const useEmbeddingStore = defineStore('embeddings', {
             return this.embeddings[category].content
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map(n => {
-                    let score = 0;
-                    if (n.payloadHash === query) score += 1000;
-                    if (n.prompt.includes(query)) score += 100;
-                    if (n.name.includes(query)) score += 50;
-                    if (n.modelName.includes(query)) score += 15;
-                    if (n.modelHash === query) score += 20;
-                    if (n.description?.includes(query)) score += 25;
-                    return {...n, score};
+                    let score = 0
+                    if (n.payloadHash === query) score += 1000
+                    if (n.prompt === query) score += 100
+                    if (n.prompt.includes(query)) score += 100
+                    if (n.name === query) score += 50
+                    if (n.name.includes(query)) score += 50
+                    if (n.modelName === query) score += 15
+                    if (n.modelName.includes(query)) score += 15
+                    if (n.modelHash === query) score += 20
+                    if (n.modelHash === query) score += 20
+                    if (n.description === query) score += 40
+                    if (n.description?.includes(query)) score += 25
+                    if (n.author === query) score += 40
+                    if (n.author?.includes(query)) score += 20
+                    return {...n, score}
                 })
                 .filter(n => n.score > 0)
                 .sort(({score: a}, {score: b}) => b - a)
@@ -132,14 +139,16 @@ export const useEmbeddingStore = defineStore('embeddings', {
             return this.allEmbeddings
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map((n) => {
-                    let score = 0;
-                    if (n.payloadHash === query) score += 1000;
-                    if (n.prompt.includes(query)) score += 100;
-                    if (n.name.includes(query)) score += 50;
-                    if (n.modelName.includes(query)) score += 15;
-                    if (n.modelHash === query) score += 20;
-                    if (n.description?.includes(query)) score += 25;
-                    return {...n, score};
+                    let score = 0
+                    if (n.payloadHash === query) score += 1000
+                    if (n.prompt.includes(query)) score += 100
+                    if (n.name.includes(query)) score += 50
+                    if (n.modelName.includes(query)) score += 15
+                    if (n.modelHash === query) score += 20
+                    if (n.description?.includes(query)) score += 25
+                    if (n.author === query) score += 40
+                    if (n.author?.includes(query)) score += 20
+                    return {...n, score}
                 })
                 .filter(n => n.score > 0)
                 .toArray()

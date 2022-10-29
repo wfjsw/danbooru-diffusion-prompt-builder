@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import {computed, toRefs} from 'vue'
-import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
-import {useClipboard} from '@vueuse/core';
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faCloudArrowDown, faImageSlash} from "@fortawesome/pro-regular-svg-icons";
-import type {Hypernetwork} from "../datatypes";
-import ToggleableTag from "./ToggleableTag.vue";
+import {ElButton, ElCard, ElImage} from 'element-plus'
+import {useClipboard} from '@vueuse/core'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import {faCloudArrowDown, faImageSlash} from '@fortawesome/pro-regular-svg-icons'
+import type {Hypernetwork} from '../datatypes'
+import ToggleableTag from './ToggleableTag.vue'
 
 const props = withDefaults(defineProps<{
     data: Hypernetwork,
@@ -13,10 +13,6 @@ const props = withDefaults(defineProps<{
 }>(), {
     showCategory: false,
 })
-
-const refProps = toRefs(props)
-
-const {copy, copied} = useClipboard({source: refProps.data.value.prompt})
 
 const imageUrl = computed(() => {
     const hash = props.data.previewHash
@@ -38,7 +34,7 @@ const downloadUrl = computed(() => {
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">
-                        <FontAwesomeIcon :icon="faImageSlash" size="lg"/>
+                        <FontAwesomeIcon :icon="faImageSlash" size="lg" />
                     </div>
                 </template>
             </ElImage>
@@ -50,7 +46,7 @@ const downloadUrl = computed(() => {
                 <div class="big-download-button">
                     <a :href="downloadUrl" target="_blank" class="text-decoration-none">
                         <ElButton type="warning" color="#533F20" round class="download-btn">
-                            <FontAwesomeIcon :icon="faCloudArrowDown" class="icon"/>
+                            <FontAwesomeIcon :icon="faCloudArrowDown" class="icon" />
                             下载模型
                         </ElButton>
                     </a>
@@ -66,19 +62,17 @@ const downloadUrl = computed(() => {
             <div v-if="data.suggestPositive" class="tag-suggestion">
                 <div>推荐正向标签：</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestPositive" :tag="tag" size="default" direction="positive" />
+                    <ToggleableTag v-for="tag in data.suggestPositive" :key="tag" :tag="tag" size="default" direction="positive" />
                 </div>
             </div>
 
             <div v-if="data.suggestNegative" class="tag-suggestion">
                 <div>推荐反向标签</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestNegative" :tag="tag" size="default" direction="negative" />
+                    <ToggleableTag v-for="tag in data.suggestNegative" :key="tag" :tag="tag" size="default" direction="negative" />
                 </div>
             </div>
-
         </div>
-
     </ElCard>
 </template>
 

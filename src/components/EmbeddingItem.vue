@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import {computed, toRefs} from 'vue'
-import {ElButton, ElCard, ElTooltip, ElImage} from "element-plus";
-import {useClipboard} from '@vueuse/core';
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faClipboard, faThumbsDown, faThumbsUp} from "@fortawesome/pro-light-svg-icons";
-import {faCloudArrowDown, faImageSlash} from "@fortawesome/pro-regular-svg-icons";
-import type {Embedding} from "../datatypes";
-import {useCartStore} from "../stores/cart";
-import ToggleableTag from "./ToggleableTag.vue";
+import {ElButton, ElCard, ElTooltip, ElImage} from 'element-plus'
+import {useClipboard} from '@vueuse/core'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import {faClipboard, faThumbsDown, faThumbsUp} from '@fortawesome/pro-light-svg-icons'
+import {faCloudArrowDown, faImageSlash} from '@fortawesome/pro-regular-svg-icons'
+import type {Embedding} from '../datatypes'
+import {useCartStore} from '../stores/cart'
+import ToggleableTag from './ToggleableTag.vue'
 
 const props = withDefaults(defineProps<{
     data: Embedding,
@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<{
 const refProps = toRefs(props)
 
 const {copy, copied} = useClipboard({source: refProps.data.value.prompt})
-const cartStore = useCartStore();
+const cartStore = useCartStore()
 
 const imageUrl = computed(() => {
     const hash = props.data.payloadHash
@@ -64,7 +64,7 @@ function toggleNegative(tag: string = prompt.value) {
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">
-                        <FontAwesomeIcon :icon="faImageSlash" size="lg"/>
+                        <FontAwesomeIcon :icon="faImageSlash" size="lg" />
                     </div>
                 </template>
             </ElImage>
@@ -77,7 +77,7 @@ function toggleNegative(tag: string = prompt.value) {
                     <div class="big-download-button">
                         <a :href="downloadUrl" :download="fileName" target="_blank" class="text-decoration-none">
                             <ElButton type="warning" color="#533F20" round class="download-btn">
-                                <FontAwesomeIcon :icon="faCloudArrowDown" class="icon"/>
+                                <FontAwesomeIcon :icon="faCloudArrowDown" class="icon" />
                                 下载模型
                             </ElButton>
                         </a>
@@ -88,18 +88,18 @@ function toggleNegative(tag: string = prompt.value) {
                                 <span>已复制到剪贴板</span>
                             </template>
                             <ElButton circle type="primary" @click="copy()">
-                                <FontAwesomeIcon :icon="faClipboard"/>
+                                <FontAwesomeIcon :icon="faClipboard" />
                             </ElButton>
                         </ElTooltip>
 
                         <ElTooltip content="我想要" :show-after="750">
                             <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(prompt)">
-                                <FontAwesomeIcon :icon="faThumbsUp"/>
+                                <FontAwesomeIcon :icon="faThumbsUp" />
                             </ElButton>
                         </ElTooltip>
                         <ElTooltip content="我不想要" :show-after="750">
                             <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(prompt)">
-                                <FontAwesomeIcon :icon="faThumbsDown"/>
+                                <FontAwesomeIcon :icon="faThumbsDown" />
                             </ElButton>
                         </ElTooltip>
                     </div>
@@ -116,19 +116,17 @@ function toggleNegative(tag: string = prompt.value) {
             <div v-if="data.suggestPositive" class="tag-suggestion">
                 <div>推荐正向标签：</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestPositive" :tag="tag" size="default" direction="positive" />
+                    <ToggleableTag v-for="tag in data.suggestPositive" :key="tag" :tag="tag" size="default" direction="positive" />
                 </div>
             </div>
 
             <div v-if="data.suggestNegative" class="tag-suggestion">
                 <div>推荐反向标签</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestNegative" :tag="tag" size="default" direction="negative" />
+                    <ToggleableTag v-for="tag in data.suggestNegative" :key="tag" :tag="tag" size="default" direction="negative" />
                 </div>
             </div>
-
         </div>
-
     </ElCard>
 </template>
 

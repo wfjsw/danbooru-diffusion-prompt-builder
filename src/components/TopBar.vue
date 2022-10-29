@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {ref, computed} from 'vue'
-import {ElButton, ElInput, ElSwitch, ElTooltip} from 'element-plus';
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import {ElButton, ElInput} from 'element-plus'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faBars, faCartShopping, faMagnifyingGlass} from '@fortawesome/pro-regular-svg-icons'
-import {Search as IconSearch} from '@element-plus/icons-vue';
+import {Search as IconSearch} from '@element-plus/icons-vue'
 import ExtLinks from './ExtLinks.vue'
 import FeatureSwitches from './FeatureSwitches.vue'
 
@@ -28,7 +28,7 @@ const searchTerms = computed({
     <div :class="['topbar', {'is-search-expanded': mobileExpandSearch}]">
         <div class="left">
             <ElButton size="large" text class="category-cascader" @click="emit('expandCategory')">
-                <FontAwesomeIcon :icon="faBars"/>
+                <FontAwesomeIcon :icon="faBars" />
             </ElButton>
             <span class="app-title text-large font-600 mr-3">
                 Danbooru 标签超市
@@ -36,22 +36,20 @@ const searchTerms = computed({
         </div>
         <div class="right split">
             <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
-                     placeholder="搜索"/>
+                     placeholder="搜索" />
             <div class="mobile-topbar-orig-el">
-                <FeatureSwitches class="switches"/>
-                <ExtLinks class="extlinks"/>
+                <FeatureSwitches class="switches" />
+                <ExtLinks class="extlinks" />
             </div>
             <ElButton size="large" text class="search-cascader"
                       @click="mobileExpandSearch = !mobileExpandSearch">
-                <FontAwesomeIcon :icon="faMagnifyingGlass"/>
+                <FontAwesomeIcon :icon="faMagnifyingGlass" />
             </ElButton>
             <ElButton size="large" text class="cart-cascader" @click="emit('expandCart')">
-                <FontAwesomeIcon :icon="faCartShopping"/>
+                <FontAwesomeIcon :icon="faCartShopping" />
             </ElButton>
         </div>
-
     </div>
-
 </template>
 
 <style lang="scss" scoped>

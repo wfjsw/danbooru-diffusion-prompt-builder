@@ -1,20 +1,20 @@
 <script lang="ts" setup>
 import {ElButton, ElDialog, ElTooltip, ElInput} from 'element-plus'
-import {useCartStore} from "../stores/cart";
-import {computed} from "vue";
-import {useClipboard} from "@vueuse/core";
+import {useCartStore} from '../stores/cart'
+import {computed} from 'vue'
+import {useClipboard} from '@vueuse/core'
 
-const cartStore = useCartStore();
+const cartStore = useCartStore()
 const props = defineProps<{
     modelValue: boolean
-}>();
+}>()
 
 const {copy: copyPositive, copied: positiveCopied} =
     useClipboard({source: computed(() => cartStore.positiveToString)})
 const {copy: copyNegative, copied: negativeCopied} =
     useClipboard({source: computed(() => cartStore.negativeToString)})
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue'])
 const mv = computed({
     get: () => props.modelValue,
     set: (v) => emit('update:modelValue', v)
@@ -33,8 +33,8 @@ const mv = computed({
                 <template #content>
                     <span>已复制到剪贴板</span>
                 </template>
-                <ElInput type="textarea" :rows="5" class="tag-pre" @dblclick="copyPositive()"
-                         readonly v-model="cartStore.positiveToString"/>
+                <ElInput v-model="cartStore.positiveToString" type="textarea" :rows="5" class="tag-pre"
+                         readonly @dblclick="copyPositive()" />
             </ElTooltip>
         </div>
         <div class="tag-negative">
@@ -43,8 +43,8 @@ const mv = computed({
                 <template #content>
                     <span>已复制到剪贴板</span>
                 </template>
-                <ElInput type="textarea" :rows="5" class="tag-pre" @dblclick="copyNegative()"
-                         readonly v-model="cartStore.negativeToString"/>
+                <ElInput v-model="cartStore.negativeToString" type="textarea" :rows="5" class="tag-pre"
+                         readonly @dblclick="copyNegative()" />
             </ElTooltip>
         </div>
         <template #footer>

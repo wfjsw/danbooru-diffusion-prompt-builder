@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import {type Component, ref} from 'vue'
+import {type Component, provide, ref} from 'vue'
 import {ElAside, ElContainer, ElHeader, ElMain, ElScrollbar} from 'element-plus'
 import Sidebar from './components/Sidebar.vue'
 import TopBar from './components/TopBar.vue'
-import TagShow from './components/TagShow.vue'
-import PresetShow from './components/PresetShow.vue'
-import EmbeddingShow from './components/EmbeddingShow.vue'
-import AboutMe from './components/AboutMe.vue'
-import Cart from './components/Cart.vue'
-import BadMobileDialog from './components/BadMobileDialog.vue'
-import TagSearchShow from './components/TagSearchShow.vue'
-import HypernetworkShow from './components/HypernetworkShow.vue'
+import TagShow from './views/TagShow.vue'
+import PresetShow from './views/PresetShow.vue'
+import EmbeddingShow from './views/EmbeddingShow.vue'
+import AboutMe from './views/AboutMe.vue'
+import Cart from './views/Cart.vue'
+import TagSearchShow from './views/TagSearchShow.vue'
+import HypernetworkShow from './views/HypernetworkShow.vue'
+import {setSearch} from './injections/setSearch'
 
 const activeSelection = ref<string[]>(['aboutme'])
 
@@ -42,36 +42,43 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
         asideExpanded.value = item
     }
 }
+
+function setSearchImpl(criteria: string) {
+    searchTerms.value = criteria
+}
+
+provide(setSearch, setSearchImpl)
 </script>
 
 <template>
-    <ElContainer>
+    <ElContainer class="container-full-height">
         <ElHeader class="bottom-bordered flex mobile-thin-padding">
             <TopBar v-model:search="searchTerms"
                     @expand-category="switchAsideExpanded('category')"
                     @expand-cart="switchAsideExpanded('cart')"
             />
         </ElHeader>
-        <ElContainer class="p-relative-sm">
-            <ElAside :class="['right-bordered', 'category-aside', {'expanded': asideExpanded === 'category'}]"
-                     width="256px"
-            >
+        <ElContainer class="p-relative-sm body-inner-full-height">
+            <ElAside :class="['container-full-height', 'right-bordered', 'category-aside',
+                {'expanded': asideExpanded === 'category'}]"
+                     width="284px">
                 <ElScrollbar class="body-full-height">
-                    <Sidebar @select="changeSelection"/>
+                    <Sidebar @select="changeSelection" />
                 </ElScrollbar>
             </ElAside>
             <ElMain :class="['main', 'body-full-height',
                 {'left-expanded': asideExpanded === 'category', 'right-expanded': asideExpanded === 'cart'}]"
                 @click="switchAsideExpanded('reset')"
-            >
+>
                 <KeepAlive v-if="searchTerms === null || searchTerms === ''">
-                    <component :is="mainComponent[activeSelection[0]]" :category="activeSelection[1]"/>
+                    <component :is="mainComponent[activeSelection[0]]" :category="activeSelection[1]" />
                 </KeepAlive>
-                <TagSearchShow v-else :search="searchTerms"/>
+                <TagSearchShow v-else :search="searchTerms" />
             </ElMain>
-            <ElAside :class="['left-bordered', 'cart-aside', {'expanded': asideExpanded === 'cart'}]"
-                     width="380px">
-                <Cart/>
+            <ElAside :class="['container-full-height', 'left-bordered', 'cart-aside', {'expanded': asideExpanded === 'cart'}]"
+                     width="375px"
+>
+                <Cart />
             </ElAside>
         </ElContainer>
     </ElContainer>
@@ -91,8 +98,22 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
 }
 
 .body-full-height {
-    height: calc(100vh - 64px);
+    //height: calc(100vh - 64px);
+    height: 100%;
     overflow-y: hidden
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+}
+
+.body-inner-full-height {
+    height: calc(100% - 64px);
+}
+
+.container-full-height {
+    height: 100%;
 }
 
 .flex {
@@ -102,7 +123,7 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
 .cart-aside {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 64px);
+    //height: calc(100vh - 64px);
 }
 
 @media screen and (max-width: 768px) {
@@ -119,7 +140,7 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateX(-256px);
+        transform: translateX(-284px);
         transition: transform .3s ease-in-out,margin .3s ease-in-out;
         &.expanded {
             transform: translateX(0);
@@ -128,21 +149,21 @@ function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
     .cart-aside {
         position: absolute;
         top: 0;
-        right: -380px;
+        right: -375px;
         transform: translateX(0px);
         transition: transform .3s ease-in-out,margin .3s ease-in-out;
         &.expanded {
-            transform: translateX(-380px);
+            transform: translateX(-375px);
         }
     }
     .body-full-height {
         transition: transform .3s ease-in-out,margin .3s ease-in-out;
     }
     .left-expanded {
-        transform: translateX(256px);
+        transform: translateX(284px);
     }
     .right-expanded {
-        transform: translateX(-380px);
+        transform: translateX(-375px);
     }
 }
 </style>

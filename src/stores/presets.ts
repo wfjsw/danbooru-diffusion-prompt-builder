@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia'
-import type {PresetCategoryInfo, Presets, Preset} from '../datatypes'
-import {useSettingsStore} from "./settings";
+import type {Presets, Preset} from '../datatypes'
+import {useSettingsStore} from './settings'
 
 interface PresetFile {
     name: string,
@@ -23,7 +23,7 @@ export const usePresetStore = defineStore('presets', {
     state: (): Presets => ({presets: []}),
     getters: {
         loaded: (state) => {
-            return state.presets.length > 0;
+            return state.presets.length > 0
         },
         categories: (state) => {
             const settings = useSettingsStore()
@@ -53,12 +53,15 @@ export const usePresetStore = defineStore('presets', {
                         name: v.name,
                         description: v.description,
                         restricted: v.restricted ?? false,
-                        content: Object.entries(v.content).map(([k, v]): Preset =>
+                        content: Object.entries(v.content).map(([k, vs]): Preset =>
                             ({
                                 name: k,
-                                description: v.description,
-                                content: v.content,
-                                preview: v.preview,
+                                description: vs.description,
+                                content: vs.content.map(vt => {
+                                    const [tag, weight] = vt.split('|')
+                                    return {tag, weight: weight ? parseFloat(weight) : 1}
+                                }),
+                                preview: vs.preview,
                             })
                         )
                     }
@@ -70,18 +73,18 @@ export const usePresetStore = defineStore('presets', {
             const settings = useSettingsStore()
             const presetCategory = this.presets.find(n => n.name === presetName)
             if (!presetCategory) {
-                return [];
+                return []
             }
             if (!settings.showRestricted && presetCategory.restricted) {
-                return [];
+                return []
             }
 
             return presetCategory.content
                 .filter((meta) => {
-                    if (meta.name.includes(query)) return true;
-                    if (meta.description?.includes(query)) return true;
-                    if (meta.content?.some(a => a.includes(query))) return true;
-                    return false;
+                    if (meta.name.includes(query)) return true
+                    if (meta.description?.includes(query)) return true
+                    if (meta.content?.some(a => a.tag.includes(query))) return true
+                    return false
                 })
         }
     }

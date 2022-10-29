@@ -1,7 +1,7 @@
-import {Map as ImmutableMap} from 'immutable';
+import {Map as ImmutableMap} from 'immutable'
 import {defineStore} from 'pinia'
-import type {TagCategories, TagMeta, Tags} from "../datatypes";
-import {useSettingsStore} from "./settings";
+import type {TagCategories, TagMeta, Tags} from '../datatypes'
+import {useSettingsStore} from './settings'
 
 interface TagFile {
     name: string,
@@ -22,13 +22,13 @@ export const useTagStore = defineStore('tags', {
     state: (): Tags => ({tags: {}, tagsPostCount: {}}),
     getters: {
         loaded: (state) => {
-            return Object.keys(state.tags).length > 0;
+            return Object.keys(state.tags).length > 0
         },
         categories: (state) => {
             const settings = useSettingsStore()
             const filtered = Object.entries(state.tags)
                 .filter(([, v]) => settings.showRestricted || !v._restricted)
-                .map(([k, _]) => k)
+                .map(([k]) => k)
             return filtered.sort()
         },
         categorySize: (state) => {
@@ -41,7 +41,7 @@ export const useTagStore = defineStore('tags', {
                 Object.entries(state.tags)
                     .reduce((a: {[key: string]: TagMeta & {category: string}}, [k, b]) => {
                         if (!settings.showRestricted && b._restricted) {
-                            return a;
+                            return a
                         }
                         for (const [tag, meta] of Object.entries(b)) {
                             if (!settings.showRestricted && meta.restricted) {
@@ -49,7 +49,7 @@ export const useTagStore = defineStore('tags', {
                             }
                             a[tag] = {...meta, category: k}
                         }
-                        return a;
+                        return a
                     }, {}
                 )
             )
@@ -61,7 +61,7 @@ export const useTagStore = defineStore('tags', {
                 Object.entries(state.tags)
                     .reduce((a: {[key: string]: TagMeta & {category: string, originalName: string}}, [k, b]) => {
                         if (!settings.showRestricted && b._restricted) {
-                            return a;
+                            return a
                         }
 
                         for (const [tag, meta] of Object.entries(b)) {
@@ -76,7 +76,7 @@ export const useTagStore = defineStore('tags', {
                                 }
                             }
                         }
-                        return a;
+                        return a
                 }, {})
             )
         },
@@ -84,13 +84,13 @@ export const useTagStore = defineStore('tags', {
             const settings = useSettingsStore()
             return Object.values(state.tags)
                 .filter(a => settings.showRestricted || !a._restricted)
-                .reduce((a, b) => a + Object.values(b).filter(v => settings.showRestricted || !v.restricted).length, 0);
+                .reduce((a, b) => a + Object.values(b).filter(v => settings.showRestricted || !v.restricted).length, 0)
         },
         tagWithPhotosCount: (state) => {
             const settings = useSettingsStore()
             return Object.values(state.tags)
                 .filter(a => settings.showRestricted || !a._restricted)
-                .reduce((a, b) => a + Object.values(b).filter((v) => v.image && (settings.showRestricted || !v.restricted)).length, 0);
+                .reduce((a, b) => a + Object.values(b).filter((v) => v.image && (settings.showRestricted || !v.restricted)).length, 0)
         },
     },
     actions: {
@@ -110,7 +110,7 @@ export const useTagStore = defineStore('tags', {
                             writable: false
                         })
                     }
-                    return a;
+                    return a
                 }, {}),
                 tagsPostCount,
             }
@@ -119,7 +119,7 @@ export const useTagStore = defineStore('tags', {
         },
         resolve(name: string) {
             name = name.replaceAll('_', ' ').toLowerCase()
-            const meta = this.allTagsWithAlias.get(name);
+            const meta = this.allTagsWithAlias.get(name)
             if (meta) {
                 return {name: meta.originalName, meta}
             }
@@ -127,7 +127,7 @@ export const useTagStore = defineStore('tags', {
         },
         searchCategory(category: string, query: string) {
             const settings = useSettingsStore()
-            if (!settings.showRestricted && this.tags[category]._restricted) return {};
+            if (!settings.showRestricted && this.tags[category]._restricted) return {}
 
             if (query === '') return this.tags[category]
 
@@ -136,17 +136,20 @@ export const useTagStore = defineStore('tags', {
                     .entries(this.tags[category])
                     .filter(([, v]) => settings.showRestricted || !v.restricted)
                     .map(([key, meta]): [string, TagMeta & {score: number}] => {
-                        let score = 0;
-                        if (key === query) score += 300;
-                        if (key.includes(query)) score += 100;
-                        if (meta.name.includes(query)) score += 50;
-                        if (meta.alias?.some(a => a.includes(query))) score += 70;
-                        if (meta.description?.includes(query)) score += 25;
+                        let score = 0
+                        if (key === query) score += 300
+                        if (key.includes(query)) score += 100
+                        if (meta.name === query) score += 50
+                        if (meta.name.includes(query)) score += 50
+                        if (meta.alias?.some(a => a === query)) score += 90
+                        if (meta.alias?.some(a => a.includes(query))) score += 70
+                        if (meta.description === query) score += 40
+                        if (meta.description?.includes(query)) score += 25
                         return [key, {...meta, score}]
                     })
                     .filter(([, v]) => v.score > 0)
                     .sort(([, va], [, vb]) => vb.score - va.score)
-            );
+            )
         },
         searchAll(query: string) {
             if (query === '') return {}
@@ -154,17 +157,20 @@ export const useTagStore = defineStore('tags', {
             return Object.fromEntries(
                 this.allTags
                     .map((meta, key) => {
-                        let score = 0;
-                        if (key === query) score += 300;
-                        if (key.includes(query)) score += 100;
-                        if (meta.name.includes(query)) score += 50;
-                        if (meta.alias?.some(a => a.includes(query))) score += 70;
-                        if (meta.description?.includes(query)) score += 25;
+                        let score = 0
+                        if (key === query) score += 300
+                        if (key.includes(query)) score += 100
+                        if (meta.name === query) score += 50
+                        if (meta.name.includes(query)) score += 50
+                        if (meta.alias?.some(a => a === query)) score += 90
+                        if (meta.alias?.some(a => a.includes(query))) score += 70
+                        if (meta.description === query) score += 40
+                        if (meta.description?.includes(query)) score += 25
                         return {...meta, score}
                     })
                     .filter(a => a.score > 0)
                     .sort(({score: a}, {score: b}) => b - a)
-            );
+            )
         }
     }
 })

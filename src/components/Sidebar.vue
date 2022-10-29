@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from "element-plus";
-import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture, Box as IconBox} from '@element-plus/icons-vue';
-import {useTagStore} from "../stores/tags";
-import {usePresetStore} from "../stores/presets";
-import {useEmbeddingStore} from "../stores/embeddings";
+import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from 'element-plus'
+import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture, Box as IconBox} from '@element-plus/icons-vue'
+import {useTagStore} from '../stores/tags'
+import {usePresetStore} from '../stores/presets'
+import {useEmbeddingStore} from '../stores/embeddings'
 import {useHypernetworkStore} from '../stores/hypernetworks'
 import ExtLinks from './ExtLinks.vue'
 
 const emit = defineEmits(['select'])
 
-const tagStore = useTagStore();
-const presetStore = usePresetStore();
-const embeddingStore = useEmbeddingStore();
-const hypernetworkStore = useHypernetworkStore();
+const tagStore = useTagStore()
+const presetStore = usePresetStore()
+const embeddingStore = useEmbeddingStore()
+const hypernetworkStore = useHypernetworkStore()
 
 function select(index: string, indexPath: string[]) {
     emit('select', indexPath)
@@ -21,26 +21,27 @@ function select(index: string, indexPath: string[]) {
 
 <template>
     <div class="mobile-topbar-el">
-        <ExtLinks/>
+        <ExtLinks />
     </div>
     <ElMenu :default-openeds="['tags']" class="borderless pb-2 fw"
             default-active="aboutme" @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
-                <IconGuide/>
+                <IconGuide />
             </ElIcon>
             关于
         </ElMenuItem>
 
-        <ElSubMenu index="tags" v-loading="!tagStore.loaded">
+        <ElSubMenu v-loading="!tagStore.loaded" index="tags">
             <template #title>
                 <ElIcon>
-                    <IconDocument/>
+                    <IconDocument />
                 </ElIcon>
                 标签
             </template>
             <ElMenuItem
                 v-for="category in tagStore.categories"
+                :key="category"
                 :index="category">
                 <div class="flex">
                     <div class="tag-category-name">{{ category }}</div>
@@ -49,15 +50,16 @@ function select(index: string, indexPath: string[]) {
             </ElMenuItem>
         </ElSubMenu>
 
-        <ElSubMenu index="presets" v-loading="!presetStore.loaded">
+        <ElSubMenu v-loading="!presetStore.loaded" index="presets">
             <template #title>
                 <ElIcon>
-                    <IconFolder/>
+                    <IconFolder />
                 </ElIcon>
                 预设
             </template>
             <ElMenuItem
                 v-for="category in presetStore.categories"
+                :key="category"
                 :index="category">
                 <div class="flex">
                     <div class="preset-category-name">{{ category }}</div>
@@ -66,15 +68,16 @@ function select(index: string, indexPath: string[]) {
             </ElMenuItem>
         </ElSubMenu>
 
-        <ElSubMenu index="embeddings" v-loading="!embeddingStore.loaded">
+        <ElSubMenu v-loading="!embeddingStore.loaded" index="embeddings">
             <template #title>
                 <ElIcon>
-                    <IconPicture/>
+                    <IconPicture />
                 </ElIcon>
                 嵌入模型
             </template>
             <ElMenuItem
                 v-for="category in embeddingStore.categories"
+                :key="category"
                 :index="category">
                 <div class="flex">
                     <div class="embedding-category-name">{{ category }}</div>
@@ -83,15 +86,16 @@ function select(index: string, indexPath: string[]) {
             </ElMenuItem>
         </ElSubMenu>
 
-        <ElSubMenu index="hypernetworks" v-loading="!hypernetworkStore.loaded">
+        <ElSubMenu v-loading="!hypernetworkStore.loaded" index="hypernetworks">
             <template #title>
                 <ElIcon>
-                    <IconBox/>
+                    <IconBox />
                 </ElIcon>
                 超网络模型
             </template>
             <ElMenuItem
                 v-for="category in hypernetworkStore.categories"
+                :key="category"
                 :index="category">
                 <div class="flex">
                     <div class="embedding-category-name">{{ category }}</div>

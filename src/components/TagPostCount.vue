@@ -9,27 +9,27 @@ const props = defineProps<{
     tag: string
 }>()
 
-const rawCount = computed(() => tagStore.tagsPostCount[props.tag.replaceAll(' ', '_')] ?? 0);
+const rawCount = computed(() => tagStore.tagsPostCount[props.tag.replaceAll(' ', '_')] ?? 0)
 const humanizedCount = computed(() => {
     if (rawCount.value === 0) {
         return 'N/A'
-    } else if (rawCount.value < 1000) {
-        return rawCount.value;
-    } else if (rawCount.value < 1000000) {
-        return Math.floor(rawCount.value / 1000) + 'k';
-    } else if (rawCount.value < 1000000000) {
-        return Math.floor(rawCount.value / 1000000) + 'm';
+    } else if (rawCount.value < 10000) {
+        return rawCount.value
+    } else if (rawCount.value < 10000000) {
+        return Math.floor(rawCount.value / 1000) + 'k'
+    } else if (rawCount.value < 10000000000) {
+        return Math.floor(rawCount.value / 1000000) + 'm'
     } else {
-        return Math.floor(rawCount.value / 1000000000) + 'b';
+        return Math.floor(rawCount.value / 1000000000) + 'b'
     }
-});
+})
 
 const className = computed(() => {
-    if (rawCount.value < 1000) {
+    if (rawCount.value < 100) {
         return [$style.tag_post_count]
-    } else if (rawCount.value < 1000000) {
+    } else if (rawCount.value < 10000) {
         return [$style.tag_post_count, $style.kilo]
-    } else if (rawCount.value < 1000000000) {
+    } else if (rawCount.value < 1000000) {
         return [$style.tag_post_count, $style.mil]
     } else {
         return [$style.tag_post_count, $style.bil]

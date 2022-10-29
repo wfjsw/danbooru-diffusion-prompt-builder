@@ -20,10 +20,15 @@ export interface Tags {
     tagsPostCount: Record<string, number>,
 }
 
+export interface PresetTag {
+    tag: string,
+    weight: number,
+}
+
 export interface Preset {
     name: string,
     description: string | null,
-    content: string[],
+    content: PresetTag[],
     preview: string[] | null,
 }
 

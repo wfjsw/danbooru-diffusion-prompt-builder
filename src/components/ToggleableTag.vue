@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {computed} from "vue";
-import {ElTag} from "element-plus";
-import {useTagStore} from "../stores/tags";
-import {useCartStore} from "../stores/cart";
+import {computed} from 'vue'
+import {ElTag} from 'element-plus'
+import {useTagStore} from '../stores/tags'
+import {useCartStore} from '../stores/cart'
 
-const tagStore = useTagStore();
-const cartStore = useCartStore();
+const tagStore = useTagStore()
+const cartStore = useCartStore()
 
 const props = withDefaults(defineProps<{
     tag: string,
@@ -61,12 +61,12 @@ function toggle() {
 </script>
 
 <template>
-    <ElTag :class="[$style.color_fix, $style.size_fix, {[$style.pointer]: direction !== null}]" @click="toggle()"
-           :type="theme">
+    <ElTag :class="[$style.color_fix, $style.size_fix, {[$style.pointer]: direction !== null}]" :type="theme"
+           @click="toggle()">
         <template v-if="tagItem">
             <span>{{ tag }}</span>
             <span :class="$style.usn"> | </span>
-            <span>{{tagItem.meta.name}}</span>
+            <span>{{ tagItem.meta.name }}</span>
         </template>
         <template v-else>
             <span>{{ tag }}</span>

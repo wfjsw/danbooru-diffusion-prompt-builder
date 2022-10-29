@@ -70,6 +70,6 @@ if (!import.meta.env.SSR) {
 
 <style scoped>
 .masonry:deep(> *) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 </style>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import {h} from 'vue'
 import {isDark} from '../composables/dark'
-import {ElSwitch, ElTooltip} from "element-plus";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from "@fortawesome/pro-light-svg-icons";
-import {useSettingsStore} from "../stores/settings";
+import {ElSwitch, ElTooltip} from 'element-plus'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from '@fortawesome/pro-light-svg-icons'
+import {useSettingsStore} from '../stores/settings'
 
-const settingsStore = useSettingsStore();
+const settingsStore = useSettingsStore()
 const activeIcon = h(FontAwesomeIcon, {icon: faEye})
 const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
 
@@ -15,6 +15,9 @@ const unsafeIcon = h(FontAwesomeIcon, {icon: faShieldExclamation})
 
 const lightIcon = h(FontAwesomeIcon, {icon: faLightbulbOn})
 const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
+
+const ax = h('span', {class: 'switch-text-icon math-style'}, ['a', h('sup', {}, 'x')])
+const plus = h('span', {class: 'switch-text-icon'}, ['+'])
 </script>
 
 <template>
@@ -33,6 +36,15 @@ const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
                 v-model="settingsStore.showImage"
                 :active-icon="activeIcon"
                 :inactive-icon="inactiveIcon"
+                inline-prompt
+                size="large"
+            />
+        </ElTooltip>
+        <ElTooltip content="步进速率" :show-after="750">
+            <ElSwitch
+                v-model="settingsStore.useFixedMultiplier"
+                :active-icon="plus"
+                :inactive-icon="ax"
                 inline-prompt
                 size="large"
             />
