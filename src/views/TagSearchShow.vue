@@ -45,7 +45,7 @@ const embeddingStore = useEmbeddingStore()
 const hypernetworkStore = useHypernetworkStore()
 
 const scrollRef: Ref<typeof ElScrollbar|null> = ref(null)
-const paginationSize = ref(20)
+const paginationSize = ref(12)
 const filteredTags = computed(() => tagStore.searchAll(props.search))
 const filteredEmbeddings = computed(() => embeddingStore.searchAll(props.search))
 const filteredHypernetworks = computed(() => hypernetworkStore.searchAll(props.search))
@@ -68,7 +68,7 @@ function loadMore() {
     }
 }
 watch(toRef(props, 'search'), () => {
-    paginationSize.value = 20
+    paginationSize.value = 12
     scrollRef.value?.scrollTo({top: 0})
 })
 </script>
