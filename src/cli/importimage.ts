@@ -2,7 +2,7 @@ import path from 'path'
 import sharp from 'sharp'
 import fs from 'fs'
 import {createHash} from 'crypto'
-import {fileURLToPath} from "url";
+import {fileURLToPath} from 'url'
 
 const importImagePath = process.argv[2]
 

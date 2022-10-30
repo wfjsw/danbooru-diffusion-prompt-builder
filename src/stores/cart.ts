@@ -432,9 +432,10 @@ export const useCartStore = defineStore('cart', {
         },
         import(positive: string, negative: string) {
             const tagStore = useTagStore()
-            this.clear()
+            // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
+            // this.clear() 
             const run = (text: string, appendFn: (tagName: string, weight: Decimal) => void) => {
-                let weight = new Decimal(0)
+                let weight = new Decimal(1)
                 let guessNew = true
                 const trimmedText = text.trim()
                 if (trimmedText === '') return

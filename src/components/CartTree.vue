@@ -11,7 +11,6 @@ const props = defineProps<{
 }>()
 
 const cartStore = useCartStore()
-const dataSource = cartStore[props.direction]
 
 function allowDrag() {
     return true
@@ -149,7 +148,7 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
     <ElTree
         :allow-drag="allowDrag"
         :allow-drop="allowDrop"
-        :data="dataSource"
+        :data="cartStore[props.direction]"
         class="cart-tree"
         draggable
         @node-drop="dropPostProcess"
