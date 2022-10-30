@@ -2,7 +2,7 @@
 import {ElButton, ElSwitch, ElScrollbar} from 'element-plus'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faEye, faEyeSlash, faClipboard, faThumbsDown, faThumbsUp, faLightbulbOn, faLightbulbSlash} from '@fortawesome/pro-light-svg-icons'
-import {faCircleMinus, faCirclePlus, faTrash, faThumbsDown as faThumbsDownRegular, faThumbsUp as faThumbsUpRegular} from '@fortawesome/pro-regular-svg-icons'
+import {faCircleMinus, faCirclePlus, faTrash, faThumbsDown as faThumbsDownRegular, faThumbsUp as faThumbsUpRegular, faBlender as faBlenderRegular} from '@fortawesome/pro-regular-svg-icons'
 import {useSettingsStore} from '../stores/settings'
 import {useTagStore} from '../stores/tags'
 import {usePresetStore} from '../stores/presets'
@@ -40,7 +40,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
 </p>
         <p>
 本站的源码与所有原始数据均可在
-            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
+            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
             查看。如果您觉得本站对您有帮助，请在 GitHub 上点一个 Star。
             同时，也欢迎您通过 Pull Request 向本站添加更多内容。
         </p>
@@ -150,6 +150,37 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                         </ElButton>
                     </span>
                     可将标签从购物车中删除。
+                </p>
+            </li>
+            <li>
+                <p>
+                    通过点击购物车中 
+                    <span class="inline-control">
+                        <ElButton link type="primary">
+                            <FontAwesomeIcon :icon="faBlenderRegular" />
+                        </ElButton>
+                    </span>
+                    按键，或将其他标签拖动到某一标签之上，可创建混合组。当前应用支持三种混合组：
+                    <ul>
+                        <li>
+                            <p>
+                                <b>标签替换 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing" target="_blank">Prompt Editing</a>，又名分步渲染): </b>
+                                该混合组接受一至两个标签和一个百分数。在百分数所代表的生成步数前，生成引擎将采用组内第一个标签。到达该步数后，生成引擎将自动改为采用组内第二个标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>标签轮转 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words" target="_blank">Alternating Words</a>): </b>
+                                该混合组接受两个或更多标签。在生成过程中，生成引擎将在生成的每一步中依次轮换采用组内的标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>标签混合 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/#:~:text=Composable%2DDiffusion%2C%20a,a%20penguin%20%3A2.2" target="_blank">Composable-Diffusion</a>): </b>
+                                该混合组接受两个或更多标签与其对应权重。在生成过程中，生成引擎将按权重值试图混合组内标签的元素。该标签在 Stable-Diffusion-WebUI 格式与 NovelAI 格式中均可用。
+                            </p>
+                        </li>
+                    </ul>
                 </p>
             </li>
             <li>
