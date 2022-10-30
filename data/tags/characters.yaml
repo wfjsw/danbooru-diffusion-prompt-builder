@@ -1,0 +1,142 @@
+name: 作品角色
+content:
+  2k-tan:
+    name: 2K碳(OS碳)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/2k-tan.html
+  abe nana:
+    name: 安部菜菜(偶像大师)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/abe_nana.html
+  admiral graf spee (azur lane):
+    name: 斯佩伯爵海军上将(碧蓝航线)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/admiral_graf_spee_(azur_lane).html
+  aegis (persona):
+    name: 艾吉斯(女神异闻录)
+    alias:
+      - aigis (persona)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aegis_(persona).html
+  aerith gainsborough:
+    name: 艾丽丝·盖恩斯巴勒(最终幻想VII)
+    alias:
+      - aeris gainsborough
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aerith_gainsborough.html
+  afuro terumi:
+    name: 亚风炉照美(闪电十一人)
+    alias:
+      - aphrodite (inazuma eleven)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/afuro_terumi.html
+  agrias oaks:
+    name: 阿格莉亚丝(最终幻想)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/agrias_oaks.html
+  ahri:
+    name: 阿狸(英雄联盟)
+  aida mana:
+    name: 相田爱(心跳！光之美少女)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aida_mana.html
+  aino megumi:
+    name: 爱乃惠(光之美少女happiness charge)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aino_megumi.html
+  aino minako:
+    name: 爱野美奈子(美少女战士)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aino_minako.html
+  aircraft carrier oni:
+    name: 空母栖鬼(舰Colle)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aircraft_carrier_oni.html
+  aisaka taiga:
+    name: 逢坂大河(龙与虎)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aisaka_taiga.html
+  aisha landar:
+    name: 爱莎·兰德尔(艾尔之光)
+    alias:
+      - aisha (elsword)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aisha_landar.html
+  akagi (azur lane):
+    name: 赤城(碧蓝航线)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akagi_(azur_lane).html
+  akagi miria:
+    name: 赤城米莉亚(偶像大师)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akagi_miria.html
+  akali:
+    name: 阿卡丽(英雄联盟)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akali.html
+  akashi (azur lane):
+    name: 明石(碧蓝航线)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akashi_(azur_lane).html
+  akatsuki kirika:
+    name: 晓切歌(战姬绝唱SYMPHOGEAR)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akatsuki_kirika.html
+  akaza akari:
+    name: 赤座灯里(摇曳百合)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akaza_akari.html
+  akemi homura:
+    name: 晓美焰(魔法少女小圆)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akemi_homura.html
+  aki (girls und panzer):
+    name: 小秋(少女与战车)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aki_(girls_und_panzer).html
+  aki minoriko:
+    name: 秋穰子(东方)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aki_minoriko.html
+  aki shizuha:
+    name: 秋静叶(东方)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aki_shizuha.html
+  akita neru:
+    name: 亚北音留(Vocaloid)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akita_neru.html
+  akiyama mio:
+    name: 秋山澪(K-ON!轻音少女)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akiyama_mio.html
+  akiyama yukari:
+    name: 秋山优花里(少女与战车)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akiyama_yukari.html
+  akizuki ritsuko:
+    name: 秋月律子(偶像大师)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akizuki_ritsuko.html
+  akizuki ryo:
+    name: 秋月凉(偶像大师)
+    alias:
+      - akizuki ryou
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akizuki_ryo.html
+  akuma homura:
+    name: 恶魔焰(魔法少女小圆)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akuma_homura.html
+  alastor (shakugan no shana):
+    name: 天壤劫火·亚拉斯特尔(灼眼的夏娜)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alastor_(shakugan_no_shana).html
+  alena (dq4):
+    name: 安莉娜公主(勇者斗恶龙4)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alena_(dq4).html
+  alice cartelet:
+    name: 爱丽丝·卡塔雷特(黄金拼图)
+    alias:
+      - alice carteret
+      - alice cartalet
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alice_cartelet.html
+  alice margatroid:
+    name: 爱丽丝·玛格特罗依德(东方)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alice_margatroid.html
+  alice margatroid (pc-98):
+    name: 爱丽丝·玛格特罗依德(东方 PC-98)
+    alias:
+      - alice margatroid (young)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alice_margatroid_(pc-98).html
+  alisa (girls und panzer):
+    name: 亚理纱(少女与战车)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alisa_(girls_und_panzer).html
+  alisa ilinichina amiella:
+    name: 亚莉莎·伊莉妮提娜·阿米耶拉(噬神者系列)
+    alias:
+      - arisa iriinchina amieera
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alisa_ilinichina_amiella.html
+  alpaca suri (kemono friends):
+    name: 苏利羊驼(动物朋友)
+    alias:
+      - alpaca suri
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alpaca_suri_(kemono_friends).html
+  alphonse elric:
+    name: 阿尔冯斯·艾尔利克(钢之炼金术师)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alphonse_elric.html
+  altera (fate):
+    name: 阿提拉(Fate)
+    alias:
+      - attila (fate/grand order)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/altera_(fate).html

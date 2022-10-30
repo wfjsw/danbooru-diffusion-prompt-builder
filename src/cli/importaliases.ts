@@ -14,9 +14,11 @@ const tagLoc = new Map<string, string>()
 
 for (const file of tagFiles) {
     const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')) as TagCategories
-    for (const [tag] of Object.entries(tagData.content)) {
-        tagSet.add(tag)
-        tagLoc.set(tag, file)
+    for (const [tag, meta] of Object.entries(tagData.content)) {
+        if (!meta.alias) {
+            tagSet.add(tag)
+            tagLoc.set(tag, file)
+        }
     }
 }
 const tagArr = Array.from(tagSet)

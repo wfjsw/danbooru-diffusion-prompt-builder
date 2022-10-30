@@ -76,3 +76,37 @@ content:
     name: 广角镜头
     image: 58f6a76356725fd8528c851315c270ddf3b7da4063849cb9405483d862932864
     wikiURL: https://danbooru.donmai.us/wiki_pages/wide_shot.html
+  from above:
+    name: 俯视镜头
+    image: 6fd4775a5c01b2ce88383b48f759b9fe025f965eff659a418b546eb4e2731fac
+    wikiURL: https://danbooru.donmai.us/wiki_pages/from_above.html
+    alias:
+      - view from above
+      - viewed from above
+      - aerial view
+  from behind:
+    name: 背影
+    image: 92a63633102700973e97e872f986bc7bc6b77f391554c163a05db46542f6eede
+    wikiURL: https://danbooru.donmai.us/wiki_pages/from_behind.html
+    alias:
+      - viewed from behind
+  from below:
+    name: 仰视镜头
+    image: 31b3742a7350125602abea322819fb3d33adef8a71caadf3b8a4db201032119a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/from_below.html
+    alias:
+      - low angle
+      - view from below
+      - viewed from below
+  from outside:
+    name: 室外看向室内(的镜头)
+    image: 1c6f2b75277200a841b3466a28fa2bb208e561d09eca0a684f54f71009df229c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/from_outside.html
+  from side:
+    name: 角色的侧面
+    image: ab0247ce9a1529abd16da55697110562478c0442cbbdd67c5e7a5db62ed7c97c
+    wikiURL: https://danbooru.donmai.us/wiki_pages/from_side.html
+    alias:
+      - side view
+      - side
+      - viewed from side

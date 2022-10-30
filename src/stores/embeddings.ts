@@ -1,7 +1,8 @@
 import {Set as ImmutableSet} from 'immutable'
 import {defineStore} from 'pinia'
 import type {EmbeddingCategories, Embeddings, Embedding} from '../datatypes'
-import {useSettingsStore} from './settings'
+import { useSettingsStore } from './settings'
+import LRU from 'lru-cache'
 
 interface EmbeddingFile {
     prompt: string,
@@ -19,6 +20,12 @@ interface EmbeddingFile {
     suggestPositive: string[]|null,
     suggestNegative: string[]|null,
 }
+
+const searchCache = new LRU < string, (Embedding & { score: number })[]>({
+    max: 30,
+    allowStale: true,
+    updateAgeOnGet: true
+})
 
 export const useEmbeddingStore = defineStore('embeddings', {
     state: (): Embeddings => ({embeddings: {}}),
@@ -110,7 +117,11 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 return this.embeddings[category].content
                     .filter(n => settings.showRestricted || !n.restricted)
 
-            return this.embeddings[category].content
+            const cacheKey = JSON.stringify(['ByCategory', category, query])
+            const cached = searchCache.get(cacheKey)
+            if (cached) return cached
+
+            const result = this.embeddings[category].content
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map(n => {
                     let score = 0
@@ -130,13 +141,20 @@ export const useEmbeddingStore = defineStore('embeddings', {
                     return {...n, score}
                 })
                 .filter(n => n.score > 0)
-                .sort(({score: a}, {score: b}) => b - a)
+                .sort(({ score: a }, { score: b }) => b - a)
+
+            searchCache.set(cacheKey, result)
+            return result
         },
         searchAll(query: string): (Embedding & {score: number})[] {
             const settings = useSettingsStore()
             if (query === '') return []
 
-            return this.allEmbeddings
+            const cacheKey = JSON.stringify(['Global', query])
+            const cached = searchCache.get(cacheKey)
+            if (cached) return cached
+
+            const result = this.allEmbeddings
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map((n) => {
                     let score = 0
@@ -152,6 +170,10 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 })
                 .filter(n => n.score > 0)
                 .toArray()
+                .sort(({ score: a }, { score: b }) => b - a)
+                
+            searchCache.set(cacheKey, result)
+            return result
         }
     }
 })

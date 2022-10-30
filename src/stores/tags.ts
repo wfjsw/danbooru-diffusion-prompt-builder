@@ -1,7 +1,8 @@
 import {Map as ImmutableMap} from 'immutable'
 import {defineStore} from 'pinia'
 import type {TagCategories, TagMeta, Tags} from '../datatypes'
-import {useSettingsStore} from './settings'
+import { useSettingsStore } from './settings'
+import LRU from 'lru-cache'
 
 interface TagFile {
     name: string,
@@ -17,6 +18,12 @@ interface TagFileItem {
     alias: string[] | null,
     restricted: boolean|null,
 }
+
+const searchCache = new LRU < string, Record<string, TagMeta & { score: number }>>({
+    max: 30,
+    allowStale: true,
+    updateAgeOnGet: true
+})
 
 export const useTagStore = defineStore('tags', {
     state: (): Tags => ({tags: {}, tagsPostCount: {}}),
@@ -131,7 +138,10 @@ export const useTagStore = defineStore('tags', {
 
             if (query === '') return this.tags[category]
 
-            return Object.fromEntries(
+            const cacheKey = JSON.stringify(['ByCategory', category, query])
+            const cached = searchCache.get(cacheKey)
+            if (cached) return cached
+            const result = Object.fromEntries(
                 Object
                     .entries(this.tags[category])
                     .filter(([, v]) => settings.showRestricted || !v.restricted)
@@ -150,11 +160,16 @@ export const useTagStore = defineStore('tags', {
                     .filter(([, v]) => v.score > 0)
                     .sort(([, va], [, vb]) => vb.score - va.score)
             )
+            searchCache.set(cacheKey, result)
+            return result
         },
         searchAll(query: string) {
             if (query === '') return {}
 
-            return Object.fromEntries(
+            const cacheKey = JSON.stringify(['Global', query])
+            const cached = searchCache.get(cacheKey)
+            if (cached) return cached
+            const result = Object.fromEntries(
                 this.allTags
                     .map((meta, key) => {
                         let score = 0
@@ -171,6 +186,8 @@ export const useTagStore = defineStore('tags', {
                     .filter(a => a.score > 0)
                     .sort(({score: a}, {score: b}) => b - a)
             )
+            searchCache.set(cacheKey, result)
+            return result
         }
     }
 })
