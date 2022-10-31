@@ -5,8 +5,10 @@ import {computed, ref} from 'vue'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faImageSlash} from '@fortawesome/pro-regular-svg-icons'
 import {faClipboard, faThumbsDown, faThumbsUp} from '@fortawesome/pro-light-svg-icons'
-import {useCartStore} from '../stores/cart'
+import {useCartStore, wrapParenByWeight} from '../stores/cart'
 import ToggleableTag from './ToggleableTag.vue'
+import {useSettingsStore} from '../stores/settings'
+import Decimal from 'decimal.js-light'
 
 const props = defineProps<{
     category: string,
@@ -14,14 +16,17 @@ const props = defineProps<{
     // blurImage: boolean,
 }>()
 const cartStore = useCartStore()
+const settingsStore = useSettingsStore()
 
 const copyHintVisible = ref(false)
 
 const inPositive = computed(() => cartStore.existsPositive('preset', props.meta.name, props.category))
 const inNegative = computed(() => cartStore.existsNegative('preset', props.meta.name, props.category))
 
-async function copyToClipboard() {
-    await window.navigator.clipboard.writeText(props.meta.content.join(', '))
+async function copyToClipboard(full: boolean = false) {
+    await window.navigator.clipboard.writeText(props.meta.content
+        .map(n => full ? wrapParenByWeight(n.tag, new Decimal(n.weight), settingsStore.newEmphasis) : n.tag)
+        .join(', '))
     copyHintVisible.value = true
     setTimeout(() => copyHintVisible.value = false, 1000)
 }
@@ -53,7 +58,8 @@ function toggleNegative() {
                         <template #content>
                             <span>已复制到剪贴板</span>
                         </template>
-                        <ElButton circle type="primary" @click.stop="copyToClipboard">
+                        <ElButton circle type="primary" @click.stop="copyToClipboard(false)"
+                                  @dblclick.stop="copyToClipboard(true)">
                             <FontAwesomeIcon :icon="faClipboard" />
                         </ElButton>
                     </ElTooltip>

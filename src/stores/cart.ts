@@ -130,7 +130,7 @@ function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
     return content
 }
 
-function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
+export function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
     if (newEmphasis) {
         content = content
             .replaceAll('(', '\\(').replaceAll(')', '\\)')
@@ -433,7 +433,7 @@ export const useCartStore = defineStore('cart', {
         import(positive: string, negative: string) {
             const tagStore = useTagStore()
             // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
-            // this.clear() 
+            // this.clear()
             const run = (text: string, appendFn: (tagName: string, weight: Decimal) => void) => {
                 let weight = new Decimal(1)
                 let guessNew = true
