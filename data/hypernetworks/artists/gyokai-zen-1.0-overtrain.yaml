@@ -1,0 +1,44 @@
+# 模型内置英文名
+prompt: gyokai
+# 模型名称
+name: おののいもこ
+# 模型作者
+author: 4chan
+# 模型分类
+category: 画师
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: '925997e9'
+# 模型内记录的训练步数
+steps: 22000
+# 模型预览图的 SHA256 Hash
+previewHash: 0862ce6b61de51daeed20abef2c9012c3842d8b5fe2b9cebc0caad1a39cf8ceb
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/gyokai-zen-1.0-overtrain.pt
+restricted: true
+description: 作者建议 0.8 强度。
+suggestPositive:
+  - multicolored hair
+  - color halftone
+  - colorful
+  - 1girl
+  - solo
+  - twintails
+  - open mouth
+  - night
+  - looking at viewer
+  - long hair
+  - twintails
+  - polka dot
+  - smile
+  - plaid
+  - night sky
+  - bangs
+  - d
+  - blush
+  - moonlight
+  - art by gyokai
+suggestNegative:
+  - grainy
+  - noisy

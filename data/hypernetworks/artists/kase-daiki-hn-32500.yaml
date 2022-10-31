@@ -1,0 +1,19 @@
+# 模型内置英文名
+prompt: kase-daiki-3
+# 模型名称
+name: 加瀬大輝
+# 模型作者
+author: H34V3N1YCH02U5 @ t.me/StableDiffusion_CN
+# 模型分类
+category: 画师
+# 该模型对应的主模型名称
+modelName: 未知
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 'unknown'
+# 模型内记录的训练步数
+steps: 32500
+# 模型预览图的 SHA256 Hash
+previewHash: 28bf6c1994bde360d4e9fa80cc26990bec11137806aa0e6a185c9734956dae49
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/kase-daiki-hn-32500.pt
+restricted: true
