@@ -138,27 +138,30 @@ export const useTagStore = defineStore('tags', {
 
             if (query === '') return this.tags[category]
 
-            const cacheKey = JSON.stringify(['ByCategory', category, query])
+            const lcQuery = query.toLowerCase()
+            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
             const result = Object.fromEntries(
-                Object
-                    .entries(this.tags[category])
+                normalizedLcQuery.reduce<[string, TagMeta & {score: number}][]>((a, q) =>
+                    a
                     .filter(([, v]) => settings.showRestricted || !v.restricted)
                     .map(([key, meta]): [string, TagMeta & {score: number}] => {
-                        let score = 0
-                        if (key === query) score += 300
-                        if (key.includes(query)) score += 100
-                        if (meta.name === query) score += 50
-                        if (meta.name.includes(query)) score += 50
-                        if (meta.alias?.some(a => a === query)) score += 90
-                        if (meta.alias?.some(a => a.includes(query))) score += 70
-                        if (meta.description === query) score += 40
-                        if (meta.description?.includes(query)) score += 25
+                        let score = meta.score
+                        if (key.toLowerCase() === lcQuery) score += 300
+                        if (key.toLowerCase().includes(q)) score += 100
+                        if (meta.name.toLowerCase() === lcQuery) score += 50
+                        if (meta.name.toLowerCase().includes(q)) score += 50
+                        if (meta.alias?.some(a => a.toLowerCase() === lcQuery)) score += 90
+                        if (meta.alias?.some(a => a.toLowerCase().includes(q))) score += 70
+                        if (meta.description?.toLowerCase() === q) score += 40
+                        if (meta.description?.toLowerCase().includes(q)) score += 25
                         return [key, {...meta, score}]
                     })
                     .filter(([, v]) => v.score > 0)
                     .sort(([, va], [, vb]) => vb.score - va.score)
+                , Object.entries(this.tags[category]).map(([k, v]) => [k, {...v, score: 0}]))
             )
             searchCache.set(cacheKey, result)
             return result
@@ -166,25 +169,31 @@ export const useTagStore = defineStore('tags', {
         searchAll(query: string) {
             if (query === '') return {}
 
-            const cacheKey = JSON.stringify(['Global', query])
+            const lcQuery = query.toLowerCase()
+            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
             const result = Object.fromEntries(
-                this.allTags
-                    .map((meta, key) => {
-                        let score = 0
-                        if (key === query) score += 300
-                        if (key.includes(query)) score += 100
-                        if (meta.name === query) score += 50
-                        if (meta.name.includes(query)) score += 50
-                        if (meta.alias?.some(a => a === query)) score += 90
-                        if (meta.alias?.some(a => a.includes(query))) score += 70
-                        if (meta.description === query) score += 40
-                        if (meta.description?.includes(query)) score += 25
-                        return {...meta, score}
+                normalizedLcQuery.reduce<[string, TagMeta & {category: string, score: number}][]>((a, q) =>
+                    a
+                    .map(([key, meta]): [string, TagMeta & {category: string, score: number}] => {
+                        let score = meta.score
+                        if (key.toLowerCase() === lcQuery) score += 300
+                        if (key.toLowerCase().includes(q)) score += 100
+                        if (meta.name.toLowerCase() === lcQuery) score += 50
+                        if (meta.name.toLowerCase().includes(q)) score += 50
+                        if (meta.alias?.some(a => a.toLowerCase() === lcQuery)) score += 90
+                        if (meta.alias?.some(a => a.toLowerCase().includes(q))) score += 70
+                        if (meta.description?.toLowerCase() === q) score += 40
+                        if (meta.description?.toLowerCase().includes(q)) score += 25
+                        if (meta.category?.toLowerCase() === q) score += 15
+                        if (meta.category?.toLowerCase().includes(q)) score += 7
+                        return [key, {...meta, score}]
                     })
-                    .filter(a => a.score > 0)
-                    .sort(({score: a}, {score: b}) => b - a)
+                    .filter(([, {score}]) => score > 0)
+                    .sort(([, { score: a }], [, { score: b }]) => b - a)
+                , this.allTags.toArray().map(([k, v]) => [k, {...v, score: 0}]))
             )
             searchCache.set(cacheKey, result)
             return result

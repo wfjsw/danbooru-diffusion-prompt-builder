@@ -365,9 +365,9 @@ export const useCartStore = defineStore('cart', {
         positiveTags: (state) => ImmutableSet.of<string>(...state.positive.flatMap(tagNameMapper)),
         negativeTags: (state) => ImmutableSet.of<string>(...state.negative.flatMap(tagNameMapper)),
         positivePresets: (state) => ImmutableSet.of<string>(...state.positive
-            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => `${category}//${name}`)),
+            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => JSON.stringify([category, name]))),
         negativePresets: (state) => ImmutableSet.of<string>(...state.negative
-            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => `${category}//${name}`)),
+            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => JSON.stringify([category, name]))),
 
     },
     actions: {
@@ -375,7 +375,7 @@ export const useCartStore = defineStore('cart', {
             if (type === 'tag' || type === 'embedding') {
                 return this.positiveTags.includes(name)
             } else if (type === 'preset') {
-                return this.positivePresets.includes(`${category}//${name}`)
+                return this.positivePresets.includes(JSON.stringify([category, name]))
             }
             return false
         },
@@ -383,7 +383,7 @@ export const useCartStore = defineStore('cart', {
             if (type === 'tag' || type === 'embedding') {
                 return this.negativeTags.includes(name)
             } else if (type === 'preset') {
-                return this.negativePresets.includes(`${category}//${name}`)
+                return this.negativePresets.includes(JSON.stringify([category, name]))
             }
             return false
         },

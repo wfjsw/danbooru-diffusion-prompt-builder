@@ -79,13 +79,15 @@ export const usePresetStore = defineStore('presets', {
                 return []
             }
 
-            return presetCategory.content
+            const normalizedLcQuery = query.toLowerCase().split(' ').sort((a, b) => b.length - a.length)
+
+            return normalizedLcQuery.reduce((a, q) => a
                 .filter((meta) => {
-                    if (meta.name.includes(query)) return true
-                    if (meta.description?.includes(query)) return true
-                    if (meta.content?.some(a => a.tag.includes(query))) return true
+                    if (meta.name.toLowerCase().includes(q)) return true
+                    if (meta.description?.toLowerCase().includes(q)) return true
+                    if (meta.content?.some(a => a.tag.toLowerCase().includes(q))) return true
                     return false
-                })
+                }), presetCategory.content)
         }
     }
 })

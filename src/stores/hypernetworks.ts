@@ -112,29 +112,34 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             if (query === '')
                 return this.hypernetworks[category].content.filter(n => settings.showRestricted || !n.restricted)
 
-            const cacheKey = JSON.stringify(['ByCategory', category, query])
+            const lcQuery = query.toLowerCase()
+            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = this.hypernetworks[category].content
+
+            const result = normalizedLcQuery.reduce<(Hypernetwork & {score: number})[]>((a, q) =>
+                a
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map(n => {
-                    let score = 0
-                    if (n.prompt === query) score += 100
-                    if (n.prompt.includes(query)) score += 100
-                    if (n.name === query) score += 50
-                    if (n.name.includes(query)) score += 50
-                    if (n.modelName === query) score += 15
-                    if (n.modelName.includes(query)) score += 15
-                    if (n.modelHash === query) score += 20
-                    if (n.modelHash === query) score += 20
-                    if (n.description === query) score += 40
-                    if (n.description?.includes(query)) score += 25
-                    if (n.author === query) score += 40
-                    if (n.author?.includes(query)) score += 20
+                    let score = n.score
+                    if (n.prompt.toLowerCase() === lcQuery) score += 100
+                    if (n.prompt.toLowerCase().includes(q)) score += 100
+                    if (n.name.toLowerCase() === lcQuery) score += 50
+                    if (n.name.toLowerCase().includes(q)) score += 50
+                    if (n.modelName.toLowerCase() === q) score += 15
+                    if (n.modelName.toLowerCase().includes(q)) score += 15
+                    if (n.modelHash.toLowerCase() === q) score += 20
+                    if (n.modelHash.toLowerCase() === q) score += 20
+                    if (n.description?.toLowerCase() === q) score += 40
+                    if (n.description?.toLowerCase().includes(q)) score += 25
+                    if (n.author?.toLowerCase() === q) score += 40
+                    if (n.author?.toLowerCase().includes(q)) score += 20
                     return {...n, score}
                 })
                 .filter(n => n.score > 0)
                 .sort(({ score: a }, { score: b }) => b - a)
+            , this.hypernetworks[category].content.map(n => ({...n, score: 0})))
             searchCache.set(cacheKey, result)
             return result
         },
@@ -142,31 +147,37 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             const settings = useSettingsStore()
             if (query === '') return []
 
-            const cacheKey = JSON.stringify(['Global', query])
+            const lcQuery = query.toLowerCase()
+            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = this.allHypernetworks
+
+            const result = normalizedLcQuery.reduce<(Hypernetwork & {score: number})[]>((a, q) =>
+                a
                 .filter(n => settings.showRestricted || !n.restricted)
                 .map((n) => {
                     let score = 0
-                    if (n.prompt === query) score += 100
-                    if (n.prompt.includes(query)) score += 100
-                    if (n.name === query) score += 50
-                    if (n.name.includes(query)) score += 50
-                    if (n.modelName === query) score += 15
-                    if (n.modelName.includes(query)) score += 15
-                    if (n.modelHash === query) score += 20
-                    if (n.modelHash === query) score += 20
-                    if (n.description === query) score += 40
-                    if (n.description?.includes(query)) score += 25
-                    if (n.author === query) score += 40
-                    if (n.author?.includes(query)) score += 20
+                    if (n.prompt.toLowerCase() === lcQuery) score += 100
+                    if (n.prompt.toLowerCase().includes(q)) score += 100
+                    if (n.name.toLowerCase() === lcQuery) score += 50
+                    if (n.name.toLowerCase().includes(q)) score += 50
+                    if (n.modelName.toLowerCase() === q) score += 15
+                    if (n.modelName.toLowerCase().includes(q)) score += 15
+                    if (n.modelHash.toLowerCase() === q) score += 20
+                    if (n.modelHash.toLowerCase() === q) score += 20
+                    if (n.description?.toLowerCase() === q) score += 40
+                    if (n.description?.toLowerCase().includes(q)) score += 25
+                    if (n.author?.toLowerCase() === q) score += 40
+                    if (n.author?.toLowerCase().includes(q)) score += 20
+                    if (n.category?.toLowerCase() === q) score += 12
+                    if (n.category?.toLowerCase().includes(q)) score += 5
+
                     return {...n, score}
                 })
                 .filter(n => n.score > 0)
-                .toArray()
                 .sort(({ score: a }, { score: b }) => b - a)
-
+            , this.allHypernetworks.toArray().map(n => ({...n, score: 0})))
             searchCache.set(cacheKey, result)
             return result
         }
