@@ -469,9 +469,6 @@ content:
     name: 赛用泳衣
     image: c8a896b0d44c2731ca279a643e4ca0f46d027b39bb848e70fc9f05f0d446a45d
     wikiURL: https://danbooru.donmai.us/wiki_pages/competition_swimsuit.html
-  enmaided:
-    name: 女仆装
-    wikiURL: https://danbooru.donmai.us/wiki_pages/enmaided.html
   evening gown:
     name: 晚会礼服
     image: e244fb65ded25cbacc58f7c690fdaa1e87209c30fbda4cc2d502242966c1d079
@@ -604,4 +601,8 @@ content:
     name: 排球服
     image: beea1850b1300103c80283334cd3415ee06d39c9ce67b860eb2e068fe187825f
     wikiURL: https://danbooru.donmai.us/wiki_pages/volleyball_uniform.html
+  cute & girly (idolmaster):
+    image: 1e605fa74bd902a2665be5640da2049129a5629d37ddfec9704e1b4a4495b227
+    name: Cute & Girly (偶像大师)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cute_&_girly_(idolmaster).html
 name: 人物全身服饰

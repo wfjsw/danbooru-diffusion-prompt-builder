@@ -1,0 +1,110 @@
+name: 构图方式
+content:
+  afterimage:
+    name: 残像
+  border:
+    name: 边框
+  framed:
+    name: 画框
+  outside border:
+    name: 一部分画到了背景框外面
+  fading border:
+    name: 褪色边框
+  rounded corners:
+    name: 背景或画框是圆角
+  viewfinder:
+    name: 相机取景框
+    wikiURL: https://danbooru.donmai.us/wiki_pages/viewfinder.html
+    alias:
+      - camera frame
+  chart:
+    name: 图表
+  bust chart:
+    name: 胸围图
+  character chart:
+    name: 人设图
+  reference sheet:
+    name: 设定图
+  diagram:
+    name: 图表
+  move chart:
+    name: 动作演示图
+  relationship graph:
+    name: 关系表
+  seating chart:
+    name: 座次表
+  stats:
+    name: 属性栏/状态表
+  collage:
+    name: 拼贴画
+  column lineup:
+    name: 小图拼接
+    wikiURL: https://danbooru.donmai.us/wiki_pages/column_lineup.html
+  cropped:
+    name: 遭到裁剪
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cropped.html
+  fake scrollbar:
+    name: 假的滚动条
+  head out of frame:
+    name: 头部脱框
+    image: d5f8634fce1e2d9ed8d5275196e9a1a6c273e8bc15bce52e31711ebf526443d0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/head_out_of_frame.html
+    alias:
+      - eyes out of frame
+  out of frame:
+    name: 脱框
+    image: a3708031c5668ece1c717680c052cdd28be8d90af65a8c7997ce87b346496b80
+    wikiURL: https://danbooru.donmai.us/wiki_pages/out_of_frame.html
+  feet out of frame:
+    name: 脚部脱框
+    image: b6ecb81b32519e3295e94366b80987bdb9cbc9b603911deb497ddaa4fd87169f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/feet_out_of_frame.html
+  out-of-frame censoring:
+    name: 关键部位在画面外
+  glitch:
+    name: 画面噪点
+  isometric:
+    name: 等轴图
+  letterboxed:
+    name: 宽银幕格式
+    wikiURL: https://danbooru.donmai.us/wiki_pages/letterboxed.html
+    alias:
+      - letterbox
+      - letter boxed
+  pillarboxed:
+    name: 柱状画布背景
+  lineup:
+    name: 一排人
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lineup.html
+    alias:
+      - line-up
+      - line up
+  mosaic art:
+    name: 马赛克艺术
+  photomosaic:
+    name: 马赛克拼图
+  negative space:
+    name: 大量留白
+  omake:
+    name: 附图
+  partially underwater shot:
+    name: 部分水下拍摄
+  social media composition:
+    name: 社交媒体整合
+  symmetry:
+    name: 左右对称
+  polar opposites:
+    name: 两极对称
+  rotational symmetry:
+    name: 对称旋转/《少女革命》女同转圈圈
+  tachi-e:
+    description: 简单背景的立绘图片。
+    image: fcf0027ab454ea6ef07bdefa62db7c880a4a8a118e89412ec21933faf4fb6166
+    name: 立绘样式
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tachi-e.html
+  trim marks:
+    name: 裁剪标记
+  zoom layer:
+    name: 人物立绘缩放(剪影)图层
+  projected inset:
+    name: 类似海报或杂志的插图效果

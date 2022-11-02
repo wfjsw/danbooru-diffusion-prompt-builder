@@ -132,12 +132,6 @@ content:
     alias:
       - ass-up head-down
       - face down ass up
-  upside-down:
-    name: 颠倒的
-    image: 262fd2f130ac21ab66c693687922a74a456c7fa23887fbef70edff526e897c19
-    wikiURL: https://danbooru.donmai.us/wiki_pages/upside-down.html
-    alias:
-      - upsidedown
   wariza:
     alias:
       - w sitting

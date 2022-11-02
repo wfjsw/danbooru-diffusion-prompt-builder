@@ -508,12 +508,6 @@ content:
     restricted: true
     name: 异种奸/异种爱
     wikiURL: https://danbooru.donmai.us/wiki_pages/interspecies.html
-  lineup:
-    name: 一排人
-    wikiURL: https://danbooru.donmai.us/wiki_pages/lineup.html
-    alias:
-      - line-up
-      - line up
   mmf threesome:
     restricted: true
     name: 二男加一女

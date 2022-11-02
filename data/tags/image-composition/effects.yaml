@@ -1,7 +1,8 @@
+name: 制图技术
 content:
   chromatic aberration:
     image: ed9212bfc31f8e84315260751b5ffebde059d0748e3c9305d7597752a187fcdf
-    name: 色彩混合
+    name: 色差
     wikiURL: https://danbooru.donmai.us/wiki_pages/chromatic_aberration.html
   lens flare:
     alias:
@@ -53,4 +54,57 @@ content:
     name: 过曝
     image: 7294f5926ad976a4c7f65ee5b6554ba59a33661dd45408287cca7a49715965fe
     wikiURL: https://danbooru.donmai.us/wiki_pages/overexposure.html
-name: 镜头特效
+  backlighting:
+    name: 逆光
+  blending:
+    name: 混合
+  bloom:
+    name: 盛开
+  bokeh:
+    name: 焦外成像
+  caustics:
+    name: 焦散
+  chiaroscuro:
+    name: 明暗对比
+  chromatic aberration abuse:
+    name: 色差滥用
+  diffraction spikes:
+    name: 衍射十字星
+  depth of field:
+    name: 景深(画法)
+  dithering:
+    name: 抖动
+  drop shadow:
+    name: 立绘阴影
+  emphasis lines:
+    name: 集中线
+  film grain:
+    name: 胶片颗粒感/老电影滤镜
+  foreshortening:
+    name: 正前缩距透视法
+  gradient:
+    name: (身体或肢体)倾斜
+  halftone:
+    name: 一种漫画中常见的网点状的组色组图画法
+  image fill:
+    name: 图像填充
+  lens flare abuse:
+    name: 镜头光晕滥用
+  motion lines:
+    name: 体现运动的线
+  multiple monochrome:
+    name: 多个单色结构拼接成的
+  optical illusion:
+    name: 视错觉
+  anaglyph:
+    name: 互补色
+  stereogram:
+    name: 立体画
+  scanlines:
+    name: 扫描线
+  silhouette:
+    name: 轮廓
+  speed lines:
+    name: 速度线
+  vignetting:
+    name: 晕影

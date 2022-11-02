@@ -126,10 +126,6 @@ content:
   drunk:
     name: 喝醉的
     wikiURL: https://danbooru.donmai.us/wiki_pages/drunk.html
-  dark persona:
-    name: 黑化的
-    image: ae16214e48dff2e5dc20f3699cc9bc7dd1397d22b29afa5ac155be1b8b31c5c1
-    wikiURL: https://danbooru.donmai.us/wiki_pages/dark_persona.html
   frown:
     name: 皱眉/蹙额
     image: fc3d2002ffd5ed419066506cf80f87fdca728750bb6eec048a48f0590607d007
