@@ -144,9 +144,6 @@ content:
     name: 毫厘笔
   minimalism:
     name: 极简主义
-  motion lines:
-    name: 体现运动的线
-    wikiURL: https://danbooru.donmai.us/wiki_pages/motion_lines.html
   mousepad (medium):
     name: 手绘板
   nib pen (medium):
@@ -190,10 +187,6 @@ content:
     image: 16650bb494fa45887e9945309ef8944aed624174e280c7cea6b9fcc58e54132d
     name: 赛璐璐/复古艺术
     wikiURL: https://danbooru.donmai.us/wiki_pages/retro_artstyle.html
-  silhouette:
-    image: a0f1f26d90b3d6009e8343d8d087b1598e1421614d88b9b9584c03fa2d3e9886
-    name: 剪影
-    wikiURL: https://danbooru.donmai.us/wiki_pages/silhouette.html
   sketch:
     alias:
       - rough sketch

@@ -37,12 +37,6 @@ content:
     name: 对胸部在意
     image: aaee885f8c879e87ed063bbeea21b0f883d4598842ceea80d9f09394c7c235fd
     wikiURL: https://danbooru.donmai.us/wiki_pages/breast_conscious.html
-  backlighting:
-    name: 逆光
-    image: 840f02ef30da0f1d4a32980e9f6205974ede74b1a05d45fec4265ee6a1c67a7d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/backlighting.html
-    alias:
-      - backlit
   close-up:
     name: 特写镜头
     image: 387630ada23031c407cce5bc44c077c96eac13dac096fa251013dd240a89d621
@@ -61,9 +55,6 @@ content:
     name: 鱼眼镜头
     image: 338ed2f476590ab6f51f210ad7ac7dacdd1e2da0d2067cdc8870bae8be908737
     wikiURL: https://danbooru.donmai.us/wiki_pages/fisheye.html
-  foreshortening:
-    name: 正前缩距透视法
-    wikiURL: https://danbooru.donmai.us/wiki_pages/foreshortening.html
   hatching (texture):
     name: 线影法(纹理)
     image: ff9fba971e553f578e0b2df1382ad4db98b5a3ebfa746da5383852c606cc33a1
