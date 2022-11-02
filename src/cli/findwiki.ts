@@ -27,7 +27,7 @@ for (const tag of tagSet) {
     const qs = new URLSearchParams({limit: '50', only: 'title', 'search[title_normalize]': tag.replaceAll(' ', '_')})
     const res = await axios.get(`https://danbooru.donmai.us/wiki_pages.json?${qs.toString()}`, {
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
             'Cookie': 'cf_clearance=',
         }
     })

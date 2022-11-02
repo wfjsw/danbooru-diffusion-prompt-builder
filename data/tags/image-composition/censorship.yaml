@@ -13,6 +13,9 @@ content:
       - uncensoring
   bar censor:
     name: 黑条打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bar_censor.html
+    alias:
+      - censor bars
   convenient censoring:
     name: 简单巧妙的打码
     wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_censoring.html
@@ -20,6 +23,7 @@ content:
       - convenient censorship
   bubble filter:
     name: 泡泡打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bubble_filter.html
   hair censor:
     name: 头发遮住了乳头(三点)
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_censor.html
@@ -31,8 +35,10 @@ content:
       - hair on breasts
   hair over crotch:
     name: 头发盖在胯下
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_crotch.html
   hair over one breast:
     name: 头发盖在一边胸上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_one_breast.html
   steam censor:
     name: 蒸汽/雾气打码
     wikiURL: https://danbooru.donmai.us/wiki_pages/steam_censor.html
@@ -40,40 +46,65 @@ content:
       - convenient bath steam
   tail censor:
     name: 尾巴遮住三点/用尾巴打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tail_censor.html
+    alias:
+      - convenient tail
   wing censor:
     name: 用翅膀打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wing_censor.html
+    alias:
+      - censor wings
   intimate covering:
     name: 自然的打码
   nude cover:
     name: 裸体封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nude_cover.html
   clothes in front:
     name: 衣服在前面挡着
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clothes_in_front.html
   mosaic censoring:
     name: 马赛克
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mosaic_censoring.html
+    alias:
+      - mosaic censor
+      - rough censoring
+      - pixel censor
   non-intimate covering:
     name: 不自然的打码
   novelty censor:
     name: 恶搞的马赛克
+    wikiURL: https://danbooru.donmai.us/wiki_pages/novelty_censor.html
   can't show this:
     name: 不能显示这个
+    wikiURL: https://danbooru.donmai.us/wiki_pages/can't_show_this.html
   character censor:
     name: 用人脸打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/character_censor.html
   heart censor:
     name: 心形马赛克
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_censor.html
   outside of play area:
     name: 离开了可游玩区域
+    wikiURL: https://danbooru.donmai.us/wiki_pages/outside_of_play_area.html
   treasure mark censor:
     name: 宝藏标记打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/treasure_mark_censor.html
   out-of-frame censoring:
     name: 关键部位在画面外
+    wikiURL: https://danbooru.donmai.us/wiki_pages/out-of-frame_censoring.html
   one finger selfie challenge:
     name: 单指自拍挑战
   fake censor:
     name: 假打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fake_censor.html
+    alias:
+      - unnecessary censorship
   censored food:
     name: 打码食品
+    wikiURL: https://danbooru.donmai.us/wiki_pages/censored_food.html
   censored violence:
     name: 打码暴力行为
+    wikiURL: https://danbooru.donmai.us/wiki_pages/censored_violence.html
   identity censor:
     name: 眼部打码
     wikiURL: https://danbooru.donmai.us/wiki_pages/identity_censor.html
@@ -81,3 +112,6 @@ content:
       - eye censor
   pointless censoring:
     name: 敷衍的打码
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointless_censoring.html
+    alias:
+      - pointless censorship

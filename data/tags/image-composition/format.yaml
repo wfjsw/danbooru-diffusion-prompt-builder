@@ -85,30 +85,56 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/nsfw.html
   3d:
     name: 3D
+    wikiURL: https://danbooru.donmai.us/wiki_pages/3d.html
+    alias:
+      - polygon
+      - 3dcg
   animated:
     name: 动图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/animated.html
+    alias:
+      - animation
   animated png:
     name: PNG 动图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/animated_png.html
   flash:
     name: Flash
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flash.html
   video:
     name: 视频
+    wikiURL: https://danbooru.donmai.us/wiki_pages/video.html
+    alias:
+      - webm
+      - mp4
+      - videos
   music video:
     name: 音乐视频
+    wikiURL: https://danbooru.donmai.us/wiki_pages/music_video.html
   animated gif:
     name: GIF 动图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/animated_gif.html
+    alias:
+      - gif
   easytoon:
     name: EasyToon
+    wikiURL: https://danbooru.donmai.us/wiki_pages/easytoon.html
   non-repeating animation:
     name: 非循环动画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/non-repeating_animation.html
+    alias:
+      - non-repeating gif
   looping animation:
     name: 循环播放动画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/looping_animation.html
   roulette animation:
     name: 轮转动画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/roulette_animation.html
   live2d:
     name: Live2D
+    wikiURL: https://danbooru.donmai.us/wiki_pages/live2d.html
   archived file:
     name: 压缩包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/archived_file.html
   artbook:
     description: 从画本上扫描下来的画作。
     image: a19b8b78f19af68c3cab69f843e0f444fa5a58d6c3fc7eac653114b5278de5e7
@@ -116,8 +142,10 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/artbook.html
   calendar (medium):
     name: 日历(介质)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/calendar_(medium).html
   card (medium):
     name: 卡片(介质)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/card_(medium).html
   comic:
     name: 漫画
     image: 64a58c3daf119526909ffd13f8ed56b921ab203fa54b2ac3152769367ba2e918
@@ -127,44 +155,83 @@ content:
       - manga
   1koma:
     name: 单格漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/1koma.html
+    alias:
+      - 1panel
   2koma:
     name: 双分镜漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/2koma.html
   3koma:
     name: 三格漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/3koma.html
   4koma:
     name: 四格漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/4koma.html
+    alias:
+      - 4coma
   multiple 4koma:
     name: 多列四格漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multiple_4koma.html
   5koma:
     name: 五格漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/5koma.html
   borderless panels:
     name: 无边框漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/borderless_panels.html
   eromanga:
     name: 色情漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eromanga.html
   left-to-right manga:
     name: 从左往右读的漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/left-to-right_manga.html
+    alias:
+      - left-to-right
   right-to-left comic:
     name: 从右往左读的漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/right-to-left_comic.html
   silent comic:
     name: 默剧漫画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/silent_comic.html
   corrupted file:
     name: 损坏的文件
+    wikiURL: https://danbooru.donmai.us/wiki_pages/corrupted_file.html
+    alias:
+      - corrupted image
+      - corrupted video
   cover:
     name: 封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cover.html
+    alias:
+      - front cover
   album cover:
     name: 专辑封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/album_cover.html
+    alias:
+      - album
+      - cd cover
+      - disc cover
   character single:
     name: 单人封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/character_single.html
   cover page:
     name: 封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cover_page.html
+    alias:
+      - book cover
   doujin cover:
     name: 同人封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/doujin_cover.html
   dvd cover:
     name: DVD 封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dvd_cover.html
   fake cover:
     name: (同人向玩梗向的)封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fake_cover.html
   video game cover:
     name: 视频游戏封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/video_game_cover.html
+    alias:
+      - game cover
   magazine cover:
     name: 杂志封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/magazine_cover.html
@@ -172,8 +239,12 @@ content:
     image: 23af8029a1f177fe00479f6fb929d2183d9de838cf7cf9dc476bd74696493401
   manga cover:
     name: 漫画封面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/manga_cover.html
   fake screenshot:
     name: (同人向玩梗向的)截图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fake_screenshot.html
+    alias:
+      - fakeshot
   game cg:
     description: 从视频游戏游戏中截取的插画或画面。
     image: b09816b1edc20ee7ada5ec586520f9b9a081334722b351edc79ed81c3296b35e
@@ -184,12 +255,15 @@ content:
       - game asset
   gyotaku (medium):
     name: 鱼拓 (介质)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gyotaku_(medium).html
   icon:
     name: 图标
   logo:
     name: 标志
+    wikiURL: https://danbooru.donmai.us/wiki_pages/logo.html
   kirigami:
     name: 剪纸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kirigami.html
   lineart:
     alias:
       - line art
@@ -198,42 +272,65 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/lineart.html
   no lineart:
     name: 几乎没用勾线的画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/no_lineart.html
+    alias:
+      - no line-art
+      - lineless
   outline:
     name: 角色形象有描边
+    wikiURL: https://danbooru.donmai.us/wiki_pages/outline.html
+    alias:
+      - outlines
+      - outlined
   tall image:
     name: 长图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tall_image.html
   wide image:
     name: 宽图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wide_image.html
   oekaki:
     name: 简朴的画作
+    wikiURL: https://danbooru.donmai.us/wiki_pages/oekaki.html
   official art:
     image: 6f674453557c9f1b3b584450326d88acd6c1043cc4eb5bfeecfc8be90f0b6bec
     name: 官方画作
     wikiURL: https://danbooru.donmai.us/wiki_pages/official_art.html
   phonecard:
     name: 电话卡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/phonecard.html
   photo:
     name: 照片
     image: 8e04e5bb300d995f90cce909a5da4e6c1243427ed07b43efc3e9f3ed8b08c061
     wikiURL: https://danbooru.donmai.us/wiki_pages/photo.html
   papercraft:
     name: 纸艺
+    wikiURL: https://danbooru.donmai.us/wiki_pages/papercraft.html
   paper child:
     name: 纸质角色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/paper_child.html
   paper cutout:
     name: 纸艺模型
+    wikiURL: https://danbooru.donmai.us/wiki_pages/paper_cutout.html
+    alias:
+      - paper cut-out
   pixel art:
     name: 像素风
     wikiURL: https://danbooru.donmai.us/wiki_pages/pixel_art.html
     image: 227bc1e177eddb75f47e3aa463bfc62f80c7a4b767464462081a99613b930adc
   postcard:
     name: 明信片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/postcard.html
   poster:
     name: 海报
+    wikiURL: https://danbooru.donmai.us/wiki_pages/poster.html
   revision:
     name: 修正版
+    wikiURL: https://danbooru.donmai.us/wiki_pages/revision.html
+    alias:
+      - revised
   scan:
     name: 扫描件
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scan.html
   anime screencap:
     alias:
       - screencap
@@ -242,15 +339,26 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/anime_screencap.html
   shitajiki:
     name: 垫板
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shitajiki.html
   tegaki:
     name: 来自 tegaki 博客
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tegaki.html
   triptych (art):
     name: 三联画 (艺术)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/triptych_(art).html
   vector trace:
     name: 矢量画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vector_trace.html
+    alias:
+      - trace
+      - vectortrace
+      - vector
   tileable:
     name: 可平铺拼贴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tileable.html
   widescreen:
     name: 宽屏幕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/widescreen.html
   official wallpaper:
     name: 官方壁纸图
+    wikiURL: https://danbooru.donmai.us/wiki_pages/official_wallpaper.html

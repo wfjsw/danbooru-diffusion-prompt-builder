@@ -268,8 +268,10 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_arm.html
   convenient head:
     name: 挡住关键部位的头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_head.html
   convenient leg:
     name: 挡住关键部位的腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_leg.html
   crossed arms:
     name: 交叉双臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_arms.html
@@ -328,9 +330,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_twirling.html
     alias:
       - hair twirl
-  hand between breasts:
-    name: 手放在胸前
-    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_breasts.html
   hand between legs:
     name: 手放在两腿之间
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_legs.html

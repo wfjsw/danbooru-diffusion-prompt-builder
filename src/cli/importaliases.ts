@@ -31,8 +31,8 @@ for (let i = 0; i < batchCount; i++) {
         'search[name_normalize]': batchStr})
     const res = await axios.get(`https://danbooru.donmai.us/tags.json?${qs.toString()}`, {
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-            'Cookie': 'cf_clearance=',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+            'Cookie': 'cf_clearance=qJBquBEw3Dm6WKPn5jTGj_hK3Fb.THu1UrTguaD8P2M-1667389209-0-250',
         },
     })
     for (const record of res.data) {

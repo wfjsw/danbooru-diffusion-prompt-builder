@@ -552,3 +552,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/lipstick.html
   covering face:
     name: 挡住脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/covering_face.html
+    alias:
+      - hiding face

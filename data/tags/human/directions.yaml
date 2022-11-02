@@ -49,9 +49,6 @@ content:
   selfiemirror:
     name: 自拍镜
     image: 7963a267ebbb67003d7988cc750dcecabd30498cf72297cf130caca0c2c3a981
-  symmetrical:
-    name: 对称
-    image: eb18d86a27bc8a3c56b46809cfde9235febaa7b22d80f40685ab6b79cd35ea84
   facing viewer:
     name: 面对观众
     image: 88b7db23b20a6521be45541470e0dba33ddcd7e7c2b85db435d24c57f3fbf183

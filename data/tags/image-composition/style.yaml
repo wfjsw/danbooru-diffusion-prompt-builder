@@ -2,8 +2,12 @@ name: 画风
 content:
   abstract:
     name: 抽象
+    wikiURL: https://danbooru.donmai.us/wiki_pages/abstract.html
   acrylic paint (medium):
     name: 亚克力画风
+    wikiURL: https://danbooru.donmai.us/wiki_pages/acrylic_paint_(medium).html
+    alias:
+      - acrylic paint
   airbrush (medium):
     name: 喷枪
   alphonse mucha:
@@ -13,10 +17,18 @@ content:
     name: 钩织玩偶/毛线娃娃
   art deco:
     name: 装饰艺术
+    wikiURL: https://danbooru.donmai.us/wiki_pages/art_deco.html
   art nouveau:
     name: 新艺术
+    wikiURL: https://danbooru.donmai.us/wiki_pages/art_nouveau.html
+    alias:
+      - alphonse mucha (style)
+      - mucha style
   ballpoint pen (medium):
     name: 圆珠笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ballpoint_pen_(medium).html
+    alias:
+      - ballpoint pen
   book cover (medium):
     name: 书本封面
   brush (medium):
@@ -25,33 +37,44 @@ content:
     name: 毛笔
   calligraphy brush (medium):
     name: 书法毛笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/calligraphy_brush_(medium).html
   calligraphy pen (medium):
     name: 书法笔
   canvas (medium):
     name: 画布
+    wikiURL: https://danbooru.donmai.us/wiki_pages/canvas_(medium).html
   chalk (medium):
     name: 粉笔
   charcoal (medium):
     name: 炭笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/charcoal_(medium).html
   clay (medium):
     name: 黏土
   color ink (medium):
     name: 彩色墨水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/color_ink_(medium).html
   color trace:
     name: 原画
     wikiURL: https://danbooru.donmai.us/wiki_pages/color_trace.html
   colored pencil (medium):
     name: 彩色铅笔画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/colored_pencil_(medium).html
+    alias:
+      - pencil crayon (medium)
+      - coloured pencil (medium)
   cosplay:
     image: 0b0db2c52bd954418ddf13d59a0e60f4f6ff52f45ac8ec628352bb84bb927253
     name: 角色扮演
     wikiURL: https://danbooru.donmai.us/wiki_pages/cosplay.html
   coupy pencil (medium):
     name: Coupy 铅笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coupy_pencil_(medium).html
   crayon (medium):
     name: 蜡笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crayon_(medium).html
   cursor (medium):
     name: 光标
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cursor_(medium).html
   cyberpunk:
     image: 988770b5c93ea6d73ce45e643fdaf92f9a467b1e73ef851cada37710becbd92a
     name: 赛博朋克
@@ -60,6 +83,8 @@ content:
     image: 04f314399c2b70b722008ad63b139b9de9946ed96536461e8f300b0c3f126646
     name: 抱枕
     wikiURL: https://danbooru.donmai.us/wiki_pages/dakimakura.html
+    alias:
+      - dakimakura
   disc (medium):
     name: 碟片
   expression chart:
@@ -77,8 +102,10 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/faux_traditional_media.html
   fine art parody:
     name: 对某美术品的模仿/模仿名画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fine_art_parody.html
   flame painter:
     name: Flame Painter (工具)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flame_painter.html
   flat color:
     alias:
       - flat colors
@@ -92,12 +119,16 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/fourth_wall.html
   fudepen (medium):
     name: 墨笔/毛钢笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fudepen_(medium).html
   g-pen (medium):
     name: G 笔
   google sketchup (medium):
     name: Google Sketchup
   gouache (medium):
     name: 水粉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gouache_(medium).html
+    alias:
+      - gouache
   graffiti (medium):
     name: 涂鸦
   graphite (medium):
@@ -110,14 +141,18 @@ content:
     name: Illustrator
   impressionism:
     name: 印象派
+    wikiURL: https://danbooru.donmai.us/wiki_pages/impressionism.html
   ink (medium):
     name: 墨水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ink_(medium).html
   leaf (medium):
     name: 树叶
   lego (medium):
     name: 乐高
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lego_(medium).html
   ligne claire:
     name: 白描
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ligne_claire.html
   marker (medium):
     alias:
       - copics
@@ -126,28 +161,46 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/marker_%28medium%29
   millipen (medium):
     name: 毫厘笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/millipen_(medium).html
+    alias:
+      - millipen
   minimalism:
     name: 极简主义
+    wikiURL: https://danbooru.donmai.us/wiki_pages/minimalism.html
   mousepad (medium):
     name: 手绘板
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mousepad_(medium).html
   nib pen (medium):
     name: 蘸水笔画风
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nib_pen_(medium).html
+    alias:
+      - tsukepen
+      - nib pen
+      - fountain pen (medium)
   nihonga:
     name: 日本画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nihonga.html
   oil painting (medium):
     image: c7577e85fc2f14b64ce9422d0e61a83f5bc32149a63087fd0c3628b5acb8056d
     name: 油画风格
     wikiURL: https://danbooru.donmai.us/wiki_pages/oil_painting_(medium).html
+    alias:
+      - oil painting
   painting (medium):
     name: 传统绘图工具
+    wikiURL: https://danbooru.donmai.us/wiki_pages/painting_(medium).html
+    alias:
+      - paint (medium)
   pastel (medium):
     name: 像粉笔蜡笔作画的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pastel_(medium).html
   pastel color:
     image: 8cdb17da043da8c20588097e24b4954819162d7d72765fdebf6903f61ddb5ff9
     name: 粉彩
     wikiURL: https://danbooru.donmai.us/wiki_pages/pastel_colors.html
   pen (medium):
     name: 钢笔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pen_(medium).html
   photorealistic:
     image: 9d95baeecd150eee1555ca907a2a61c61c9c09afbe1be998690dd2cba67757aa
     name: 很像照片的画
@@ -156,6 +209,7 @@ content:
     name: 瓷器
   print (medium):
     name: 印刷品
+    wikiURL: https://danbooru.donmai.us/wiki_pages/print_(medium).html
   realistic:
     image: 35d145ef23dc530f125fa83b5dc8ff32c7443f314c7844d9e77887713fad9827
     name: 现实的/真实的
@@ -175,16 +229,20 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/sketch.html
   style parody:
     name: 画风模仿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/style_parody.html
   sumi-e:
     name: 墨绘
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sumi-e.html
   surreal:
     name: 怪诞的/超现实主义
+    wikiURL: https://danbooru.donmai.us/wiki_pages/surreal.html
   swapnote (medium):
     name: 交换笔记
   tempera (medium):
     name: 蛋彩画
   theatre (medium):
     name: 剧场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/theatre_(medium).html
   traditional media:
     alias:
       - handdrawn
@@ -193,8 +251,15 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/traditional_media.html
   ukiyo-e:
     name: 浮世绘
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ukiyo-e.html
+    alias:
+      - ukiyoe
   unfinished:
     name: 未完成的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/unfinished.html
+    alias:
+      - work in progress
+      - wip
   variations:
     name: (变装、变化、变色、成长)对比图
     wikiURL: https://danbooru.donmai.us/wiki_pages/variations.html
