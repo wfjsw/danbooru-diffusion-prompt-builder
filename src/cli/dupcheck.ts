@@ -18,7 +18,7 @@ for (const file of tagFiles) {
             hasError = true
         }
         resolution.add(tag)
-        if (meta.alias) {
+        if (meta?.alias) {
             for (const alias of meta.alias) {
                 if (resolution.has(alias)) {
                     console.error(`Duplicate alias ${alias} of ${tag} from ${file}`)

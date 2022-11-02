@@ -555,3 +555,665 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_face.html
     alias:
       - hiding face
+  black eyes:
+    name: 黑眼
+    image: 17b8bbb8afd29094b28f1e03db17f9790f81677ce00fac4f36170c8db2a187c0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_eyes.html
+  blue eyes:
+    name: 蓝眼
+    image: e7ffb034164da3b7b0c16c85b8020ac8b52be8f306c21648e92e82727f0b297d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_eyes.html
+  brown eyes:
+    name: 棕眼
+    image: 84f5507b659c88ead0437dbf73f3a93c087c84b51336af7af7445072a34fcd7b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/brown_eyes.html
+  green eyes:
+    name: 绿眼
+    image: e3db6b6b6a42cfcc945308b052a4dc53f7d6e025d02c8fe74e5e0ce8bbf91983
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_eyes.html
+  grey eyes:
+    name: 灰眼
+    image: 897185217d72271d95380f406724ee6ccd36910a14b7ac83e610b68e988b5949
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grey_eyes.html
+    alias:
+      - silver eyes
+      - gray eyes
+  heart-shaped pupils:
+    name: 爱心形瞳孔
+    image: dbd1bc5b89481633efbd4c148c083ee37fecbc3862884271033240168983a43a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart-shaped_pupils.html
+  heterochromia:
+    name: 异色瞳
+    image: 750b940bfad52ecc1c8f5311c09c58fdf9ee8a30bd2eccfbcc659ecf40603666
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heterochromia.html
+    alias:
+      - odd eye
+  purple eyes:
+    name: 紫眼
+    image: e5c9ab77719dad02a01a13969fd48e7044ef431ced92fae169fcea190ce535bb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/purple_eyes.html
+  red eyes:
+    name: 红眼
+    image: dd4ffd5dd7f8ff1bd63c71510e736a75038e3b550cdc3690b037fb155f2e3cca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_eyes.html
+    alias:
+      - red eye
+  slit pupils:
+    name: 竖瞳孔/猫眼
+    image: d6d191469f5fa0cbcc7a2ea317cc4114d2612bdf676b2fa4ab096c6800b30d6e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/slit_pupils.html
+    alias:
+      - cat eyes
+      - snake eyes
+  white eyes:
+    name: 白眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_eyes.html
+  yellow eyes:
+    name: 金眼
+    image: 2d7aab3af701b80566edd5f825b971e5a71f0e48dc08c9b8a1627e26c66d8440
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_eyes.html
+  tareme:
+    name: 下垂的眼睛
+    image: 390c241baedf33a972ee845138cbfe295539e39c902a31c9fe506e14d0e46607
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tareme.html
+  sanpaku:
+    name: 三白眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sanpaku.html
+  upturned eyes:
+    name: 上翘的眼睛
+    image: 7258cd92e6ba33fd50b69f9aff1c7db9d64e00c960d0fe4dcb2f96161990e7fd
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upturned_eyes.html
+  wide-eyed:
+    name: 睁开眼睛
+    image: 19ad79ac0f8119090000721373813b2a93f2c21d50dad60e5eda9478a1dbb06b
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wide-eyed.html
+    alias:
+      - eyes wide
+      - wide eyes
+      - shocked eyes
+  ringed eyes:
+    name: 眼圈
+    image: f1bf3099c4c01d66ce975a552ea7407301713bba183751cdc8740eee92d7d346
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ringed_eyes.html
+  rolling eyes:
+    name: 眼睛抬头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rolling_eyes.html
+    alias:
+      - rolleyes
+      - rolled eyes
+      - eye roll
+  crazy eyes:
+    name: 疯狂的眼睛
+    image: 6eb802ad6ac22168d68ffc921a18cd4c8f9e241fb555f3f8c46cdc73876ce2a5
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crazy_eyes.html
+  raised eyebrows:
+    name: 挑眉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/raised_eyebrows.html
+  furrowed brow:
+    name: 下眉毛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/furrowed_brow.html
+    alias:
+      - furrowed eyebrows
+  dashed eyes:
+    name: 黑眼圈中的水平线
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dashed_eyes.html
+    alias:
+      - dash eyes
+      - line in eye
+  multicolored eyes:
+    name: 多色的黑眼睛
+    image: a7660dd76ad6982e767fc8935c7deef06721f4ac735ab72f654d4c4a0d21b63e
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multicolored_eyes.html
+  mismatched pupils:
+    name: 左右眼颜色不同
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mismatched_pupils.html
+    alias:
+      - asymmetrical pupils
+  mismatched sclera:
+    name: 左右眼不同颜色的眼白
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mismatched_sclera.html
+  no pupils:
+    name: 没有眼睛
+    image: 057a6f1ac71b03b814b72411a0a72cd1bdd115f481c28beb639ff9e2c8c43c7a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/no_pupils.html
+  empty eyes:
+    name: 眼睛没有亮点
+    image: 8933a045bcd55b51e673479bc910e2552806627e7f659427907d071cb18fc838
+    wikiURL: https://danbooru.donmai.us/wiki_pages/empty_eyes.html
+    alias:
+      - dead eyes
+  blank eyes:
+    name: 白眼球
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blank_eyes.html
+  dilated pupils:
+    name: 瞳孔扩张
+    image: c2542aedb53e4eb1da6749a8ef97a47ca56a07a6cbbdb8d79435469a7635e6d8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dilated_pupils.html
+  hollow eyes:
+    name: 漆黑的眼睛
+    image: 4dbecb60eca1a653ad4e97f59fb8446065e901105d357874b672d7bcc7b9ef47
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hollow_eyes.html
+  constricted pupils:
+    name: 瞳孔收缩
+    image: 5bd94bcbd8449991c8495ab54738aa48ead3c03e75314a903b36554d1d94e563
+    wikiURL: https://danbooru.donmai.us/wiki_pages/constricted_pupils.html
+    alias:
+      - contracted pupils
+      - shrunk pupils
+      - shrunk eyes
+  symbol-shaped pupils:
+    name: 符号眼
+    image: ab4f255d31e997373ce365bda1f688612c2e9057fbadb87e678e2a65b262e8ac
+    wikiURL: https://danbooru.donmai.us/wiki_pages/symbol-shaped_pupils.html
+  star-shaped pupils:
+    name: 星形眼睛
+    image: e413919099de5329069ba6fb41c8fa99dee2d09946077b2da8d87f2707f7f0c8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/star-shaped_pupils.html
+  x-shaped pupils:
+    name: X 形眼睛
+    image: cb0d7337beb3e68f9cfcdf6018923b3e1994260e74b68bcced00444e1e344c15
+    wikiURL: https://danbooru.donmai.us/wiki_pages/x-shaped_pupils.html
+  button eyes:
+    name: 纽扣眼
+    image: 7d70e4243e78d1d12c069c43b45d357fe3207c04f1624d498e0cfed00ee2cdf6
+    wikiURL: https://danbooru.donmai.us/wiki_pages/button_eyes.html
+  eye reflection:
+    name: 眼睛反射
+    image: ad484bc12bfeaf6c2821477958c80062810c720a97784d4eba15b4f8dafd3e49
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eye_reflection.html
+  closed eyes:
+    name: 闭上眼睛
+    image: a12c73e9492bff738f76551caa75d9d3070f6630ef8f13db6a8f624adb390130
+    wikiURL: https://danbooru.donmai.us/wiki_pages/closed_eyes.html
+  one eye closed:
+    name: 一只眼睛闭着
+    image: 4af68f047ec053fdff5fd584364c22241f2ff52a77e432e22f9882c44bc5ce1a
+    wikiURL: https://danbooru.donmai.us/wiki_pages/one_eye_closed.html
+    alias:
+      - wink
+  half-closed eyes:
+    alias:
+      - half closed eyes
+    name: 眼睛半闭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/half-closed_eyes.html
+  eyes closed:
+    name: 闭眼
+    image: 9b640e54565ce69975c7162d05de0808f1b065694b25a1fa7c3a7ef2d1354d51
+  wince:
+    name: 闭一只眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wince.html
+    alias:
+      - cringe
+  eyelid pull:
+    name: 拉眼皮
+    image: 4baad99b43b7cb66ee0328810694e194f11309808ebf51483cb174e6256f81a8
+  tsurime:
+    name: 吊眼角
+    image: b350cdd64e5d41efbe12e2337eb0979ee2e868569c33a36af4ea37ec217ba290
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tsurime.html
+  eyeball:
+    name: 盯着看
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyeball.html
+    alias:
+      - eyeballs
+  tears:
+    name: 眼泪
+    image: 1d58fa13dc6304fb087b8b63b78ef1405a9539c0ddeea5d9ead6360d00654dca
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tears.html
+    alias:
+      - tear
+  gradient eyes:
+    name: 渐变瞳色
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/gradient_eyes.html
+    image: 509fe35618a92dbc10c65ca4900af53b9130a56b9849229dc59ffba8709c4476
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient_eyes.html
+  aqua eyes:
+    name: 吐舌鬼脸
+    image: 0b8db7d15e5bc6c4809e6ea159823e160c341ab898234f33b02a8524ed87d0eb
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aqua_eyes.html
+  crying with eyes open:
+    name: 睁着眼落泪
+    image: 20083412b639b90b1043d590a771c9bee1de3cd01c407e50cce90d29f9bb1624
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crying_with_eyes_open.html
+  glowing eyes:
+    name: 发光的双眼
+    image: 11dc46b5d6ca1508352b27758f15d6755747b75e8a6cca79110886f69c3ee523
+    wikiURL: https://danbooru.donmai.us/wiki_pages/glowing_eyes.html
+  half-closed eye:
+    alias:
+      - half closed eye
+    name: 半闭的眼睛(单眼)
+    image: 63d9aa5f42a31f7315ee12270adeece1eb58d37c72f3b1f5976334159eddc815
+    wikiURL: https://danbooru.donmai.us/wiki_pages/half-closed_eye.html
+  happy tears:
+    name: 开心的眼泪
+    image: 48c40ffbca7d89705bd3b5e58e410741817fa179f7c271bdde365131fc341d31
+    wikiURL: https://danbooru.donmai.us/wiki_pages/happy_tears.html
+  sparkling eyes:
+    name: 星星眼
+    image: fbe51ad8d114862609b9c526d0fcaa9e30e090ff52ea9a038a94eb2d563b3658
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sparkling_eyes.html
+    alias:
+      - sparkle eyes
+  glaring:
+    name: 轻蔑/怒视
+    image: 4999c11a716611c14dd7073779e07fa0d08b30cbaf2309721c9f9a1e4b6dd0e4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/glaring.html
+    alias:
+      - glare
+  streaming tears:
+    name: 流泪
+    image: c9fb4b24f1ef7d231008b32f6b1cd2866e391c26db3cf589bc53d294d104d5ce
+    wikiURL: https://danbooru.donmai.us/wiki_pages/streaming_tears.html
+  eyebrows behind hair:
+    name: 挡在头发下的眉毛
+  eyebrows visible through hair:
+    name: 透过头发可以看到的眉毛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyebrows_visible_through_hair.html
+  eyelashes:
+    name: 睫毛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyelashes.html
+    alias:
+      - eye lashes
+  eyeliner:
+    name: 眼线
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyeliner.html
+  eyes visible through hair:
+    name: 透过头发可以看到的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eyes_visible_through_hair.html
+    alias:
+      - eye through hair
+  anger vein:
+    name: 青筋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/anger_vein.html
+    alias:
+      - anger mark
+  blush stickers:
+    name: 表情贴纸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blush_stickers.html
+    alias:
+      - blush sticker
+  full-face blush:
+    name: 整张脸泛红
+    wikiURL: https://danbooru.donmai.us/wiki_pages/full-face_blush.html
+  confused:
+    name: 疑惑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/confused.html
+  determined:
+    name: 有决心的
+  disappointed:
+    name: 失望的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/disappointed.html
+  disdain:
+    name: 蔑视
+    wikiURL: https://danbooru.donmai.us/wiki_pages/disdain.html
+  disgust:
+    name: 恶心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/disgust.html
+    alias:
+      - disgusted
+  despair:
+    name: 绝望
+    wikiURL: https://danbooru.donmai.us/wiki_pages/despair.html
+  envy:
+    name: 嫉妒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/envy.html
+  evil:
+    name: 邪恶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/evil.html
+  facepalm:
+    name: 以手掩面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/facepalm.html
+  frustrated:
+    name: 沮丧
+  guilt:
+    name: 有罪的
+  kubrick stare:
+    name: 库布里克凝视
+    description: 头轻轻的微向下倾斜，眼直视镜头，直勾勾地盯着镜头。
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kubrick_stare.html
+  lonely:
+    name: 孤独的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lonely.html
+  raised eyebrow:
+    name: 扬起的眉毛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/raised_eyebrow.html
+  rape face:
+    name: 一副要强奸人的表情
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rape_face.html
+    alias:
+      - rapeface
+  depressed:
+    name: 压抑的/郁闷的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/depressed.html
+  panicking:
+    name: 恐慌的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/panicking.html
+    alias:
+      - panic
+  worried:
+    name: 担忧的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/worried.html
+  tired:
+    name: 累
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tired.html
+  sulking:
+    name: 闷闷不乐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sulking.html
+  thinking:
+    name: 思考
+    wikiURL: https://danbooru.donmai.us/wiki_pages/thinking.html
+  pensive:
+    name: 沉思的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pensive.html
+  upset:
+    name: 气愤
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upset.html
+  crazy smile:
+    name: 疯狂地笑
+  forced smile:
+    name: 强迫笑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forced_smile.html
+  glasgow smile:
+    name: 格拉斯哥微笑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/glasgow_smile.html
+  sad smile:
+    name: 苦笑
+  stifled laugh:
+    name: 憋笑
+  ^^^:
+    name: 惊讶的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/^^^.html
+  color drain:
+    name: 惊讶到掉色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/color_drain.html
+  horrified:
+    name: 恐惧表情
+    wikiURL: https://danbooru.donmai.us/wiki_pages/horrified.html
+    alias:
+      - horror (expression)
+  sobbing:
+    name: 啜泣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sobbing.html
+  trembling:
+    name: 颤抖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/trembling.html
+    alias:
+      - tremble
+      - shiver
+      - shivering
+  wavy mouth:
+    name: 薯片嘴型
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wavy_mouth.html
+  ;):
+    name: ;)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;).html
+  'd:':
+    name: 'd:'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/d:.html
+  ;3:
+    name: ;3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;3.html
+  '3:':
+    name: 斜嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/3:.html
+  uwu:
+    name: 猫脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/uwu.html
+  ;p:
+    name: ;p
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;p.html
+  ;q:
+    name: ;q
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;q.html
+  ':t':
+    name: ':t'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:t.html
+  ':i':
+    name: ':i'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:i.html
+  ':/':
+    name: 斜嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:/.html
+    alias:
+      - ':\'
+  ':|':
+    name: 无语
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:|.html
+  ':x':
+    name: ':x'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:x.html
+  ':c':
+    name: 伤心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:c.html
+  'c:':
+    name: 'c:'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/c:.html
+  ':<':
+    name: ':<'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:<.html
+  ;<:
+    name: ;<
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;<.html
+  ':<>':
+    name: 张大嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:<>.html
+  ':>':
+    name: ':>'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:>.html
+  ':>=':
+    name: ':>='
+    wikiURL: https://danbooru.donmai.us/wiki_pages/:>=.html
+    alias:
+      - vacuum fellatio
+      - blowjob face
+  ;o:
+    name: ;o
+    wikiURL: https://danbooru.donmai.us/wiki_pages/;o.html
+  o3o:
+    name: o3o
+    wikiURL: https://danbooru.donmai.us/wiki_pages/o3o.html
+    alias:
+      - .3.
+  (-3-):
+    name: 嘟嘴
+  '>3<':
+    name: 亲嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/>3<.html
+  o_o:
+    name: 发呆
+  '0_0':
+    name: '0_0'
+  '|_|':
+    name: '|_|'
+  ._.:
+    name: ._.
+  solid circle eyes:
+    name: 实心圆眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/solid_circle_eyes.html
+  heart-shaped eyes:
+    name: 心形眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart-shaped_eyes.html
+    alias:
+      - heart eyes
+      - heart eye
+  ^_^:
+    name: ^_^
+  ^o^:
+    name: ^o^
+    wikiURL: https://danbooru.donmai.us/wiki_pages/^o^.html
+  \(^o^)/:
+    name: \(^o^)/
+    wikiURL: https://danbooru.donmai.us/wiki_pages/\(^o^)/.html
+    alias:
+      - owata
+  ^q^:
+    name: ^q^
+  '>_<':
+    name: '>_<'
+  xd:
+    name: XD
+    wikiURL: https://danbooru.donmai.us/wiki_pages/xd.html
+  x3:
+    name: X3
+    wikiURL: https://danbooru.donmai.us/wiki_pages/x3.html
+  '>o<':
+    name: '>o<'
+    wikiURL: https://danbooru.donmai.us/wiki_pages/>o<.html
+  '@_@':
+    name: '@_@'
+  '>_@':
+    name: '>_@'
+  +_+:
+    name: +_+
+  +_-:
+    name: +_-
+  '=_=':
+    name: '=_='
+  '=^=':
+    name: '=^='
+    wikiURL: https://danbooru.donmai.us/wiki_pages/=^=.html
+  '=v=':
+    name: '=v='
+    wikiURL: https://danbooru.donmai.us/wiki_pages/=v=.html
+  <o>_<o>:
+    name: <o>_<o>
+  <|>_<|>:
+    name: <|>_<|>
+  cross-eyed:
+    name: 斗鸡眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cross-eyed.html
+    alias:
+      - crossed eyes
+  dot mouth:
+    name: 小圆点嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dot_mouth.html
+  dot nose:
+    name: 小圆点鼻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dot_nose.html
+  mouth drool:
+    name: 嘴角画着口水滴形状的缺口
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mouth_drool.html
+  no mouth:
+    name: 没画出嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/no_mouth.html
+  rectangular mouth:
+    name: 方形嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rectangular_mouth.html
+    alias:
+      - ':[]'
+  sideways mouth:
+    name: 把嘴画在侧脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sideways_mouth.html
+    alias:
+      - side mouth
+      - cheek mouth
+  split mouth:
+    name: 裂开的嘴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/split_mouth.html
+    alias:
+      - disconnected mouth
+  orange eyes:
+    name: 橙色的眼镜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_eyes.html
+  pink eyes:
+    name: 粉红色的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pink_eyes.html
+  amber eyes:
+    name: 琥珀色眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/amber_eyes.html
+  '@ @':
+    name: 晕眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/@_@.html
+    alias:
+      - spiral eyes
+      - al bhed eyes
+      - swirly eyes
+  pac-man eyes:
+    name: 吃豆人形眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pac-man_eyes.html
+    alias:
+      - pacman eyes
+  horizontal pupils:
+    name: 一字型瞳孔/蛙眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/horizontal_pupils.html
+    alias:
+      - goat eyes
+      - frog eyes
+  + +:
+    name: 加号型眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/+_+.html
+    alias:
+      - star eyes
+      - starry eyes
+  diamond-shaped pupils:
+    name: 钻石形瞳孔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/diamond-shaped_pupils.html
+  flower-shaped pupils:
+    name: 花形瞳孔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower-shaped_pupils.html
+  blue sclera:
+    name: 蓝色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_sclera.html
+  black sclera:
+    name: 黑色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_sclera.html
+  bloodshot eyes:
+    name: 布满血丝的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bloodshot_eyes.html
+    alias:
+      - bloodshot eye
+  green sclera:
+    name: 绿色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_sclera.html
+  no sclera:
+    name: 无色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/no_sclera.html
+  orange sclera:
+    name: 橙色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_sclera.html
+  red sclera:
+    name: 红色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_sclera.html
+  yellow sclera:
+    name: 黄色巩膜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_sclera.html
+  bags under eyes:
+    name: 眼袋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bags_under_eyes.html
+    alias:
+      - eye circles
+      - eyebags
+      - dark circles
+  aegyo sal:
+    name: 眼袋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aegyo_sal.html
+  bruised eye:
+    name: 瘀伤的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bruised_eye.html
+    alias:
+      - black eye
+  flaming eyes:
+    name: 燃烧的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flaming_eyes.html
+    alias:
+      - burning eyes
+      - fiery eyes
+  glowing eye:
+    name: 发光的眼睛(单眼)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/glowing_eye.html
+  mako eyes:
+    name: 魔眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mako_eyes.html
+  amphibian eyes:
+    name: 两栖动物的眼睛
+  cephalopod eyes:
+    name: 头足类动物的眼睛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cephalopod_eyes.html
+    alias:
+      - octopus eyes
+  compound eyes:
+    name: 复合眼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/compound_eyes.html
+    alias:
+      - insect eyes

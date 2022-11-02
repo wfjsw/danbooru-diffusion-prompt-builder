@@ -66,9 +66,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/monochrome.html
     alias:
       - monochromatic
-  color drain:
-    name: 色彩丢失
-    wikiURL: https://danbooru.donmai.us/wiki_pages/color_drain.html
   greyscale:
     alias:
       - black and white

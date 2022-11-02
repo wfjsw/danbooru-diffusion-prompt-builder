@@ -10,9 +10,6 @@ content:
     name: 狐狸耳朵
     image: ac1d62974fd5a4e9ee05f06556c1790c98737f0f0c1aab8d20832c5b987b75e1
     wikiURL: https://danbooru.donmai.us/wiki_pages/fox_ears.html
-  bunny ears:
-    name: 兔耳
-    image: d42ed72ea050a39020b655f3b7844074d2f5cfed839aa4f69059368a007cb3c1
   cat ears:
     name: 猫耳
     image: 42c557b4d3c662d96c0bcfeb3020f2cfcfc90db7119eb392c929b6d1f3c1651d
@@ -93,3 +90,65 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_ears.html
     alias:
       - hands over ears
+  bear ears:
+    name: 熊耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bear_ears.html
+  rabbit ears:
+    name: 兔子耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rabbit_ears.html
+    image: d42ed72ea050a39020b655f3b7844074d2f5cfed839aa4f69059368a007cb3c1
+    alias:
+      - bunny ears
+  cow ears:
+    name: 牛耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cow_ears.html
+  deer ears:
+    name: 鹿耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/deer_ears.html
+    alias:
+      - reindeer ears
+  ferret ears:
+    name: 鼬耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ferret_ears.html
+  goat ears:
+    name: 山羊耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/goat_ears.html
+  horse ears:
+    name: 马耳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/horse_ears.html
+  kemonomimi mode:
+    name: 兽耳萝莉模式
+    image: 477bf54e3502fe8d7f0591dee1e25d3386d00bcc6c9a939dca4336f6ae730936
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kemonomimi_mode.html
+  lion ears:
+    name: 狮子耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lion_ears.html
+  monkey ears:
+    name: 猴耳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/monkey_ears.html
+  panda ears:
+    name: 熊猫耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/panda_ears.html
+  pikachu ears:
+    name: 皮卡丘耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pikachu_ears.html
+  pig ears:
+    name: 猪耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pig_ears.html
+  sheep ears:
+    name: 羊耳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sheep_ears.html
+  squirrel ears:
+    name: 松鼠耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/squirrel_ears.html
+  tiger ears:
+    name: 虎耳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tiger_ears.html
+  wolf ears:
+    name: 狼耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wolf_ears.html
+    alias:
+      - coyote ears
+  fake animal ears:
+    name: 仿制的动物耳朵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fake_animal_ears.html
