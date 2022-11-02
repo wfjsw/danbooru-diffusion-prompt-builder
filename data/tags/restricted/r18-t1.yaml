@@ -91,12 +91,6 @@ content:
   leash:
     name: 宠物链
     wikiURL: https://danbooru.donmai.us/wiki_pages/leash.html
-  areolae:
-    name: 乳晕
-    wikiURL: https://danbooru.donmai.us/wiki_pages/areolae.html
-    alias:
-      - areolas
-      - areola
   lactation:
     name: 哺乳（大范围）
     wikiURL: https://danbooru.donmai.us/wiki_pages/lactation.html
@@ -113,6 +107,10 @@ content:
       - sucking nipples
     name: 吸乳（中）
     wikiURL: https://danbooru.donmai.us/wiki_pages/breast_sucking.html
+  self breast sucking:
+    name: 自吸乳
+  mutual breast sucking:
+    name: 双向吸乳
   breast feeding:
     name: 喂奶（小）
   paizuri:
@@ -259,17 +257,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/body_writing.html
     alias:
       - writing on body
-  censored:
-    name: 有码
-    wikiURL: https://danbooru.donmai.us/wiki_pages/censored.html
-    alias:
-      - censoring
-      - censor
-  uncensored:
-    name: 无码
-    wikiURL: https://danbooru.donmai.us/wiki_pages/uncensored.html
-    alias:
-      - uncensoring
   asian:
     name: 亚洲
     wikiURL: https://danbooru.donmai.us/wiki_pages/asian.html

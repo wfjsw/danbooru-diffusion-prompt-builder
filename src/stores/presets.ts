@@ -79,7 +79,8 @@ export const usePresetStore = defineStore('presets', {
                 return []
             }
 
-            const normalizedLcQuery = query.toLowerCase().split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = query.toLowerCase().split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
 
             return normalizedLcQuery.reduce((a, q) => a
                 .filter((meta) => {

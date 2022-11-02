@@ -1,0 +1,91 @@
+name: 色彩
+content:
+  aqua theme:
+    name: 水蓝色
+  black theme:
+    name: 黑色主题
+  blue theme:
+    name: 蓝色
+  brown theme:
+    name: 棕色主题
+  green theme:
+    name: 绿色主题
+  grey theme:
+    name: 灰色
+  orange theme:
+    name: 橙色
+  pink theme:
+    name: 粉色主题
+  purple theme:
+    name: 紫色
+  red theme:
+    name: 红色/红色主题
+  white theme:
+    name: 白色主题
+  yellow theme:
+    name: 黄色主题
+  anime coloring:
+    name: 动画上色
+  cel shading:
+    name: 卡通渲染
+  gradient:
+    name: 渐变色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient.html
+  ff gradient:
+    name: 最终幻想式渐变
+  high contrast:
+    image: f7dc18785d250941875aa23b5d3b791a1c7f31e9f09b28e30919cd2d654f8dc8
+    name: 高对比度
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high_contrast.html
+  inverted colors:
+    name: 色彩反转
+  limited palette:
+    alias:
+      - restricted palette
+    name: 色块风格
+    wikiURL: https://danbooru.donmai.us/wiki_pages/limited_palette.html
+  monochrome:
+    name: 单色画
+  color drain:
+    name: 色彩丢失
+  greyscale:
+    alias:
+      - black and white
+      - grayscale
+    image: 974f2cfc50469b7141b547736492688b7619b22be9623999946fe9695bc97fc3
+    name: 纯黑白色/黑白照片化/灰度
+    wikiURL: https://danbooru.donmai.us/wiki_pages/greyscale.html
+  greyscale with colored background:
+    name: 黑白角色与有色背景
+  colored with greyscale background:
+    name: 有色角色与黑白背景
+  partially colored:
+    alias:
+      - partially monochrome
+    name: 部分上色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/partially_colored.html
+  muted color:
+    name: 哑光
+  neon palette:
+    name: null
+  pale color:
+    name: 苍白的颜色
+  pastel colors:
+    name: 柔和色彩
+  rainbow:
+    name: 彩虹
+  rainbow order:
+    name: 彩虹色序排列
+  sepia:
+    name: 深棕色/乌贼墨色
+  color connection:
+    name: 色彩关联
+  colorized:
+    name: 上色
+  colorful:
+    name: 五彩斑斓的
+  spot color:
+    alias:
+      - spot colors
+    name: 黑白画中的少量颜色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spot_color.html

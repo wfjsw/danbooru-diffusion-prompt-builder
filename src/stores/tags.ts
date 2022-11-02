@@ -139,7 +139,8 @@ export const useTagStore = defineStore('tags', {
             if (query === '') return this.tags[category]
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
@@ -170,7 +171,8 @@ export const useTagStore = defineStore('tags', {
             if (query === '') return {}
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached

@@ -59,8 +59,6 @@ content:
     name: 脚部脱框
     image: b6ecb81b32519e3295e94366b80987bdb9cbc9b603911deb497ddaa4fd87169f
     wikiURL: https://danbooru.donmai.us/wiki_pages/feet_out_of_frame.html
-  out-of-frame censoring:
-    name: 关键部位在画面外
   glitch:
     name: 画面噪点
   isometric:

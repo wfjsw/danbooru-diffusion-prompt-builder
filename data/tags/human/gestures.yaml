@@ -266,6 +266,10 @@ content:
   convenient arm:
     name: 遮住关键部位的手臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_arm.html
+  convenient head:
+    name: 挡住关键部位的头
+  convenient leg:
+    name: 挡住关键部位的腿
   crossed arms:
     name: 交叉双臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_arms.html

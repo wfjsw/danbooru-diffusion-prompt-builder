@@ -288,15 +288,6 @@ content:
     name: 富有表现力的头发
     image: 90dfeb1bd92fac541f5405a4600aa9932f9d40044ace349ffbb4b13c8e5d4193
     wikiURL: https://danbooru.donmai.us/wiki_pages/expressive_hair.html
-  hair censor:
-    name: 头发遮住了乳头(三点)
-    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_censor.html
-  hair over breasts:
-    name: 头发披在胸上
-    image: 0f510f3988d945d93df7d0cd928a62a432fcd8b922b17979bf77318ad34beb39
-    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_over_breasts.html
-    alias:
-      - hair on breasts
   hair over eyes:
     name: 头发遮着双眼
     image: c3a70a5b19fadc0a007f5e5e8a0a7475131d43ed4bca500f73bfa25f91c21163

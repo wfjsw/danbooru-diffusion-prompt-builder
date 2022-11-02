@@ -58,18 +58,6 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
                 .map(v => v.content.filter(e => settings.showRestricted || !e.restricted).length)
                 .reduce((a, b) => a + b, 0)
         }
-        // allTagCount: (state) => {
-        //     const settings = useSettingsStore()
-        //     return Object.values(state.tags)
-        //         .filter(a => settings.showRestricted || !a._restricted)
-        //         .reduce((a, b) => a + Object.values(b).filter(v => settings.showRestricted || !v.restricted).length, 0);
-        // },
-        // tagWithPhotosCount: (state) => {
-        //     const settings = useSettingsStore()
-        //     return Object.values(state.tags)
-        //         .filter(a => settings.showRestricted || !a._restricted)
-        //         .reduce((a, b) => a + Object.values(b).filter((v) => v.image && (settings.showRestricted || !v.restricted)).length, 0);
-        // },
     },
     actions: {
         async load() {
@@ -113,7 +101,8 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
                 return this.hypernetworks[category].content.filter(n => settings.showRestricted || !n.restricted)
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
@@ -148,7 +137,8 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
             if (query === '') return []
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached

@@ -106,17 +106,6 @@ content:
     image: d058d25501c06e68bfc9c0b6f658718fd90fe4f7817fb5b7b24df4dc968bbd7d
     name: 铅笔画/炭笔画
     wikiURL: https://danbooru.donmai.us/wiki_pages/graphite_%28medium%29
-  greyscale:
-    alias:
-      - black and white
-      - grayscale
-    image: 974f2cfc50469b7141b547736492688b7619b22be9623999946fe9695bc97fc3
-    name: 纯黑白色/黑白照片化/灰度
-    wikiURL: https://danbooru.donmai.us/wiki_pages/greyscale.html
-  high contrast:
-    image: f7dc18785d250941875aa23b5d3b791a1c7f31e9f09b28e30919cd2d654f8dc8
-    name: 高对比度
-    wikiURL: https://danbooru.donmai.us/wiki_pages/high_contrast.html
   illustrator (medium):
     name: Illustrator
   impressionism:
@@ -129,11 +118,6 @@ content:
     name: 乐高
   ligne claire:
     name: 白描
-  limited palette:
-    alias:
-      - restricted palette
-    name: 色块风格
-    wikiURL: https://danbooru.donmai.us/wiki_pages/limited_palette.html
   marker (medium):
     alias:
       - copics
@@ -156,11 +140,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/oil_painting_(medium).html
   painting (medium):
     name: 传统绘图工具
-  partially colored:
-    alias:
-      - partially monochrome
-    name: 部分上色
-    wikiURL: https://danbooru.donmai.us/wiki_pages/partially_colored.html
   pastel (medium):
     name: 像粉笔蜡笔作画的
   pastel color:
@@ -194,11 +173,6 @@ content:
     image: 5c2a80b8ac6a6b6453fd605180837118bd539fd04ce5ce064535b36375f99c5d
     name: 草图
     wikiURL: https://danbooru.donmai.us/wiki_pages/sketch.html
-  spot color:
-    alias:
-      - spot colors
-    name: 黑白画中的少量颜色
-    wikiURL: https://danbooru.donmai.us/wiki_pages/spot_color.html
   style parody:
     name: 画风模仿
   sumi-e:
