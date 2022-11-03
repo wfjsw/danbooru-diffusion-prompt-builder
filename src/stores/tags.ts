@@ -136,7 +136,12 @@ export const useTagStore = defineStore('tags', {
             const settings = useSettingsStore()
             if (!settings.showRestricted && this.tags[category]._restricted) return {}
 
-            if (query === '') return this.tags[category]
+            if (query === '') return Object.fromEntries(
+                Object.entries(this.tags[category])
+                    .sort(([k1], [k2]) =>
+                        (this.tagsPostCount[k2.replaceAll(' ', '_')] ?? 0)
+                        - (this.tagsPostCount[k1.replaceAll(' ', '_')] ?? 0))
+            )
 
             const lcQuery = query.toLowerCase()
             const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)

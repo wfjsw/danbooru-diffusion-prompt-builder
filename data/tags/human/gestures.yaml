@@ -1,3 +1,4 @@
+name: 人物手势动作
 content:
   arm support:
     name: 用手支撑住
@@ -503,4 +504,202 @@ content:
     alias:
       - holding glasses
       - holding sunglasses
-name: 人物手势动作
+  hand on ear:
+    name: 手放在耳朵上
+  adjusting eyewear:
+    name: 扶眼镜
+  hand on another's head:
+    name: 手放在对方的头上
+  hand on own head:
+    name: 手放在自己头上
+  hand on own forehead:
+    name: 手放在自己前额
+  hand on another's face:
+    name: 手接触到对方的脸
+  hand on own face:
+    name: 把手放在自己脸上
+  hands on another's face:
+    name: 双手放在别人的脸上
+  hands on own face:
+    name: 双手放在自己的脸上
+  hand on own cheek:
+    name: 把手放在自己的脸颊上
+  hand on headwear:
+    name: 手触碰帽子
+  hand on own chest:
+    name: 把手放在自己的胸口
+  hand on another's shoulder:
+    name: 手放在对方的肩上
+  hand on own shoulder:
+    name: 手放在自己的肩上
+  hand on own ass:
+    name: 把手放在自己的臀部
+  hands on ass:
+    name: 双手放在屁股上
+  hands on own knees:
+    name: 双手放在自己的膝盖上
+  hands on feet:
+    name: 双手放在脚上
+  hand on another's hand:
+    name: 手放在对方的手上
+  hand in pocket:
+    name: 手插在口袋里
+  hands in pockets:
+    name: 双手插在兜里
+  air quotes:
+    name: 引号手势
+  bunny pose:
+    name: 兔耳 pose
+  carry me:
+    name: 抱着我手势
+  clenched hands:
+    name: 紧握的双手
+  cupping hands:
+    name: 用手比作杯子
+  double v:
+    name: 双手比 V
+    wikiURL: https://danbooru.donmai.us/wiki_pages/double_v.html
+    alias:
+      - double peace
+  fidgeting:
+    name: 紧张手势
+  finger counting:
+    name: 用手指比数字
+  finger frame:
+    name: 用手指作相框
+  fist bump:
+    name: 碰拳
+  fist in hand:
+    name: 抱拳
+  hand glasses:
+    name: 用手比作眼镜
+  own hands clasped:
+    name: 握住自己的双手
+  heart arms:
+    name: 手臂摆出心的姿势
+  heart hands trio:
+    name: 三个人用手比心
+  high five:
+    name: 击掌庆祝
+  horns pose:
+    name: 用手比作角
+  noogie:
+    name: 双拳挤头
+  palm-fist greeting:
+    name: 拱手礼
+  palm-fist tap:
+    name: 拳头拍手掌/有主意了
+  penetration gesture:
+    name: 插入手势/做爱示意
+    restricted: true
+  pinky swear:
+    name: 勾指起誓
+  shadow puppet:
+    name: 用手模仿其他物件/皮影戏
+  tsuki ni kawatte oshioki yo:
+    name: 代表月亮消灭你
+  steepled fingers:
+    name: 指尖抵着指间
+  akanbe:
+    name: 拉下眼睑的鬼脸
+  slit throat (gesture):
+    name: 割喉手势
+  pinky out:
+    name: 伸出小拇指
+  pointing:
+    name: 用手指着
+  pointing at self:
+    name: 指着自己
+  pointing at viewer:
+    name: 指向看图的人
+  pointing down:
+    name: 指向下方
+  pointing forward:
+    name: 指向前方
+  pointing up:
+    name: 向上指
+  kamina pose:
+    name: 抬高手臂向上指
+  saturday night fever:
+    name: 叉腰向上指 (舞蹈)
+  thumbs down:
+    name: 大拇指向下
+  \n/:
+    name: 摇滚手势
+  crossed fingers:
+    name: 手指交错
+  fox shadow puppet:
+    name: 狐狸手势
+  finger heart:
+    name: 双指比心
+  inward v:
+    name: 反向比 V
+  shaka sign:
+    name: 沙卡手势
+  two-finger salute:
+    name: 二指敬禮
+  \m/:
+    name: 6+1 手势
+  middle w:
+    name: 3 手势
+  money gesture:
+    name: 金钱手势
+  \||/:
+    name: 手掌贴墙
+  open hand:
+    name: 张开的手
+  ohikaenasutte:
+    name: 要求自我介绍
+  spread fingers:
+    name: 张开手指
+  straight-arm salute:
+    name: 直臂敬礼/纳粹式敬礼
+    restricted: true
+  vulcan salute:
+    name: 瓦肯举手礼
+  clenched hand:
+    name: 握紧的手
+  fig sign:
+    name: Fig 手势
+  power fist:
+    name: 力量手套
+  raised fist:
+    name: 举起的拳头
+  stroking own chin:
+    name: 扶颏冥想
+  cunnilingus gesture:
+    name: 舔阴手势
+    restricted: true
+  fellatio gesture:
+    name: 口交手势
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fellatio_gesture.html
+  handjob gesture:
+    name: 手冲手势
+    restricted: true
+  hat tip:
+    name: 捏着帽檐
+  shocker (gesture):
+    name: 爽歪歪 (手势)
+  v over mouth:
+    name: 手指比 V 放在手上
+  w:
+    name: 手指比 W
+  air guitar:
+    name: 空气吉他
+  curtsey:
+    name: (女子的)屈膝礼
+  heart tail:
+    name: 心形尾巴/心形尾尖/尾巴摆出心形
+  heart tail duo:
+    name: 两人尾巴摆出心形
+  kuji-in:
+    name: 九字印
+  shrugging:
+    name: 耸肩
+  toe-point:
+    name: 趾尖/脚尖
+  victory pose:
+    name: 胜利手势
+  orchid fingers:
+    name: 兰花指

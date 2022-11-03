@@ -372,11 +372,6 @@ content:
     name: 傲娇
     image: 8e187dfa52b119b4f0f42007b9e0bf96b793e9c9985fd0fcfdd94954d1736102
     wikiURL: https://danbooru.donmai.us/wiki_pages/tsundere.html
-  double v:
-    name: 啊嘿颜比V
-    wikiURL: https://danbooru.donmai.us/wiki_pages/double_v.html
-    alias:
-      - double peace
   drooling:
     name: 流口水
     image: 6df26cf3843885586315e36d7dcad1831324c4e32bf90722cd34a4ead73f24b5
@@ -1217,3 +1212,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/compound_eyes.html
     alias:
       - insect eyes
+  oral invitation:
+    name: 迎接射精而伸出舌头
+    restricted: true

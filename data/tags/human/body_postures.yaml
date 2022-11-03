@@ -1,3 +1,4 @@
+name: 人体姿势
 content:
   all fours:
     name: 四肢趴地
@@ -213,4 +214,85 @@ content:
   head down:
     name: 低着头
     wikiURL: https://danbooru.donmai.us/wiki_pages/head_down.html
-name: 人体姿势
+  one knee:
+    name: 单膝跪
+  butterfly sitting:
+    name: 蝴蝶坐
+  figure four sitting:
+    name: 二郎腿
+  lotus position:
+    name: 结跏趺坐
+  sitting on person:
+    name: 坐在人身上
+  thigh straddling:
+    name: 大腿跨骑
+  upright straddle:
+    name: 对坐体位
+  standing:
+    name: 站立的
+  legs apart:
+    name: 两腿分开
+  standing on one leg:
+    name: 单腿站立
+  balancing:
+    name: (保持)平衡的姿势
+  crawling:
+    name: 爬行
+  jumping:
+    name: 跳跃
+  running:
+    name: 奔跑
+  walking:
+    name: 走路
+  wallwalking:
+    name: 走在墙顶上
+  prostration:
+    name: 失意体前屈/Orz
+  chest stand:
+    name: 用胸支撑身体
+  cowering:
+    name: 抱头
+  crucifixion:
+    name: 磔
+  faceplant:
+    name: 脸贴地面
+  battoujutsu stance:
+    name: 拔刀起手式
+  full scorpion:
+    name: 头扑倒在地
+  stretching:
+    name: 伸懒腰
+  superhero landing:
+    name: 三点着地
+  handstand:
+    name: 用手倒立
+  headstand:
+    name: 用头倒立
+  yoga:
+    name: 瑜伽
+  scorpion pose:
+    name: 蝎子姿势
+  slouching:
+    name: 伛
+  twisted torso:
+    name: 躯干夸张地扭曲
+  crossed ankles:
+    name: 交叉脚踝
+  folded:
+    name: 抬腿露阴
+  leg up:
+    name: 抬起腿
+  knees to chest:
+    name: 膝盖顶到胸部
+  legs over head:
+    name: 双腿抬过头
+  outstretched leg:
+    name: 腿部伸展
+  split:
+    name: 分开
+  pigeon pose:
+    name: 鸽子姿势
+  standing split:
+    name: 站立劈叉/站立高抬腿
+  watson cross:
+    name: 双腿交叉站姿
