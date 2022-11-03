@@ -51,6 +51,7 @@ export default defineConfig({
         legalComments: 'eof',
     },
     build: {
+        target: 'esnext',
         rollupOptions: {
             treeshake: {
                 preset: 'smallest',

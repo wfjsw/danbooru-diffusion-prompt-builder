@@ -1,3 +1,4 @@
+name: 人体姿势
 content:
   all fours:
     name: 四肢趴地
@@ -132,12 +133,6 @@ content:
     alias:
       - ass-up head-down
       - face down ass up
-  upside-down:
-    name: 颠倒的
-    image: 262fd2f130ac21ab66c693687922a74a456c7fa23887fbef70edff526e897c19
-    wikiURL: https://danbooru.donmai.us/wiki_pages/upside-down.html
-    alias:
-      - upsidedown
   wariza:
     alias:
       - w sitting
@@ -160,9 +155,6 @@ content:
   back-to-back:
     name: 背靠背
     wikiURL: https://danbooru.donmai.us/wiki_pages/back-to-back.html
-  gradient:
-    name: (身体或肢体)倾斜
-    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient.html
   head back:
     name: 弓背高潮
     wikiURL: https://danbooru.donmai.us/wiki_pages/head_back.html
@@ -205,9 +197,6 @@ content:
     image: 05cf5770c57f844341df6ccdb0d85718172d4e984ff8767c603b081500ec8868
     alias:
       - straddle
-  stretch:
-    name: 伸懒腰
-    image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
   the pose:
     name: 趴在地上并翘起脚
     wikiURL: https://danbooru.donmai.us/wiki_pages/the_pose.html
@@ -222,4 +211,159 @@ content:
   head down:
     name: 低着头
     wikiURL: https://danbooru.donmai.us/wiki_pages/head_down.html
-name: 人体姿势
+  one knee:
+    name: 单膝跪
+    wikiURL: https://danbooru.donmai.us/wiki_pages/one_knee.html
+    alias:
+      - kneeling on one leg
+  butterfly sitting:
+    name: 蝴蝶坐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/butterfly_sitting.html
+    alias:
+      - butterfly pose
+  figure four sitting:
+    name: 二郎腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/figure_four_sitting.html
+  lotus position:
+    name: 结跏趺坐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lotus_position.html
+  sitting on person:
+    name: 坐在人身上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sitting_on_person.html
+    alias:
+      - sitting on
+  thigh straddling:
+    name: 大腿跨骑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/thigh_straddling.html
+    alias:
+      - thigh straddle
+  upright straddle:
+    name: 对坐体位
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upright_straddle.html
+  standing:
+    name: 站立的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/standing.html
+  legs apart:
+    name: 两腿分开
+    wikiURL: https://danbooru.donmai.us/wiki_pages/legs_apart.html
+  standing on one leg:
+    name: 单腿站立
+    wikiURL: https://danbooru.donmai.us/wiki_pages/standing_on_one_leg.html
+    alias:
+      - on one foot
+      - standing on one foot
+      - on one leg
+  balancing:
+    name: (保持)平衡的姿势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/balancing.html
+    alias:
+      - balance
+  crawling:
+    name: 爬行
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crawling.html
+  jumping:
+    name: 跳跃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jumping.html
+    alias:
+      - jump
+  running:
+    name: 奔跑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/running.html
+    alias:
+      - run
+  walking:
+    name: 走路
+    wikiURL: https://danbooru.donmai.us/wiki_pages/walking.html
+  wallwalking:
+    name: 走在墙顶上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wallwalking.html
+  prostration:
+    name: 失意体前屈/Orz
+    wikiURL: https://danbooru.donmai.us/wiki_pages/prostration.html
+    alias:
+      - orz
+  chest stand:
+    name: 用胸支撑身体
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chest_stand.html
+  cowering:
+    name: 抱头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cowering.html
+  crucifixion:
+    name: 磔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crucifixion.html
+  faceplant:
+    name: 脸贴地面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/faceplant.html
+  battoujutsu stance:
+    name: 拔刀起手式
+    wikiURL: https://danbooru.donmai.us/wiki_pages/battoujutsu_stance.html
+  full scorpion:
+    name: 头扑倒在地
+    wikiURL: https://danbooru.donmai.us/wiki_pages/full_scorpion.html
+  stretching:
+    name: 伸懒腰
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stretching.html
+    image: d6c63e4f62834f65649d969e0397874d7d452667d3953de307d006e279d9bb92
+    alias:
+      - stretch
+  superhero landing:
+    name: 三点着地
+    wikiURL: https://danbooru.donmai.us/wiki_pages/superhero_landing.html
+    alias:
+      - three-point landing
+  handstand:
+    name: 用手倒立
+    wikiURL: https://danbooru.donmai.us/wiki_pages/handstand.html
+    alias:
+      - standing on hands
+  headstand:
+    name: 用头倒立
+    wikiURL: https://danbooru.donmai.us/wiki_pages/headstand.html
+  yoga:
+    name: 瑜伽
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yoga.html
+  scorpion pose:
+    name: 蝎子姿势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scorpion_pose.html
+  slouching:
+    name: 伛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/slouching.html
+  twisted torso:
+    name: 躯干夸张地扭曲
+    wikiURL: https://danbooru.donmai.us/wiki_pages/twisted_torso.html
+  crossed ankles:
+    name: 交叉脚踝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_ankles.html
+  folded:
+    name: 抬腿露阴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/folded.html
+  leg up:
+    name: 抬起腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/leg_up.html
+    alias:
+      - one leg raised
+  knees to chest:
+    name: 膝盖顶到胸部
+    wikiURL: https://danbooru.donmai.us/wiki_pages/knees_to_chest.html
+    alias:
+      - knees on chest
+      - knees-on-chest
+  legs over head:
+    name: 双腿抬过头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/legs_over_head.html
+  outstretched leg:
+    name: 腿部伸展
+  split:
+    name: 分开
+    wikiURL: https://danbooru.donmai.us/wiki_pages/split.html
+    alias:
+      - splits
+  pigeon pose:
+    name: 鸽子姿势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pigeon_pose.html
+  standing split:
+    name: 站立劈叉/站立高抬腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/standing_split.html
+  watson cross:
+    name: 双腿交叉站姿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/watson_cross.html

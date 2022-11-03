@@ -306,11 +306,6 @@ content:
     name: 脸颊上的疤痕
     image: 67474f730370f6f0ff81d69459f896c68bd3f9ba2dbb51adde8ea7dff80c2e72
     wikiURL: https://danbooru.donmai.us/wiki_pages/scar_on_cheek.html
-  identity censor:
-    name: 眼部打码
-    wikiURL: https://danbooru.donmai.us/wiki_pages/identity_censor.html
-    alias:
-      - eye censor
   covered eyes:
     name: 蒙住的眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/covered_eyes.html
@@ -501,10 +496,6 @@ content:
     name: 波浪褶边的领子
     image: 1089996708882ac9d009b07ea5f6453eacef8dc2dac12a80bf5b39c4e6872a0c
     wikiURL: https://danbooru.donmai.us/wiki_pages/neck_ruff.html
-  necktie between breasts:
-    name: 领带贴(夹)在乳沟里
-    image: 016dd82d49290dcec493635bbc9782be762c65dd6a58801e2204232d1fad601d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/necktie_between_breasts.html
   plunging neckline:
     name: 深领
     image: 657d34272e83e69c19302d64a78dbc4b20c27ffdb5e2054b676418de18d8d9dd
@@ -539,17 +530,6 @@ content:
   hair scrunchie:
     name: 发箍
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_scrunchie.html
-  hair rings:
-    name: 发圈
-    image: 285eca8226af2fdfced185ef648fb88388464b8994e21f5df39f2a06c4b2069e
-    wikiURL: https://danbooru.donmai.us/wiki_pages/hair_rings.html
-    alias:
-      - hair loop
-      - hair loops
-      - hair ring
-  tied hair:
-    name: 扎头发
-    wikiURL: https://danbooru.donmai.us/wiki_pages/tied_hair.html
   white hairband:
     name: 白色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_hairband.html
@@ -650,9 +630,6 @@ content:
   orange hairband:
     name: 橙色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/orange_hairband.html
-  multi-tied hair:
-    name: 多扎头发
-    wikiURL: https://danbooru.donmai.us/wiki_pages/multi-tied_hair.html
   snowflake hair ornament:
     name: 雪花发饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/snowflake_hair_ornament.html

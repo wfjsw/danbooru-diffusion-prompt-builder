@@ -233,10 +233,6 @@ content:
   toeless boots:
     name: 露趾靴
     wikiURL: https://danbooru.donmai.us/wiki_pages/toeless_boots.html
-  no legwear:
-    name: 裸腿
-    restricted: true
-    wikiURL: https://danbooru.donmai.us/wiki_pages/no_legwear.html
   black legwear:
     name: 黑色裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/black_legwear.html

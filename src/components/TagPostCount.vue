@@ -9,7 +9,7 @@ const props = defineProps<{
     tag: string
 }>()
 
-const rawCount = computed(() => tagStore.tagsPostCount[props.tag.replaceAll(' ', '_')] ?? 0)
+const rawCount = computed(() => tagStore.tagsPostCount[props.tag] ?? 0)
 const humanizedCount = computed(() => {
     if (rawCount.value === 0) {
         return 'N/A'

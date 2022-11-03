@@ -51,7 +51,7 @@ const filteredEmbeddings = computed(() => embeddingStore.searchAll(props.search)
 const filteredHypernetworks = computed(() => hypernetworkStore.searchAll(props.search))
 
 const combinedResult = computed(() => {
-    const resultTag: SearchResult[] = Object.entries(filteredTags.value)
+    const resultTag: SearchResult[] = filteredTags.value
         .map(n => ({type: 'tag', data: n, key: n[0], score: n[1].score}))
     const resultEmbedding: SearchResult[] = filteredEmbeddings.value
         .map(n => ({type: 'embedding', data: n, key: n.payloadHash, score: n.score}))

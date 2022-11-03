@@ -15,11 +15,11 @@ for (const file of tagFiles) {
     const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')) as TagCategories
     for (const [tag, meta] of Object.entries(tagData.content)) {
         tagSet.add(tag)
-        if (meta.alias) {
-            for (const alias of meta.alias) {
-                tagSet.add(alias)
-            }
-        }
+        // if (meta.alias) {
+        //     for (const alias of meta.alias) {
+        //         tagSet.add(alias)
+        //     }
+        // }
     }
 }
 const tagArr = Array.from(tagSet)
@@ -32,13 +32,13 @@ for (let i = 0; i < batchCount; i++) {
     const qs = new URLSearchParams({limit: '50', only: 'name,post_count', 'search[name_normalize]': batchStr})
     const res = await axios.get(`https://danbooru.donmai.us/tags.json?${qs.toString()}`, {
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
             'Cookie': 'cf_clearance=',
         }
     })
 
     for (const record of res.data) {
-        result[record.name] = record.post_count as number
+        result[record.name.replaceAll('_', ' ').toLowerCase()] = record.post_count as number
     }
 }
 

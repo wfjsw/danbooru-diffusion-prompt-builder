@@ -118,7 +118,8 @@ export const useEmbeddingStore = defineStore('embeddings', {
                     .filter(n => settings.showRestricted || !n.restricted)
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
@@ -146,7 +147,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
                 .filter(n => n.score > 0)
                 .sort(({ score: a }, { score: b }) => b - a)
             , this.embeddings[category].content.map(n => ({...n, score: 0})))
-                
+
             searchCache.set(cacheKey, result)
             return result
         },
@@ -155,7 +156,8 @@ export const useEmbeddingStore = defineStore('embeddings', {
             if (query === '') return []
 
             const lcQuery = query.toLowerCase()
-            const normalizedLcQuery = lcQuery.split(' ').sort((a, b) => b.length - a.length)
+            const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
+                .sort((a, b) => b.length - a.length)
             const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
@@ -187,7 +189,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
 
                 .sort(({ score: a }, { score: b }) => b - a)
                 , this.allEmbeddings.toArray().map(n => ({...n, score: 0})))
-            
+
             searchCache.set(cacheKey, result)
             return result
         }

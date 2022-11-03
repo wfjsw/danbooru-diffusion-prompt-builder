@@ -37,12 +37,9 @@ content:
     name: 对胸部在意
     image: aaee885f8c879e87ed063bbeea21b0f883d4598842ceea80d9f09394c7c235fd
     wikiURL: https://danbooru.donmai.us/wiki_pages/breast_conscious.html
-  backlighting:
-    name: 逆光
-    image: 840f02ef30da0f1d4a32980e9f6205974ede74b1a05d45fec4265ee6a1c67a7d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/backlighting.html
-    alias:
-      - backlit
+  breast awe:
+    name: 着迷于乳房
+    wikiURL: https://danbooru.donmai.us/wiki_pages/breast_awe.html
   close-up:
     name: 特写镜头
     image: 387630ada23031c407cce5bc44c077c96eac13dac096fa251013dd240a89d621
@@ -61,9 +58,6 @@ content:
     name: 鱼眼镜头
     image: 338ed2f476590ab6f51f210ad7ac7dacdd1e2da0d2067cdc8870bae8be908737
     wikiURL: https://danbooru.donmai.us/wiki_pages/fisheye.html
-  foreshortening:
-    name: 正前缩距透视法
-    wikiURL: https://danbooru.donmai.us/wiki_pages/foreshortening.html
   hatching (texture):
     name: 线影法(纹理)
     image: ff9fba971e553f578e0b2df1382ad4db98b5a3ebfa746da5383852c606cc33a1
@@ -110,3 +104,25 @@ content:
       - side view
       - side
       - viewed from side
+  atmospheric perspective:
+    name: 大气距离感
+    wikiURL: https://danbooru.donmai.us/wiki_pages/atmospheric_perspective.html
+  panorama:
+    name: 全景
+    wikiURL: https://danbooru.donmai.us/wiki_pages/panorama.html
+  perspective:
+    name: 透视画法
+    image: 7c5315689aa951d25065179cfdb7c4f3cdbc6da748f14d9e1eaca89d8452b3c1
+    wikiURL: https://danbooru.donmai.us/wiki_pages/perspective.html
+  rotated:
+    name: 经过旋转的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rotated.html
+  sideways:
+    name: 横向显示的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sideways.html
+  upside-down:
+    name: 倒挂的
+    image: 262fd2f130ac21ab66c693687922a74a456c7fa23887fbef70edff526e897c19
+    wikiURL: https://danbooru.donmai.us/wiki_pages/upside-down.html
+    alias:
+      - upsidedown

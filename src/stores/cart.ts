@@ -130,7 +130,7 @@ function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
     return content
 }
 
-function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
+export function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
     if (newEmphasis) {
         content = content
             .replaceAll('(', '\\(').replaceAll(')', '\\)')
@@ -201,18 +201,19 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
     const index = ref.findIndex(n => n.type === type && n.name === tagName)
     if (index !== -1) {
         ref.splice(index, 1)
-        return
     } else {
         // Complex groups
         for (let i = 0; i < ref.length; i++) {
             if (ref[i].type === 'preset') {
-                if (type === 'embedding') throw new Error('Embeddings are not expected in presets.')
-                // Decompose the preset
                 const preset = ref[i] as CartItemPreset
-                const decomposedTagArray: CartItemSimple[] = preset.children
-                    .filter(n => n.name !== tagName).map(n => ({...n, level: 'free', parent: null}))
-                ref.splice(i, 1, ...decomposedTagArray)
-                return
+                const idx = preset
+                    .children.findIndex(n => n.type === type && n.name === tagName)
+                if (idx !== -1) {
+                    // Decompose the preset
+                    const decomposedTagArray: CartItemSimple[] = preset.children
+                        .filter(n => n.name !== tagName).map(n => ({...n, level: 'free', parent: null}))
+                    ref.splice(i, 1, ...decomposedTagArray)
+                }
             } else if (
                    ref[i].type === 'editing'
                 || ref[i].type === 'composition'
@@ -235,7 +236,6 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
                             ref.splice(i, 1, {...child, level: 'free', parent: null, weight: new Decimal(1)})
                         }
                     }
-                    return
                 }
             }
         }
@@ -433,7 +433,7 @@ export const useCartStore = defineStore('cart', {
         import(positive: string, negative: string) {
             const tagStore = useTagStore()
             // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
-            // this.clear() 
+            // this.clear()
             const run = (text: string, appendFn: (tagName: string, weight: Decimal) => void) => {
                 let weight = new Decimal(1)
                 let guessNew = true

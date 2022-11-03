@@ -1,0 +1,19 @@
+# 模型内置英文名
+prompt: Piromizu
+# 模型名称
+name: ピロ水
+# 模型作者
+author: ASUSWA @ t.me/StableDiffusion_CN
+# 模型分类
+category: 画师
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: '925997e9'
+# 模型内记录的训练步数
+steps: 38000
+# 模型预览图的 SHA256 Hash
+previewHash: af4174c62785895a59865a38a7d41c9e699f041fbbae9dfb50e15542453a27e8
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/Piromizu-HN-38000.pt
+restricted: true

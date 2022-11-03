@@ -1,0 +1,125 @@
+name: 色彩
+content:
+  aqua theme:
+    name: 水蓝色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aqua_theme.html
+  black theme:
+    name: 黑色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_theme.html
+  blue theme:
+    name: 蓝色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_theme.html
+  brown theme:
+    name: 棕色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/brown_theme.html
+  green theme:
+    name: 绿色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_theme.html
+  grey theme:
+    name: 灰色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grey_theme.html
+    alias:
+      - gray theme
+  orange theme:
+    name: 橙色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_theme.html
+  pink theme:
+    name: 粉色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pink_theme.html
+  purple theme:
+    name: 紫色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/purple_theme.html
+  red theme:
+    name: 红色/红色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_theme.html
+  white theme:
+    name: 白色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_theme.html
+  yellow theme:
+    name: 黄色主题
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_theme.html
+  anime coloring:
+    name: 动画上色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/anime_coloring.html
+  cel shading:
+    name: 卡通渲染
+  gradient:
+    name: 渐变色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient.html
+  ff gradient:
+    name: 最终幻想式渐变
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ff_gradient.html
+  high contrast:
+    image: f7dc18785d250941875aa23b5d3b791a1c7f31e9f09b28e30919cd2d654f8dc8
+    name: 高对比度
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high_contrast.html
+  inverted colors:
+    name: 色彩反转
+    wikiURL: https://danbooru.donmai.us/wiki_pages/inverted_colors.html
+  limited palette:
+    alias:
+      - restricted palette
+    name: 色块风格
+    wikiURL: https://danbooru.donmai.us/wiki_pages/limited_palette.html
+  monochrome:
+    name: 单色画
+    wikiURL: https://danbooru.donmai.us/wiki_pages/monochrome.html
+    alias:
+      - monochromatic
+  greyscale:
+    alias:
+      - black and white
+      - grayscale
+    image: 974f2cfc50469b7141b547736492688b7619b22be9623999946fe9695bc97fc3
+    name: 纯黑白色/黑白照片化/灰度
+    wikiURL: https://danbooru.donmai.us/wiki_pages/greyscale.html
+  greyscale with colored background:
+    name: 黑白角色与有色背景
+  colored with greyscale background:
+    name: 有色角色与黑白背景
+  partially colored:
+    alias:
+      - partially monochrome
+    name: 部分上色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/partially_colored.html
+  muted color:
+    name: 哑光
+    wikiURL: https://danbooru.donmai.us/wiki_pages/muted_color.html
+    alias:
+      - muted colors
+  neon palette:
+    name: 霓虹色彩
+    wikiURL: https://danbooru.donmai.us/wiki_pages/neon_palette.html
+  pale color:
+    name: 苍白的颜色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pale_color.html
+    alias:
+      - pale colors
+  pastel colors:
+    name: 柔和色彩
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pastel_colors.html
+  rainbow:
+    name: 彩虹
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rainbow.html
+    alias:
+      - rainbows
+  rainbow order:
+    name: 彩虹色序排列
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rainbow_order.html
+  sepia:
+    name: 深棕色/乌贼墨色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sepia.html
+  color connection:
+    name: 色彩关联
+    wikiURL: https://danbooru.donmai.us/wiki_pages/color_connection.html
+  colorized:
+    name: 上色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/colorized.html
+  colorful:
+    name: 五彩斑斓的
+    wikiURL: https://danbooru.donmai.us/wiki_pages/colorful.html
+  spot color:
+    alias:
+      - spot colors
+    name: 黑白画中的少量颜色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spot_color.html

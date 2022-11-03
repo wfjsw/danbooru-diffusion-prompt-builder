@@ -1,3 +1,4 @@
+name: 人物手势动作
 content:
   arm support:
     name: 用手支撑住
@@ -34,8 +35,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/caramelldansen.html
     alias:
       - caramel dansen
-  curtsy:
-    name: 屈膝礼
   finger gun:
     name: 手枪手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/finger_gun.html
@@ -266,6 +265,12 @@ content:
   convenient arm:
     name: 遮住关键部位的手臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_arm.html
+  convenient head:
+    name: 挡住关键部位的头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_head.html
+  convenient leg:
+    name: 挡住关键部位的腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenient_leg.html
   crossed arms:
     name: 交叉双臂
     wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_arms.html
@@ -324,9 +329,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_twirling.html
     alias:
       - hair twirl
-  hand between breasts:
-    name: 手放在胸前
-    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_breasts.html
   hand between legs:
     name: 手放在两腿之间
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_legs.html
@@ -355,8 +357,6 @@ content:
   hand on another's stomach:
     name: 手放在对方的肚子上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_stomach.html
-  hand on ass:
-    name: 手放在屁股上
   hand on own knee:
     name: 手放在自己的膝盖上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_knee.html
@@ -500,4 +500,382 @@ content:
     alias:
       - holding glasses
       - holding sunglasses
-name: 人物手势动作
+  hand on ear:
+    name: 手放在耳朵上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_ear.html
+  adjusting eyewear:
+    name: 扶眼镜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_eyewear.html
+    alias:
+      - adjusting sunglasses
+      - adjusting glasses
+  hand on another's head:
+    name: 手放在对方的头上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_head.html
+  hand on own head:
+    name: 手放在自己头上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_head.html
+  hand on own forehead:
+    name: 手放在自己前额
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_forehead.html
+  hand on another's face:
+    name: 手接触到对方的脸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_face.html
+  hand on own face:
+    name: 把手放在自己脸上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_face.html
+    alias:
+      - hand to face
+      - hand on face
+  hands on another's face:
+    name: 双手放在别人的脸上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_another's_face.html
+  hands on own face:
+    name: 双手放在自己的脸上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_own_face.html
+    alias:
+      - hands on face
+      - hands to face
+  hand on own cheek:
+    name: 把手放在自己的脸颊上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_cheek.html
+    alias:
+      - hand to cheek
+      - hand on cheek
+  hand on headwear:
+    name: 手触碰帽子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_headwear.html
+    alias:
+      - hand on hat
+  hand on own chest:
+    name: 把手放在自己的胸口
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_chest.html
+    alias:
+      - hand to chest
+      - hand to own chest
+      - hand on chest
+  hand on another's shoulder:
+    name: 手放在对方的肩上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_shoulder.html
+  hand on own shoulder:
+    name: 手放在自己的肩上
+  hand on own ass:
+    name: 把手放在自己的臀部
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_ass.html
+    alias:
+      - hand on ass
+  hands on ass:
+    name: 双手放在屁股上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_ass.html
+  hands on own knees:
+    name: 双手放在自己的膝盖上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_own_knees.html
+    alias:
+      - hands on knees
+  hands on feet:
+    name: 双手放在脚上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_feet.html
+  hand on another's hand:
+    name: 手放在对方的手上
+  hand in pocket:
+    name: 手插在口袋里
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_in_pocket.html
+  hands in pockets:
+    name: 双手插在兜里
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hands_in_pockets.html
+  air quotes:
+    name: 引号手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/air_quotes.html
+    alias:
+      - finger quotes
+  bunny pose:
+    name: 兔耳 pose
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bunny_pose.html
+  carry me:
+    name: 抱着我手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/carry_me.html
+    alias:
+      - pick me up
+  clenched hands:
+    name: 紧握的双手
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clenched_hands.html
+    alias:
+      - fists
+      - closed fists
+      - clenched fists
+  cupping hands:
+    name: 用手比作杯子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cupping_hands.html
+    alias:
+      - cupped hands
+  double v:
+    name: 双手比 V
+    wikiURL: https://danbooru.donmai.us/wiki_pages/double_v.html
+    alias:
+      - double peace
+  fidgeting:
+    name: 紧张手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fidgeting.html
+    alias:
+      - fidget
+  finger counting:
+    name: 用手指比数字
+    wikiURL: https://danbooru.donmai.us/wiki_pages/finger_counting.html
+  finger frame:
+    name: 用手指作相框
+    wikiURL: https://danbooru.donmai.us/wiki_pages/finger_frame.html
+    alias:
+      - finger camera
+  fist bump:
+    name: 碰拳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fist_bump.html
+    alias:
+      - brofist
+      - fistbump
+  fist in hand:
+    name: 抱拳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fist_in_hand.html
+  hand glasses:
+    name: 用手比作眼镜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hand_glasses.html
+  own hands clasped:
+    name: 握住自己的双手
+    wikiURL: https://danbooru.donmai.us/wiki_pages/own_hands_clasped.html
+    alias:
+      - clasped hands
+      - hands clasped
+  heart arms:
+    name: 手臂摆出心的姿势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_arms.html
+  heart hands trio:
+    name: 三个人用手比心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_hands_trio.html
+  high five:
+    name: 击掌庆祝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high_five.html
+    alias:
+      - highfive
+  horns pose:
+    name: 用手比作角
+    wikiURL: https://danbooru.donmai.us/wiki_pages/horns_pose.html
+    alias:
+      - horn pose
+  noogie:
+    name: 双拳挤头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/noogie.html
+  palm-fist greeting:
+    name: 拱手礼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/palm-fist_greeting.html
+  palm-fist tap:
+    name: 拳头拍手掌/有主意了
+    wikiURL: https://danbooru.donmai.us/wiki_pages/palm-fist_tap.html
+  penetration gesture:
+    name: 插入手势/做爱示意
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/penetration_gesture.html
+  pinky swear:
+    name: 勾指起誓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pinky_swear.html
+  shadow puppet:
+    name: 用手模仿其他物件/皮影戏
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shadow_puppet.html
+  tsuki ni kawatte oshioki yo:
+    name: 代表月亮消灭你
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tsuki_ni_kawatte_oshioki_yo.html
+    alias:
+      - in the name of the moon
+  steepled fingers:
+    name: 指尖抵着指间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/steepled_fingers.html
+  akanbe:
+    name: 拉下眼睑的鬼脸
+    image: 4baad99b43b7cb66ee0328810694e194f11309808ebf51483cb174e6256f81a8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akanbe.html
+    alias:
+      - eyelid pull
+  slit throat (gesture):
+    name: 割喉手势
+    alias:
+      - throat-slitting gesture
+      - cutthroat gesture
+  pinky out:
+    name: 伸出小拇指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pinky_out.html
+    alias:
+      - raised pinky
+      - extended pinky
+  pointing:
+    name: 用手指着
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointing.html
+  pointing at self:
+    name: 指着自己
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointing_at_self.html
+  pointing at viewer:
+    name: 指向看图的人
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointing_at_viewer.html
+    alias:
+      - pov pointing
+  pointing down:
+    name: 指向下方
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointing_down.html
+  pointing forward:
+    name: 指向前方
+  pointing up:
+    name: 向上指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pointing_up.html
+    alias:
+      - pointing skyward
+      - pointing to the sky
+  kamina pose:
+    name: 抬高手臂向上指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kamina_pose.html
+  saturday night fever:
+    name: 叉腰向上指 (舞蹈)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/saturday_night_fever.html
+    alias:
+      - disco pose
+  thumbs down:
+    name: 大拇指向下
+    wikiURL: https://danbooru.donmai.us/wiki_pages/thumbs_down.html
+  \n/:
+    name: 摇滚手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/\n/.html
+  crossed fingers:
+    name: 手指交错
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crossed_fingers.html
+  fox shadow puppet:
+    name: 狐狸手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fox_shadow_puppet.html
+    alias:
+      - fox hand sign
+  finger heart:
+    name: 双指比心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/finger_heart.html
+  inward v:
+    name: 反向比 V
+    wikiURL: https://danbooru.donmai.us/wiki_pages/inward_v.html
+  shaka sign:
+    name: 沙卡手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shaka_sign.html
+  two-finger salute:
+    name: 二指敬禮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/two-finger_salute.html
+  \m/:
+    name: 6+1 手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/\m/.html
+  middle w:
+    name: 3 手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/middle_w.html
+  money gesture:
+    name: 金钱手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/money_gesture.html
+  \||/:
+    name: 手掌贴墙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/\||/.html
+    alias:
+      - open \m/
+  open hand:
+    name: 张开的手
+    wikiURL: https://danbooru.donmai.us/wiki_pages/open_hand.html
+  ohikaenasutte:
+    name: 要求自我介绍
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ohikaenasutte.html
+  spread fingers:
+    name: 张开手指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spread_fingers.html
+  straight-arm salute:
+    name: 直臂敬礼/纳粹式敬礼
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/straight-arm_salute.html
+    alias:
+      - roman salute
+      - nazi salute
+  vulcan salute:
+    name: 瓦肯举手礼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vulcan_salute.html
+  clenched hand:
+    name: 握紧的手
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clenched_hand.html
+    alias:
+      - clenched fist
+      - fist
+      - closed fist
+  fig sign:
+    name: Fig 手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fig_sign.html
+    alias:
+      - hand fig
+      - fig gesture
+      - dulya
+      - mano fico
+  power fist:
+    name: 力量手套
+  raised fist:
+    name: 举起的拳头
+    wikiURL: https://danbooru.donmai.us/wiki_pages/raised_fist.html
+    alias:
+      - air punch
+  stroking own chin:
+    name: 扶颏冥想
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stroking_own_chin.html
+    alias:
+      - chin stroking
+      - stroking chin
+  cunnilingus gesture:
+    name: 舔阴手势
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cunnilingus_gesture.html
+  fellatio gesture:
+    name: 口交手势
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fellatio_gesture.html
+  handjob gesture:
+    name: 手冲手势
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/handjob_gesture.html
+  hat tip:
+    name: 捏着帽檐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hat_tip.html
+  shocker (gesture):
+    name: 爽歪歪 (手势)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shocker_(gesture).html
+  v over mouth:
+    name: 手指比 V 放在手上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/v_over_mouth.html
+  w:
+    name: 手指比 W
+    wikiURL: https://danbooru.donmai.us/wiki_pages/w.html
+  air guitar:
+    name: 空气吉他
+    wikiURL: https://danbooru.donmai.us/wiki_pages/air_guitar.html
+  curtsey:
+    name: (女子的)屈膝礼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/curtsey.html
+    alias:
+      - curtsy
+      - curtsie
+  heart tail:
+    name: 心形尾巴/心形尾尖/尾巴摆出心形
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_tail.html
+    alias:
+      - heart tails
+  heart tail duo:
+    name: 两人尾巴摆出心形
+    wikiURL: https://danbooru.donmai.us/wiki_pages/heart_tail_duo.html
+  kuji-in:
+    name: 九字印
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kuji-in.html
+    alias:
+      - hand seal
+  shrugging:
+    name: 耸肩
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shrugging.html
+  toe-point:
+    name: 趾尖/脚尖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/toe-point.html
+  victory pose:
+    name: 胜利手势
+    wikiURL: https://danbooru.donmai.us/wiki_pages/victory_pose.html
+  orchid fingers:
+    name: 兰花指
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orchid_fingers.html
