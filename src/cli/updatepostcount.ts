@@ -15,11 +15,11 @@ for (const file of tagFiles) {
     const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')) as TagCategories
     for (const [tag, meta] of Object.entries(tagData.content)) {
         tagSet.add(tag)
-        if (meta.alias) {
-            for (const alias of meta.alias) {
-                tagSet.add(alias)
-            }
-        }
+        // if (meta.alias) {
+        //     for (const alias of meta.alias) {
+        //         tagSet.add(alias)
+        //     }
+        // }
     }
 }
 const tagArr = Array.from(tagSet)
@@ -38,7 +38,7 @@ for (let i = 0; i < batchCount; i++) {
     })
 
     for (const record of res.data) {
-        result[record.name] = record.post_count as number
+        result[record.name.replaceAll('_', ' ').toLowerCase()] = record.post_count as number
     }
 }
 

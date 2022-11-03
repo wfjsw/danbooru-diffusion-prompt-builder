@@ -463,8 +463,6 @@ content:
       - cheek tug
   chin grab:
     name: 抬下巴
-  chin stroking:
-    name: 摸下巴
   covering eyes:
     name: 遮住眼睛
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_eyes.html
@@ -739,9 +737,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/wince.html
     alias:
       - cringe
-  eyelid pull:
-    name: 拉眼皮
-    image: 4baad99b43b7cb66ee0328810694e194f11309808ebf51483cb174e6256f81a8
   tsurime:
     name: 吊眼角
     image: b350cdd64e5d41efbe12e2337eb0979ee2e868569c33a36af4ea37ec217ba290
@@ -1215,3 +1210,4 @@ content:
   oral invitation:
     name: 迎接射精而伸出舌头
     restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/oral_invitation.html

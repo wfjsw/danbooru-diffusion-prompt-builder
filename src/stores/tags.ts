@@ -138,8 +138,8 @@ export const useTagStore = defineStore('tags', {
 
             if (query === '') return Object.entries(this.tags[category])
                     .sort(([k1], [k2]) =>
-                        (this.tagsPostCount[k2.replaceAll(' ', '_')] ?? 0)
-                        - (this.tagsPostCount[k1.replaceAll(' ', '_')] ?? 0))
+                        (this.tagsPostCount[k2] ?? 0)
+                        - (this.tagsPostCount[k1] ?? 0))
 
             const lcQuery = query.toLowerCase()
             const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
