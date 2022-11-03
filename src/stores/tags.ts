@@ -19,7 +19,7 @@ interface TagFileItem {
     restricted: boolean|null,
 }
 
-const searchCache = new LRU < string, Record<string, TagMeta & { score: number }>>({
+const searchCache = new LRU < string, [string, TagMeta & { score: number }][]>({
     max: 30,
     allowStale: true,
     updateAgeOnGet: true
@@ -134,14 +134,12 @@ export const useTagStore = defineStore('tags', {
         },
         searchCategory(category: string, query: string) {
             const settings = useSettingsStore()
-            if (!settings.showRestricted && this.tags[category]._restricted) return {}
+            if (!settings.showRestricted && this.tags[category]._restricted) return []
 
-            if (query === '') return Object.fromEntries(
-                Object.entries(this.tags[category])
+            if (query === '') return Object.entries(this.tags[category])
                     .sort(([k1], [k2]) =>
                         (this.tagsPostCount[k2.replaceAll(' ', '_')] ?? 0)
                         - (this.tagsPostCount[k1.replaceAll(' ', '_')] ?? 0))
-            )
 
             const lcQuery = query.toLowerCase()
             const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
@@ -149,8 +147,7 @@ export const useTagStore = defineStore('tags', {
             const cacheKey = JSON.stringify(['ByCategory', category, normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = Object.fromEntries(
-                normalizedLcQuery.reduce<[string, TagMeta & {score: number}][]>((a, q) =>
+            const result = normalizedLcQuery.reduce<[string, TagMeta & {score: number}][]>((a, q) =>
                     a
                     .filter(([, v]) => settings.showRestricted || !v.restricted)
                     .map(([key, meta]): [string, TagMeta & {score: number}] => {
@@ -168,12 +165,11 @@ export const useTagStore = defineStore('tags', {
                     .filter(([, v]) => v.score > 0)
                     .sort(([, va], [, vb]) => vb.score - va.score)
                 , Object.entries(this.tags[category]).map(([k, v]) => [k, {...v, score: 0}]))
-            )
             searchCache.set(cacheKey, result)
             return result
         },
         searchAll(query: string) {
-            if (query === '') return {}
+            if (query === '') return []
 
             const lcQuery = query.toLowerCase()
             const normalizedLcQuery = lcQuery.split(/_|\s/).filter(n => !!n)
@@ -181,8 +177,7 @@ export const useTagStore = defineStore('tags', {
             const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = Object.fromEntries(
-                normalizedLcQuery.reduce<[string, TagMeta & {category: string, score: number}][]>((a, q) =>
+            const result = normalizedLcQuery.reduce<[string, TagMeta & {category: string, score: number}][]>((a, q) =>
                     a
                     .map(([key, meta]): [string, TagMeta & {category: string, score: number}] => {
                         let score = meta.score
@@ -201,7 +196,6 @@ export const useTagStore = defineStore('tags', {
                     .filter(([, {score}]) => score > 0)
                     .sort(([, { score: a }], [, { score: b }]) => b - a)
                 , this.allTags.toArray().map(([k, v]) => [k, {...v, score: 0}]))
-            )
             searchCache.set(cacheKey, result)
             return result
         }

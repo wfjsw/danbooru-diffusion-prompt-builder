@@ -19,7 +19,7 @@ const tagStore = useTagStore()
 const scrollRef = ref<typeof ElScrollbar|null>(null)
 const searchTerms = ref('')
 const paginationSize = ref(20)
-const filteredTags = computed<[string, TagMeta][]>(() => Object.entries(tagStore.searchCategory(props.category, searchTerms.value)))
+const filteredTags = computed<[string, TagMeta][]>(() => tagStore.searchCategory(props.category, searchTerms.value))
 const filteredLength = computed(() => filteredTags.value.length)
 const paginatedTags = computed<TagCategory>(() =>
     Object.fromEntries(filteredTags.value.slice(0, paginationSize.value)))
