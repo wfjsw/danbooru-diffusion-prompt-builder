@@ -38,8 +38,6 @@ content:
   finger gun:
     name: 手枪手势
     wikiURL: https://danbooru.donmai.us/wiki_pages/finger_gun.html
-  hair_pull:
-    name: 拉头发
   hand on hip:
     name: 单手插腰
     image: aeb1a2bdcdb05d29baf78142144fed57945df4f4926a11275e5347681a4aa7f7
@@ -879,3 +877,9 @@ content:
   orchid fingers:
     name: 兰花指
     wikiURL: https://danbooru.donmai.us/wiki_pages/orchid_fingers.html
+  holding flower:
+    name: 拿着花
+    wikiURL: https://danbooru.donmai.us/wiki_pages/holding_flower.html
+  smelling flower:
+    name: 闻花
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smelling_flower.html

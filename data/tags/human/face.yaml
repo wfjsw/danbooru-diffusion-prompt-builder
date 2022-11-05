@@ -1050,12 +1050,8 @@ content:
   '>o<':
     name: '>o<'
     wikiURL: https://danbooru.donmai.us/wiki_pages/>o<.html
-  '@_@':
-    name: '@_@'
   '>_@':
     name: '>_@'
-  +_+:
-    name: +_+
   +_-:
     name: +_-
   '=_=':
@@ -1211,3 +1207,6 @@ content:
     name: 迎接射精而伸出舌头
     restricted: true
     wikiURL: https://danbooru.donmai.us/wiki_pages/oral_invitation.html
+  flower in mouth:
+    name: 花在嘴里
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower_in_mouth.html

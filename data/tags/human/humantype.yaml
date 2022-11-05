@@ -144,9 +144,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/ninja.html
     alias:
       - kunoichi
-  no_humans:
-    name: 非人
-    image: b65e5d2cda4ed740b6efac32754ea48c3efeac12329b8b27b2228b23dbac6085
   nun:
     name: 修女
     image: 98a3ff930f360685b43c686cc98eac916f3451cf5ea8aabed9de54e3688b2d6c

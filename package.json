@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "generate": "vite build --ssrManifest && vite build --ssr src/entry-server.ts --outDir dist/server && node prerender.js",
+    "generate": "vue-tsc --noEmit && vite build --ssrManifest && vite build --ssr src/entry-server.ts --outDir dist/server && node prerender.js",
     "dupcheck": "tsx ./src/cli/dupcheck.ts",
     "importimage": "tsx ./src/cli/importimage.ts",
     "importembedding": "tsx ./src/cli/importembedding.ts",

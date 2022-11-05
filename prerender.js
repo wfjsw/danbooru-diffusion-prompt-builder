@@ -1,4 +1,3 @@
-
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'url';
@@ -22,5 +21,5 @@ fs.writeFileSync(toAbsolute(filePath), html)
 console.log('pre-rendered:', filePath)
 
 // done, delete ssr manifest
-fs.unlinkSync(toAbsolute('dist/ssr-manifest.json'))
+fs.rmSync(toAbsolute('dist/ssr-manifest.json'))
 fs.rmSync(toAbsolute('dist/server'), {recursive: true})

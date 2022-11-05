@@ -17,13 +17,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
+          cache: yarn
           node-version: 18
 
       - name: Setup .yarnrc.yml
         run: |
           yarn config set npmScopes.fortawesome.npmRegistryServer $FA_REPO_URL
           yarn config set npmScopes.fortawesome.npmAlwaysAuth true
-          yarn config set npmScopes.fortawesome.npmAuthToken $FA_TOKEN
+          yarn config set npmScopes.fortawesome.npmAuthIdent $FA_TOKEN
         env:
           FA_REPO_URL: ${{ secrets.FA_REPO_URL }}
           FA_TOKEN: ${{ secrets.FA_TOKEN }}

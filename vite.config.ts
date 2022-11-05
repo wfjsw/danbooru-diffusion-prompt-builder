@@ -43,7 +43,12 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@use "~/variables.scss" as *;`,
+                additionalData: (content, path) => {
+                    if (path.includes('node_modules/element-plus')) {
+                        return `@use "~/variables.scss" as *;\n${content}`
+                    }
+                    return content
+                },
             },
         },
     },

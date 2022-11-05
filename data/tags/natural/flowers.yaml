@@ -28,3 +28,358 @@ content:
   flowers meadows:
     name: 花田
     image: eb7130a6a25bf3cac7e8461827c5e6027bbdb6554a8181d8612312e8e681ee3e
+  Alstroemeria (flower):
+    name: 百合水仙
+  Amaryllis (flower):
+    name: 孤挺花
+  Anemone:
+    name: 银莲花
+  Angel's trumpet:
+    name: 木曼陀罗
+  Anthurium:
+    name: 花烛
+  Azalea:
+    name: 杜鹃花
+  Baby's-breath:
+    name: 石头花
+  Begonia:
+    name: 秋海棠
+  Bellflower:
+    name: 风铃草
+  Chinese bellflower:
+    name: 桔梗
+  Bird of paradise flower:
+    name: 鹤望兰
+  Black-eyed Susan:
+    name: 黑心金光菊
+  Bleeding heart:
+    name: 荷包牡丹
+  Blueberry blossoms:
+    name: 蓝莓花
+  Bougainvillea:
+    name: 九重葛
+  Calla lily:
+    name: 马蹄莲
+  Camellia:
+    name: 山茶花
+  Carnation:
+    name: 康乃馨
+  Red carnation:
+    name: 红色康乃馨
+  Chamomile:
+    name: 西洋甘菊
+  Chinese lantern:
+    name: 酸浆
+  Chrysanthemum:
+    name: 菊属
+  Clivia:
+    name: 君子兰
+  Clematis:
+    name: 铁线莲
+  Columbine:
+    name: 耬斗菜
+  Cockscomb (flower):
+    name: 青葙
+  Cornflower:
+    name: 矢车菊
+  Cosmos:
+    name: 秋英/大波斯菊/秋樱
+  Crocus:
+    name: 番紅花
+  Cymbidium:
+    name: 蕙兰属
+  Daffodil:
+    name: 水仙
+  Dahlia:
+    name: 大丽花
+  Daisy:
+    name: 雏菊
+  Dimorphotheca:
+    name: 异果菊
+  Dandelion:
+    name: 蒲公英
+  Dianthus:
+    name: 石竹
+  Dipsacaceae:
+    name: 川续断科
+  Dusty miller:
+    name: 银叶菊
+  Edelweiss:
+    name: 高山火绒草
+  Epiphyllum:
+    name: 昙花
+  Eustoma:
+    name: 洋桔梗
+  Flax:
+    name: 亚麻
+  Forget-me-not:
+    name: 勿忘草
+  Forsythia:
+    name: 连翘
+  Four o'clock (flower):
+    name: 紫茉莉
+  Foxglove:
+    name: 毛地黄
+  Freesia:
+    name: 小苍兰
+  Fuchsia:
+    name: 倒挂金钟
+  Hawthorn (plant):
+    name: 山楂
+  Hellebore:
+    name: 铁筷子/嚏根草
+  Hibiscus:
+    name: 扶桑花
+  Heliconia:
+    name: 蝎尾蕉
+  Hollyhock:
+    name: 蜀葵属
+  Hyacinth:
+    name: 风信子
+  Hydrangea:
+    name: 紫阳花
+  Genista (flower):
+    name: 染料木属
+  Gentiana (flower):
+    name: 龙胆属
+  Geranium:
+    name: 天竺葵属
+  Gerbera:
+    name: 大丁草属
+  Gladiolus:
+    name: 唐菖蒲属
+  Gloriosa (flower):
+    name: 嘉兰
+  Grass lily:
+    name: 伞花虎眼万年青
+  Great burnet:
+    name: 地榆
+  Jasmine:
+    name: 素馨属/素英属/茉莉花
+  Iris:
+    name: 鸢尾属
+  Kalanchoe:
+    name: 长寿花/家乐花/矮生伽蓝菜/圣诞伽蓝菜/寿星花/布洛斯费尔德高凉菜
+  Kerria japonica:
+    name: 棣棠花/山吹
+  Lantana (flower):
+    name: 马缨丹属
+  Larkspur:
+    name: 翠雀属
+  Lavender:
+    name: 薰衣草
+  Lilac:
+    name: 丁香属
+  Lily:
+    name: 百合属
+  Tiger lily:
+    name: 卷丹
+  Lily of the valley:
+    name: 铃兰
+  Lisianthus (flower):
+    name: 洋桔梗属
+  Magnolia:
+    name: 荷花玉兰/洋玉兰/广玉兰
+  Marigold:
+    name: 万寿菊属
+  Marsh marigold:
+    name: 驴蹄草/驴蹄菜/沼泽金盏花/立金花
+  Mimosa (flower):
+    name: 含羞草
+  Morning glory:
+    name: 牵牛花
+  Moonflower:
+    name: 月光花/嫦娥奔月/天茄儿/天茄子/夜颜/夕颜
+  Gourd blossom:
+    name: 葫芦花 (辐射76)
+  Nemophila:
+    name: 粉蝶花属/喜林草属/幌菊属
+  Nigella:
+    name: 黑种草
+  Oleander:
+    name: 夹竹桃
+  Orange blossoms:
+    name: 橙花
+  Orchid:
+    name: 兰科/兰花/胡姬花
+  Oncidium:
+    name: 文心兰属
+  Osmanthus:
+    name: 木樨属/木犀属/桂花属/桂花树属
+  Gold osmanthus:
+    name: 金木犀
+  Pansy:
+    name: 三色紫罗兰/三色堇
+  Passion flower:
+    name: 西番莲属
+  Paulownia:
+    name: 毛泡桐
+  Peach blossom:
+    name: 桃花
+  Pentas (flower):
+    name: 五星花属/繁星花属
+  Peony:
+    name: 芍药属
+  Perennial:
+    name: 多年生植物
+  Periwinkle:
+    name: 蔓长春花属
+  Petunia (flower):
+    name: 碧冬茄属
+  Pieris japonica:
+    name: 马醉木
+  Plant:
+    name: 植物
+  Clover:
+    name: 三叶草
+  Lotus:
+    name: 莲花
+  Lily pad:
+    name: 睡莲
+  Potted plant:
+    name: 盆栽
+  Plum blossoms:
+    name: 梅花
+  Plumeria:
+    name: 缅栀花
+  Poinsettia:
+    name: 一品红/圣诞红/圣诞花
+  Pomegranate flower:
+    name: 石榴花
+  Poppy:
+    name: 罂粟
+  Portulaca:
+    name: 马齿苋
+  Potato flower:
+    name: 土豆花
+  Potentilla:
+    name: 委陵菜属
+  Rafflesia:
+    name: 大花草属
+  Ranunculus:
+    name: 毛茛属
+  Buttercup:
+    name: 花毛茛
+  Rapeseed blossoms:
+    name: 欧洲油菜花
+  Red ginger:
+    name: 红姜花
+  Reimu:
+    name: 灵梦花
+  Rhododendron:
+    name: 杜鹃花属/映山红/满山红/山石榴
+  Rose:
+    name: 玫瑰/蔷薇
+  Black rose:
+    name: 黑玫瑰
+  Blue rose:
+    name: 蓝玫瑰
+  Brown rose:
+    name: 棕色玫瑰
+  Green rose:
+    name: 绿色玫瑰
+  Grey rose:
+    name: 灰色玫瑰
+  Orange rose:
+    name: 橙玫瑰
+  Pink rose:
+    name: 粉红玫瑰
+  Purple rose:
+    name: 紫玫瑰
+  Red rose:
+    name: 红玫瑰
+  White rose:
+    name: 白玫瑰
+  Yellow rose:
+    name: 黄玫瑰
+  Multicolored rose:
+    name: 多色玫瑰
+  Rudbeckia:
+    name: 金光菊
+  Snapdragon:
+    name: 金鱼草
+  Snowdrop:
+    name: 雪花莲属
+  Spathiphyllum:
+    name: 白鹤芋属
+  Spider lily:
+    name: 彼岸花
+  Strawberry blossoms:
+    name: 草莓花
+  Sunflower:
+    name: 向日葵
+  Thistle:
+    name: 蓟属
+  Trumpet creeper:
+    name: 厚萼凌霄
+  Tulip:
+    name: 郁金香
+  Water lily flower:
+    name: 睡莲科
+  Wax flower:
+    name: 风蜡花属
+  Wisteria:
+    name: 紫藤
+  Wolfsbane:
+    name: 乌头属
+  Violet:
+    name: 堇菜属
+  Zinnia:
+    name: 百日菊属
+  Black lotus:
+    name: 黑莲花
+  Fire flower:
+    name: 烈焰花 (原神)
+  Glaze lily:
+    name: 琉璃百合 (原神)
+  Gracidea:
+    name: 葛拉西蒂亚花 (宝可梦)
+  Ice flower:
+    name: 冰雾花 (原神)
+  Lunar tear:
+    name: 月之泪 (尼尔)
+  Qingxin flower:
+    name: 清心 (原神)
+  Silent princess:
+    name: 静谧公主 (塞尔达)
+  Silk flower:
+    name: 霓裳花 (原神)
+  Sweet flower:
+    name: 甜甜花 (原神)
+  bouquet:
+    name: 花束
+  coughing flowers:
+    name: 咳出花
+  field:
+    name: 田野
+  flower field:
+    name: 花田
+  meadow:
+    name: 草甸
+  flower (symbol):
+    name: 花(符号)
+  flower bed:
+    name: 花床
+  flower bracelet:
+    name: 花手镯
+  flower on liquid:
+    name: 水上的花
+  flower trim:
+    name: 花饰
+  floral print:
+    name: 花朵图案(印花)
+  hanafuda:
+    name: 花札
+  garden:
+    name: 花园
+  gardening:
+    name: 园艺
+  lei:
+    name: 夏威夷花环
+  on flower:
+    name: 在花上
+  petals on liquid:
+    name: 水面上漂着花瓣
+  wreath:
+    name: 花环
+

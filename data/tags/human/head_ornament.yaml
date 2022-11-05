@@ -633,3 +633,10 @@ content:
   snowflake hair ornament:
     name: 雪花发饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/snowflake_hair_ornament.html
+  flower on head:
+    name: 头上有花
+  flower necklace:
+    name: 花项链
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower_necklace.html
+  head wreath:
+    name: 头上戴着花冠
