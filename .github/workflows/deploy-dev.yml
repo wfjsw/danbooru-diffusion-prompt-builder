@@ -1,4 +1,4 @@
-name: Deploy on development environment
+name: Deploy on preview environment
 
 on:
   push:

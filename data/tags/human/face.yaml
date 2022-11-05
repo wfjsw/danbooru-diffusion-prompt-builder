@@ -880,6 +880,8 @@ content:
   worried:
     name: 担忧的
     wikiURL: https://danbooru.donmai.us/wiki_pages/worried.html
+    alias:
+      - concerned
   tired:
     name: 累
     wikiURL: https://danbooru.donmai.us/wiki_pages/tired.html
