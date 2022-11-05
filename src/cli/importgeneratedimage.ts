@@ -21,7 +21,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 import {type TagCategories} from '../datatypes'
 import sharp from 'sharp'
 import {createHash} from 'crypto'
@@ -34,7 +34,7 @@ const tagSet: Map<string, string> = new Map()
 
 for (const file of tagFiles) {
     const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(root, 'data/tags', file), 'utf-8')) as TagCategories
-    for (const [tag, meta] of Object.entries(tagData.content)) {
+    for (const [tag] of Object.entries(tagData.content)) {
         tagSet.set(tag, file)
     }
 }

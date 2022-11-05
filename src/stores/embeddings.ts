@@ -40,7 +40,7 @@ interface EmbeddingFile {
     suggestNegative: string[]|null,
 }
 
-const searchCache = new LRU < string, (Embedding & { score: number })[]>({
+const searchCache = new LRU<string, (Embedding & { score: number })[]>({
     max: 30,
     allowStale: true,
     updateAgeOnGet: true

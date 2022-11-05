@@ -31,16 +31,16 @@ const tagStore = useTagStore()
 const presetStore = usePresetStore()
 const embeddingStore = useEmbeddingStore()
 const hypernetworkStore = useHypernetworkStore()
-tagStore.load();
-presetStore.load();
-embeddingStore.load();
-hypernetworkStore.load();
+tagStore.load()
+presetStore.load()
+embeddingStore.load()
+hypernetworkStore.load()
 
 if (import.meta.env.PROD) {
     const beforeUnloadListener = (event: any) => {
-        event.preventDefault();
-        return event.returnValue = "Are you sure you want to exit?";
-    };
-    window.addEventListener("beforeunload", beforeUnloadListener);
+        event.preventDefault()
+        return event.returnValue = 'Are you sure you want to exit?'
+    }
+    window.addEventListener('beforeunload', beforeUnloadListener)
 }
 

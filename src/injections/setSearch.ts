@@ -19,4 +19,5 @@
 
 import {InjectionKey} from 'vue'
 
+// eslint-disable-next-line no-unused-vars
 export const setSearch = Symbol() as InjectionKey<(criteria: string) => void>

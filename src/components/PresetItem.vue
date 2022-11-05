@@ -42,7 +42,7 @@ const copyHintVisible = ref(false)
 const inPositive = computed(() => cartStore.existsPositive('preset', props.meta.name, props.category))
 const inNegative = computed(() => cartStore.existsNegative('preset', props.meta.name, props.category))
 
-async function copyToClipboard(full: boolean = false) {
+async function copyToClipboard(full = false) {
     await window.navigator.clipboard.writeText(props.meta.content
         .map(n => full ? wrapParenByWeight(n.tag, new Decimal(n.weight), settingsStore.newEmphasis) : n.tag)
         .join(', '))

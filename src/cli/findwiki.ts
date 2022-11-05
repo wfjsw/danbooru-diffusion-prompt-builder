@@ -22,7 +22,7 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import axios from 'axios'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 import {type TagCategories} from '../datatypes'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -51,7 +51,7 @@ for (const tag of tagSet) {
         }
     })
     for (const record of res.data) {
-        const recordTagName = record.title.replaceAll('_', ' ')
+        const recordTagName: string = record.title.replaceAll('_', ' ')
         const tagFile = tagLoc.get(recordTagName)
         if (tagFile) {
             const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', tagFile), 'utf-8')) as TagCategories

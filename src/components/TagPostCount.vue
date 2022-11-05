@@ -35,11 +35,11 @@ const humanizedCount = computed(() => {
     } else if (rawCount.value < 10000) {
         return rawCount.value
     } else if (rawCount.value < 10000000) {
-        return Math.floor(rawCount.value / 1000) + 'k'
+        return `${Math.floor(rawCount.value / 1000)}k`
     } else if (rawCount.value < 10000000000) {
-        return Math.floor(rawCount.value / 1000000) + 'm'
+        return `${Math.floor(rawCount.value / 1000000)}m`
     } else {
-        return Math.floor(rawCount.value / 1000000000) + 'b'
+        return `${Math.floor(rawCount.value / 1000000000)}b`
     }
 })
 

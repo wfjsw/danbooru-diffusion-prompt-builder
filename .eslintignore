@@ -1,0 +1,11 @@
+dist/
+node_modules/
+.yarn/
+.idea/
+.vscode/
+workspace/
+src/vite-env.d.ts
+webStorm.config.js
+.eslintrc.cjs
+prerender.js
+src/fontawesome-svg-core.js

@@ -27,6 +27,6 @@ export const ClientOnly = defineComponent({
             show.value = true
         })
 
-        return () => (show.value && slots.default ? slots.default() : null)
+        return () => show.value && slots.default ? slots.default() : null
     }
 })

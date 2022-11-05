@@ -19,9 +19,9 @@
 
 import path from 'path'
 import sharp from 'sharp'
-import {fileURLToPath} from "url";
+import {fileURLToPath} from 'url'
 import {createHash} from 'crypto'
-import fs from "fs";
+import fs from 'fs'
 
 const inputModelPath = process.argv[2]
 

@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 
 import { render } from './dist/server/entry-server.js'
 const toAbsolute = (p) => path.resolve(path.dirname(fileURLToPath(import.meta.url)), p)
@@ -13,10 +13,10 @@ const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const [appHtml, preloadLinks] = await render(manifest)
 
 const html = template
-.replace(`<!--preload-links-->`, preloadLinks)
-.replace(`<!--app-html-->`, appHtml)
+.replace('<!--preload-links-->', preloadLinks)
+.replace('<!--app-html-->', appHtml)
 
-const filePath = `dist/index.html`
+const filePath = 'dist/index.html'
 fs.writeFileSync(toAbsolute(filePath), html)
 console.log('pre-rendered:', filePath)
 

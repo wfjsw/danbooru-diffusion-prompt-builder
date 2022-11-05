@@ -22,7 +22,7 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import axios from 'axios'
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url'
 import {type TagCategories} from '../datatypes'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -55,7 +55,7 @@ for (let i = 0; i < batchCount; i++) {
         },
     })
     for (const record of res.data) {
-        const recordTagName = record.name.replaceAll('_', ' ')
+        const recordTagName: string = record.name.replaceAll('_', ' ')
         const tagFile = tagLoc.get(recordTagName)
         console.log(recordTagName, tagFile, record.consequent_aliases)
         if (tagFile) {

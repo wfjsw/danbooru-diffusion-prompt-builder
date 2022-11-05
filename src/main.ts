@@ -20,7 +20,7 @@
 import {createApp as createVueApp} from 'vue'
 import { ID_INJECTION_KEY } from 'element-plus'
 import App from './App.vue'
-import {createPinia} from "pinia";
+import {createPinia} from 'pinia'
 import { vLoading, ElInfiniteScroll } from 'element-plus'
 
 export function createApp() {

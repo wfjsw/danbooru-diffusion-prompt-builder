@@ -21,8 +21,8 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
-import { fileURLToPath } from 'url';
-import type {TagCategories} from "../datatypes";
+import { fileURLToPath } from 'url'
+import type {TagCategories} from '../datatypes'
 
 const resolution = new Set()
 const dirname = path.dirname(fileURLToPath(import.meta.url))

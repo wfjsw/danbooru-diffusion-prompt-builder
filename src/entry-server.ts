@@ -17,17 +17,23 @@
  *
  ******************************************************************************/
 
-// @ts-nocheck
+// @ts-nocheck not really a typescript file
+
 import { renderToString } from 'vue/server-renderer'
 import { createApp } from './main'
 
 function isPathSeparator(code) {
-    return code === CHAR_FORWARD_SLASH || code === CHAR_BACKWARD_SLASH;
+    return code === '/' || code === '\\'
 }
 
 function isWindowsDeviceRoot(code) {
-    return (code >= CHAR_UPPERCASE_A && code <= CHAR_UPPERCASE_Z) ||
-        (code >= CHAR_LOWERCASE_A && code <= CHAR_LOWERCASE_Z);
+    return code >= 'A' && code <= 'Z' ||
+        code >= 'a' && code <= 'z'
+}
+
+function validateString(value, name) {
+  if (typeof value !== 'string')
+    throw new Error(name, 'string', value)
 }
 
 /**
@@ -37,41 +43,41 @@ function isWindowsDeviceRoot(code) {
  */
 function basename(path, suffix) {
     if (suffix !== undefined)
-        validateString(suffix, 'ext');
-    validateString(path, 'path');
-    let start = 0;
-    let end = -1;
-    let matchedSlash = true;
+        validateString(suffix, 'ext')
+    validateString(path, 'path')
+    let start = 0
+    let end = -1
+    let matchedSlash = true
 
     // Check for a drive letter prefix so as not to mistake the following
     // path separator as an extra separator at the end of the path that can be
     // disregarded
     if (path.length >= 2 &&
         isWindowsDeviceRoot(path.charCodeAt(0)) &&
-        path.charCodeAt(1) === CHAR_COLON) {
-        start = 2;
+        path.charCodeAt(1) === ':') {
+        start = 2
     }
 
     if (suffix !== undefined && suffix.length > 0 && suffix.length <= path.length) {
         if (suffix === path)
-            return '';
-        let extIdx = suffix.length - 1;
-        let firstNonSlashEnd = -1;
+            return ''
+        let extIdx = suffix.length - 1
+        let firstNonSlashEnd = -1
         for (let i = path.length - 1; i >= start; --i) {
-            const code = path.charCodeAt(i);
+            const code = path.charCodeAt(i)
             if (isPathSeparator(code)) {
                 // If we reached a path separator that was not part of a set of path
                 // separators at the end of the string, stop now
                 if (!matchedSlash) {
-                    start = i + 1;
-                    break;
+                    start = i + 1
+                    break
                 }
             } else {
                 if (firstNonSlashEnd === -1) {
                     // We saw the first non-path separator, remember this index in case
                     // we need it if the extension ends up not matching
-                    matchedSlash = false;
-                    firstNonSlashEnd = i + 1;
+                    matchedSlash = false
+                    firstNonSlashEnd = i + 1
                 }
                 if (extIdx >= 0) {
                     // Try to match the explicit extension
@@ -79,43 +85,43 @@ function basename(path, suffix) {
                         if (--extIdx === -1) {
                             // We matched the extension, so mark this as the end of our path
                             // component
-                            end = i;
+                            end = i
                         }
                     } else {
                         // Extension does not match, so our result is the entire path
                         // component
-                        extIdx = -1;
-                        end = firstNonSlashEnd;
+                        extIdx = -1
+                        end = firstNonSlashEnd
                     }
                 }
             }
         }
 
         if (start === end)
-            end = firstNonSlashEnd;
+            end = firstNonSlashEnd
         else if (end === -1)
-            end = path.length;
-        return StringPrototypeSlice(path, start, end);
+            end = path.length
+        return path.slice(start, end)
     }
     for (let i = path.length - 1; i >= start; --i) {
         if (isPathSeparator(path.charCodeAt(i))) {
             // If we reached a path separator that was not part of a set of path
             // separators at the end of the string, stop now
             if (!matchedSlash) {
-                start = i + 1;
-                break;
+                start = i + 1
+                break
             }
         } else if (end === -1) {
             // We saw the first non-path separator, mark this as the end of our
             // path component
-            matchedSlash = false;
-            end = i + 1;
+            matchedSlash = false
+            end = i + 1
         }
     }
 
     if (end === -1)
-        return '';
-    return path.slice(start, end);
+        return ''
+    return path.slice(start, end)
 }
 
 export async function render(manifest) {
