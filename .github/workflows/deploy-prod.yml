@@ -4,9 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: Checkout repo
@@ -29,8 +32,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-        env:
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: Check Tag Duplicity
         run: yarn run dupcheck
@@ -38,25 +39,6 @@ jobs:
       - name: Build project
         run: yarn generate
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-bundle
-          path: ./dist
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    steps:
-      - uses: actions/download-artifact@v3
-        name: Download artifact
-        with:
-          name: production-bundle
-          path: ./dist
       - name: Publish app
         uses: cloudflare/pages-action@1
         with:
