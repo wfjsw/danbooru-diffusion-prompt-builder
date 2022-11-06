@@ -93,4 +93,8 @@ export default defineConfig({
             'masonry-layout',
         ]
     },
+    clearScreen: false,
+    define: {
+        __BUILD_TIMESTAMP__: Date.now(),
+    }
 })

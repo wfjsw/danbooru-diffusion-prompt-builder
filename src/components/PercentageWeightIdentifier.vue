@@ -33,14 +33,14 @@ const oldWeight = ref(props.weight)
 const boundWeight = computed({
     get: () => props.weight.times(100).toDecimalPlaces(1).toNumber(),
     set: (value) => {
-        emit('update:weight', (new Decimal(value)).div(100))
+        emit('update:weight', new Decimal(value).div(100))
     }
 })
 const editMode = ref(false)
 const inputBox = ref<typeof ElInput|null>(null)
 
 const computedWeight = computed(() => boundWeight.value?.toFixed(1))
-const color = computed(() => style.warning)
+const color = computed(() => style.primary)
 
 function turnOnEditMode() {
     oldWeight.value = new Decimal(props.weight)
@@ -64,12 +64,16 @@ function cancelEditMode() {
 </template>
 
 <style module lang="scss">
+.primary {
+    color: hsl(210, 100%, 62%);
+}
+
 .warning {
-    color: var(--el-color-warning);
+    color: #cc9900;
 }
 
 .success {
-    color: var(--el-color-success);
+    color: #4eb183;
 }
 
 .edit {

@@ -21,7 +21,8 @@
 
 import type Masonry from 'masonry-layout'
 import type {Ref} from 'vue'
-import {onMounted, onUnmounted, nextTick, ref, watch, toRef} from 'vue'
+import { onMounted, onUnmounted, nextTick, ref, watch, toRef, provide } from 'vue'
+import { MasonryReload } from '../injections/masonryReload'
 import {debounce} from 'lodash-es'
 
 const props = defineProps<{
@@ -47,6 +48,8 @@ if (!import.meta.env.SSR) {
     }, 250)
 
     const delayedReloadLayoutWrapper = () => setTimeout(() => nextTick(() => delayedReloadLayout()), 250)
+
+    provide(MasonryReload, () => nextTick(delayedReloadLayout))
 
     onMounted(async () => {
         const Masonry = (await import('masonry-layout')).default

@@ -18,9 +18,8 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {computed, toRefs} from 'vue'
+import {computed} from 'vue'
 import {ElButton, ElCard, ElImage} from 'element-plus'
-import {useClipboard} from '@vueuse/core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faCloudArrowDown, faImageSlash} from '@fortawesome/pro-regular-svg-icons'
 import type {Hypernetwork} from '../datatypes'

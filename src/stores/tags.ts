@@ -58,7 +58,10 @@ export const useTagStore = defineStore('tags', {
             return filtered.sort()
         },
         categorySize: (state) => {
-            return Object.fromEntries(Object.entries(state.tags).map(([k, v]) => [k, Object.keys(v).length]))
+            const settings = useSettingsStore()
+            return Object.fromEntries(
+                Object.entries(state.tags)
+                    .map(([k, v]) => [k, Object.values(v).filter((v) => settings.showRestricted || !v.restricted).length]))
         },
         allTags: (state) => {
             const settings = useSettingsStore()
@@ -156,6 +159,7 @@ export const useTagStore = defineStore('tags', {
             if (!settings.showRestricted && this.tags[category]._restricted) return []
 
             if (query === '') return Object.entries(this.tags[category])
+                    .filter(([, v]) => settings.showRestricted || !v.restricted)
                     .sort(([k1], [k2]) =>
                         (this.tagsPostCount[k2] ?? 0)
                         - (this.tagsPostCount[k1] ?? 0))

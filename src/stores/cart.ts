@@ -1,3 +1,22 @@
+/*******************************************************************************
+ * Danbooru Diffusion Prompt Builder
+ * Copyright (C) 2022  Jabasukuriputo Wang
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ ******************************************************************************/
+
 import {Set as ImmutableSet, OrderedSet as ImmutableOrderedSet} from 'immutable'
 import {defineStore} from 'pinia'
 import {useTagStore} from './tags'
@@ -11,102 +30,92 @@ export interface CartItemPresetChild {
     name: string,
     category: string | null,
     type: 'tag',
-    level: 'presetChild'
     weight: Decimal,
+    children: null,
     parent: CartItemPreset,
 }
 
 export type CartSimpleType = 'tag' | 'embedding'
-export type CartCompositeType = 'preset' | 'composition' | 'editing' | 'alternate'
+export type CartSwitchableType = 'composition' | 'editing' | 'alternate' | 'group'
+export type CartCompositeType = 'preset' | CartSwitchableType
 
 export type CartType = CartSimpleType | CartCompositeType
 
 export interface CartItemSimple {
     label: string,
-    type: 'tag' | 'embedding',
-    category: string | null,
     name: string,
-    level: 'free',
+    category: string | null,
+    type: CartSimpleType,
     weight: Decimal,
-    parent: null,
+    children: null,
+    parent: CartItemComplex|null,
 }
 
 export interface CartItemPreset {
     label: string,
     type: 'preset',
     name: string,
-    level: 'free',
     category: string,
+    weight: Decimal,
     children: CartItemPresetChild[],
-    parent: null,
+    parent: CartItemComplex|null,
 }
 
-export interface CartItemCompositionChild {
-    label: string,
-    name: string,
-    category: string | null,
-    type: 'tag' | 'embedding',
-    level: 'compositionChild',
-    weight: Decimal,
-    parent: CartItemComposition,
-}
+// there are 2 weight
+export type CartItemCompositionChild = CartItemGroup & {parent: CartItemComposition, weight: Decimal}
 
 export interface CartItemComposition {
     label: '标签混合',
     type: 'composition',
-    level: 'free',
+    weight: Decimal, 
     children: CartItemCompositionChild[],
-    parent: null,
+    parent: CartItemComplex|null,
 }
 
-export interface CartItemEditingChildTag {
-    label: string,
-    name: string,
-    category: string | null,
-    level: 'editingChild',
-    type: 'tag' | 'embedding',
-    parent: CartItemEditing,
-}
-
-export interface CartItemEditingChildNull {
+export interface CartItemNull {
     label: '无标签',
     type: 'null',
-    level: 'editingChild',
-    parent: CartItemEditing,
+    children: null,
+    parent: CartItemComplex|null,
 }
 
-export type CartItemEditingChild = CartItemEditingChildTag | CartItemEditingChildNull
+export type CartItemEditingChild = (CartItem | CartItemNull) & { parent: CartItemEditing }
 
 export interface CartItemEditing {
     label: '标签替换',
     type: 'editing',
-    level: 'free',
     breakpoint: Decimal,
+    weight: Decimal,
     children: [CartItemEditingChild, CartItemEditingChild],
-    parent: null,
+    parent: CartItemComplex|null,
 }
 
-export interface CartItemAlternateChild {
-    label: string,
-    name: string,
-    category: string | null,
-    type: 'tag'|'embedding',
-    level: 'alternateChild',
-    parent: CartItemAlternate,
-}
+export type CartItemAlternateChild = CartItem & {parent: CartItemAlternate}
 
 export interface CartItemAlternate {
     label: '标签轮转',
     type: 'alternate',
-    level: 'free',
+    weight: Decimal,
     children: CartItemAlternateChild[],
-    parent: null,
+    parent: CartItemComplex|null,
 }
 
-export type CartItemComplex = CartItemComposition | CartItemEditing | CartItemAlternate
+export type CartItemGroupChild = CartItem & {parent: CartItemGroup}
+
+export interface CartItemGroup {
+    label: '标签组',
+    type: 'group',
+    weight: Decimal,
+    children: CartItemGroupChild[],
+    parent: CartItemComplex|null,
+}
+
+export type CartItemComplex = CartItemComposition | CartItemEditing | CartItemAlternate | CartItemGroup
 
 export type CartItem = CartItemSimple | CartItemPreset | CartItemComplex
-export type CartChildItem = CartItemPresetChild | CartItemCompositionChild | CartItemEditingChild | CartItemAlternateChild
+export type CartChildItem = CartItemPresetChild | CartItemCompositionChild | CartItemEditingChild | CartItemAlternateChild | CartItemGroupChild
+
+export type CartItemNullable = CartItem | CartItemNull
 
 export interface Cart {
     positive: CartItem[],
@@ -132,17 +141,8 @@ function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
 
 export function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
     if (newEmphasis) {
-        content = content
-            .replaceAll('(', '\\(').replaceAll(')', '\\)')
-            .replaceAll('[', '\\[').replaceAll(']', '\\]')
-    } else {
-        content = content
-            .replaceAll('{', '\\{').replaceAll('}', '\\}')
-            .replaceAll('[', '\\[').replaceAll(']', '\\]')
-    }
-    if (newEmphasis) {
-        if (!weight.equals(1)) {
-            return `(${content}:${weight.toFixed(3)})`
+        if (!weight.toDecimalPlaces(8).equals(1)) {
+            return `(${content}:${weight.toDecimalPlaces(8)})`
         }
     } else {
         const oldWeight = weight.log(1.05).toInteger().toNumber()
@@ -153,36 +153,52 @@ export function wrapParenByWeight(content: string, weight: Decimal, newEmphasis:
     return content
 }
 
-function tagArrayToString(items: CartItem[], newEmphasis: boolean): string {
-    return ImmutableOrderedSet.of(...items.reduce((a: string[], t: CartItem): string[] => {
+function tagArrayToString(items: (CartItemNullable|CartItemPresetChild)[], newEmphasis: boolean): string {
+    return ImmutableOrderedSet.of(...items.reduce((a: string[], t): string[] => {
         if (t.type === 'tag' || t.type === 'embedding') {
-            a.push(wrapParenByWeight(t.name, t.weight, newEmphasis))
+            let name = t.name.replaceAll('\\', '\\\\')
+            if (newEmphasis) {
+                name = name
+                    .replaceAll('(', '\\(').replaceAll(')', '\\)')
+                    .replaceAll('[', '\\[').replaceAll(']', '\\]')
+            } else {
+                name = name
+                    .replaceAll('{', '\\{').replaceAll('}', '\\}')
+                    .replaceAll('[', '\\[').replaceAll(']', '\\]')
+            }
+            a.push(wrapParenByWeight(name, t.weight, newEmphasis))
         } else if (t.type === 'preset') {
-            return a.concat(t.children.map(n => wrapParenByWeight(n.name, n.weight, newEmphasis)))
+            a.push(tagArrayToString(t.children, newEmphasis))
         } else if (t.type === 'composition') {
             if (newEmphasis) {
-                a.push(t.children.map(n => n.weight.eq(1) ? n.name : `${n.name} :${n.weight.toDecimalPlaces(3).toNumber()}`).join(' AND '))
+                a.push(t.children.map(n => n.weight.eq(1) ? tagArrayToString(n.children, newEmphasis)
+                    : `${tagArrayToString(n.children, newEmphasis)} :${n.weight.toDecimalPlaces(3).toNumber()}`).join(' AND '))
             } else {
-                a.push(t.children.map(n => n.weight.eq(1) ? n.name : `${n.name}:${n.weight.toDecimalPlaces(3).toNumber()}`).join('|'))
+                a.push(t.children.map(n => n.weight.eq(1) ? tagArrayToString(n.children, newEmphasis)
+                    : `${tagArrayToString(n.children, newEmphasis)}:${n.weight.toDecimalPlaces(3).toNumber()}`).join('|'))
             }
         } else if (t.type === 'alternate') {
             if (newEmphasis) {
-                a.push(`[${t.children.map(n => n.name).join('|')}]`)
+                a.push(wrapParenByWeight(`[${t.children.map(n => tagArrayToString([n], newEmphasis)).join('|')}]`, t.weight, newEmphasis))
             } else {
-                return a.concat(t.children.map(n => n.name))
+                a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
             }
         } else if (t.type === 'editing') {
             if (newEmphasis) {
-                a.push(`[${t.children[0].type !== 'null' ? t.children[0].name : ''}:${t.children[1].type !== 'null' ? t.children[1].name : ''}:${t.breakpoint.toDecimalPlaces(3).toNumber()}]`)
+                a.push(wrapParenByWeight(`[${t.children[0].type !== 'null' ? tagArrayToString([t.children[0]], newEmphasis) 
+                    : ''}:${t.children[1].type !== 'null' ? tagArrayToString([t.children[1]], newEmphasis)
+                    : ''}:${t.breakpoint.toDecimalPlaces(3).toNumber()}]`, t.weight, newEmphasis))
             } else {
-                a.push(...t.children.filter((n): n is CartItemEditingChildTag => n.type !== 'null').map(n => n.name))
+                a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
             }
+        } else if (t.type === 'group') {
+            a.push(tagArrayToString(t.children, newEmphasis))
         }
         return a
-    }, [] as string[])).join(', ')
+    }, [])).join(', ')
 }
 
-function tagNameMapper(n: CartItem): string|string[] {
+function tagNameMapper(n: CartItem|CartItemPresetChild): string|string[] {
     switch (n.type) {
         case 'tag':
         case 'embedding':
@@ -190,9 +206,11 @@ function tagNameMapper(n: CartItem): string|string[] {
         case 'preset':
         case 'composition':
         case 'alternate':
-            return n.children.map(e => e.name)
+        case 'group':
+            return n.children.flatMap(e => tagNameMapper(e))
         case 'editing':
-            return n.children.filter((e): e is CartItemEditingChildTag => e.type === 'tag').map(e => e.name)
+            return n.children.filter((e): e is CartItem & { parent: CartItemEditing } => e.type !== 'null')
+                .flatMap(e => tagNameMapper(e))
     }
 }
 
@@ -206,12 +224,13 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
         for (let i = 0; i < ref.length; i++) {
             if (ref[i].type === 'preset') {
                 const preset = ref[i] as CartItemPreset
+                const parent = preset.parent
                 const idx = preset
                     .children.findIndex(n => n.type === type && n.name === tagName)
                 if (idx !== -1) {
                     // Decompose the preset
                     const decomposedTagArray: CartItemSimple[] = preset.children
-                        .filter(n => n.name !== tagName).map(n => ({...n, level: 'free', parent: null}))
+                        .filter(n => n.name !== tagName).map(n => ({...n, parent}))
                     ref.splice(i, 1, ...decomposedTagArray)
                 }
             } else if (
@@ -229,11 +248,12 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
                 } else if (item.children.length === 1) {
                     // Only one effective item in this mixture
                     const child = item.children[0]
+                    const parent = item.parent
                     if (child.type === 'tag' || child.type === 'embedding') {
                         if (item.type === 'editing') {
-                            item.children.push({level: 'editingChild', type: 'null', label: '无标签', parent: item})
+                            item.children.push({type: 'null', label: '无标签', parent: item, children: null})
                         } else {
-                            ref.splice(i, 1, {...child, level: 'free', parent: null, weight: new Decimal(1)})
+                            ref.splice(i, 1, {...child, parent, weight: new Decimal(1)})
                         }
                     }
                 }
@@ -257,15 +277,63 @@ function appendTag(ref: CartItem[], tagName: string, weight: Decimal,
     if (existsFn('tag', tagName)) return
     const tag = tagStore.resolve(tagName)
     if (tag !== null) {
+        // if (Array.isArray(ref)) {
+        // root
         ref.push({
             label: `${tagName} - ${tag.meta.name}`,
             type: 'tag',
             name: tagName,
-            level: 'free',
             category: tag.meta.category,
             weight,
+            children: null,
             parent: null,
         })
+        // } else {
+        //     // TODO: Unused and broken. forget about this for now
+
+        //     if (ref.type === 'composition') {
+        //         const group: CartItemCompositionChild = {
+        //             label: '标签组',
+        //             parent: ref,
+        //             type: 'group',
+        //             children: [],
+        //             weight: new Decimal(1),
+        //         }
+        //         group.children.push({
+        //             label: `${tagName} - ${tag.meta.name}`,
+        //             type: 'tag',
+        //             name: tagName,
+        //             category: tag.meta.category,
+        //             weight,
+        //             children: null,
+        //             parent: group,
+        //         })
+        //         ref.children.push(group)
+        //     } else if (ref.type === 'alternate') {
+        //         ref.children.push({
+        //             label: `${tagName} - ${tag.meta.name}`,
+        //             type: 'tag',
+        //             name: tagName,
+        //             category: tag.meta.category,
+        //             weight,
+        //             parent: ref,
+        //             children: null,
+        //         })
+        //     } else if (ref.type === 'group') {
+        //         ref.children.push({
+        //             label: `${tagName} - ${tag.meta.name}`,
+        //             type: 'tag',
+        //             name: tagName,
+        //             category: tag.meta.category,
+        //             weight,
+        //             parent: ref,
+        //             children: null,
+        //         })
+        //     } else if (ref.type === 'editing') {
+
+        //     }
+        // }
+
         removeRevFn(tagName, 'tag')
         return
     }
@@ -276,23 +344,23 @@ function appendTag(ref: CartItem[], tagName: string, weight: Decimal,
             label: `[E] ${tagName} - ${embedding.name}`,
             type: 'embedding',
             name: tagName,
-            level: 'free',
             category: embedding.category,
             weight,
             parent: null,
+            children: null,
         })
         removeRevFn(tagName, 'embedding')
         return
     }
 
     ref.push({
-        label: `${tagName} - (未知)`,
+        label: tagName,
         type: 'tag',
         name: tagName,
-        level: 'free',
         category: null,
         weight,
         parent: null,
+        children: null,
     })
     removeRevFn(tagName, 'tag')
 }
@@ -312,8 +380,8 @@ function appendPreset(ref: CartItem[], presetCategory: string, presetName: strin
             label: `${presetCategory}/${presetName}`,
             type: 'preset',
             name: presetName,
-            level: 'free',
             category: presetCategory,
+            weight: new Decimal(1),
             children: [],
             parent: null,
         }
@@ -324,20 +392,20 @@ function appendPreset(ref: CartItem[], presetCategory: string, presetName: strin
                     label: `${tag} - ${resolved.meta.name}`,
                     name: tag,
                     type: 'tag',
-                    level: 'presetChild',
                     category: resolved.meta.category,
                     weight: new Decimal(weight),
                     parent: item,
+                    children: null,
                 }
             } else {
                 return {
                     label: tag,
                     name: tag,
                     type: 'tag',
-                    level: 'presetChild',
                     category: null,
                     weight: new Decimal(weight),
                     parent: item,
+                    children: null,
                 }
             }
         })
@@ -363,7 +431,11 @@ export const useCartStore = defineStore('cart', {
             return tagArrayToString(state.negative, settingsStore.newEmphasis)
         },
         positiveTags: (state) => ImmutableSet.of<string>(...state.positive.flatMap(tagNameMapper)),
+        positiveTagsShallow: (state) => ImmutableSet.of<string>(...state.positive
+            .filter(({ type }) => ['tag', 'embedding', 'preset'].includes(type)).flatMap(tagNameMapper)),
         negativeTags: (state) => ImmutableSet.of<string>(...state.negative.flatMap(tagNameMapper)),
+        negativeTagsShallow: (state) => ImmutableSet.of<string>(...state.negative
+            .filter(({ type }) => ['tag', 'embedding', 'preset'].includes(type)).flatMap(tagNameMapper)),
         positivePresets: (state) => ImmutableSet.of<string>(...state.positive
             .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => JSON.stringify([category, name]))),
         negativePresets: (state) => ImmutableSet.of<string>(...state.negative
@@ -371,65 +443,87 @@ export const useCartStore = defineStore('cart', {
 
     },
     actions: {
+
         existsPositive(type: 'tag' | 'preset'| 'embedding', name: string, category: string | null = null) {
             if (type === 'tag' || type === 'embedding') {
-                return this.positiveTags.includes(name)
+                return this.positiveTagsShallow.includes(name)
             } else if (type === 'preset') {
                 return this.positivePresets.includes(JSON.stringify([category, name]))
             }
             return false
         },
+
         existsNegative(type: 'tag' | 'preset' | 'embedding', name: string, category: string | null = null) {
             if (type === 'tag' || type === 'embedding') {
-                return this.negativeTags.includes(name)
+                return this.negativeTagsShallow.includes(name)
             } else if (type === 'preset') {
                 return this.negativePresets.includes(JSON.stringify([category, name]))
             }
             return false
         },
+
         appendPositiveTag(tagName: string, weight: Decimal = new Decimal(1)) {
             appendTag(this.positive, tagName, weight, this.existsPositive, this.removeNegativeTag)
         },
+
         removePositiveTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
             removeTag(this.positive, tagName, type)
         },
+
         appendNegativeTag(tagName: string, weight: Decimal = new Decimal(1)) {
             appendTag(this.negative, tagName, weight, this.existsNegative, this.removePositiveTag)
         },
+
         removeNegativeTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
             removeTag(this.negative, tagName, type)
         },
+
         appendPositivePreset(presetCategory: string, presetName: string) {
             appendPreset(this.positive, presetCategory, presetName, this.existsPositive, this.removeNegativePreset)
         },
+
         removePositivePreset(presetCategory: string, presetName: string) {
             removePreset(this.positive, presetCategory, presetName)
         },
+
         appendNegativePreset(presetCategory: string, presetName: string) {
             appendPreset(this.negative, presetCategory, presetName, this.existsNegative, this.removePositivePreset)
         },
+
         removeNegativePreset(presetCategory: string, presetName: string) {
             removePreset(this.negative, presetCategory, presetName)
         },
+
         appendCartItem(direction: 'positive'|'negative', item: CartItem) {
             this[direction].push(item)
         },
-        removeCartItem(direction: 'positive'|'negative', item: CartItem) {
-            this[direction].splice(this[direction].indexOf(item), 1)
+
+        removeCartItem(direction: 'positive' | 'negative', item: CartItem|CartChildItem) {
+            const root = item.parent?.children ?? this[direction]
+            // @ts-ignore sometimes caused by ElTree
+            root.splice(root.indexOf(item), 1)
+            if (item.parent !== null) {
+                this.convergeToFit(item.parent.parent?.children ?? this[direction])
+            }
         },
-        dismissCartItem(direction: 'positive' | 'negative', item: CartItemPreset|CartItemComplex) {
+
+        dismissCartItem(direction: 'positive' | 'negative', item: CartItemPreset | CartItemComplex) {
+            const parent = item.parent
             const children: CartItemSimple[] = item.children
                 // @ts-ignore why no filter
-                .filter((n): n is Exclude<CartChildItem, CartItemEditingChildNull> => n.type !== 'null')
-                .map((n: Exclude<CartChildItem, CartItemEditingChildNull>): CartItemSimple => ({ ...n, level: 'free', parent: null, weight: new Decimal(1) }))
+                .filter((n): n is Exclude<CartChildItem, CartItemNull> => n.type !== 'null')
+                .map((n: Exclude<CartChildItem, CartItemNull>): CartItem =>
+                    ({ ...n, parent, ...n.type !== 'group' && { weight: new Decimal(1) } }))
             this[direction].splice(this[direction].indexOf(item), 1, ...children)
         },
+
         clear() {
             this.$patch({
                 positive: [],
                 negative: [],
             })
         },
+
         import(positive: string, negative: string) {
             const tagStore = useTagStore()
             // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
@@ -534,29 +628,54 @@ export const useCartStore = defineStore('cart', {
             run(positive, this.appendPositiveTag)
             run(negative, this.appendNegativeTag)
         },
-        createMixtureFromTag(direction: 'positive'|'negative', item: CartItemSimple) {
-            const idx = this[direction].indexOf(item)
+
+        createMixtureFromTag(direction: 'positive' | 'negative', item: Omit<CartItemSimple, 'children'> & { children: (CartItemSimple | CartChildItem)[] | null }) {
+            const root = item.parent?.children ?? this[direction]
+            // @ts-expect-error caused by ElTree
+            const idx = root.indexOf(item)
+            console.log(item)
             if (idx !== -1) {
                 const composition: CartItemEditing = {
-                    level: 'free',
                     type: 'editing',
                     label: '标签替换',
                     breakpoint: new Decimal(0),
                     // @ts-expect-error Circular reference here
-                    children: null
+                    children: null,
+                    weight: new Decimal(1),
+                    parent: item.parent ?? null,
                 }
 
-                const {children: oldChildren, ...rest}: CartItemSimple&{children?: (CartItemSimple|CartChildItem)[]} = item
+                const {children: oldChildren, ...rest} = item
 
                 composition.children  = [
-                    {...rest, level: 'editingChild', parent: composition},
-                    oldChildren ?
-                        { ...oldChildren[0], level: 'editingChild', parent: composition }
-                        : { level: 'editingChild', type: 'null', label: '无标签', parent: composition },
+                    {...rest, parent: composition, children: null},
+                    Array.isArray(oldChildren) ?
+                        { ...oldChildren[0], parent: composition }
+                        : { type: 'null', label: '无标签', parent: composition, children: null },
                 ]
-                this[direction].splice(idx, 1, composition)
+                console.log(composition)
+                root.splice(idx, 1, composition)
             }
         },
+
+        wrapCompositionChild(item: CartItem) {
+            const root = item?.parent?.children
+            // @ts-expect-error caused by ElTree
+            const idx = root.indexOf(item)
+            if (root && idx !== -1) {
+                const composition: CartItemCompositionChild = {
+                    type: 'group',
+                    label: '标签组',
+                    weight: new Decimal(1),
+                    // @ts-expect-error Circular reference here
+                    children: null,
+                    parent: item.parent as CartItemComposition,
+                }
+                composition.children = [{ ...item, parent: composition }]
+                root.splice(idx, 1, composition)
+            }
+        },
+
         determineNextSwitchableMixture(item: CartItemComplex) {
             if (item.type === 'editing') {
                 const effectiveChildren = item.children.filter((child) => child.type !== 'null')
@@ -565,6 +684,8 @@ export const useCartStore = defineStore('cart', {
             } else if (item.type === 'alternate') {
                 return 'composition'
             } else if (item.type === 'composition') {
+                return 'group'
+            } else if (item.type === 'group') {
                 if (item.children.length < 3) {
                     return 'editing'
                 } else {
@@ -573,103 +694,254 @@ export const useCartStore = defineStore('cart', {
             }
             return null
         },
-        isMixtureSwitchable(item: CartItemComplex, to: 'editing'|'alternate'|'composition'|null = null) {
+
+        isMixtureSwitchable(item: CartItemComplex, to: CartSwitchableType|null = null) {
             if (to === null) {
                 return this.determineNextSwitchableMixture(item)
             } else if (to === item.type) {
                 return false
             } else if (to === 'editing' && item.type !== 'editing') {
                 return item.children.length < 3
-            } else if (to === 'alternate' && item.type !== 'alternate' || to === 'composition' && item.type !== 'composition') {
-                // @ts-ignore
-                const effectiveChildren = item.children.filter((child: CartItemCompositionChild|CartItemEditingChild): child is CartItemCompositionChild|CartItemEditingChildTag => child.type !== 'null')
+            } else if (to === 'alternate' && item.type !== 'alternate'
+                || to === 'composition' && item.type !== 'composition'
+                || to === 'group' && item.type !== 'group') {
+                const effectiveChildren = item.children
+                    // @ts-ignore ts somewhat broken
+                    .filter((child: CartItemNullable):
+                        child is CartItem => child.type !== 'null')
                 return effectiveChildren.length > 1
             } else {
                 return false
             }
         },
-        switchMixtureType(direction: 'positive'|'negative', item: CartItemComplex, to: 'editing'|'alternate'|'composition'|null = null) {
+
+        switchMixtureType(direction: 'positive' | 'negative' | null, item: CartItemComplex, to: CartSwitchableType | null = null) {
+            const root = item?.parent?.children ?? (direction !== null ? this[direction] : null)
+            if (root === null) {
+                throw new Error('Switching mixture type on null')
+            }
+            
             const dest = to ?? this.determineNextSwitchableMixture(item)
             if (!dest) return
             const switchable = this.isMixtureSwitchable(item, dest)
             if (switchable) {
                 if (dest === 'editing' && item.type !== 'editing') {
                     const newMixture: CartItemEditing = {
-                        level: 'free',
                         type: 'editing',
                         label: '标签替换',
                         breakpoint: new Decimal(0),
                         // @ts-expect-error Circular reference here
                         children: null,
-                        parent: null,
+                        weight: new Decimal(1),
+                        parent: item?.parent ?? null,
                     }
 
-                    const children: CartItemEditingChild[] = item.children.map((child): CartItemEditingChildTag => ({
-                        label: child.label,
-                        name: child.name,
-                        category: child.category,
-                        type: child.type,
-                        level: 'editingChild',
-                        parent: newMixture,
-                    })).slice(0, 2)
+                    const children: CartItemEditingChild[] = item.children
+                        .map((child): Exclude<CartItemEditingChild, CartItemNull> => {
+                        if (child.parent.type === 'composition') {
+                            // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+                            const { ...rest } = child as CartItemCompositionChild
+                            if (rest.children.length === 1) {
+                                return {
+                                    ...rest.children[0],
+                                    parent: newMixture,
+                                }
+                            } else {
+                                return {
+                                    ...rest,
+                                    parent: newMixture
+                                }
+                            }
+                        } else if (child.type === 'group' && child.children.length === 1) { 
+                            return {...child.children[0], parent: newMixture}
+                        } else {
+                            return {
+                                ...child,
+                                parent: newMixture,
+                            }
+                        }
+                    }).slice(0, 2)
                     if (children.length === 1) {
-                        children.push({level: 'editingChild', type: 'null', label: '无标签', parent: newMixture})
+                        children.push({ type: 'null', label: '无标签', parent: newMixture, children: null })
                     } else if (children.length !== 2) {
                         throw new Error('Invalid state')
                     }
                     newMixture.children = children as [CartItemEditingChild, CartItemEditingChild]
 
-                    const idx = this[direction].indexOf(item)
-                    this[direction].splice(idx, 1, newMixture)
-                }
-                else if (dest === 'alternate' && item.type !== 'alternate') {
+                    const idx = root.indexOf(item as any)
+                    root.splice(idx, 1, newMixture)
+                } else if (dest === 'alternate' && item.type !== 'alternate') {
                     const newMixture: CartItemAlternate = {
-                        level: 'free',
                         type: 'alternate',
                         label: '标签轮转',
+                        parent: item?.parent ?? null,
                         // @ts-expect-error Circular reference here
                         children: null,
-                    }
-                    newMixture.children = item.children
-                            // @ts-ignore Stupid Typescript
-                            .filter((child): child is CartItemCompositionChild|CartItemEditingChildTag => child.type !== 'null')
-                            .map((child: CartItemCompositionChild|CartItemEditingChildTag): CartItemAlternateChild => ({
-                                label: child.label,
-                                name: child.name,
-                                category: child.category,
-                                type: child.type,
-                                level: 'alternateChild',
-                                parent: newMixture,
-                            }))
-
-                    const idx = this[direction].indexOf(item)
-                    this[direction].splice(idx, 1, newMixture)
-                }
-                else if (dest === 'composition' && item.type !== 'composition') {
-                    const newMixture: CartItemComposition = {
-                        level: 'free',
-                        type: 'composition',
-                        label: '标签混合',
-                        // @ts-expect-error Circular reference here
-                        children: null,
+                        weight: new Decimal(1),
                     }
                     newMixture.children = item.children
                         // @ts-ignore Stupid Typescript
-                        .filter((child): child is CartItemCompositionChild|CartItemEditingChildTag => child.type !== 'null')
-                        .map((child: CartItemCompositionChild|CartItemEditingChildTag): CartItemCompositionChild => ({
-                            label: child.label,
-                            name: child.name,
-                            category: child.category,
-                            type: child.type,
-                            level: 'compositionChild',
-                            weight: new Decimal(1),
-                            parent: newMixture,
-                        }))
-                    const idx = this[direction].indexOf(item)
-                    this[direction].splice(idx, 1, newMixture)
+                        .filter((child): child is CartItemCompositionChild | CartItem => child.type !== 'null')
+                        .map((child: CartItemCompositionChild | CartItem): CartItemAlternateChild => {
+                            if (child.parent?.type === 'composition') {
+                                const { ...rest } = child as CartItemCompositionChild
+                                if (rest.children.length === 1) {
+                                    return {
+                                        ...rest.children[0],
+                                        parent: newMixture,
+                                    }
+                                } else {
+                                    return {
+                                        ...rest,
+                                        parent: newMixture
+                                    }
+                                }
+                            } else if (child.type === 'group' && child.children.length === 1) {
+                                return {...child.children[0], parent: newMixture}
+                            } else {
+                                return {
+                                    ...child,
+                                    parent: newMixture,
+                                }
+                            }
+                        })
+
+                    const idx = root.indexOf(item as any)
+                    root.splice(idx, 1, newMixture)
+                } else if (dest === 'composition' && item.type !== 'composition') {
+                    const newMixture: CartItemComposition = {
+                        type: 'composition',
+                        label: '标签混合',
+                        parent: item?.parent ?? null,
+                        // @ts-expect-error Circular reference here
+                        children: null,
+                        weight: new Decimal(1),
+                    }
+                    newMixture.children = item.children
+                        // @ts-ignore Stupid Typescript
+                        .filter((child): child is CartItemCompositionChild|CartItem => child.type !== 'null')
+                        .map((child: CartItemCompositionChild | CartItem): CartItemCompositionChild => {
+                            if (child.type !== 'group') {
+                                const group: CartItemCompositionChild = {
+                                    label: '标签组',
+                                    type: 'group',
+                                    children: [],
+                                    parent: newMixture,
+                                    weight: new Decimal(1),
+                                }
+
+                                group.children.push({ ...child, parent: group })
+                                return group
+                            } else {
+                                return {
+                                    ...child,
+                                    parent: newMixture,
+                                    weight: new Decimal(1),
+                                }
+                            }
+                        })
+                    const idx = root.indexOf(item as any)
+                    root.splice(idx, 1, newMixture)
+                } else if (dest === 'group' && item.type !== 'group') {
+                    const newMixture: CartItemGroup = {
+                        type: 'group',
+                        label: '标签组',
+                        parent: item?.parent ?? null,
+                        // @ts-expect-error Circular reference here
+                        children: null,
+                        weight: new Decimal(1),
+                    }
+                    newMixture.children = item.children
+                        // @ts-ignore Stupid Typescript
+                        .filter((child): child is CartItem => child.type !== 'null')
+                        .map((child: CartItem): CartItemGroupChild => {
+                            if (child.parent?.type === 'composition') {
+                                const { ...rest } = child as CartItemCompositionChild
+                                if (rest.children.length === 1) {
+                                    return {
+                                        ...rest.children[0],
+                                        parent: newMixture,
+                                    }
+                                } else {
+                                    return {
+                                        ...rest,
+                                        parent: newMixture
+                                    }
+                                }
+                            } else if (child.type === 'group' && child.children.length === 1) { 
+                                return {...child.children[0], parent: newMixture}
+                            } else {
+                                return {
+                                    ...child,
+                                    parent: newMixture,
+                                }
+                            }
+                        })
+                    const idx = root.indexOf(item as any)
+                    root.splice(idx, 1, newMixture)
                 }
+
+                this.convergeToFit(root)
             }
         },
+
+        convergeToFit(root: CartItem[] | CartChildItem[]) {
+            const isRoot = root === this.positive || root === this.negative
+            let changed = true
+            while (changed) {
+                changed = false
+                for (let i = 0; i < root.length; i++) {
+                    const { type, children, parent } = root[i]
+                    if (isRoot && parent !== null) {
+                        root[i].parent = null
+                        changed = true
+                    }
+                    if (children) {
+                        for (let j = 0; j < children.length; j++) {
+                            if (children[j].parent !== root[i]) {
+                                children[j].parent = root[i] as CartItemComplex
+                                changed = true
+                            }
+                        }
+                        this.convergeToFit(children)
+                    }
+                    if (type === 'editing') {
+                        const valid = children?.some((child) => child.type !== 'null') ?? false
+                        // @ts-ignore whatever
+                        const singular = children?.length === 1
+                        // @ts-ignore also whatever
+                        const tooMany = children?.length > 2
+                        if (!valid) {
+                            root.splice(i, 1)
+                            changed = true
+                            i--
+                        } else if (singular) {
+                            children.push({ type: 'null', label: '无标签', parent: root[i] as CartItemEditing, children: null })
+                            changed = true
+                            i--
+                        } else if (tooMany) {
+                            this.switchMixtureType(null, root[i] as CartItemEditing, 'alternate')
+                            changed = true
+                            i--
+                        }
+                    } else if (type === 'alternate' || type === 'composition' || type === 'group') {
+                        const valid = children?.length > 0
+                        const singular = children?.length === 1
+                        if (!valid) {
+                            root.splice(i, 1)
+                            changed = true
+                            i--
+                        } else if (singular && parent?.type !== 'composition') {
+                            const child = children[0]
+                            // @ts-ignore well
+                            root.splice(i, 1, {...child, parent: root[i]})
+                            changed = true
+                            i--
+                        }
+                    }
+                }
+            }
+        }
     }
 
 })

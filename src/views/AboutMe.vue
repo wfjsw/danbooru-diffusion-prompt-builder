@@ -28,7 +28,8 @@ import {usePresetStore} from '../stores/presets'
 import {useEmbeddingStore} from '../stores/embeddings'
 import {useHypernetworkStore} from '../stores/hypernetworks'
 import {h} from 'vue'
-import {isDark} from '../composables/dark'
+import { isDark } from '../composables/dark'
+import dayjs from 'dayjs'
 
 defineProps<{
     category: undefined
@@ -45,7 +46,10 @@ const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
 const lightIcon = h(FontAwesomeIcon, { icon: faLightbulbOn })
 const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
 const ax = h('span', {class: 'switch-text-icon math-style'}, ['a', h('sup', {}, 'x')])
-const plus = h('span', {class: 'switch-text-icon'}, ['+'])
+const plus = h('span', { class: 'switch-text-icon' }, ['+'])
+
+const buildTime = dayjs(__BUILD_TIMESTAMP__).format('YYYY-MM-DD HH:mm:ss Z')
+const buildType = import.meta.env.PROD ? '生产' : '开发'
 
 </script>
 
@@ -54,14 +58,15 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
         <h1>关于</h1>
         <p>这是一个用于构建 Danbooru 标签组合的网站。</p>
         <p>
-目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。
+当前版本为 {{ buildTime }} 构建的{{ buildType }}版本。目前共收录 {{ tagStore.allTagCount }} 个标签，共 {{ tagStore.tagWithPhotosCount }} 个标签有配图。
             共收录 {{ presetStore.count }} 组预设标签、{{ embeddingStore.count }} 个嵌入模型、{{ hypernetworkStore.count }} 个超网络模型。
 </p>
         <p>
-本站的源码与所有原始数据均可在
-            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">GitHub: wfjsw/danbooru-diffusion-prompt-builder</a>
-            查看。如果您觉得本站对您有帮助，请在 GitHub 上点一个 Star。
-            同时，也欢迎您通过 Pull Request 向本站添加更多内容。
+本站的源码与所有原始数据于
+            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">danbooru-diffusion-prompt-builder @ GitHub</a>
+            遵循 GNU AGPL-3.0 协议开放。如果您觉得本站对您有帮助，请在 GitHub 上点一个 Star。
+            同时，也欢迎您通过 <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues" target="_blank">GitHub Issues</a> 提出问题建议，
+            或通过 <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder/pulls" target="_blank">Pull Request</a> 对本站进行修改或补充。
         </p>
         <p>如何使用：</p>
         <ul>
@@ -240,5 +245,10 @@ p {
 .inline-control > div {
     position: relative;
     top: -.75px;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(210, 100%, 62%);
 }
 </style>

@@ -65,11 +65,11 @@ function cancelEditMode() {
 
 <style module lang="scss">
 .warning {
-    color: var(--el-color-warning);
+    color: #cc9900;
 }
 
 .success {
-    color: var(--el-color-success);
+    color: #4eb183;
 }
 
 .edit {

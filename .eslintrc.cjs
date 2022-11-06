@@ -33,7 +33,7 @@ module.exports = {
         "no-this-before-super": "warn",
         "no-undef": "error",
         "no-unreachable": "error",
-        "no-unused-vars": "warn",
+        "no-unused-vars": "off",
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "no-extra-semi": "warn",
@@ -58,5 +58,8 @@ module.exports = {
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-misused-promises": "off",
+    },
+    globals: {
+        __BUILD_TIMESTAMP__: "readonly",
     },
 };
