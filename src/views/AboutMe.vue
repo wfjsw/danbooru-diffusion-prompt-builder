@@ -184,7 +184,7 @@ const buildType = import.meta.env.PROD ? '生产' : '开发'
                             <FontAwesomeIcon :icon="faBlenderRegular" />
                         </ElButton>
                     </span>
-                    按键，或将其他标签拖动到某一标签之上，可创建混合组。当前应用支持三种混合组：
+                    按键，或将其他标签拖动到某一标签之上，可创建混合组。混合组可无限嵌套。当前应用支持三种混合组：
                     <ul>
                         <li>
                             <p>
@@ -202,6 +202,12 @@ const buildType = import.meta.env.PROD ? '生产' : '开发'
                             <p>
                                 <b>标签混合 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/#:~:text=Composable%2DDiffusion%2C%20a,a%20penguin%20%3A2.2" target="_blank">Composable-Diffusion</a>): </b>
                                 该混合组接受两个或更多标签与其对应权重。在生成过程中，生成引擎将按权重值试图混合组内标签的元素。该标签在 Stable-Diffusion-WebUI 格式与 NovelAI 格式中均可用。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <b>标签组: </b>
+                                单纯的一些标签组成的一个组合。该标签在 Stable-Diffusion-WebUI 格式与 NovelAI 格式中均可用。
                             </p>
                         </li>
                     </ul>
