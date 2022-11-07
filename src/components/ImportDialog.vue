@@ -23,6 +23,7 @@ import { useCartStore } from '../stores/cart'
 import { computed, ref } from 'vue'
 import { isDark } from '../composables/dark'
 import { parse } from '../prompt/parser'
+import { checkParen } from '../prompt/checkParen'
 
 const cartStore = useCartStore()
 const props = defineProps<{
@@ -48,11 +49,18 @@ function cancel() {
 }
 
 async function save(newEmphasis: boolean) {
+    const positiveTagsValue = positiveTags.value.replaceAll(/\r\n|\r|\n/g, ' ').trim()
+    const negativeTagsValue = negativeTags.value.replaceAll(/\r\n|\r|\n/g, ' ').trim()
     try {
         await Promise.all([
             (async () => {
                 try {
-                    parse(positiveTags.value, newEmphasis)
+                    const result = checkParen(positiveTagsValue)
+                    if (result !== null) {
+                        throw new Error(`括号不匹配：在第 ${result.i} 个字符上，期望 "${result.expected}"，但是实际遇到 "${result.char}"。`)
+                    }
+                    parse(positiveTagsValue, newEmphasis)
+                    console.log(positiveTagsValue)
                 } catch (e: any) {
                     positiveError.value = e.message
                     throw e
@@ -60,7 +68,11 @@ async function save(newEmphasis: boolean) {
             })(),
             (async () => {
                 try {
-                    parse(negativeTags.value, newEmphasis)
+                    const result = checkParen(negativeTagsValue)
+                    if (result !== null) {
+                        throw new Error(`括号不匹配：在第 ${result.i} 个字符上，期望 "${result.expected}"，但是实际遇到 "${result.char}"。`)
+                    }
+                    parse(negativeTagsValue, newEmphasis)
                 } catch (e: any) {
                     negativeError.value = e.message
                     throw e
@@ -71,14 +83,16 @@ async function save(newEmphasis: boolean) {
         return
     }
 
-    cartStore.import('positive', positiveTags.value, newEmphasis)
-    cartStore.import('negative', negativeTags.value, newEmphasis)
+    cartStore.import('positive', positiveTagsValue, newEmphasis)
+    cartStore.import('negative', negativeTagsValue, newEmphasis)
     mv.value = false
 }
 
 function saveOld() {
-    cartStore.importClassic('positive', positiveTags.value)
-    cartStore.importClassic('negative', negativeTags.value)
+    const positiveTagsValue = positiveTags.value.replaceAll(/\r\n|\r|\n/g, ' ').trim()
+    const negativeTagsValue = negativeTags.value.replaceAll(/\r\n|\r|\n/g, ' ').trim()
+    cartStore.importClassic('positive', positiveTagsValue)
+    cartStore.importClassic('negative', negativeTagsValue)
     mv.value = false
 }
 </script>
@@ -103,6 +117,7 @@ function saveOld() {
                 type="error"
                 class="parse-error"
                 :effect="isDark ? 'dark' : 'light'"
+                show-icon
                 @close="positiveError = ''" />
         </div>
         <div class="tag-negative">
@@ -119,6 +134,7 @@ function saveOld() {
                 type="error"
                 class="parse-error"
                 :effect="isDark ? 'dark' : 'light'"
+                show-icon
                 @close="negativeError = ''" />
         </div>
         <template #footer>
