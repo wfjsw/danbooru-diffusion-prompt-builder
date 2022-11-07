@@ -15,7 +15,7 @@ https://tags.novelai.dev
 -   即时搜索
 -   构建标签组合并调配权重
 -   支持调配高级标签工程（[Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing) / [Alternating Words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)）
--   导入已有标签组合并自动匹配
+-   导入已有标签组合并自动匹配，支持解析复杂标签
 -   预设（固定标签组合）整理、说明与配图
 -   嵌入模型索引与下载
 -   超网络模型索引与下载
