@@ -548,7 +548,8 @@ content:
     name: 大呆毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/huge_ahoge.html
   antenna hair:
-    name: 呆毛
+    name: 多根呆毛
+    image: 3ca6d558b6c769e20890b52d20890aa0829048cf8695537e513561a74dd7098a
     wikiURL: https://danbooru.donmai.us/wiki_pages/antenna_hair.html
     alias:
       - antennae hair
