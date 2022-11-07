@@ -43,6 +43,7 @@ import { useSettingsStore } from './settings'
 import { useEmbeddingStore } from './embeddings'
 import { serialize } from '../prompt/serializer'
 import Decimal from 'decimal.js-light'
+import { unserialize } from '../prompt/parser'
 
 function tagNameMapper(n: CartItem | CartItemPresetChild): string | string[] {
     switch (n.type) {
@@ -481,11 +482,15 @@ export const useCartStore = defineStore('cart', {
             })
         },
 
-        import(positive: string, negative: string) {
-            const tagStore = useTagStore()
+        import(direction: 'positive' | 'negative', content: string, newEmphasis: boolean) {
+            unserialize(content, this[direction], newEmphasis)
+        },
+
+        importClassic(direction: 'positive' | 'negative', content: string) {
             // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
             // this.clear()
             const run = (text: string, appendFn: (tagName: string, weight: Decimal) => void) => {
+                const tagStore = useTagStore()
                 let weight = new Decimal(1)
                 let guessNew = true
                 const trimmedText = text.trim()
@@ -573,12 +578,13 @@ export const useCartStore = defineStore('cart', {
                                 break
                             }
                         }
+                    } else {
+                        weight = new Decimal(1)
                     }
                 }
             }
             // console.log('import', positive, negative)
-            run(positive, this.appendPositiveTag)
-            run(negative, this.appendNegativeTag)
+            run(content, direction === 'positive' ? this.appendPositiveTag : this.appendNegativeTag)
         },
 
         createMixtureFromTag(
@@ -648,6 +654,7 @@ export const useCartStore = defineStore('cart', {
             } else if (to === item.type) {
                 return false
             } else if (to === 'group' && item.type !== 'group') {
+                // @ts-ignore hmm
                 return item.children.some(
                     (child: CartItemNullable): child is CartItem =>
                         child.type !== 'null'
@@ -695,9 +702,10 @@ export const useCartStore = defineStore('cart', {
                     }
 
                     const children: CartItemEditingChild[] = item.children
+                        // @ts-ignore hmm
                         .map(
                             (
-                                child
+                                child: Exclude<CartChildItem, CartItemEditingChild>
                             ): Exclude<CartItemEditingChild, CartItemNull> => {
                                 if (
                                     child.type === 'group' &&
@@ -731,6 +739,7 @@ export const useCartStore = defineStore('cart', {
                         CartItemEditingChild
                     ]
 
+                    // @ts-ignore hmm
                     const idx = root.indexOf(item as any)
                     root.splice(idx, 1, newMixture)
                 } else if (dest === 'alternate' && item.type !== 'alternate') {
@@ -765,6 +774,7 @@ export const useCartStore = defineStore('cart', {
                             }
                         })
 
+                    // @ts-ignore hmm
                     const idx = root.indexOf(item as any)
                     root.splice(idx, 1, newMixture)
                 } else if (dest === 'group' && item.type !== 'group') {
@@ -798,6 +808,8 @@ export const useCartStore = defineStore('cart', {
                                 }
                             }
                         })
+
+                    // @ts-ignore hmm
                     const idx = root.indexOf(item as any)
                     root.splice(idx, 1, newMixture)
                 }

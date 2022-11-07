@@ -18,9 +18,11 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import { ElButton, ElDialog, ElInput } from 'element-plus'
+import { ElButton, ElDialog, ElInput, ElAlert } from 'element-plus'
 import { useCartStore } from '../stores/cart'
 import { computed, ref } from 'vue'
+import { isDark } from '../composables/dark'
+import { parse } from '../prompt/parser'
 
 const cartStore = useCartStore()
 const props = defineProps<{
@@ -29,6 +31,9 @@ const props = defineProps<{
 
 const positiveTags = ref('')
 const negativeTags = ref('')
+
+const positiveError = ref('')
+const negativeError = ref('')
 
 const emit = defineEmits(['update:modelValue'])
 const mv = computed({
@@ -42,8 +47,38 @@ function cancel() {
     mv.value = false
 }
 
-function save() {
-    cartStore.import(positiveTags.value, negativeTags.value)
+async function save(newEmphasis: boolean) {
+    try {
+        await Promise.all([
+            (async () => {
+                try {
+                    parse(positiveTags.value, newEmphasis)
+                } catch (e: any) {
+                    positiveError.value = e.message
+                    throw e
+                }
+            })(),
+            (async () => {
+                try {
+                    parse(negativeTags.value, newEmphasis)
+                } catch (e: any) {
+                    negativeError.value = e.message
+                    throw e
+                }
+            })(),
+        ])
+    } catch (e) {
+        return
+    }
+
+    cartStore.import('positive', positiveTags.value, newEmphasis)
+    cartStore.import('negative', negativeTags.value, newEmphasis)
+    mv.value = false
+}
+
+function saveOld() {
+    cartStore.importClassic('positive', positiveTags.value)
+    cartStore.importClassic('negative', negativeTags.value)
     mv.value = false
 }
 </script>
@@ -52,7 +87,7 @@ function save() {
     <ElDialog v-model="mv" title="导入标签" width="50%">
         <p>
             注：由于标签格式千变万化，不能保证完全成功导入。
-            为确保成功导入，请检查标签之间是否使用逗号隔开、括号双向闭合完全，且括号中间不含逗号。
+            为确保成功导入，请检查标签之间是否使用逗号隔开且括号双向闭合完全。
         </p>
         <div class="tag-positive">
             <div class="title">正向标签</div>
@@ -62,6 +97,13 @@ function save() {
                 :rows="5"
                 class="tag-pre"
                 placeholder="Prompt" />
+            <ElAlert
+                v-show="positiveError !== ''"
+                :title="positiveError"
+                type="error"
+                class="parse-error"
+                :effect="isDark ? 'dark' : 'light'"
+                @close="positiveError = ''" />
         </div>
         <div class="tag-negative">
             <div class="title">反向标签</div>
@@ -71,17 +113,26 @@ function save() {
                 :rows="5"
                 class="tag-pre"
                 placeholder="Negative prompt" />
+            <ElAlert
+                v-show="negativeError !== ''"
+                :title="negativeError"
+                type="error"
+                class="parse-error"
+                :effect="isDark ? 'dark' : 'light'"
+                @close="negativeError = ''" />
         </div>
         <template #footer>
             <span class="dialog-footer">
                 <ElButton @click="cancel()">取消</ElButton>
-                <ElButton type="primary" @click="save()">保存</ElButton>
+                <ElButton type="info" @click="saveOld()">朴素解析器</ElButton>
+                <ElButton type="primary" @click="save(false)">解析 NAI 语法</ElButton>
+                <ElButton type="primary" @click="save(true)">解析 WebUI 语法</ElButton>
             </span>
         </template>
     </ElDialog>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .tag-positive,
 .tag-negative {
     margin-bottom: 1.5rem;
@@ -97,5 +148,14 @@ function save() {
     width: 100%;
     height: 100px;
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    margin-bottom: 1.5rem;
+}
+
+.parse-error {
+    margin-bottom: 1rem;
+    :deep(.el-alert__title) {
+        white-space: pre-wrap;
+        font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
 }
 </style>

@@ -9,4 +9,5 @@ webStorm.config.js
 .eslintrc.cjs
 prerender.js
 src/fontawesome-svg-core.js
-src/prompt/grammar.ts
+src/prompt/grammarNew.ts
+src/prompt/grammarOld.ts

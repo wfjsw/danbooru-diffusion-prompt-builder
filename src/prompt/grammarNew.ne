@@ -19,7 +19,7 @@
 
 @preprocessor typescript
 
-Prompt -> SinglePrompt | Prompt ","  SinglePrompt {% ([c,,t]) => [...c,t] %}
+Prompt -> SinglePrompt | Prompt (","|"，") SinglePrompt {% ([c,,t]) => [...c,t] %}
 SinglePrompt -> Plain {% id %} | WhitespaceWrapped {% id %} | _ {% () => null %}
 WhitespaceWrapped -> _ ( Emphasized {% id %} | Editing {% id %} | Alternate {% id %} ) _ {% ([,d]) => d %}
 Emphasized ->

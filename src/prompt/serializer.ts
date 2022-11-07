@@ -109,11 +109,11 @@ export function serialize(
                     a.push(
                         wrapParenByWeight(
                             `[${
-                                t.children[0].type !== 'null'
+                                t.children[0]?.type !== 'null'
                                     ? serialize([t.children[0]], newEmphasis)
                                     : ''
                             }:${
-                                t.children[1].type !== 'null'
+                                t.children[1]?.type !== 'null'
                                     ? serialize([t.children[1]], newEmphasis)
                                     : ''
                             }:${t.breakpoint.toDecimalPlaces(3).toNumber()}]`,

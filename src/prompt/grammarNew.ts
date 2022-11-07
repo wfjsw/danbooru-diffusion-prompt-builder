@@ -35,7 +35,9 @@ const grammar: Grammar = {
   Lexer: undefined,
   ParserRules: [
     {"name": "Prompt", "symbols": ["SinglePrompt"]},
-    {"name": "Prompt", "symbols": ["Prompt", {"literal":","}, "SinglePrompt"], "postprocess": ([c,,t]) => [...c,t]},
+    {"name": "Prompt$subexpression$1", "symbols": [{"literal":","}]},
+    {"name": "Prompt$subexpression$1", "symbols": [{"literal":"，"}]},
+    {"name": "Prompt", "symbols": ["Prompt", "Prompt$subexpression$1", "SinglePrompt"], "postprocess": ([c,,t]) => [...c,t]},
     {"name": "SinglePrompt", "symbols": ["Plain"], "postprocess": id},
     {"name": "SinglePrompt", "symbols": ["WhitespaceWrapped"], "postprocess": id},
     {"name": "SinglePrompt", "symbols": ["_"], "postprocess": () => null},
