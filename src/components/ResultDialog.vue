@@ -53,7 +53,7 @@ const mv = computed({
                 <ElInput
                     v-model="cartStore.positiveToString"
                     type="textarea"
-                    :rows="5"
+                    :autosize="{ minRows: 2, maxRows: 8 }"
                     class="tag-pre"
                     readonly
                     @dblclick="copyPositive()" />
@@ -68,7 +68,7 @@ const mv = computed({
                 <ElInput
                     v-model="cartStore.negativeToString"
                     type="textarea"
-                    :rows="5"
+                    :autosize="{ minRows: 2, maxRows: 8 }"
                     class="tag-pre"
                     readonly
                     @dblclick="copyNegative()" />
@@ -94,9 +94,9 @@ const mv = computed({
 }
 
 .tag-pre {
-    resize: vertical;
+    /* resize: vertical; */
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 </style>

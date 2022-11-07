@@ -19,7 +19,7 @@
 
 @preprocessor typescript
 
-Prompt -> SinglePrompt | Prompt (","|"，") SinglePrompt {% ([c,,t]) => [...c,t] %}
+Prompt -> (SinglePrompt [,，]):* SinglePrompt {% ([c,t]) => [...c.map((n: any[]) => n[0]),t] %}
 SinglePrompt -> Plain {% id %} | WhitespaceWrapped {% id %} | _ {% () => null %}
 WhitespaceWrapped -> _ ( Emphasized {% id %} ) _ {% ([,d]) => d %}
 Emphasized ->
@@ -27,7 +27,7 @@ Emphasized ->
 	"[" Prompt "]" {% ([,c]) => ({type: 'weight_sub', content: c}) %}
 
 Plain -> Char:+ {% ([c], l, r) => c.join('').trim() === '' ? r :({type: 'tag', name: c.join('').replace(/[  \t\n\v\f]/g, ' ').trim()}) %}
-Char -> [^\\\[\]{}:|,] {% id %} | "\\{" {% () => '{' %} | "\\}" {% () => '}' %} | "\\[" {% () => '[' %} | "\\]" {% () => ']' %}
+Char -> [^\\\[\]{}:|,，] {% id %} | "\\{" {% () => '{' %} | "\\}" {% () => '}' %} | "\\[" {% () => '[' %} | "\\]" {% () => ']' %}
 
 
 Number -> _ unsigned_decimal _ {% ([,d]) => d %}

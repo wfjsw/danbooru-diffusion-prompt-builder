@@ -23,7 +23,7 @@ import { useCartStore } from '../stores/cart'
 import { computed, ref } from 'vue'
 import { isDark } from '../composables/dark'
 import { parse } from '../prompt/parser'
-import { checkParen } from '../prompt/checkParen'
+import { checkBoundaryParen, checkParen } from '../prompt/checkParen'
 
 const cartStore = useCartStore()
 const props = defineProps<{
@@ -55,12 +55,15 @@ async function save(newEmphasis: boolean) {
         await Promise.all([
             (async () => {
                 try {
-                    const result = checkParen(positiveTagsValue)
-                    if (result !== null) {
-                        throw new Error(`括号不匹配：在第 ${result.i} 个字符上，期望 "${result.expected}"，但是实际遇到 "${result.char}"。`)
+                    const checkParenResult = checkParen(positiveTagsValue)
+                    if (checkParenResult !== null) {
+                        throw new Error(`括号不匹配：在第 ${checkParenResult.i} 个字符上，期望 "${checkParenResult.expected}"，但是实际遇到 "${checkParenResult.char}"。`)
                     }
-                    parse(positiveTagsValue, newEmphasis)
-                    console.log(positiveTagsValue)
+                    const checkBoundaryParenResult = checkBoundaryParen(positiveTagsValue)
+                    if (checkBoundaryParenResult !== null) {
+                        throw new Error(`括号在预期位置外：在第 ${checkBoundaryParenResult.i} 个字符上，期望括号贴合逗号，实际遇到 "${checkBoundaryParenResult.char}"。`)
+                    }
+                    parse(positiveTags.value, newEmphasis)
                 } catch (e: any) {
                     positiveError.value = e.message
                     throw e
@@ -68,11 +71,15 @@ async function save(newEmphasis: boolean) {
             })(),
             (async () => {
                 try {
-                    const result = checkParen(negativeTagsValue)
-                    if (result !== null) {
-                        throw new Error(`括号不匹配：在第 ${result.i} 个字符上，期望 "${result.expected}"，但是实际遇到 "${result.char}"。`)
+                    const checkParenResult = checkParen(negativeTagsValue)
+                    if (checkParenResult !== null) {
+                        throw new Error(`括号不匹配：在第 ${checkParenResult.i} 个字符上，期望 "${checkParenResult.expected}"，但是实际遇到 "${checkParenResult.char}"。`)
                     }
-                    parse(negativeTagsValue, newEmphasis)
+                    const checkBoundaryParenResult = checkBoundaryParen(negativeTagsValue)
+                    if (checkBoundaryParenResult !== null) {
+                        throw new Error(`括号在预期位置外：在第 ${checkBoundaryParenResult.i} 个字符上，期望括号贴合逗号，实际遇到 "${checkBoundaryParenResult.char}"。`)
+                    }
+                    parse(negativeTags.value, newEmphasis)
                 } catch (e: any) {
                     negativeError.value = e.message
                     throw e
@@ -108,7 +115,7 @@ function saveOld() {
             <ElInput
                 v-model="positiveTags"
                 type="textarea"
-                :rows="5"
+                :autosize="{ minRows: 2, maxRows: 8 }"
                 class="tag-pre"
                 placeholder="Prompt" />
             <ElAlert
@@ -125,7 +132,7 @@ function saveOld() {
             <ElInput
                 v-model="negativeTags"
                 type="textarea"
-                :rows="5"
+                :autosize="{ minRows: 2, maxRows: 8 }"
                 class="tag-pre"
                 placeholder="Negative prompt" />
             <ElAlert
@@ -149,10 +156,10 @@ function saveOld() {
 </template>
 
 <style scoped lang="scss">
-.tag-positive,
-.tag-negative {
-    margin-bottom: 1.5rem;
-}
+// .tag-positive,
+// .tag-negative {
+//     margin-bottom: 1.5rem;
+// }
 
 .title {
     font-size: 14pt;
@@ -160,9 +167,8 @@ function saveOld() {
 }
 
 .tag-pre {
-    resize: vertical;
+    // resize: vertical;
     width: 100%;
-    height: 100px;
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     margin-bottom: 1.5rem;
 }

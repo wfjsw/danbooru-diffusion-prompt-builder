@@ -19,7 +19,7 @@
 
 @preprocessor typescript
 
-Prompt -> SinglePrompt | Prompt (","|"，") SinglePrompt {% ([c,,t]) => [...c,t] %}
+Prompt -> (SinglePrompt [,，]):* SinglePrompt {% ([c,t]) => [...c.map((n: any[]) => n[0]),t] %}
 SinglePrompt -> Plain {% id %} | WhitespaceWrapped {% id %} | _ {% () => null %}
 WhitespaceWrapped -> _ ( Emphasized {% id %} | Editing {% id %} | Alternate {% id %} ) _ {% ([,d]) => d %}
 Emphasized ->
@@ -29,8 +29,8 @@ Emphasized ->
 Editing -> "[" (Prompt ":"):? Prompt ":" Number "]" {% ([,a,b,,w]) => ({type: 'editing', from: a?.[0] ?? null, to: b, breakpoint: w}) %}
 Alternate -> "[" Prompt ("|" Prompt):+ "]" {% ([,a,b]) => ({type: 'alternate', tags: [a, ...b.map((n: any[]) => n[1])]}) %}
 
-Plain -> Char:+ {% ([c], l, r) => c.join('').trim() === '' ? r :({type: 'tag', name: c.join('').replace(/[  \t\n\v\f]/g, ' ').trim()}) %}
-Char -> [^\\\[\]():|,] {% id %} | "\\(" {% () => '(' %} | "\\)" {% () => ')' %} | "\\[" {% () => '[' %} | "\\]" {% () => ']' %}
+Plain -> Char:+ {% ([c], l, r) => c.join('').trim() === '' ? null :({type: 'tag', name: c.join('').replace(/[  \t\n\v\f]/g, ' ').trim()}) %}
+Char -> [^\\\[\]():|,，] {% id %} | "\\(" {% () => '(' %} | "\\)" {% () => ')' %} | "\\[" {% () => '[' %} | "\\]" {% () => ']' %}
 
 
 Number -> _ unsigned_decimal _ {% ([,d]) => d %}
@@ -46,3 +46,4 @@ unsigned_decimal -> [0-9]:+ ("." [0-9]:+):? {%
         );
     }
 %}
+
