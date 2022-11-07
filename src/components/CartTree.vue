@@ -107,8 +107,8 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
         // 6. 出：mixture拖干净，需要删掉mixture
         if (draggingNode.data.parent.children.length === 0) {
             cartStore.removeCartItem(props.direction, draggingNode.data.parent)
-        } else if (draggingNode.data.parent.children.length === 1) {
-            // 剩下一个就解散
+        } else if (draggingNode.data.parent?.type !== 'group' && draggingNode.data.parent.children.length === 1) {
+            // 除 group 以外剩下一个就解散
             cartStore.dismissCartItem(props.direction, draggingNode.data.parent as CartItemComposition | CartItemAlternate)
             skipReParent = true
         }

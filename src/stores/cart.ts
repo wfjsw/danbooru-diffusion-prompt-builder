@@ -192,7 +192,7 @@ function tagArrayToString(items: (CartItemNullable|CartItemPresetChild)[], newEm
                 a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
             }
         } else if (t.type === 'group') {
-            a.push(tagArrayToString(t.children, newEmphasis))
+            a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
         }
         return a
     }, [])).join(', ')
@@ -568,8 +568,6 @@ export const useCartStore = defineStore('cart', {
                             }
                         }
                     }
-                    // console.log('weight', weight)
-                    // console.log('match name', name)
                     if (text) {
                         text = text.replaceAll('\\(', '(')
                             .replaceAll('\\)', ')')
@@ -578,7 +576,6 @@ export const useCartStore = defineStore('cart', {
                             .replaceAll('\\{', '{')
                             .replaceAll('\\}', '}')
                             .toLowerCase()
-                        // console.log('append', matched)
                         let matchText = text
                         let resolvedTag = tagStore.resolve(text)
                         if (!resolvedTag) {
@@ -633,7 +630,6 @@ export const useCartStore = defineStore('cart', {
             const root = item.parent?.children ?? this[direction]
             // @ts-expect-error caused by ElTree
             const idx = root.indexOf(item)
-            console.log(item)
             if (idx !== -1) {
                 const composition: CartItemEditing = {
                     type: 'editing',
@@ -653,7 +649,6 @@ export const useCartStore = defineStore('cart', {
                         { ...oldChildren[0], parent: composition }
                         : { type: 'null', label: '无标签', parent: composition, children: null },
                 ]
-                console.log(composition)
                 root.splice(idx, 1, composition)
             }
         },
@@ -679,7 +674,7 @@ export const useCartStore = defineStore('cart', {
         determineNextSwitchableMixture(item: CartItemComplex) {
             if (item.type === 'editing') {
                 const effectiveChildren = item.children.filter((child) => child.type !== 'null')
-                if (effectiveChildren.length < 2) return null
+                if (effectiveChildren.length < 2) return 'group'
                 else return 'alternate'
             } else if (item.type === 'alternate') {
                 return 'composition'
@@ -700,11 +695,14 @@ export const useCartStore = defineStore('cart', {
                 return this.determineNextSwitchableMixture(item)
             } else if (to === item.type) {
                 return false
+            } else if (to === 'group' && item.type !== 'group') {
+                return item.children
+                    .some((child: CartItemNullable):
+                        child is CartItem => child.type !== 'null')
             } else if (to === 'editing' && item.type !== 'editing') {
                 return item.children.length < 3
             } else if (to === 'alternate' && item.type !== 'alternate'
-                || to === 'composition' && item.type !== 'composition'
-                || to === 'group' && item.type !== 'group') {
+                || to === 'composition' && item.type !== 'composition') {
                 const effectiveChildren = item.children
                     // @ts-ignore ts somewhat broken
                     .filter((child: CartItemNullable):
@@ -931,7 +929,7 @@ export const useCartStore = defineStore('cart', {
                             root.splice(i, 1)
                             changed = true
                             i--
-                        } else if (singular && parent?.type !== 'composition') {
+                        } else if (singular && type !== 'group') {
                             const child = children[0]
                             // @ts-ignore well
                             root.splice(i, 1, {...child, parent: root[i]})

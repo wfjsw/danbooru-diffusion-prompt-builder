@@ -41,7 +41,6 @@ const props = defineProps<{
 const {node, data} = toRefs(props)
 
 function sendTo(direction: 'positive' | 'negative', data: CartItem) {
-    console.log(data)
     const revDirection = direction === 'positive' ? 'negative' : 'positive'
     cartStore.removeCartItem(revDirection, data)
     cartStore.appendCartItem(direction, data)
@@ -69,7 +68,7 @@ function deleteFrom(direction: 'positive' | 'negative', item: CartItem|CartChild
 
 function adjustLiteralWeight(delta: number) {
     if (data.value.type !== 'null') {
-        if (settingsStore.useFixedMultiplier) {
+        if (settingsStore.useFixedMultiplier || data.value.parent?.type === 'composition') {
             data.value.weight = data.value.weight.add(0.05 * delta)
         } else {
             data.value.weight = data.value.weight.times(Math.pow(settingsStore.newEmphasis ? 1.1 : 1.05, delta))
@@ -126,7 +125,7 @@ const editingChildWeight = computed<Decimal>({
     <div class="flex">
         <div class="tag-label">
             <span class="tag-label-text" @dblclick.stop="performSearch">{{ node.label }}</span>
-            <LiteralWeightIdentifier v-if="data.type !== 'null'" v-model:weight="data.weight"
+            <LiteralWeightIdentifier v-if="data.type !== 'null' && data.parent?.type !== 'composition'" v-model:weight="data.weight"
                                      class="weight-identifier" />
             <PercentageWeightIdentifier v-if="data.parent?.type === 'editing'" v-model:weight="editingChildWeight" class="weight-identifier" />
             <PercentageWeightIdentifier v-if="data.parent?.type === 'composition'" v-model:weight="(data as CartItemCompositionChild).weight" class="weight-identifier" />
@@ -142,9 +141,10 @@ const editingChildWeight = computed<Decimal>({
             </ElTooltip>
 
             <ElTooltip v-if="(data.type === 'editing' || data.type === 'alternate' || data.type === 'composition' || data.type === 'group')
-                && cartStore.isMixtureSwitchable(data)" content="切换混合方式" :show-after="750">
+                && data.parent?.type !== 'composition' && cartStore.isMixtureSwitchable(data)" content="切换混合方式" :show-after="750">
                 <ElButton link type="primary"
                     @click.stop="(data.type === 'editing' || data.type === 'alternate' || data.type === 'composition' || data.type === 'group')
+                    && data.parent?.type !== 'composition'
                     && cartStore.switchMixtureType(direction, data)">
                     <FontAwesomeIcon :icon="faRepeat" />
                 </ElButton>
