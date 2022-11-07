@@ -22,7 +22,7 @@ import {ElButton, ElTooltip} from 'element-plus'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faCircleMinus, faCirclePlus, faThumbsDown, faThumbsUp, faTrash, faBlender, faRepeat, faScaleUnbalanced, faScaleUnbalancedFlip} from '@fortawesome/pro-regular-svg-icons'
 import LiteralWeightIdentifier from './LiteralWeightIdentifier.vue'
-import {type CartChildItem, type CartItem, type CartItemSimple, useCartStore, CartItemCompositionChild} from '../stores/cart'
+import {type CartChildItem, type CartItem, type CartItemSimple, useCartStore} from '../stores/cart'
 import {useSettingsStore} from '../stores/settings'
 import type Node from 'element-plus/es/components/tree/src/model/node'
 import {toRefs, inject, computed} from 'vue'
@@ -68,7 +68,7 @@ function deleteFrom(direction: 'positive' | 'negative', item: CartItem|CartChild
 
 function adjustLiteralWeight(delta: number) {
     if (data.value.type !== 'null') {
-        if (settingsStore.useFixedMultiplier || data.value.parent?.type === 'composition') {
+        if (settingsStore.useFixedMultiplier) {
             data.value.weight = data.value.weight.add(0.05 * delta)
         } else {
             data.value.weight = data.value.weight.times(Math.pow(settingsStore.newEmphasis ? 1.1 : 1.05, delta))
@@ -125,10 +125,9 @@ const editingChildWeight = computed<Decimal>({
     <div class="flex">
         <div class="tag-label">
             <span class="tag-label-text" @dblclick.stop="performSearch">{{ node.label }}</span>
-            <LiteralWeightIdentifier v-if="data.type !== 'null' && data.parent?.type !== 'composition'" v-model:weight="data.weight"
+            <LiteralWeightIdentifier v-if="data.type !== 'null'" v-model:weight="data.weight"
                                      class="weight-identifier" />
             <PercentageWeightIdentifier v-if="data.parent?.type === 'editing'" v-model:weight="editingChildWeight" class="weight-identifier" />
-            <PercentageWeightIdentifier v-if="data.parent?.type === 'composition'" v-model:weight="(data as CartItemCompositionChild).weight" class="weight-identifier" />
         </div>
         <div class="tag-button">
             <ElTooltip v-if="['tag', 'embedding'].includes(data.type)"
@@ -140,11 +139,10 @@ const editingChildWeight = computed<Decimal>({
                 </ElButton>
             </ElTooltip>
 
-            <ElTooltip v-if="(data.type === 'editing' || data.type === 'alternate' || data.type === 'composition' || data.type === 'group')
-                && data.parent?.type !== 'composition' && cartStore.isMixtureSwitchable(data)" content="切换混合方式" :show-after="750">
+            <ElTooltip v-if="(data.type === 'editing' || data.type === 'alternate' || data.type === 'group')
+                && cartStore.isMixtureSwitchable(data)" content="切换混合方式" :show-after="750">
                 <ElButton link type="primary"
-                    @click.stop="(data.type === 'editing' || data.type === 'alternate' || data.type === 'composition' || data.type === 'group')
-                    && data.parent?.type !== 'composition'
+                    @click.stop="(data.type === 'editing' || data.type === 'alternate' || data.type === 'group')
                     && cartStore.switchMixtureType(direction, data)">
                     <FontAwesomeIcon :icon="faRepeat" />
                 </ElButton>

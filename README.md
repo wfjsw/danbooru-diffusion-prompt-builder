@@ -14,7 +14,7 @@ https://tags.novelai.dev
  - 标签分类、释义与配图
  - 即时搜索
  - 构建标签组合并调配权重
- - 支持调配高级标签工程（[Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing) / [Composable-Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui/#:~:text=Composable%2DDiffusion%2C%20a,a%20penguin%20%3A2.2) / [Alternating Words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)）
+ - 支持调配高级标签工程（[Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing) / [Alternating Words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)）
  - 导入已有标签组合并自动匹配
  - 预设（固定标签组合）整理、说明与配图
  - 嵌入模型索引与下载

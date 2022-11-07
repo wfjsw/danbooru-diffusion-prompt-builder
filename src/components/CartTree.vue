@@ -21,7 +21,7 @@
 import {ElTree} from 'element-plus'
 import type Node from 'element-plus/es/components/tree/src/model/node'
 import type {AllowDropType, NodeDropType} from 'element-plus/es/components/tree/src/tree.type'
-import {type CartItemEditingChild, type CartItemPresetChild, type CartItemSimple, type CartItemComplex, type CartItemComposition, type CartItemEditing, type CartItem, type CartChildItem, useCartStore, CartItemAlternate, CartItemCompositionChild} from '../stores/cart'
+import {type CartItemEditingChild, type CartItemPresetChild, type CartItemSimple, type CartItemComplex, type CartItemEditing, type CartItem, type CartChildItem, useCartStore, type CartItemAlternate} from '../stores/cart'
 import CartItemComponent from './CartItem.vue'
 
 const props = defineProps<{
@@ -70,7 +70,6 @@ function allowDrop(draggingNode: Node, dropNode: Node, type: AllowDropType) {
  * 6. 出：mixture拖干净，需要删掉mixture
  * 7. 入：有simple标签拖进free的simple标签，创建editing
  * 8. ~~出：alternate和editing移出，需要补一个weight~~ - 这个weight现在不丢了 所以不需要补
- * 9. 入：拖入 composite的非group应当套一层group
  *
  * 最后需要把parent改了，标签类型修正了
  *
@@ -101,15 +100,14 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
                 })
             }
         }
-    } else if (draggingNode.data.parent?.type === 'composite'
-        || draggingNode.data.parent?.type === 'alternate'
+    } else if (draggingNode.data.parent?.type === 'alternate'
         || draggingNode.data.parent?.type === 'group') {
         // 6. 出：mixture拖干净，需要删掉mixture
         if (draggingNode.data.parent.children.length === 0) {
             cartStore.removeCartItem(props.direction, draggingNode.data.parent)
         } else if (draggingNode.data.parent?.type !== 'group' && draggingNode.data.parent.children.length === 1) {
             // 除 group 以外剩下一个就解散
-            cartStore.dismissCartItem(props.direction, draggingNode.data.parent as CartItemComposition | CartItemAlternate)
+            cartStore.dismissCartItem(props.direction, draggingNode.data.parent as CartItemAlternate)
             skipReParent = true
         }
     }
@@ -131,14 +129,6 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
         const dropCartItem = dropNode.data as CartItemSimple
         // 7. 入：有simple标签拖进free的simple标签，创建editing
         cartStore.createMixtureFromTag(props.direction, dropCartItem)
-    } else if (dropNode.data.type === 'composition' && type === 'inner') {
-        const draggingCartItem = draggingNode.data as CartItemCompositionChild
-        const dropCartItem = dropNode.data as CartItemComposition
-        // 9. 入：拖入 composite的非group应当套一层group
-        draggingCartItem.parent = dropCartItem
-        if (draggingCartItem.type !== 'group') {
-            cartStore.wrapCompositionChild(draggingCartItem)
-        }
     } else if (dropNode.data.parent?.type === 'editing' && type !== 'inner') {
         const dropCartItem = dropNode.data as CartItemEditingChild
         if (dropCartItem.parent.children.length > 2) {
@@ -151,16 +141,7 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
                 cartStore.switchMixtureType(props.direction, dropCartItem.parent, 'alternate')
             }
         }
-    } else if (dropNode.data.parent?.type === 'composition' && type !== 'inner') {
-        const draggingCartItem = draggingNode.data as CartItemCompositionChild
-        const dropCartItem = dropNode.data as CartItemCompositionChild
-        // 9. 入：拖入 composite的非group应当套一层group
-        draggingCartItem.parent = dropCartItem.parent
-        if (draggingCartItem.type !== 'group') {
-            cartStore.wrapCompositionChild(draggingCartItem)
-            skipReParent = true
-        }
-    }
+    } 
 
     if (!skipReParent) {
         if (type === 'before' || type === 'after') {

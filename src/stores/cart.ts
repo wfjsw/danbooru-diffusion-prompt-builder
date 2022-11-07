@@ -36,7 +36,7 @@ export interface CartItemPresetChild {
 }
 
 export type CartSimpleType = 'tag' | 'embedding'
-export type CartSwitchableType = 'composition' | 'editing' | 'alternate' | 'group'
+export type CartSwitchableType = 'editing' | 'alternate' | 'group'
 export type CartCompositeType = 'preset' | CartSwitchableType
 
 export type CartType = CartSimpleType | CartCompositeType
@@ -58,17 +58,6 @@ export interface CartItemPreset {
     category: string,
     weight: Decimal,
     children: CartItemPresetChild[],
-    parent: CartItemComplex|null,
-}
-
-// there are 2 weight
-export type CartItemCompositionChild = CartItemGroup & {parent: CartItemComposition, weight: Decimal}
-
-export interface CartItemComposition {
-    label: '标签混合',
-    type: 'composition',
-    weight: Decimal, 
-    children: CartItemCompositionChild[],
     parent: CartItemComplex|null,
 }
 
@@ -110,10 +99,10 @@ export interface CartItemGroup {
     parent: CartItemComplex|null,
 }
 
-export type CartItemComplex = CartItemComposition | CartItemEditing | CartItemAlternate | CartItemGroup
+export type CartItemComplex = CartItemEditing | CartItemAlternate | CartItemGroup
 
 export type CartItem = CartItemSimple | CartItemPreset | CartItemComplex
-export type CartChildItem = CartItemPresetChild | CartItemCompositionChild | CartItemEditingChild | CartItemAlternateChild | CartItemGroupChild
+export type CartChildItem = CartItemPresetChild | CartItemEditingChild | CartItemAlternateChild | CartItemGroupChild
 
 export type CartItemNullable = CartItem | CartItemNull
 
@@ -169,14 +158,6 @@ function tagArrayToString(items: (CartItemNullable|CartItemPresetChild)[], newEm
             a.push(wrapParenByWeight(name, t.weight, newEmphasis))
         } else if (t.type === 'preset') {
             a.push(tagArrayToString(t.children, newEmphasis))
-        } else if (t.type === 'composition') {
-            if (newEmphasis) {
-                a.push(t.children.map(n => n.weight.eq(1) ? tagArrayToString(n.children, newEmphasis)
-                    : `${tagArrayToString(n.children, newEmphasis)} :${n.weight.toDecimalPlaces(3).toNumber()}`).join(' AND '))
-            } else {
-                a.push(t.children.map(n => n.weight.eq(1) ? tagArrayToString(n.children, newEmphasis)
-                    : `${tagArrayToString(n.children, newEmphasis)}:${n.weight.toDecimalPlaces(3).toNumber()}`).join('|'))
-            }
         } else if (t.type === 'alternate') {
             if (newEmphasis) {
                 a.push(wrapParenByWeight(`[${t.children.map(n => tagArrayToString([n], newEmphasis)).join('|')}]`, t.weight, newEmphasis))
@@ -204,7 +185,6 @@ function tagNameMapper(n: CartItem|CartItemPresetChild): string|string[] {
         case 'embedding':
             return n.name
         case 'preset':
-        case 'composition':
         case 'alternate':
         case 'group':
             return n.children.flatMap(e => tagNameMapper(e))
@@ -235,9 +215,8 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
                 }
             } else if (
                    ref[i].type === 'editing'
-                || ref[i].type === 'composition'
                 || ref[i].type === 'alternate' ) {
-                const item = ref[i] as CartItemComposition|CartItemAlternate|CartItemEditing
+                const item = ref[i] as CartItemAlternate|CartItemEditing
                 const idx = item
                     .children.findIndex(n => n.type === type && n.name === tagName)
                 item.children.splice(idx, 1)
@@ -538,7 +517,7 @@ export const useCartStore = defineStore('cart', {
                 for (const token of textList) {
                     let text = null
 
-                    // TODO: parse alternate/composition/editing
+                    // TODO: parse alternate/editing
 
                     // check numeric emphasis
                     const numericalEmphasis = token.match(/\(([^:]+):(\d+(?:.\d+)?)\)/)
@@ -653,32 +632,12 @@ export const useCartStore = defineStore('cart', {
             }
         },
 
-        wrapCompositionChild(item: CartItem) {
-            const root = item?.parent?.children
-            // @ts-expect-error caused by ElTree
-            const idx = root.indexOf(item)
-            if (root && idx !== -1) {
-                const composition: CartItemCompositionChild = {
-                    type: 'group',
-                    label: '标签组',
-                    weight: new Decimal(1),
-                    // @ts-expect-error Circular reference here
-                    children: null,
-                    parent: item.parent as CartItemComposition,
-                }
-                composition.children = [{ ...item, parent: composition }]
-                root.splice(idx, 1, composition)
-            }
-        },
-
-        determineNextSwitchableMixture(item: CartItemComplex) {
+        determineNextSwitchableMixture(item: CartItemComplex): CartSwitchableType|null {
             if (item.type === 'editing') {
                 const effectiveChildren = item.children.filter((child) => child.type !== 'null')
                 if (effectiveChildren.length < 2) return 'group'
                 else return 'alternate'
             } else if (item.type === 'alternate') {
-                return 'composition'
-            } else if (item.type === 'composition') {
                 return 'group'
             } else if (item.type === 'group') {
                 if (item.children.length < 3) {
@@ -701,8 +660,7 @@ export const useCartStore = defineStore('cart', {
                         child is CartItem => child.type !== 'null')
             } else if (to === 'editing' && item.type !== 'editing') {
                 return item.children.length < 3
-            } else if (to === 'alternate' && item.type !== 'alternate'
-                || to === 'composition' && item.type !== 'composition') {
+            } else if (to === 'alternate' && item.type !== 'alternate') {
                 const effectiveChildren = item.children
                     // @ts-ignore ts somewhat broken
                     .filter((child: CartItemNullable):
@@ -736,21 +694,7 @@ export const useCartStore = defineStore('cart', {
 
                     const children: CartItemEditingChild[] = item.children
                         .map((child): Exclude<CartItemEditingChild, CartItemNull> => {
-                        if (child.parent.type === 'composition') {
-                            // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-                            const { ...rest } = child as CartItemCompositionChild
-                            if (rest.children.length === 1) {
-                                return {
-                                    ...rest.children[0],
-                                    parent: newMixture,
-                                }
-                            } else {
-                                return {
-                                    ...rest,
-                                    parent: newMixture
-                                }
-                            }
-                        } else if (child.type === 'group' && child.children.length === 1) { 
+                        if (child.type === 'group' && child.children.length === 1) { 
                             return {...child.children[0], parent: newMixture}
                         } else {
                             return {
@@ -779,22 +723,9 @@ export const useCartStore = defineStore('cart', {
                     }
                     newMixture.children = item.children
                         // @ts-ignore Stupid Typescript
-                        .filter((child): child is CartItemCompositionChild | CartItem => child.type !== 'null')
-                        .map((child: CartItemCompositionChild | CartItem): CartItemAlternateChild => {
-                            if (child.parent?.type === 'composition') {
-                                const { ...rest } = child as CartItemCompositionChild
-                                if (rest.children.length === 1) {
-                                    return {
-                                        ...rest.children[0],
-                                        parent: newMixture,
-                                    }
-                                } else {
-                                    return {
-                                        ...rest,
-                                        parent: newMixture
-                                    }
-                                }
-                            } else if (child.type === 'group' && child.children.length === 1) {
+                        .filter((child): child is CartItem => child.type !== 'null')
+                        .map((child: CartItem): CartItemAlternateChild => {
+                            if (child.type === 'group' && child.children.length === 1) {
                                 return {...child.children[0], parent: newMixture}
                             } else {
                                 return {
@@ -804,40 +735,6 @@ export const useCartStore = defineStore('cart', {
                             }
                         })
 
-                    const idx = root.indexOf(item as any)
-                    root.splice(idx, 1, newMixture)
-                } else if (dest === 'composition' && item.type !== 'composition') {
-                    const newMixture: CartItemComposition = {
-                        type: 'composition',
-                        label: '标签混合',
-                        parent: item?.parent ?? null,
-                        // @ts-expect-error Circular reference here
-                        children: null,
-                        weight: new Decimal(1),
-                    }
-                    newMixture.children = item.children
-                        // @ts-ignore Stupid Typescript
-                        .filter((child): child is CartItemCompositionChild|CartItem => child.type !== 'null')
-                        .map((child: CartItemCompositionChild | CartItem): CartItemCompositionChild => {
-                            if (child.type !== 'group') {
-                                const group: CartItemCompositionChild = {
-                                    label: '标签组',
-                                    type: 'group',
-                                    children: [],
-                                    parent: newMixture,
-                                    weight: new Decimal(1),
-                                }
-
-                                group.children.push({ ...child, parent: group })
-                                return group
-                            } else {
-                                return {
-                                    ...child,
-                                    parent: newMixture,
-                                    weight: new Decimal(1),
-                                }
-                            }
-                        })
                     const idx = root.indexOf(item as any)
                     root.splice(idx, 1, newMixture)
                 } else if (dest === 'group' && item.type !== 'group') {
@@ -853,20 +750,7 @@ export const useCartStore = defineStore('cart', {
                         // @ts-ignore Stupid Typescript
                         .filter((child): child is CartItem => child.type !== 'null')
                         .map((child: CartItem): CartItemGroupChild => {
-                            if (child.parent?.type === 'composition') {
-                                const { ...rest } = child as CartItemCompositionChild
-                                if (rest.children.length === 1) {
-                                    return {
-                                        ...rest.children[0],
-                                        parent: newMixture,
-                                    }
-                                } else {
-                                    return {
-                                        ...rest,
-                                        parent: newMixture
-                                    }
-                                }
-                            } else if (child.type === 'group' && child.children.length === 1) { 
+                            if (child.type === 'group' && child.children.length === 1) { 
                                 return {...child.children[0], parent: newMixture}
                             } else {
                                 return {
@@ -922,7 +806,7 @@ export const useCartStore = defineStore('cart', {
                             changed = true
                             i--
                         }
-                    } else if (type === 'alternate' || type === 'composition' || type === 'group') {
+                    } else if (type === 'alternate' || type === 'group') {
                         const valid = children?.length > 0
                         const singular = children?.length === 1
                         if (!valid) {
