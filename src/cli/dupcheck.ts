@@ -22,15 +22,19 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import type {TagCategories} from '../datatypes'
+import type { TagCategories } from '../types/data'
 
 const resolution = new Set()
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const tagFiles = glob.sync('**/*.yaml', {cwd: path.resolve(dirname, '../../data/tags')})
+const tagFiles = glob.sync('**/*.yaml', {
+    cwd: path.resolve(dirname, '../../data/tags'),
+})
 let hasError = false
 for (const file of tagFiles) {
-    const tagData: TagCategories = yaml.load(fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')) as TagCategories
+    const tagData: TagCategories = yaml.load(
+        fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')
+    ) as TagCategories
     for (const [rawTag, meta] of Object.entries(tagData.content)) {
         const tag = rawTag.toLowerCase().replaceAll('_', ' ')
         if (resolution.has(tag)) {
@@ -42,7 +46,9 @@ for (const file of tagFiles) {
             for (const rawAlias of meta.alias) {
                 const alias = rawAlias.toLowerCase().replaceAll('_', ' ')
                 if (resolution.has(alias)) {
-                    console.error(`Duplicate alias ${alias} of ${tag} from ${file}`)
+                    console.error(
+                        `Duplicate alias ${alias} of ${tag} from ${file}`
+                    )
                     hasError = true
                 }
                 resolution.add(alias)

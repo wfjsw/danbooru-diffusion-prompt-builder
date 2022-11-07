@@ -18,15 +18,22 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-
 import type Masonry from 'masonry-layout'
-import type {Ref} from 'vue'
-import { onMounted, onUnmounted, nextTick, ref, watch, toRef, provide } from 'vue'
+import type { Ref } from 'vue'
+import {
+    onMounted,
+    onUnmounted,
+    nextTick,
+    ref,
+    watch,
+    toRef,
+    provide,
+} from 'vue'
 import { MasonryReload } from '../injections/masonryReload'
-import {debounce} from 'lodash-es'
+import { debounce } from 'lodash-es'
 
 const props = defineProps<{
-    bind: any|null
+    bind: any | null
 }>()
 
 const container: Ref<HTMLDivElement | null> = ref(null)
@@ -47,7 +54,8 @@ if (!import.meta.env.SSR) {
         })
     }, 250)
 
-    const delayedReloadLayoutWrapper = () => setTimeout(() => nextTick(() => delayedReloadLayout()), 250)
+    const delayedReloadLayoutWrapper = () =>
+        setTimeout(() => nextTick(() => delayedReloadLayout()), 250)
 
     provide(MasonryReload, () => nextTick(delayedReloadLayout))
 
@@ -69,10 +77,15 @@ if (!import.meta.env.SSR) {
     })
 
     onUnmounted(() => {
-
         window.removeEventListener('resize', delayedReloadLayoutWrapper)
-        window.removeEventListener('orientationchange', delayedReloadLayoutWrapper)
-        window.removeEventListener('visibilitychange', delayedReloadLayoutWrapper)
+        window.removeEventListener(
+            'orientationchange',
+            delayedReloadLayoutWrapper
+        )
+        window.removeEventListener(
+            'visibilitychange',
+            delayedReloadLayoutWrapper
+        )
         window.removeEventListener('focusin', delayedReloadLayoutWrapper)
 
         masonry.value?.destroy?.()

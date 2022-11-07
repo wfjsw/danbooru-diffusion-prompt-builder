@@ -18,12 +18,18 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {ElIcon, ElMenu, ElMenuItem, ElSubMenu} from 'element-plus'
-import {Document as IconDocument, Folder as IconFolder, Guide as IconGuide, Picture as IconPicture, Box as IconBox} from '@element-plus/icons-vue'
-import {useTagStore} from '../stores/tags'
-import {usePresetStore} from '../stores/presets'
-import {useEmbeddingStore} from '../stores/embeddings'
-import {useHypernetworkStore} from '../stores/hypernetworks'
+import { ElIcon, ElMenu, ElMenuItem, ElSubMenu } from 'element-plus'
+import {
+    Document as IconDocument,
+    Folder as IconFolder,
+    Guide as IconGuide,
+    Picture as IconPicture,
+    Box as IconBox,
+} from '@element-plus/icons-vue'
+import { useTagStore } from '../stores/tags'
+import { usePresetStore } from '../stores/presets'
+import { useEmbeddingStore } from '../stores/embeddings'
+import { useHypernetworkStore } from '../stores/hypernetworks'
 import ExtLinks from './ExtLinks.vue'
 
 const emit = defineEmits(['select'])
@@ -42,8 +48,11 @@ function select(index: string, indexPath: string[]) {
     <div class="mobile-topbar-el">
         <ExtLinks />
     </div>
-    <ElMenu :default-openeds="['tags']" class="borderless pb-2 fw"
-            default-active="aboutme" @select="select">
+    <ElMenu
+        :default-openeds="['tags']"
+        class="borderless pb-2 fw"
+        default-active="aboutme"
+        @select="select">
         <ElMenuItem index="aboutme">
             <ElIcon>
                 <IconGuide />
@@ -64,7 +73,9 @@ function select(index: string, indexPath: string[]) {
                 :index="category">
                 <div class="flex">
                     <div class="tag-category-name">{{ category }}</div>
-                    <div class="tag-category-size">{{ tagStore.categorySize[category] }}</div>
+                    <div class="tag-category-size">
+                        {{ tagStore.categorySize[category] }}
+                    </div>
                 </div>
             </ElMenuItem>
         </ElSubMenu>
@@ -82,7 +93,9 @@ function select(index: string, indexPath: string[]) {
                 :index="category">
                 <div class="flex">
                     <div class="preset-category-name">{{ category }}</div>
-                    <div class="preset-category-size">{{ presetStore.categorySize[category] }}</div>
+                    <div class="preset-category-size">
+                        {{ presetStore.categorySize[category] }}
+                    </div>
                 </div>
             </ElMenuItem>
         </ElSubMenu>
@@ -100,7 +113,9 @@ function select(index: string, indexPath: string[]) {
                 :index="category">
                 <div class="flex">
                     <div class="embedding-category-name">{{ category }}</div>
-                    <div class="embedding-category-size">{{ embeddingStore.categorySize[category] }}</div>
+                    <div class="embedding-category-size">
+                        {{ embeddingStore.categorySize[category] }}
+                    </div>
                 </div>
             </ElMenuItem>
         </ElSubMenu>
@@ -118,7 +133,9 @@ function select(index: string, indexPath: string[]) {
                 :index="category">
                 <div class="flex">
                     <div class="embedding-category-name">{{ category }}</div>
-                    <div class="embedding-category-size">{{ hypernetworkStore.categorySize[category] }}</div>
+                    <div class="embedding-category-size">
+                        {{ hypernetworkStore.categorySize[category] }}
+                    </div>
                 </div>
             </ElMenuItem>
         </ElSubMenu>
@@ -145,8 +162,9 @@ function select(index: string, indexPath: string[]) {
     justify-content: space-between;
 }
 
-.tag-category-size, .preset-category-size, .embedding-category-size {
+.tag-category-size,
+.preset-category-size,
+.embedding-category-size {
     font-size: small;
 }
-
 </style>

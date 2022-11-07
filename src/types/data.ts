@@ -18,12 +18,12 @@
  ******************************************************************************/
 
 export interface TagMeta {
-    alias: string[] | null,
-    name: string,
-    description: string | null,
-    image: string | null,
-    wikiURL: string | null,
-    restricted: boolean|null,
+    alias: string[] | null
+    name: string
+    description: string | null
+    image: string | null
+    wikiURL: string | null
+    restricted: boolean | null
 }
 
 export interface TagCategory {
@@ -35,27 +35,27 @@ export interface TagCategories {
 }
 
 export interface Tags {
-    tags: TagCategories,
-    tagsPostCount: Record<string, number>,
+    tags: TagCategories
+    tagsPostCount: Record<string, number>
 }
 
 export interface PresetTag {
-    tag: string,
-    weight: number,
+    tag: string
+    weight: number
 }
 
 export interface Preset {
-    name: string,
-    description: string | null,
-    content: PresetTag[],
-    preview: string[] | null,
+    name: string
+    description: string | null
+    content: PresetTag[]
+    preview: string[] | null
 }
 
 export interface PresetCategoryInfo {
-    name: string,
-    restricted: boolean,
-    description: string | null,
-    content: Preset[],
+    name: string
+    restricted: boolean
+    description: string | null
+    content: Preset[]
 }
 
 export interface Presets {
@@ -67,28 +67,28 @@ export interface Embeddings {
 }
 
 export interface EmbeddingCategories {
-    [key: string]: EmbeddingCategory,
+    [key: string]: EmbeddingCategory
 }
 
 export interface EmbeddingCategory {
-    content: Embedding[],
+    content: Embedding[]
 }
 
 export interface Embedding {
-    prompt: string,
-    name: string,
-    category: string,
-    author: string|null,
-    description: string|null,
-    restricted: boolean|null,
-    modelName: string,
-    modelHash: string,
-    vectorSize: number,
-    steps: number,
-    payloadHash: string,
-    payloadURL: string|null,
-    suggestPositive: string[]|null,
-    suggestNegative: string[]|null,
+    prompt: string
+    name: string
+    category: string
+    author: string | null
+    description: string | null
+    restricted: boolean | null
+    modelName: string
+    modelHash: string
+    vectorSize: number
+    steps: number
+    payloadHash: string
+    payloadURL: string | null
+    suggestPositive: string[] | null
+    suggestNegative: string[] | null
 }
 
 export interface Embeddings {
@@ -96,27 +96,27 @@ export interface Embeddings {
 }
 
 export interface HypernetworkCategories {
-    [key: string]: HypernetworkCategory,
+    [key: string]: HypernetworkCategory
 }
 
 export interface HypernetworkCategory {
-    content: Hypernetwork[],
+    content: Hypernetwork[]
 }
 
 export interface Hypernetwork {
-    prompt: string,
-    name: string,
-    category: string,
-    author: string|null,
-    description: string|null,
-    restricted: boolean|null,
-    modelName: string,
-    modelHash: string,
-    steps: number,
-    previewHash: string|null,
-    payloadURL: string,
-    suggestPositive: string[]|null,
-    suggestNegative: string[]|null,
+    prompt: string
+    name: string
+    category: string
+    author: string | null
+    description: string | null
+    restricted: boolean | null
+    modelName: string
+    modelHash: string
+    steps: number
+    previewHash: string | null
+    payloadURL: string
+    suggestPositive: string[] | null
+    suggestNegative: string[] | null
 }
 
 export interface Hypernetworks {

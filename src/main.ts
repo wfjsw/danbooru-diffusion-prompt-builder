@@ -17,10 +17,10 @@
  *
  ******************************************************************************/
 
-import {createApp as createVueApp} from 'vue'
+import { createApp as createVueApp } from 'vue'
 import { ID_INJECTION_KEY } from 'element-plus'
 import App from './App.vue'
-import {createPinia} from 'pinia'
+import { createPinia } from 'pinia'
 import { vLoading, ElInfiniteScroll } from 'element-plus'
 
 export function createApp() {
@@ -29,10 +29,8 @@ export function createApp() {
         .use(pinia)
         .provide(ID_INJECTION_KEY, {
             prefix: Date.now(),
-            current: 0
+            current: 0,
         })
         .directive('loading', vLoading)
         .directive('infinite-scroll', ElInfiniteScroll)
 }
-
-

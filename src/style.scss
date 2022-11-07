@@ -17,7 +17,9 @@
  *
  ******************************************************************************/
 
-html, body, #app {
+html,
+body,
+#app {
     height: 100%;
     max-height: 100%;
     overflow: hidden;
@@ -36,7 +38,8 @@ button.is-circle svg.svg-inline--fa {
     margin-right: 1.5rem;
 }
 
-svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
     overflow: visible;
     box-sizing: content-box;
 }
@@ -45,7 +48,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
     display: var(--fa-display, inline-block);
     height: 1em;
     overflow: visible;
-    vertical-align: -.125em;
+    vertical-align: -0.125em;
 }
 
 .d-none {
@@ -116,7 +119,6 @@ html.dark .el-switch {
 .el-button--info {
     --el-button-text-color: var(--el-color-black);
     --el-button-hover-text-color: var(--el-color-black);
-
 }
 
 .masonry {
@@ -185,8 +187,9 @@ html.dark .el-switch {
 .switch-text-icon {
     font-style: normal;
     font-size: 12px;
-    &.math-style, .math-style {
-        font-family: "Times New Roman", Times, serif;
+    &.math-style,
+    .math-style {
+        font-family: 'Times New Roman', Times, serif;
         font-style: italic;
     }
 }

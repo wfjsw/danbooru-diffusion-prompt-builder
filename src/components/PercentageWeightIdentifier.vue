@@ -18,14 +18,14 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {computed, useCssModule, ref} from 'vue'
-import {ElInput} from 'element-plus'
+import { computed, useCssModule, ref } from 'vue'
+import { ElInput } from 'element-plus'
 import Decimal from 'decimal.js-light'
 
 const style = useCssModule()
 
 const props = defineProps<{
-    weight: Decimal,
+    weight: Decimal
 }>()
 
 const emit = defineEmits(['update:weight'])
@@ -34,10 +34,10 @@ const boundWeight = computed({
     get: () => props.weight.times(100).toDecimalPlaces(1).toNumber(),
     set: (value) => {
         emit('update:weight', new Decimal(value).div(100))
-    }
+    },
 })
 const editMode = ref(false)
-const inputBox = ref<typeof ElInput|null>(null)
+const inputBox = ref<typeof ElInput | null>(null)
 
 const computedWeight = computed(() => boundWeight.value?.toFixed(1))
 const color = computed(() => style.primary)
@@ -57,9 +57,21 @@ function cancelEditMode() {
 <template>
     <span :class="[$style.nowrap, color]" @dblclick="turnOnEditMode">
         <span v-show="!editMode">{{ computedWeight }}%</span>
-        <ElInput v-show="editMode" ref="inputBox" v-model="boundWeight" :class="$style.edit" size="small" type="number" :min="0"
-                 :step="0.1" :max="100" :draggable="false" @blur="editMode = false" @keyup.enter="editMode = false"
-                 @keyup.esc="cancelEditMode" @dragstart.stop="false" />
+        <ElInput
+            v-show="editMode"
+            ref="inputBox"
+            v-model="boundWeight"
+            :class="$style.edit"
+            size="small"
+            type="number"
+            :min="0"
+            :step="0.1"
+            :max="100"
+            :draggable="false"
+            @blur="editMode = false"
+            @keyup.enter="editMode = false"
+            @keyup.esc="cancelEditMode"
+            @dragstart.stop="false" />
     </span>
 </template>
 

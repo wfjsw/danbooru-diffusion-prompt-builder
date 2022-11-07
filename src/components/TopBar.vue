@@ -18,35 +18,38 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {ref, computed} from 'vue'
-import {ElButton, ElInput} from 'element-plus'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faBars, faCartShopping, faMagnifyingGlass} from '@fortawesome/pro-regular-svg-icons'
-import {Search as IconSearch} from '@element-plus/icons-vue'
+import { ref, computed } from 'vue'
+import { ElButton, ElInput } from 'element-plus'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    faBars,
+    faCartShopping,
+    faMagnifyingGlass,
+} from '@fortawesome/pro-regular-svg-icons'
+import { Search as IconSearch } from '@element-plus/icons-vue'
 import ExtLinks from './ExtLinks.vue'
 import FeatureSwitches from './FeatureSwitches.vue'
 
 const props = defineProps<{
-    search: string,
+    search: string
 }>()
-const emit = defineEmits([
-    'update:search',
-    'expandCategory',
-    'expandCart'
-])
+const emit = defineEmits(['update:search', 'expandCategory', 'expandCart'])
 const mobileExpandSearch = ref(false)
 
 const searchTerms = computed({
     get: () => props.search,
-    set: (value: string) => emit('update:search', value)
+    set: (value: string) => emit('update:search', value),
 })
-
 </script>
 
 <template>
-    <div :class="['topbar', {'is-search-expanded': mobileExpandSearch}]">
+    <div :class="['topbar', { 'is-search-expanded': mobileExpandSearch }]">
         <div class="left">
-            <ElButton size="large" text class="category-cascader" @click="emit('expandCategory')">
+            <ElButton
+                size="large"
+                text
+                class="category-cascader"
+                @click="emit('expandCategory')">
                 <FontAwesomeIcon :icon="faBars" />
             </ElButton>
             <span class="app-title text-large font-600 mr-3">
@@ -54,17 +57,27 @@ const searchTerms = computed({
             </span>
         </div>
         <div class="right split">
-            <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search"
-                     placeholder="搜索" />
+            <ElInput
+                v-model="searchTerms"
+                :prefix-icon="IconSearch"
+                class="search"
+                placeholder="搜索" />
             <div class="mobile-topbar-orig-el">
                 <FeatureSwitches class="switches" />
                 <ExtLinks class="extlinks" />
             </div>
-            <ElButton size="large" text class="search-cascader"
-                      @click="mobileExpandSearch = !mobileExpandSearch">
+            <ElButton
+                size="large"
+                text
+                class="search-cascader"
+                @click="mobileExpandSearch = !mobileExpandSearch">
                 <FontAwesomeIcon :icon="faMagnifyingGlass" />
             </ElButton>
-            <ElButton size="large" text class="cart-cascader" @click="emit('expandCart')">
+            <ElButton
+                size="large"
+                text
+                class="cart-cascader"
+                @click="emit('expandCart')">
                 <FontAwesomeIcon :icon="faCartShopping" />
             </ElButton>
         </div>
@@ -91,7 +104,6 @@ const searchTerms = computed({
         gap: 2rem;
         align-items: center;
     }
-
 }
 
 .search {
@@ -143,13 +155,16 @@ const searchTerms = computed({
     }
 }
 
-.category-cascader, .cart-cascader, .search-cascader {
+.category-cascader,
+.cart-cascader,
+.search-cascader {
     padding: 12px 15px;
     margin-left: 0;
 }
 
 @media screen and (min-width: 1025px) {
-    .category-cascader, .cart-cascader {
+    .category-cascader,
+    .cart-cascader {
         display: none;
     }
 }
@@ -160,4 +175,3 @@ const searchTerms = computed({
     }
 }
 </style>
-

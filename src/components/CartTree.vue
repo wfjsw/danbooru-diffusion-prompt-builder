@@ -18,14 +18,27 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {ElTree} from 'element-plus'
+import { ElTree } from 'element-plus'
 import type Node from 'element-plus/es/components/tree/src/model/node'
-import type {AllowDropType, NodeDropType} from 'element-plus/es/components/tree/src/tree.type'
-import {type CartItemEditingChild, type CartItemPresetChild, type CartItemSimple, type CartItemComplex, type CartItemEditing, type CartItem, type CartChildItem, useCartStore, type CartItemAlternate} from '../stores/cart'
+import type {
+    AllowDropType,
+    NodeDropType,
+} from 'element-plus/es/components/tree/src/tree.type'
+import { useCartStore } from '../stores/cart'
+import type {
+    CartItemEditingChild,
+    CartItemPresetChild,
+    CartItemSimple,
+    CartItemComplex,
+    CartItemEditing,
+    CartItem,
+    CartChildItem,
+    CartItemAlternate,
+} from '../types/cart'
 import CartItemComponent from './CartItem.vue'
 
 const props = defineProps<{
-    direction: 'positive'|'negative'
+    direction: 'positive' | 'negative'
 }>()
 
 const cartStore = useCartStore()
@@ -35,27 +48,30 @@ function allowDrag() {
 }
 
 function allowDrop(draggingNode: Node, dropNode: Node, type: AllowDropType) {
-
     // 不能拖到非free node的里边
     // if (dropNode.data.parent !== null && type === 'inner')
     //     return false
 
     // preset外不能拖进去
     // 1. 不能拖到preset上边
-    if (dropNode.data.type === 'preset' && type === 'inner')
-        return false
+    if (dropNode.data.type === 'preset' && type === 'inner') return false
 
     // 2. 目标是presetChild则只能是本preset中间互相拖
-    if (dropNode.data.parent?.type === 'preset' && dropNode.data.parent !== draggingNode.data.parent)
+    if (
+        dropNode.data.parent?.type === 'preset' &&
+        dropNode.data.parent !== draggingNode.data.parent
+    )
         return false
 
     // null 标签不能拖出来
-    if (draggingNode.data.type === 'null' && dropNode.data.parent !== draggingNode.data.parent)
+    if (
+        draggingNode.data.type === 'null' &&
+        dropNode.data.parent !== draggingNode.data.parent
+    )
         return false
 
     // 不能拖到 null 里去
-    if (dropNode.data.type === 'null' && type === 'inner')
-        return false
+    if (dropNode.data.type === 'null' && type === 'inner') return false
 
     return true
 }
@@ -74,7 +90,11 @@ function allowDrop(draggingNode: Node, dropNode: Node, type: AllowDropType) {
  * 最后需要把parent改了，标签类型修正了
  *
  */
-function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType) {
+function dropPostProcess(
+    draggingNode: Node,
+    dropNode: Node,
+    type: NodeDropType
+) {
     let skipReParent = false
     if (!dropNode || type === 'none') return
     // // 1. 出：拖出来的是presetChild，需要解散preset
@@ -87,8 +107,13 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
         const draggingCartItem = draggingNode.data as CartItemEditingChild
         if (draggingCartItem.type !== 'null') {
             // 2. 出：editing拖到只剩一个null，需要删掉这个editing
-            if (draggingCartItem.parent.children.every(n => n.type === 'null')) {
-                cartStore.removeCartItem(props.direction, draggingCartItem.parent)
+            if (
+                draggingCartItem.parent.children.every((n) => n.type === 'null')
+            ) {
+                cartStore.removeCartItem(
+                    props.direction,
+                    draggingCartItem.parent
+                )
                 // @ts-expect-error Well, 这里是可能为 1 的，但这不是个合法状态，所以要改
             } else if (draggingCartItem.parent.children.length === 1) {
                 // 4. 出：有两个标签的editing拖出一个标签，需要加一个null
@@ -100,48 +125,70 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
                 })
             }
         }
-    } else if (draggingNode.data.parent?.type === 'alternate'
-        || draggingNode.data.parent?.type === 'group') {
+    } else if (
+        draggingNode.data.parent?.type === 'alternate' ||
+        draggingNode.data.parent?.type === 'group'
+    ) {
         // 6. 出：mixture拖干净，需要删掉mixture
         if (draggingNode.data.parent.children.length === 0) {
             cartStore.removeCartItem(props.direction, draggingNode.data.parent)
-        } else if (draggingNode.data.parent?.type !== 'group' && draggingNode.data.parent.children.length === 1) {
+        } else if (
+            draggingNode.data.parent?.type !== 'group' &&
+            draggingNode.data.parent.children.length === 1
+        ) {
             // 除 group 以外剩下一个就解散
-            cartStore.dismissCartItem(props.direction, draggingNode.data.parent as CartItemAlternate)
+            cartStore.dismissCartItem(
+                props.direction,
+                draggingNode.data.parent as CartItemAlternate
+            )
             skipReParent = true
         }
     }
 
-
     if (dropNode.data.type === 'editing' && type === 'inner') {
         const dropCartItem = dropNode.data as CartItemEditing
         if (dropCartItem.children.length > 2) {
-            const nullIdx = dropCartItem.children.findIndex(n => n.type === 'null')
+            const nullIdx = dropCartItem.children.findIndex(
+                (n) => n.type === 'null'
+            )
             if (nullIdx !== -1) {
                 // 3. 入：有标签拖进有null的editing里，需要删掉这个null
                 dropCartItem.children.splice(nullIdx, 1)
             } else {
                 // 5. 入：有标签拖进已经有两个标签的editing里，需要转alternate
-                cartStore.switchMixtureType(props.direction, dropCartItem, 'alternate')
+                cartStore.switchMixtureType(
+                    props.direction,
+                    dropCartItem,
+                    'alternate'
+                )
             }
         }
-    } else if ((dropNode.data.type === 'tag' || dropNode.data.type === 'embedding') && type === 'inner') {
+    } else if (
+        (dropNode.data.type === 'tag' || dropNode.data.type === 'embedding') &&
+        type === 'inner'
+    ) {
         const dropCartItem = dropNode.data as CartItemSimple
         // 7. 入：有simple标签拖进free的simple标签，创建editing
         cartStore.createMixtureFromTag(props.direction, dropCartItem)
     } else if (dropNode.data.parent?.type === 'editing' && type !== 'inner') {
         const dropCartItem = dropNode.data as CartItemEditingChild
         if (dropCartItem.parent.children.length > 2) {
-            const nullIdx = dropCartItem.parent.children.findIndex(n => n.type === 'null')
+            const nullIdx = dropCartItem.parent.children.findIndex(
+                (n) => n.type === 'null'
+            )
             if (nullIdx !== -1) {
                 // 3. 入：有标签拖进有null的editing里，需要删掉这个null
                 dropCartItem.parent.children.splice(nullIdx, 1)
             } else {
                 // 5. 入：有标签拖进已经有两个标签的editing里，需要转alternate
-                cartStore.switchMixtureType(props.direction, dropCartItem.parent, 'alternate')
+                cartStore.switchMixtureType(
+                    props.direction,
+                    dropCartItem.parent,
+                    'alternate'
+                )
             }
         }
-    } 
+    }
 
     if (!skipReParent) {
         if (type === 'before' || type === 'after') {
@@ -160,7 +207,6 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
 
     cartStore.convergeToFit(cartStore[props.direction])
 }
-
 </script>
 
 <template>
@@ -171,11 +217,12 @@ function dropPostProcess(draggingNode: Node, dropNode: Node, type: NodeDropType)
         class="cart-tree"
         draggable
         auto-expand-parent
-        @node-drop="dropPostProcess"
-    >
+        @node-drop="dropPostProcess">
         <template #default="{ node, data }">
-            <CartItemComponent :node="node" :data="data" :direction="direction" />
+            <CartItemComponent
+                :node="node"
+                :data="data"
+                :direction="direction" />
         </template>
     </ElTree>
 </template>
-

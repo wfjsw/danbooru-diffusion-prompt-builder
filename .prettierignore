@@ -1,0 +1,8 @@
+dist/
+node_modules/
+.yarn/
+.idea/
+.vscode/
+workspace/
+stats.html
+index.html

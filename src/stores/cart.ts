@@ -17,169 +17,34 @@
  *
  ******************************************************************************/
 
-import {Set as ImmutableSet, OrderedSet as ImmutableOrderedSet} from 'immutable'
-import {defineStore} from 'pinia'
-import {useTagStore} from './tags'
-import {usePresetStore} from './presets'
-import {useSettingsStore} from './settings'
-import {useEmbeddingStore} from './embeddings'
+import { Set as ImmutableSet } from 'immutable'
+import type {
+    CartItem,
+    CartChildItem,
+    CartItemSimple,
+    CartItemPreset,
+    CartItemPresetChild,
+    CartItemEditing,
+    CartItemAlternate,
+    CartItemComplex,
+    CartSwitchableType,
+    CartItemEditingChild,
+    CartItemNull,
+    CartItemGroup,
+    CartItemGroupChild,
+    CartItemNullable,
+    CartItemAlternateChild,
+    Cart,
+} from '../types/cart'
+import { defineStore } from 'pinia'
+import { useTagStore } from './tags'
+import { usePresetStore } from './presets'
+import { useSettingsStore } from './settings'
+import { useEmbeddingStore } from './embeddings'
+import { serialize } from '../prompt/serializer'
 import Decimal from 'decimal.js-light'
 
-export interface CartItemPresetChild {
-    label: string,
-    name: string,
-    category: string | null,
-    type: 'tag',
-    weight: Decimal,
-    children: null,
-    parent: CartItemPreset,
-}
-
-export type CartSimpleType = 'tag' | 'embedding'
-export type CartSwitchableType = 'editing' | 'alternate' | 'group'
-export type CartCompositeType = 'preset' | CartSwitchableType
-
-export type CartType = CartSimpleType | CartCompositeType
-
-export interface CartItemSimple {
-    label: string,
-    name: string,
-    category: string | null,
-    type: CartSimpleType,
-    weight: Decimal,
-    children: null,
-    parent: CartItemComplex|null,
-}
-
-export interface CartItemPreset {
-    label: string,
-    type: 'preset',
-    name: string,
-    category: string,
-    weight: Decimal,
-    children: CartItemPresetChild[],
-    parent: CartItemComplex|null,
-}
-
-export interface CartItemNull {
-    label: '无标签',
-    type: 'null',
-    children: null,
-    parent: CartItemComplex|null,
-}
-
-export type CartItemEditingChild = (CartItem | CartItemNull) & { parent: CartItemEditing }
-
-export interface CartItemEditing {
-    label: '标签替换',
-    type: 'editing',
-    breakpoint: Decimal,
-    weight: Decimal,
-    children: [CartItemEditingChild, CartItemEditingChild],
-    parent: CartItemComplex|null,
-}
-
-export type CartItemAlternateChild = CartItem & {parent: CartItemAlternate}
-
-export interface CartItemAlternate {
-    label: '标签轮转',
-    type: 'alternate',
-    weight: Decimal,
-    children: CartItemAlternateChild[],
-    parent: CartItemComplex|null,
-}
-
-export type CartItemGroupChild = CartItem & {parent: CartItemGroup}
-
-export interface CartItemGroup {
-    label: '标签组',
-    type: 'group',
-    weight: Decimal,
-    children: CartItemGroupChild[],
-    parent: CartItemComplex|null,
-}
-
-export type CartItemComplex = CartItemEditing | CartItemAlternate | CartItemGroup
-
-export type CartItem = CartItemSimple | CartItemPreset | CartItemComplex
-export type CartChildItem = CartItemPresetChild | CartItemEditingChild | CartItemAlternateChild | CartItemGroupChild
-
-export type CartItemNullable = CartItem | CartItemNull
-
-export interface Cart {
-    positive: CartItem[],
-    negative: CartItem[],
-}
-
-function wrapParen(content: string, char: '(' | '{' | '[', length: number) {
-    for (let i = 0; i < length; i++) {
-        switch (char) {
-            case '(':
-                content = `(${content})`
-                break
-            case '{':
-                content = `{${content}}`
-                break
-            case '[':
-                content = `[${content}]`
-                break
-        }
-    }
-    return content
-}
-
-export function wrapParenByWeight(content: string, weight: Decimal, newEmphasis: boolean): string {
-    if (newEmphasis) {
-        if (!weight.toDecimalPlaces(8).equals(1)) {
-            return `(${content}:${weight.toDecimalPlaces(8)})`
-        }
-    } else {
-        const oldWeight = weight.log(1.05).toInteger().toNumber()
-        if (oldWeight !== 0) {
-            return wrapParen(content, oldWeight > 0 ? '{' : '[', Math.abs(oldWeight))
-        }
-    }
-    return content
-}
-
-function tagArrayToString(items: (CartItemNullable|CartItemPresetChild)[], newEmphasis: boolean): string {
-    return ImmutableOrderedSet.of(...items.reduce((a: string[], t): string[] => {
-        if (t.type === 'tag' || t.type === 'embedding') {
-            let name = t.name.replaceAll('\\', '\\\\')
-            if (newEmphasis) {
-                name = name
-                    .replaceAll('(', '\\(').replaceAll(')', '\\)')
-                    .replaceAll('[', '\\[').replaceAll(']', '\\]')
-            } else {
-                name = name
-                    .replaceAll('{', '\\{').replaceAll('}', '\\}')
-                    .replaceAll('[', '\\[').replaceAll(']', '\\]')
-            }
-            a.push(wrapParenByWeight(name, t.weight, newEmphasis))
-        } else if (t.type === 'preset') {
-            a.push(tagArrayToString(t.children, newEmphasis))
-        } else if (t.type === 'alternate') {
-            if (newEmphasis) {
-                a.push(wrapParenByWeight(`[${t.children.map(n => tagArrayToString([n], newEmphasis)).join('|')}]`, t.weight, newEmphasis))
-            } else {
-                a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
-            }
-        } else if (t.type === 'editing') {
-            if (newEmphasis) {
-                a.push(wrapParenByWeight(`[${t.children[0].type !== 'null' ? tagArrayToString([t.children[0]], newEmphasis) 
-                    : ''}:${t.children[1].type !== 'null' ? tagArrayToString([t.children[1]], newEmphasis)
-                    : ''}:${t.breakpoint.toDecimalPlaces(3).toNumber()}]`, t.weight, newEmphasis))
-            } else {
-                a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
-            }
-        } else if (t.type === 'group') {
-            a.push(wrapParenByWeight(tagArrayToString(t.children, newEmphasis), t.weight, newEmphasis))
-        }
-        return a
-    }, [])).join(', ')
-}
-
-function tagNameMapper(n: CartItem|CartItemPresetChild): string|string[] {
+function tagNameMapper(n: CartItem | CartItemPresetChild): string | string[] {
     switch (n.type) {
         case 'tag':
         case 'embedding':
@@ -187,16 +52,24 @@ function tagNameMapper(n: CartItem|CartItemPresetChild): string|string[] {
         case 'preset':
         case 'alternate':
         case 'group':
-            return n.children.flatMap(e => tagNameMapper(e))
+            return n.children.flatMap((e) => tagNameMapper(e))
         case 'editing':
-            return n.children.filter((e): e is CartItem & { parent: CartItemEditing } => e.type !== 'null')
-                .flatMap(e => tagNameMapper(e))
+            return n.children
+                .filter(
+                    (e): e is CartItem & { parent: CartItemEditing } =>
+                        e.type !== 'null'
+                )
+                .flatMap((e) => tagNameMapper(e))
     }
 }
 
-function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = 'tag') {
+function removeTag(
+    ref: CartItem[],
+    tagName: string,
+    type: 'tag' | 'embedding' = 'tag'
+) {
     // Direct tags
-    const index = ref.findIndex(n => n.type === type && n.name === tagName)
+    const index = ref.findIndex((n) => n.type === type && n.name === tagName)
     if (index !== -1) {
         ref.splice(index, 1)
     } else {
@@ -205,23 +78,27 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
             if (ref[i].type === 'preset') {
                 const preset = ref[i] as CartItemPreset
                 const parent = preset.parent
-                const idx = preset
-                    .children.findIndex(n => n.type === type && n.name === tagName)
+                const idx = preset.children.findIndex(
+                    (n) => n.type === type && n.name === tagName
+                )
                 if (idx !== -1) {
                     // Decompose the preset
                     const decomposedTagArray: CartItemSimple[] = preset.children
-                        .filter(n => n.name !== tagName).map(n => ({...n, parent}))
+                        .filter((n) => n.name !== tagName)
+                        .map((n) => ({ ...n, parent }))
                     ref.splice(i, 1, ...decomposedTagArray)
                 }
             } else if (
-                   ref[i].type === 'editing'
-                || ref[i].type === 'alternate' ) {
-                const item = ref[i] as CartItemAlternate|CartItemEditing
-                const idx = item
-                    .children.findIndex(n => n.type === type && n.name === tagName)
+                ref[i].type === 'editing' ||
+                ref[i].type === 'alternate'
+            ) {
+                const item = ref[i] as CartItemAlternate | CartItemEditing
+                const idx = item.children.findIndex(
+                    (n) => n.type === type && n.name === tagName
+                )
                 item.children.splice(idx, 1)
                 // @ts-ignore Stupid Typescript
-                if (item.children.every(n => n.type === 'null')) {
+                if (item.children.every((n) => n.type === 'null')) {
                     // No effective item in this mixture
                     ref.splice(i, 1)
                 } else if (item.children.length === 1) {
@@ -230,9 +107,18 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
                     const parent = item.parent
                     if (child.type === 'tag' || child.type === 'embedding') {
                         if (item.type === 'editing') {
-                            item.children.push({type: 'null', label: '无标签', parent: item, children: null})
+                            item.children.push({
+                                type: 'null',
+                                label: '无标签',
+                                parent: item,
+                                children: null,
+                            })
                         } else {
-                            ref.splice(i, 1, {...child, parent, weight: new Decimal(1)})
+                            ref.splice(i, 1, {
+                                ...child,
+                                parent,
+                                weight: new Decimal(1),
+                            })
                         }
                     }
                 }
@@ -242,14 +128,20 @@ function removeTag(ref: CartItem[], tagName: string, type: 'tag'|'embedding' = '
 }
 
 function removePreset(ref: CartItem[], category: string, name: string) {
-    const index = ref.findIndex((ci: CartItem) =>
-        ci.type === 'preset' && category === ci.category && name === ci.name )
+    const index = ref.findIndex(
+        (ci: CartItem) =>
+            ci.type === 'preset' && category === ci.category && name === ci.name
+    )
     if (index > -1) ref.splice(index, 1)
 }
 
-function appendTag(ref: CartItem[], tagName: string, weight: Decimal,
-                   existsFn: (type: 'tag'|'embedding', name: string) => boolean,
-                   removeRevFn: (tagName: string, tag?: 'tag'|'embedding') => void) {
+function appendTag(
+    ref: CartItem[],
+    tagName: string,
+    weight: Decimal,
+    existsFn: (type: 'tag' | 'embedding', name: string) => boolean,
+    removeRevFn: (tagName: string, tag?: 'tag' | 'embedding') => void
+) {
     const tagStore = useTagStore()
     const embeddingStore = useEmbeddingStore()
 
@@ -344,16 +236,20 @@ function appendTag(ref: CartItem[], tagName: string, weight: Decimal,
     removeRevFn(tagName, 'tag')
 }
 
-function appendPreset(ref: CartItem[], presetCategory: string, presetName: string,
-                      existsFn: (type: 'preset', name: string, category: string) => boolean,
-                      removeRevFn: (category: string, name: string) => void) {
+function appendPreset(
+    ref: CartItem[],
+    presetCategory: string,
+    presetName: string,
+    existsFn: (type: 'preset', name: string, category: string) => boolean,
+    removeRevFn: (category: string, name: string) => void
+) {
     const tagStore = useTagStore()
     const presetStore = usePresetStore()
 
     if (existsFn('preset', presetName, presetCategory)) return
     const preset = presetStore.presets
-        .find(n => n.name === presetCategory)?.content
-        .find(n => n.name === presetName)
+        .find((n) => n.name === presetCategory)
+        ?.content.find((n) => n.name === presetName)
     if (preset) {
         const item: CartItemPreset = {
             label: `${presetCategory}/${presetName}`,
@@ -388,10 +284,11 @@ function appendPreset(ref: CartItem[], presetCategory: string, presetName: strin
                 }
             }
         })
-        ref.push(item),
-        removeRevFn(presetCategory, presetName)
+        ref.push(item), removeRevFn(presetCategory, presetName)
     } else {
-        throw new Error(`Preset ${presetCategory}/${presetName} does not exist.`)
+        throw new Error(
+            `Preset ${presetCategory}/${presetName} does not exist.`
+        )
     }
 }
 
@@ -403,62 +300,116 @@ export const useCartStore = defineStore('cart', {
     getters: {
         positiveToString: (state) => {
             const settingsStore = useSettingsStore()
-            return tagArrayToString(state.positive, settingsStore.newEmphasis)
+            return serialize(state.positive, settingsStore.newEmphasis)
         },
         negativeToString: (state) => {
             const settingsStore = useSettingsStore()
-            return tagArrayToString(state.negative, settingsStore.newEmphasis)
+            return serialize(state.negative, settingsStore.newEmphasis)
         },
-        positiveTags: (state) => ImmutableSet.of<string>(...state.positive.flatMap(tagNameMapper)),
-        positiveTagsShallow: (state) => ImmutableSet.of<string>(...state.positive
-            .filter(({ type }) => ['tag', 'embedding', 'preset'].includes(type)).flatMap(tagNameMapper)),
-        negativeTags: (state) => ImmutableSet.of<string>(...state.negative.flatMap(tagNameMapper)),
-        negativeTagsShallow: (state) => ImmutableSet.of<string>(...state.negative
-            .filter(({ type }) => ['tag', 'embedding', 'preset'].includes(type)).flatMap(tagNameMapper)),
-        positivePresets: (state) => ImmutableSet.of<string>(...state.positive
-            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => JSON.stringify([category, name]))),
-        negativePresets: (state) => ImmutableSet.of<string>(...state.negative
-            .filter((t): t is CartItemPreset => t.type === 'preset').map(({category, name}) => JSON.stringify([category, name]))),
-
+        positiveTags: (state) =>
+            ImmutableSet.of<string>(...state.positive.flatMap(tagNameMapper)),
+        positiveTagsShallow: (state) =>
+            ImmutableSet.of<string>(
+                ...state.positive
+                    .filter(({ type }) =>
+                        ['tag', 'embedding', 'preset'].includes(type)
+                    )
+                    .flatMap(tagNameMapper)
+            ),
+        negativeTags: (state) =>
+            ImmutableSet.of<string>(...state.negative.flatMap(tagNameMapper)),
+        negativeTagsShallow: (state) =>
+            ImmutableSet.of<string>(
+                ...state.negative
+                    .filter(({ type }) =>
+                        ['tag', 'embedding', 'preset'].includes(type)
+                    )
+                    .flatMap(tagNameMapper)
+            ),
+        positivePresets: (state) =>
+            ImmutableSet.of<string>(
+                ...state.positive
+                    .filter((t): t is CartItemPreset => t.type === 'preset')
+                    .map(({ category, name }) =>
+                        JSON.stringify([category, name])
+                    )
+            ),
+        negativePresets: (state) =>
+            ImmutableSet.of<string>(
+                ...state.negative
+                    .filter((t): t is CartItemPreset => t.type === 'preset')
+                    .map(({ category, name }) =>
+                        JSON.stringify([category, name])
+                    )
+            ),
     },
     actions: {
-
-        existsPositive(type: 'tag' | 'preset'| 'embedding', name: string, category: string | null = null) {
+        existsPositive(
+            type: 'tag' | 'preset' | 'embedding',
+            name: string,
+            category: string | null = null
+        ) {
             if (type === 'tag' || type === 'embedding') {
                 return this.positiveTagsShallow.includes(name)
             } else if (type === 'preset') {
-                return this.positivePresets.includes(JSON.stringify([category, name]))
+                return this.positivePresets.includes(
+                    JSON.stringify([category, name])
+                )
             }
             return false
         },
 
-        existsNegative(type: 'tag' | 'preset' | 'embedding', name: string, category: string | null = null) {
+        existsNegative(
+            type: 'tag' | 'preset' | 'embedding',
+            name: string,
+            category: string | null = null
+        ) {
             if (type === 'tag' || type === 'embedding') {
                 return this.negativeTagsShallow.includes(name)
             } else if (type === 'preset') {
-                return this.negativePresets.includes(JSON.stringify([category, name]))
+                return this.negativePresets.includes(
+                    JSON.stringify([category, name])
+                )
             }
             return false
         },
 
         appendPositiveTag(tagName: string, weight: Decimal = new Decimal(1)) {
-            appendTag(this.positive, tagName, weight, this.existsPositive, this.removeNegativeTag)
+            appendTag(
+                this.positive,
+                tagName,
+                weight,
+                this.existsPositive,
+                this.removeNegativeTag
+            )
         },
 
-        removePositiveTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
+        removePositiveTag(tagName: string, type: 'tag' | 'embedding' = 'tag') {
             removeTag(this.positive, tagName, type)
         },
 
         appendNegativeTag(tagName: string, weight: Decimal = new Decimal(1)) {
-            appendTag(this.negative, tagName, weight, this.existsNegative, this.removePositiveTag)
+            appendTag(
+                this.negative,
+                tagName,
+                weight,
+                this.existsNegative,
+                this.removePositiveTag
+            )
         },
 
-        removeNegativeTag(tagName: string, type: 'tag'|'embedding' = 'tag') {
+        removeNegativeTag(tagName: string, type: 'tag' | 'embedding' = 'tag') {
             removeTag(this.negative, tagName, type)
         },
 
         appendPositivePreset(presetCategory: string, presetName: string) {
-            appendPreset(this.positive, presetCategory, presetName, this.existsPositive, this.removeNegativePreset)
+            appendPreset(
+                this.positive,
+                presetCategory,
+                presetName,
+                this.existsPositive,
+                this.removeNegativePreset
+            )
         },
 
         removePositivePreset(presetCategory: string, presetName: string) {
@@ -466,34 +417,61 @@ export const useCartStore = defineStore('cart', {
         },
 
         appendNegativePreset(presetCategory: string, presetName: string) {
-            appendPreset(this.negative, presetCategory, presetName, this.existsNegative, this.removePositivePreset)
+            appendPreset(
+                this.negative,
+                presetCategory,
+                presetName,
+                this.existsNegative,
+                this.removePositivePreset
+            )
         },
 
         removeNegativePreset(presetCategory: string, presetName: string) {
             removePreset(this.negative, presetCategory, presetName)
         },
 
-        appendCartItem(direction: 'positive'|'negative', item: CartItem) {
+        appendCartItem(direction: 'positive' | 'negative', item: CartItem) {
             this[direction].push(item)
         },
 
-        removeCartItem(direction: 'positive' | 'negative', item: CartItem|CartChildItem) {
+        removeCartItem(
+            direction: 'positive' | 'negative',
+            item: CartItem | CartChildItem
+        ) {
             const root = item.parent?.children ?? this[direction]
             // @ts-ignore sometimes caused by ElTree
             root.splice(root.indexOf(item), 1)
             if (item.parent !== null) {
-                this.convergeToFit(item.parent.parent?.children ?? this[direction])
+                this.convergeToFit(
+                    item.parent.parent?.children ?? this[direction]
+                )
             }
         },
 
-        dismissCartItem(direction: 'positive' | 'negative', item: CartItemPreset | CartItemComplex) {
+        dismissCartItem(
+            direction: 'positive' | 'negative',
+            item: CartItemPreset | CartItemComplex
+        ) {
             const parent = item.parent
             const children: CartItemSimple[] = item.children
                 // @ts-ignore why no filter
-                .filter((n): n is Exclude<CartChildItem, CartItemNull> => n.type !== 'null')
-                .map((n: Exclude<CartChildItem, CartItemNull>): CartItem =>
-                    ({ ...n, parent, ...n.type !== 'group' && { weight: new Decimal(1) } }))
-            this[direction].splice(this[direction].indexOf(item), 1, ...children)
+                .filter(
+                    // @ts-ignore why no filter
+                    (n): n is Exclude<CartChildItem, CartItemNull> =>
+                        n.type !== 'null'
+                )
+                .map(
+                    (n: Exclude<CartChildItem, CartItemNull>): CartItem => ({
+                        ...n,
+                        parent,
+                        ...(n.type !== 'group' && { weight: new Decimal(1) }),
+                    })
+                )
+            this[direction].splice(
+                this[direction].indexOf(item),
+                1,
+                ...children
+            )
         },
 
         clear() {
@@ -516,9 +494,7 @@ export const useCartStore = defineStore('cart', {
                     .replaceAll('_', ' ').split(/\s*,\s*|\s*，\s*/)
                 for (const token of textList) {
                     let text = null
-
                     // TODO: parse alternate/editing
-
                     // check numeric emphasis
                     const numericalEmphasis = token.match(/\(([^:]+):(\d+(?:.\d+)?)\)/)
                     if (numericalEmphasis) {
@@ -605,7 +581,12 @@ export const useCartStore = defineStore('cart', {
             run(negative, this.appendNegativeTag)
         },
 
-        createMixtureFromTag(direction: 'positive' | 'negative', item: Omit<CartItemSimple, 'children'> & { children: (CartItemSimple | CartChildItem)[] | null }) {
+        createMixtureFromTag(
+            direction: 'positive' | 'negative',
+            item: Omit<CartItemSimple, 'children'> & {
+                children: (CartItemSimple | CartChildItem)[] | null
+            }
+        ) {
             const root = item.parent?.children ?? this[direction]
             // @ts-expect-error caused by ElTree
             const idx = root.indexOf(item)
@@ -620,21 +601,30 @@ export const useCartStore = defineStore('cart', {
                     parent: item.parent ?? null,
                 }
 
-                const {children: oldChildren, ...rest} = item
+                const { children: oldChildren, ...rest } = item
 
-                composition.children  = [
-                    {...rest, parent: composition, children: null},
-                    Array.isArray(oldChildren) ?
-                        { ...oldChildren[0], parent: composition }
-                        : { type: 'null', label: '无标签', parent: composition, children: null },
+                composition.children = [
+                    { ...rest, parent: composition, children: null },
+                    Array.isArray(oldChildren)
+                        ? { ...oldChildren[0], parent: composition }
+                        : {
+                              type: 'null',
+                              label: '无标签',
+                              parent: composition,
+                              children: null,
+                          },
                 ]
                 root.splice(idx, 1, composition)
             }
         },
 
-        determineNextSwitchableMixture(item: CartItemComplex): CartSwitchableType|null {
+        determineNextSwitchableMixture(
+            item: CartItemComplex
+        ): CartSwitchableType | null {
             if (item.type === 'editing') {
-                const effectiveChildren = item.children.filter((child) => child.type !== 'null')
+                const effectiveChildren = item.children.filter(
+                    (child) => child.type !== 'null'
+                )
                 if (effectiveChildren.length < 2) return 'group'
                 else return 'alternate'
             } else if (item.type === 'alternate') {
@@ -649,34 +639,46 @@ export const useCartStore = defineStore('cart', {
             return null
         },
 
-        isMixtureSwitchable(item: CartItemComplex, to: CartSwitchableType|null = null) {
+        isMixtureSwitchable(
+            item: CartItemComplex,
+            to: CartSwitchableType | null = null
+        ) {
             if (to === null) {
                 return this.determineNextSwitchableMixture(item)
             } else if (to === item.type) {
                 return false
             } else if (to === 'group' && item.type !== 'group') {
-                return item.children
-                    .some((child: CartItemNullable):
-                        child is CartItem => child.type !== 'null')
+                return item.children.some(
+                    (child: CartItemNullable): child is CartItem =>
+                        child.type !== 'null'
+                )
             } else if (to === 'editing' && item.type !== 'editing') {
                 return item.children.length < 3
             } else if (to === 'alternate' && item.type !== 'alternate') {
                 const effectiveChildren = item.children
                     // @ts-ignore ts somewhat broken
-                    .filter((child: CartItemNullable):
-                        child is CartItem => child.type !== 'null')
+                    .filter(
+                        (child: CartItemNullable): child is CartItem =>
+                            child.type !== 'null'
+                    )
                 return effectiveChildren.length > 1
             } else {
                 return false
             }
         },
 
-        switchMixtureType(direction: 'positive' | 'negative' | null, item: CartItemComplex, to: CartSwitchableType | null = null) {
-            const root = item?.parent?.children ?? (direction !== null ? this[direction] : null)
+        switchMixtureType(
+            direction: 'positive' | 'negative' | null,
+            item: CartItemComplex,
+            to: CartSwitchableType | null = null
+        ) {
+            const root =
+                item?.parent?.children ??
+                (direction !== null ? this[direction] : null)
             if (root === null) {
                 throw new Error('Switching mixture type on null')
             }
-            
+
             const dest = to ?? this.determineNextSwitchableMixture(item)
             if (!dest) return
             const switchable = this.isMixtureSwitchable(item, dest)
@@ -693,22 +695,41 @@ export const useCartStore = defineStore('cart', {
                     }
 
                     const children: CartItemEditingChild[] = item.children
-                        .map((child): Exclude<CartItemEditingChild, CartItemNull> => {
-                        if (child.type === 'group' && child.children.length === 1) { 
-                            return {...child.children[0], parent: newMixture}
-                        } else {
-                            return {
-                                ...child,
-                                parent: newMixture,
+                        .map(
+                            (
+                                child
+                            ): Exclude<CartItemEditingChild, CartItemNull> => {
+                                if (
+                                    child.type === 'group' &&
+                                    child.children.length === 1
+                                ) {
+                                    return {
+                                        ...child.children[0],
+                                        parent: newMixture,
+                                    }
+                                } else {
+                                    return {
+                                        ...child,
+                                        parent: newMixture,
+                                    }
+                                }
                             }
-                        }
-                    }).slice(0, 2)
+                        )
+                        .slice(0, 2)
                     if (children.length === 1) {
-                        children.push({ type: 'null', label: '无标签', parent: newMixture, children: null })
+                        children.push({
+                            type: 'null',
+                            label: '无标签',
+                            parent: newMixture,
+                            children: null,
+                        })
                     } else if (children.length !== 2) {
                         throw new Error('Invalid state')
                     }
-                    newMixture.children = children as [CartItemEditingChild, CartItemEditingChild]
+                    newMixture.children = children as [
+                        CartItemEditingChild,
+                        CartItemEditingChild
+                    ]
 
                     const idx = root.indexOf(item as any)
                     root.splice(idx, 1, newMixture)
@@ -723,10 +744,19 @@ export const useCartStore = defineStore('cart', {
                     }
                     newMixture.children = item.children
                         // @ts-ignore Stupid Typescript
-                        .filter((child): child is CartItem => child.type !== 'null')
+                        .filter(
+                            // @ts-ignore Stupid Typescript
+                            (child): child is CartItem => child.type !== 'null'
+                        )
                         .map((child: CartItem): CartItemAlternateChild => {
-                            if (child.type === 'group' && child.children.length === 1) {
-                                return {...child.children[0], parent: newMixture}
+                            if (
+                                child.type === 'group' &&
+                                child.children.length === 1
+                            ) {
+                                return {
+                                    ...child.children[0],
+                                    parent: newMixture,
+                                }
                             } else {
                                 return {
                                     ...child,
@@ -748,10 +778,19 @@ export const useCartStore = defineStore('cart', {
                     }
                     newMixture.children = item.children
                         // @ts-ignore Stupid Typescript
-                        .filter((child): child is CartItem => child.type !== 'null')
+                        .filter(
+                            // @ts-ignore Stupid Typescript
+                            (child): child is CartItem => child.type !== 'null'
+                        )
                         .map((child: CartItem): CartItemGroupChild => {
-                            if (child.type === 'group' && child.children.length === 1) { 
-                                return {...child.children[0], parent: newMixture}
+                            if (
+                                child.type === 'group' &&
+                                child.children.length === 1
+                            ) {
+                                return {
+                                    ...child.children[0],
+                                    parent: newMixture,
+                                }
                             } else {
                                 return {
                                     ...child,
@@ -788,7 +827,9 @@ export const useCartStore = defineStore('cart', {
                         this.convergeToFit(children)
                     }
                     if (type === 'editing') {
-                        const valid = children?.some((child) => child.type !== 'null') ?? false
+                        const valid =
+                            children?.some((child) => child.type !== 'null') ??
+                            false
                         // @ts-ignore whatever
                         const singular = children?.length === 1
                         // @ts-ignore also whatever
@@ -798,11 +839,20 @@ export const useCartStore = defineStore('cart', {
                             changed = true
                             i--
                         } else if (singular) {
-                            children.push({ type: 'null', label: '无标签', parent: root[i] as CartItemEditing, children: null })
+                            children.push({
+                                type: 'null',
+                                label: '无标签',
+                                parent: root[i] as CartItemEditing,
+                                children: null,
+                            })
                             changed = true
                             i--
                         } else if (tooMany) {
-                            this.switchMixtureType(null, root[i] as CartItemEditing, 'alternate')
+                            this.switchMixtureType(
+                                null,
+                                root[i] as CartItemEditing,
+                                'alternate'
+                            )
                             changed = true
                             i--
                         }
@@ -816,14 +866,13 @@ export const useCartStore = defineStore('cart', {
                         } else if (singular && type !== 'group') {
                             const child = children[0]
                             // @ts-ignore well
-                            root.splice(i, 1, {...child, parent: root[i]})
+                            root.splice(i, 1, { ...child, parent: root[i] })
                             changed = true
                             i--
                         }
                     }
                 }
             }
-        }
-    }
-
+        },
+    },
 })

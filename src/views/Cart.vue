@@ -18,9 +18,14 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {ElButton, ElButtonGroup, ElScrollbar, ElMessageBox} from 'element-plus'
-import {ref} from 'vue'
-import {useCartStore} from '../stores/cart'
+import {
+    ElButton,
+    ElButtonGroup,
+    ElScrollbar,
+    ElMessageBox,
+} from 'element-plus'
+import { ref } from 'vue'
+import { useCartStore } from '../stores/cart'
 import ImportDialog from '../components/ImportDialog.vue'
 import ResultDialog from '../components/ResultDialog.vue'
 import FeatureSwitches from '../components/FeatureSwitches.vue'
@@ -39,10 +44,10 @@ async function clearDialog() {
             type: 'warning',
         })
         cartStore.clear()
-    } catch (e) {// ignore
+    } catch (e) {
+        // ignore
     }
 }
-
 </script>
 
 <template>
@@ -63,12 +68,25 @@ async function clearDialog() {
         </ElScrollbar>
         <div class="btn-block">
             <ElButtonGroup class="btn-group">
-                <ElButton type="success" class="btn" @click="importVisible = true">导入标签</ElButton>
-                <ElButton type="danger" class="btn" @click="clearDialog">清空购物车</ElButton>
+                <ElButton
+                    type="success"
+                    class="btn"
+                    @click="importVisible = true">
+                    导入标签
+                </ElButton>
+                <ElButton type="danger" class="btn" @click="clearDialog">
+                    清空购物车
+                </ElButton>
             </ElButtonGroup>
-</div>
+        </div>
         <div class="btn-block mb-bottom">
-            <ElButton type="primary" class="btn" size="large" @click="resultVisible = true">结算</ElButton>
+            <ElButton
+                type="primary"
+                class="btn"
+                size="large"
+                @click="resultVisible = true">
+                结算
+                </ElButton>
         </div>
         <ImportDialog v-model="importVisible" />
         <ResultDialog v-model="resultVisible" />
@@ -117,7 +135,7 @@ async function clearDialog() {
 
 .el-tree {
     :deep(.el-tree-node__label) {
-        margin-right: 1.0rem;
+        margin-right: 1rem;
     }
     :deep(.el-tree-node__content) {
         height: auto;

@@ -18,22 +18,25 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {computed} from 'vue'
-import {ElTag} from 'element-plus'
-import {useTagStore} from '../stores/tags'
-import {useCartStore} from '../stores/cart'
+import { computed } from 'vue'
+import { ElTag } from 'element-plus'
+import { useTagStore } from '../stores/tags'
+import { useCartStore } from '../stores/cart'
 
 const tagStore = useTagStore()
 const cartStore = useCartStore()
 
-const props = withDefaults(defineProps<{
-    tag: string,
-    direction?: 'positive'|'negative'|'both'|null,
-    type?: ''|'success'|'warning'|'info'|'danger',
-}>(), {
-    direction: null,
-    type: '',
-})
+const props = withDefaults(
+    defineProps<{
+        tag: string
+        direction?: 'positive' | 'negative' | 'both' | null
+        type?: '' | 'success' | 'warning' | 'info' | 'danger'
+    }>(),
+    {
+        direction: null,
+        type: '',
+    }
+)
 
 const theme = computed(() => {
     if (props.direction) {
@@ -76,12 +79,17 @@ function toggle() {
         return null
     }
 }
-
 </script>
 
 <template>
-    <ElTag :class="[$style.color_fix, $style.size_fix, {[$style.pointer]: direction !== null}]" :type="theme"
-           @click="toggle()">
+    <ElTag
+        :class="[
+            $style.color_fix,
+            $style.size_fix,
+            { [$style.pointer]: direction !== null },
+        ]"
+        :type="theme"
+        @click="toggle()">
         <template v-if="tagItem">
             <span>{{ tag }}</span>
             <span :class="$style.usn"> | </span>

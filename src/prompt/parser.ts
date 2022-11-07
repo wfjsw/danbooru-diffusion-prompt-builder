@@ -17,12 +17,21 @@
  *
  ******************************************************************************/
 
-/// <reference types="vite/client" />
+import nearley from 'nearley'
+import grammar from './grammar'
+import type { CartItem } from '../types/cart'
 
-declare module '*.vue' {
-    import type { DefineComponent } from 'vue'
-    const component: DefineComponent<{}, {}, any>
-    export default component
+export function parse(prompt: string) {
+    const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
+    parser.feed(prompt)
+    return parser.results[0]
 }
 
-declare var __BUILD_TIMESTAMP__: number
+export function unserialize(prompt: string, root: CartItem[]) {
+    const parsed = parse(prompt)
+    if (parsed) {
+        parsed.forEach((item: CartItem) => {
+            root.push(item)
+        })
+    }
+}

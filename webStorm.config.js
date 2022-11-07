@@ -1,5 +1,5 @@
 System.config({
-    "paths": {
-        "@/*": "./src/*",
-    }
-});
+    paths: {
+        '@/*': './src/*',
+    },
+})

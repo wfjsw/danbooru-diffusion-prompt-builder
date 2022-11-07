@@ -1,7 +1,7 @@
 # 调用该模型使用的命令 (模型图片左上角尖括号内容)
 prompt: bella
 # 模型名称
-name:  贝拉/Bella
+name: 贝拉/Bella
 # 模型作者
 author: Rosmontis @ t.me/StableDiffusion_CN
 # 模型分类

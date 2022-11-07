@@ -18,25 +18,35 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {h} from 'vue'
-import {isDark} from '../composables/dark'
-import {ElSwitch, ElTooltip} from 'element-plus'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faEye, faEyeSlash, faLightbulbOn, faLightbulbSlash, faShieldCheck, faShieldExclamation} from '@fortawesome/pro-light-svg-icons'
-import {useSettingsStore} from '../stores/settings'
+import { h } from 'vue'
+import { isDark } from '../composables/dark'
+import { ElSwitch, ElTooltip } from 'element-plus'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    faEye,
+    faEyeSlash,
+    faLightbulbOn,
+    faLightbulbSlash,
+    faShieldCheck,
+    faShieldExclamation,
+} from '@fortawesome/pro-light-svg-icons'
+import { useSettingsStore } from '../stores/settings'
 
 const settingsStore = useSettingsStore()
-const activeIcon = h(FontAwesomeIcon, {icon: faEye})
-const inactiveIcon = h(FontAwesomeIcon, {icon: faEyeSlash})
+const activeIcon = h(FontAwesomeIcon, { icon: faEye })
+const inactiveIcon = h(FontAwesomeIcon, { icon: faEyeSlash })
 
-const safeIcon = h(FontAwesomeIcon, {icon: faShieldCheck})
-const unsafeIcon = h(FontAwesomeIcon, {icon: faShieldExclamation})
+const safeIcon = h(FontAwesomeIcon, { icon: faShieldCheck })
+const unsafeIcon = h(FontAwesomeIcon, { icon: faShieldExclamation })
 
-const lightIcon = h(FontAwesomeIcon, {icon: faLightbulbOn})
-const darkIcon = h(FontAwesomeIcon, {icon: faLightbulbSlash})
+const lightIcon = h(FontAwesomeIcon, { icon: faLightbulbOn })
+const darkIcon = h(FontAwesomeIcon, { icon: faLightbulbSlash })
 
-const ax = h('span', {class: 'switch-text-icon math-style'}, ['a', h('sup', {}, 'x')])
-const plus = h('span', {class: 'switch-text-icon'}, ['+'])
+const ax = h('span', { class: 'switch-text-icon math-style' }, [
+    'a',
+    h('sup', {}, 'x'),
+])
+const plus = h('span', { class: 'switch-text-icon' }, ['+'])
 </script>
 
 <template>
@@ -47,8 +57,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                 :active-icon="darkIcon"
                 :inactive-icon="lightIcon"
                 inline-prompt
-                size="large"
-            />
+                size="large" />
         </ElTooltip>
         <ElTooltip content="显示图片" :show-after="750">
             <ElSwitch
@@ -56,8 +65,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                 :active-icon="activeIcon"
                 :inactive-icon="inactiveIcon"
                 inline-prompt
-                size="large"
-            />
+                size="large" />
         </ElTooltip>
         <ElTooltip content="步进速率" :show-after="750">
             <ElSwitch
@@ -65,8 +73,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                 :active-icon="plus"
                 :inactive-icon="ax"
                 inline-prompt
-                size="large"
-            />
+                size="large" />
         </ElTooltip>
         <ElTooltip content="强调类型" :show-after="750">
             <ElSwitch
@@ -74,8 +81,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                 active-text="()"
                 inactive-text="{}"
                 inline-prompt
-                size="large"
-            />
+                size="large" />
         </ElTooltip>
         <ElTooltip content="分级限制" :show-after="750">
             <ElSwitch
@@ -84,8 +90,7 @@ const plus = h('span', {class: 'switch-text-icon'}, ['+'])
                 :inactive-icon="safeIcon"
                 inline-prompt
                 class="restricted-switch"
-                size="large"
-            />
+                size="large" />
         </ElTooltip>
     </div>
 </template>

@@ -27,13 +27,11 @@ function isPathSeparator(code) {
 }
 
 function isWindowsDeviceRoot(code) {
-    return code >= 'A' && code <= 'Z' ||
-        code >= 'a' && code <= 'z'
+    return (code >= 'A' && code <= 'Z') || (code >= 'a' && code <= 'z')
 }
 
 function validateString(value, name) {
-  if (typeof value !== 'string')
-    throw new Error(name, 'string', value)
+    if (typeof value !== 'string') throw new Error(name, 'string', value)
 }
 
 /**
@@ -42,8 +40,7 @@ function validateString(value, name) {
  * @returns {string}
  */
 function basename(path, suffix) {
-    if (suffix !== undefined)
-        validateString(suffix, 'ext')
+    if (suffix !== undefined) validateString(suffix, 'ext')
     validateString(path, 'path')
     let start = 0
     let end = -1
@@ -52,15 +49,20 @@ function basename(path, suffix) {
     // Check for a drive letter prefix so as not to mistake the following
     // path separator as an extra separator at the end of the path that can be
     // disregarded
-    if (path.length >= 2 &&
+    if (
+        path.length >= 2 &&
         isWindowsDeviceRoot(path.charCodeAt(0)) &&
-        path.charCodeAt(1) === ':') {
+        path.charCodeAt(1) === ':'
+    ) {
         start = 2
     }
 
-    if (suffix !== undefined && suffix.length > 0 && suffix.length <= path.length) {
-        if (suffix === path)
-            return ''
+    if (
+        suffix !== undefined &&
+        suffix.length > 0 &&
+        suffix.length <= path.length
+    ) {
+        if (suffix === path) return ''
         let extIdx = suffix.length - 1
         let firstNonSlashEnd = -1
         for (let i = path.length - 1; i >= start; --i) {
@@ -97,10 +99,8 @@ function basename(path, suffix) {
             }
         }
 
-        if (start === end)
-            end = firstNonSlashEnd
-        else if (end === -1)
-            end = path.length
+        if (start === end) end = firstNonSlashEnd
+        else if (end === -1) end = path.length
         return path.slice(start, end)
     }
     for (let i = path.length - 1; i >= start; --i) {
@@ -119,8 +119,7 @@ function basename(path, suffix) {
         }
     }
 
-    if (end === -1)
-        return ''
+    if (end === -1) return ''
     return path.slice(start, end)
 }
 

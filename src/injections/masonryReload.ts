@@ -17,6 +17,6 @@
  *
  ******************************************************************************/
 
-import {InjectionKey} from 'vue'
+import { InjectionKey } from 'vue'
 
 export const MasonryReload = Symbol() as InjectionKey<() => void>

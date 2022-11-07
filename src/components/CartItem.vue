@@ -18,27 +18,38 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {ElButton, ElTooltip} from 'element-plus'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faCircleMinus, faCirclePlus, faThumbsDown, faThumbsUp, faTrash, faBlender, faRepeat, faScaleUnbalanced, faScaleUnbalancedFlip} from '@fortawesome/pro-regular-svg-icons'
+import { ElButton, ElTooltip } from 'element-plus'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    faCircleMinus,
+    faCirclePlus,
+    faThumbsDown,
+    faThumbsUp,
+    faTrash,
+    faBlender,
+    faRepeat,
+    faScaleUnbalanced,
+    faScaleUnbalancedFlip,
+} from '@fortawesome/pro-regular-svg-icons'
 import LiteralWeightIdentifier from './LiteralWeightIdentifier.vue'
-import {type CartChildItem, type CartItem, type CartItemSimple, useCartStore} from '../stores/cart'
-import {useSettingsStore} from '../stores/settings'
+import { useCartStore } from '../stores/cart'
+import type { CartChildItem, CartItem, CartItemSimple } from '../types/cart'
+import { useSettingsStore } from '../stores/settings'
 import type Node from 'element-plus/es/components/tree/src/model/node'
-import {toRefs, inject, computed} from 'vue'
-import {setSearch as setSearchSymbol} from '../injections/setSearch'
+import { toRefs, inject, computed } from 'vue'
+import { setSearch as setSearchSymbol } from '../injections/setSearch'
 import PercentageWeightIdentifier from './PercentageWeightIdentifier.vue'
 import Decimal from 'decimal.js-light'
 
 const cartStore = useCartStore()
 const settingsStore = useSettingsStore()
 const props = defineProps<{
-    node: Node,
-    data: CartItem|CartChildItem,
-    direction: 'positive'|'negative',
+    node: Node
+    data: CartItem | CartChildItem
+    direction: 'positive' | 'negative'
 }>()
 
-const {node, data} = toRefs(props)
+const { node, data } = toRefs(props)
 
 function sendTo(direction: 'positive' | 'negative', data: CartItem) {
     const revDirection = direction === 'positive' ? 'negative' : 'positive'
@@ -46,8 +57,15 @@ function sendTo(direction: 'positive' | 'negative', data: CartItem) {
     cartStore.appendCartItem(direction, data)
 }
 
-function deleteFrom(direction: 'positive' | 'negative', item: CartItem|CartChildItem) {
-    if (item.type === 'tag' || item.type === 'preset' || item.type === 'embedding') {
+function deleteFrom(
+    direction: 'positive' | 'negative',
+    item: CartItem | CartChildItem
+) {
+    if (
+        item.type === 'tag' ||
+        item.type === 'preset' ||
+        item.type === 'embedding'
+    ) {
         if (direction === 'positive') {
             if (item.type === 'preset') {
                 cartStore.removePositivePreset(item.category, item.name)
@@ -71,7 +89,9 @@ function adjustLiteralWeight(delta: number) {
         if (settingsStore.useFixedMultiplier) {
             data.value.weight = data.value.weight.add(0.05 * delta)
         } else {
-            data.value.weight = data.value.weight.times(Math.pow(settingsStore.newEmphasis ? 1.1 : 1.05, delta))
+            data.value.weight = data.value.weight.times(
+                Math.pow(settingsStore.newEmphasis ? 1.1 : 1.05, delta)
+            )
         }
     }
 }
@@ -79,7 +99,10 @@ function adjustLiteralWeight(delta: number) {
 function adjustEditingWeight(delta: number) {
     if (data.value.type === 'editing') {
         const evaluated = new Decimal(data.value.breakpoint).add(0.05 * delta)
-        if (evaluated.greaterThanOrEqualTo(0) && evaluated.lessThanOrEqualTo(1)) {
+        if (
+            evaluated.greaterThanOrEqualTo(0) &&
+            evaluated.lessThanOrEqualTo(1)
+        ) {
             data.value.breakpoint = data.value.breakpoint.add(0.05 * delta)
         }
     }
@@ -96,7 +119,9 @@ function performSearch() {
 const editingChildWeight = computed<Decimal>({
     get() {
         if (data.value.parent?.type === 'editing') {
-            const idx = data.value.parent.children.findIndex(child => child === data.value)
+            const idx = data.value.parent.children.findIndex(
+                (child) => child === data.value
+            )
             if (idx === 0) {
                 return new Decimal(data.value.parent.breakpoint)
             } else {
@@ -108,7 +133,9 @@ const editingChildWeight = computed<Decimal>({
     },
     set(value: Decimal) {
         if (data.value.parent?.type === 'editing' && value !== null) {
-            const idx = data.value.parent.children.findIndex(child => child === data.value)
+            const idx = data.value.parent.children.findIndex(
+                (child) => child === data.value
+            )
             if (idx === 0) {
                 data.value.parent.breakpoint = value
             } else {
@@ -116,87 +143,133 @@ const editingChildWeight = computed<Decimal>({
                 data.value.parent.breakpoint = new Decimal(1).minus(value)
             }
         }
-    }
+    },
 })
-
 </script>
 
 <template>
     <div class="flex">
         <div class="tag-label">
-            <span class="tag-label-text" @dblclick.stop="performSearch">{{ node.label }}</span>
-            <LiteralWeightIdentifier v-if="data.type !== 'null'" v-model:weight="data.weight"
-                                     class="weight-identifier" />
-            <PercentageWeightIdentifier v-if="data.parent?.type === 'editing'" v-model:weight="editingChildWeight" class="weight-identifier" />
+            <span class="tag-label-text" @dblclick.stop="performSearch">{{
+                node.label
+            }}</span>
+            <LiteralWeightIdentifier
+                v-if="data.type !== 'null'"
+                v-model:weight="data.weight"
+                class="weight-identifier" />
+            <PercentageWeightIdentifier
+                v-if="data.parent?.type === 'editing'"
+                v-model:weight="editingChildWeight"
+                class="weight-identifier" />
         </div>
         <div class="tag-button">
-            <ElTooltip v-if="['tag', 'embedding'].includes(data.type)"
-                       content="创建混合组" :show-after="750">
-                <ElButton link type="primary"
-                          @click.stop="() => (data.type === 'tag' || data.type === 'embedding') && 
+            <ElTooltip
+                v-if="['tag', 'embedding'].includes(data.type)"
+                content="创建混合组"
+                :show-after="750">
+                <ElButton
+                    link
+                    type="primary"
+                    @click.stop="() => (data.type === 'tag' || data.type === 'embedding') && 
                           cartStore.createMixtureFromTag(direction, data as CartItemSimple)">
                     <FontAwesomeIcon :icon="faBlender" />
                 </ElButton>
             </ElTooltip>
 
-            <ElTooltip v-if="(data.type === 'editing' || data.type === 'alternate' || data.type === 'group')
-                && cartStore.isMixtureSwitchable(data)" content="切换混合方式" :show-after="750">
-                <ElButton link type="primary"
-                    @click.stop="(data.type === 'editing' || data.type === 'alternate' || data.type === 'group')
-                    && cartStore.switchMixtureType(direction, data)">
+            <ElTooltip
+                v-if="
+                    (data.type === 'editing' ||
+                        data.type === 'alternate' ||
+                        data.type === 'group') &&
+                    cartStore.isMixtureSwitchable(data)
+                "
+                content="切换混合方式"
+                :show-after="750">
+                <ElButton
+                    link
+                    type="primary"
+                    @click.stop="
+                        ;(data.type === 'editing' ||
+                            data.type === 'alternate' ||
+                            data.type === 'group') &&
+                            cartStore.switchMixtureType(direction, data)
+                    ">
                     <FontAwesomeIcon :icon="faRepeat" />
                 </ElButton>
             </ElTooltip>
 
             <template v-if="data.type === 'editing'">
                 <ElTooltip content="断点后移" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="adjustEditingWeight(1)">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="adjustEditingWeight(1)">
                         <FontAwesomeIcon :icon="faScaleUnbalanced" />
                     </ElButton>
                 </ElTooltip>
                 <ElTooltip content="断点前移" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="adjustEditingWeight(-1)">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="adjustEditingWeight(-1)">
                         <FontAwesomeIcon :icon="faScaleUnbalancedFlip" />
                     </ElButton>
                 </ElTooltip>
             </template>
 
-            <template v-if="(data.type !== 'null')">
+            <template v-if="data.type !== 'null'">
                 <ElTooltip content="提高权重" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="adjustLiteralWeight(1)">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="adjustLiteralWeight(1)">
                         <FontAwesomeIcon :icon="faCirclePlus" />
                     </ElButton>
                 </ElTooltip>
                 <ElTooltip content="降低权重" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="adjustLiteralWeight(-1)">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="adjustLiteralWeight(-1)">
                         <FontAwesomeIcon :icon="faCircleMinus" />
                     </ElButton>
                 </ElTooltip>
             </template>
 
-
             <template v-if="data.parent === null">
-                <ElTooltip v-if="direction === 'positive'" content="转为反向" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="sendTo('negative', data as CartItem)">
+                <ElTooltip
+                    v-if="direction === 'positive'"
+                    content="转为反向"
+                    :show-after="750">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="sendTo('negative', data as CartItem)">
                         <FontAwesomeIcon :icon="faThumbsDown" />
                     </ElButton>
                 </ElTooltip>
-                <ElTooltip v-if="direction === 'negative'" content="转为正向" :show-after="750">
-                    <ElButton link type="primary"
-                              @click.stop="sendTo('positive', data as CartItem)">
+                <ElTooltip
+                    v-if="direction === 'negative'"
+                    content="转为正向"
+                    :show-after="750">
+                    <ElButton
+                        link
+                        type="primary"
+                        @click.stop="sendTo('positive', data as CartItem)">
                         <FontAwesomeIcon :icon="faThumbsUp" />
                     </ElButton>
                 </ElTooltip>
             </template>
-            <ElTooltip v-if="!(data.type === 'null')" content="删除" :show-after="750">
-                <ElButton link type="danger"
-                          @click.stop="data.type !== 'null'
-                          && deleteFrom(direction, data)">
+            <ElTooltip
+                v-if="!(data.type === 'null')"
+                content="删除"
+                :show-after="750">
+                <ElButton
+                    link
+                    type="danger"
+                    @click.stop="
+                        data.type !== 'null' && deleteFrom(direction, data)
+                    ">
                     <FontAwesomeIcon :icon="faTrash" />
                 </ElButton>
             </ElTooltip>

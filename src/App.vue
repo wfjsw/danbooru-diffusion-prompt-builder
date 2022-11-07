@@ -18,8 +18,14 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {type Component, provide, ref} from 'vue'
-import {ElAside, ElContainer, ElHeader, ElMain, ElScrollbar} from 'element-plus'
+import { type Component, provide, ref } from 'vue'
+import {
+    ElAside,
+    ElContainer,
+    ElHeader,
+    ElMain,
+    ElScrollbar,
+} from 'element-plus'
 import Sidebar from './components/Sidebar.vue'
 import TopBar from './components/TopBar.vue'
 import TagShow from './views/TagShow.vue'
@@ -29,7 +35,7 @@ import AboutMe from './views/AboutMe.vue'
 import Cart from './views/Cart.vue'
 import TagSearchShow from './views/TagSearchShow.vue'
 import HypernetworkShow from './views/HypernetworkShow.vue'
-import {setSearch} from './injections/setSearch'
+import { setSearch } from './injections/setSearch'
 
 const activeSelection = ref<string[]>(['aboutme'])
 
@@ -47,11 +53,11 @@ interface ComponentList {
 const asideExpanded = ref<'category' | 'cart' | null>(null)
 
 const mainComponent: ComponentList = {
-    'tags': TagShow,
-    'presets': PresetShow,
-    'embeddings': EmbeddingShow,
-    'hypernetworks': HypernetworkShow,
-    'aboutme': AboutMe,
+    tags: TagShow,
+    presets: PresetShow,
+    embeddings: EmbeddingShow,
+    hypernetworks: HypernetworkShow,
+    aboutme: AboutMe,
 }
 
 function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
@@ -72,31 +78,49 @@ provide(setSearch, setSearchImpl)
 <template>
     <ElContainer class="container-full-height">
         <ElHeader class="bottom-bordered flex mobile-thin-padding">
-            <TopBar v-model:search="searchTerms"
-                    @expand-category="switchAsideExpanded('category')"
-                    @expand-cart="switchAsideExpanded('cart')"
-            />
+            <TopBar
+                v-model:search="searchTerms"
+                @expand-category="switchAsideExpanded('category')"
+                @expand-cart="switchAsideExpanded('cart')" />
         </ElHeader>
         <ElContainer class="p-relative-sm body-inner-full-height">
-            <ElAside :class="['container-full-height', 'right-bordered', 'category-aside',
-                {'expanded': asideExpanded === 'category'}]"
-                     width="284px">
+            <ElAside
+                :class="[
+                    'container-full-height',
+                    'right-bordered',
+                    'category-aside',
+                    { expanded: asideExpanded === 'category' },
+                ]"
+                width="284px">
                 <ElScrollbar class="body-full-height">
                     <Sidebar @select="changeSelection" />
                 </ElScrollbar>
             </ElAside>
-            <ElMain :class="['main', 'body-full-height',
-                {'left-expanded': asideExpanded === 'category', 'right-expanded': asideExpanded === 'cart'}]"
-                @click="switchAsideExpanded('reset')"
->
+            <ElMain
+                :class="[
+                    'main',
+                    'body-full-height',
+                    {
+                        'left-expanded': asideExpanded === 'category',
+                        'right-expanded': asideExpanded === 'cart',
+                    },
+                ]"
+                @click="switchAsideExpanded('reset')">
                 <KeepAlive v-if="searchTerms === null || searchTerms === ''">
-                    <component :is="mainComponent[activeSelection[0]]" :category="activeSelection[1]" />
+                    <component
+                        :is="mainComponent[activeSelection[0]]"
+                        :category="activeSelection[1]" />
                 </KeepAlive>
                 <TagSearchShow v-else :search="searchTerms" />
             </ElMain>
-            <ElAside :class="['container-full-height', 'left-bordered', 'cart-aside', {'expanded': asideExpanded === 'cart'}]"
-                     width="375px"
->
+            <ElAside
+                :class="[
+                    'container-full-height',
+                    'left-bordered',
+                    'cart-aside',
+                    { expanded: asideExpanded === 'cart' },
+                ]"
+                width="375px">
                 <Cart />
             </ElAside>
         </ElContainer>
@@ -119,7 +143,7 @@ provide(setSearch, setSearchImpl)
 .body-full-height {
     //height: calc(100vh - 64px);
     height: 100%;
-    overflow-y: hidden
+    overflow-y: hidden;
 }
 
 .main {
@@ -160,7 +184,7 @@ provide(setSearch, setSearchImpl)
         top: 0;
         left: 0;
         transform: translateX(-284px);
-        transition: transform .3s ease-in-out,margin .3s ease-in-out;
+        transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
         &.expanded {
             transform: translateX(0);
         }
@@ -170,13 +194,13 @@ provide(setSearch, setSearchImpl)
         top: 0;
         right: -375px;
         transform: translateX(0px);
-        transition: transform .3s ease-in-out,margin .3s ease-in-out;
+        transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
         &.expanded {
             transform: translateX(-375px);
         }
     }
     .body-full-height {
-        transition: transform .3s ease-in-out,margin .3s ease-in-out;
+        transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
     }
     .left-expanded {
         transform: translateX(284px);

@@ -18,27 +18,36 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {computed, toRefs} from 'vue'
-import {ElButton, ElCard, ElTooltip, ElImage} from 'element-plus'
-import {useClipboard} from '@vueuse/core'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faClipboard, faThumbsDown, faThumbsUp} from '@fortawesome/pro-light-svg-icons'
-import {faCloudArrowDown, faImageSlash} from '@fortawesome/pro-regular-svg-icons'
-import type {Embedding} from '../datatypes'
-import {useCartStore} from '../stores/cart'
+import { computed, toRefs } from 'vue'
+import { ElButton, ElCard, ElTooltip, ElImage } from 'element-plus'
+import { useClipboard } from '@vueuse/core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    faClipboard,
+    faThumbsDown,
+    faThumbsUp,
+} from '@fortawesome/pro-light-svg-icons'
+import {
+    faCloudArrowDown,
+    faImageSlash,
+} from '@fortawesome/pro-regular-svg-icons'
+import type { Embedding } from '../types/data'
+import { useCartStore } from '../stores/cart'
 import ToggleableTag from './ToggleableTag.vue'
 
-const props = withDefaults(defineProps<{
-    data: Embedding,
-    showCategory?: boolean,
-}>(), {
-    showCategory: false,
-})
-
+const props = withDefaults(
+    defineProps<{
+        data: Embedding
+        showCategory?: boolean
+    }>(),
+    {
+        showCategory: false,
+    }
+)
 
 const refProps = toRefs(props)
 
-const {copy, copied} = useClipboard({source: refProps.data.value.prompt})
+const { copy, copied } = useClipboard({ source: refProps.data.value.prompt })
 const cartStore = useCartStore()
 
 const imageUrl = computed(() => {
@@ -54,11 +63,17 @@ const downloadUrl = computed(() => {
     return `embeddings/${hash.slice(0, 2)}/${hash}.webp`
 })
 
-const prompt = computed(() => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`)
+const prompt = computed(
+    () => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`
+)
 const fileName = computed(() => `${prompt.value}.webp`)
 
-const inPositive = computed(() => cartStore.existsPositive('embedding', prompt.value))
-const inNegative = computed(() => cartStore.existsNegative('embedding', prompt.value))
+const inPositive = computed(() =>
+    cartStore.existsPositive('embedding', prompt.value)
+)
+const inNegative = computed(() =>
+    cartStore.existsNegative('embedding', prompt.value)
+)
 
 function togglePositive(tag: string = prompt.value) {
     if (!inPositive.value) {
@@ -91,12 +106,24 @@ function toggleNegative(tag: string = prompt.value) {
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
-                <div class="tag-header"><code class="tag-name large">{{ prompt }}</code></div>
+                <div class="tag-header">
+                    <code class="tag-name large">{{ prompt }}</code>
+                </div>
                 <div class="buttons-group">
                     <div class="big-download-button">
-                        <a :href="downloadUrl" :download="fileName" target="_blank" class="text-decoration-none">
-                            <ElButton type="warning" color="#533F20" round class="download-btn">
-                                <FontAwesomeIcon :icon="faCloudArrowDown" class="icon" />
+                        <a
+                            :href="downloadUrl"
+                            :download="fileName"
+                            target="_blank"
+                            class="text-decoration-none">
+                            <ElButton
+                                type="warning"
+                                color="#533F20"
+                                round
+                                class="download-btn">
+                                <FontAwesomeIcon
+                                    :icon="faCloudArrowDown"
+                                    class="icon" />
                                 下载模型
                             </ElButton>
                         </a>
@@ -112,12 +139,18 @@ function toggleNegative(tag: string = prompt.value) {
                         </ElTooltip>
 
                         <ElTooltip content="我想要" :show-after="750">
-                            <ElButton :type="inPositive ? 'success' : 'default'" circle @click="togglePositive(prompt)">
+                            <ElButton
+                                :type="inPositive ? 'success' : 'default'"
+                                circle
+                                @click="togglePositive(prompt)">
                                 <FontAwesomeIcon :icon="faThumbsUp" />
                             </ElButton>
                         </ElTooltip>
                         <ElTooltip content="我不想要" :show-after="750">
-                            <ElButton :type="inNegative ? 'danger' : 'default'" circle @click="toggleNegative(prompt)">
+                            <ElButton
+                                :type="inNegative ? 'danger' : 'default'"
+                                circle
+                                @click="toggleNegative(prompt)">
                                 <FontAwesomeIcon :icon="faThumbsDown" />
                             </ElButton>
                         </ElTooltip>
@@ -125,24 +158,49 @@ function toggleNegative(tag: string = prompt.value) {
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
-            <div v-if="data.category" class="text category">类别：{{ data.category }}</div>
-            <div v-if="data.author" class="text author">来源：{{ data.author }}</div>
-            <p v-if="data.description" class="text description">{{ data.description }}</p>
-            <div v-if="data.modelName" class="text meta">模型名：<code>{{ data.modelName }}</code> (<code>{{ data.modelHash }}</code>)</div>
-            <div v-if="data.vectorSize" class="text meta">向量数量：{{ data.vectorSize }}</div>
-            <div v-if="data.steps" class="text meta">训练步数：{{ data.steps }}</div>
+            <div v-if="data.category" class="text category">
+                类别：{{ data.category }}
+            </div>
+            <div v-if="data.author" class="text author">
+                来源：{{ data.author }}
+            </div>
+            <p v-if="data.description" class="text description">
+                {{ data.description }}
+            </p>
+            <div v-if="data.modelName" class="text meta">
+                模型名：<code>{{ data.modelName }}</code> (<code>{{
+                    data.modelHash
+                }}</code
+                >)
+            </div>
+            <div v-if="data.vectorSize" class="text meta">
+                向量数量：{{ data.vectorSize }}
+            </div>
+            <div v-if="data.steps" class="text meta">
+                训练步数：{{ data.steps }}
+            </div>
 
             <div v-if="data.suggestPositive" class="tag-suggestion">
                 <div>推荐正向标签：</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestPositive" :key="tag" :tag="tag" size="default" direction="positive" />
+                    <ToggleableTag
+                        v-for="tag in data.suggestPositive"
+                        :key="tag"
+                        :tag="tag"
+                        size="default"
+                        direction="positive" />
                 </div>
             </div>
 
             <div v-if="data.suggestNegative" class="tag-suggestion">
                 <div>推荐反向标签</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestNegative" :key="tag" :tag="tag" size="default" direction="negative" />
+                    <ToggleableTag
+                        v-for="tag in data.suggestNegative"
+                        :key="tag"
+                        :tag="tag"
+                        size="default"
+                        direction="negative" />
                 </div>
             </div>
         </div>
@@ -152,7 +210,7 @@ function toggleNegative(tag: string = prompt.value) {
 <style lang="scss" scoped>
 .tag-name {
     user-select: all;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
     &.large {
         font-size: 12pt;
@@ -180,14 +238,13 @@ function toggleNegative(tag: string = prompt.value) {
 .card-image-container {
     min-height: 256px;
     aspect-ratio: 1 / 1;
-    transition: .5s all;
+    transition: 0.5s all;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
 }
 
 .tag-header {

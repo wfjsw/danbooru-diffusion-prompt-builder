@@ -11,14 +11,14 @@ https://tags.novelai.dev
 
 ## 主要功能
 
- - 标签分类、释义与配图
- - 即时搜索
- - 构建标签组合并调配权重
- - 支持调配高级标签工程（[Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing) / [Alternating Words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)）
- - 导入已有标签组合并自动匹配
- - 预设（固定标签组合）整理、说明与配图
- - 嵌入模型索引与下载
- - 超网络模型索引与下载
+-   标签分类、释义与配图
+-   即时搜索
+-   构建标签组合并调配权重
+-   支持调配高级标签工程（[Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing) / [Alternating Words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)）
+-   导入已有标签组合并自动匹配
+-   预设（固定标签组合）整理、说明与配图
+-   嵌入模型索引与下载
+-   超网络模型索引与下载
 
 ## 开发与改进
 
@@ -39,10 +39,10 @@ https://tags.novelai.dev
 name: <分类名>
 restricted: false # 是否限制级
 content:
-  tag-name1: # 英文标签
-    name: <标签中文名1>
-  tag-name2: # 英文标签
-    name: <标签中文名2>
+    tag-name1: # 英文标签
+        name: <标签中文名1>
+    tag-name2: # 英文标签
+        name: <标签中文名2>
 ```
 
 ##### 预设
@@ -51,23 +51,23 @@ content:
 name: <预设分类名>
 restricted: false # 是否限制级
 content:
-  预设中文名:
-    description: 预设描述
-    content:
-      - tag1
-      - tag2
+    预设中文名:
+        description: 预设描述
+        content:
+            - tag1
+            - tag2
 ```
 
 #### 精修
 
 一个优质标签应当拥有配图、说明、别名与 Danbooru Wiki 链接。
 
-图片大小应当尽量符合 512px * 512px 以获得最佳显示效果。
+图片大小应当尽量符合 512px \* 512px 以获得最佳显示效果。
 
 请通过 `npm run importimage <path>` 或 `yarn importimage <path>` 将图片添加到公共目录。
 这将会自动裁剪图片并进行适当的压缩。
 
-使用 `npm run importuncroppedimage <path>` 或 `yarn importuncroppedimage <path>` 
+使用 `npm run importuncroppedimage <path>` 或 `yarn importuncroppedimage <path>`
 添加的图片将不经裁剪直接加入。适用于宽幅预设演示图。
 
 请不要添加儿童色情相关、或违反 GitHub 使用协议的图片到项目中。
@@ -78,12 +78,12 @@ content:
 name: <分类名>
 restricted: false # 是否限制级
 content:
-  tag-name1: # 英文标签
-    name: <标签中文名1>
-    description: <标签说明>
-    wikiURL: <Danbooru Wiki 链接>
-    image: <图片 SHA256>
-    restricted: false # 是否限制级
+    tag-name1: # 英文标签
+        name: <标签中文名1>
+        description: <标签说明>
+        wikiURL: <Danbooru Wiki 链接>
+        image: <图片 SHA256>
+        restricted: false # 是否限制级
 ```
 
 ##### 预设
@@ -93,14 +93,14 @@ name: <预设分类名>
 restricted: false # 是否限制级
 description: <预设分类说明>
 content:
-  预设中文名:
-    description: 预设描述
-    content:
-      - tag1
-      - tag2
-    preview: # 预览图片 SHA256 (可选)
-      - <hash1>
-      - <hash2> 
+    预设中文名:
+        description: 预设描述
+        content:
+            - tag1
+            - tag2
+        preview: # 预览图片 SHA256 (可选)
+            - <hash1>
+            - <hash2>
 ```
 
 ### 上传嵌入模型 (TI Embeddings)
@@ -121,7 +121,7 @@ name: Victorian Lace
 # 模型作者/来源
 author: u/depfakacc @ Reddit
 # 模型描述
-description: "A lace pattern that looks like it was made in the Victorian era."
+description: 'A lace pattern that looks like it was made in the Victorian era.'
 # 模型分类
 category: 未分类
 # 该模型对应的主模型名称
@@ -138,10 +138,10 @@ payloadHash: df0641662fb2fc8190a4508c34926243843484495e6d9b0e500f8a8e409aa84e
 restricted: false
 # 推荐正向标签 (可选)
 suggestPositive:
-  - cute
+    - cute
 # 推荐反向标签 (可选)
 suggestNegative:
-  - futa
+    - futa
 ```
 
 ### 上传超网络模型 (Hypernetworks)
@@ -169,10 +169,10 @@ payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/d
 
 # 推荐正向标签 (可选)
 suggestPositive:
-  - demo tag
+    - demo tag
 # 推荐反向标签 (可选)
 suggestNegative:
-  - demo tag 2
+    - demo tag 2
 ```
 
 ### 开发环境
@@ -184,13 +184,13 @@ suggestNegative:
 # 安装依赖
 yarn
 # 启动开发服务器
-yarn dev 
+yarn dev
 # 构建项目
-yarn build 
+yarn build
 ```
 
 ### TODO
 
 尚需改进之处：
 
-- [ ] Masonry 与许多界面优化 (如 Collapse) 不兼容
+-   [ ] Masonry 与许多界面优化 (如 Collapse) 不兼容

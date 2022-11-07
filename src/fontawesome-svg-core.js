@@ -19,9 +19,9 @@
 
 import {
     register,
-    ReplaceElements
+    ReplaceElements,
 } from '@fortawesome/fontawesome-svg-core/plugins'
 
 const api = register([ReplaceElements])
 
-export const {parse, icon, config, text} = api
+export const { parse, icon, config, text } = api

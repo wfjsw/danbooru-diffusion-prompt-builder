@@ -18,28 +18,28 @@
  ******************************************************************************/
 
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'white': #f8f9fa,
-    'black': #000000,
-    'primary': (
-      'base': #0d6efd,
-    ),
-    'success': (
-      'base': #198754,
-    ),
-    'warning': (
-      'base': #ffc107,
-    ),
-    'danger': (
-      'base': #dc3545,
-    ),
-    'error': (
-      'base': #dc3545,
-    ),
-    'info': (
-      'base': #0dcaf0,
-    ),
-  ),
+    $colors: (
+        'white': #f8f9fa,
+        'black': #000000,
+        'primary': (
+            'base': #0d6efd,
+        ),
+        'success': (
+            'base': #198754,
+        ),
+        'warning': (
+            'base': #ffc107,
+        ),
+        'danger': (
+            'base': #dc3545,
+        ),
+        'error': (
+            'base': #dc3545,
+        ),
+        'info': (
+            'base': #0dcaf0,
+        ),
+    )
 );
 
 @use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;

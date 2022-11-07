@@ -18,15 +18,15 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {computed, ref} from 'vue'
-import {Search as IconSearch} from '@element-plus/icons-vue'
-import {useEmbeddingStore} from '../stores/embeddings'
+import { computed, ref } from 'vue'
+import { Search as IconSearch } from '@element-plus/icons-vue'
+import { useEmbeddingStore } from '../stores/embeddings'
 import EmbeddingItem from '../components/EmbeddingItem.vue'
 import Masonry from '../components/Masonry.vue'
-import {ClientOnly} from '../ClientOnly'
-import {useSettingsStore} from '../stores/settings'
-import type {Embedding} from '../datatypes'
-import {ElInput, ElScrollbar} from 'element-plus'
+import { ClientOnly } from '../ClientOnly'
+import { useSettingsStore } from '../stores/settings'
+import type { Embedding } from '../types/data'
+import { ElInput, ElScrollbar } from 'element-plus'
 
 const props = defineProps<{
     category: string
@@ -37,9 +37,13 @@ const embeddingStore = useEmbeddingStore()
 
 const searchTerms = ref('')
 const paginationSize = ref(30)
-const filteredEmbs = computed<Embedding[]>(() => embeddingStore.searchCategory(props.category, searchTerms.value))
+const filteredEmbs = computed<Embedding[]>(() =>
+    embeddingStore.searchCategory(props.category, searchTerms.value)
+)
 const filteredLength = computed(() => filteredEmbs.value.length)
-const paginatedEmbs = computed<Embedding[]>(() => filteredEmbs.value.slice(0, paginationSize.value))
+const paginatedEmbs = computed<Embedding[]>(() =>
+    filteredEmbs.value.slice(0, paginationSize.value)
+)
 
 function loadMore() {
     if (paginationSize.value < filteredLength.value) {
@@ -50,13 +54,25 @@ function loadMore() {
 
 <template>
     <h1>{{ category }}</h1>
-    <ElInput v-model="searchTerms" :prefix-icon="IconSearch" class="search" placeholder="搜索" />
+    <ElInput
+        v-model="searchTerms"
+        :prefix-icon="IconSearch"
+        class="search"
+        placeholder="搜索" />
     <ElScrollbar>
         <ClientOnly>
-            <Masonry v-infinite-scroll="loadMore" :bind="paginatedEmbs" :infinite-scroll-disabled="paginationSize >= filteredLength"
-                     :infinite-scroll-distance="512" :infinite-scroll-delay="10">
-                <EmbeddingItem v-for="emb in paginatedEmbs" :key="emb.payloadHash" v-memo="[emb, settingsStore.showImage]"
-                               :blur-image="!settingsStore.showImage" :data="emb" />
+            <Masonry
+                v-infinite-scroll="loadMore"
+                :bind="paginatedEmbs"
+                :infinite-scroll-disabled="paginationSize >= filteredLength"
+                :infinite-scroll-distance="512"
+                :infinite-scroll-delay="10">
+                <EmbeddingItem
+                    v-for="emb in paginatedEmbs"
+                    :key="emb.payloadHash"
+                    v-memo="[emb, settingsStore.showImage]"
+                    :blur-image="!settingsStore.showImage"
+                    :data="emb" />
             </Masonry>
         </ClientOnly>
     </ElScrollbar>

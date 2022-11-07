@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import yaml from '@rollup/plugin-yaml'
 import ElementPlus from 'unplugin-element-plus/vite'
-import {resolve} from 'path'
-import {VitePluginRadar} from 'vite-plugin-radar'
+import { resolve } from 'path'
+import { VitePluginRadar } from 'vite-plugin-radar'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
@@ -11,16 +11,16 @@ export default defineConfig({
     plugins: [
         vue(),
         yaml(),
-        ElementPlus( { useSource: true } ),
+        ElementPlus({ useSource: true }),
         {
             ...VitePluginRadar({
                 analytics: {
                     id: 'G-WYETBX79HJ',
-                }
+                },
             }),
-            apply(config, {command}) {
+            apply(config, { command }) {
                 return command === 'build' && config.mode === 'production'
-            }
+            },
         },
         visualizer(),
     ],
@@ -32,13 +32,16 @@ export default defineConfig({
             },
             {
                 find: /^@fortawesome\/fontawesome-svg-core$/,
-                replacement: resolve(__dirname, './src/fontawesome-svg-core.js'),
+                replacement: resolve(
+                    __dirname,
+                    './src/fontawesome-svg-core.js'
+                ),
             },
             {
                 find: '~/',
-                replacement:`${resolve(__dirname, 'src')}/`
+                replacement: `${resolve(__dirname, 'src')}/`,
             },
-        ]
+        ],
     },
     css: {
         preprocessorOptions: {
@@ -65,36 +68,41 @@ export default defineConfig({
             output: {
                 compact: true,
                 manualChunks(id) {
-                    if (id.includes('/node_modules/vue')
-                        || id.includes('node_modules/@vue')
-                        || id.includes('node_modules/lodash')) {
+                    if (
+                        id.includes('/node_modules/vue') ||
+                        id.includes('node_modules/@vue') ||
+                        id.includes('node_modules/lodash')
+                    ) {
                         return 'vendor-1'
                     }
-                    if (id.includes('/node_modules/element-plus')
-                        || id.includes('node_modules/@fortawesome')) {
+                    if (
+                        id.includes('/node_modules/element-plus') ||
+                        id.includes('node_modules/@fortawesome')
+                    ) {
                         return 'vendor-2'
                     }
                     if (id.includes('/node_modules/')) {
                         return 'vendor-3'
                     }
-                    if (id.includes('/data/tags') || id.includes('/data/danbooru_tag_post_count.json')) {
+                    if (
+                        id.includes('/data/tags') ||
+                        id.includes('/data/danbooru_tag_post_count.json')
+                    ) {
                         return 'data-1'
                     }
                     if (id.includes('/data/')) {
                         return 'data-2'
                     }
-                }
-            }
-        }
+                },
+            },
+        },
     },
     ssr: {
         noExternal: true,
-        external: [
-            'masonry-layout',
-        ]
+        external: ['masonry-layout'],
     },
     clearScreen: false,
     define: {
         __BUILD_TIMESTAMP__: Date.now(),
-    }
+    },
 })

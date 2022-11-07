@@ -18,8 +18,8 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {computed, useCssModule} from 'vue'
-import {useTagStore} from '../stores/tags'
+import { computed, useCssModule } from 'vue'
+import { useTagStore } from '../stores/tags'
 
 const tagStore = useTagStore()
 const $style = useCssModule()
@@ -61,37 +61,36 @@ const className = computed(() => {
 </template>
 
 <style lang="scss" module>
-    .tag_post_count {
-        display: inline-block;
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        font-weight: 200;
-        user-select: none;
-    }
+.tag_post_count {
+    display: inline-block;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-weight: 200;
+    user-select: none;
+}
 
-    .tag_post_count {
-        color: #495057;
-        &.kilo {
-            color: #997404;
-        }
-        &.mil {
-            color: #984c0c;
-        }
-        &.bil {
-            color: #842029;
-        }
+.tag_post_count {
+    color: #495057;
+    &.kilo {
+        color: #997404;
     }
-
-    :global(html.dark) .tag_post_count {
-        color: #dee2e6;
-        &.kilo {
-            color: #ffda6a;
-        }
-        &.mil {
-            color: #feb272;
-        }
-        &.bil {
-            color: #ea868f;
-        }
+    &.mil {
+        color: #984c0c;
     }
+    &.bil {
+        color: #842029;
+    }
+}
 
+:global(html.dark) .tag_post_count {
+    color: #dee2e6;
+    &.kilo {
+        color: #ffda6a;
+    }
+    &.mil {
+        color: #feb272;
+    }
+    &.bil {
+        color: #ea868f;
+    }
+}
 </style>

@@ -18,11 +18,14 @@
   ----------------------------------------------------------------------------->
 
 <script setup lang="ts">
-import {faGithub} from '@fortawesome/pro-brands-svg-icons'
-import {faMessageBot, faMagnifyingGlassChart, faHouse} from '@fortawesome/pro-solid-svg-icons'
-import {ElTooltip, ElButton} from 'element-plus'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-
+import { faGithub } from '@fortawesome/pro-brands-svg-icons'
+import {
+    faMessageBot,
+    faMagnifyingGlassChart,
+    faHouse,
+} from '@fortawesome/pro-solid-svg-icons'
+import { ElTooltip, ElButton } from 'element-plus'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 </script>
 
 <template>
@@ -35,7 +38,9 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
             </a>
         </ElTooltip>
         <ElTooltip content="GitHub" :show-after="750">
-            <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder" target="_blank">
+            <a
+                href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder"
+                target="_blank">
                 <ElButton link size="large">
                     <FontAwesomeIcon :icon="faGithub" class="square-icon" />
                 </ElButton>
@@ -51,7 +56,9 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
         <ElTooltip content="法术解析" :show-after="750">
             <a href="https://spell.novelai.dev" target="_blank">
                 <ElButton link size="large">
-                    <FontAwesomeIcon :icon="faMagnifyingGlassChart" class="square-icon" />
+                    <FontAwesomeIcon
+                        :icon="faMagnifyingGlassChart"
+                        class="square-icon" />
                 </ElButton>
             </a>
         </ElTooltip>

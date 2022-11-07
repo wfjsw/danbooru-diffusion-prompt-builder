@@ -18,19 +18,25 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import {computed} from 'vue'
-import {ElButton, ElCard, ElImage} from 'element-plus'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faCloudArrowDown, faImageSlash} from '@fortawesome/pro-regular-svg-icons'
-import type {Hypernetwork} from '../datatypes'
+import { computed } from 'vue'
+import { ElButton, ElCard, ElImage } from 'element-plus'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+    faCloudArrowDown,
+    faImageSlash,
+} from '@fortawesome/pro-regular-svg-icons'
+import type { Hypernetwork } from '../types/data'
 import ToggleableTag from './ToggleableTag.vue'
 
-const props = withDefaults(defineProps<{
-    data: Hypernetwork,
-    showCategory?: boolean,
-}>(), {
-    showCategory: false,
-})
+const props = withDefaults(
+    defineProps<{
+        data: Hypernetwork
+        showCategory?: boolean
+    }>(),
+    {
+        showCategory: false,
+    }
+)
 
 const imageUrl = computed(() => {
     const hash = props.data.previewHash
@@ -43,7 +49,6 @@ const imageUrl = computed(() => {
 const downloadUrl = computed(() => {
     return props.data.payloadURL
 })
-
 </script>
 
 <template>
@@ -60,34 +65,68 @@ const downloadUrl = computed(() => {
 
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
-                <div class="tag-header"><code class="tag-name large">{{ data.prompt }}</code></div>
+                <div class="tag-header">
+                    <code class="tag-name large">{{ data.prompt }}</code>
+                </div>
                 <div class="big-download-button">
-                    <a :href="downloadUrl" target="_blank" class="text-decoration-none">
-                        <ElButton type="warning" color="#533F20" round class="download-btn">
-                            <FontAwesomeIcon :icon="faCloudArrowDown" class="icon" />
+                    <a
+                        :href="downloadUrl"
+                        target="_blank"
+                        class="text-decoration-none">
+                        <ElButton
+                            type="warning"
+                            color="#533F20"
+                            round
+                            class="download-btn">
+                            <FontAwesomeIcon
+                                :icon="faCloudArrowDown"
+                                class="icon" />
                             下载模型
                         </ElButton>
                     </a>
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
-            <div v-if="data.category" class="text category">类别：{{ data.category }}</div>
-            <div v-if="data.author" class="text author">来源：{{ data.author }}</div>
-            <p v-if="data.description" class="text description">{{ data.description }}</p>
-            <div v-if="data.modelName" class="text meta">模型名：<code>{{ data.modelName }}</code> (<code>{{ data.modelHash }}</code>)</div>
-            <div v-if="data.steps" class="text meta">训练步数：{{ data.steps }}</div>
+            <div v-if="data.category" class="text category">
+                类别：{{ data.category }}
+            </div>
+            <div v-if="data.author" class="text author">
+                来源：{{ data.author }}
+            </div>
+            <p v-if="data.description" class="text description">
+                {{ data.description }}
+            </p>
+            <div v-if="data.modelName" class="text meta">
+                模型名：<code>{{ data.modelName }}</code> (<code>{{
+                    data.modelHash
+                }}</code
+                >)
+            </div>
+            <div v-if="data.steps" class="text meta">
+                训练步数：{{ data.steps }}
+            </div>
 
             <div v-if="data.suggestPositive" class="tag-suggestion">
                 <div>推荐正向标签：</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestPositive" :key="tag" :tag="tag" size="default" direction="positive" />
+                    <ToggleableTag
+                        v-for="tag in data.suggestPositive"
+                        :key="tag"
+                        :tag="tag"
+                        size="default"
+                        direction="positive" />
                 </div>
             </div>
 
             <div v-if="data.suggestNegative" class="tag-suggestion">
                 <div>推荐反向标签</div>
                 <div class="tags">
-                    <ToggleableTag v-for="tag in data.suggestNegative" :key="tag" :tag="tag" size="default" direction="negative" />
+                    <ToggleableTag
+                        v-for="tag in data.suggestNegative"
+                        :key="tag"
+                        :tag="tag"
+                        size="default"
+                        direction="negative" />
                 </div>
             </div>
         </div>
@@ -97,7 +136,7 @@ const downloadUrl = computed(() => {
 <style lang="scss" scoped>
 .tag-name {
     user-select: all;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
     &.large {
         font-size: 12pt;
@@ -125,14 +164,13 @@ const downloadUrl = computed(() => {
 .card-image-container {
     min-height: 256px;
     aspect-ratio: 1 / 1;
-    transition: .5s all;
+    transition: 0.5s all;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
 }
 
 .tag-header {
