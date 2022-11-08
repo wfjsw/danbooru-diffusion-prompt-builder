@@ -29,7 +29,7 @@ import {
     toRef,
     provide,
 } from 'vue'
-import { MasonryReload } from '../injections/masonryReload'
+import { MasonryReloadSlow, MasonryReloadFast } from '../injections/masonryReload'
 import { debounce } from 'lodash-es'
 
 const props = defineProps<{
@@ -57,7 +57,8 @@ if (!import.meta.env.SSR) {
     const delayedReloadLayoutWrapper = () =>
         setTimeout(() => nextTick(() => delayedReloadLayout()), 250)
 
-    provide(MasonryReload, () => nextTick(delayedReloadLayout))
+    provide(MasonryReloadFast, () => nextTick(reloadLayout))
+    provide(MasonryReloadSlow, () => nextTick(delayedReloadLayout))
 
     onMounted(async () => {
         const Masonry = (await import('masonry-layout')).default

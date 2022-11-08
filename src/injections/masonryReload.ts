@@ -19,4 +19,5 @@
 
 import { InjectionKey } from 'vue'
 
-export const MasonryReload = Symbol() as InjectionKey<() => void>
+export const MasonryReloadFast = Symbol() as InjectionKey<() => void>
+export const MasonryReloadSlow = Symbol() as InjectionKey<() => void>
