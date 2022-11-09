@@ -36,6 +36,9 @@ export function checkParen(text: string) {
             prevChar !== '\\'
         ) {
             const last = stack.pop()
+            if (!last && char === ')') return { i, expected: '(', char }
+            if (!last && char === '}') return { i, expected: '{', char }
+            if (!last && char === ']') return { i, expected: '[', char }
             if (last === '(' && char !== ')') return { i, expected: ')', char }
             if (last === '{' && char !== '}') return { i, expected: '}', char }
             if (last === '[' && char !== ']') return { i, expected: ']', char }
