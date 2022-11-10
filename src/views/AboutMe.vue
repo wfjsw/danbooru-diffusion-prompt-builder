@@ -185,27 +185,27 @@ const buildType = import.meta.env.PROD ? '生产' : '开发'
                         </ElButton>
                     </span>
                     按键，或将其他标签拖动到某一标签之上，可创建混合组。混合组可无限嵌套。当前应用支持三种混合组：
-                    <ul>
-                        <li>
-                            <p>
-                                <b>标签替换 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing" target="_blank">Prompt Editing</a>，又名分步渲染): </b>
-                                该混合组接受一至两个标签和一个百分数。在百分数所代表的生成步数前，生成引擎将采用组内第一个标签。到达该步数后，生成引擎将自动改为采用组内第二个标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <b>标签轮转 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words" target="_blank">Alternating Words</a>): </b>
-                                该混合组接受两个或更多标签。在生成过程中，生成引擎将在生成的每一步中依次轮换采用组内的标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <b>标签组: </b>
-                                单纯的一些标签组成的一个组合。该标签在 Stable-Diffusion-WebUI 格式与 NovelAI 格式中均可用。
-                            </p>
-                        </li>
-                    </ul>
                 </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b>标签替换 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing" target="_blank">Prompt Editing</a>，又名分步渲染): </b>
+                            该混合组接受一至两个标签和一个百分数。在百分数所代表的生成步数前，生成引擎将采用组内第一个标签。到达该步数后，生成引擎将自动改为采用组内第二个标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>标签轮转 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words" target="_blank">Alternating Words</a>): </b>
+                            该混合组接受两个或更多标签。在生成过程中，生成引擎将在生成的每一步中依次轮换采用组内的标签。该标签仅在 Stable-Diffusion-WebUI 格式中可用。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>标签组: </b>
+                            单纯的一些标签组成的一个组合。该标签在 Stable-Diffusion-WebUI 格式与 NovelAI 格式中均可用。
+                        </p>
+                    </li>
+                </ul>
             </li>
             <li>
                 <p>
@@ -220,6 +220,28 @@ const buildType = import.meta.env.PROD ? '生产' : '开发'
                         />
                     </span>
                     可切换亮色背景。
+                </p>
+            </li>
+            <li>
+                <p>
+                    关于“导入标签”中提供的两种解析器：
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b>朴素解析器: </b>
+                            旧版手制简易解析器，可用于解析大括号与小括号混合的标签。对于不平衡括号与奇怪符号的容错度较高，少见崩溃，但可能难以解析出准确结果。该解析器无法解析复杂的混合组。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>WebUI / NAI 语法解析器: </b>
+                            使用 Earley DSL 构建的新版语法分析器。支持准确解析复杂语法，但不支持混合括号的情形。容错度较低，可能存在卡死的情况。
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    解析时请确保标签之间用逗号隔开，以便准确区分标签边界。括号（包括大括号、中括号、小括号；使用 \ 转义的括号除外）必须与逗号相邻，不支持括号在标签中间的情形。
                 </p>
             </li>
         </ul>
