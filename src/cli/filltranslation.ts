@@ -23,6 +23,7 @@ import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { type TagFile } from '../types/file'
+// @ts-ignore for ci
 import { translation } from '../../workspace/translated'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -39,7 +40,7 @@ for (const file of tagFiles) {
         // @ts-expect-error init object
         if (!meta) tagData.content[tag] = {}
         if (!meta?.name) {
-            const t = translation.find(
+            const t = (translation as string[][]).find(
                 (n) => n[0].toLowerCase() === tag.toLowerCase()
             )
             if (t) tagData.content[tag].name = t[1]
