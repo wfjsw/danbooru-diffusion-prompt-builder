@@ -1,5 +1,5 @@
 name: 全身装饰
-category: 
+category:
   - 人物
 content:
   bandaid:
@@ -53,4 +53,3 @@ content:
     name: 纽扣
     image: f6a35749c29d25ae6e457d8be3b1d8ae2ee99c47835ef35435587f7490e151c6
     wikiURL: https://danbooru.donmai.us/wiki_pages/buttons.html
-

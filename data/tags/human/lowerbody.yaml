@@ -289,10 +289,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_suit.html
     alias:
       - skirtsuit
-  cocktail dress:
-    name: (社交场合穿的)短裙
-    image: 48196a56638a45605f3003f1713d1ffd7a50b2734c031b3a440687dc9146d1cc
-    wikiURL: https://danbooru.donmai.us/wiki_pages/cocktail_dress.html
   short shorts:
     name: 热裤
     image: 94a9f29eb9136ad22001d88b78edf3242038f2531217701544c8b590d775c298
@@ -360,24 +356,6 @@ content:
     name: 低腰裤子
     image: cfa81fad9f7a60709c380dd3f5843545d1f9546ac7c85c0a31825da49e0fcaf7
     wikiURL: https://danbooru.donmai.us/wiki_pages/lowleg_pants.html
-  microskirt:
-    name: 超短裙
-    image: 1cf70d597441264c220946eb81c42eb723b2afe991fed96cd69289e0070078de
-    wikiURL: https://danbooru.donmai.us/wiki_pages/microskirt.html
-  pencil dress:
-    name: 铅笔裙
-    image: 8107a56b225dee9528c21dffd67c44ce1d6df93adf5f2750dfae31f4d12980d4
-    wikiURL: https://danbooru.donmai.us/wiki_pages/pencil_dress.html
-  pencil skirt:
-    name: 短铅笔裙
-    image: d54c5fada3503ef51125271b80fcd38ea27e8ad2a208dae98bd0e6b40a1dcd72
-    wikiURL: https://danbooru.donmai.us/wiki_pages/pencil_skirt.html
-  plaid skirt:
-    name: 格子呢短裙
-    image: 9ffa3891f0a38a7673e7c7924944bc0acbee2c3e1efd8f3937cb9982baa1fcd0
-    wikiURL: https://danbooru.donmai.us/wiki_pages/plaid_skirt.html
-    alias:
-      - tartan skirt
   back-print panties:
     name: 背面印花的内裤
     wikiURL: https://danbooru.donmai.us/wiki_pages/back-print_panties.html

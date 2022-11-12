@@ -1,7 +1,6 @@
-name: 人物全身服饰
-category: 
+name: 衣装
+category:
   - 人物
-
 content:
   babydoll:
     name: 透明睡衣
@@ -609,3 +608,233 @@ content:
     image: 1e605fa74bd902a2665be5640da2049129a5629d37ddfec9704e1b4a4495b227
     name: Cute & Girly (偶像大师)
     wikiURL: https://danbooru.donmai.us/wiki_pages/cute_&_girly_(idolmaster).html
+  crinoline:
+    name: 裙撑/裙架
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crinoline.html
+  dress flip:
+    name: 飘起的裙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dress_flip.html
+  dress grab:
+    name: 抓住裙子
+  skirt basket:
+    name: 裙子篮兜
+    description: 指掀起裙子时形成的篮子形状
+    wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_basket.html
+    alias:
+      - skirt carry
+      - dress basket
+      - dress carry
+  torn dress:
+    name: 撕破的连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/torn_dress.html
+  wet dress:
+    name: 潮湿的衣服
+  aqua dress:
+    name: 水色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aqua_dress.html
+  black dress:
+    name: 黑连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_dress.html
+  blue dress:
+    name: 蓝连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_dress.html
+  brown dress:
+    name: 棕色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/brown_dress.html
+  green dress:
+    name: 绿色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_dress.html
+  grey dress:
+    name: 灰色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grey_dress.html
+    alias:
+      - gray dress
+  orange dress:
+    name: 橙色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_dress.html
+  pink dress:
+    name: 粉连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pink_dress.html
+  purple dress:
+    name: 紫连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/purple_dress.html
+  red dress:
+    name: 红连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_dress.html
+  sepia dress:
+    name: 红棕色连衣裙
+  white dress:
+    name: 白色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_dress.html
+  yellow dress:
+    name: 黄色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_dress.html
+  multicolored dress:
+    name: 多色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multicolored_dress.html
+  two-tone dress:
+    name: 双色连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/two-tone_dress.html
+  argyle dress:
+    name: 钻石图案的裙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/argyle_dress.html
+  checkered dress:
+    name: 方格花纹连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/checkered_dress.html
+  flag dress:
+    name: 国旗连衣裙
+  plaid dress:
+    name: 格子连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/plaid_dress.html
+  polka dot dress:
+    name: 圆点花纹连衣裙
+    alias:
+      - polka-dot dress
+  print dress:
+    name: 印花裙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/print_dress.html
+  striped dress:
+    name: 条纹连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/striped_dress.html
+  vertical-striped dress:
+    name: 垂直条纹连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vertical-striped_dress.html
+  pinstripe dress:
+    name: 细条纹连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pinstripe_dress.html
+  frilled dress:
+    name: 花边连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/frilled_dress.html
+    alias:
+      - frilly dress
+      - ruffled dress
+  fur-trimmed dress:
+    name: 毛边连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fur-trimmed_dress.html
+  half-dress:
+    name: 半开裙
+  highleg dress:
+    name: 高叉长裙
+  high-low skirt:
+    name: 高低裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/high-low_skirt.html
+    alias:
+      - short front long back skirt
+  hobble dress:
+    name: 乳胶连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hobble_dress.html
+  impossible dress:
+    name: 不切实际的连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/impossible_dress.html
+  lace-trimmed dress:
+    name: 蕾丝连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lace-trimmed_dress.html
+  latex dress:
+    name: 乳胶裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/latex_dress.html
+  long dress:
+    name: 长裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/long_dress.html
+  ribbed dress:
+    name: 罗纹连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ribbed_dress.html
+  ribbon-trimmed dress:
+    name: 色带装饰的连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ribbon-trimmed_dress.html
+  short dress:
+    name: 短裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/short_dress.html
+    alias:
+      - mini dress
+      - minidress
+  side slit:
+    name: 侧开叉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/side_slit.html
+    alias:
+      - leg slit
+  taut dress:
+    name: 绷紧的连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/taut_dress.html
+  see-through dress:
+    name: 透明连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/see-through_dress.html
+  sleeveless dress:
+    name: 无袖连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sleeveless_dress.html
+  cake dress:
+    name: 形似蛋糕的连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cake_dress.html
+  coat dress:
+    name: 外套连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coat_dress.html
+  cocktail dress:
+    name: 燕尾短裙
+    image: 48196a56638a45605f3003f1713d1ffd7a50b2734c031b3a440687dc9146d1cc
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cocktail_dress.html
+  denim dress:
+    name: 牛仔连衣裙
+  dirndl:
+    name: 酒馆服务员服装
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dirndl.html
+  funeral dress:
+    name: 丧服
+    wikiURL: https://danbooru.donmai.us/wiki_pages/funeral_dress.html
+  mermaid dress:
+    name: 鱼尾裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mermaid_dress.html
+  negligee:
+    name: 晨衣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/negligee.html
+  nightgown:
+    name: 睡衣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nightgown.html
+    alias:
+      - nighty
+      - night gown
+      - nightie
+      - nightdress
+      - night dress
+  microskirt:
+    name: 超短裙
+    image: 1cf70d597441264c220946eb81c42eb723b2afe991fed96cd69289e0070078de
+    wikiURL: https://danbooru.donmai.us/wiki_pages/microskirt.html
+  pencil dress:
+    name: 铅笔裙
+    image: 8107a56b225dee9528c21dffd67c44ce1d6df93adf5f2750dfae31f4d12980d4
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pencil_dress.html
+  pencil skirt:
+    name: 短铅笔裙
+    image: d54c5fada3503ef51125271b80fcd38ea27e8ad2a208dae98bd0e6b40a1dcd72
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pencil_skirt.html
+  plaid skirt:
+    name: 格子呢短裙
+    image: 9ffa3891f0a38a7673e7c7924944bc0acbee2c3e1efd8f3937cb9982baa1fcd0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/plaid_skirt.html
+    alias:
+      - tartan skirt
+  pinafore dress:
+    name: 背心裙/无袖连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pinafore_dress.html
+    alias:
+      - jumper
+  santa dress:
+    name: 圣诞老人风格的裙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/santa_dress.html
+  sweater dress:
+    name: 毛衣连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sweater_dress.html
+    alias:
+      - sweaterdress
+  tennis dress:
+    name: 网球连衣裙
+  trapeze dress:
+    name: 梯形连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/trapeze_dress.html
+  tube dress:
+    name: 抹胸连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tube_dress.html
+  vietnamese dress:
+    name: 越南连衣裙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vietnamese_dress.html
+    alias:
+      - ao dai

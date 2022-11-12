@@ -373,13 +373,6 @@ content:
     name: 衣服上有心形的开口
     image: 9818bd7fd16bae86f51cb389f5b4ddbcc7b8fe6c948516552403bcc2a1162dae
     wikiURL: https://danbooru.donmai.us/wiki_pages/heart_cutout.html
-  skirt basket:
-    name: 指掀起裙子时形成的篮子形状
-    wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_basket.html
-    alias:
-      - skirt carry
-      - dress basket
-      - dress carry
   center frills:
     name: 胸口带花边的服装
     image: 844f18a03469eab4a7411cfe14da264fdefded5ebc4bd71a2d377a1ab4112277

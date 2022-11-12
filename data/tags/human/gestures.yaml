@@ -885,3 +885,13 @@ content:
   smelling flower:
     name: 闻花
     wikiURL: https://danbooru.donmai.us/wiki_pages/smelling_flower.html
+  dress tug:
+    name: 拉下连衣裙下摆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dress_tug.html
+  open dress:
+    name: 分开裙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/open_dress.html
+  dress pull:
+    name: 剥下裙子露出胸口
+    restricted: true
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dress_pull.html

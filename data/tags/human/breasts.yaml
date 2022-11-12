@@ -1,5 +1,5 @@
 name: 胸部
-category: 
+category:
   - 人物
 content:
   chest:
@@ -329,10 +329,6 @@ content:
     name: 挡住乳头
     restricted: true
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_nipples.html
-  dress pull:
-    name: 剥下裙子胸口的部分
-    restricted: true
-    wikiURL: https://danbooru.donmai.us/wiki_pages/dress_pull.html
   flat chest grab:
     name: 抓着贫乳
     restricted: true
