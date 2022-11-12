@@ -208,9 +208,9 @@ const buildType = import.meta.env.PROD ? '生产' : '开发'
                 </ul>
             </li>
             <li>
-                <p>关于标签混合 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/#:~:text=Composable%2DDiffusion%2C%20a,a%20penguin%20%3A2.2" target="_blank">Composable-Diffusion</a>, 即 <code>AND</code> 语法)：</p>
+                <p>关于 标签混合 (<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/#:~:text=Composable%2DDiffusion%2C%20a,a%20penguin%20%3A2.2" target="_blank">Composable-Diffusion</a>, 即 <code>AND</code> 语法)：</p>
                 <p>
-对于标签混合语法的支持在提交 <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder/commit/483896ae32a7504f2359e2f6bab389e49d834613">483896a</a> 被移除，
+对于标签混合语法的支持在提交 <a href="https://github.com/wfjsw/danbooru-diffusion-prompt-builder/commit/483896ae32a7504f2359e2f6bab389e49d834613" target="_blank">483896a</a> 被移除，
 是由于这个实现存在严重问题，与该语法的实际效果相背离。值得注意的是，<code>AND</code> 语法的作用范围为完整的提示词语句，它的优先级高于其他所有语法，
 会将整个语句分切为多个部分并分别送往后续处理过程。因此，使用括号、逗号等字符试图限定 <code>AND</code> 作用范围、或是将其嵌套在其他复杂语句中的行为均是无效的。
 在 <code>AND</code> 分隔符前后都应当是完整的提示词语句。因此，在配合 <code>AND</code> 语法使用 Danbooru 标签超市时，您应当分别处理 <code>AND</code> 语法两侧的子句，

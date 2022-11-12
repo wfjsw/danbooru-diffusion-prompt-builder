@@ -57,7 +57,7 @@ function loadMore() {
 </script>
 
 <template>
-    <h1>{{ category.join(' / ') }}</h1>
+    <h1>{{ category.join(' > ') }}</h1>
     <ElInput
         v-model="searchTerms"
         :prefix-icon="IconSearch"
