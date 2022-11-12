@@ -53,7 +53,7 @@ export const useEmbeddingStore = defineStore('embeddings', {
                         ({ restricted }) =>
                             settings.showRestricted || !restricted
                     )
-                    .map(({ name, category }) => [...category, name])
+                    .map(({ category }) => category)
                     .sort((a, b) => a.join('/').localeCompare(b.join('/')))
             )
             const hierarchy: CategoryHierarchy = {}
@@ -132,9 +132,8 @@ export const useEmbeddingStore = defineStore('embeddings', {
             if (query === '')
                 return this.embeddings.filter(
                     (n) =>
-                        (n.category.join('/') === category.join('/') &&
-                            settings.showRestricted) ||
-                        !n.restricted
+                        n.category.join('/') === category.join('/') &&
+                        (settings.showRestricted || !n.restricted)
                 )
 
             const lcQuery = query.toLowerCase()

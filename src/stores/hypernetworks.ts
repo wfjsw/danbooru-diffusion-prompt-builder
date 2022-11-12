@@ -58,7 +58,7 @@ export const useHypernetworkStore = defineStore('hypernetwork', {
                         ({ restricted }) =>
                             settings.showRestricted || !restricted
                     )
-                    .map(({ name, category }) => [...category, name])
+                    .map(({ category }) => category)
                     .sort((a, b) => a.join('/').localeCompare(b.join('/')))
             )
             const hierarchy: CategoryHierarchy = {}

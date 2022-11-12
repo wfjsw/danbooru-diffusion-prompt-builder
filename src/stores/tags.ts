@@ -90,7 +90,7 @@ export const useTagStore = defineStore('tags', {
             return Object.fromEntries(
                 state.tags
                     .filter((t) => settings.showRestricted || !t.restricted)
-                    .map((t) => [t.name, t])
+                    .map((t) => [t.key, t])
             )
         },
         allTagsWithAlias: (state) => {
@@ -101,9 +101,9 @@ export const useTagStore = defineStore('tags', {
                     .filter((t) => settings.showRestricted || !t.restricted)
                     .flatMap((t) => {
                         if (t.alias) {
-                            return [[t.name, t], ...t.alias.map((a) => [a, t])]
+                            return [[t.key, t], ...t.alias.map((a) => [a, t])]
                         } else {
-                            return [[t.name, t]]
+                            return [[t.key, t]]
                         }
                     })
             )
@@ -151,7 +151,7 @@ export const useTagStore = defineStore('tags', {
         },
         resolve(name: string) {
             name = name.replaceAll('_', ' ').toLowerCase()
-            const meta = this.allTagsWithAlias.get(name)
+            const meta = this.allTagsWithAlias[name]
             if (meta) {
                 return { name: meta.originalName, meta }
             }
