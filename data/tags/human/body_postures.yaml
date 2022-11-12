@@ -1,4 +1,6 @@
 name: 人体姿势
+category: 
+  - 人物
 content:
   all fours:
     name: 四肢趴地

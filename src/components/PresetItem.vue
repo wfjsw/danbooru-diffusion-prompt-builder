@@ -42,7 +42,7 @@ import { useSettingsStore } from '../stores/settings'
 import Decimal from 'decimal.js-light'
 
 const props = defineProps<{
-    category: string
+    category: string[]
     meta: Preset
     // blurImage: boolean,
 }>()
@@ -78,17 +78,17 @@ async function copyToClipboard(full = false) {
 
 function togglePositive() {
     if (!inPositive.value) {
-        cartStore.appendPositivePreset(props.category, props.meta.name)
+        cartStore.appendPositivePreset(props.meta)
     } else {
-        cartStore.removePositivePreset(props.category, props.meta.name)
+        cartStore.removePositivePreset(props.meta)
     }
 }
 
 function toggleNegative() {
     if (!inNegative.value) {
-        cartStore.appendNegativePreset(props.category, props.meta.name)
+        cartStore.appendNegativePreset(props.meta)
     } else {
-        cartStore.removeNegativePreset(props.category, props.meta.name)
+        cartStore.removeNegativePreset(props.meta)
     }
 }
 </script>

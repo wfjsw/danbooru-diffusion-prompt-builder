@@ -1,4 +1,6 @@
 name: 花卉
+category:
+  - 自然景观
 content:
   petals:
     name: 花瓣

@@ -31,6 +31,7 @@ import { usePresetStore } from '../stores/presets'
 import { useEmbeddingStore } from '../stores/embeddings'
 import { useHypernetworkStore } from '../stores/hypernetworks'
 import ExtLinks from './ExtLinks.vue'
+import SidebarItem from './SidebarItem.vue'
 
 const emit = defineEmits(['select'])
 
@@ -67,17 +68,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 标签
             </template>
-            <ElMenuItem
-                v-for="category in tagStore.categories"
-                :key="category"
-                :index="category">
-                <div class="flex">
-                    <div class="tag-category-name">{{ category }}</div>
-                    <div class="tag-category-size">
-                        {{ tagStore.categorySize[category] }}
-                    </div>
-                </div>
-            </ElMenuItem>
+            <SidebarItem :hierarchy="tagStore.categoryHierarchy"
+                :category-size="tagStore.categorySize" />
         </ElSubMenu>
 
         <ElSubMenu v-loading="!presetStore.loaded" index="presets">
@@ -87,17 +79,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 预设
             </template>
-            <ElMenuItem
-                v-for="category in presetStore.categories"
-                :key="category"
-                :index="category">
-                <div class="flex">
-                    <div class="preset-category-name">{{ category }}</div>
-                    <div class="preset-category-size">
-                        {{ presetStore.categorySize[category] }}
-                    </div>
-                </div>
-            </ElMenuItem>
+            <SidebarItem :hierarchy="presetStore.categoryHierarchy"
+                :category-size="presetStore.categorySize" />
         </ElSubMenu>
 
         <ElSubMenu v-loading="!embeddingStore.loaded" index="embeddings">
@@ -107,17 +90,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 嵌入模型
             </template>
-            <ElMenuItem
-                v-for="category in embeddingStore.categories"
-                :key="category"
-                :index="category">
-                <div class="flex">
-                    <div class="embedding-category-name">{{ category }}</div>
-                    <div class="embedding-category-size">
-                        {{ embeddingStore.categorySize[category] }}
-                    </div>
-                </div>
-            </ElMenuItem>
+            <SidebarItem :hierarchy="embeddingStore.categoryHierarchy"
+                :category-size="embeddingStore.categorySize" />
         </ElSubMenu>
 
         <ElSubMenu v-loading="!hypernetworkStore.loaded" index="hypernetworks">
@@ -127,17 +101,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 超网络模型
             </template>
-            <ElMenuItem
-                v-for="category in hypernetworkStore.categories"
-                :key="category"
-                :index="category">
-                <div class="flex">
-                    <div class="embedding-category-name">{{ category }}</div>
-                    <div class="embedding-category-size">
-                        {{ hypernetworkStore.categorySize[category] }}
-                    </div>
-                </div>
-            </ElMenuItem>
+            <SidebarItem :hierarchy="hypernetworkStore.categoryHierarchy"
+                :category-size="hypernetworkStore.categorySize" />
         </ElSubMenu>
     </ElMenu>
 </template>
@@ -154,17 +119,5 @@ function select(index: string, indexPath: string[]) {
 
 .pb-2 {
     padding-bottom: 1.5rem;
-}
-
-.flex {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.tag-category-size,
-.preset-category-size,
-.embedding-category-size {
-    font-size: small;
 }
 </style>

@@ -1,4 +1,6 @@
 name: 限制级
+category:
+  - 限制级
 restricted: true
 content:
   spanked:

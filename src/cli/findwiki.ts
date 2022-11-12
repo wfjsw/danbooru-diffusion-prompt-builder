@@ -23,7 +23,7 @@ import glob from 'glob'
 import path from 'path'
 import axios from 'axios'
 import { fileURLToPath } from 'url'
-import { type TagCategories } from '../types/data'
+import { type TagFile } from '../types/file'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -34,9 +34,9 @@ const tagSet: Set<string> = new Set()
 const tagLoc = new Map<string, string>()
 
 for (const file of tagFiles) {
-    const tagData: TagCategories = yaml.load(
+    const tagData: TagFile = yaml.load(
         fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')
-    ) as TagCategories
+    ) as TagFile
     for (const [tag, meta] of Object.entries(tagData.content)) {
         if (!meta.wikiURL) {
             tagSet.add(tag)
@@ -66,12 +66,12 @@ for (const tag of tagSet) {
         const recordTagName: string = record.title.replaceAll('_', ' ')
         const tagFile = tagLoc.get(recordTagName)
         if (tagFile) {
-            const tagData: TagCategories = yaml.load(
+            const tagData: TagFile = yaml.load(
                 fs.readFileSync(
                     path.resolve(dirname, '../../data/tags', tagFile),
                     'utf-8'
                 )
-            ) as TagCategories
+            ) as TagFile
             if (tagData.content[recordTagName]) {
                 tagData.content[
                     recordTagName

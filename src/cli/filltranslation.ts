@@ -22,43 +22,31 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import type { TagFile } from '../types/file'
+import { type TagFile } from '../types/file'
+import { translation } from '../../workspace/translated'
 
-const resolution = new Set()
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const tagFiles = glob.sync('**/*.yaml', {
     cwd: path.resolve(dirname, '../../data/tags'),
 })
-let hasError = false
+
 for (const file of tagFiles) {
     const tagData: TagFile = yaml.load(
         fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')
     ) as TagFile
-    for (const [rawTag, meta] of Object.entries(tagData.content)) {
-        const tag = rawTag.toLowerCase().replaceAll('_', ' ')
-        if (resolution.has(tag)) {
-            console.error(`Duplicate tag ${tag} from ${file}`)
-            hasError = true
-        }
-        resolution.add(tag)
-        if (meta?.alias) {
-            for (const rawAlias of meta.alias) {
-                const alias = rawAlias.toLowerCase().replaceAll('_', ' ')
-                if (resolution.has(alias)) {
-                    console.error(
-                        `Duplicate alias ${alias} of ${tag} from ${file}`
-                    )
-                    hasError = true
-                }
-                resolution.add(alias)
-            }
+    for (const [tag, meta] of Object.entries(tagData.content)) {
+        // @ts-expect-error init object
+        if (!meta) tagData.content[tag] = {}
+        if (!meta?.name) {
+            const t = translation.find(
+                (n) => n[0].toLowerCase() === tag.toLowerCase()
+            )
+            if (t) tagData.content[tag].name = t[1]
         }
     }
-}
-
-if (hasError) {
-    process.exit(1)
-} else {
-    console.log('No duplicate tag found')
+    fs.writeFileSync(
+        path.resolve(dirname, '../../data/tags', file),
+        yaml.dump(tagData, { indent: 2 })
+    )
 }

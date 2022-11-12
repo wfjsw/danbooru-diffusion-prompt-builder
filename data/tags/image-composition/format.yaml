@@ -1,4 +1,6 @@
 name: 图片类型
+category:
+  - 构图
 content:
   absurdres:
     name: 超高分辨率

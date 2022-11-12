@@ -5,7 +5,9 @@ name: 纳西妲
 # 模型作者
 author: 刻晴酱 @ t.me/GenshinCN
 # 模型分类
-category: 原神
+category: 
+  - 游戏
+  - 原神
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Latest
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

@@ -1,4 +1,6 @@
 name: 城市
+category:
+  - 人文景观
 content:
   skyscrapers:
     name: 摩天大楼

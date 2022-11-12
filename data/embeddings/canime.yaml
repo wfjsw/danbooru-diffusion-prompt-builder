@@ -7,7 +7,8 @@ author: ChenYF @ t.me/StableDiffusion_CN
 # 模型描述
 description: 实测只会生成形如演示图这种图片。
 # 模型分类
-category: 未分类
+category: 
+  - 未分类
 # 该模型对应的主模型名称
 modelName: 未知
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

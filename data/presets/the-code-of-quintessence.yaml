@@ -1,4 +1,6 @@
 name: 元素法典(一)
+category: 
+  - 元素法典
 description: |-
   作者：SteelPlate
   原本链接：https://docs.qq.com/doc/DWHl3am5Zb05QbGVs
@@ -12,34 +14,34 @@ content:
       参考参数：CFG 5.5, euler_a, step 30
       本部分包含此条的正向标签。
     content:
-      - masterpiece
-      - best quality
-      - ultra-detailed
-      - illustration
-      - disheveled hair
-      - frills
-      - 1girl
-      - solo
+      - masterpiece:1.21
+      - best quality:1.331
+      - ultra-detailed:1.21
+      - illustration:1.21
+      - disheveled hair:1.21
+      - frills:1.21
+      - 1girl:1.1
+      - solo:1.1
       - dynamic angle
       - big top sleeves
       - floating
       - beautiful detailed sky
-      - on beautiful detailed water
+      - beautiful detailed water
       - beautiful detailed eyes
       - overexposure
-      - fist
+      - fist:1.1
       - expressionless
       - side blunt bangs
       - hair between eyes
-      - ribbon
-      - bowtie
+      - ribbons
+      - bowties
       - buttons
       - bare shoulders
-      - small breasts
+      - small breast:1.331
       - detailed wet clothes
       - blank stare
       - pleated skirt
-      - flower
+      - flowers
     preview:
       - 652b30df8fc9f9dec0b90a4712a09aa4e8a9e0f323c45777e657905b408fd672
       - 277b5348d65c5e75209799acb22a692961322901b66a58277305e437e9c18251

@@ -1,4 +1,6 @@
-name: 人物头部饰品
+name: 头部饰品
+category:
+  - 人物
 content:
   halo:
     name: 头顶光环

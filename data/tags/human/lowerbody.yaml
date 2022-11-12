@@ -1,4 +1,6 @@
-name: 人物下身装饰
+name: 下身装饰
+category:
+  - 人物
 content:
   midriff:
     name: 腹部

@@ -17,25 +17,19 @@
  *
  ******************************************************************************/
 
-export interface TagMeta {
+export interface Tag {
+    key: string,
     alias: string[] | null
     name: string
+    category: string[]
     description: string | null
     image: string | null
     wikiURL: string | null
     restricted: boolean | null
 }
 
-export interface TagCategory {
-    [key: string]: TagMeta
-}
-
-export interface TagCategories {
-    [key: string]: TagCategory
-}
-
 export interface Tags {
-    tags: TagCategories
+    tags: Tag[]
     tagsPostCount: Record<string, number>
 }
 
@@ -46,6 +40,7 @@ export interface PresetTag {
 
 export interface Preset {
     name: string
+    categoryInfo: PresetCategoryInfo
     description: string | null
     content: PresetTag[]
     preview: string[] | null
@@ -53,6 +48,7 @@ export interface Preset {
 
 export interface PresetCategoryInfo {
     name: string
+    category: string[]
     restricted: boolean
     description: string | null
     content: Preset[]
@@ -63,21 +59,13 @@ export interface Presets {
 }
 
 export interface Embeddings {
-    embeddings: EmbeddingCategories
-}
-
-export interface EmbeddingCategories {
-    [key: string]: EmbeddingCategory
-}
-
-export interface EmbeddingCategory {
-    content: Embedding[]
+    embeddings: Embedding[]
 }
 
 export interface Embedding {
     prompt: string
     name: string
-    category: string
+    category: string[]
     author: string | null
     description: string | null
     restricted: boolean | null
@@ -91,22 +79,10 @@ export interface Embedding {
     suggestNegative: string[] | null
 }
 
-export interface Embeddings {
-    embeddings: EmbeddingCategories
-}
-
-export interface HypernetworkCategories {
-    [key: string]: HypernetworkCategory
-}
-
-export interface HypernetworkCategory {
-    content: Hypernetwork[]
-}
-
 export interface Hypernetwork {
     prompt: string
     name: string
-    category: string
+    category: string[]
     author: string | null
     description: string | null
     restricted: boolean | null
@@ -120,5 +96,10 @@ export interface Hypernetwork {
 }
 
 export interface Hypernetworks {
-    hypernetworks: HypernetworkCategories
+    hypernetworks: Hypernetwork[]
+}
+
+// export type CategoryHierarchy = Record<string, string | CategoryHierarchy>
+export interface CategoryHierarchy {
+    [key: string]: true | CategoryHierarchy
 }

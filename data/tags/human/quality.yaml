@@ -1,4 +1,6 @@
-name: 人物品控
+name: 品控
+category:
+  - 人物
 content:
   bad anatomy:
     name: 身体结构错误

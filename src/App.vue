@@ -109,7 +109,7 @@ provide(setSearch, setSearchImpl)
                 <KeepAlive v-if="searchTerms === null || searchTerms === ''">
                     <component
                         :is="mainComponent[activeSelection[0]]"
-                        :category="activeSelection[1]" />
+                        :category="activeSelection.slice(1)" />
                 </KeepAlive>
                 <TagSearchShow v-else :search="searchTerms" />
             </ElMain>

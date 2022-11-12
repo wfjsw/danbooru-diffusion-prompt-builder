@@ -26,7 +26,7 @@ import PresetItem from '../components/PresetItem.vue'
 import type { Preset } from '../types/data'
 
 const props = defineProps<{
-    category: string
+    category: string[]
 }>()
 
 const presetStore = usePresetStore()
@@ -35,8 +35,12 @@ const searchTerms = ref('')
 const paginationSize = ref(30)
 const description = computed(
     () =>
-        presetStore.presets.find(({ name }) => name === props.category)
-            ?.description
+        presetStore.presets.find(
+            ({ category, name }) =>
+                JSON.stringify(category) ===
+                    JSON.stringify(props.category.slice(0, -1)) &&
+                name === props.category[props.category.length - 1]
+        )?.description
 )
 const filteredPresets = computed<Preset[]>(() =>
     presetStore.searchPreset(props.category, searchTerms.value)
@@ -53,7 +57,7 @@ function loadMore() {
 </script>
 
 <template>
-    <h1>{{ category }}</h1>
+    <h1>{{ category.join(' / ') }}</h1>
     <ElInput
         v-model="searchTerms"
         :prefix-icon="IconSearch"

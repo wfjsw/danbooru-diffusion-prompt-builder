@@ -1,4 +1,6 @@
-name: 人物手势动作
+name: 手势动作
+category:
+  - 人物
 content:
   arm support:
     name: 用手支撑住

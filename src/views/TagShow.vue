@@ -25,11 +25,11 @@ import TagItem from '../components/TagItem.vue'
 import Masonry from '../components/Masonry.vue'
 import { ClientOnly } from '../ClientOnly'
 import { useSettingsStore } from '../stores/settings'
-import type { TagCategory, TagMeta } from '../types/data'
+import type { Tag } from '../types/data'
 import { ElInput, ElScrollbar } from 'element-plus'
 
 const props = defineProps<{
-    category: string
+    category: string[]
 }>()
 
 const settingsStore = useSettingsStore()
@@ -38,12 +38,12 @@ const tagStore = useTagStore()
 const scrollRef = ref<typeof ElScrollbar | null>(null)
 const searchTerms = ref('')
 const paginationSize = ref(20)
-const filteredTags = computed<[string, TagMeta][]>(() =>
+const filteredTags = computed<Tag[]>(() =>
     tagStore.searchCategory(props.category, searchTerms.value)
 )
 const filteredLength = computed(() => filteredTags.value.length)
-const paginatedTags = computed<TagCategory>(() =>
-    Object.fromEntries(filteredTags.value.slice(0, paginationSize.value))
+const paginatedTags = computed<Tag[]>(() =>
+    filteredTags.value.slice(0, paginationSize.value)
 )
 
 function loadMore() {
@@ -57,7 +57,7 @@ watch(toRef(props, 'category'), () => {
 </script>
 
 <template>
-    <h1>{{ category }}</h1>
+    <h1>{{ category.join(' / ') }}</h1>
     <ElInput
         v-model="searchTerms"
         :prefix-icon="IconSearch"
@@ -72,12 +72,11 @@ watch(toRef(props, 'category'), () => {
                 :infinite-scroll-distance="512"
                 :infinite-scroll-delay="10">
                 <TagItem
-                    v-for="(meta, tag) in paginatedTags"
-                    :key="tag"
-                    v-memo="[tag, settingsStore.showImage]"
+                    v-for="(meta) in paginatedTags"
+                    :key="meta.name"
+                    v-memo="[meta, settingsStore.showImage]"
                     :show-image="settingsStore.showImage"
-                    :meta="meta"
-                    :tag="tag as string" />
+                    :meta="meta" />
             </Masonry>
         </ClientOnly>
     </ElScrollbar>

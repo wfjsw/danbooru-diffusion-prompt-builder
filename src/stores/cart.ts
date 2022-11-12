@@ -38,12 +38,12 @@ import type {
 } from '../types/cart'
 import { defineStore } from 'pinia'
 import { useTagStore } from './tags'
-import { usePresetStore } from './presets'
 import { useSettingsStore } from './settings'
 import { useEmbeddingStore } from './embeddings'
 import { serialize } from '../prompt/serializer'
 import Decimal from 'decimal.js-light'
 import { unserialize } from '../prompt/parser'
+import { Preset } from '../types/data'
 
 function tagNameMapper(n: CartItem | CartItemPresetChild): string | string[] {
     switch (n.type) {
@@ -128,11 +128,12 @@ function removeTag(
     }
 }
 
-function removePreset(ref: CartItem[], category: string, name: string) {
-    const index = ref.findIndex(
-        (ci: CartItem) =>
-            ci.type === 'preset' && category === ci.category && name === ci.name
-    )
+function removePreset(ref: CartItem[], preset: CartItemPreset) {
+    // const index = ref.findIndex(
+    //     (ci: CartItem) =>
+    //         ci.type === 'preset' && JSON.stringify(category) === JSON.stringify(ci.category) && name === ci.name
+    // )
+    const index = ref.indexOf(preset)
     if (index > -1) ref.splice(index, 1)
 }
 
@@ -239,58 +240,59 @@ function appendTag(
 
 function appendPreset(
     ref: CartItem[],
-    presetCategory: string,
-    presetName: string,
-    existsFn: (type: 'preset', name: string, category: string) => boolean,
-    removeRevFn: (category: string, name: string) => void
+    preset: Preset,
+    existsFn: (type: 'preset', name: string, category: string[]) => boolean,
+    removeRevFn: (preset: CartItemPreset) => void
 ) {
     const tagStore = useTagStore()
-    const presetStore = usePresetStore()
+    const cartStore = useCartStore()
 
-    if (existsFn('preset', presetName, presetCategory)) return
-    const preset = presetStore.presets
-        .find((n) => n.name === presetCategory)
-        ?.content.find((n) => n.name === presetName)
-    if (preset) {
-        const item: CartItemPreset = {
-            label: `${presetCategory}/${presetName}`,
-            type: 'preset',
-            name: presetName,
-            category: presetCategory,
-            weight: new Decimal(1),
-            children: [],
-            parent: null,
-        }
-        item.children = preset.content.map(({ tag, weight }) => {
-            const resolved = tagStore.resolve(tag)
-            if (resolved) {
-                return {
-                    label: `${tag} - ${resolved.meta.name}`,
-                    name: tag,
-                    type: 'tag',
-                    category: resolved.meta.category,
-                    weight: new Decimal(weight),
-                    parent: item,
-                    children: null,
-                }
-            } else {
-                return {
-                    label: tag,
-                    name: tag,
-                    type: 'tag',
-                    category: null,
-                    weight: new Decimal(weight),
-                    parent: item,
-                    children: null,
-                }
-            }
-        })
-        ref.push(item), removeRevFn(presetCategory, presetName)
-    } else {
-        throw new Error(
-            `Preset ${presetCategory}/${presetName} does not exist.`
-        )
+    const category = [...preset.categoryInfo.category, preset.categoryInfo.name]
+
+    if (existsFn('preset', preset.name, category)) return
+
+    const item: CartItemPreset = {
+        label: `${category.join('/')}/${preset.name}`,
+        type: 'preset',
+        name: preset.name,
+        category,
+        weight: new Decimal(1),
+        children: [],
+        parent: null,
     }
+    item.children = preset.content.map(({ tag, weight }) => {
+        const resolved = tagStore.resolve(tag)
+        if (resolved) {
+            return {
+                label: `${tag} - ${resolved.meta.name}`,
+                name: tag,
+                type: 'tag',
+                category: resolved.meta.category,
+                weight: new Decimal(weight),
+                parent: item,
+                children: null,
+            }
+        } else {
+            return {
+                label: tag,
+                name: tag,
+                type: 'tag',
+                category: null,
+                weight: new Decimal(weight),
+                parent: item,
+                children: null,
+            }
+        }
+    })
+    ref.push(item)
+
+    const revPreset = cartStore.negative.find(
+        (ci) =>
+            ci.type === 'preset' &&
+            ci.name === preset.name &&
+            JSON.stringify(ci.category) === JSON.stringify(category)
+    ) as CartItemPreset
+    if (revPreset) removeRevFn(revPreset)
 }
 
 export const useCartStore = defineStore('cart', {
@@ -348,7 +350,7 @@ export const useCartStore = defineStore('cart', {
         existsPositive(
             type: 'tag' | 'preset' | 'embedding',
             name: string,
-            category: string | null = null
+            category: string[] | null = null
         ) {
             if (type === 'tag' || type === 'embedding') {
                 return this.positiveTagsShallow.includes(name)
@@ -363,7 +365,7 @@ export const useCartStore = defineStore('cart', {
         existsNegative(
             type: 'tag' | 'preset' | 'embedding',
             name: string,
-            category: string | null = null
+            category: string[] | null = null
         ) {
             if (type === 'tag' || type === 'embedding') {
                 return this.negativeTagsShallow.includes(name)
@@ -403,32 +405,57 @@ export const useCartStore = defineStore('cart', {
             removeTag(this.negative, tagName, type)
         },
 
-        appendPositivePreset(presetCategory: string, presetName: string) {
+        appendPositivePreset(preset: Preset) {
             appendPreset(
                 this.positive,
-                presetCategory,
-                presetName,
+                preset,
                 this.existsPositive,
                 this.removeNegativePreset
             )
         },
 
-        removePositivePreset(presetCategory: string, presetName: string) {
-            removePreset(this.positive, presetCategory, presetName)
+        removePositivePreset(preset: CartItemPreset | Preset) {
+            const item: CartItemPreset =
+                'label' in preset
+                    ? preset
+                    : (this.positive.find(
+                          (ci) =>
+                              ci.type === 'preset' &&
+                              ci.name === preset.name &&
+                              JSON.stringify(ci.category) ===
+                                  JSON.stringify([
+                                      ...preset.categoryInfo.category,
+                                      preset.categoryInfo.name,
+                                  ])
+                      ) as CartItemPreset)
+            removePreset(this.positive, item)
         },
 
-        appendNegativePreset(presetCategory: string, presetName: string) {
+        appendNegativePreset(preset: Preset) {
             appendPreset(
                 this.negative,
-                presetCategory,
-                presetName,
+                preset,
                 this.existsNegative,
                 this.removePositivePreset
             )
         },
 
-        removeNegativePreset(presetCategory: string, presetName: string) {
-            removePreset(this.negative, presetCategory, presetName)
+        removeNegativePreset(preset: CartItemPreset | Preset) {
+            const item: CartItemPreset =
+                'label' in preset
+                    ? preset
+                    : (this.negative.find(
+                          (ci) =>
+                              ci.type === 'preset' &&
+                              ci.name === preset.name &&
+                              JSON.stringify(ci.category) ===
+                                  JSON.stringify([
+                                      ...preset.categoryInfo.category,
+                                      preset.categoryInfo.name,
+                                  ])
+                      ) as CartItemPreset)
+
+            removePreset(this.negative, item)
         },
 
         appendCartItem(direction: 'positive' | 'negative', item: CartItem) {
@@ -482,26 +509,36 @@ export const useCartStore = defineStore('cart', {
             })
         },
 
-        import(direction: 'positive' | 'negative', content: string, newEmphasis: boolean) {
+        import(
+            direction: 'positive' | 'negative',
+            content: string,
+            newEmphasis: boolean
+        ) {
             unserialize(content, this[direction], newEmphasis)
         },
 
         importClassic(direction: 'positive' | 'negative', content: string) {
             // as per https://github.com/wfjsw/danbooru-diffusion-prompt-builder/issues/6
             // this.clear()
-            const run = (text: string, appendFn: (tagName: string, weight: Decimal) => void) => {
+            const run = (
+                text: string,
+                appendFn: (tagName: string, weight: Decimal) => void
+            ) => {
                 const tagStore = useTagStore()
                 let weight = new Decimal(1)
                 let guessNew = true
                 const trimmedText = text.trim()
                 if (trimmedText === '') return
                 const textList = trimmedText
-                    .replaceAll('_', ' ').split(/\s*,\s*|\s*，\s*/)
+                    .replaceAll('_', ' ')
+                    .split(/\s*,\s*|\s*，\s*/)
                 for (const token of textList) {
                     let text = null
                     // TODO: parse alternate/editing
                     // check numeric emphasis
-                    const numericalEmphasis = token.match(/\(([^:]+):(\d+(?:.\d+)?)\)/)
+                    const numericalEmphasis = token.match(
+                        /\(([^:]+):(\d+(?:.\d+)?)\)/
+                    )
                     if (numericalEmphasis) {
                         const [content, emphasis] = numericalEmphasis.slice(1)
                         text = content
@@ -515,7 +552,7 @@ export const useCartStore = defineStore('cart', {
                                 guessNew = false
                                 weight = weight.times(1.05)
                             } else if (char === '[') {
-                                weight = weight.times(guessNew ? 1.1:1.05)
+                                weight = weight.times(guessNew ? 1.1 : 1.05)
                             } else {
                                 break
                             }
@@ -524,12 +561,14 @@ export const useCartStore = defineStore('cart', {
                         if (name) {
                             text = name[1]
                             if (text.endsWith('\\')) {
-                                text += name[name.lastIndexOf(text) + name.length]
+                                text +=
+                                    name[name.lastIndexOf(text) + name.length]
                             }
                         }
                     }
                     if (text) {
-                        text = text.replaceAll('\\(', '(')
+                        text = text
+                            .replaceAll('\\(', '(')
                             .replaceAll('\\)', ')')
                             .replaceAll('\\[', '[')
                             .replaceAll('\\]', ']')
@@ -570,7 +609,7 @@ export const useCartStore = defineStore('cart', {
                                     guessNew = false
                                     weight = weight.div(1.05)
                                 } else if (char === ']') {
-                                    weight = weight.div(guessNew ? 1.1:1.05)
+                                    weight = weight.div(guessNew ? 1.1 : 1.05)
                                 } else {
                                     break
                                 }
@@ -584,7 +623,12 @@ export const useCartStore = defineStore('cart', {
                 }
             }
             // console.log('import', positive, negative)
-            run(content, direction === 'positive' ? this.appendPositiveTag : this.appendNegativeTag)
+            run(
+                content,
+                direction === 'positive'
+                    ? this.appendPositiveTag
+                    : this.appendNegativeTag
+            )
         },
 
         createMixtureFromTag(
@@ -705,7 +749,10 @@ export const useCartStore = defineStore('cart', {
                         // @ts-ignore hmm
                         .map(
                             (
-                                child: Exclude<CartChildItem, CartItemEditingChild>
+                                child: Exclude<
+                                    CartChildItem,
+                                    CartItemEditingChild
+                                >
                             ): Exclude<CartItemEditingChild, CartItemNull> => {
                                 if (
                                     child.type === 'group' &&

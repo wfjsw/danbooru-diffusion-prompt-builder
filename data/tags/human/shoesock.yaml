@@ -1,4 +1,6 @@
-name: 人物鞋袜
+name: 鞋袜
+category:
+  - 人物
 content:
   slippers:
     name: 拖鞋

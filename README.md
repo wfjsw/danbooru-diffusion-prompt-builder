@@ -37,6 +37,9 @@ https://tags.novelai.dev
 
 ```yaml
 name: <分类名>
+category: 
+  - <分类层级1>
+  - <分类层级2>
 restricted: false # 是否限制级
 content:
     tag-name1: # 英文标签
@@ -49,6 +52,9 @@ content:
 
 ```yaml
 name: <预设分类名>
+category: 
+  - <分类层级1>
+  - <分类层级2>
 restricted: false # 是否限制级
 content:
     预设中文名:
@@ -76,6 +82,9 @@ content:
 
 ```yaml
 name: <分类名>
+category: 
+  - <分类层级1>
+  - <分类层级2>
 restricted: false # 是否限制级
 content:
     tag-name1: # 英文标签
@@ -90,6 +99,9 @@ content:
 
 ```yaml
 name: <预设分类名>
+category: 
+  - <分类层级1>
+  - <分类层级2>
 restricted: false # 是否限制级
 description: <预设分类说明>
 content:
@@ -123,7 +135,8 @@ author: u/depfakacc @ Reddit
 # 模型描述
 description: 'A lace pattern that looks like it was made in the Victorian era.'
 # 模型分类
-category: 未分类
+category: 
+  - 未分类
 # 该模型对应的主模型名称
 modelName: model-aa-waifu
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
@@ -156,7 +169,8 @@ suggestNegative:
 prompt: demo-model # 模型内置英文名
 name: 演示模型 # 模型中文名称
 author: John Doe @ Tieba # 模型来源
-category: 风景 # 模型分类
+category: # 模型分类
+  - 风景
 modelName: demo model # 该模型对应的主模型名称
 modelHash: 'deadbeef' # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
 steps: 2600 # 模型内记录的训练步数

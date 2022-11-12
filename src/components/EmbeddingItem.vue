@@ -158,8 +158,8 @@ function toggleNegative(tag: string = prompt.value) {
                 </div>
             </div>
             <div v-if="data.name" class="text name">{{ data.name }}</div>
-            <div v-if="data.category" class="text category">
-                类别：{{ data.category }}
+            <div v-if="showCategory" class="text category">
+                类别：{{ data.category.join('/') }}
             </div>
             <div v-if="data.author" class="text author">
                 来源：{{ data.author }}

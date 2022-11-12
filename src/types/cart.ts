@@ -22,7 +22,7 @@ import type Decimal from 'decimal.js-light'
 export interface CartItemPresetChild {
     label: string
     name: string
-    category: string | null
+    category: string[] | null
     type: 'tag'
     weight: Decimal
     children: null
@@ -38,7 +38,7 @@ export type CartType = CartSimpleType | CartCompositeType
 export interface CartItemSimple {
     label: string
     name: string
-    category: string | null
+    category: string[] | null
     type: CartSimpleType
     weight: Decimal
     children: null
@@ -49,7 +49,7 @@ export interface CartItemPreset {
     label: string
     type: 'preset'
     name: string
-    category: string
+    category: string[]
     weight: Decimal
     children: CartItemPresetChild[]
     parent: CartItemComplex | null

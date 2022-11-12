@@ -5,7 +5,9 @@ name: 时崎狂三
 # 模型作者
 author: reburn A @ t.me/StableDiffusion_CN
 # 模型分类
-category: 约会大作战
+category: 
+  - 番剧
+  - 约会大作战
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

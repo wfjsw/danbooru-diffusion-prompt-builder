@@ -1,4 +1,7 @@
-name: 人物发色
+name: 发色
+category:
+  - 人物
+  - 头发
 content:
   streaked hair:
     alias:

@@ -1,4 +1,6 @@
-name: 制图技术
+name: 制图特效
+category:
+  - 构图
 content:
   chromatic aberration:
     image: ed9212bfc31f8e84315260751b5ffebde059d0748e3c9305d7597752a187fcdf

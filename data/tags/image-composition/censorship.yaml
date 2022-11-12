@@ -1,4 +1,6 @@
 name: 打码方式
+category:
+  - 构图
 content:
   censored:
     name: 有码

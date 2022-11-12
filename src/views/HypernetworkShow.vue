@@ -29,7 +29,7 @@ import type { Hypernetwork } from '../types/data'
 import { ElInput, ElScrollbar } from 'element-plus'
 
 const props = defineProps<{
-    category: string
+    category: string[]
 }>()
 
 const settingsStore = useSettingsStore()
@@ -53,7 +53,7 @@ function loadMore() {
 </script>
 
 <template>
-    <h1>{{ category }}</h1>
+    <h1>{{ category.join(' / ') }}</h1>
     <ElInput
         v-model="searchTerms"
         :prefix-icon="IconSearch"

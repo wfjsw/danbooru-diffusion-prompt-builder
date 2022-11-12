@@ -5,7 +5,9 @@ name: 妮露
 # 模型作者
 author: gunvolt @ t.me/StableDiffusion_CN
 # 模型分类
-category: 原神
+category: 
+  - 游戏
+  - 原神
 # 该模型对应的主模型名称
 modelName: 未知
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

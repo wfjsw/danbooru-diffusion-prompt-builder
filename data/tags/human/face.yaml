@@ -1,4 +1,6 @@
-name: 人物面部
+name: 面部
+category:
+  - 人物
 content:
   makeup:
     name: 浓装

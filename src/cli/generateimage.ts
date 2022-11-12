@@ -22,7 +22,7 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { type TagCategories } from '../types/data'
+import { type TagFile } from '../types/file'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(dirname, '../../')
@@ -38,9 +38,9 @@ const ucA = uc.split(', ')
 
 for (const file of tagFiles) {
     if (file.startsWith('restricted')) continue
-    const tagData: TagCategories = yaml.load(
+    const tagData: TagFile = yaml.load(
         fs.readFileSync(path.resolve(dirname, '../../data/tags', file), 'utf-8')
-    ) as TagCategories
+    ) as TagFile
     for (const [tag, meta] of Object.entries(tagData.content)) {
         if (ucA.includes(tag)) continue
         if (!meta.image) {

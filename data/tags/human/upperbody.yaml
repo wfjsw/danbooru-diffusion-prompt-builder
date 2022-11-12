@@ -1,4 +1,6 @@
-name: 人物上身装饰
+name: 上身装饰
+category:
+  - 人物
 content:
   collarbone:
     name: 锁骨

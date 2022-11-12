@@ -1,4 +1,6 @@
 name: 视角
+category:
+  - 构图
 content:
   first-person view:
     name: 第一人称视角

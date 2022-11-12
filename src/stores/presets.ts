@@ -18,25 +18,9 @@
  ******************************************************************************/
 
 import { defineStore } from 'pinia'
-import type { Presets, Preset } from '../types/data'
+import type { Presets, Preset, PresetCategoryInfo, CategoryHierarchy } from '../types/data'
 import { useSettingsStore } from './settings'
-
-interface PresetFile {
-    name: string
-    description: string | null
-    restricted: boolean | null
-    content: PresetFileItem
-}
-
-interface PresetFileItem {
-    [key: string]: PresetFileSingleItem
-}
-
-interface PresetFileSingleItem {
-    description: string | null
-    content: string[]
-    preview: string[] | null
-}
+import type { PresetFile } from '../types/file'
 
 export const usePresetStore = defineStore('presets', {
     state: (): Presets => ({ presets: [] }),
@@ -50,7 +34,35 @@ export const usePresetStore = defineStore('presets', {
                 .filter(
                     ({ restricted }) => settings.showRestricted || !restricted
                 )
-                .map(({ name }) => name)
+                .map(({ name, category }) => [...category, name].join('/'))
+        },
+        categoryHierarchy: (state) => {
+            const settings = useSettingsStore()
+            const filtered = new Set(
+                state.presets
+                    .filter(
+                        ({ restricted }) =>
+                            settings.showRestricted || !restricted
+                    )
+                    .map(({name, category}) => [...category, name])
+                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
+            )
+            const hierarchy: CategoryHierarchy = {}
+            for (const categoryList of filtered) {
+                let parent = hierarchy
+                for (const [i, category] of categoryList.entries()) {
+                    if (i === categoryList.length - 1) {
+                        parent[category] = true
+                    } else {
+                        const newParent = parent[category] ?? {}
+                        parent[category] ||= newParent
+                        if (typeof newParent === 'object') {
+                            parent = newParent
+                        }
+                    }
+                }
+            }
+            return hierarchy
         },
         categorySize: (state) => {
             return Object.fromEntries(
@@ -77,33 +89,42 @@ export const usePresetStore = defineStore('presets', {
             )
             const presetData: Presets = {
                 presets: result.map((v) => {
-                    return {
+                    const categoryInfo: PresetCategoryInfo = {
                         name: v.name,
+                        category: v.category,
                         description: v.description,
                         restricted: v.restricted ?? false,
-                        content: Object.entries(v.content).map(
-                            ([k, vs]): Preset => ({
-                                name: k,
-                                description: vs.description,
-                                content: vs.content.map((vt) => {
-                                    const [tag, weight] = vt.split('|')
-                                    return {
-                                        tag,
-                                        weight: weight ? parseFloat(weight) : 1,
-                                    }
-                                }),
-                                preview: vs.preview,
-                            })
-                        ),
+                        content: [],
                     }
+
+                    categoryInfo.content = Object.entries(v.content).map(
+                        ([k, vs]): Preset => ({
+                            name: k,
+                            description: vs.description,
+                            categoryInfo,
+                            content: vs.content.map((vt) => {
+                                const [tag, weight] = vt.split(':')
+                                return {
+                                    tag,
+                                    weight: weight ? parseFloat(weight) : 1,
+                                }
+                            }),
+                            preview: vs.preview,
+                        })
+                    )
+
+                    return categoryInfo
                 }),
             }
             this.$patch(presetData)
         },
-        searchPreset(presetName: string, query: string) {
+        searchPreset(presetName: string[], query: string) {
             const settings = useSettingsStore()
             const presetCategory = this.presets.find(
-                (n) => n.name === presetName
+                (n) =>
+                    JSON.stringify(n.category) ===
+                        JSON.stringify(presetName.slice(0, -1)) &&
+                    n.name === presetName[presetName.length - 1]
             )
             if (!presetCategory) {
                 return []

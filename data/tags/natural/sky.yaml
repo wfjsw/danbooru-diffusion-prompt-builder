@@ -1,4 +1,6 @@
 name: 天空/气象
+category:
+  - 自然景观
 content:
   cloud:
     name: 云

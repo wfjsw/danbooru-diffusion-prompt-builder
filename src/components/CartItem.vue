@@ -68,13 +68,13 @@ function deleteFrom(
     ) {
         if (direction === 'positive') {
             if (item.type === 'preset') {
-                cartStore.removePositivePreset(item.category, item.name)
+                cartStore.removePositivePreset(item)
             } else {
                 cartStore.removePositiveTag(item.name, item.type)
             }
         } else if (direction === 'negative') {
             if (item.type === 'preset') {
-                cartStore.removeNegativePreset(item.category, item.name)
+                cartStore.removeNegativePreset(item)
             } else {
                 cartStore.removeNegativeTag(item.name, item.type)
             }

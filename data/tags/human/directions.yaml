@@ -1,4 +1,6 @@
-name: 人物摆位
+name: 摆位
+category: 
+  - 人物
 content:
   facing away:
     name: 背对

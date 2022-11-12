@@ -1,4 +1,7 @@
-name: 人物发型
+name: 发型
+category:
+  - 人物
+  - 头发
 content:
   ahoge:
     name: 呆毛

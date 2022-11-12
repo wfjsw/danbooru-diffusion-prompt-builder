@@ -27,7 +27,7 @@ import TagView from '../components/TagItem.vue'
 import Masonry from '../components/Masonry.vue'
 import { ClientOnly } from '../ClientOnly'
 import { useSettingsStore } from '../stores/settings'
-import type { TagMeta, Embedding, Hypernetwork } from '../types/data'
+import type { Tag, Embedding, Hypernetwork } from '../types/data'
 import EmbeddingView from '../components/EmbeddingItem.vue'
 import HypernetworkView from '../components/HypernetworkItem.vue'
 
@@ -39,7 +39,7 @@ interface SearchResultTag {
     type: 'tag'
     key: string
     score: number
-    data: [string, TagMeta]
+    data: Tag
 }
 
 interface SearchResultEmbedding {
@@ -80,8 +80,8 @@ const combinedResult = computed(() => {
     const resultTag: SearchResult[] = filteredTags.value.map((n) => ({
         type: 'tag',
         data: n,
-        key: n[0],
-        score: n[1].score,
+        key: n.key,
+        score: n.score,
     }))
     const resultEmbedding: SearchResult[] = filteredEmbeddings.value.map(
         (n) => ({
@@ -133,8 +133,8 @@ watch(toRef(props, 'search'), () => {
                     <TagView
                         v-if="item.type === 'tag'"
                         :show-image="settingsStore.showImage"
-                        :meta="(item as SearchResultTag).data[1]"
-                        :tag="(item as SearchResultTag).data[0]" />
+                        :meta="(item as SearchResultTag).data"
+                        show-category />
                     <EmbeddingView
                         v-if="item.type === 'embedding'"
                         :data="(item as SearchResultEmbedding).data"

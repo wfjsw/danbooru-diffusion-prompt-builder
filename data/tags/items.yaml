@@ -1,4 +1,5 @@
 name: 物品
+category: []
 content:
   camera:
     name: 相机

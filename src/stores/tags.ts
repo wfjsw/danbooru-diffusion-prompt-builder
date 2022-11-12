@@ -17,148 +17,108 @@
  *
  ******************************************************************************/
 
-import { Map as ImmutableMap } from 'immutable'
 import { defineStore } from 'pinia'
-import type { TagCategories, TagMeta, Tags } from '../types/data'
+import type { Tag, Tags, CategoryHierarchy } from '../types/data'
 import { useSettingsStore } from './settings'
 import LRU from 'lru-cache'
+import type { TagFile } from '../types/file'
 
-interface TagFile {
-    name: string
-    restricted: boolean | null
-    content: TagFileItem[]
-}
-
-interface TagFileItem {
-    name: string
-    description: string | null
-    image: string | null
-    wikiURL: string | null
-    alias: string[] | null
-    restricted: boolean | null
-}
-
-const searchCache = new LRU<string, [string, TagMeta & { score: number }][]>({
-    max: 30,
+const searchCache = new LRU<string, (Tag & { score: number })[]>({
+    max: 50,
     allowStale: true,
     updateAgeOnGet: true,
 })
 
 export const useTagStore = defineStore('tags', {
-    state: (): Tags => ({ tags: {}, tagsPostCount: {} }),
+    state: (): Tags => ({ tags: [], tagsPostCount: {} }),
     getters: {
         loaded: (state) => {
-            return Object.keys(state.tags).length > 0
+            return state.tags.length > 0
         },
         categories: (state) => {
             const settings = useSettingsStore()
-            const filtered = Object.entries(state.tags)
-                .filter(([, v]) => settings.showRestricted || !v._restricted)
-                .map(([k]) => k)
-            return filtered.sort()
+            const filtered = new Set(
+                state.tags
+                    .filter((t) => settings.showRestricted || !t.restricted)
+                    .map((t) => t.category)
+                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
+            )
+            return filtered
+        },
+        categoryHierarchy: (state) => {
+            const settings = useSettingsStore()
+            const filtered = new Set(
+                state.tags
+                    .filter((t) => settings.showRestricted || !t.restricted)
+                    .map((t) => t.category)
+                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
+            )
+            const hierarchy: CategoryHierarchy = {}
+            for (const categoryList of filtered) {
+                let parent = hierarchy
+                for (const [i, category] of categoryList.entries()) {
+                    if (i === categoryList.length - 1) {
+                        parent[category] = true
+                    } else {
+                        const newParent = parent[category] ?? {}
+                        parent[category] ||= newParent
+                        if (typeof newParent === 'object') {
+                            parent = newParent
+                        }
+                    }
+                }
+            }
+            return hierarchy
+        },
+        tagsByCategory: (state): Record<string, Tag[]> => {
+            const settings = useSettingsStore()
+            return state.tags
+                .filter((t) => settings.showRestricted || !t.restricted)
+                .group((t) => t.category.join('/'))
         },
         categorySize: (state) => {
-            const settings = useSettingsStore()
-            return Object.fromEntries(
-                Object.entries(state.tags).map(([k, v]) => [
-                    k,
-                    Object.values(v).filter(
-                        (v) => settings.showRestricted || !v.restricted
-                    ).length,
-                ])
-            )
+            const size: Record<string, number> = {}
+            for (const tag of state.tags) {
+                const key = tag.category.join('/')
+                size[key] = (size[key] ?? 0) + 1
+            }
+            return size
         },
         allTags: (state) => {
             const settings = useSettingsStore()
 
-            return ImmutableMap(
-                Object.entries(state.tags).reduce(
-                    (
-                        a: { [key: string]: TagMeta & { category: string } },
-                        [k, b]
-                    ) => {
-                        if (!settings.showRestricted && b._restricted) {
-                            return a
-                        }
-                        for (const [tag, meta] of Object.entries(b)) {
-                            if (!settings.showRestricted && meta.restricted) {
-                                continue
-                            }
-                            a[tag] = { ...meta, category: k }
-                        }
-                        return a
-                    },
-                    {}
-                )
+            return Object.fromEntries(
+                state.tags
+                    .filter((t) => settings.showRestricted || !t.restricted)
+                    .map((t) => [t.name, t])
             )
         },
         allTagsWithAlias: (state) => {
             const settings = useSettingsStore()
 
-            return ImmutableMap(
-                Object.entries(state.tags).reduce(
-                    (
-                        a: {
-                            [key: string]: TagMeta & {
-                                category: string
-                                originalName: string
-                            }
-                        },
-                        [k, b]
-                    ) => {
-                        if (!settings.showRestricted && b._restricted) {
-                            return a
+            return Object.fromEntries(
+                state.tags
+                    .filter((t) => settings.showRestricted || !t.restricted)
+                    .flatMap((t) => {
+                        if (t.alias) {
+                            return [[t.name, t], ...t.alias.map((a) => [a, t])]
+                        } else {
+                            return [[t.name, t]]
                         }
-
-                        for (const [tag, meta] of Object.entries(b)) {
-                            if (!settings.showRestricted && meta.restricted) {
-                                continue
-                            }
-
-                            a[tag] = { ...meta, category: k, originalName: tag }
-                            if (meta.alias) {
-                                for (const alias of meta.alias) {
-                                    a[alias] = {
-                                        ...meta,
-                                        category: k,
-                                        originalName: tag,
-                                    }
-                                }
-                            }
-                        }
-                        return a
-                    },
-                    {}
-                )
+                    })
             )
         },
         allTagCount: (state) => {
             const settings = useSettingsStore()
-            return Object.values(state.tags)
-                .filter((a) => settings.showRestricted || !a._restricted)
-                .reduce(
-                    (a, b) =>
-                        a +
-                        Object.values(b).filter(
-                            (v) => settings.showRestricted || !v.restricted
-                        ).length,
-                    0
-                )
+            return state.tags.filter(
+                (t) => settings.showRestricted || !t.restricted
+            ).length
         },
         tagWithPhotosCount: (state) => {
             const settings = useSettingsStore()
-            return Object.values(state.tags)
-                .filter((a) => settings.showRestricted || !a._restricted)
-                .reduce(
-                    (a, b) =>
-                        a +
-                        Object.values(b).filter(
-                            (v) =>
-                                v.image &&
-                                (settings.showRestricted || !v.restricted)
-                        ).length,
-                    0
-                )
+            return state.tags
+                .filter((t) => settings.showRestricted || !t.restricted)
+                .filter((t) => t.image).length
         },
     },
     actions: {
@@ -174,19 +134,16 @@ export const useTagStore = defineStore('tags', {
                 await import('../../data/danbooru_tag_post_count.json')
             ).default
             const tagData: Tags = {
-                tags: result.reduce((a: TagCategories, p: any) => {
-                    const name = p.name.replaceAll('_', ' ').toLowerCase()
-                    a[name] = p.content
-                    if (p.restricted) {
-                        Object.defineProperty(a[name], '_restricted', {
-                            configurable: false,
-                            enumerable: false,
-                            value: true,
-                            writable: false,
-                        })
-                    }
-                    return a
-                }, {}),
+                tags: result.flatMap((p) => {
+                    return Object.entries(p.content).map<Tag>(([k, t]) => {
+                        return {
+                            ...t,
+                            key: k.replaceAll('_', ' ').toLowerCase(),
+                            category: [...p.category, p.name],
+                            restricted: t.restricted || p.restricted,
+                        }
+                    })
+                }),
                 tagsPostCount,
             }
 
@@ -200,19 +157,16 @@ export const useTagStore = defineStore('tags', {
             }
             return null
         },
-        searchCategory(category: string, query: string) {
+        searchCategory(category: string[], query: string) {
             const settings = useSettingsStore()
-            if (!settings.showRestricted && this.tags[category]._restricted)
-                return []
+            if (!this.tagsByCategory[category.join('/')]) return []
 
             if (query === '')
-                return Object.entries(this.tags[category])
-                    .filter(([, v]) => settings.showRestricted || !v.restricted)
-                    .sort(
-                        ([k1], [k2]) =>
-                            (this.tagsPostCount[k2] ?? 0) -
-                            (this.tagsPostCount[k1] ?? 0)
-                    )
+                return this.tagsByCategory[category.join('/')].sort(
+                    (k1, k2) =>
+                        (this.tagsPostCount[k2.key] ?? 0) -
+                        (this.tagsPostCount[k1.key] ?? 0)
+                )
 
             const lcQuery = query.toLowerCase()
             const normalizedLcQuery = lcQuery
@@ -226,22 +180,16 @@ export const useTagStore = defineStore('tags', {
             ])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = normalizedLcQuery.reduce<
-                [string, TagMeta & { score: number }][]
-            >(
-                (a, q) =>
-                    a
-                        .filter(
-                            ([, v]) => settings.showRestricted || !v.restricted
-                        )
-                        .map(
-                            ([key, meta]): [
-                                string,
-                                TagMeta & { score: number }
-                            ] => {
+            const result = normalizedLcQuery
+                .reduce<(Tag & { score: number })[]>(
+                    (a, q) =>
+                        a
+                            .map((meta): Tag & { score: number } => {
                                 let score = meta.score
-                                if (key.toLowerCase() === lcQuery) score += 300
-                                if (key.toLowerCase().includes(q)) score += 100
+                                if (meta.key.toLowerCase() === lcQuery)
+                                    score += 300
+                                if (meta.key.toLowerCase().includes(q))
+                                    score += 100
                                 if (meta.name.toLowerCase() === lcQuery)
                                     score += 50
                                 if (meta.name.toLowerCase().includes(q))
@@ -262,20 +210,23 @@ export const useTagStore = defineStore('tags', {
                                     score += 40
                                 if (meta.description?.toLowerCase().includes(q))
                                     score += 25
-                                return [key, { ...meta, score }]
-                            }
+                                return { ...meta, score }
+                            })
+                            .filter((v) => v.score > 0),
+                    this.tags
+                        .filter(
+                            (v) =>
+                                v.category.join('/') === category.join('/') &&
+                                (settings.showRestricted || !v.restricted)
                         )
-                        .filter(([, v]) => v.score > 0)
-                        .sort(([, va], [, vb]) => vb.score - va.score),
-                Object.entries(this.tags[category]).map(([k, v]) => [
-                    k,
-                    { ...v, score: 0 },
-                ])
-            )
+                        .map((v) => ({ ...v, score: 0 }))
+                )
+                .sort((va, vb) => vb.score - va.score)
             searchCache.set(cacheKey, result)
             return result
         },
         searchAll(query: string) {
+            const settings = useSettingsStore()
             if (query === '') return []
 
             const lcQuery = query.toLowerCase()
@@ -286,19 +237,16 @@ export const useTagStore = defineStore('tags', {
             const cacheKey = JSON.stringify(['Global', normalizedLcQuery])
             const cached = searchCache.get(cacheKey)
             if (cached) return cached
-            const result = normalizedLcQuery.reduce<
-                [string, TagMeta & { category: string; score: number }][]
-            >(
-                (a, q) =>
-                    a
-                        .map(
-                            ([key, meta]): [
-                                string,
-                                TagMeta & { category: string; score: number }
-                            ] => {
+            const result = normalizedLcQuery
+                .reduce<(Tag & { score: number })[]>(
+                    (a, q) =>
+                        a
+                            .map((meta): Tag & { score: number } => {
                                 let score = meta.score
-                                if (key.toLowerCase() === lcQuery) score += 300
-                                if (key.toLowerCase().includes(q)) score += 100
+                                if (meta.key.toLowerCase() === lcQuery)
+                                    score += 300
+                                if (meta.key.toLowerCase().includes(q))
+                                    score += 100
                                 if (meta.name.toLowerCase() === lcQuery)
                                     score += 50
                                 if (meta.name.toLowerCase().includes(q))
@@ -319,17 +267,26 @@ export const useTagStore = defineStore('tags', {
                                     score += 40
                                 if (meta.description?.toLowerCase().includes(q))
                                     score += 25
-                                if (meta.category?.toLowerCase() === q)
+                                if (
+                                    meta.category?.some(
+                                        (c) => c.toLowerCase() === q
+                                    )
+                                )
                                     score += 15
-                                if (meta.category?.toLowerCase().includes(q))
+                                if (
+                                    meta.category?.some((c) =>
+                                        c.toLowerCase().includes(q)
+                                    )
+                                )
                                     score += 7
-                                return [key, { ...meta, score }]
-                            }
-                        )
-                        .filter(([, { score }]) => score > 0)
-                        .sort(([, { score: a }], [, { score: b }]) => b - a),
-                this.allTags.toArray().map(([k, v]) => [k, { ...v, score: 0 }])
-            )
+                                return { ...meta, score }
+                            })
+                            .filter(({ score }) => score > 0),
+                    this.tags
+                        .filter((v) => settings.showRestricted || !v.restricted)
+                        .map((t) => ({ ...t, score: 0 }))
+                )
+                .sort(({ score: a }, { score: b }) => b - a)
             searchCache.set(cacheKey, result)
             return result
         },

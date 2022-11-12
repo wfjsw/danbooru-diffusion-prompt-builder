@@ -18,7 +18,7 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import { computed, toRef } from 'vue'
+import { computed } from 'vue'
 import { ElButton, ElCard, ElTooltip, ElImage } from 'element-plus'
 import { useClipboard } from '@vueuse/core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -30,16 +30,19 @@ import {
     faImageSlash,
 } from '@fortawesome/pro-light-svg-icons'
 import TagPostCount from './TagPostCount.vue'
-import type { TagMeta } from '../types/data'
+import type { Tag } from '../types/data'
 import { useCartStore } from '../stores/cart'
 
-const props = defineProps<{
-    tag: string
-    meta: TagMeta & { category?: string }
+const props = withDefaults(defineProps<{
+    meta: Tag
     showImage: boolean
-}>()
+    showCategory?: boolean
+}>(), {
+    showCategory: false,
+})
 
-const { copy, copied } = useClipboard({ source: toRef(props, 'tag') })
+const tagKey = computed(() => props.meta.key)
+const { copy, copied } = useClipboard({ source: tagKey })
 const cartStore = useCartStore()
 
 const imageUrl = computed(() => {
@@ -55,8 +58,8 @@ const imageUrl = computed(() => {
     return null
 })
 
-const inPositive = computed(() => cartStore.existsPositive('tag', props.tag))
-const inNegative = computed(() => cartStore.existsNegative('tag', props.tag))
+const inPositive = computed(() => cartStore.existsPositive('tag', props.meta.key))
+const inNegative = computed(() => cartStore.existsNegative('tag', props.meta.key))
 
 interface BooleanFlags {
     [key: string]: boolean
@@ -83,8 +86,8 @@ const aliasInNegative = computed<BooleanFlags | null>(
         )
 )
 
-function togglePositive(tag: string = props.tag) {
-    if (tag === props.tag) {
+function togglePositive(tag: string = props.meta.key) {
+    if (tag === props.meta.key) {
         if (!inPositive.value) {
             cartStore.appendPositiveTag(tag)
         } else {
@@ -99,8 +102,8 @@ function togglePositive(tag: string = props.tag) {
     }
 }
 
-function toggleNegative(tag: string = props.tag) {
-    if (tag === props.tag) {
+function toggleNegative(tag: string = props.meta.key) {
+    if (tag === props.meta.key) {
         if (!inNegative.value) {
             cartStore.appendNegativeTag(tag)
         } else {
@@ -134,8 +137,8 @@ function toggleNegative(tag: string = props.tag) {
         <div class="imagecard-content">
             <div class="card-header flex-button-container">
                 <div class="tag-header">
-                    <code class="tag-name large">{{ tag }}</code>
-                    <TagPostCount :tag="tag" />
+                    <code class="tag-name large">{{ meta.key }}</code>
+                    <TagPostCount :tag="meta.key" />
                 </div>
                 <div class="buttons">
                     <ElTooltip :visible="copied">
@@ -157,7 +160,7 @@ function toggleNegative(tag: string = props.tag) {
                         <ElButton
                             :type="inPositive ? 'success' : 'default'"
                             circle
-                            @click="togglePositive(tag)">
+                            @click="togglePositive(meta.key)">
                             <FontAwesomeIcon :icon="faThumbsUp" />
                         </ElButton>
                     </ElTooltip>
@@ -165,15 +168,15 @@ function toggleNegative(tag: string = props.tag) {
                         <ElButton
                             :type="inNegative ? 'danger' : 'default'"
                             circle
-                            @click="toggleNegative(tag)">
+                            @click="toggleNegative(meta.key)">
                             <FontAwesomeIcon :icon="faThumbsDown" />
                         </ElButton>
                     </ElTooltip>
                 </div>
             </div>
             <div v-if="meta.name" class="text name">{{ meta.name }}</div>
-            <div v-if="meta.category" class="text category">
-                类别：{{ meta.category }}
+            <div v-if="showCategory" class="text category">
+                类别：{{ meta.category.join('/') }}
             </div>
             <div v-if="meta.description">
                 <p

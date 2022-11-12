@@ -1,4 +1,6 @@
 name: 图片杂件
+category:
+  - 构图
 content:
   text:
     name: 含文字

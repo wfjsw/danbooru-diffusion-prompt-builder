@@ -5,7 +5,8 @@ name: にじさんじ / 天宮こころ
 # 模型作者
 author: SeaL_773
 # 模型分类
-category: VTuber
+category: 
+  - VTuber
 # 该模型对应的主模型名称
 modelName: NovelAI-SFW-LastGood
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

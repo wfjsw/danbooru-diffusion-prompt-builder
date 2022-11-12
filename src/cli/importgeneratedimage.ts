@@ -22,7 +22,7 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { type TagCategories } from '../types/data'
+import { type TagFile } from '../types/file'
 import sharp from 'sharp'
 import { createHash } from 'crypto'
 
@@ -35,9 +35,9 @@ const tagFiles = glob.sync('**/*.yaml', {
 const tagSet: Map<string, string> = new Map()
 
 for (const file of tagFiles) {
-    const tagData: TagCategories = yaml.load(
+    const tagData: TagFile = yaml.load(
         fs.readFileSync(path.resolve(root, 'data/tags', file), 'utf-8')
-    ) as TagCategories
+    ) as TagFile
     for (const [tag] of Object.entries(tagData.content)) {
         tagSet.set(tag, file)
     }
@@ -66,9 +66,9 @@ for (const file of photoFiles) {
     )
     const tagFile = tagSet.get(tag)
     if (tagFile) {
-        const tagData: TagCategories = yaml.load(
+        const tagData: TagFile = yaml.load(
             fs.readFileSync(path.resolve(root, 'data/tags', tagFile), 'utf-8')
-        ) as TagCategories
+        ) as TagFile
         if (tagData.content[tag]) tagData.content[tag].image = hash
         fs.writeFileSync(
             path.resolve(root, 'data/tags', tagFile),

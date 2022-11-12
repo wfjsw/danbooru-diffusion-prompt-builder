@@ -1,4 +1,6 @@
-name: 人物胸部
+name: 胸部
+category: 
+  - 人物
 content:
   chest:
     name: 胸肌

@@ -1,3 +1,6 @@
+name: 类型
+category:
+  - 人物
 content:
   1boy:
     name: 1 个男人
@@ -523,4 +526,3 @@ content:
     name: 长脖子
     image: 23717f013e6bc974797c27462f15930cc674c8c49fb29e68e9456aa599a4de9b
     wikiURL: https://danbooru.donmai.us/wiki_pages/long_neck.html
-name: 人物类型

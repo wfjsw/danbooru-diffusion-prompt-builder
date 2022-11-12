@@ -5,7 +5,8 @@ name: おののいもこ
 # 模型作者
 author: 4chan
 # 模型分类
-category: 画师
+category: 
+  - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
 # 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）

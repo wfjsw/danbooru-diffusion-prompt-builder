@@ -1,4 +1,6 @@
 name: 构图方式
+category:
+  - 构图
 content:
   afterimage:
     name: 残像
