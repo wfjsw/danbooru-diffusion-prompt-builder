@@ -1,0 +1,129 @@
+name: 室内
+category:
+  - 人文景观
+  - 位置
+content:
+  bathroom:
+    name: 浴室场景
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bathroom.html
+  bathtub:
+    name: 浴缸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bathtub.html
+    alias:
+      - bath tub
+  toilet stall:
+    name: 厕所隔间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/toilet_stall.html
+    alias:
+      - restroom stall
+  shower:
+    name: 淋浴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shower.html
+  bedroom:
+    name: 卧室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bedroom.html
+  hotel room:
+    name: 旅馆房间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hotel_room.html
+  messy room:
+    name: 杂乱的房间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/messy_room.html
+  otaku room:
+    name: 御宅房
+    wikiURL: https://danbooru.donmai.us/wiki_pages/otaku_room.html
+    alias:
+      - otakuroom
+  cafeteria:
+    name: 自助餐厅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cafeteria.html
+  changing room:
+    name: 更衣室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/changing_room.html
+  classroom:
+    name: 教室
+    image: 8e5be028bba13c3411819225b7bdc4bdcfe70f59d69108885bffa0749291a794
+    wikiURL: https://danbooru.donmai.us/wiki_pages/classroom.html
+    alias:
+      - class room
+  clubroom:
+    name: 社团活动室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clubroom.html
+  conservatory:
+    name: 温室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/conservatory.html
+  courtroom:
+    name: 法庭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/courtroom.html
+  dining room:
+    name: 家里的餐厅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dining_room.html
+  dressing room:
+    name: 更衣室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dressing_room.html
+  dungeon:
+    name: 地牢
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dungeon.html
+  prison cell:
+    name: 牢房
+    alias:
+      - jail cell
+  fitting room:
+    name: 试衣间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fitting_room.html
+  gym:
+    name: 健身房
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gym.html
+    alias:
+      - gymnasium
+  locker room:
+    name: 更衣室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/locker_room.html
+  gym storeroom:
+    name: 体育器材库房
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gym_storeroom.html
+    alias:
+      - gym storage room
+      - gym equipment shed
+  infirmary:
+    name: 医务室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/infirmary.html
+    alias:
+      - nurse office
+      - nurse's office
+  kitchen:
+    name: 厨房
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kitchen.html
+  laboratory:
+    name: 实验室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/laboratory.html
+  library:
+    name: 图书馆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/library.html
+  living room:
+    name: 客厅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/living_room.html
+  office:
+    name: 办公室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/office.html
+  cubicle:
+    name: 隔间
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cubicle.html
+  stage:
+    name: 舞台
+    image: 5b14e11246d410fd4781af690d20bcd576e8641b7e40d01e65697c1f67aeef95
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stage.html
+  staff room:
+    name: 职员休息室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/staff_room.html
+  storage room:
+    name: 储存室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/storage_room.html
+  armory:
+    name: 军械库
+    wikiURL: https://danbooru.donmai.us/wiki_pages/armory.html
+  closet:
+    name: 壁橱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/closet.html
+  workshop:
+    name: 创意工坊
+    wikiURL: https://danbooru.donmai.us/wiki_pages/workshop.html

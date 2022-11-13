@@ -1,0 +1,272 @@
+name: 建筑物
+category:
+  - 人文景观
+  - 位置
+content:
+  airport:
+    name: 飞机场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/airport.html
+  control tower:
+    name: 控制塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/control_tower.html
+  hangar:
+    name: 机库
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hangar.html
+  apartment:
+    name: 公寓
+  aquarium:
+    name: 水族馆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aquarium.html
+  arcade:
+    name: 室内购物中心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/arcade.html
+  bar:
+    name: 酒吧
+  izakaya:
+    name: 居酒屋
+    image: c8820a9422f5841bb5ae8253fc438ec23c28f048a0063f82dfee851dc155447f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/izakaya.html
+  tavern:
+    name: 酒馆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tavern.html
+  barn:
+    name: 谷仓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/barn.html
+  bunker:
+    name: 掩体/地堡
+  bus stop:
+    name: 公交车站
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bus_stop.html
+    alias:
+      - busstop
+  bowling alley:
+    name: 保龄球馆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bowling_alley.html
+  cafe:
+    name: 咖啡厅
+    image: 7e2c8afd7754ee04c931b51a36965672c75133cdf033d46df023fe933c6f7ef0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cafe.html
+    alias:
+      - coffee shop
+  casino:
+    name: 赌场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/casino.html
+  castle:
+    name: 城堡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/castle.html
+  floating castle:
+    name: 浮动城堡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/floating_castle.html
+  church:
+    name: 教堂
+    image: dbf7cd83261f5c8009907d32cd3ab67a08a924eee679c533254b38dbce78e0d0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/church.html
+  construction site:
+    name: 施工现场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/construction_site.html
+  convention:
+    name: 售卖现场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convention.html
+  garage:
+    name: 车库
+  gas station:
+    name: 加油站
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gas_station.html
+  gazebo:
+    name: 凉亭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gazebo.html
+  greenhouse:
+    name: 温室
+    wikiURL: https://danbooru.donmai.us/wiki_pages/greenhouse.html
+  hospital:
+    name: 医院
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hospital.html
+  house:
+    name: 房子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/house.html
+    alias:
+      - houses
+  hotel:
+    name: 酒店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hotel.html
+  hut:
+    name: 小屋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hut.html
+  industrial:
+    name: 重工业
+    wikiURL: https://danbooru.donmai.us/wiki_pages/industrial.html
+  factory:
+    name: 工厂
+    wikiURL: https://danbooru.donmai.us/wiki_pages/factory.html
+  refinery:
+    name: 精炼厂
+    wikiURL: https://danbooru.donmai.us/wiki_pages/refinery.html
+  powerplant:
+    name: 发电厂
+    wikiURL: https://danbooru.donmai.us/wiki_pages/powerplant.html
+  nuclear powerplant:
+    name: 核电厂
+  cooling tower:
+    name: 冷却塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cooling_tower.html
+  warehouse:
+    name: 仓库
+    wikiURL: https://danbooru.donmai.us/wiki_pages/warehouse.html
+  lighthouse:
+    name: 灯塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lighthouse.html
+  mall:
+    name: 购物中心
+  megastructure:
+    name: 巨型结构
+    wikiURL: https://danbooru.donmai.us/wiki_pages/megastructure.html
+  space elevator:
+    name: 轨道电梯
+    wikiURL: https://danbooru.donmai.us/wiki_pages/space_elevator.html
+    alias:
+      - orbital elevator
+  military base:
+    name: 军事基地
+  mosque:
+    name: 清真寺
+  museum:
+    name: 博物馆
+  art gallery:
+    name: 美术馆
+  nightclub:
+    name: 夜店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nightclub.html
+  observatory:
+    name: 天文台
+  onsen:
+    name: 温泉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/onsen.html
+    alias:
+      - hotspring
+      - hot spring
+      - hot springs
+  pagoda:
+    name: 宝塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pagoda.html
+  planetarium:
+    name: 天文馆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/planetarium.html
+  prison:
+    name: 监狱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/prison.html
+    alias:
+      - jail
+  restaurant:
+    name: 餐厅
+    image: 4a077cb8b2335733cb23a9e5643c37c41cf291797b6f45f28dc793fae4f14f74
+    wikiURL: https://danbooru.donmai.us/wiki_pages/restaurant.html
+  rooftop:
+    name: 屋顶
+    image: 47653c7522cc115811051ed34d5e3528d74583842a9f4af9c239c5ec1fd43a37
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rooftop.html
+    alias:
+      - roof
+  ruins:
+    name: 废墟
+    image: d0ac8230b72eb5ca708c17cce3cedeb9f3077de3e575add20e269dbd845e7911
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ruins.html
+    alias:
+      - ruin
+  school:
+    name: 学校竞赛泳衣
+    wikiURL: https://danbooru.donmai.us/wiki_pages/school.html
+  skating rink:
+    name: 滑冰场
+  shack:
+    name: 小屋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shack.html
+  shrine:
+    name: 神社
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shrine.html
+    alias:
+      - jinja
+  shop:
+    name: 商店
+    image: debd82c0e4471b658f2880bf4fbb5e3ca8198f1b250ce29054625cb50d3ef2a0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shop.html
+    alias:
+      - shops
+      - store
+  bakery:
+    name: 面包店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bakery.html
+  bookstore:
+    name: 书店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bookstore.html
+  convenience store:
+    name: 便利店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/convenience_store.html
+  flower shop:
+    name: 花店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower_shop.html
+  pharmacy:
+    name: 药店
+  salon:
+    name: 沙龙
+  sex shop:
+    restricted: true
+    name: 性用品店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sex_shop.html
+  supermarket:
+    name: 超市
+    wikiURL: https://danbooru.donmai.us/wiki_pages/supermarket.html
+  weapon shop:
+    name: 武器商店
+    wikiURL: https://danbooru.donmai.us/wiki_pages/weapon_shop.html
+  skyscraper:
+    name: 摩天大楼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/skyscraper.html
+  stadium:
+    name: 体育场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stadium.html
+  arena:
+    name: 竞技场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/arena.html
+  stilt house:
+    name: 高跷屋
+  temple:
+    name: 寺庙
+    wikiURL: https://danbooru.donmai.us/wiki_pages/temple.html
+  theater:
+    name: 剧院
+    wikiURL: https://danbooru.donmai.us/wiki_pages/theater.html
+  amphitheater:
+    name: 音乐剧院
+  movie theater:
+    name: 电影院
+    wikiURL: https://danbooru.donmai.us/wiki_pages/movie_theater.html
+    alias:
+      - cinema
+  tower:
+    name: 塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tower.html
+  bell tower:
+    name: 钟楼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bell_tower.html
+  clock tower:
+    name: 钟楼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/clock_tower.html
+  guard tower:
+    name: 守卫塔
+  minaret:
+    name: 宣礼塔
+  train station:
+    name: 火车站
+    wikiURL: https://danbooru.donmai.us/wiki_pages/train_station.html
+  treehouse:
+    name: 树屋
+  windmill:
+    name: 风车
+    wikiURL: https://danbooru.donmai.us/wiki_pages/windmill.html
+    alias:
+      - windmills
+  pool:
+    name: 水池
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pool.html
+    alias:
+      - swimming pool

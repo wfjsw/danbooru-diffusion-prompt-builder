@@ -483,15 +483,6 @@ content:
     alias:
       - hanahaki disease
       - vomiting flowers
-  field:
-    name: 田野
-    wikiURL: https://danbooru.donmai.us/wiki_pages/field.html
-  flower field:
-    name: 花田
-    wikiURL: https://danbooru.donmai.us/wiki_pages/flower_field.html
-  meadow:
-    name: 草甸
-    wikiURL: https://danbooru.donmai.us/wiki_pages/meadow.html
   flower (symbol):
     name: 花(符号)
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_(symbol).html
@@ -515,9 +506,6 @@ content:
   hanafuda:
     name: 花札
     wikiURL: https://danbooru.donmai.us/wiki_pages/hanafuda.html
-  garden:
-    name: 花园
-    wikiURL: https://danbooru.donmai.us/wiki_pages/garden.html
   gardening:
     name: 园艺
     wikiURL: https://danbooru.donmai.us/wiki_pages/gardening.html

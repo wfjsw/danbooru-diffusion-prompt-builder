@@ -1,0 +1,127 @@
+name: 室外
+category:
+  - 自然景观
+  - 位置
+content:
+  beach:
+    name: 海滩
+    wikiURL: https://danbooru.donmai.us/wiki_pages/beach.html
+  shore:
+    name: 海边
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shore.html
+    alias:
+      - coast
+      - shoreline
+  canyon:
+    name: 峡谷
+    wikiURL: https://danbooru.donmai.us/wiki_pages/canyon.html
+  cave:
+    name: 洞穴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cave.html
+    alias:
+      - caves
+  cliff:
+    name: 悬崖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cliff.html
+  desert:
+    name: 沙漠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/desert.html
+  oasis:
+    name: 绿洲
+  forest:
+    name: 森林/树
+    image: 4fd9949b27f320803b117777ffbeef778c98b0b7d259bf57cce9c4a88ab1180f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/forest.html
+    alias:
+      - woods
+  bamboo forest:
+    name: 竹林
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bamboo_forest.html
+  glacier:
+    name: 冰川
+  hill:
+    name: 山丘
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hill.html
+    alias:
+      - hills
+  island:
+    name: 岛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/island.html
+  floating island:
+    name: 浮岛
+    wikiURL: https://danbooru.donmai.us/wiki_pages/floating_island.html
+  jungle:
+    name: 丛林
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jungle.html
+  meadow:
+    name: 草甸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/meadow.html
+  mountain:
+    name: 山
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mountain.html
+    alias:
+      - mountains
+  volcano:
+    name: 火山
+    wikiURL: https://danbooru.donmai.us/wiki_pages/volcano.html
+  nature:
+    name: 大自然
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nature.html
+  park:
+    name: 公园
+    image: 45833d8a6529a29f54d8ad9f429fe97835b14b01b89ed6febb7211dd8164af12
+    wikiURL: https://danbooru.donmai.us/wiki_pages/park.html
+  playground:
+    name: 游乐场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/playground.html
+  parking lot:
+    name: 停车场
+    wikiURL: https://danbooru.donmai.us/wiki_pages/parking_lot.html
+  plain:
+    name: 平原
+  savannah:
+    name: 稀树草原
+    wikiURL: https://danbooru.donmai.us/wiki_pages/savannah.html
+  wetland:
+    name: 湿地
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wetland.html
+    alias:
+      - swamp
+      - marsh
+  water:
+    name: 水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/water.html
+  geyser:
+    name: 喷泉
+  lake:
+    name: 湖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lake.html
+  ocean:
+    name: 大海
+    image: e7e528cb9cf6fe96737560a340c38dd7fb1607d2231d55ece277700363e9ee6f
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ocean.html
+    alias:
+      - sea
+  ocean bottom:
+    name: 海底
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ocean_bottom.html
+  pond:
+    name: 池塘
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pond.html
+  river:
+    name: 河流
+    wikiURL: https://danbooru.donmai.us/wiki_pages/river.html
+  stream:
+    name: 溪流
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stream.html
+    alias:
+      - creek
+  waterfall:
+    name: 瀑布
+    wikiURL: https://danbooru.donmai.us/wiki_pages/waterfall.html
+  wasteland:
+    name: 荒地
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wasteland.html
+  flower field:
+    name: 花田
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flower_field.html

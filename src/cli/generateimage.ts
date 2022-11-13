@@ -33,7 +33,7 @@ const tagFiles = glob.sync('**/*.yaml', {
 const tagSet: Set<string> = new Set()
 
 const uc =
-    'lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry'
+    'lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, nsfw'
 const ucA = uc.split(', ')
 
 for (const file of tagFiles) {
