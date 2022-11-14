@@ -35,27 +35,25 @@ export const useEmbeddingStore = defineStore('embeddings', {
         loaded: (state) => {
             return Object.keys(state.embeddings).length > 0
         },
-        categories: (state) => {
-            const settings = useSettingsStore()
-            const filtered = new Set(
-                state.embeddings
-                    .filter((t) => settings.showRestricted || !t.restricted)
-                    .map((t) => t.category)
-                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
-            )
-            return filtered
-        },
+        // categories: (state) => {
+        //     const settings = useSettingsStore()
+        //     const filtered = new Set(
+        //         state.embeddings
+        //             .filter((t) => settings.showRestricted || !t.restricted)
+        //             .map((t) => t.category)
+        //             .sort((a, b) => a.join('/').localeCompare(b.join('/')))
+        //     )
+        //     return filtered
+        // },
         categoryHierarchy: (state) => {
             const settings = useSettingsStore()
-            const filtered = new Set(
-                state.embeddings
-                    .filter(
-                        ({ restricted }) =>
-                            settings.showRestricted || !restricted
-                    )
-                    .map(({ category }) => category)
-                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
-            )
+            const dedup: Record<string, boolean> = {}
+            const filtered = state.embeddings
+                .filter((t) => settings.showRestricted || !t.restricted)
+                .map(({ category }) => category.join('/'))
+                .filter(e=>!(dedup[e]=e in dedup))
+                .sort()
+                .map(e => e.split('/'))
             const hierarchy: CategoryHierarchy = {}
             for (const categoryList of filtered) {
                 let parent = hierarchy

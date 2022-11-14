@@ -68,7 +68,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 标签
             </template>
-            <SidebarItem :hierarchy="tagStore.categoryHierarchy"
+            <SidebarItem type="tags"
+                :hierarchy="tagStore.categoryHierarchy"
                 :category-size="tagStore.categorySize" />
         </ElSubMenu>
 
@@ -79,7 +80,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 预设
             </template>
-            <SidebarItem :hierarchy="presetStore.categoryHierarchy"
+            <SidebarItem type="presets"
+                :hierarchy="presetStore.categoryHierarchy"
                 :category-size="presetStore.categorySize" />
         </ElSubMenu>
 
@@ -90,7 +92,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 嵌入模型
             </template>
-            <SidebarItem :hierarchy="embeddingStore.categoryHierarchy"
+            <SidebarItem type="embeddings"
+                :hierarchy="embeddingStore.categoryHierarchy"
                 :category-size="embeddingStore.categorySize" />
         </ElSubMenu>
 
@@ -101,7 +104,8 @@ function select(index: string, indexPath: string[]) {
                 </ElIcon>
                 超网络模型
             </template>
-            <SidebarItem :hierarchy="hypernetworkStore.categoryHierarchy"
+            <SidebarItem type="hypernetworks"
+                :hierarchy="hypernetworkStore.categoryHierarchy"
                 :category-size="hypernetworkStore.categorySize" />
         </ElSubMenu>
     </ElMenu>

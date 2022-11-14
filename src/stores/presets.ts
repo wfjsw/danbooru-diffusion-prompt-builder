@@ -28,25 +28,23 @@ export const usePresetStore = defineStore('presets', {
         loaded: (state) => {
             return state.presets.length > 0
         },
-        categories: (state) => {
-            const settings = useSettingsStore()
-            return state.presets
-                .filter(
-                    ({ restricted }) => settings.showRestricted || !restricted
-                )
-                .map(({ name, category }) => [...category, name].join('/'))
-        },
+        // categories: (state) => {
+        //     const settings = useSettingsStore()
+        //     return state.presets
+        //         .filter(
+        //             ({ restricted }) => settings.showRestricted || !restricted
+        //         )
+        //         .map(({ name, category }) => [...category, name].join('/'))
+        // },
         categoryHierarchy: (state) => {
             const settings = useSettingsStore()
-            const filtered = new Set(
-                state.presets
-                    .filter(
-                        ({ restricted }) =>
-                            settings.showRestricted || !restricted
-                    )
-                    .map(({name, category}) => [...category, name])
-                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
-            )
+            const dedup: Record<string, boolean> = {}
+            const filtered = state.presets
+                .filter((t) => settings.showRestricted || !t.restricted)
+                .map(({ category }) => category.join('/'))
+                .filter(e=>!(dedup[e]=e in dedup))
+                .sort()
+                .map(e => e.split('/'))
             const hierarchy: CategoryHierarchy = {}
             for (const categoryList of filtered) {
                 let parent = hierarchy

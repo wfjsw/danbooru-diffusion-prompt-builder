@@ -35,24 +35,25 @@ export const useTagStore = defineStore('tags', {
         loaded: (state) => {
             return state.tags.length > 0
         },
-        categories: (state) => {
-            const settings = useSettingsStore()
-            const filtered = new Set(
-                state.tags
-                    .filter((t) => settings.showRestricted || !t.restricted)
-                    .map((t) => t.category)
-                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
-            )
-            return filtered
-        },
+        // categories: (state) => {
+        //     const settings = useSettingsStore()
+        //     const filtered = new Set(
+        //         state.tags
+        //             .filter((t) => settings.showRestricted || !t.restricted)
+        //             .map((t) => t.category)
+        //             .sort((a, b) => a.join('/').localeCompare(b.join('/')))
+        //     )
+        //     return filtered
+        // },
         categoryHierarchy: (state) => {
             const settings = useSettingsStore()
-            const filtered = new Set(
-                state.tags
+            const dedup: Record<string, boolean> = {}
+            const filtered = state.tags
                     .filter((t) => settings.showRestricted || !t.restricted)
-                    .map((t) => t.category)
-                    .sort((a, b) => a.join('/').localeCompare(b.join('/')))
-            )
+                    .map(({ category }) => category.join('/'))
+                    .filter(e=>!(dedup[e]=e in dedup))
+                    .sort()
+                    .map(e => e.split('/'))
             const hierarchy: CategoryHierarchy = {}
             for (const categoryList of filtered) {
                 let parent = hierarchy

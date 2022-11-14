@@ -23,6 +23,7 @@ import {ElSubMenu, ElMenuItem} from 'element-plus'
 
 withDefaults(
     defineProps<{
+        type: string,
         hierarchy: CategoryHierarchy,
         categorySize: Record<string, number>,
         prefix?: string
@@ -37,16 +38,17 @@ withDefaults(
     <template v-for="(child, category) in hierarchy" :key="category">
         <ElSubMenu
             v-if="child !== true"
-            :index="(category as string)">
+            :index="`${type}/${prefix}${category}`">
             <template #title>
                 {{ category }}
             </template>
             <SidebarItem
+                :type="type"
                 :hierarchy="child"
                 :prefix="`${prefix}${category}/`"
                 :category-size="categorySize" />
         </ElSubMenu>
-        <ElMenuItem v-else :index="(category as string)">
+        <ElMenuItem v-else :index="`${type}/${prefix}${category}`">
             <div class="flex">
                 <div class="category-name">{{ category }}</div>
                 <div class="category-size">

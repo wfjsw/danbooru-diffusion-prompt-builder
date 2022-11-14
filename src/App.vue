@@ -18,7 +18,7 @@
   ----------------------------------------------------------------------------->
 
 <script lang="ts" setup>
-import { type Component, provide, ref } from 'vue'
+import { type Component, provide, ref, computed } from 'vue'
 import {
     ElAside,
     ElContainer,
@@ -59,6 +59,10 @@ const mainComponent: ComponentList = {
     hypernetworks: HypernetworkShow,
     aboutme: AboutMe,
 }
+
+const category = computed(() => activeSelection.value?.length > 1 ?
+    activeSelection.value[activeSelection.value.length - 1].split('/').slice(1)
+    : null)
 
 function switchAsideExpanded(item: 'category' | 'cart' | 'reset') {
     if (asideExpanded.value === item || item === 'reset') {
@@ -109,7 +113,7 @@ provide(setSearch, setSearchImpl)
                 <KeepAlive v-if="searchTerms === null || searchTerms === ''">
                     <component
                         :is="mainComponent[activeSelection[0]]"
-                        :category="activeSelection.slice(1)" />
+                        :category="category" />
                 </KeepAlive>
                 <TagSearchShow v-else :search="searchTerms" />
             </ElMain>
