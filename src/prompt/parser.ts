@@ -109,7 +109,7 @@ function walkNewEmphasis(
                 weight = weight.div(1.1)
                 break
             case 'weight_set':
-                weight = new Decimal(node.weight)
+                weight = weight.mul(node.weight)
                 break
         }
         if (node.content.length > 1) {
