@@ -41,7 +41,7 @@ export const usePresetStore = defineStore('presets', {
             const dedup: Record<string, boolean> = {}
             const filtered = state.presets
                 .filter((t) => settings.showRestricted || !t.restricted)
-                .map(({ category }) => category.join('/'))
+                .map(({ name, category }) => [...category, name].join('/'))
                 .filter(e=>!(dedup[e]=e in dedup))
                 .sort()
                 .map(e => e.split('/'))
