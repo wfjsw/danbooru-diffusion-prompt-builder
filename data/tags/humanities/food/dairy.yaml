@@ -1,0 +1,70 @@
+name: 乳制品
+category:
+  - 人文景观
+  - 食物
+content:
+  butter:
+    name: 黄油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/butter.html
+  cheese:
+    name: 芝士
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cheese.html
+  smoked cheese:
+    name: 烟熏奶酪
+    wikiURL: https://danbooru.donmai.us/wiki_pages/smoked_cheese.html
+  swiss cheese:
+    name: 瑞士奶酪
+    wikiURL: https://danbooru.donmai.us/wiki_pages/swiss_cheese.html
+  cream:
+    name: 奶油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cream.html
+  whipped cream:
+    name: 打发的奶油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/whipped_cream.html
+  eggnog:
+    name: 蛋酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eggnog.html
+  kefir:
+    name: 开菲尔
+    description: 一种发酵牛奶饮料。
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kefir.html
+  milk:
+    name: 牛奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milk.html
+  baby bottle:
+    name: 婴儿奶瓶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/baby_bottle.html
+  condensed milk:
+    name: 炼乳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/condensed_milk.html
+  chocolate milk:
+    name: 巧克力牛奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_milk.html
+  milk bottle:
+    name: 奶瓶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milk_bottle.html
+  milk carton:
+    name: 盒装牛奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milk_carton.html
+  milk churn:
+    name: 牛奶周转桶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milk_churn.html
+    alias:
+      - milk can
+  milk mustache:
+    name: 牛奶小胡子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milk_mustache.html
+  milkshake:
+    name: 奶昔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/milkshake.html
+  strawberry milk:
+    name: 草莓牛奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_milk.html
+  yakult:
+    name: 养乐多
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yakult.html
+  yogurt:
+    name: 酸奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yogurt.html
+    alias:
+      - yoghurt

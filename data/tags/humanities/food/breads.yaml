@@ -1,0 +1,165 @@
+name: 谷制品
+category:
+  - 人文景观
+  - 食物
+content:
+  bread:
+    name: 面包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bread.html
+  baguette:
+    name: 法棍
+    wikiURL: https://danbooru.donmai.us/wiki_pages/baguette.html
+    alias:
+      - french bread
+  biscuit (bread):
+    name: 饼干（面包）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/biscuit_(bread).html
+  bread bun:
+    name: 面包包子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bread_bun.html
+  bread crust:
+    name: 面包皮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bread_crust.html
+  bread eating race:
+    name: 吃面包比赛（咬住面包跑到终点）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bread_eating_race.html
+    alias:
+      - bread eating contest
+  japari bun:
+    name: 加帕里面包（兽娘动物园）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/japari_bun.html
+  melon bread:
+    name: 菠萝包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/melon_bread.html
+    alias:
+      - melonpan
+      - meronpan
+  toast:
+    name: 吐司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/toast.html
+  cereal:
+    name: 谷物早餐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cereal.html
+  cracker:
+    name: 饼干
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cracker.html
+    alias:
+      - crackers
+  arare:
+    name: 粗米饼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/arare.html
+  senbei:
+    name: 仙贝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/senbei.html
+    alias:
+      - rice cracker
+      - senbei (food)
+  croissant:
+    name: 羊角面包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/croissant.html
+  empanada:
+    name: 恩巴纳达
+    wikiURL: https://danbooru.donmai.us/wiki_pages/empanada.html
+  noodles:
+    name: 面条
+    wikiURL: https://danbooru.donmai.us/wiki_pages/noodles.html
+    alias:
+      - noodle
+  pasta:
+    name: 意大利面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pasta.html
+  lasagne:
+    name: 千层面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lasagne.html
+    alias:
+      - lasagna
+  spaghetti:
+    name: 意大利面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spaghetti.html
+  black spaghetti:
+    name: 黑色意大利面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_spaghetti.html
+  spaghetti and meatballs:
+    name: 肉丸意大利面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spaghetti_and_meatballs.html
+  ramen:
+    name: 拉面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ramen.html
+  cup ramen:
+    name: 杯面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cup_ramen.html
+    alias:
+      - cup noodles
+  jirou (ramen):
+    name: 堆高的豚骨拉面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jirou_(ramen).html
+  soba:
+    name: 荞麦
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soba.html
+  yakisoba:
+    name: 炒面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yakisoba.html
+  italian (niigata):
+    name: 意大利面（新潟）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/italian_(niigata).html
+  yakisobapan:
+    name: 炒面面包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yakisobapan.html
+  soumen:
+    name: 素麺（面条 食物）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soumen.html
+  udon:
+    name: 乌冬面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/udon.html
+  kitsune udon:
+    name: 狐狸乌冬面
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kitsune_udon.html
+  pancake:
+    name: 煎饼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pancake.html
+    alias:
+      - pancakes
+  pancake stack:
+    name: 煎饼堆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pancake_stack.html
+    alias:
+      - stack of pancakes
+  rice:
+    name: 米饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rice.html
+  fried rice:
+    name: 炒饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fried_rice.html
+  omurice:
+    name: 蛋包饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/omurice.html
+    alias:
+      - rice omelet
+  onigiri:
+    name: 饭团
+    wikiURL: https://danbooru.donmai.us/wiki_pages/onigiri.html
+    alias:
+      - riceball
+      - rice ball
+  rice on face:
+    name: 脸上有米饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rice_on_face.html
+    alias:
+      - rice on cheek
+  rice porridge:
+    name: 稀饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rice_porridge.html
+  nanakusa-no-sekku:
+    name: 喝七草粥的日子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nanakusa-no-sekku.html
+  risotto:
+    name: 烩饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/risotto.html
+  scone:
+    name: 烤饼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scone.html
+  waffle:
+    name: 华夫饼干
+    wikiURL: https://danbooru.donmai.us/wiki_pages/waffle.html
+    alias:
+      - waffles

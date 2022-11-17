@@ -142,10 +142,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/whip_marks.html
     alias:
       - whipmarks
-  amulet:
-    name: 护身符
-    image: 56278dbcf0786a22f6890ce1c1c6db4d8905a47ad1f078ee7bde9c94d489d5dd
-    wikiURL: https://danbooru.donmai.us/wiki_pages/amulet.html
   badge:
     name: 徽章
     image: 210812e1b829c3f3dc878f3a6026294afc65e82b888ef84a7b68dbd2a9b33668
@@ -217,13 +213,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/gloves.html
     alias:
       - glove
-  necktie:
-    alias:
-      - tie
-      - neck tie
-    name: 领带
-    image: f15fccdc89ef346d81816cb5a7651f04d1dfa753e3564306c74dfcb257466b29
-    wikiURL: https://danbooru.donmai.us/wiki_pages/necktie.html
   wrist cuffs:
     name: 腕饰
     image: 3aaa8940c5da773c8b1bf7d04b61e1e9b4ce2b21b8c1ca177ba5477e0f6cb878

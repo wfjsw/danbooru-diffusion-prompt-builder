@@ -1,8 +1,106 @@
-name: 发型
+name: 头发
 category:
   - 人物
-  - 头发
 content:
+  streaked hair:
+    alias:
+      - highlights
+    name: 条染
+    wikiURL: https://danbooru.donmai.us/wiki_pages/streaked_hair.html
+    image: 27a948cbda5c422b20446ab601650079444b4704d753fb506a83d6787d59872a
+  multicolored hair:
+    alias:
+      - multicolor hair
+    name: 多彩头发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/multicolored_hair.html
+    image: 898cad5a96a3c1abb3ad34a5c092666c95b73778552ae766f0fdfa2322c70009
+  colored inner hair:
+    name: 内侧染色
+    wikiURL: https://danbooru.donmai.us/wiki_pages/colored_inner_hair.html
+    image: f16d963a002435e3fbd425b71748a777437301eff19cf85333c7e7a8c5525358
+  blonde hair:
+    alias:
+      - yellow hair
+      - blond
+      - blond hair
+      - blonde
+      - gold hair
+    name: 金发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blonde_hair.html
+    image: 4f922c0a1d434d5057425c77a059526e6f804c489d91ca9ffba0a9ec1b448832
+  silver hair:
+    name: 银发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/silver_hair.html
+    image: 52d5a30e2372cd98d7a7f715889f9f5bb0e3fadc2a7bcf5402cb41eb62de14c6
+  grey hair:
+    alias:
+      - gray hair
+    name: 灰发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grey_hair.html
+    image: 07996a3154c08ef79b47bd7bb2430195dc00bb273f87645a73810d84be7085b4
+  white hair:
+    name: 白发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/white_hair.html
+    image: 784ca4afa8a8d1763c51275164ea54ceae7c015136297387e0965fbf2c047b3a
+  brown hair:
+    alias:
+      - brunette
+    name: 茶发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/brown_hair.html
+    image: 990fc4dc99647e91a91b95a784bc90fee33d6ca661893a0b97e764590e44686a
+  light brown hair:
+    alias:
+      - dirty blonde
+    name: 浅褐发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/light_brown_hair.html
+    image: 42be22bffa5afce38203e3365471029497698ed7d28b793fc26453456c528888
+  black hair:
+    alias:
+      - dark hair
+    name: 黑发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_hair.html
+    image: 8af90db13d2500043a7d18600e0d7c7cd13f4880e141d855213c62a2277d4e17
+  purple hair:
+    alias:
+      - lavender hair
+    name: 紫发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/purple_hair.html
+    image: 3d331b9b8345492ea2b2883716ad92315c1a411af6a8ab78d413a735feda95ec
+  red hair:
+    alias:
+      - redhead
+    name: 红发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_hair.html
+    image: f1ccc74bd664d4bd00f022990584224a294bf902bd49d7cbb2a464c60a1161b9
+  blue hair:
+    name: 蓝发/水色发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hair.html
+    image: 1cb2a05cbf82a7ad637781af0a4fa11fe1c30a48872c66f7723ee9d785b67866
+  dark blue hair:
+    name: 深蓝发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dark_blue_hair.html
+    image: ab8058377eed2597e9caae7b4f62d60b2b77b6c7e5cbe064f42d42f7fe59109f
+  light blue hair:
+    name: 浅蓝发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/light_blue_hair.html
+    image: 686038dc38cd29eb0c189f93425d3711d82559828d2c8b91d088a844377002ce
+  green hair:
+    name: 绿发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_hair.html
+    image: 39b66bf6acefadf5254b15f33e477344d5a884252e0767a7a2e2fe43bb49e191
+  pink hair:
+    name: 粉发
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pink_hair.html
+    image: 3d8ef82bc9009f6be069d946a9365d10f2d33663125d8d4a5409f04ce9cf12eb
+  gradient hair:
+    name: 渐变发色
+    wikiUrl: https://danbooru.donmai.us/wiki_pages/gradient_hair.html
+    image: 45ef149a5902b400921776a55f28575a0c72b46c9b6e549ea45cec84271a52ae
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gradient_hair.html
+  rainbow hair:
+    name: 彩虹发
+    image: 237060063cc1c26b7fce59bad889068eb9bad23b3dbdc8c0808eb2c46c2f8b01
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rainbow_hair.html
   ahoge:
     name: 呆毛
     wikiURL: https://danbooru.donmai.us/wiki_pages/ahoge.html

@@ -16,7 +16,8 @@
         "generateimage": "tsx ./src/cli/generateimage.ts",
         "importgeneratedimage": "tsx ./src/cli/importgeneratedimage.ts",
         "findwiki": "tsx ./src/cli/findwiki.ts",
-        "importaliases": "tsx ./src/cli/importaliases.ts"
+        "importaliases": "tsx ./src/cli/importaliases.ts",
+        "filltranslation": "tsx ./src/cli/filltranslation.ts"
     },
     "dependencies": {
         "@element-plus/icons-vue": "^2.0.10",

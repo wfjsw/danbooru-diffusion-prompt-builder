@@ -105,31 +105,6 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/cigarette.html
     alias:
       - cigarettes
-  cake:
-    name: 蛋糕
-    image: 3593d44d8b3b5b57cf8fb4de93284e88deb1cc92471cfadeeb73bcbd1df3cb4d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/cake.html
-  taiyaki:
-    name: 鲷鱼烧
-    image: 08ee85183e62834686b734db6d9ded58539ec2aa3d8fe9fb629873445664ee4d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/taiyaki.html
-  wine:
-    name: 葡萄酒
-    image: 517ea6e379d459dcb46dd5fe467db2f27b23d1c08f34b17cf709e3f71a380f6d
-    wikiURL: https://danbooru.donmai.us/wiki_pages/wine.html
-  cream:
-    name: 奶油
-    wikiURL: https://danbooru.donmai.us/wiki_pages/cream.html
-  ice cream:
-    name: 冰激凌
-    image: dff6b5c7b94104fea4ef6dd17986e87d39b271ad4ecb346b7c51673c04bb7ff9
-    wikiURL: https://danbooru.donmai.us/wiki_pages/ice_cream.html
-    alias:
-      - icecream
-  sake:
-    name: 日本酒
-    image: 8d065ab516fc9cf7880dcf60b0239319a74f3d70b5c1c89f7a66bd3083c02fc8
-    wikiURL: https://danbooru.donmai.us/wiki_pages/sake.html
   guitar:
     name: 吉他
     image: a88a2e05788166bf79c419b1cae559d643b65556ac0e827dc8ec5efe072b0a13
@@ -143,9 +118,6 @@ content:
       - acoustic piano
       - analog piano
       - electric piano
-  obento:
-    name: 便当
-    image: b8f5ca877762149bba69342184a5352706db55e34d9de5c472dfb583aa49a032
   chair:
     name: 椅子
     image: e94b12b66052f7b3b48f87c9eafda9664d056364ee5461fbbe7dc97b96f2affc

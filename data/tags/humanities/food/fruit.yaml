@@ -1,0 +1,233 @@
+name: 水果
+category:
+  - 人文景观
+  - 食物
+content:
+  akebia fruit:
+    name: 阿科比
+    wikiURL: https://danbooru.donmai.us/wiki_pages/akebia_fruit.html
+  apple:
+    name: 苹果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/apple.html
+    alias:
+      - apples
+  apple bunny:
+    name: 苹果兔（苹果瓣一侧的果皮削去，像兔耳）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/apple_bunny.html
+  apple core:
+    name: 苹果核
+    wikiURL: https://danbooru.donmai.us/wiki_pages/apple_core.html
+  apple peel:
+    name: 长串苹果皮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/apple_peel.html
+  bitten apple:
+    name: 咬苹果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bitten_apple.html
+  golden apple:
+    name: 金苹果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/golden_apple.html
+  green apple:
+    name: 青苹果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_apple.html
+  red apple:
+    name: 红苹果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_apple.html
+  avocado:
+    name: 牛油果/鳄梨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/avocado.html
+  banana:
+    name: 香蕉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/banana.html
+    alias:
+      - bananas
+  banana boat:
+    name: 充气香蕉船
+    wikiURL: https://danbooru.donmai.us/wiki_pages/banana_boat.html
+  banana peel:
+    name: 香蕉皮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/banana_peel.html
+  banana popsicle:
+    name: 香蕉冰棒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/banana_popsicle.html
+  banana slice:
+    name: 香蕉片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/banana_slice.html
+  chocolate banana:
+    name: 巧克力香蕉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_banana.html
+    alias:
+      - chocobanana
+      - choco banana
+  gel banana:
+    name: 绿色果冻香蕉（命运石之门）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gel_banana.html
+  on banana:
+    name: 在巨型香蕉上
+    wikiURL: https://danbooru.donmai.us/wiki_pages/on_banana.html
+  berry:
+    name: 浆果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/berry.html
+    alias:
+      - berries
+  blackberry:
+    name: 黑莓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blackberry.html
+  blueberry:
+    name: 蓝莓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blueberry.html
+    alias:
+      - blueberries
+      - blue berry
+  raspberry:
+    name: 树莓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/raspberry.html
+    alias:
+      - raspberries
+  strawberry:
+    name: 草莓
+    wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry.html
+    alias:
+      - strawberries
+  cacao fruit:
+    name: 可可果
+    alias:
+      - cocoa fruit
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cacao_fruit.html
+  cherry:
+    name: 樱桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cherry.html
+    alias:
+      - cherries
+  dragon fruit:
+    name: 火龙果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dragon_fruit.html
+  fig:
+    name: 无花果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fig.html
+  fruit bowl:
+    name: 果盘
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fruit_bowl.html
+  fruit cup:
+    name: 水果杯
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fruit_cup.html
+  gooseberry:
+    name: 猕猴桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gooseberry.html
+  grapefruit:
+    name: 西柚
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grapefruit.html
+  grapes:
+    name: 葡萄
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grapes.html
+    alias:
+      - grape
+  currant:
+    name: 小葡萄干
+    wikiURL: https://danbooru.donmai.us/wiki_pages/currant.html
+  grape stomping:
+    name: 脚踩葡萄汁
+    wikiURL: https://danbooru.donmai.us/wiki_pages/grape_stomping.html
+  kiwi:
+    name: 猕猴桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kiwi.html
+  kiwi slice:
+    name: 猕猴桃切片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kiwi_slice.html
+  lemon:
+    name: 柠檬
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lemon.html
+    alias:
+      - lemons
+  lemon slice:
+    name: 柠檬片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lemon_slice.html
+  lime:
+    name: 青柠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lime.html
+  lime slice:
+    name: 青柠片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lime_slice.html
+  lychee:
+    name: 荔枝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lychee.html
+  mango:
+    name: 芒果
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mango.html
+  mangosteen:
+    name: 山竹
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mangosteen.html
+  melon:
+    name: 瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/melon.html
+  cantaloupe:
+    name: 哈密瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cantaloupe.html
+  honeydew:
+    name: 蜜瓜
+  muskmelon:
+    name: 甜瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/muskmelon.html
+  watermelon:
+    name: 西瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/watermelon.html
+    alias:
+      - watermelons
+  olive:
+    name: 橄榄
+    wikiURL: https://danbooru.donmai.us/wiki_pages/olive.html
+  orange:
+    name: 橙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange.html
+  mandarin orange:
+    name: 橘子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mandarin_orange.html
+    alias:
+      - tangerine
+      - clementine
+      - mikan
+      - mandarin
+  orangette:
+    name: 巧克力橙片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orangette.html
+  orange slice:
+    name: 一片橙子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_slice.html
+  papaya:
+    name: 番木瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/papaya.html
+  peach:
+    name: 桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/peach.html
+    alias:
+      - peaches
+  pear:
+    name: 梨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pear.html
+  nashi pear:
+    name: 黄金梨
+  persimmon:
+    name: 柿子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/persimmon.html
+  pineapple:
+    name: 菠萝
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pineapple.html
+  plum:
+    name: 李子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/plum.html
+  pomegranate:
+    name: 石榴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pomegranate.html
+  rambutan:
+    name: 红毛丹
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rambutan.html
+  starfruit:
+    name: 杨桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/starfruit.html
+    alias:
+      - carambola
+  umeboshi:
+    name: 梅干
+    wikiURL: https://danbooru.donmai.us/wiki_pages/umeboshi.html
+  yuzu (fruit):
+    name: 柚子（水果）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yuzu_(fruit).html

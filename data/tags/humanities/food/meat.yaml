@@ -1,0 +1,150 @@
+name: 肉类与海鲜
+category:
+  - 人文景观
+  - 食物
+content:
+  bacon:
+    name: 培根
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bacon.html
+  boned meat:
+    name: 圆柱形带骨肉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/boned_meat.html
+    alias:
+      - manga meat
+  chicken:
+    name: 鸡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chicken.html
+    alias:
+      - chickens
+  chicken leg:
+    name: 鸡腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chicken_leg.html
+  chicken nuggets:
+    name: 鸡块
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chicken_nuggets.html
+  fried chicken:
+    name: 炸鸡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fried_chicken.html
+  yakitori:
+    name: 烤鸡肉串
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yakitori.html
+  crab:
+    name: 螃蟹
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crab.html
+    alias:
+      - crabs
+  egg:
+    name: 蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/egg.html
+    alias:
+      - eggs
+  broken egg:
+    name: 破碎的蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/broken_egg.html
+  egg laying:
+    name: 产卵
+    wikiURL: https://danbooru.donmai.us/wiki_pages/egg_laying.html
+    alias:
+      - oviposition
+      - egglaying
+  egg yolk:
+    name: 蛋黄
+    wikiURL: https://danbooru.donmai.us/wiki_pages/egg_yolk.html
+    alias:
+      - yolk
+  eggshell:
+    name: 蛋壳
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eggshell.html
+  eggshell hat:
+    name: 蛋壳帽子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eggshell_hat.html
+  fried egg:
+    name: 煎鸡蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fried_egg.html
+    alias:
+      - sunny side up egg
+  century egg (food):
+    name: 皮蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/century_egg_(food).html
+  hardboiled egg:
+    name: 水煮蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hardboiled_egg.html
+    alias:
+      - hard-boiled egg
+  scrambled egg:
+    name: 炒鸡蛋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/scrambled_egg.html
+  roe:
+    name: 鱼子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/roe.html
+  caviar:
+    name: 鱼子酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/caviar.html
+  ikura:
+    name: 红鱼子酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ikura.html
+  fish:
+    name: 鱼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fish.html
+  fish bone:
+    name: 鱼骨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fish_bone.html
+    alias:
+      - fishbone
+      - fish bones
+      - fishbones
+  sashimi:
+    name: 生鱼片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sashimi.html
+  katsuo no tataki:
+    name: 炙烤鲣鱼片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/katsuo_no_tataki.html
+  gyuudon:
+    name: 牛丼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gyuudon.html
+  hamburger steak:
+    name: 汉堡牛排
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hamburger_steak.html
+  kamaboko:
+    name: 鱼糕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kamaboko.html
+  kebab:
+    name: 烤肉串
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kebab.html
+  lobster:
+    name: 龙虾
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lobster.html
+  meatball:
+    name: 肉丸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/meatball.html
+  pork:
+    name: 猪肉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pork.html
+  ham:
+    name: 火腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ham.html
+  sausage:
+    name: 香肠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sausage.html
+  shrimp:
+    name: 虾类
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shrimp.html
+    alias:
+      - prawn
+  steak:
+    name: 牛排
+    wikiURL: https://danbooru.donmai.us/wiki_pages/steak.html
+  tako-san wiener:
+    name: 章鱼状的香肠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tako-san_wiener.html
+    alias:
+      - octopus wiener
+  kani-san wiener:
+    name: 蟹状的香肠
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kani-san_wiener.html
+  turkey:
+    name: 火鸡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/turkey.html
+  turkey leg:
+    name: 火鸡腿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/turkey_leg.html

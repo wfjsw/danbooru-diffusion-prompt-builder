@@ -1,0 +1,264 @@
+name: 主食
+category:
+  - 人文景观
+  - 食物
+content:
+  canned food:
+    name: 罐头食品
+    wikiURL: https://danbooru.donmai.us/wiki_pages/canned_food.html
+  cooking oil:
+    name: 食用油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cooking_oil.html
+  crumbs:
+    name: 面包屑
+    wikiURL: https://danbooru.donmai.us/wiki_pages/crumbs.html
+  curry:
+    name: 咖喱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/curry.html
+  curry rice:
+    name: 咖喱饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/curry_rice.html
+  dumpling:
+    name: 饺子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dumpling.html
+    alias:
+      - dumplings
+  jiaozi:
+    name: 饺子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jiaozi.html
+    alias:
+      - gyoza
+      - gyouza
+  shumai:
+    name: 烧卖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shumai.html
+  tang yuan:
+    name: 汤圆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tang_yuan.html
+  croquette:
+    name: 炸丸
+    wikiURL: https://danbooru.donmai.us/wiki_pages/croquette.html
+  fish and chips:
+    name: 炸鱼薯条
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fish_and_chips.html
+  flour:
+    name: 面粉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/flour.html
+  fondue:
+    name: 芝士火锅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fondue.html
+  french fries:
+    name: 炸薯条
+    wikiURL: https://danbooru.donmai.us/wiki_pages/french_fries.html
+  french toast:
+    name: 法式吐司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/french_toast.html
+  burger:
+    name: 汉堡包
+    wikiURL: https://danbooru.donmai.us/wiki_pages/burger.html
+    alias:
+      - hamburger
+      - cheeseburger
+  megamac:
+    name: 超级汉堡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/megamac.html
+  hot dog:
+    name: 热狗
+    wikiURL: https://danbooru.donmai.us/wiki_pages/hot_dog.html
+    alias:
+      - hotdog
+  corn dog:
+    name: 玉米热狗
+    wikiURL: https://danbooru.donmai.us/wiki_pages/corn_dog.html
+    alias:
+      - corndog
+  katsu:
+    name: 日式炸鸡排
+  katsudon:
+    name: 日式猪排饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/katsudon.html
+  konnyaku:
+    name: 蒟蒻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/konnyaku.html
+  meal:
+    name: 一顿饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/meal.html
+  breakfast:
+    name: 早餐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/breakfast.html
+  dim sum:
+    name: 点心
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dim_sum.html
+  dinner:
+    name: 晚餐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dinner.html
+  feast:
+    name: 盛宴
+    wikiURL: https://danbooru.donmai.us/wiki_pages/feast.html
+  lunch:
+    name: 午饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lunch.html
+  bento:
+    name: 便当
+    image: b8f5ca877762149bba69342184a5352706db55e34d9de5c472dfb583aa49a032
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bento.html
+    alias:
+      - obentou
+      - bento-box
+      - obento
+      - bentou
+      - bento box
+  okosama lunch:
+    name: okosama 儿童餐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/okosama_lunch.html
+  party:
+    name: 派对
+    wikiURL: https://danbooru.donmai.us/wiki_pages/party.html
+  birthday party:
+    name: 生日聚会
+    wikiURL: https://danbooru.donmai.us/wiki_pages/birthday_party.html
+  tea party:
+    name: 茶会
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tea_party.html
+  baozi:
+    name: 包子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/baozi.html
+    alias:
+      - pork bun
+      - nikuman
+      - porkbun
+      - meat bun
+      - meatbun
+      - manjuu
+  nabe:
+    name: 火锅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nabe.html
+  oden:
+    name: 关东煮
+    wikiURL: https://danbooru.donmai.us/wiki_pages/oden.html
+  sukiyaki:
+    name: 寿喜烧
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sukiyaki.html
+  narutomaki:
+    name: 鸣门卷
+    wikiURL: https://danbooru.donmai.us/wiki_pages/narutomaki.html
+    alias:
+      - naruto (food)
+  okonomiyaki:
+    name: 什锦煎饼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/okonomiyaki.html
+  omelet:
+    name: 煎蛋卷
+    wikiURL: https://danbooru.donmai.us/wiki_pages/omelet.html
+    alias:
+      - omelette
+  pizza:
+    name: 披萨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pizza.html
+  holding pizza:
+    name: 拿着披萨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/holding_pizza.html
+  pizza box:
+    name: 披萨盒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pizza_box.html
+  pizza delivery:
+    name: 披萨递送
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pizza_delivery.html
+  pizza slice:
+    name: 切下的一块比萨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pizza_slice.html
+    alias:
+      - slice of pizza
+  ribs (food):
+    name: 排骨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ribs_(food).html
+  salad:
+    name: 沙拉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/salad.html
+  salt:
+    name: 盐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/salt.html
+  sandwich:
+    name: 三明治
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sandwich.html
+    alias:
+      - sandwiches
+  soup:
+    name: 汤
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soup.html
+  miso soup:
+    name: 味噌
+    wikiURL: https://danbooru.donmai.us/wiki_pages/miso_soup.html
+  zouni soup:
+    name: 日式烩年糕
+    wikiURL: https://danbooru.donmai.us/wiki_pages/zouni_soup.html
+    alias:
+      - zoni soup
+  sushi:
+    name: 寿司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sushi.html
+  conveyor belt sushi:
+    name: 回转寿司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/conveyor_belt_sushi.html
+  gunkanmaki:
+    name: 军舰卷
+    wikiURL: https://danbooru.donmai.us/wiki_pages/gunkanmaki.html
+  inarizushi:
+    name: 稻荷寿司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/inarizushi.html
+  makizushi:
+    name: 寿司巻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/makizushi.html
+  nigirizushi:
+    name: 手握寿司
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nigirizushi.html
+  sushi geta:
+    name: 寿司板
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sushi_geta.html
+  taco:
+    name: 炸玉米饼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/taco.html
+  takoyaki:
+    name: 章鱼烧
+    wikiURL: https://danbooru.donmai.us/wiki_pages/takoyaki.html
+  takuan:
+    name: 腌萝卜片
+    wikiURL: https://danbooru.donmai.us/wiki_pages/takuan.html
+  tamagokake gohan:
+    name: 生蛋盖饭
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tamagokake_gohan.html
+  tempura:
+    name: 天妇罗
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tempura.html
+  shrimp tempura:
+    name: 虾天妇罗
+    wikiURL: https://danbooru.donmai.us/wiki_pages/shrimp_tempura.html
+  tofu:
+    name: 豆腐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tofu.html
+  aburaage:
+    name: 油炸豆腐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/aburaage.html
+    alias:
+      - aburage
+  mapo tofu:
+    name: 麻婆豆腐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mapo_tofu.html
+    alias:
+      - mapo doufu
+      - maabou doufu
+      - mapotofu
+  stinky tofu:
+    name: 臭豆腐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/stinky_tofu.html
+  twice cooked pork:
+    name: 回锅肉
+    wikiURL: https://danbooru.donmai.us/wiki_pages/twice_cooked_pork.html
+  unadon (food):
+    name: 鳗丼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/unadon_(food).html
+  zongzi:
+    name: 粽子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/zongzi.html
+    alias:
+      - chimaki

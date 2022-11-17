@@ -1,0 +1,66 @@
+name: 调味料
+category:
+  - 人文景观
+  - 食物
+content:
+  furikake:
+    name: 拌饭素
+    wikiURL: https://danbooru.donmai.us/wiki_pages/furikake.html
+  honey:
+    name: 蜂蜜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/honey.html
+  jam:
+    name: 果酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jam.html
+  marmalade:
+    name: 果酱/橘子酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/marmalade.html
+  ketchup:
+    name: 番茄酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ketchup.html
+  mayonnaise:
+    name: 蛋黄酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mayonnaise.html
+  mustard:
+    name: 芥末
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mustard.html
+  peanut butter:
+    name: 花生酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/peanut_butter.html
+  pepper shaker:
+    name: 胡椒
+    alias:
+      - black pepper
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pepper_shaker.html
+  salt shaker:
+    name: 撒盐瓶子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/salt_shaker.html
+  sauce:
+    name: 酱汁
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sauce.html
+  hot sauce:
+    name: 辣酱
+  soy sauce:
+    name: 酱油
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soy_sauce.html
+  sugar (food):
+    name: 粉状糖（食物）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sugar_(food).html
+  sugar cube:
+    name: 方糖
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sugar_cube.html
+    alias:
+      - sugar cubes
+      - sugar cube (object)
+  wasabi:
+    name: 芥末
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wasabi.html
+  syrup:
+    name: 果酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/syrup.html
+  chocolate syrup:
+    name: 巧克力酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_syrup.html
+  strawberry syrup:
+    name: 草莓酱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_syrup.html

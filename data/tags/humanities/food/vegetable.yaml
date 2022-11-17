@@ -1,0 +1,191 @@
+name: 蔬菜与香料
+category:
+  - 人文景观
+  - 食物
+content:
+  asparagus:
+    name: 芦笋
+    wikiURL: https://danbooru.donmai.us/wiki_pages/asparagus.html
+  beans:
+    name: 豆子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/beans.html
+    alias:
+      - bean
+  red bean paste:
+    name: 红豆馅
+    wikiURL: https://danbooru.donmai.us/wiki_pages/red_bean_paste.html
+    alias:
+      - bean paste
+  nattou:
+    name: 纳豆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/nattou.html
+    alias:
+      - natto
+  bitter melon:
+    name: 苦瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bitter_melon.html
+  broccoli:
+    name: 西兰花
+    wikiURL: https://danbooru.donmai.us/wiki_pages/broccoli.html
+  cabbage:
+    name: 卷心菜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cabbage.html
+  bok choy:
+    name: 白菜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bok_choy.html
+  carrot:
+    name: 胡萝卜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/carrot.html
+    alias:
+      - carrots
+  cauliflower:
+    name: 菜花
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cauliflower.html
+  coconut:
+    name: 椰子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coconut.html
+    alias:
+      - coconuts
+  corn:
+    name: 玉米
+    wikiURL: https://danbooru.donmai.us/wiki_pages/corn.html
+    alias:
+      - maize
+  cucumber:
+    name: 黄瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cucumber.html
+    alias:
+      - cucumbers
+  pickle:
+    name: 泡菜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pickle.html
+  eggplant:
+    name: 茄子
+    wikiURL: https://danbooru.donmai.us/wiki_pages/eggplant.html
+    alias:
+      - aubergine
+  garlic:
+    name: 大蒜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/garlic.html
+  kimchi:
+    name: 韩国泡菜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/kimchi.html
+  lettuce:
+    name: 生菜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lettuce.html
+  mint:
+    name: 薄荷
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mint.html
+  mushroom:
+    name: 蘑菇
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mushroom.html
+    alias:
+      - mushrooms
+  onion:
+    name: 洋葱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/onion.html
+  onion rings:
+    name: 洋葱圈
+    wikiURL: https://danbooru.donmai.us/wiki_pages/onion_rings.html
+    alias:
+      - onion ring
+  spring onion:
+    name: 大葱
+    wikiURL: https://danbooru.donmai.us/wiki_pages/spring_onion.html
+    alias:
+      - scallion
+      - negi
+      - leek
+  parsley:
+    name: 欧芹
+    wikiURL: https://danbooru.donmai.us/wiki_pages/parsley.html
+  almond:
+    name: 扁桃
+    wikiURL: https://danbooru.donmai.us/wiki_pages/almond.html
+  chestnut:
+    name: 板栗
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chestnut.html
+    alias:
+      - chestnuts
+  peanut:
+    name: 花生
+    wikiURL: https://danbooru.donmai.us/wiki_pages/peanut.html
+  pepper:
+    name: 胡椒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pepper.html
+  bell pepper:
+    name: 灯笼椒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bell_pepper.html
+  green pepper:
+    name: 青椒
+  red pepper:
+    name: 红椒
+  yellow pepper:
+    name: 黄椒
+  chili pepper:
+    name: 辣椒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chili_pepper.html
+    alias:
+      - chili
+  habanero pepper:
+    name: 哈瓦那辣椒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/habanero_pepper.html
+    alias:
+      - habanero
+  jalapeno pepper:
+    name: 墨西哥辣椒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jalapeno_pepper.html
+    alias:
+      - jalapeno (chili)
+  potato:
+    name: 土豆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/potato.html
+    alias:
+      - potatoes
+  radish:
+    name: 萝卜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/radish.html
+  daikon:
+    name: 萝卜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/daikon.html
+  seaweed:
+    name: 海藻
+    wikiURL: https://danbooru.donmai.us/wiki_pages/seaweed.html
+  hijiki:
+    name: 羊栖菜
+  nori:
+    name: 海苔
+  squash:
+    name: 南瓜属
+    wikiURL: https://danbooru.donmai.us/wiki_pages/squash.html
+  pumpkin:
+    name: 南瓜
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pumpkin.html
+    alias:
+      - pumpkins
+  jack-o'-lantern:
+    name: 南瓜灯
+    wikiURL: https://danbooru.donmai.us/wiki_pages/jack-o'-lantern.html
+  sweet potato:
+    name: 红薯
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sweet_potato.html
+    alias:
+      - yams
+      - yam
+  yakiimo:
+    name: 烤白薯
+    wikiURL: https://danbooru.donmai.us/wiki_pages/yakiimo.html
+  tomato:
+    name: 番茄
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tomato.html
+    alias:
+      - tomatoes
+  cherry tomato:
+    name: 圣女果（小西红柿
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cherry_tomato.html
+  turnip:
+    name: 芜菁
+    wikiURL: https://danbooru.donmai.us/wiki_pages/turnip.html
+  warabi:
+    name: 蕨
+    wikiURL: https://danbooru.donmai.us/wiki_pages/warabi.html

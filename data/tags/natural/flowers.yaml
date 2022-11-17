@@ -87,7 +87,7 @@ content:
   chamomile:
     name: 西洋甘菊
   chinese lantern:
-    name: 酸浆
+    name: 灯笼草
     wikiURL: https://danbooru.donmai.us/wiki_pages/chinese_lantern.html
   chrysanthemum:
     name: 菊属
@@ -509,9 +509,6 @@ content:
   gardening:
     name: 园艺
     wikiURL: https://danbooru.donmai.us/wiki_pages/gardening.html
-  lei:
-    name: 夏威夷花环
-    wikiURL: https://danbooru.donmai.us/wiki_pages/lei.html
   on flower:
     name: 在花上
     wikiURL: https://danbooru.donmai.us/wiki_pages/on_flower.html

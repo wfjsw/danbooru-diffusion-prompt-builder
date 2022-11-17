@@ -1,0 +1,179 @@
+name: 饮料
+category:
+  - 人文景观
+  - 食物
+content:
+  alcohol:
+    name: 酒精
+    wikiURL: https://danbooru.donmai.us/wiki_pages/alcohol.html
+  beer:
+    name: 啤酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/beer.html
+  non-alcoholic beer:
+    name: 非酒精啤酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/non-alcoholic_beer.html
+  guinness (beer):
+    name: 健力士黑啤酒(啤酒)
+    wikiURL: https://danbooru.donmai.us/wiki_pages/guinness_(beer).html
+  champagne:
+    name: 香槟酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/champagne.html
+  cocktail:
+    name: 鸡尾酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cocktail.html
+  caesar (drink):
+    name: 凯撒鸡尾酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/caesar_(drink).html
+  cocktail umbrella:
+    name: 鸡尾酒伞
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cocktail_umbrella.html
+    alias:
+      - drink umbrella
+  margarita:
+    name: 玛格丽塔
+    wikiURL: https://danbooru.donmai.us/wiki_pages/margarita.html
+  martini:
+    name: 马提尼酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/martini.html
+  liquor:
+    name: 酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/liquor.html
+  sake:
+    name: 日本酒
+    image: 8d065ab516fc9cf7880dcf60b0239319a74f3d70b5c1c89f7a66bd3083c02fc8
+    wikiURL: https://danbooru.donmai.us/wiki_pages/sake.html
+  tequila:
+    name: 龙舌兰酒
+  vodka:
+    name: 伏特加
+    wikiURL: https://danbooru.donmai.us/wiki_pages/vodka.html
+  whiskey:
+    name: 威士忌酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/whiskey.html
+  wine:
+    name: 葡萄酒
+    image: 517ea6e379d459dcb46dd5fe467db2f27b23d1c08f34b17cf709e3f71a380f6d
+    wikiURL: https://danbooru.donmai.us/wiki_pages/wine.html
+  coffee:
+    name: 咖啡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coffee.html
+  cafe au lait:
+    name: 咖啡加牛奶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/cafe_au_lait.html
+  canned coffee:
+    name: 罐装咖啡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/canned_coffee.html
+  coffee beans:
+    name: 咖啡豆
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coffee_beans.html
+  dandelion coffee:
+    name: 蒲公英咖啡
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dandelion_coffee.html
+  georgia max coffee:
+    name: Georgia MAX Coffee
+    wikiURL: https://danbooru.donmai.us/wiki_pages/georgia_max_coffee.html
+  latte art:
+    name: 咖啡拉花
+    wikiURL: https://danbooru.donmai.us/wiki_pages/latte_art.html
+  starbucks:
+    name: 星巴克
+    image: d63477c62f794c0af2a95718a12d20d604bacc26f19000e514058348af5d3df0
+    wikiURL: https://danbooru.donmai.us/wiki_pages/starbucks.html
+  juice:
+    name: 果汁
+    wikiURL: https://danbooru.donmai.us/wiki_pages/juice.html
+  amazake:
+    name: 甘酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/amazake.html
+  lemonade:
+    name: 柠檬汽水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/lemonade.html
+  orange juice:
+    name: 橙汁
+    wikiURL: https://danbooru.donmai.us/wiki_pages/orange_juice.html
+  soda:
+    name: 苏打
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soda.html
+    alias:
+      - soft drink
+  7up:
+    name: 7up
+    wikiURL: https://danbooru.donmai.us/wiki_pages/7up.html
+  calpis:
+    name: Calpis
+    wikiURL: https://danbooru.donmai.us/wiki_pages/calpis.html
+  coca-cola:
+    name: 可口可乐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/coca-cola.html
+  dr pepper:
+    name: Dr Pepper
+    wikiURL: https://danbooru.donmai.us/wiki_pages/dr_pepper.html
+    alias:
+      - dr. pepper
+  fanta:
+    name: 芬达
+    wikiURL: https://danbooru.donmai.us/wiki_pages/fanta.html
+  melon soda:
+    name: 绿色苏打水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/melon_soda.html
+  mountain dew:
+    name: 激浪（饮料）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/mountain_dew.html
+  pepsi:
+    name: 百事可乐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pepsi.html
+  pepsi ice cucumber:
+    name: 黄瓜味百事可乐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/pepsi_ice_cucumber.html
+  ramune:
+    name: ramune 波子汽水
+    wikiURL: https://danbooru.donmai.us/wiki_pages/ramune.html
+  root beer:
+    name: 根汁啤酒
+    wikiURL: https://danbooru.donmai.us/wiki_pages/root_beer.html
+  soda can:
+    name: 汽水罐
+    wikiURL: https://danbooru.donmai.us/wiki_pages/soda_can.html
+    alias:
+      - pop can
+  tea:
+    name: 茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tea.html
+  barley tea:
+    name: 燕麦茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/barley_tea.html
+  black tea:
+    name: 红茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/black_tea.html
+  bubble tea:
+    name: 珍珠奶茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/bubble_tea.html
+    alias:
+      - boba tea
+  darjeeling tea:
+    name: 达吉岭茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/darjeeling_tea.html
+  earl grey tea:
+    name: 伯爵茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/earl_grey_tea.html
+  green tea:
+    name: 绿茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/green_tea.html
+  herbal tea:
+    name: 草药茶
+  iced tea:
+    name: 冰茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/iced_tea.html
+  milk tea:
+    name: 奶茶
+  rose hip tea:
+    name: 茉莉花茶
+    wikiURL: https://danbooru.donmai.us/wiki_pages/rose_hip_tea.html
+  spear mint tea:
+    name: 薄荷茶
+  tropical drink:
+    name: 热带特色的饮料
+    wikiURL: https://danbooru.donmai.us/wiki_pages/tropical_drink.html
+  blue hawaii:
+    name: 蓝色夏威夷（鸡尾酒）
+    wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hawaii.html
