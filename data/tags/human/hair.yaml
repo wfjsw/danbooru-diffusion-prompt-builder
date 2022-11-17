@@ -517,6 +517,7 @@ content:
   buzz cut:
     name: 寸头
     wikiURL: https://danbooru.donmai.us/wiki_pages/buzz_cut.html
+    image: 96dc6b3bb4eb98a353929969a0c181f37270f73fb3e2b5d6a767178baf2e383f
   chonmage:
     name: 丁髷
     wikiURL: https://danbooru.donmai.us/wiki_pages/chonmage.html
@@ -538,6 +539,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/bob_cut.html
     alias:
       - bobbed hair
+    image: 88cfee4b0e9839df0bd88d45b5241245069a71c2e594e6af8467da53493ef907
   cornrows:
     name: 玉米垄发型
     wikiURL: https://danbooru.donmai.us/wiki_pages/cornrows.html
@@ -559,6 +561,7 @@ content:
   tri braids:
     name: 三股辫
     wikiURL: https://danbooru.donmai.us/wiki_pages/tri_braids.html
+    image: 46afe87476ad64820db4f763a25c4afc43e82ab345a187aa10c0b83ebd0448cc
   quad braids:
     name: 四股辫
     wikiURL: https://danbooru.donmai.us/wiki_pages/quad_braids.html
@@ -599,6 +602,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/topknot.html
     alias:
       - top knot
+    image: aa47679cb09f9aa1877a4d7a9d31ab746026991deb55a3b1377dc4727aae95eb
   uneven twintails:
     name: 两股辫子大小不一
     wikiURL: https://danbooru.donmai.us/wiki_pages/uneven_twintails.html

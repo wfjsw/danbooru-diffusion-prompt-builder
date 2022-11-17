@@ -109,6 +109,7 @@ content:
   atmospheric perspective:
     name: 大气距离感
     wikiURL: https://danbooru.donmai.us/wiki_pages/atmospheric_perspective.html
+    image: ecec878b9fcfd05d38faaad47caec4bd3e74120995cdcb6574d747d1999a4abd
   panorama:
     name: 全景
     wikiURL: https://danbooru.donmai.us/wiki_pages/panorama.html

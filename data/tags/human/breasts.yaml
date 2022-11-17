@@ -457,6 +457,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/no_nipples.html
     alias:
       - nippleless
+    image: e054294515ecf6be06b11f42ea74d5d1095073ca8c37b45e6fe97cb24d1bd268
   nipple hair:
     restricted: true
     name: 乳头毛

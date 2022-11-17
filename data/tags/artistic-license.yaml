@@ -6,6 +6,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/animalization.html
     alias:
       - animalisation
+    image: c4e9b8837b2c4d49ca6a0a24d0250fa5e3fa5c321612d46c332e7252f8e6e052
   foodification:
     name: 食物化
     wikiURL: https://danbooru.donmai.us/wiki_pages/foodification.html
@@ -38,6 +39,7 @@ content:
   zombification:
     name: 僵尸化
     wikiURL: https://danbooru.donmai.us/wiki_pages/zombification.html
+    image: 2ef61e94536f27458ca0a0c2667c9eec7be0e0d042ef0bb9fcdcae9d087b5683
   adapted costume:
     name: 原设服装改编
     wikiURL: https://danbooru.donmai.us/wiki_pages/adapted_costume.html

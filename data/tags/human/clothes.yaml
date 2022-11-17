@@ -627,6 +627,7 @@ content:
   torn dress:
     name: 撕破的连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/torn_dress.html
+    image: cd07fbdce90f2bfab4ddaa6f02e067ffd7db80476ada7968e2ce16706d08ab83
   wet dress:
     name: 潮湿的衣服
   aqua dress:
@@ -644,23 +645,27 @@ content:
   green dress:
     name: 绿色连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/green_dress.html
+    image: 8c3f97d86158edb016dcdd769cdea431b9ddfb0364f4bd5e1f4e7408bf98b7c4
   grey dress:
     name: 灰色连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/grey_dress.html
     alias:
       - gray dress
+    image: e25cd449ae13874cc6c1f4983baad317a026f72294f66e9299561ca268bcbe20
   orange dress:
     name: 橙色连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/orange_dress.html
   pink dress:
     name: 粉连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/pink_dress.html
+    image: 5064bb75282196d4846882355db55dddfda6bcc077a96d358141718297d99e8b
   purple dress:
     name: 紫连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/purple_dress.html
   red dress:
     name: 红连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/red_dress.html
+    image: 4a0b7c70a2dd9339762ce682a717504e172827d8e3d62e09dfb3b5ab7f8f5dc2
   sepia dress:
     name: 红棕色连衣裙
   white dress:
@@ -669,6 +674,7 @@ content:
   yellow dress:
     name: 黄色连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_dress.html
+    image: ee88885b1baa2b87afdb455c0f337ae035e150d509e3b601d340ae24adb9f57a
   multicolored dress:
     name: 多色连衣裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/multicolored_dress.html
@@ -779,6 +785,7 @@ content:
   funeral dress:
     name: 丧服
     wikiURL: https://danbooru.donmai.us/wiki_pages/funeral_dress.html
+    image: 61c260495a8c86a1090c69ffed46877acc1868cd9ee0ed2fff1699ba054c384c
   mermaid dress:
     name: 鱼尾裙
     wikiURL: https://danbooru.donmai.us/wiki_pages/mermaid_dress.html

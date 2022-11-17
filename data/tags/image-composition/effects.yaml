@@ -147,6 +147,7 @@ content:
   speed lines:
     name: 速度线
     wikiURL: https://danbooru.donmai.us/wiki_pages/speed_lines.html
+    image: fa945044c68a6a6c849af2cea6a249e6c5c7632954b305d541bdc4f4918a519d
   vignetting:
     name: 晕影
     wikiURL: https://danbooru.donmai.us/wiki_pages/vignetting.html

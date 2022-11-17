@@ -50,6 +50,7 @@ content:
   charcoal (medium):
     name: 炭笔
     wikiURL: https://danbooru.donmai.us/wiki_pages/charcoal_(medium).html
+    image: 38c36e5e1c8589a2c9a14044e49159e7b13623beed3dbe807250dbaeca59cb8a
   clay (medium):
     name: 黏土
   color ink (medium):
@@ -64,6 +65,7 @@ content:
     alias:
       - pencil crayon (medium)
       - coloured pencil (medium)
+    image: ff2b3fcbe3edcbb8b987b7785087b48abd7270ad67c58bfb94f16150d723b0ac
   cosplay:
     image: 0b0db2c52bd954418ddf13d59a0e60f4f6ff52f45ac8ec628352bb84bb927253
     name: 角色扮演

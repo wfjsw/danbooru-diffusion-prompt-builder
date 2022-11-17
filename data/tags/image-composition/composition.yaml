@@ -110,6 +110,7 @@ content:
     alias:
       - letterbox
       - letter boxed
+    image: 508aa89f2a5317e944b4f548f72aa5e80b6a7eb2765c7840d48036bf052a7442
   pillarboxed:
     name: 柱状画布背景
     wikiURL: https://danbooru.donmai.us/wiki_pages/pillarboxed.html
@@ -127,6 +128,7 @@ content:
   photomosaic:
     name: 马赛克拼图
     wikiURL: https://danbooru.donmai.us/wiki_pages/photomosaic.html
+    image: ca68ad957dc423bf3707a6e000c4e6fedc18cde089be3afa793d26e5332335cf
   negative space:
     name: 大量留白
     wikiURL: https://danbooru.donmai.us/wiki_pages/negative_space.html

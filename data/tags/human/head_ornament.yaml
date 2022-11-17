@@ -412,6 +412,7 @@ content:
   dragon horns:
     name: 龙角
     wikiURL: https://danbooru.donmai.us/wiki_pages/dragon_horns.html
+    image: e5f565909f204387c686c79f2aec3943f447625b98e5fcb3d0409aedfb77b13c
   eyewear on head:
     name: 眼镜别在头上
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyewear_on_head.html
@@ -433,6 +434,7 @@ content:
   hair scrunchie:
     name: 发箍
     wikiURL: https://danbooru.donmai.us/wiki_pages/hair_scrunchie.html
+    image: bf1649289c97fe3b2e268e250be09e7b5c09851f9a91d01a7e08afdb93bfeb57
   white hairband:
     name: 白色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_hairband.html
@@ -477,6 +479,7 @@ content:
       - hair feathers
       - feather in hair
       - hair feather
+    image: 7946876eb9d7745e7301ea3577063e43e00f8b10291850de8b1ac8a924951870
   blue hairband:
     name: 蓝色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hairband.html
@@ -499,6 +502,7 @@ content:
   pink hairband:
     name: 粉色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/pink_hairband.html
+    image: 411a5a3b7f56066d227c48e47164a0acb993a8b83e89e9c056e78705df401828
   bow hairband:
     name: 蝴蝶结发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/bow_hairband.html
@@ -536,9 +540,11 @@ content:
   snowflake hair ornament:
     name: 雪花发饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/snowflake_hair_ornament.html
+    image: 996cbd427f570be15d67bf791cc65dce4a4cc7d3d40adb392a960b2f728d301b
   flower on head:
     name: 头上有花
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_on_head.html
+    image: 4a6930b4e2f34eb9a41faea8756a1167400ad65134b4323aaad9e8bf5afd4187
   head wreath:
     name: 头上戴着花冠
     wikiURL: https://danbooru.donmai.us/wiki_pages/head_wreath.html

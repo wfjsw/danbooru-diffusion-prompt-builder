@@ -415,6 +415,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/red_lips.html
     alias:
       - red lipstick
+    image: 2970db7519e1aa262905666245f90860d658dad249d2b8aeb681c77c3f021571
   skin fang:
     name: 把嘴的一部分画成虎牙状
     wikiURL: https://danbooru.donmai.us/wiki_pages/skin_fang.html
@@ -426,6 +427,7 @@ content:
   fang:
     name: 虎牙
     wikiURL: https://danbooru.donmai.us/wiki_pages/fang.html
+    image: 281802494dbfabbc15c44dc3e85c9b2ad858e305cc7c9cf9614a75ae1e3f34ed
   fang out:
     name: 露出虎牙/露出尖牙
     wikiURL: https://danbooru.donmai.us/wiki_pages/fang_out.html
@@ -435,6 +437,7 @@ content:
   forehead:
     name: 额头
     wikiURL: https://danbooru.donmai.us/wiki_pages/forehead.html
+    image: cade81d5f9b6334f36b2cecf96e7a7aa6ef79fd1308963068366fc83f7c6013c
   light blush:
     name: 淡淡的腮红
     wikiURL: https://danbooru.donmai.us/wiki_pages/light_blush.html
@@ -470,6 +473,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_eyes.html
     alias:
       - hands over eyes
+    image: 8a2c4ea902433abe6aee58525432a0ac50cbcfebb50cb6fd72fad35370965bef
   covering:
     name: 挡住脸
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering.html
@@ -493,6 +497,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/teeth.html
     alias:
       - bared teeth
+    image: 9919d8d07315c40efb5a39c1bf28aaf705e2307966202b957a4297358a784b4e
   excited:
     name: 兴奋
     wikiURL: https://danbooru.donmai.us/wiki_pages/excited.html
@@ -546,6 +551,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_face.html
     alias:
       - hiding face
+    image: d802cbae6a0c754a5bbb8d8f205ab22a793405fff092f08c163d04eef509b0ec
   black eyes:
     name: 黑眼
     image: 17b8bbb8afd29094b28f1e03db17f9790f81677ce00fac4f36170c8db2a187c0
@@ -821,6 +827,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/blush_stickers.html
     alias:
       - blush sticker
+    image: 55d62f8c9de55fa2e97bdb41126b69c55ab9f21ecffa8eda03ec67050dbcd2dc
   full-face blush:
     name: 整张脸泛红
     wikiURL: https://danbooru.donmai.us/wiki_pages/full-face_blush.html
@@ -874,11 +881,13 @@ content:
   depressed:
     name: 压抑的/郁闷的
     wikiURL: https://danbooru.donmai.us/wiki_pages/depressed.html
+    image: e61ea15d834032878c6e48feaa9a38737f48ee9222bbb96ac3806028e5602292
   panicking:
     name: 恐慌的
     wikiURL: https://danbooru.donmai.us/wiki_pages/panicking.html
     alias:
       - panic
+    image: 4ea8de2a11bb3e8151bf0b2048187b78482b8ab4178924cdc608775fc258185b
   worried:
     name: 担忧的
     wikiURL: https://danbooru.donmai.us/wiki_pages/worried.html
@@ -1044,6 +1053,7 @@ content:
   xd:
     name: XD
     wikiURL: https://danbooru.donmai.us/wiki_pages/xd.html
+    image: dfe21739e990a6855046837c28f4e0478e3f73da0034969c57c96bebe9eca55a
   x3:
     name: X3
     wikiURL: https://danbooru.donmai.us/wiki_pages/x3.html
@@ -1138,6 +1148,7 @@ content:
   flower-shaped pupils:
     name: 花形瞳孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower-shaped_pupils.html
+    image: 07929bef9728d79d890116c4ced564bfa89af8ea53d6aff486c75a88293617ec
   blue sclera:
     name: 蓝色巩膜
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_sclera.html
@@ -1210,3 +1221,4 @@ content:
   flower in mouth:
     name: 花在嘴里
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_in_mouth.html
+    image: 7151817ffda931af64a639e48348fef1f08bdf19cb9f2f6791e319801fe82251

@@ -92,6 +92,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_ears.html
     alias:
       - hands over ears
+    image: d318b54aa455f4532b503df9e7c76ff9b3f7d360127e992aed2b95dffa2391c4
   bear ears:
     name: 熊耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/bear_ears.html
@@ -104,6 +105,7 @@ content:
   cow ears:
     name: 牛耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/cow_ears.html
+    image: a8ebd5bd9e96c36ffc0264ca61894c6015772723e4a8f3e5afa03713313c256c
   deer ears:
     name: 鹿耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/deer_ears.html
@@ -115,6 +117,7 @@ content:
   goat ears:
     name: 山羊耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/goat_ears.html
+    image: ea27dc3c23c9e50e7ccbcda6aebbf444fb842159b58c3c736b25825085789495
   horse ears:
     name: 马耳
     wikiURL: https://danbooru.donmai.us/wiki_pages/horse_ears.html
@@ -137,6 +140,7 @@ content:
   pig ears:
     name: 猪耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/pig_ears.html
+    image: b8aef7973ec17b2e47d10d01ce5520f2e74102e5b512dda3f0a4b19eea227e1a
   sheep ears:
     name: 羊耳
     wikiURL: https://danbooru.donmai.us/wiki_pages/sheep_ears.html
@@ -151,6 +155,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/wolf_ears.html
     alias:
       - coyote ears
+    image: 1dbe7d5ce5bcb1e5c593e9327750f65bb47b08c372e9488bfe0137dc3519791c
   fake animal ears:
     name: 仿制的动物耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/fake_animal_ears.html

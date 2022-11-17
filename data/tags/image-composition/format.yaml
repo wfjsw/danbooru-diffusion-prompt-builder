@@ -91,6 +91,7 @@ content:
     alias:
       - polygon
       - 3dcg
+    image: 7efc63aeacffd98dcf6ad0f161844c3c33f8d41c5d56537420197241dce9a084
   animated:
     name: 动图
     wikiURL: https://danbooru.donmai.us/wiki_pages/animated.html
@@ -131,6 +132,7 @@ content:
   roulette animation:
     name: 轮转动画
     wikiURL: https://danbooru.donmai.us/wiki_pages/roulette_animation.html
+    image: d5b6fec510f81c823aae95770a17a28a56110f5e050ee6009430bc37bfc42453
   live2d:
     name: Live2D
     wikiURL: https://danbooru.donmai.us/wiki_pages/live2d.html
@@ -205,6 +207,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/cover.html
     alias:
       - front cover
+    image: 67104ee20ae36fe9eda124e526b31c590fe2fdc2f8acc16dee3a598b90e3effd
   album cover:
     name: 专辑封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/album_cover.html
@@ -220,6 +223,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/cover_page.html
     alias:
       - book cover
+    image: 712849aad2b5ecbd5ea53f7f753afb85c63d56f81ca2501b7432a9a01a4d0eca
   doujin cover:
     name: 同人封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/doujin_cover.html
@@ -229,6 +233,7 @@ content:
   fake cover:
     name: (同人向玩梗向的)封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/fake_cover.html
+    image: 39af983d0de40a54679e014bc58a446e04113f2cd3a6d31c212d289aedfcd5f9
   video game cover:
     name: 视频游戏封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/video_game_cover.html
