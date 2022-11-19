@@ -183,12 +183,14 @@ content:
   barefoot sandals:
     name: 裸足凉鞋
     wikiURL: https://danbooru.donmai.us/wiki_pages/barefoot_sandals.html
+    image: cd81f7d54a59ec9f9884c1cb47238049dba7b9b5271abc99329cec8565a4f05f
   boots:
     name: 长靴
     wikiURL: https://danbooru.donmai.us/wiki_pages/boots.html
     alias:
       - boot
       - naked boots
+    image: c2ebf75bbeb9b7895e0bf8e07fd5a9f4b00dcc889d696337e45fbfd709705f07
   boots removed:
     name: 脱下的靴子
     wikiURL: https://danbooru.donmai.us/wiki_pages/boots_removed.html
@@ -238,9 +240,11 @@ content:
   black legwear:
     name: 黑色裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/black_legwear.html
+    image: 522a795315f6efa2e07af8716bbc32120d869c6e06936f72c02cea85a7b53ac2
   white legwear:
     name: 白色裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_legwear.html
+    image: af674a828c61a851b40a054b5d51b6ab3336cd279bd9c6505371b7f8f2dd2fab
   torn legwear:
     name: 撕裂的裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/torn_legwear.html
@@ -248,6 +252,7 @@ content:
   striped legwear:
     name: 条纹裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/striped_legwear.html
+    image: 36bfa1878ef7bbd95b3e4fee6e7d83a93b40b2c812f559227016a8b344468a42
   asymmetrical legwear:
     name: 不对称裤腿
     wikiURL: https://danbooru.donmai.us/wiki_pages/asymmetrical_legwear.html
@@ -279,6 +284,7 @@ content:
   blue legwear:
     name: 蓝色裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_legwear.html
+    image: 7f80049dc4559ab20f75949230d3b339bc8d25a10e90ae8c6e718ec714117b09
   pink legwear:
     name: 粉色裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/pink_legwear.html
@@ -332,3 +338,4 @@ content:
   latex legwear:
     name: 乳胶裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/latex_legwear.html
+    image: 9a2911bc88a99f2ee936f100ba18b17167f356d6fb648944e9c020223b7c374b

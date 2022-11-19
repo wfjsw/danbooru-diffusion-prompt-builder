@@ -13,6 +13,7 @@ content:
   furrification:
     name: 多毛化
     wikiURL: https://danbooru.donmai.us/wiki_pages/furrification.html
+    image: 053354f1fc4a5bc5a55ab0d2908667b25a9333b065912f656b0ddb8861d2d459
   humanization:
     name: 拟人化
     wikiURL: https://danbooru.donmai.us/wiki_pages/humanization.html
@@ -22,6 +23,7 @@ content:
   monsterification:
     name: 魔物化
     wikiURL: https://danbooru.donmai.us/wiki_pages/monsterification.html
+    image: 9da3ffd1a4715fb2834ce15ec171edb68de797d4db6b130ec4e142795eb20da9
   objectification:
     name: 物品化
     wikiURL: https://danbooru.donmai.us/wiki_pages/objectification.html

@@ -12,11 +12,13 @@ content:
       - bordered
       - windowboxed
       - windowbox
+    image: a463b46c110c4d4354a6ec1169d7e346101c5777e75f3785425bf732070cefa4
   framed:
     name: 画框
     wikiURL: https://danbooru.donmai.us/wiki_pages/framed.html
     alias:
       - frame
+    image: 313a7269d070dcf0f702a11aad702205b1d1d6e946882109d4c5bd8fef74665e
   outside border:
     name: 一部分画到了背景框外面
     wikiURL: https://danbooru.donmai.us/wiki_pages/outside_border.html
@@ -55,6 +57,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/reference_sheet.html
     alias:
       - character sheet
+    image: d0cf7ff124bc3cd44151531fb91b8870b33989cbf2c9a7cbdb7b43023e19d598
   diagram:
     name: 图表
     wikiURL: https://danbooru.donmai.us/wiki_pages/diagram.html
@@ -101,6 +104,7 @@ content:
   glitch:
     name: 画面噪点
     wikiURL: https://danbooru.donmai.us/wiki_pages/glitch.html
+    image: 81e281523bee879a5fe29dd22437f5787e72af4ebc997623f1b5b40bb2a55a75
   isometric:
     name: 等轴图
     wikiURL: https://danbooru.donmai.us/wiki_pages/isometric.html

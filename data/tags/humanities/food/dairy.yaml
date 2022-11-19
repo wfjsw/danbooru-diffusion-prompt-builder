@@ -37,9 +37,11 @@ content:
   condensed milk:
     name: 炼乳
     wikiURL: https://danbooru.donmai.us/wiki_pages/condensed_milk.html
+    image: b516b9c49e4e71ec9f2925708ddc2b769332a05602bb465b1f46b414cfecda39
   chocolate milk:
     name: 巧克力牛奶
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_milk.html
+    image: 37fe1b2b600542c5944e78e9c1846a889916935628906fc6a9b9772bfe9ff884
   milk bottle:
     name: 奶瓶
     wikiURL: https://danbooru.donmai.us/wiki_pages/milk_bottle.html
@@ -51,6 +53,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/milk_churn.html
     alias:
       - milk can
+    image: 1ed22909367635ba07c7d8465d5354242493a7df71dfa1571e2c64c151f0f811
   milk mustache:
     name: 牛奶小胡子
     wikiURL: https://danbooru.donmai.us/wiki_pages/milk_mustache.html

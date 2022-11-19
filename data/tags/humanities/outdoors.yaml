@@ -6,38 +6,47 @@ content:
   airfield:
     name: 飞机场
     wikiURL: https://danbooru.donmai.us/wiki_pages/airfield.html
+    image: beda888a6b180602405700e5a71f2e07dcd8ba71a5545f919ece60e112a2e271
   runway:
     name: 跑道
     wikiURL: https://danbooru.donmai.us/wiki_pages/runway.html
   amusement park:
     name: 游乐园
     wikiURL: https://danbooru.donmai.us/wiki_pages/amusement_park.html
+    image: 7823aa2ff75b4f84ba91e65dafe7d4789ea2c524e6908adb47023509b5b75608
   carousel:
     name: 旋转木马
     wikiURL: https://danbooru.donmai.us/wiki_pages/carousel.html
     alias:
       - merry-go-round
       - merry go round
+    image: 6aac85b0f4fae2b086f3f773129dd4ddba3146b6366cbb1e5911ae3970c77d8f
   ferris wheel:
     name: 摩天轮
     wikiURL: https://danbooru.donmai.us/wiki_pages/ferris_wheel.html
+    image: db61f4cbce5cf9ba1a4d1f6114f19c09ae70e2885bccfb4d26a05f024cc4a8ff
   roller coaster:
     name: 过山车
     wikiURL: https://danbooru.donmai.us/wiki_pages/roller_coaster.html
+    image: c7f13cb051c147c1917dd6e2fcfad89efeb780fadeeb10a03de8ba0761c779dc
   aqueduct:
     name: 渡槽
     wikiURL: https://danbooru.donmai.us/wiki_pages/aqueduct.html
+    image: 7ef817841bf4d0d2c939f180b31e07732d7f16d4244499f9c773451878f25179
   bridge:
     name: 桥
     wikiURL: https://danbooru.donmai.us/wiki_pages/bridge.html
+    image: 152ada2766a2c08ebf974f4375d9f1f93973f0de09840b74daa3569f06c2169f
   rope bridge:
     name: 绳桥
   wooden bridge:
     name: 木桥
     wikiURL: https://danbooru.donmai.us/wiki_pages/wooden_bridge.html
+    image: f88f256303f8d1c566b1785eac5dd99dd50e6cc8603e6cb5eb96358da810300e
   canal:
     name: 运河
     wikiURL: https://danbooru.donmai.us/wiki_pages/canal.html
+    image: bcd31973eadc1aec6058a252e9d381c85e4a4f2fbfc7072ec7450068a2270304
   city:
     name: 城市
     image: 1c36b2caa411350095436af96a1f275baed42c6d2269c9e1ed62a362267bd26a
@@ -45,14 +54,17 @@ content:
   floating city:
     name: 浮动城堡
     wikiURL: https://danbooru.donmai.us/wiki_pages/floating_city.html
+    image: fff5f29657b802a7dd0738cd434050a979c302be493a48d246c1e409810053e3
   rural:
     name: 田园
     wikiURL: https://danbooru.donmai.us/wiki_pages/rural.html
   town:
     name: 城镇
     wikiURL: https://danbooru.donmai.us/wiki_pages/town.html
+    image: 56ce1474852e8aa9891da38916b731a53e1e009619dabd170c4be2a108e6c5dd
   village:
     name: 村庄
+    image: 8e7681cfdc3f29017b3153095f8995d3d233e39b3b61d660305fbd466c9447c8
   dam:
     name: 大坝
     wikiURL: https://danbooru.donmai.us/wiki_pages/dam.html
@@ -63,13 +75,16 @@ content:
     name: 旱坞
   shipyard:
     name: 船厂
+    image: 0e582496a240f42b65af5b0d52844f239f0f261a01bc292b3fb5a0dcc40b8639
   graveyard:
     name: 墓地
     wikiURL: https://danbooru.donmai.us/wiki_pages/graveyard.html
     alias:
       - cemetery
+    image: 4c7863ac152abc6446a1a07d340b01efa1b10e75535460c8d2382aa58478f1d4
   jetty:
     name: 码头/栈桥
+    image: 78a58a5b59d2ec745aa60445d8dc0af0106a36fa259a624d708df9d656a1a09f
   field:
     name: 田野
     wikiURL: https://danbooru.donmai.us/wiki_pages/field.html
@@ -78,16 +93,20 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/rice_paddy.html
     alias:
       - rice field
+    image: 65f4809c0cff303462005c087a3c6c2a491f2c6a6f084a877f22b00fcd84df42
   wheat field:
     name: 麦田
+    image: eeced4028060b78da6fd227016021f180912847a009728d2f811776026143ea0
   fountain:
     name: 喷泉
     wikiURL: https://danbooru.donmai.us/wiki_pages/fountain.html
+    image: 4b733a882907a6ff2e88271733c50b6346842e2b51870cd367fe904bd97fc983
   harbor:
     name: 港口
     wikiURL: https://danbooru.donmai.us/wiki_pages/harbor.html
     alias:
       - harbour
+    image: e903b041049c9cba838e9155f58dd66fc42ad61c09e9c1fb9d6cec8218f10327
   market:
     name: 市场
     wikiURL: https://danbooru.donmai.us/wiki_pages/market.html
@@ -96,6 +115,7 @@ content:
   market stall:
     name: 市场摊位
     wikiURL: https://danbooru.donmai.us/wiki_pages/market_stall.html
+    image: 8965e090f9428a840f05c5b7d750356a5587103105c1f48ec97d4dbe0c6fd83c
   pier:
     name: 码头
     wikiURL: https://danbooru.donmai.us/wiki_pages/pier.html
@@ -105,11 +125,13 @@ content:
     alias:
       - phonebooth
       - telephone booth
+    image: 230126359e145c9ff8720ae06f95b052a8af213133824045088fde094b1ac260
   poolside:
     name: 泳池边
     wikiURL: https://danbooru.donmai.us/wiki_pages/poolside.html
   waterpark:
     name: 水上乐园
+    image: 75f248948a92a4c1bb15b03dfe39ff1d98b6c2e0f6e65bc7827a4e1704f46171
   railroad tracks:
     name: 铁轨
     wikiURL: https://danbooru.donmai.us/wiki_pages/railroad_tracks.html
@@ -117,15 +139,18 @@ content:
       - train tracks
       - railway tracks
       - railroad
+    image: d6f3a70ae310251907bb52ad7a6fa2fdb93ceb38d93d310d941c9a5b1ca968a6
   railroad crossing:
     name: 铁路道口
     wikiURL: https://danbooru.donmai.us/wiki_pages/railroad_crossing.html
     alias:
       - railway crossing
       - train crossing
+    image: fd0747a8a65ad6277e654869e514cbcb6bf1dcf9dfd2208fdf8edc14e6f1d156
   road:
     name: 路
     wikiURL: https://danbooru.donmai.us/wiki_pages/road.html
+    image: ca4c8a71424a4bb563b4e6e27ad5f18b5afba1c19ee3a144b76dc02b285c3365
   alley:
     name: 胡同/小巷
     wikiURL: https://danbooru.donmai.us/wiki_pages/alley.html
@@ -141,19 +166,23 @@ content:
   highway:
     name: 高速公路
     wikiURL: https://danbooru.donmai.us/wiki_pages/highway.html
+    image: 514d7a2f1b86d6de6383f977345a2e8b531f45d313de2d6af96ec950cf05b591
   path:
     name: 小径
     wikiURL: https://danbooru.donmai.us/wiki_pages/path.html
+    image: 4f52600ab57a563bdf79d0b1b26759e0b15fc2865d11562366eb213abf02247e
   sidewalk:
     name: 人行道
   stone walkway:
     name: 石制人行道
     wikiURL: https://danbooru.donmai.us/wiki_pages/stone_walkway.html
+    image: 73c46836f2a08b1873ff3e6133fc8c9a6944d5d292ab72bb3ac39b2acdff17cf
   street:
     name: 街道
     wikiURL: https://danbooru.donmai.us/wiki_pages/street.html
   soccer field:
     name: 足球场
+    image: eb4e32fa3b10e21df61a9e9268b444144c6f14284749a4e546d70f13230aa310
   running track:
     name: 运行轨道
   trench:
@@ -163,6 +192,7 @@ content:
       - trenches
   tunnel:
     name: 隧道
+    image: 85cf2f276d3c511d23c17886d4d740aa06266890102cffcc7737828977cbb506
   well:
     name: 出色地
   zoo:
@@ -171,3 +201,10 @@ content:
   garden:
     name: 花园
     wikiURL: https://danbooru.donmai.us/wiki_pages/garden.html
+    image: 3cf46bb04bc55f5d9b9f811f1c9b89d9e1516373413c5faeafb16ded5fa6b223
+  paper lantern:
+    alias:
+      - chinese lantern
+    name: 灯笼
+    wikiURL: https://danbooru.donmai.us/wiki_pages/paper_lantern.html
+    image: ca7bebb09a22fe3775e345352f120afb6110a90dfcca64e379873897ed3c9190

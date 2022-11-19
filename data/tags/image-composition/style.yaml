@@ -37,6 +37,7 @@ content:
     name: 刷子
   brushpen (medium):
     name: 毛笔
+    image: 05cb5f3ecec8bb6ceb7535fe41ef511946773395624cc8dc83f8145dec874b3f
   calligraphy brush (medium):
     name: 书法毛笔
     wikiURL: https://danbooru.donmai.us/wiki_pages/calligraphy_brush_(medium).html
@@ -128,6 +129,7 @@ content:
     name: G 笔
   google sketchup (medium):
     name: Google Sketchup
+    image: ed8694bbe73ac9fc3a290d224f2c1bf5e28c6968e70e2a6f3255cb3a8cc7ba90
   gouache (medium):
     name: 水粉
     wikiURL: https://danbooru.donmai.us/wiki_pages/gouache_(medium).html
@@ -240,6 +242,7 @@ content:
   surreal:
     name: 怪诞的/超现实主义
     wikiURL: https://danbooru.donmai.us/wiki_pages/surreal.html
+    image: e03d83ac9590ed4403b80bd62678f167840fbc502d0ec71e6af9ff08aaad1dba
   swapnote (medium):
     name: 交换笔记
   tempera (medium):

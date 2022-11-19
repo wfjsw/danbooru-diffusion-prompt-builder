@@ -12,6 +12,7 @@ content:
   batter:
     name: 面糊
     wikiURL: https://danbooru.donmai.us/wiki_pages/batter.html
+    image: cc51dac563e8390571a32cfdf99e0dddd3513d52ee37cbf6be1b6d0ae07a8dc1
   anpan:
     name: 红豆包
     wikiURL: https://danbooru.donmai.us/wiki_pages/anpan.html
@@ -45,6 +46,7 @@ content:
   birthday cake:
     name: 生日蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/birthday_cake.html
+    image: 3fc466c66f24dfca5f49206c4ddde68dbf0b1949bee9d70ca18139e1f0748466
   black forest cake:
     name: 黑森林蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/black_forest_cake.html
@@ -63,12 +65,14 @@ content:
   chocolate cake:
     name: 巧克力蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_cake.html
+    image: be0397bd265f74677445e34dc20c59e7f53d055b847bb87c4d390f208b6c4390
   chocolate framboise:
     name: 巧克力红桑子莓
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_framboise.html
   christmas cake:
     name: 圣诞蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/christmas_cake.html
+    image: e4b672dd7a7f9f55cf48fb25fcf2bef1e348fed04df8c49974a652207f2c67d0
   cupcake:
     name: 纸杯蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/cupcake.html
@@ -88,6 +92,7 @@ content:
   mille-feuille:
     name: 千层酥
     wikiURL: https://danbooru.donmai.us/wiki_pages/mille-feuille.html
+    image: 9288a4b684229522b38bb6fbbd667ad1df4bbe00ea73b8bee6b68a9d14ec869d
   mont blanc (food):
     name: 白山蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/mont_blanc_(food).html
@@ -111,6 +116,7 @@ content:
   strawberry shortcake:
     name: 草莓奶油海绵蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_shortcake.html
+    image: 899bb13315ef4c93a5299d47fdc057439c0584a1f5e3d8b6b852e84524d5e33d
   swiss roll:
     name: 瑞士卷
     wikiURL: https://danbooru.donmai.us/wiki_pages/swiss_roll.html
@@ -119,12 +125,15 @@ content:
   strawberry swiss roll:
     name: 草莓瑞士卷
     wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_swiss_roll.html
+    image: 4192454164fd454223c48681ecec36021b5e5e4e9c3dc13c8f2de9d730e33b51
   tiramisu:
     name: 提拉米苏
     wikiURL: https://danbooru.donmai.us/wiki_pages/tiramisu.html
+    image: b110ea268d8df43b66e38c5559fe1a64f7cf85b4a3d86b610ca6a7cc7f6aab2b
   wedding cake:
     name: 婚礼蛋糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/wedding_cake.html
+    image: ae184e867ff950471d9072fba17eb9888ccd3217cca28a4b159ca4c8a66e421d
   yule log:
     name: 圣诞节原木
     wikiURL: https://danbooru.donmai.us/wiki_pages/yule_log.html
@@ -181,6 +190,7 @@ content:
   marble chocolate:
     name: 大理石巧克力
     wikiURL: https://danbooru.donmai.us/wiki_pages/marble_chocolate.html
+    image: a1a5b9c00ba40be1d55ac3ac6c1337bfa34db14a9392c472d2d36daa395ee863
   nerunerunerune:
     name: nerunerunerune（糖果）
     wikiURL: https://danbooru.donmai.us/wiki_pages/nerunerunerune.html
@@ -205,18 +215,22 @@ content:
       - gum
       - bubblegum
       - bubble gum
+    image: e515dde99b65ab46337846d50ab6a48388400087f22f57aa053565dada95c0b7
   chocolate:
     name: 巧克力
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate.html
+    image: 748f9f29f244c450a4defcd9ccd832ccc6de5bd0d9b20ed36d8f66ce6aba3572
   apollo chocolate:
     name: 阿波罗巧克力
     wikiURL: https://danbooru.donmai.us/wiki_pages/apollo_chocolate.html
   chocolate bar:
     name: 巧克力棒
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_bar.html
+    image: 40e664772cf446bad3e07f317b62a50a04ec8a59a598861fbaa3cf11f45926f2
   chocolate fountain:
     name: 巧克力喷泉
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_fountain.html
+    image: a9324a0dbb99ce48793152fc19258712b76e5fcaf920866ff2bbfa8450659c4b
   heart-shaped chocolate:
     name: 心形巧克力
     wikiURL: https://danbooru.donmai.us/wiki_pages/heart-shaped_chocolate.html
@@ -234,9 +248,11 @@ content:
   white chocolate:
     name: 白巧克力
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_chocolate.html
+    image: cfd0b9ae5bed8666fb930289c18ecc49cd70cd667c962048b93854b4dcbd141d
   churro:
     name: 油条
     wikiURL: https://danbooru.donmai.us/wiki_pages/churro.html
+    image: b652001c427f7dcdce6a6043bafec135664619fb94542b36e6335aaffec344ec
   cookie:
     name: 曲奇饼
     wikiURL: https://danbooru.donmai.us/wiki_pages/cookie.html
@@ -248,6 +264,7 @@ content:
   chocolate chip cookie:
     name: 巧克力片饼干
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_chip_cookie.html
+    image: c2247a7660f8a2966d23066116d3609c82c87e02bc9bf3c4bf3d511e9aad4492
   country ma'am:
     name: COUNTRY MA'AM
     wikiURL: https://danbooru.donmai.us/wiki_pages/country_ma'am.html
@@ -257,9 +274,11 @@ content:
   gingerbread house:
     name: 姜饼屋
     wikiURL: https://danbooru.donmai.us/wiki_pages/gingerbread_house.html
+    image: f253114bd54e27885996c07bfd827c0455e44f8bd1a8d461d9956177ad99d178
   gingerbread man:
     name: 姜饼人（一种曲奇饼）
     wikiURL: https://danbooru.donmai.us/wiki_pages/gingerbread_man.html
+    image: 13468e0dfdd1620fac55bd8d2c12109134dc91261b3cc92d040243adfbdb8a32
   pocky:
     name: 百奇饼干
     wikiURL: https://danbooru.donmai.us/wiki_pages/pocky.html
@@ -268,6 +287,7 @@ content:
   sandwich cookie:
     name: 夹心饼干
     wikiURL: https://danbooru.donmai.us/wiki_pages/sandwich_cookie.html
+    image: ca16eed73002fbc7da6b56f59b3fa76ffd3e13cca3be614e1c6d349974c54dd8
   oreo:
     name: 奥利奥
     wikiURL: https://danbooru.donmai.us/wiki_pages/oreo.html
@@ -310,6 +330,7 @@ content:
   dough:
     name: 面团
     wikiURL: https://danbooru.donmai.us/wiki_pages/dough.html
+    image: 96c8ce6df2a34d392019334e9d83cd3ccbe71f44fb49a5794a331fa9d38c2240
   doughnut:
     name: 甜甜圈
     wikiURL: https://danbooru.donmai.us/wiki_pages/doughnut.html
@@ -317,9 +338,11 @@ content:
       - donut
       - doughnuts
       - donuts
+    image: 0b6f11dbffd84a1f1dea057e2788ff5092ffa2b03a628ba003a6ddb654dc3d4c
   chocolate doughnut:
     name: 巧克力甜甜圈
     wikiURL: https://danbooru.donmai.us/wiki_pages/chocolate_doughnut.html
+    image: 9043ae7d87ba9eb68680bf3ccc52263426875eec92f4df4e365fc82ed8e9c097
   french cruller:
     name: 螺旋脊状甜甜圈
     wikiURL: https://danbooru.donmai.us/wiki_pages/french_cruller.html
@@ -344,6 +367,7 @@ content:
       - icecream
   banana split:
     name: 香蕉冰激凌
+    image: f8e841adf652434e7d9efc8ece6192c3eea9c5a736eb6376155547b4017f7532
   coolish:
     name: Coolish
     description: Lotte 制小包装冰激凌。
@@ -353,18 +377,22 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/ice_cream_cone.html
   waffle cone:
     name: 华夫饼蛋筒
+    image: b3d936ed50e37b260441a7c9ae3602bf46b4f2cc6c9e994f6970e0e9c05dc30e
   ice cream float:
     name: 飘浮冰淇淋
     wikiURL: https://danbooru.donmai.us/wiki_pages/ice_cream_float.html
+    image: 4515828c939b8feeba1aac70d0c2a04c4670003a23d92b815d56398c3f2e5969
   ice cream sandwich:
     name: 冰淇淋三明治
     wikiURL: https://danbooru.donmai.us/wiki_pages/ice_cream_sandwich.html
+    image: ffad5ab1c26878d556c9e42b6fd48c573197b7863e7ee2d2841abfd91b98dd49
   parfait:
     name: 芭菲
     wikiURL: https://danbooru.donmai.us/wiki_pages/parfait.html
   strawberry parfait:
     name: 草莓冻糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_parfait.html
+    image: 00deff9cb2dc854e87eca192f59b0329928ba34f1c021309f535feef0e0ac469
   single scoop:
     name: 单球冰淇淋
     wikiURL: https://danbooru.donmai.us/wiki_pages/single_scoop.html
@@ -395,6 +423,7 @@ content:
   marshmallow:
     name: 棉花糖
     wikiURL: https://danbooru.donmai.us/wiki_pages/marshmallow.html
+    image: cb371cf6a38f702b123b5287237a7606cb8c37ae64d7d66160d3dbeb36ffa126
   mooncake:
     name: 月饼
     wikiURL: https://danbooru.donmai.us/wiki_pages/mooncake.html
@@ -414,6 +443,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/cream_puff.html
     alias:
       - cream puffs
+    image: b2207eed1d0c54f97a5a8ff6ea35de0ef2f4fb909fdd10b1713f8d9ac11eb481
   eclair (food):
     name: 闪电泡芙
     wikiURL: https://danbooru.donmai.us/wiki_pages/eclair_(food).html
@@ -423,9 +453,11 @@ content:
   pie:
     name: 馅饼
     wikiURL: https://danbooru.donmai.us/wiki_pages/pie.html
+    image: c042c0d328fb6603152bdead92db3f703ee8cf1e622edc9d2335ebc7c3c38ad0
   apple pie:
     name: 苹果派
     wikiURL: https://danbooru.donmai.us/wiki_pages/apple_pie.html
+    image: 27f63487f21a33d8d8124010bcea8405264ad7aadba0b222ccf12cf5285065b8
   popsicle:
     name: 冰棒/棒冰
     wikiURL: https://danbooru.donmai.us/wiki_pages/popsicle.html
@@ -452,6 +484,7 @@ content:
   custard:
     name: 卡仕达酱
     wikiURL: https://danbooru.donmai.us/wiki_pages/custard.html
+    image: a09286abf78fde39384e9e434af6d11cda54d51dfb28a43f12232ef776270df1
   pudding a la mode:
     name: 法式布丁
     wikiURL: https://danbooru.donmai.us/wiki_pages/pudding_a_la_mode.html
@@ -477,6 +510,7 @@ content:
   fruit tart:
     name: 水果馅饼
     wikiURL: https://danbooru.donmai.us/wiki_pages/fruit_tart.html
+    image: 66ed028320565c226765ceda268e1fc2dc3ad2110e73491caf9480686c33175e
   strawberry tart:
     name: 草莓挞
     wikiURL: https://danbooru.donmai.us/wiki_pages/strawberry_tart.html
@@ -534,6 +568,7 @@ content:
   chips:
     name: 薯片
     wikiURL: https://danbooru.donmai.us/wiki_pages/chips.html
+    image: a186a61df62046d35b8caf6fbbfb046787dbb702ace63ffdd1641ca3ef4a6632
   bugles:
     name: 号角
     wikiURL: https://danbooru.donmai.us/wiki_pages/bugles.html
@@ -545,12 +580,14 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/potato_chips.html
     alias:
       - potato chip
+    image: b824fa736977c8a934e8d07f74abf183b26fd57fb66d99edd2d11c0c0e681816
   pringles:
     name: 品客
     wikiURL: https://danbooru.donmai.us/wiki_pages/pringles.html
   popcorn:
     name: 爆米花
     wikiURL: https://danbooru.donmai.us/wiki_pages/popcorn.html
+    image: 891b1952bd6c7c6c9502ec3e2ecaf13b11784f658cda14550b7a202306a61722
   pretzel:
     name: 椒盐卷饼
     wikiURL: https://danbooru.donmai.us/wiki_pages/pretzel.html

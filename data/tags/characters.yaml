@@ -4,6 +4,7 @@ content:
   2k-tan:
     name: 2K碳(OS碳)
     wikiURL: https://danbooru.donmai.us/wiki_pages/2k-tan.html
+    image: c8e61df66704f6e6a49690c79ccac0fd10a1c504ca7e4ae615a481dba60f600b
   abe nana:
     name: 安部菜菜(偶像大师)
     wikiURL: https://danbooru.donmai.us/wiki_pages/abe_nana.html
@@ -42,6 +43,7 @@ content:
   aircraft carrier oni:
     name: 空母栖鬼(舰Colle)
     wikiURL: https://danbooru.donmai.us/wiki_pages/aircraft_carrier_oni.html
+    image: 19a30a974b9d179fdbb938c1b7b3e4fdfab6e73c267a42c844f2d2cf9c1047ac
   aisaka taiga:
     name: 逢坂大河(龙与虎)
     wikiURL: https://danbooru.donmai.us/wiki_pages/aisaka_taiga.html

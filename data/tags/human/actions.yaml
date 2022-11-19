@@ -178,6 +178,7 @@ content:
   adjusting hair:
     name: 理头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_hair.html
+    image: 37e6d6cd3ae954b7e40e6389ec7dd832624b38bc198f9a632c0af53e78e0a3ad
   adjusting legwear:
     name: 整理裤袜
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_legwear.html
@@ -228,6 +229,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/bikini_pull.html
     alias:
       - bikini down
+    image: f5de6d75c18a377f728b463a7bfa4a4f1c54b2f980a903d920d4f71550fd30be
   skirt pull:
     name: 拉开裙子
     wikiURL: https://danbooru.donmai.us/wiki_pages/skirt_pull.html
@@ -241,9 +243,11 @@ content:
   carrying over shoulder:
     name: 肩扛
     wikiURL: https://danbooru.donmai.us/wiki_pages/carrying_over_shoulder.html
+    image: bff84e223aa92b846369d0a0a1b902414c326021f491d5345aab155eca4adf9d
   carrying under arm:
     name: 夹在腋下
     wikiURL: https://danbooru.donmai.us/wiki_pages/carrying_under_arm.html
+    image: 5ceaee2c164d753c26c890be70594ec03b40d18c6736880c36d1148991fb5b24
   paw pose:
     name: 爪子姿势
     wikiURL: https://danbooru.donmai.us/wiki_pages/paw_pose.html
@@ -253,6 +257,7 @@ content:
   claw pose:
     name: 举爪姿势
     wikiURL: https://danbooru.donmai.us/wiki_pages/claw_pose.html
+    image: 57856247d6113100b367c6fef09bc017c6da67cddb55d824e170bd8abb75ffda
   clothes lift:
     name: 掀起衣物
     wikiURL: https://danbooru.donmai.us/wiki_pages/clothes_lift.html
@@ -336,8 +341,10 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_between_legs.html
     alias:
       - hands between legs
+    image: 39cde0d5789db8f523bfd8ee074c9bbf48cde957784509a0c7ec20be9189ff82
   hand in hair:
     name: 手埋在头发里
+    image: 4fa0866b9193b0fe136a49e5db986ec45ade45535e14d07ebeff1640605e2c9c
   hand in panties:
     name: 手伸进内裤里
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_in_panties.html
@@ -364,6 +371,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_knee.html
     alias:
       - hand on knee
+    image: 7e760bae56425983b97171ea2cadc2537061ed8cf66916f4623f0bbd05b3b08b
   hand on own stomach:
     name: 把手放在自己的肚子上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_stomach.html
@@ -371,6 +379,7 @@ content:
       - hand on belly
       - hand on own belly
       - hand on stomach
+    image: 0c65d652ae2ef961ec19cad0377f5e37445b66e7606f613543cb84a0da9f36db
   hand to own mouth:
     name: 手朝向自己嘴
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_to_own_mouth.html
@@ -390,6 +399,7 @@ content:
   holding arrow:
     name: 拉着弓
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_arrow.html
+    image: a81bcfe660345119b3b1fbdb0110047964c4cd7657a6911f4c6bd89ebedad7f7
   holding condom:
     name: 拿着避孕套
     restricted: true
@@ -401,9 +411,11 @@ content:
   holding strap:
     name: 手拉着吊带
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_strap.html
+    image: 38945c5846a8f3e15731ceceebd6539d5991f2e4df77f0e5bc9cc638082f28b2
   holding syringe:
     name: 手持注射器
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_syringe.html
+    image: 64cb195e9305bf55ba9778a088c5ccf3b9875ed8088b384bc86451c8dcacdb2c
   holding underwear:
     name: 手持内衣
     restricted: true
@@ -411,6 +423,7 @@ content:
   holding whip:
     name: 握着鞭子
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_whip.html
+    image: d114eb9b4caa9fe8702fc7c9a6dd2d040c57aea18abe170770f25bb7ecf70ac4
   index finger raised:
     name: 食指抬起
     wikiURL: https://danbooru.donmai.us/wiki_pages/index_finger_raised.html
@@ -423,6 +436,7 @@ content:
   lifted by self:
     name: 掀起自己的衣物
     wikiURL: https://danbooru.donmai.us/wiki_pages/lifted_by_self.html
+    image: 4a7cf94209d0e3de8cd97dc9b2589a3716a99e9344a1f6ed5173d090f9b76bdb
   necktie grab:
     name: 抓着领带
     wikiURL: https://danbooru.donmai.us/wiki_pages/necktie_grab.html
@@ -492,6 +506,7 @@ content:
   tying hair:
     name: 扎头发
     wikiURL: https://danbooru.donmai.us/wiki_pages/tying_hair.html
+    image: 55f14729646813de467fd96be8422fc7730658306cf4e8ca415e3540de25ec6c
   mimikaki:
     name: 采耳
     wikiURL: https://danbooru.donmai.us/wiki_pages/mimikaki.html
@@ -506,18 +521,21 @@ content:
   hand on ear:
     name: 手放在耳朵上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_ear.html
+    image: 641d077cb88b0d491b2d6a29f767398297f47b968d5c0037f46ade1a71d06fb8
   adjusting eyewear:
     name: 扶眼镜
     wikiURL: https://danbooru.donmai.us/wiki_pages/adjusting_eyewear.html
     alias:
       - adjusting sunglasses
       - adjusting glasses
+    image: 5b87d972e1fde681365d6a1b1dd7963f2cba8d91c45e51a03d06b82805b2ee9c
   hand on another's head:
     name: 手放在对方的头上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_head.html
   hand on own head:
     name: 手放在自己头上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_head.html
+    image: 9f0c727865c18f4a2c2424cd87f2288efba27f822a5925bd432d17cb9f01fac0
   hand on own forehead:
     name: 手放在自己前额
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_forehead.html
@@ -530,6 +548,7 @@ content:
     alias:
       - hand to face
       - hand on face
+    image: 608a5d381e5a99e2f8dac5ac77b86adf691612b91702922c49c87cf4055b517d
   hands on another's face:
     name: 双手放在别人的脸上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_another's_face.html
@@ -539,17 +558,20 @@ content:
     alias:
       - hands on face
       - hands to face
+    image: d10523e43a1562f294373d495d52ed98a9d959476058d78639dc072fd8bc0e25
   hand on own cheek:
     name: 把手放在自己的脸颊上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_cheek.html
     alias:
       - hand to cheek
       - hand on cheek
+    image: b3fbd534aee1cd58c71380e331cf6c07ed66b27b9767995b102a97cb90ed0c0d
   hand on headwear:
     name: 手触碰帽子
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_headwear.html
     alias:
       - hand on hat
+    image: 43ca23904d9961f3c9fc5e18c466a29fa90bb1e4149680470ce1e3091a0016a7
   hand on own chest:
     name: 把手放在自己的胸口
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_chest.html
@@ -557,6 +579,7 @@ content:
       - hand to chest
       - hand to own chest
       - hand on chest
+    image: ed74b7bc20928d902a274e2a53ee2287aa419e6ec74dc3332bebc96fbe95de31
   hand on another's shoulder:
     name: 手放在对方的肩上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_another's_shoulder.html
@@ -567,6 +590,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_ass.html
     alias:
       - hand on ass
+    image: 1331d42a80016a1af91781fa4807aa7998504bdad6d84e8956075f7b7c36f9eb
   hands on ass:
     name: 双手放在屁股上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_ass.html
@@ -575,6 +599,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_own_knees.html
     alias:
       - hands on knees
+    image: 497373f5b7fee8ceeb06b104765ec1c2a25fb049f8c8f52d5f109df82031f043
   hands on feet:
     name: 双手放在脚上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_on_feet.html
@@ -583,6 +608,7 @@ content:
   hand in pocket:
     name: 手插在口袋里
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_in_pocket.html
+    image: 06b4cde1c7ac160e786a0858dbfae5255e67e68e5f84d0f92283405b2ecc73e2
   hands in pockets:
     name: 双手插在兜里
     wikiURL: https://danbooru.donmai.us/wiki_pages/hands_in_pockets.html
@@ -886,6 +912,7 @@ content:
   holding flower:
     name: 拿着花
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_flower.html
+    image: a2d53752deb21c2326df30a34adf246ba8152259a83822df590c2afaf650f4a0
   smelling flower:
     name: 闻花
     wikiURL: https://danbooru.donmai.us/wiki_pages/smelling_flower.html
@@ -1160,6 +1187,7 @@ content:
   crawling:
     name: 爬行
     wikiURL: https://danbooru.donmai.us/wiki_pages/crawling.html
+    image: e122475a20a9adf0dec820b3b371cd4dea654ac6d6c72ae04b0a2f8725b19df9
   jumping:
     name: 跳跃
     wikiURL: https://danbooru.donmai.us/wiki_pages/jumping.html
@@ -1212,11 +1240,13 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/superhero_landing.html
     alias:
       - three-point landing
+    image: c51c22327a11583461ab00b7497d06d0ffb66c407aa34b5ea0a07773fc649168
   handstand:
     name: 用手倒立
     wikiURL: https://danbooru.donmai.us/wiki_pages/handstand.html
     alias:
       - standing on hands
+    image: 5511c54198020245b3453b465982dfa6cfc3a6a091b92d86e1444f0bfa70ce72
   headstand:
     name: 用头倒立
     wikiURL: https://danbooru.donmai.us/wiki_pages/headstand.html
@@ -1278,6 +1308,7 @@ content:
   hand on own neck:
     name: 把手放在自己的脖子上
     wikiURL: https://danbooru.donmai.us/wiki_pages/hand_on_own_neck.html
+    image: 477dbb47cbc50903a97112928de39ccf674d61cd1e790f12ccd46e64c0ffb473
   neck biting:
     name: 咬脖子
     wikiURL: https://danbooru.donmai.us/wiki_pages/neck_biting.html

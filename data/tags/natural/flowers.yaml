@@ -32,6 +32,7 @@ content:
     image: eb7130a6a25bf3cac7e8461827c5e6027bbdb6554a8181d8612312e8e681ee3e
   alstroemeria (flower):
     name: 百合水仙
+    image: 413996c50415f9dfeccaf9c6d9a452e9dbc6c03e6eb81fcd325af56b128bfec4
   amaryllis (flower):
     name: 孤挺花
   anemone:
@@ -73,6 +74,7 @@ content:
   calla lily:
     name: 马蹄莲
     wikiURL: https://danbooru.donmai.us/wiki_pages/calla_lily.html
+    image: 3b8ee07617242589276a6f0b63e6a8faf6085cfd93f006a809dda21d8361da42
   camellia:
     name: 山茶花
     wikiURL: https://danbooru.donmai.us/wiki_pages/camellia.html
@@ -86,9 +88,9 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/red_carnation.html
   chamomile:
     name: 西洋甘菊
-  chinese lantern:
+  chinese lantern (plant):
     name: 灯笼草
-    wikiURL: https://danbooru.donmai.us/wiki_pages/chinese_lantern.html
+    wikiURL: https://danbooru.donmai.us/wiki_pages/chinese_lantern_%28plant%29.html
   chrysanthemum:
     name: 菊属
     wikiURL: https://danbooru.donmai.us/wiki_pages/chrysanthemum.html
@@ -115,6 +117,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/daffodil.html
     alias:
       - daffodils
+    image: 1a80e06bd8515e0ba277e70b404ec2518635702cd67e449695c6431253e2248f
   dahlia:
     name: 大丽花
     wikiURL: https://danbooru.donmai.us/wiki_pages/dahlia.html
@@ -301,6 +304,7 @@ content:
   lotus:
     name: 莲花
     wikiURL: https://danbooru.donmai.us/wiki_pages/lotus.html
+    image: bba32d41799f277449e1c8b89b746e90b7e9efe158790092eb7d50d591d513f0
   lily pad:
     name: 睡莲
     wikiURL: https://danbooru.donmai.us/wiki_pages/lily_pad.html
@@ -308,6 +312,7 @@ content:
       - water lily
       - lilypads
       - lilypad
+    image: 3d8bc816b4b30b9212e5c23f9ad9f8f1c7d4cdad670910ebdb53c113b21a496f
   potted plant:
     name: 盆栽
     wikiURL: https://danbooru.donmai.us/wiki_pages/potted_plant.html
@@ -346,6 +351,7 @@ content:
   rapeseed blossoms:
     name: 欧洲油菜花
     wikiURL: https://danbooru.donmai.us/wiki_pages/rapeseed_blossoms.html
+    image: 7bee5ccfb61fd4100395b98a87b9dc18120e6ee2a9f4c1f31f1feb9942d79163
   red ginger:
     name: 红姜花
   reimu:
@@ -357,6 +363,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/rose.html
     alias:
       - roses
+    image: 6d6a604c68a657c107f653c72df77fa230d148901bfc32f1f6931ecc65b234d9
   black rose:
     name: 黑玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/black_rose.html
@@ -365,12 +372,14 @@ content:
   blue rose:
     name: 蓝玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_rose.html
+    image: c64a439e00c6a64144f2708ce18b33a060330915c7c4f20eeb0d99016188d2ba
   brown rose:
     name: 棕色玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/brown_rose.html
   green rose:
     name: 绿色玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/green_rose.html
+    image: c9821d120fc985231f66fae1d189cf5c8edcff36bd53e00389b0c5894aaf8b67
   grey rose:
     name: 灰色玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/grey_rose.html
@@ -388,9 +397,11 @@ content:
   red rose:
     name: 红玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/red_rose.html
+    image: 05485d91bc9dd8827cb36fb1b3880464b16ad704197763b0854d21af92635926
   white rose:
     name: 白玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_rose.html
+    image: cd04bfb1e0eaaf9395381882222d9305f293254227ad6f5b2b04604b7af0db6d
   yellow rose:
     name: 黄玫瑰
     wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_rose.html
@@ -422,6 +433,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/sunflower.html
     alias:
       - sunflowers
+    image: 5d5e88ccae23b720c9ad4aba127a94fcf437a7785fbabc29b569eeffcb25d3cb
   thistle:
     name: 蓟属
     wikiURL: https://danbooru.donmai.us/wiki_pages/thistle.html
@@ -433,13 +445,16 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/tulip.html
     alias:
       - tulips
+    image: f2bbc0be1a7c1836421e99cf8af02fe2075f7ad13bcbe26aed159dc5f9deec01
   water lily flower:
     name: 睡莲科
+    image: 2b8269df00b93c77695774bb600162d16a55ca674e5f217f492515617585ea53
   wax flower:
     name: 风蜡花属
   wisteria:
     name: 紫藤
     wikiURL: https://danbooru.donmai.us/wiki_pages/wisteria.html
+    image: 46768831ac7c4f44bf16b140de38fd984a649a6aee789b91adbbe6c89c7dea6e
   wolfsbane:
     name: 乌头属
   violet:
@@ -459,6 +474,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/gracidea.html
   ice flower:
     name: 冰雾花 (原神)
+    image: 69397218d67299dcfdfac68b065cf1589438d88aa956496a32ebdf0909a996e5
   lunar tear:
     name: 月之泪 (尼尔)
     wikiURL: https://danbooru.donmai.us/wiki_pages/lunar_tear.html
@@ -470,6 +486,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/silent_princess.html
   silk flower:
     name: 霓裳花 (原神)
+    image: b375c77faf6ae1a321dbc264c67ab60f11c01f8c68594d8a70b588bc281e6d8d
   sweet flower:
     name: 甜甜花 (原神)
   bouquet:
@@ -477,6 +494,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/bouquet.html
     alias:
       - bouquets
+    image: d32ed4fa807e204ab51431839b08434cbcac3427246489d117e7ac8e4d57068b
   coughing flowers:
     name: 咳出花
     wikiURL: https://danbooru.donmai.us/wiki_pages/coughing_flowers.html
@@ -486,6 +504,7 @@ content:
   flower (symbol):
     name: 花(符号)
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_(symbol).html
+    image: 332d3df5488e2a9694dfe5592beedc5735c5015bb513e757bff755013eea2c73
   flower bed:
     name: 花床
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_bed.html
@@ -494,6 +513,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_bracelet.html
   flower on liquid:
     name: 水上的花
+    image: f86ef8a32096dfd452dccc9acd8921ed36d34c8f15ca5e05c997a2fc2a4adf2c
   flower trim:
     name: 花饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower_trim.html
@@ -509,6 +529,7 @@ content:
   gardening:
     name: 园艺
     wikiURL: https://danbooru.donmai.us/wiki_pages/gardening.html
+    image: a5b494ababfcef56a71f1392edd1daa3af22538f68e34ce99927d0aac3b3340b
   on flower:
     name: 在花上
     wikiURL: https://danbooru.donmai.us/wiki_pages/on_flower.html
@@ -521,3 +542,4 @@ content:
   wreath:
     name: 花环
     wikiURL: https://danbooru.donmai.us/wiki_pages/wreath.html
+    image: fa30c89bd674a129e19763651cc78421c643a804c9f73cc3eaa84f83ba872f31

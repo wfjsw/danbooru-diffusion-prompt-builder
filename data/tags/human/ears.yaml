@@ -111,6 +111,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/deer_ears.html
     alias:
       - reindeer ears
+    image: d6b7c9a686b43d264eac9c1dc378110fd55e70e92ec3f683b7a958f1affc2b16
   ferret ears:
     name: 鼬耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/ferret_ears.html
@@ -137,6 +138,7 @@ content:
   pikachu ears:
     name: 皮卡丘耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/pikachu_ears.html
+    image: 43a94dd8205b7f4fbdff1e2ce42fd328940ed6b3a78047dc341e8673df200338
   pig ears:
     name: 猪耳朵
     wikiURL: https://danbooru.donmai.us/wiki_pages/pig_ears.html

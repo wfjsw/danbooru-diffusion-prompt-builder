@@ -126,6 +126,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/miko.html
     alias:
       - shrine maiden
+    image: 930957c59248659d7cf0eea7c713436a5e4c559f61e76f61020274f669461298
   milf:
     name: 熟女
     image: 1bbdfb477365e75c7b6c55d8b83e206a3071625f2a00509c1fd8a882ae263318
@@ -217,6 +218,7 @@ content:
       - lesbian
       - girl's love
       - girls love
+    image: 306c8c670323f588166cd78e4deeed18016390b647c1c3c71a02d5912af0a4b2
   no humans:
     name: 无人
     image: 28ff8fcd87ec592a5d8349a06c0486f4b6b5b2ee86d43b4565278a2a98a9cf33
@@ -338,6 +340,7 @@ content:
   spider girl:
     name: 蜘蛛娘
     wikiURL: https://danbooru.donmai.us/wiki_pages/spider_girl.html
+    image: 060a8ecee47f216b27fb687e94ba4c3bfc13ef4cd3dc205a77a38b6b14cb663d
   valkyrie:
     name: 女武神
     image: 786c8548f4c9ee6e4dd9ad6e9f7389e13894463d8181f15567445c710311b7a6
@@ -437,6 +440,7 @@ content:
   oppai loli:
     name: 巨乳萝莉
     wikiURL: https://danbooru.donmai.us/wiki_pages/oppai_loli.html
+    image: 788009411a8f77777d22c7cd5b3e62c01bd5db117b956c75ccdfe6a3f26d2605
   police:
     name: 警察
     image: 1ec8f66977e22dad148e3e9c18a483d7bb6f568b975a74a55feffe774acd4174

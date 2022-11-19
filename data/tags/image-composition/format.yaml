@@ -239,6 +239,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/video_game_cover.html
     alias:
       - game cover
+    image: 7e49c1f96e3cd9bb16801ba63c552bad2f80548f23f2364f8e3566fc5b475978
   magazine cover:
     name: 杂志封面
     wikiURL: https://danbooru.donmai.us/wiki_pages/magazine_cover.html
@@ -312,6 +313,7 @@ content:
   papercraft:
     name: 纸艺
     wikiURL: https://danbooru.donmai.us/wiki_pages/papercraft.html
+    image: 3e1fe530c7aee8c6e7750670870bdd860b5cfeece98c22c7ceda824685f02d28
   paper child:
     name: 纸质角色
     wikiURL: https://danbooru.donmai.us/wiki_pages/paper_child.html

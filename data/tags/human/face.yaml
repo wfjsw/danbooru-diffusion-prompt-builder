@@ -181,9 +181,11 @@ content:
   mouth hold:
     name: 嘴咬住
     wikiURL: https://danbooru.donmai.us/wiki_pages/mouth_hold.html
+    image: 6e5bb814d3030ae94853baaf75825eedce4a616ff80cd6f3e5a99f9c59705f85
   parted lips:
     name: 嘴唇微张
     wikiURL: https://danbooru.donmai.us/wiki_pages/parted_lips.html
+    image: 6d2c795035e8bae7b218de818854e177d66e86c81db24886f23313c4d0df5ea7
   closed mouth:
     name: 闭嘴
     image: 4f6b4ed203305c6f6396f0cb4467760e72a854d67b8c9da6dfc6512aa72fbfa9
@@ -250,6 +252,7 @@ content:
   bored:
     name: 无聊的
     wikiURL: https://danbooru.donmai.us/wiki_pages/bored.html
+    image: fe40d37b8cae4ddbc5e1b13872f5d3c89749c4ab83b797ea3fbd5c9b6f3edf28
   gloom (expression):
     name: 消沉(表情)
     image: d2299bd88eddc69d07d5804154832b8c7748ebd08f8020352c8261a16b8d1f48
@@ -468,6 +471,7 @@ content:
       - cheek tug
   chin grab:
     name: 抬下巴
+    image: 09b55f49e1498b214ff315f3f9d02e48a45aaba2dc09039b39273d16b13962fb
   covering eyes:
     name: 遮住眼睛
     wikiURL: https://danbooru.donmai.us/wiki_pages/covering_eyes.html
@@ -486,6 +490,7 @@ content:
   face-to-face:
     name: 脸贴脸
     wikiURL: https://danbooru.donmai.us/wiki_pages/face-to-face.html
+    image: 62df5ecc5e4f7485ad929084f7987a9a71e811a801e80d055261821ee0fb1956
   facing another:
     name: 二人面对面(脸贴得很近)
     wikiURL: https://danbooru.donmai.us/wiki_pages/facing_another.html
@@ -605,6 +610,7 @@ content:
   white eyes:
     name: 白眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/white_eyes.html
+    image: 2b63567c49259107c16a39ff222affa505e751296f4ae9803f3c0596ae7b1173
   yellow eyes:
     name: 金眼
     image: 2d7aab3af701b80566edd5f825b971e5a71f0e48dc08c9b8a1627e26c66d8440
@@ -809,6 +815,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyelashes.html
     alias:
       - eye lashes
+    image: 074b3e5fff94b4b7287a0f7842cc6b00dfea10ae6d89753d2329b607ac464519
   eyeliner:
     name: 眼线
     wikiURL: https://danbooru.donmai.us/wiki_pages/eyeliner.html
@@ -896,12 +903,14 @@ content:
   tired:
     name: 累
     wikiURL: https://danbooru.donmai.us/wiki_pages/tired.html
+    image: a08e8547bbc84637a1c4be9df2fc0c1c923dc57c233ebec09ceefecde14aecf4
   sulking:
     name: 闷闷不乐
     wikiURL: https://danbooru.donmai.us/wiki_pages/sulking.html
   thinking:
     name: 思考
     wikiURL: https://danbooru.donmai.us/wiki_pages/thinking.html
+    image: efc45655a4fae2f805b198353d6d586c2871b6927245d4398061dc790ac84261
   pensive:
     name: 沉思的
     wikiURL: https://danbooru.donmai.us/wiki_pages/pensive.html
@@ -1023,6 +1032,7 @@ content:
     name: 发呆
   '0_0':
     name: '0_0'
+    image: 4bad3457e59874ac3d4e9e5c6e7659831370135cb5b33a41997e19d5d1b2ee01
   '|_|':
     name: '|_|'
   ._.:
@@ -1118,6 +1128,7 @@ content:
   amber eyes:
     name: 琥珀色眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/amber_eyes.html
+    image: b1e9134dddec90ee07ff120588aceb04e4a893979090130f53f8ee733aaf04a9
   '@ @':
     name: 晕眼
     wikiURL: https://danbooru.donmai.us/wiki_pages/@_@.html
@@ -1145,6 +1156,7 @@ content:
   diamond-shaped pupils:
     name: 钻石形瞳孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/diamond-shaped_pupils.html
+    image: ccd5a9f48390b8baf62284e6f62cfde33912d9398418de709c06a17def5804f4
   flower-shaped pupils:
     name: 花形瞳孔
     wikiURL: https://danbooru.donmai.us/wiki_pages/flower-shaped_pupils.html

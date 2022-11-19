@@ -6,6 +6,7 @@ content:
   bread:
     name: 面包
     wikiURL: https://danbooru.donmai.us/wiki_pages/bread.html
+    image: d46699b6f92bdb122b08a94090e2cda339120741eeb772806c018f33498da246
   baguette:
     name: 法棍
     wikiURL: https://danbooru.donmai.us/wiki_pages/baguette.html
@@ -37,9 +38,11 @@ content:
   toast:
     name: 吐司
     wikiURL: https://danbooru.donmai.us/wiki_pages/toast.html
+    image: a7c11ce5ba96cce28d3ea8a18ad8a9fb43c4965cbec1e938ad68a9ceaf1ecd00
   cereal:
     name: 谷物早餐
     wikiURL: https://danbooru.donmai.us/wiki_pages/cereal.html
+    image: d7b8f602d26f3c5e7822744ab5136a21fc143a54e7896a4aeb1daec328a724c4
   cracker:
     name: 饼干
     wikiURL: https://danbooru.donmai.us/wiki_pages/cracker.html
@@ -65,9 +68,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/noodles.html
     alias:
       - noodle
+    image: df2367d711fe5bf16bb0a97b183fb71981f5701ae6a4485f9eb9b523653bb7d9
   pasta:
     name: 意大利面
     wikiURL: https://danbooru.donmai.us/wiki_pages/pasta.html
+    image: 803d58544eea79990ba14687f5654421ca3ba5ace750487078a876d88bf7b56c
   lasagne:
     name: 千层面
     wikiURL: https://danbooru.donmai.us/wiki_pages/lasagne.html
@@ -76,20 +81,24 @@ content:
   spaghetti:
     name: 意大利面
     wikiURL: https://danbooru.donmai.us/wiki_pages/spaghetti.html
+    image: 00176cfc52fdd092306aea1be5e9804c654185fb4212b304a33c56830721351f
   black spaghetti:
     name: 黑色意大利面
     wikiURL: https://danbooru.donmai.us/wiki_pages/black_spaghetti.html
   spaghetti and meatballs:
     name: 肉丸意大利面
     wikiURL: https://danbooru.donmai.us/wiki_pages/spaghetti_and_meatballs.html
+    image: 4889db1daa5720b6b41385adc889a83bb8388b9e126864267d7ae3a68b645d0a
   ramen:
     name: 拉面
     wikiURL: https://danbooru.donmai.us/wiki_pages/ramen.html
+    image: db2e38db30b76d34bfb172367532599b50962b6bdc737b1ac8370e17f47eb8c1
   cup ramen:
     name: 杯面
     wikiURL: https://danbooru.donmai.us/wiki_pages/cup_ramen.html
     alias:
       - cup noodles
+    image: 1bfdb3ccb034af2d84108b0bcbc7a27a4b43b086e8f403ffc287aea9a5c36743
   jirou (ramen):
     name: 堆高的豚骨拉面
     wikiURL: https://danbooru.donmai.us/wiki_pages/jirou_(ramen).html
@@ -99,6 +108,7 @@ content:
   yakisoba:
     name: 炒面
     wikiURL: https://danbooru.donmai.us/wiki_pages/yakisoba.html
+    image: b9e4d00f66aaa0868ffc37f9dbd4708aba8c355d7c4d92437cd7c1c8150cc54d
   italian (niigata):
     name: 意大利面（新潟）
     wikiURL: https://danbooru.donmai.us/wiki_pages/italian_(niigata).html
@@ -111,6 +121,7 @@ content:
   udon:
     name: 乌冬面
     wikiURL: https://danbooru.donmai.us/wiki_pages/udon.html
+    image: db873dca5382454e41910ef196ca49268fcdbf7a7eb672761ff6ab7fc4311432
   kitsune udon:
     name: 狐狸乌冬面
     wikiURL: https://danbooru.donmai.us/wiki_pages/kitsune_udon.html
@@ -127,6 +138,7 @@ content:
   rice:
     name: 米饭
     wikiURL: https://danbooru.donmai.us/wiki_pages/rice.html
+    image: 3e42787c16d30ef7b787ff572f2d678c4251ee5ee9e9ef025017e7f0da81ec11
   fried rice:
     name: 炒饭
     wikiURL: https://danbooru.donmai.us/wiki_pages/fried_rice.html
@@ -149,6 +161,7 @@ content:
   rice porridge:
     name: 稀饭
     wikiURL: https://danbooru.donmai.us/wiki_pages/rice_porridge.html
+    image: 0e5307d77e971469fc4f7d21253aa6fc8000f1f8777bb4e7eecf2b1cf6fd5b06
   nanakusa-no-sekku:
     name: 喝七草粥的日子
     wikiURL: https://danbooru.donmai.us/wiki_pages/nanakusa-no-sekku.html
@@ -163,3 +176,4 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/waffle.html
     alias:
       - waffles
+    image: d65b78d3bdedd4383770ee5a47812ea656d792f6a39c8bf5df91e15358c09871

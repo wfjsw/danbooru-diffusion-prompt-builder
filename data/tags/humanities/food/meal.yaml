@@ -15,9 +15,11 @@ content:
   curry:
     name: 咖喱
     wikiURL: https://danbooru.donmai.us/wiki_pages/curry.html
+    image: e237e23c2ced98d249c4396009b49f323cee84be2eda08b3e97194dbda190032
   curry rice:
     name: 咖喱饭
     wikiURL: https://danbooru.donmai.us/wiki_pages/curry_rice.html
+    image: 086bc140ca6da4086abd550e470b058190150dd1341e8ab34a342fd1095297ab
   dumpling:
     name: 饺子
     wikiURL: https://danbooru.donmai.us/wiki_pages/dumpling.html
@@ -38,18 +40,22 @@ content:
   croquette:
     name: 炸丸
     wikiURL: https://danbooru.donmai.us/wiki_pages/croquette.html
+    image: 93137c6e3745d4b803a9ced76a4ecc1bbd129014959983164b60c59e193289c0
   fish and chips:
     name: 炸鱼薯条
     wikiURL: https://danbooru.donmai.us/wiki_pages/fish_and_chips.html
+    image: 2b456ae9bfe064dc490533dd579842db397b8e27a74f22df29a91012067e46fd
   flour:
     name: 面粉
     wikiURL: https://danbooru.donmai.us/wiki_pages/flour.html
+    image: 842ac28804a9a57dd9b81fa91beb679f9bda211b8ebe144cb7eb0a167fa4bf83
   fondue:
     name: 芝士火锅
     wikiURL: https://danbooru.donmai.us/wiki_pages/fondue.html
   french fries:
     name: 炸薯条
     wikiURL: https://danbooru.donmai.us/wiki_pages/french_fries.html
+    image: 4612a89e8a51393a3c1066ec5d00244af91b4e6ba1de896401f2817089d01133
   french toast:
     name: 法式吐司
     wikiURL: https://danbooru.donmai.us/wiki_pages/french_toast.html
@@ -59,6 +65,7 @@ content:
     alias:
       - hamburger
       - cheeseburger
+    image: 49b6bbe64a79434d5426c8c49a3c895b0d9013c52471a9467881a6bc9b17c49f
   megamac:
     name: 超级汉堡
     wikiURL: https://danbooru.donmai.us/wiki_pages/megamac.html
@@ -86,18 +93,21 @@ content:
   breakfast:
     name: 早餐
     wikiURL: https://danbooru.donmai.us/wiki_pages/breakfast.html
+    image: 18ef021eca3f559f17e49c39697c7eac3d3efe322b199d465dc32935723c850e
   dim sum:
     name: 点心
     wikiURL: https://danbooru.donmai.us/wiki_pages/dim_sum.html
   dinner:
     name: 晚餐
     wikiURL: https://danbooru.donmai.us/wiki_pages/dinner.html
+    image: f9b5752dd09b158b00e8f758b4d8f9cfab61fbef6cb2cb140cef47a458b77fb0
   feast:
     name: 盛宴
     wikiURL: https://danbooru.donmai.us/wiki_pages/feast.html
   lunch:
     name: 午饭
     wikiURL: https://danbooru.donmai.us/wiki_pages/lunch.html
+    image: 304689728a562176cc2d3aed9f5cfde1e166cedf87fcd573e5be4a72dc5d15f4
   bento:
     name: 便当
     image: b8f5ca877762149bba69342184a5352706db55e34d9de5c472dfb583aa49a032
@@ -155,12 +165,15 @@ content:
   pizza:
     name: 披萨
     wikiURL: https://danbooru.donmai.us/wiki_pages/pizza.html
+    image: c6a4a229729cca1c3d52411b9a67a73f2a5421d208e3a1c24907ef3302afd7bb
   holding pizza:
     name: 拿着披萨
     wikiURL: https://danbooru.donmai.us/wiki_pages/holding_pizza.html
+    image: d6bf84673f1b6ec4172dd223a32aa03093672c8bc59a0099a5c9f8edffbd7bd4
   pizza box:
     name: 披萨盒
     wikiURL: https://danbooru.donmai.us/wiki_pages/pizza_box.html
+    image: 06383a75921aba6adcee1f15c7982584146d7d71a5061b8168fc473952ff2394
   pizza delivery:
     name: 披萨递送
     wikiURL: https://danbooru.donmai.us/wiki_pages/pizza_delivery.html
@@ -175,20 +188,25 @@ content:
   salad:
     name: 沙拉
     wikiURL: https://danbooru.donmai.us/wiki_pages/salad.html
+    image: e0d390044df983dcc53ab2421c8fb0f102fd2b97a8ef3e6917b300d389badf20
   salt:
     name: 盐
     wikiURL: https://danbooru.donmai.us/wiki_pages/salt.html
+    image: d3410fbf5055739dbb37dfbe4e0abc677deb8a66b1ccdc51878ae149e9dee5b9
   sandwich:
     name: 三明治
     wikiURL: https://danbooru.donmai.us/wiki_pages/sandwich.html
     alias:
       - sandwiches
+    image: 2cfa8546d3e14c596fdcfbd603180d114d8fa0de9f8082e22f223e3a57632b10
   soup:
     name: 汤
     wikiURL: https://danbooru.donmai.us/wiki_pages/soup.html
+    image: c9e0295b943f8213e1b3d97207135ed1f8cbdc52a227ac6d001908e6c38b8547
   miso soup:
     name: 味噌
     wikiURL: https://danbooru.donmai.us/wiki_pages/miso_soup.html
+    image: 3e79c4981fa287a5e68194b7394da0f88bf89429d83f0bf8e7bfe0a9ab9d2137
   zouni soup:
     name: 日式烩年糕
     wikiURL: https://danbooru.donmai.us/wiki_pages/zouni_soup.html
@@ -197,6 +215,7 @@ content:
   sushi:
     name: 寿司
     wikiURL: https://danbooru.donmai.us/wiki_pages/sushi.html
+    image: d2a2fbfeafda81b4699bc97bb9978523d8a17b512beafaa3653127c6f74312bb
   conveyor belt sushi:
     name: 回转寿司
     wikiURL: https://danbooru.donmai.us/wiki_pages/conveyor_belt_sushi.html
@@ -233,9 +252,11 @@ content:
   shrimp tempura:
     name: 虾天妇罗
     wikiURL: https://danbooru.donmai.us/wiki_pages/shrimp_tempura.html
+    image: 9926813b9ad1613b5494e48129d50af237ab9a8675d2f9478bb4870688fad6ec
   tofu:
     name: 豆腐
     wikiURL: https://danbooru.donmai.us/wiki_pages/tofu.html
+    image: 6e5cda52e59f3fb453a024b99ed1232310256bc08ddf4564a99037da49da9c31
   aburaage:
     name: 油炸豆腐
     wikiURL: https://danbooru.donmai.us/wiki_pages/aburaage.html
@@ -251,12 +272,14 @@ content:
   stinky tofu:
     name: 臭豆腐
     wikiURL: https://danbooru.donmai.us/wiki_pages/stinky_tofu.html
+    image: 2b11a90c4c4f0ae826222909c2499ef39e1542a62351bb6ab116a975f7901049
   twice cooked pork:
     name: 回锅肉
     wikiURL: https://danbooru.donmai.us/wiki_pages/twice_cooked_pork.html
   unadon (food):
     name: 鳗丼
     wikiURL: https://danbooru.donmai.us/wiki_pages/unadon_(food).html
+    image: cdfd52debc2bee8ad284fca4d9fb49440c88abd5128ea97f4b76deaa5c2b775a
   zongzi:
     name: 粽子
     wikiURL: https://danbooru.donmai.us/wiki_pages/zongzi.html

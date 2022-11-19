@@ -6,16 +6,19 @@ content:
   bathroom:
     name: 浴室场景
     wikiURL: https://danbooru.donmai.us/wiki_pages/bathroom.html
+    image: b9670bb836a045d1f02968a454c0a2eef1eda0cc2fe63658093a7151630e2eef
   bathtub:
     name: 浴缸
     wikiURL: https://danbooru.donmai.us/wiki_pages/bathtub.html
     alias:
       - bath tub
+    image: 49cbcd566aba2b81ba9a6f856078c46912c65ec267d8cbfe4f1c589c497696db
   toilet stall:
     name: 厕所隔间
     wikiURL: https://danbooru.donmai.us/wiki_pages/toilet_stall.html
     alias:
       - restroom stall
+    image: 884998a5d4dbafbf87d0154b649f1d8eb8cf06d27b9c8623b1e3a7df986a5542
   shower:
     name: 淋浴
     wikiURL: https://danbooru.donmai.us/wiki_pages/shower.html
@@ -25,9 +28,11 @@ content:
   hotel room:
     name: 旅馆房间
     wikiURL: https://danbooru.donmai.us/wiki_pages/hotel_room.html
+    image: 1ef6e295a78f752ae38ac1226c6778597b960200b10ff5d21ea861ce0da44af8
   messy room:
     name: 杂乱的房间
     wikiURL: https://danbooru.donmai.us/wiki_pages/messy_room.html
+    image: 387968c10e9a00124becb7d1fccfda543b3b340afaf4540fb5d623bfce26c5e0
   otaku room:
     name: 御宅房
     wikiURL: https://danbooru.donmai.us/wiki_pages/otaku_room.html
@@ -36,6 +41,7 @@ content:
   cafeteria:
     name: 自助餐厅
     wikiURL: https://danbooru.donmai.us/wiki_pages/cafeteria.html
+    image: 55976f3077365d724a16f8fb8d0974866194ef98ebaf2759cfe1cb1311789cf3
   changing room:
     name: 更衣室
     wikiURL: https://danbooru.donmai.us/wiki_pages/changing_room.html
@@ -51,12 +57,15 @@ content:
   conservatory:
     name: 温室
     wikiURL: https://danbooru.donmai.us/wiki_pages/conservatory.html
+    image: 47a583adc0029cdb9d2790e647283fd2b42448060c12e07c8c453a48a42b8427
   courtroom:
     name: 法庭
     wikiURL: https://danbooru.donmai.us/wiki_pages/courtroom.html
+    image: d1ddb68e725511ce09fb26a2b318bbb4dc0e314e19efa6fdabd8d36f2a0b76ff
   dining room:
     name: 家里的餐厅
     wikiURL: https://danbooru.donmai.us/wiki_pages/dining_room.html
+    image: 1417c4d6d3448e17a42e6b82c53a8ce8b673175e28164136bfb542e3bea4a949
   dressing room:
     name: 更衣室
     wikiURL: https://danbooru.donmai.us/wiki_pages/dressing_room.html
@@ -67,6 +76,7 @@ content:
     name: 牢房
     alias:
       - jail cell
+    image: 5e8abb1d3019b6d4b6258e91ef779a7df02b5b49878f6d92f694232641f1793a
   fitting room:
     name: 试衣间
     wikiURL: https://danbooru.donmai.us/wiki_pages/fitting_room.html
@@ -78,6 +88,7 @@ content:
   locker room:
     name: 更衣室
     wikiURL: https://danbooru.donmai.us/wiki_pages/locker_room.html
+    image: 0a1971e2900d3dc20efef3a24bf433057ca05744ed68a6ef948205bf71095ee8
   gym storeroom:
     name: 体育器材库房
     wikiURL: https://danbooru.donmai.us/wiki_pages/gym_storeroom.html
@@ -93,18 +104,23 @@ content:
   kitchen:
     name: 厨房
     wikiURL: https://danbooru.donmai.us/wiki_pages/kitchen.html
+    image: 00799e0d09d53a3e5c9cd085656559631f3677ced8ea0a8890c076cf0b03ae47
   laboratory:
     name: 实验室
     wikiURL: https://danbooru.donmai.us/wiki_pages/laboratory.html
+    image: 13a0942744c986cc05665164aacbeedbef48eeb438ea026a2ee3248d02f012f9
   library:
     name: 图书馆
     wikiURL: https://danbooru.donmai.us/wiki_pages/library.html
+    image: b473e6b10681e70777e069f35134c9320dff2fbd92e2286dbd922b5ab6396d75
   living room:
     name: 客厅
     wikiURL: https://danbooru.donmai.us/wiki_pages/living_room.html
+    image: f47172cc0b7adb92f6bede7d850291ee6bef3e00af2a458126bd06dad4b59f87
   office:
     name: 办公室
     wikiURL: https://danbooru.donmai.us/wiki_pages/office.html
+    image: 768e60e2f7cd28ea9cf4bfce244e2ba1ec8e2e1fa92d7983e35fab8965f3ba24
   cubicle:
     name: 隔间
     wikiURL: https://danbooru.donmai.us/wiki_pages/cubicle.html
@@ -118,6 +134,7 @@ content:
   storage room:
     name: 储存室
     wikiURL: https://danbooru.donmai.us/wiki_pages/storage_room.html
+    image: 739850f4e0593de8b3207665e9931ed26ad81462600a1101146aedf0fb7fd580
   armory:
     name: 军械库
     wikiURL: https://danbooru.donmai.us/wiki_pages/armory.html
@@ -127,3 +144,4 @@ content:
   workshop:
     name: 创意工坊
     wikiURL: https://danbooru.donmai.us/wiki_pages/workshop.html
+    image: 94ebee41e34509e7934adfef7fd691fc7a49eb21a5f489a3de087aa33f72eb1b

@@ -12,6 +12,7 @@ content:
   blue theme:
     name: 蓝色
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_theme.html
+    image: 00c54bf8f12a8550c68ae8ec64fd9ae15eb5ba33adb7423df85fb8bf93a9fe1a
   brown theme:
     name: 棕色主题
     wikiURL: https://danbooru.donmai.us/wiki_pages/brown_theme.html
@@ -24,6 +25,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/grey_theme.html
     alias:
       - gray theme
+    image: 22f93dc0e71f14d59bc05227f1f7eab1cd6bfc6a781ff4638d5bf381f553c6d2
   orange theme:
     name: 橙色
     wikiURL: https://danbooru.donmai.us/wiki_pages/orange_theme.html
@@ -48,6 +50,7 @@ content:
   anime coloring:
     name: 动画上色
     wikiURL: https://danbooru.donmai.us/wiki_pages/anime_coloring.html
+    image: 6ae296383b696c2a4845d83d563c14b832fe66fb4c280d50a854e0012a2c35c8
   cel shading:
     name: 卡通渲染
   gradient:
@@ -56,6 +59,7 @@ content:
   ff gradient:
     name: 最终幻想式渐变
     wikiURL: https://danbooru.donmai.us/wiki_pages/ff_gradient.html
+    image: afd2c1a05651360dcd5eb19f0cb8bba73575384c96da3a305d0b8ea0170d6116
   high contrast:
     image: f7dc18785d250941875aa23b5d3b791a1c7f31e9f09b28e30919cd2d654f8dc8
     name: 高对比度
@@ -122,6 +126,7 @@ content:
   colorized:
     name: 上色
     wikiURL: https://danbooru.donmai.us/wiki_pages/colorized.html
+    image: e57ab75b02dc6e11b5d48203b0409d27730514f09564876542532ecb32e6c50f
   colorful:
     name: 五彩斑斓的
     wikiURL: https://danbooru.donmai.us/wiki_pages/colorful.html

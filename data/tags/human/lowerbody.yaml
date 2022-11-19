@@ -441,6 +441,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/ass.html
     alias:
       - butt
+    image: 39bb40d61a49dac702d2f04cc6739614a6599fe003f6cc210b8a58843c5b065e
   ass visible through thighs:
     name: 正面可见的屁股
     restricted: true
@@ -461,9 +462,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/mechanical_legs.html
     alias:
       - robotic legs
+    image: a31ba399572c6a3f910ff93fa9ba9930a59378a8935da8f8b4f511bd801fcccf
   leg belt:
     name: 腿带
     wikiURL: https://danbooru.donmai.us/wiki_pages/leg_belt.html
+    image: 840b83758465c5caf0cd252fc31bf9e9f3459f6ab2fbe33797942569324714ff
   leg tattoo:
     name: 腿部纹身
     wikiURL: https://danbooru.donmai.us/wiki_pages/leg_tattoo.html
@@ -496,6 +499,7 @@ content:
     name: 吊袜带
   white garter straps:
     name: 白色吊袜带
+    image: 8f1accc6ff3c1c6dcd0f4f24f31ccce8c4430e650b20e275b0774a9134b09ba4
   black garter straps:
     name: 黑色吊袜带
   ankle garter:

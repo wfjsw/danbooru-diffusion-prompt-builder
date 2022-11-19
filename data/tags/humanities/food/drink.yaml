@@ -6,9 +6,11 @@ content:
   alcohol:
     name: 酒精
     wikiURL: https://danbooru.donmai.us/wiki_pages/alcohol.html
+    image: 71392e28ce2be3a08234081f53fc876bf9d748219f0eb39c9d70c38fc3b232d4
   beer:
     name: 啤酒
     wikiURL: https://danbooru.donmai.us/wiki_pages/beer.html
+    image: 2e3b75a7f59521f94a2f42d7a3b650f60fca8fe280a4cc54899e0dd34b1598d0
   non-alcoholic beer:
     name: 非酒精啤酒
     wikiURL: https://danbooru.donmai.us/wiki_pages/non-alcoholic_beer.html
@@ -57,6 +59,7 @@ content:
   coffee:
     name: 咖啡
     wikiURL: https://danbooru.donmai.us/wiki_pages/coffee.html
+    image: d2c6d42b2af820e10f8bebbab65b1c9ab86d8c4a8a71915a97061c8eb50739dc
   cafe au lait:
     name: 咖啡加牛奶
     wikiURL: https://danbooru.donmai.us/wiki_pages/cafe_au_lait.html
@@ -66,6 +69,7 @@ content:
   coffee beans:
     name: 咖啡豆
     wikiURL: https://danbooru.donmai.us/wiki_pages/coffee_beans.html
+    image: 1080baac976cb1ba837d317f52f7d058a98f92fd21b3429614266f622e6c6a23
   dandelion coffee:
     name: 蒲公英咖啡
     wikiURL: https://danbooru.donmai.us/wiki_pages/dandelion_coffee.html
@@ -88,9 +92,11 @@ content:
   lemonade:
     name: 柠檬汽水
     wikiURL: https://danbooru.donmai.us/wiki_pages/lemonade.html
+    image: 8bc9f88bc45f4d571abecd9ff26a0d766fad131ebca098b6ecf203ba44c0a3c6
   orange juice:
     name: 橙汁
     wikiURL: https://danbooru.donmai.us/wiki_pages/orange_juice.html
+    image: 5216a3c242716b1a6d7ee0d7b642c74ac4bb83f9c70e4f90af4b418bf3065d24
   soda:
     name: 苏打
     wikiURL: https://danbooru.donmai.us/wiki_pages/soda.html
@@ -105,6 +111,7 @@ content:
   coca-cola:
     name: 可口可乐
     wikiURL: https://danbooru.donmai.us/wiki_pages/coca-cola.html
+    image: f42e29f6752e93b73bc0b702d523f5fff885a5cc773e2a45087ad68943c72412
   dr pepper:
     name: Dr Pepper
     wikiURL: https://danbooru.donmai.us/wiki_pages/dr_pepper.html
@@ -125,12 +132,14 @@ content:
   pepsi ice cucumber:
     name: 黄瓜味百事可乐
     wikiURL: https://danbooru.donmai.us/wiki_pages/pepsi_ice_cucumber.html
+    image: e4885894e07090ab5742f09f7bd355e47cfab921776fc6bfdf7757b455bf6b58
   ramune:
     name: ramune 波子汽水
     wikiURL: https://danbooru.donmai.us/wiki_pages/ramune.html
   root beer:
     name: 根汁啤酒
     wikiURL: https://danbooru.donmai.us/wiki_pages/root_beer.html
+    image: c58cb2406c51e43ac6d42abe69a418dca1e3532ee507cd8b44c8c4d8a0627d2d
   soda can:
     name: 汽水罐
     wikiURL: https://danbooru.donmai.us/wiki_pages/soda_can.html
@@ -139,6 +148,7 @@ content:
   tea:
     name: 茶
     wikiURL: https://danbooru.donmai.us/wiki_pages/tea.html
+    image: 1f9743d6aaed23ff0ce3f1c3ed4291c6178df80a3641a158fdea24ba72bb5653
   barley tea:
     name: 燕麦茶
     wikiURL: https://danbooru.donmai.us/wiki_pages/barley_tea.html
@@ -164,6 +174,7 @@ content:
   iced tea:
     name: 冰茶
     wikiURL: https://danbooru.donmai.us/wiki_pages/iced_tea.html
+    image: 1a7a8d2403f98f0adbdf838228d2268a8987e31036dcecd6c15c49ce1b170081
   milk tea:
     name: 奶茶
   rose hip tea:
@@ -171,9 +182,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/rose_hip_tea.html
   spear mint tea:
     name: 薄荷茶
+    image: bfdbde1fbb61d88474567a72f0b2f60713d7f298e798e93a4960acc20da05318
   tropical drink:
     name: 热带特色的饮料
     wikiURL: https://danbooru.donmai.us/wiki_pages/tropical_drink.html
+    image: 688329c51c2eaf48017cca636cda5de6024049834091e6c70161772666927746
   blue hawaii:
     name: 蓝色夏威夷（鸡尾酒）
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hawaii.html

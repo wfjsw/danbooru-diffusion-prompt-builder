@@ -349,6 +349,7 @@ content:
     alias:
       - payot
       - forelocks
+    image: 5b92ce20e4bd5b68b59e3e25cecec97d6c618ddd81c93f3a3d66c2410c8bc95c
   single sidelock:
     name: 单耳前发
     wikiURL: https://danbooru.donmai.us/wiki_pages/single_sidelock.html
@@ -514,6 +515,7 @@ content:
   bowl cut:
     name: 锅盖头
     wikiURL: https://danbooru.donmai.us/wiki_pages/bowl_cut.html
+    image: 152492cdfb6426a638e021e7cf35eaf96df11fbc25283abd9c9acd391cd5e112
   buzz cut:
     name: 寸头
     wikiURL: https://danbooru.donmai.us/wiki_pages/buzz_cut.html
@@ -643,6 +645,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/spiked_hair.html
     alias:
       - spiky hair
+    image: b37dd6aa784ed611bce8c261c31c6ebb7868ad9cf231d7a3d68238042061c85f
   widow's peak:
     name: 美人尖
     wikiURL: https://danbooru.donmai.us/wiki_pages/widow's_peak.html

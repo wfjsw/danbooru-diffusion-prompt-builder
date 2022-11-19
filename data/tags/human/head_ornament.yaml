@@ -419,6 +419,7 @@ content:
     alias:
       - glasses on head
       - sunglasses on head
+    image: fe7b8b37999cd94931932bcf7468cdee1924d6434f892b1db83705aeb6d5fa7f
   mole under eye:
     name: 眼角有痣
     wikiURL: https://danbooru.donmai.us/wiki_pages/mole_under_eye.html
@@ -472,6 +473,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/lolita_hairband.html
     alias:
       - lolita headband
+    image: 560b2b7c144878a6077d0882fdf1cfe4ec240eb92be7fd3847210bce6be9941d
   feather hair ornament:
     name: 羽毛头饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/feather_hair_ornament.html
@@ -483,6 +485,7 @@ content:
   blue hairband:
     name: 蓝色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/blue_hairband.html
+    image: 04f58e9f11b21afd77b712aece2c02f147344a77f080a7f50d3a700923089d51
   anchor hair ornament:
     name: 锚发饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/anchor_hair_ornament.html
@@ -499,6 +502,7 @@ content:
   yellow hairband:
     name: 黄色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/yellow_hairband.html
+    image: 1e3a33f1df51b7ac75f1c617eb331b45917d6d93c2addf2c1386c0e8206b9170
   pink hairband:
     name: 粉色发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/pink_hairband.html
@@ -506,6 +510,7 @@ content:
   bow hairband:
     name: 蝴蝶结发带
     wikiURL: https://danbooru.donmai.us/wiki_pages/bow_hairband.html
+    image: ff8a89034b17e356a5041510883673e5af71afc900117c02b5e3fe68576ab28e
   cat hair ornament:
     name: 猫头饰
     wikiURL: https://danbooru.donmai.us/wiki_pages/cat_hair_ornament.html

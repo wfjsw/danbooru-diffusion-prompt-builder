@@ -122,9 +122,11 @@ content:
   lens flare abuse:
     name: 镜头光晕滥用
     wikiURL: https://danbooru.donmai.us/wiki_pages/lens_flare_abuse.html
+    image: 3ba21c19d88db5a3ea9e34f0768480949d9f54512c985471cafcec6fb5ff535f
   motion lines:
     name: 体现运动的线
     wikiURL: https://danbooru.donmai.us/wiki_pages/motion_lines.html
+    image: 9b4bab37adf5e7369350b204cdfe3364403c65515ec9f6abef8baa02ef3eb272
   multiple monochrome:
     name: 多个单色结构拼接成的
     wikiURL: https://danbooru.donmai.us/wiki_pages/multiple_monochrome.html

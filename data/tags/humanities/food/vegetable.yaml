@@ -27,6 +27,7 @@ content:
   broccoli:
     name: 西兰花
     wikiURL: https://danbooru.donmai.us/wiki_pages/broccoli.html
+    image: ce4f2b886ee2647d8203a1a48f910e708c760d76cf378e30f354063f030e45ec
   cabbage:
     name: 卷心菜
     wikiURL: https://danbooru.donmai.us/wiki_pages/cabbage.html
@@ -38,9 +39,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/carrot.html
     alias:
       - carrots
+    image: 529bd7db2ca547242270a9abcd7b9b6eec8a480d16343f68ee4872e48d215a7b
   cauliflower:
     name: 菜花
     wikiURL: https://danbooru.donmai.us/wiki_pages/cauliflower.html
+    image: 7e9119b4a6522d5f2e8971c42fb3764f89d7ba7c8d0aadcc43763ffb49604d6e
   coconut:
     name: 椰子
     wikiURL: https://danbooru.donmai.us/wiki_pages/coconut.html
@@ -56,6 +59,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/cucumber.html
     alias:
       - cucumbers
+    image: 4cec452b42601d867a1772b17056595c3f786d5afce14525e4aa23b957bdebd7
   pickle:
     name: 泡菜
     wikiURL: https://danbooru.donmai.us/wiki_pages/pickle.html
@@ -73,6 +77,7 @@ content:
   lettuce:
     name: 生菜
     wikiURL: https://danbooru.donmai.us/wiki_pages/lettuce.html
+    image: eab3d206d0ae1b927f0cadd402c778f0de4d21ae8b322426b8d3bbfff6dcf0aa
   mint:
     name: 薄荷
     wikiURL: https://danbooru.donmai.us/wiki_pages/mint.html
@@ -81,6 +86,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/mushroom.html
     alias:
       - mushrooms
+    image: d322e507b4cf9373046a9947b84abc1ee544b88bf5372222b10825c7d5fd48fe
   onion:
     name: 洋葱
     wikiURL: https://danbooru.donmai.us/wiki_pages/onion.html
@@ -89,6 +95,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/onion_rings.html
     alias:
       - onion ring
+    image: 2ed6b897af05163b017f39901f51f3876a50dad7fda881f6522a901a1278915b
   spring onion:
     name: 大葱
     wikiURL: https://danbooru.donmai.us/wiki_pages/spring_onion.html
@@ -96,6 +103,7 @@ content:
       - scallion
       - negi
       - leek
+    image: f492d2f1da7dc2e3a530ee65d86e70ca2c8e4bb74854055ec4ff1f67b96deabb
   parsley:
     name: 欧芹
     wikiURL: https://danbooru.donmai.us/wiki_pages/parsley.html
@@ -116,10 +124,13 @@ content:
   bell pepper:
     name: 灯笼椒
     wikiURL: https://danbooru.donmai.us/wiki_pages/bell_pepper.html
+    image: 3dff7e3e9d84f24523167cb60ed92204a3a603d65ec65ac72e6c3ad5452928e3
   green pepper:
     name: 青椒
+    image: aa0a77615b349c1f133e694f9bb87a6ca79c1b1320ae98a84e50d31f3f351167
   red pepper:
     name: 红椒
+    image: d57d9a2d662946f677b9c642478113136ed1339640d31d74cc13b9b28d5f38fc
   yellow pepper:
     name: 黄椒
   chili pepper:
@@ -127,6 +138,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/chili_pepper.html
     alias:
       - chili
+    image: f009113eb1b367eefa28c933d7a3604db9b29a1dea5f5f2dd0121b1e8fddb874
   habanero pepper:
     name: 哈瓦那辣椒
     wikiURL: https://danbooru.donmai.us/wiki_pages/habanero_pepper.html
@@ -151,6 +163,7 @@ content:
   seaweed:
     name: 海藻
     wikiURL: https://danbooru.donmai.us/wiki_pages/seaweed.html
+    image: 6a0cffe3fc798ca8c65bab72549d421b2ecad1bba669a701cf1be1937ab39d7d
   hijiki:
     name: 羊栖菜
   nori:
@@ -163,9 +176,11 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/pumpkin.html
     alias:
       - pumpkins
+    image: 836092dc31589ecc5002f325678e9c27e29572dbc28c0e732dbbfcdd3de9669a
   jack-o'-lantern:
     name: 南瓜灯
     wikiURL: https://danbooru.donmai.us/wiki_pages/jack-o'-lantern.html
+    image: f02eed32cd228915fb6478f56bec924bb8fd58a7d22e19b4e6d9487c6635a21a
   sweet potato:
     name: 红薯
     wikiURL: https://danbooru.donmai.us/wiki_pages/sweet_potato.html
@@ -180,6 +195,7 @@ content:
     wikiURL: https://danbooru.donmai.us/wiki_pages/tomato.html
     alias:
       - tomatoes
+    image: cc2adf9639ce1490e2f5d128b7603315c67bf0ca97ea298930164bb4502ab33f
   cherry tomato:
     name: 圣女果（小西红柿
     wikiURL: https://danbooru.donmai.us/wiki_pages/cherry_tomato.html
