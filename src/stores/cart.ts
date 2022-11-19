@@ -470,6 +470,9 @@ export const useCartStore = defineStore('cart', {
             // @ts-ignore sometimes caused by ElTree
             root.splice(root.indexOf(item), 1)
             if (item.parent !== null) {
+                if (item.parent.type === 'preset') {
+                    this.dismissCartItem(direction, item.parent)
+                }
                 this.convergeToFit(
                     item.parent.parent?.children ?? this[direction]
                 )
@@ -480,6 +483,7 @@ export const useCartStore = defineStore('cart', {
             direction: 'positive' | 'negative',
             item: CartItemPreset | CartItemComplex
         ) {
+            const root = item.parent?.children ?? this[direction]
             const parent = item.parent
             const children: CartItemSimple[] = item.children
                 // @ts-ignore why no filter
@@ -495,8 +499,8 @@ export const useCartStore = defineStore('cart', {
                         ...(n.type !== 'group' && { weight: new Decimal(1) }),
                     })
                 )
-            this[direction].splice(
-                this[direction].indexOf(item),
+            root.splice(
+                root.indexOf(item as any),
                 1,
                 ...children
             )

@@ -61,25 +61,7 @@ function deleteFrom(
     direction: 'positive' | 'negative',
     item: CartItem | CartChildItem
 ) {
-    if (
-        item.type === 'tag' ||
-        item.type === 'preset' ||
-        item.type === 'embedding'
-    ) {
-        if (direction === 'positive') {
-            if (item.type === 'preset') {
-                cartStore.removePositivePreset(item)
-            } else {
-                cartStore.removePositiveTag(item.name, item.type)
-            }
-        } else if (direction === 'negative') {
-            if (item.type === 'preset') {
-                cartStore.removeNegativePreset(item)
-            } else {
-                cartStore.removeNegativeTag(item.name, item.type)
-            }
-        }
-    } else if (item.type !== 'null') {
+    if (item.type !== 'null') {
         cartStore.removeCartItem(direction, item)
     }
 }
@@ -170,7 +152,7 @@ const editingChildWeight = computed<Decimal>({
                 <ElButton
                     link
                     type="primary"
-                    @click.stop="() => (data.type === 'tag' || data.type === 'embedding') && 
+                    @click.stop="() => (data.type === 'tag' || data.type === 'embedding') &&
                           cartStore.createMixtureFromTag(direction, data as CartItemSimple)">
                     <FontAwesomeIcon :icon="faBlender" />
                 </ElButton>
