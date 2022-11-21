@@ -23,14 +23,15 @@ import {
     faMessageBot,
     faMagnifyingGlassChart,
     faHouse,
+    faBookOpenCover,
 } from '@fortawesome/pro-solid-svg-icons'
 import { ElTooltip, ElButton } from 'element-plus'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 </script>
-
+D
 <template>
     <div class="links">
-        <ElTooltip content="NovelAI.dev" :show-after="750">
+        <ElTooltip content="NovelAI.Dev" :show-after="750">
             <a href="https://novelai.dev/" target="_blank">
                 <ElButton link size="large">
                     <FontAwesomeIcon :icon="faHouse" class="square-icon" />
@@ -46,7 +47,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
                 </ElButton>
             </a>
         </ElTooltip>
-        <ElTooltip content="Koishi.js NovelAI 插件" :show-after="750">
+        <ElTooltip content="群画图机器人" :show-after="750">
             <a href="https://bot.novelai.dev" target="_blank">
                 <ElButton link size="large">
                     <FontAwesomeIcon :icon="faMessageBot" class="square-icon" />
@@ -58,6 +59,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
                 <ElButton link size="large">
                     <FontAwesomeIcon
                         :icon="faMagnifyingGlassChart"
+                        class="square-icon" />
+                </ElButton>
+            </a>
+        </ElTooltip>
+        <ElTooltip content="知识库(教程)" :show-after="750">
+            <a href="https://guide.novelai.dev" target="_blank">
+                <ElButton link size="large">
+                    <FontAwesomeIcon
+                        :icon="faBookOpenCover"
                         class="square-icon" />
                 </ElButton>
             </a>
