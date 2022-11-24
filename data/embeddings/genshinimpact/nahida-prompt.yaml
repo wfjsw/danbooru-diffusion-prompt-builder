@@ -5,7 +5,7 @@ name: 小吉祥草王 / 草神 / 纳西妲
 # 模型作者
 author: gunvolt @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 游戏
   - 原神
 # 该模型对应的主模型名称
@@ -17,4 +17,4 @@ vectorSize: 6
 # 模型图片右下角 s 字符旁的数字
 steps: 7001
 # 模型文件的 SHA256 Hash
-payloadHash: 62200e83c48214601e2518f211624cdfc176124761ff5458df4580415a9ac8f1
+payloadHash: 76da7b1f12bbd87a30006770fe446719766709bc11e5400a8b652ab7a768bfc2

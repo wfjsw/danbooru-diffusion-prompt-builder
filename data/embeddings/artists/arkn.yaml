@@ -5,7 +5,7 @@ name: タブヘッド
 # 模型作者
 author: JM_Youik♪ @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,5 +16,5 @@ vectorSize: 8
 # 模型图片右下角 s 字符旁的数字
 steps: 2001
 # 模型文件的 SHA256 Hash
-payloadHash: ae971d6319473eb951e27b4cdba64e4c7dd501dc31ba165a7b729eb6ad06d387
+payloadHash: 833dd557f51179db46173eb170c1c5559016f09d60b54b6f0f9c9eebada7b6b1
 restricted: true

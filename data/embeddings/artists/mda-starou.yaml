@@ -5,7 +5,7 @@ name: MだSたろう
 # 模型作者
 author: 4chan
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,7 +16,7 @@ vectorSize: 20
 # 模型图片右下角 s 字符旁的数字
 steps: 163000
 # 模型文件的 SHA256 Hash
-payloadHash: b14e021284e288da875c8bf12fc5cb3123ff8d6410cc2e78d5cb3b47c55f3c57
+payloadHash: 88583f116e6730bdba411f6ee1e27a469a485f927a133aefa9f5b027470a1d88
 restricted: true
 suggestPositive:
   - extremely detailed

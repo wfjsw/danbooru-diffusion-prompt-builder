@@ -39,6 +39,7 @@ const props = withDefaults(
     defineProps<{
         data: Embedding
         showCategory?: boolean
+        showImage: boolean
     }>(),
     {
         showCategory: false,
@@ -47,7 +48,11 @@ const props = withDefaults(
 
 const refProps = toRefs(props)
 
-const { copy, copied } = useClipboard({ source: refProps.data.value.prompt })
+const prompt = computed(
+    () => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`
+)
+
+const { copy, copied } = useClipboard({ source: prompt.value })
 const cartStore = useCartStore()
 
 const imageUrl = computed(() => {
@@ -63,9 +68,6 @@ const downloadUrl = computed(() => {
     return `embeddings/${hash.slice(0, 2)}/${hash}.webp`
 })
 
-const prompt = computed(
-    () => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`
-)
 const fileName = computed(() => `${prompt.value}.webp`)
 
 const inPositive = computed(() =>
@@ -94,7 +96,7 @@ function toggleNegative(tag: string = prompt.value) {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container']">
+        <div v-if="imageUrl" v-show="showImage" :class="['card-image-container']">
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">

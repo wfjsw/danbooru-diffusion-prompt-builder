@@ -5,7 +5,7 @@ name: 纳西妲
 # 模型作者
 author: 刻晴酱 @ t.me/GenshinCN
 # 模型分类
-category: 
+category:
   - 游戏
   - 原神
 # 该模型对应的主模型名称
@@ -17,4 +17,4 @@ vectorSize: 8
 # 模型图片右下角 s 字符旁的数字
 steps: 18340
 # 模型文件的 SHA256 Hash
-payloadHash: 88ed745edf98ac3c7dd56037ce1c0f9a6bd72cfdc98a81a8f5791a875595223b
+payloadHash: c5ec2e6baff0db2fa1f829f70b2e28156eb952a58f5ff61e6d54d24ffb42b59b

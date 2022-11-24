@@ -5,7 +5,7 @@ name: 洛天依
 # 模型作者
 author: Fixing_And_Repairing @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - VSinger
 # 该模型对应的主模型名称
 modelName: 未知
@@ -16,4 +16,4 @@ vectorSize: 3
 # 模型图片右下角 s 字符旁的数字
 steps: 20000
 # 模型文件的 SHA256 Hash
-payloadHash: a09c033aee03d0ce058976fd79f36858bd2ce6b74ca3e7daca1d6b186dc0725b
+payloadHash: 58380b6a52753bed57ac6be4834a01af0b760d3b96ce1a69b37e0c5c0ac9984e

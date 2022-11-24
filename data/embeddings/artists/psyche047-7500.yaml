@@ -5,7 +5,7 @@ name: プシュケー
 # 模型作者
 author: Fire Ghoscat @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Latest
@@ -16,5 +16,5 @@ vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
 steps: 10001
 # 模型文件的 SHA256 Hash
-payloadHash: 28d9991d831f3bd8c4ea43e8480a4631980c69b1247b7edd4ab3c4950430b042
+payloadHash: 590522a27dfb38fc1095296b9e348a9f553f4bedbcf0e71069a44e9c38c50d82
 restricted: true

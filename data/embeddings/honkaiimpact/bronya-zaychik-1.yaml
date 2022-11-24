@@ -5,7 +5,7 @@ name: 布洛妮娅·扎伊切克
 # 模型作者
 author: konata @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 游戏
   - 崩坏三
 # 该模型对应的主模型名称
@@ -17,4 +17,4 @@ vectorSize: 12
 # 模型图片右下角 s 字符旁的数字
 steps: 61500
 # 模型文件的 SHA256 Hash
-payloadHash: c90e39e54d7fa1f63fdd854b84619a1b11ec5707767a6130205f783307a4c164
+payloadHash: d8646a6a049ae2f0ed5e4d1373be23f3470c336ec8c1745fd7468741dbc90e34

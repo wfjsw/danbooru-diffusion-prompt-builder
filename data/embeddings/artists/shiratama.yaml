@@ -5,7 +5,7 @@ name: しらたま / 白玉老师
 # 模型作者
 author: Fire Ghoscat @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Latest
@@ -16,5 +16,5 @@ vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
 steps: 10001
 # 模型文件的 SHA256 Hash
-payloadHash: ddaf495bbafec24e438d2ed6a465efa753dc8785ed227087040cc5586e18e6ea
+payloadHash: 84dd8a3766f8912f88313da1567dfb61d0339d26bca6cb53897f00a47bd83e9e
 restricted: true

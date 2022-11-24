@@ -5,7 +5,7 @@ name: しらたま / 白玉老师
 # 模型作者
 author: SeaL_773
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Latest
@@ -16,7 +16,7 @@ vectorSize: 16
 # 模型图片右下角 s 字符旁的数字
 steps: 100001
 # 模型文件的 SHA256 Hash
-payloadHash: 85f53a52d6b213ed52472392395bda43f479d2d1df88d9b80591d93d2364fea3
+payloadHash: 0fc63cd33034ecdf7479bd50b5eb62f50be5894553b386f800db101630fdb1a3
 restricted: true
 suggestPositive:
   - 1girl

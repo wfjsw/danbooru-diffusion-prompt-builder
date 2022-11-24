@@ -5,7 +5,7 @@ name: 螃蟹激光 / かにビーム
 # 模型作者
 author: zozyotouhou @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,5 +16,5 @@ vectorSize: 16
 # 模型图片右下角 s 字符旁的数字
 steps: 30001
 # 模型文件的 SHA256 Hash
-payloadHash: e04298d54ec8028c6e928b3cea75ed81ea6886717b018f608653c09789378ae1
+payloadHash: e2226c265cacf3293094ed9729016f6fbeab2cd034e874a1860b2d9115bae404
 restricted: true

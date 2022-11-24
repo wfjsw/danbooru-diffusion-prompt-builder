@@ -1,11 +1,11 @@
 # 调用该模型使用的命令 (模型图片左上角尖括号内容)
-prompt: kuangsan-promot
+prompt: kuangsan
 # 模型名称
 name: 时崎狂三
 # 模型作者
 author: reburn A @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 番剧
   - 约会大作战
 # 该模型对应的主模型名称
@@ -17,14 +17,13 @@ vectorSize: 6
 # 模型图片右下角 s 字符旁的数字
 steps: 3001
 # 模型文件的 SHA256 Hash
-payloadHash: 7c1d014c73baa0ff8111700ba0343ae1d686d01451d9ce4dc8d1334a52342c63
+payloadHash: 2f534db93b7f3595632a893757ab0c9663aff1160c463f0308a3854496ca4735
 # 推荐正向标签
 suggestPositive:
   - 1girl
-  - red black striped dress
   - black hair
-  - colored inner hair
-  - floating hair
+  - twin tails
   - medium breasts
-  - white background
   - heterochromia
+  - hair over one eye
+  - evil grin

@@ -5,7 +5,7 @@ name: 洛天依
 # 模型作者
 author: Fixing_And_Repairing @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - VSinger
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,4 +16,4 @@ vectorSize: 3
 # 模型图片右下角 s 字符旁的数字
 steps: 30000
 # 模型文件的 SHA256 Hash
-payloadHash: 66e896e95539a5da7a21cfe5c6d9323a4c30ebf9462687a8d5ddf5bf1626e47c
+payloadHash: 0c5e7ca3273e15ea090deda19c695858ab7274030a41769a9c74213bc96b4fcd

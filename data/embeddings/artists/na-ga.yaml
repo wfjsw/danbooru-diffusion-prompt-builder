@@ -5,7 +5,7 @@ name: Na-Ga
 # 模型作者
 author: snowflake rain @ t.me/Embeddings_Record
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: 未知
@@ -16,5 +16,5 @@ vectorSize: 75
 # 模型图片右下角 s 字符旁的数字
 steps: 2000
 # 模型文件的 SHA256 Hash
-payloadHash: d2520673297b7e87e5c2a95d833553ee189aa1c792db7fda1684e8e658d4d310
+payloadHash: 2a57e2237dfe633def9feba6e9dff5e2a33901b7cea4c33b12bed9527b845428
 restricted: true

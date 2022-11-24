@@ -5,7 +5,7 @@ name: 戳儿w/chuoer
 # 模型作者
 author: reburn A @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 画师
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,5 +16,5 @@ vectorSize: 16
 # 模型图片右下角 s 字符旁的数字
 steps: 80001
 # 模型文件的 SHA256 Hash
-payloadHash: 9329e0991924c67b3e67ad31ada9659fc43f1acb52b6f4d74c3129b017daa5c9
+payloadHash: e486936a34181c4e947f3bb45267a5f7bd0dccc1c63389cdbbfded8a273bcd41
 restricted: true

@@ -5,7 +5,7 @@ name: 贝拉/Bella
 # 模型作者
 author: Rosmontis @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - VTuber
 # 该模型对应的主模型名称
 modelName: NovelAI-Full-Pruned
@@ -16,4 +16,4 @@ vectorSize: 4
 # 模型图片右下角 s 字符旁的数字
 steps: 9500
 # 模型文件的 SHA256 Hash
-payloadHash: 6c1e35ce1df1a96a3ee0b480ac39d39266bfce03e72b1866194dac65e65d0cab
+payloadHash: 4be936587058b4c75875389dd4e189d218d7275a0578e980b2338311773fe91d

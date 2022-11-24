@@ -63,7 +63,7 @@ function loadMore() {
         <ClientOnly>
             <Masonry
                 v-infinite-scroll="loadMore"
-                :bind="paginatedEmbs"
+                :bind="[paginatedEmbs, settingsStore.showImage]"
                 :infinite-scroll-disabled="paginationSize >= filteredLength"
                 :infinite-scroll-distance="512"
                 :infinite-scroll-delay="10">
@@ -71,7 +71,7 @@ function loadMore() {
                     v-for="emb in paginatedEmbs"
                     :key="emb.payloadHash"
                     v-memo="[emb, settingsStore.showImage]"
-                    :blur-image="!settingsStore.showImage"
+                    :show-image="settingsStore.showImage"
                     :data="emb" />
             </Masonry>
         </ClientOnly>

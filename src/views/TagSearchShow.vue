@@ -137,10 +137,12 @@ watch(toRef(props, 'search'), () => {
                         show-category />
                     <EmbeddingView
                         v-if="item.type === 'embedding'"
+                        :show-image="settingsStore.showImage"
                         :data="(item as SearchResultEmbedding).data"
                         show-category />
                     <HypernetworkView
                         v-if="item.type === 'hypernetwork'"
+                        :show-image="settingsStore.showImage"
                         :data="(item as SearchResultHypernetwork).data"
                         show-category />
                 </template>

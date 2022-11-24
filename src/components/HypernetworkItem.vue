@@ -31,6 +31,7 @@ import ToggleableTag from './ToggleableTag.vue'
 const props = withDefaults(
     defineProps<{
         data: Hypernetwork
+        showImage: boolean
         showCategory?: boolean
     }>(),
     {
@@ -53,7 +54,7 @@ const downloadUrl = computed(() => {
 
 <template>
     <ElCard :body-style="{ padding: '0px' }" class="box-card">
-        <div v-if="imageUrl" :class="['card-image-container']">
+        <div v-if="imageUrl" v-show="showImage" :class="['card-image-container']">
             <ElImage :src="imageUrl" fit="cover" loading="lazy">
                 <template #error>
                     <div class="image-slot">

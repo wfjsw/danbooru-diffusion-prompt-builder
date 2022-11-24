@@ -5,7 +5,7 @@ name: 纳西妲
 # 模型作者
 author: Nyanko @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 游戏
   - 原神
 # 该模型对应的主模型名称
@@ -17,7 +17,7 @@ vectorSize: 18
 # 模型图片右下角 s 字符旁的数字
 steps: 23000
 # 模型文件的 SHA256 Hash
-payloadHash: 34d227d680b0371299a0c7715fd0ad246367a1ab7456c9611720ec53c0584b4d
+payloadHash: 2e30c6ba45b7b62af06d6744a8d447434328b91a1e2ee34ba9d8081b66a1642e
 suggestPositive:
   - 1girl
   - solo

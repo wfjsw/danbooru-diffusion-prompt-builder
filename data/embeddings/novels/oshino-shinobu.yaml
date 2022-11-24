@@ -5,7 +5,7 @@ name: 忍野忍 / Oshino Shinobu
 # 模型作者
 author: ASUSWA @ t.me/StableDiffusion_CN
 # 模型分类
-category: 
+category:
   - 小说角色
 # 该模型对应的主模型名称
 modelName: 未知
@@ -16,7 +16,7 @@ vectorSize: 9
 # 模型图片右下角 s 字符旁的数字
 steps: 6500
 # 模型文件的 SHA256 Hash
-payloadHash: a2d1ec69933a387871d755ad2cf7cb918ee1b41d54526de84c1576c919db17a1
+payloadHash: d29757f4a76cde26abf3397c0294a2ae0e4733f352038dfaaaae007c3886054e
 suggestPositive:
   - 1girl
   - solo

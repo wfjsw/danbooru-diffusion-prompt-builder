@@ -63,7 +63,7 @@ function loadMore() {
         <ClientOnly>
             <Masonry
                 v-infinite-scroll="loadMore"
-                :bind="paginatedHns"
+                :bind="[paginatedHns, settingsStore.showImage]"
                 :infinite-scroll-disabled="paginationSize >= filteredLength"
                 :infinite-scroll-distance="512"
                 :infinite-scroll-delay="10">
@@ -71,6 +71,7 @@ function loadMore() {
                     v-for="hns in paginatedHns"
                     :key="`${hns.prompt}-${hns.name}-${hns.author}-${hns.previewHash}`"
                     v-memo="[hns, settingsStore.showImage]"
+                    :show-image="settingsStore.showImage"
                     :data="hns" />
             </Masonry>
         </ClientOnly>
