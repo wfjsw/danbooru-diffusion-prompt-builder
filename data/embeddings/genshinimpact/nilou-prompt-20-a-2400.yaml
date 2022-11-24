@@ -17,7 +17,7 @@ vectorSize: 20
 # 模型图片右下角 s 字符旁的数字
 steps: 2400
 # 模型文件的 SHA256 Hash
-payloadHash: a8c4c9ad82342bed8d17ba4bd39c7838b16f9bcdf8ff43254b306c7749c4a186
+payloadHash: 62f55fd06e53bb6ab29fe6f3a2365d629cae0098559f750f9466a40e53c00ff7
 suggestPositive:
   - 1girl
   - red hair

@@ -266,11 +266,11 @@ function walkOldEmphasis(
                 children: null,
             }
             group.children = node.content.map((child: any) =>
-                walkNewEmphasis(child, group, new Decimal(1))
+                walkOldEmphasis(child, group, new Decimal(1))
             )
             return group
         } else if (node.content.length === 1) {
-            return walkNewEmphasis(node.content[0], parent, weight)
+            return walkOldEmphasis(node.content[0], parent, weight)
         } else {
             return null
         }
