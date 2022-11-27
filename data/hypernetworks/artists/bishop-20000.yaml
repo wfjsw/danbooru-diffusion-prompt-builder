@@ -1,0 +1,20 @@
+# 模型内置英文名
+prompt: bishop-20000
+# 模型名称
+name: Bishop
+# 模型作者
+author: UncleUSA @ t.me/StableDiffusion_CN
+# 模型分类
+category:
+  - 画师
+# 该模型对应的主模型名称
+modelName: NovelAI-Full-Pruned
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: '925997e9'
+# 模型内记录的训练步数
+steps: 20000
+# 模型预览图的 SHA256 Hash
+previewHash: fd3a014b47ca3014f4054b224e15a628c2ce1a166e10be58a9a9a27d9645ef25
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/Bishop-20000.pt
+restricted: true

@@ -1,0 +1,20 @@
+# 模型内置英文名
+prompt: muk-512-5000
+# 模型名称
+name: MUK
+# 模型作者
+author: Victor Sun @ t.me/StableDiffusion_CN
+# 模型分类
+category:
+  - 画师
+# 该模型对应的主模型名称
+modelName: 未知
+# 该模型对应的主模型 Hash （显示在 WebUI 下拉框中的 Hash）
+modelHash: 'unknown'
+# 模型内记录的训练步数
+steps: 5000
+# 模型预览图的 SHA256 Hash
+previewHash: 76c01fac27d165f92fd058b83f3842859d9e37dd407336b157fef61dcf851407
+# 模型文件的 HuggingFace 下载地址
+payloadURL: https://huggingface.co/novelai-dev/DDPB-hypernetworks/resolve/main/artists/muk-512-5000.pt
+restricted: true
