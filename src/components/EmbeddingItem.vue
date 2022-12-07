@@ -46,8 +46,6 @@ const props = withDefaults(
     }
 )
 
-const refProps = toRefs(props)
-
 const prompt = computed(
     () => `${props.data.prompt}-${props.data.payloadHash.slice(0, 6)}`
 )

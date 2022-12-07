@@ -17,4 +17,4 @@ vectorSize: 6
 # 模型图片右下角 s 字符旁的数字
 steps: 6000
 # 模型文件的 SHA256 Hash
-payloadHash: 7ad4fcdd9b4c39839ae7bbc10db7d8c957b0e97efa0c48e57f2d2df0db2ebab9
+payloadHash: b53f84eb3b1b807559096a8d6d8dc0b6c74b46d6ad44cac37c7a5af4cb19c558
